@@ -1,13 +1,302 @@
-body {
+html,body {
   margin: 0;
+  background-color: #3f4249;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+   
+   
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+@font-face{
+  font-family: 'futura-bold';
+  src: local('☺'),
+  url('./assets/fonts/futura/FuturaPTBold.otf') format('opentype');
+}
+@font-face{
+  font-family: 'futura-bold-oblique';
+  src: local('☺'),
+  url('./assets/fonts/futura/FuturaPTBoldOblique.otf') format('opentype');
+}
+@font-face{
+  font-family: 'futura-book';
+  src: local('☺'),
+  url('./assets/fonts/futura/FuturaPTBook.otf') format('opentype');
+}
+@font-face{
+  font-family: 'futura-book-oblique';
+  src: local('☺'),
+  url('./assets/fonts/futura/FuturaPTBookOblique.otf') format('opentype');
+}
+@font-face{
+  font-family: 'futura-cond-bold';
+  src: local('☺'),
+  url('./assets/fonts/futura/FuturaPTCondBold.otf') format('opentype');
+}
+@font-face{
+  font-family: 'futura-cond-bold-oblique';
+  src: local('☺'),
+  url('./assets/fonts/futura/FuturaPTCondBoldOblique.otf') format('opentype');
+}
+@font-face{
+  font-family: 'futura-cond-book';
+  src: local('☺'),
+  url('./assets/fonts/futura/FuturaPTCondBook.otf') format('opentype');
+}
+@font-face{
+  font-family: 'futura-cond-book-oblique-oblique';
+  src: local('☺'),
+  url('./assets/fonts/futura/FuturaPTCondBookOblique.otf') format('opentype');
+}
+@font-face{
+  font-family: 'futura-cond-extra-bold';
+  src: local('☺'),
+  url('./assets/fonts/futura/FuturaPTCondExtraBold.otf') format('opentype');
+}
+@font-face{
+  font-family: 'futura-cond-extra-bold-oblique';
+  src: local('☺'),
+  url('./assets/fonts/futura/FuturaPTCondExtraBoldOblique.otf') format('opentype');
+}
+@font-face{
+  font-family: 'futura-cond-medium';
+  src: local('☺'),
+  url('./assets/fonts/futura/FuturaPTCondMedium.otf') format('opentype');
+}
+@font-face{
+  font-family: 'futura-cond-medium-oblique';
+  src: local('☺'),
+  url('./assets/fonts/futura/FuturaPTCondMediumOblique.otf') format('opentype');
+}
+@font-face{
+  font-family: 'futura-demi';
+  src: local('☺'),
+  url('./assets/fonts/futura/FuturaPTDemi.otf') format('opentype');
+}
+@font-face{
+  font-family: 'futura-demi-oblique';
+  src: local('☺'),
+  url('./assets/fonts/futura/FuturaPTDemiOblique.otf') format('opentype');
+}
+@font-face{
+  font-family: 'futura-extra-bold';
+  src: local('☺'),
+  url('./assets/fonts/futura/FuturaPTExtraBold.otf') format('opentype');
+}
+@font-face{
+  font-family: 'futura-extra-bold-oblique';
+  src: local('☺'),
+  url('./assets/fonts/futura/FuturaPTExtraBoldOblique.otf') format('opentype');
+}
+@font-face{
+  font-family: 'futura-heavy';
+  src: local('☺'),
+  url('./assets/fonts/futura/FuturaPTHeavy.otf') format('opentype');
+}
+@font-face{
+  font-family: 'futura-heavy-oblique';
+  src: local('☺'),
+  url('./assets/fonts/futura/FuturaPTHeavyOblique.otf') format('opentype');
+}
+@font-face{
+  font-family: 'futura-light';
+  src: local('☺'),
+  url('./assets/fonts/futura/FuturaPTLight.otf') format('opentype');
+}
+@font-face{
+  font-family: 'futura-light-oblique';
+  src: local('☺'),
+  url('./assets/fonts/futura/FuturaPTLightOblique.otf') format('opentype');
+}
+@font-face{
+  font-family: 'futura-medium';
+  src: local('☺'),
+  url('./assets/fonts/futura/FuturaPTMedium.otf') format('opentype');
+}
+@font-face{
+  font-family: 'futura-medium-oblique';
+  src: local('☺'),
+  url('./assets/fonts/futura/FuturaPTMediumOblique.otf') format('opentype');
+}
+
+@font-face{
+  font-family: 'baskerville-old-face';
+  src: local('☺'),
+  url('./assets/fonts/baskerville-old-face/BASKVILL.ttf') format('truetype');
+}
+
+@font-face{
+  font-family: 'baskerville-e-1';
+  src: local('☺'),
+  url('./assets/fonts/baskerville/BASKE1.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'baskerville-e-9';
+  src: local('☺'),
+  url('./assets/fonts/baskerville/BASKE9.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'baskerville-e-10';
+  src: local('☺'),
+  url('./assets/fonts/baskerville/BASKE10.ttf') format('truetype');
+}
+
+@font-face{
+  font-family: 'baskerille-bold-bt';
+  src: local('☺'),
+  url('./assets/fonts/baskerville/BaskervilleBoldBT.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'baskerville-bold-italic-bt';
+  src: local('☺'),
+  url('./assets/fonts/baskerville/BaskervilleBoldItalicBT.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'baskerville-bt';
+  src: local('☺'),
+  url('./assets/fonts/baskerville/BaskervilleBT.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'baskerville-italic-bt';
+  src: local('☺'),
+  url('./assets/fonts/baskerville/BaskervilleItalicBT.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'baskerville-light-extra-kerning';
+  src: local('☺'),
+  url('./assets/fonts/baskerville/BASKRV_L.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'baskerville-light-small-kerning';
+  src: local('☺'),
+  url('./assets/fonts/baskerville/baskvl.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'angilla';
+  src: local('☺'),
+  url('./assets/fonts/angilla_tattoo/AngillaTattoo_PERSONAL_USE_ONLY.ttf') format('truetype');
+}
+
+.slide-in-appear {
+  transform: translateX(30px);
+  -webkit-transform: translateX(30px);
+  -moz-transform: translateX(30px);
+  -o-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  opacity: 0;
+}
+
+.slide-in-appear.slide-in-appear-active {
+  opacity: 1;
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -o-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transition: all 0.6s linear;
+}
+
+.slide-in-enter {
+  opacity: 0;
+  transform: translateX(30px);
+  -webkit-transform: translateX(30px);
+  -moz-transform: translateX(30px);
+  -o-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+}
+
+.slide-in-enter.slide-in-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -o-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transition: all 0.2s linear 0.4s;
+}
+
+.slide-in-leave {
+  opacity: 1.0;
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -o-transform: translateX(0);
+  -ms-transform: translateX(0);
+}
+
+.slide-in-leave.slide-in-leave-active {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  transform: translateX(-30px);
+  -webkit-transform: translateX(-30px);
+  -moz-transform: translateX(-30px);
+  -o-transform: translateX(-30px);
+  -ms-transform: translateX(-30px);
+  transition: all 0.2s linear;
+}
+
+.slide-out-appear {
+  transform: translateX(-30px);
+  -webkit-transform: translateX(-30px);
+  -moz-transform: translateX(-30px);
+  -o-transform: translateX(-30px);
+  -ms-transform: translateX(-30px);
+  opacity: 0;
+}
+
+.slide-out-appear.slide-out-appear-active {
+  opacity: 1;
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -o-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transition: all 0.6s linear;
+}
+
+.slide-out-enter {
+  opacity: 0;
+  transform: translateX(-30px);
+  -webkit-transform: translateX(-30px);
+  -moz-transform: translateX(-30px);
+  -o-transform: translateX(-30px);
+  -ms-transform: translateX(-30px);
+}
+
+.slide-out-enter.slide-out-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -o-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transition: all 0.2s linear 0.4s;
+}
+
+.slide-out-leave {
+  opacity: 1.0;
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -o-transform: translateX(0);
+  -ms-transform: translateX(0);
+}
+
+.slide-out-leave.slide-out-leave-active {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  transform: translateX(30px);
+  -webkit-transform: translateX(30px);
+  -moz-transform: translateX(30px);
+  -o-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  transition: all 0.2s linear;
 }
