@@ -1,0 +1,97 @@
+$sub-color: #128194;
+$main-color: #bccfd5;
+
+
+@mixin shrinkLabel {
+    position: relative;
+    top: -78px;
+    right: 15px;
+    font-size: 30px;
+    color: $main-color;
+}
+
+
+.group-phone-container {
+
+    position: relative;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 50px;
+
+
+    .group-input {
+
+        .checker-area-code,
+        .checker-phone-number {
+            position: relative;
+            top: 45px;
+            right: 30px;
+            color: $sub-color;
+
+            .checker-icon {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .form-input-area-code {
+            width: 26%;
+        }
+
+        .form-input-phone-number {
+            width: 70%;
+        }
+
+        .form-input-area-code,
+        .form-input-phone-number {
+
+            background: none;
+            color: $sub-color;
+            font-size: 20px;
+            letter-spacing: 0.1em;
+            padding: 10px 10px 10px 5px;
+            display: block;
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px solid $sub-color;
+            margin: 5px 0;
+
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover,
+            &:-webkit-autofill:focus,
+            &:-webkit-autofill::first-line {
+                -webkit-text-fill-color: $sub-color;
+                transition: background-color 6000s ease-in-out;
+                font-family: futura-medium;
+                font-size: 20px;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            &:focus~.form-input-label-area-code,
+            &:focus~.form-input-label-phone-number {
+                @include shrinkLabel();
+            }
+        }
+
+        .form-input-label-area-code,
+        .form-input-label-phone-number {
+            color: $sub-color;
+            font-size: 25px;
+            font-weight: normal;
+            position: relative;
+            pointer-events: none;
+            top: -60px;
+            right: 3px;
+            transition: 300ms ease all;
+
+            &.shrink {
+                @include shrinkLabel();
+            }
+        }
+    }
+}

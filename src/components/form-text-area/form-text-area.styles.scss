@@ -1,0 +1,79 @@
+$sub-color: #128194;
+$main-color: #bccfd5;
+
+@mixin shrinkLabel {
+    top: -35px;
+    font-size: 30px;
+    color: $main-color;
+}
+
+.group-text-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease-in-out;
+
+    .checker-area-code,
+    .checker-phone-number {
+        position: relative;
+        top: 120px;
+        right: 20px;
+        color: $sub-color;
+
+        .checker-icon {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+
+    .form-text-area {
+        background: none;
+        color: $sub-color;
+        font-size: 25px;
+        letter-spacing: 0.1em;
+        padding: 10px 10px 10px 5px;
+        display: block;
+        width: 90%;
+        border: none;
+        border-radius: 0;
+        border-top: 1px solid $sub-color;
+        border-bottom: 1px solid $sub-color;
+        margin: 15px 0;
+
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus,
+        &:-webkit-autofill::first-line {
+            -webkit-text-fill-color: $sub-color;
+            transition: background-color 6000s ease-in-out;
+            font-family: futura-medium;
+            font-size: 25px;
+
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &:focus~.form-text-area-label {
+            @include shrinkLabel();
+        }
+    }
+
+    .form-text-area-label {
+        color: $sub-color;
+        font-size: 35px;
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 15px;
+        top: 30px;
+        transition: 300ms ease all;
+
+        &.shrink {
+            @include shrinkLabel();
+        }
+    }
+}

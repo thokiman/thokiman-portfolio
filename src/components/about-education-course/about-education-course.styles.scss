@@ -1,0 +1,161 @@
+.education-course-content {
+
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 92%;
+
+    margin: 0 25px;
+    position: relative;
+    top: 10px;
+
+    .education-course-title {
+
+        display: inline-block;
+        width: 90%;
+        font-size: 500%;
+        text-align: left;
+        line-height: 1.3em;
+        letter-spacing: 0.04em;
+        font-kerning: auto;
+        padding: 0 2px;
+        color: #e3e1e4
+    }
+
+    .education-course-attributes {
+
+
+        display: grid;
+        display: grid;
+        grid-auto-columns: repeat(4, 1fr);
+        grid-auto-rows: repeat(3, 1fr);
+        gap: 2px 0px;
+        grid-template-areas:
+            "education-experience-company education-experience-company education-experience-organization education-experience-organization"
+            "education-experience-company education-experience-company education-experience-date education-experience-date"
+            "education-experience-company education-experience-company education-experience-link education-experience-link";
+        width: 100%;
+        height: 100%;
+
+
+        .education-course-name {
+            grid-area: education-experience-company;
+            padding: 10px 0;
+            font-size: 200%;
+            text-align: center;
+            line-height: 1.3em;
+            letter-spacing: 0.04em;
+            font-kerning: auto;
+            border-bottom: #74c6d4 solid 2px;
+            color: #e3e1e4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 95%;
+        }
+
+        .education-course-organization {
+
+            grid-area: education-experience-organization;
+            font-size: 150%;
+            line-height: 1.3em;
+            letter-spacing: 0.04em;
+            font-kerning: auto;
+            text-align: center;
+            padding: 0 10px;
+
+            border-bottom: #74c6d4 solid 2px;
+            color: #e3e1e4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+
+        }
+
+        .education-course-date {
+
+            grid-area: education-experience-date;
+            padding: 10px 0;
+            font-size: 150%;
+            text-align: center;
+            line-height: 1.3em;
+            letter-spacing: 0.04em;
+            font-kerning: auto;
+
+            border-bottom: #74c6d4 solid 2px;
+            color: #e3e1e4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+
+
+        }
+
+        .education-course-link {
+            grid-area: education-experience-link;
+            margin: 10px 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+
+            .course-link {
+                width: 100%;
+                height: 100%;
+                padding: 4px;
+                text-decoration: none;
+                font-size: 120%;
+                text-align: center;
+                line-height: 1.3em;
+                letter-spacing: 0.04em;
+                font-kerning: auto;
+                color: #e3e1e4;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:hover {
+
+                    border-bottom: #3f4249 solid 2px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    animation: course-link 0.5s ease-in-out;
+                }
+
+                @keyframes course-link {
+                    from {
+                        opacity: 0.3;
+
+                    }
+
+                    to {
+                        opacity: 1;
+
+                    }
+                }
+            }
+
+
+
+
+
+
+        }
+
+
+
+    }
+
+    .education-course-images {}
+}

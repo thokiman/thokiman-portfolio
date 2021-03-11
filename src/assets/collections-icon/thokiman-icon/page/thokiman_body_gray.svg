@@ -5,15 +5,15 @@
 	 style="enable-background:new 0 0 612 847.7;" xmlSpace="preserve">
 <style type="text/css">
 	
-		.thokiman-body-gray0{fill-rule:evenodd;clip-rule:evenodd;fill:#404040;fill-opacity:0.9978;thokiman-body-grayroke:#000000;thokiman-body-grayroke-width:0.78;thokiman-body-grayroke-linecap:round;thokiman-body-grayroke-linejoin:round;thokiman-body-grayroke-opacity:0.9978;}
+		.thokiman-body-gray0{fill-rule:evenodd;clip-rule:evenodd;fill:#404040;fill-opacity:0.9978;stroke:#000000;stroke-width:0.78;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.9978;}
 	
-		.thokiman-body-gray1{fill-rule:evenodd;clip-rule:evenodd;fill:#9F9F9F;fill-opacity:0.9978;thokiman-body-grayroke:#000000;thokiman-body-grayroke-width:0.78;thokiman-body-grayroke-linecap:round;thokiman-body-grayroke-linejoin:round;thokiman-body-grayroke-opacity:0.9978;}
+		.thokiman-body-gray1{fill-rule:evenodd;clip-rule:evenodd;fill:#9F9F9F;fill-opacity:0.9978;stroke:#000000;stroke-width:0.78;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.9978;}
 	
-		.thokiman-body-gray2{fill-rule:evenodd;clip-rule:evenodd;fill:#DFDFDF;fill-opacity:0.9978;thokiman-body-grayroke:#000000;thokiman-body-grayroke-width:0.78;thokiman-body-grayroke-linecap:round;thokiman-body-grayroke-linejoin:round;thokiman-body-grayroke-opacity:0.9978;}
+		.thokiman-body-gray2{fill-rule:evenodd;clip-rule:evenodd;fill:#DFDFDF;fill-opacity:0.9978;stroke:#000000;stroke-width:0.78;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.9978;}
 	
-		.thokiman-body-gray3{fill-rule:evenodd;clip-rule:evenodd;fill:#606060;fill-opacity:0.9978;thokiman-body-grayroke:#000000;thokiman-body-grayroke-width:0.78;thokiman-body-grayroke-linecap:round;thokiman-body-grayroke-linejoin:round;thokiman-body-grayroke-opacity:0.9978;}
+		.thokiman-body-gray3{fill-rule:evenodd;clip-rule:evenodd;fill:#606060;fill-opacity:0.9978;stroke:#000000;stroke-width:0.78;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.9978;}
 	
-		.thokiman-body-gray4{fill-rule:evenodd;clip-rule:evenodd;fill:#BFBFBF;fill-opacity:0.9978;thokiman-body-grayroke:#000000;thokiman-body-grayroke-width:0.78;thokiman-body-grayroke-linecap:round;thokiman-body-grayroke-linejoin:round;thokiman-body-grayroke-opacity:0.9978;}
+		.thokiman-body-gray4{fill-rule:evenodd;clip-rule:evenodd;fill:#BFBFBF;fill-opacity:0.9978;stroke:#000000;stroke-width:0.78;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.9978;}
 </style>
 <g vectornatorlayername="Layer 1">
 	<path class="thokiman-body-gray0" d="M275.6,625.4c-3.1,0.1-6.4,1.4-9.7,4.5c-26.7,24.3-74.6,96.7-62.7,159.7c11.8,63.1,71,59.6,105.5,21.3

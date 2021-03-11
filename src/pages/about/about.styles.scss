@@ -1,0 +1,25 @@
+.about-container {
+    background-image: url("../../assets/layout/water-1.jpg");
+    opacity: 0.9;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 69vh;
+    font-family: futura-medium;
+    transition: background-image 0.7s ease-in-out, height 0.4s ease-in-out;
+}
+
+.about-container-timeline {
+    background: url('../../assets/layout/water-2.jpg'), rgba(227, 225, 228, 0.4);
+    background-blend-mode: color-dodge;
+    opacity: 0.9;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4300px;
+    font-family: futura-medium;
+    transition: background-image 0.7s ease-in-out, height 0.4s ease-in-out;
+}

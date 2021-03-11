@@ -1,0 +1,108 @@
+.achievement-experience-project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+
+    .achievement-experience-project-title {
+        font-size: 350%;
+        padding: 10px;
+        color: #e3e1e4;
+        letter-spacing: 0.04em;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .achievement-experience-project {
+
+        width: 85%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: repeat(3, 1fr);
+        gap: 10px 10px;
+        grid-template-areas:
+            "name-achievement-experience-project name-achievement-experience-project date-achievement-experience-project date-achievement-experience-project"
+            "image-achievement-experience-container image-achievement-experience-container description-achievement-experience-project description-achievement-experience-project"
+            "image-achievement-experience-container image-achievement-experience-container description-achievement-experience-project description-achievement-experience-project";
+
+        margin-bottom: 50px;
+
+        border-bottom: #74c6d4 solid 1px;
+
+        .name-achievement-experience-project {
+
+            width: 100%;
+            text-decoration: none;
+            grid-area: name-achievement-experience-project;
+            font-size: 350%;
+            ;
+            color: #e3e1e4;
+            letter-spacing: 0.09em;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+
+        }
+
+        .date-achievement-experience-project {
+            border-left: #74c6d4 solid 1px;
+            width: 85%;
+            text-decoration: none;
+            grid-area: date-achievement-experience-project;
+            font-size: 190%;
+            padding: 0 20px;
+            color: #e3e1e4;
+            letter-spacing: 0.09em;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+
+        }
+
+        .image-achievement-experience-container {
+            grid-area: image-achievement-experience-container;
+
+            width: 94%;
+            height: 89%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-right: 5px;
+
+
+
+            .image-achievement-experience {
+                width: 90%;
+                height: 100%;
+                background-size: cover;
+                opacity: 0.85;
+            }
+        }
+
+        .description-achievement-experience-project {
+
+
+            width: 300px;
+            grid-area: description-achievement-experience-project;
+            font-size: 120%;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            line-height: 1.2em;
+            color: #e3e1e4;
+            letter-spacing: 0.09em;
+
+
+
+
+        }
+    }
+}

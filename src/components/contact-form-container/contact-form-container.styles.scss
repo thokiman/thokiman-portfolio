@@ -1,0 +1,48 @@
+.contact-form-container {
+    width: 35%;
+    height: 100%;
+    background-color: rgba($color: #74c6d4, $alpha: 0.8);
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+
+    .contact-form-group {
+
+        width: 90%;
+        height: 180vh;
+        transition: all ease-in-out 1s;
+        padding-top: 15px;
+
+        &.active {
+            width: 90%;
+            height: 200vh;
+            transition: all ease-in-out 1s;
+        }
+
+        .contact-form-head {
+            font-size: 250%;
+            text-align: left;
+            letter-spacing: 0.01em;
+            color: #128194;
+            text-indent: 0.5em;
+        }
+
+        .contact-form-subhead {
+            font-size: 35px;
+            text-align: justify;
+            line-height: 1.7em;
+            letter-spacing: 0.05em;
+            color: #bccfd5;
+        }
+
+        .button-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+
+}

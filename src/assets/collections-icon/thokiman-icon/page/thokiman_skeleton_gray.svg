@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illuthokiman-skeleton-grayrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlnsvectornator="http://vectornator.io"
-	 xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2131.2 2806.5"
-	 style="enable-background:new 0 0 2131.2 2806.5;" xmlSpace="preserve">
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 2131.2 2806.5" style="enable-background:new 0 0 2131.2 2806.5;" xmlSpace="preserve">
 <style type="text/css">
-	.thokiman-skeleton-gray0{fill:none;thokiman-skeleton-grayroke:#3F4249;thokiman-skeleton-grayroke-width:4;thokiman-skeleton-grayroke-linecap:round;thokiman-skeleton-grayroke-linejoin:round;thokiman-skeleton-grayroke-miterlimit:7.2562;}
+	.thokiman-skeleton-gray0{fill:none;stroke:#3F4249;stroke-width:10;stroke-miterlimit:8;}
 </style>
-<g vectornatorlayername="Layer 1">
+<g>
 	<path class="thokiman-skeleton-gray0" d="M897.6,236c14.1,13,29.5,3.4,29.5,3.4s4.2-14.4,15.7-27.2c11.4-12.7,23.4-21.5,23.4-21.5s-3.7-18.7-18.1-16.4
 		c-11.9,6.5-27.1,10.2-40.6,26.3C894.7,216.4,897.6,235.7,897.6,236z"/>
 	<path class="thokiman-skeleton-gray0" d="M1248.4,235.7c-13.3,7.9-30.5,1.7-30.5,1.7s-3.5-11.9-13.3-22.9c-11.4-12.7-24.4-23.8-24.4-23.8
@@ -200,7 +199,7 @@
 		C1993.5,1490.4,1988.8,1511.9,1997,1514.8z"/>
 	<path class="thokiman-skeleton-gray0" d="M1916,1560.7c13.3-9.1,0.8-16.1,0.3-25.5c17.3-9.1-5-14.2-13.8-14.7c-8.8-0.6-13,11.6-13,21
 		C1890,1550.5,1909.1,1564.9,1916,1560.7z"/>
-	<path class="thokiman-skeleton-gray0" d="M1503.6,773.4c-3.7,100.3,59.2,139.7,76.2,252.4c65.9-44.5,160.9,79.3,172.1,0c11.2-79.3-85.2-219-163.3-295.8
+	<path class="thokiman-skeleton-gray0" d="M1503.6,773.4c-3.7,100.3,59.2,139.7,76.2,252.4c65.9-44.5,160.9,79.3,172.1,0s-85.2-219-163.3-295.8
 		c-24.4-24.1-7.7-21.5-66.9-36.5C1495.1,708.2,1548.5,782.2,1503.6,773.4z"/>
 	<path class="thokiman-skeleton-gray0" d="M1753,1140c30.5-68,54.7,0,61.9,22.4c44.1,128.3,60.5,165.7,100.1,183c72.8,31.7,92.7,109.4,64.3,79
 		c-27.9-30.6-43.5,51.3-43.5,51.3s-14.6,28.6-63.5-62.3C1823.3,1322.4,1771.8,1223,1753,1140z"/>
@@ -260,7 +259,7 @@
 		C137.4,1490.4,142.7,1511.9,134.2,1514.8z"/>
 	<path class="thokiman-skeleton-gray0" d="M215.4,1560.7c-13.3-9.1-0.8-16.1-0.3-25.5c-17.3-9.1,5-14.2,13.8-14.7s13,11.6,13,21
 		C241.2,1550.5,222.1,1564.9,215.4,1560.7z"/>
-	<path class="thokiman-skeleton-gray0" d="M647.2,773.4c0,112.5-79.1,139.7-96.1,252.4c-65.9-44.5-160.9,79.3-172.1,0c-11.2-79.3,85.2-199.4,163.3-276.2
+	<path class="thokiman-skeleton-gray0" d="M647.2,773.4c0,112.5-79.1,139.7-96.1,252.4c-65.9-44.5-160.9,79.3-172.1,0s85.2-199.4,163.3-276.2
 		c24.4-24.1,7.7-41.4,66.9-56.1C636.1,708.2,600.2,773.4,647.2,773.4z"/>
 	<path class="thokiman-skeleton-gray0" d="M378,1140c-30.5-68-54.7,0-61.9,22.4c-44.1,127.8-60.8,165.4-100.1,182.4c-72.8,31.7-92.7,109.4-64.3,79
 		c27.9-30.6,43.5,51.3,43.5,51.3s14.6,28.6,63.5-62.3C307.8,1322.4,359.6,1223,378,1140z"/>
@@ -304,7 +303,7 @@
 		C836.6,678.5,797.5,658.1,821.2,646.7z"/>
 	<path class="thokiman-skeleton-gray0" d="M1316.1,642.2c-23.6-11.3-66.1-14.4-77.3,11c-13.8,32.3-115.8-14.2-61.1,12.7c54.7,26.9,50.2,19,86.8,13.3
 		C1301,674.2,1339.5,653.5,1316.1,642.2z"/>
-	<path class="thokiman-skeleton-gray0" d="M802,749c21.8-28.6,73-55.8,103.3-26.9c39,36.8,134.6-82.2,84.4-15.9c-50.2,66.3-50.2,53-99,65.7
+	<path class="thokiman-skeleton-gray0" d="M802,749c21.8-28.6,73-55.8,103.3-26.9c39,36.8,134.6-82.2,84.4-15.9s-50.2,53-99,65.7
 		C842.7,784.4,780.3,777.3,802,749z"/>
 	<path class="thokiman-skeleton-gray0" d="M1335.2,744.5c-21.8-28.6-73-55.8-103.3-26.9c-39,36.8-134.6-82.2-84.4-15.9s50.2,53,99,65.7
 		C1294.9,780.2,1357,773.1,1335.2,744.5z"/>

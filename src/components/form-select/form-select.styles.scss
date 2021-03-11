@@ -1,0 +1,177 @@
+.group-select-container {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 98%;
+    margin: 15px 10px 40px;
+
+
+    .select-title-active {
+
+        text-align: start;
+        width: 100%;
+        font-size: 30px;
+        color: #bccfd5;
+        margin-bottom: 5px;
+        animation: slide-in-fwd-bl 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+        @keyframes slide-in-fwd-bl {
+            0% {
+                transform: translateZ(-20px) translateY(20px) translateX(-20px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateZ(0) translateY(0) translateX(0);
+                opacity: 1;
+            }
+        }
+    }
+
+    .select-title-container {
+        display: block;
+        height: 0px;
+        transition: height 0.5s ease-in-out;
+
+        &.active {
+            display: block;
+            height: 39px;
+            transition: height 0.5s ease-in-out;
+        }
+
+    }
+
+    .select-value {
+        position: relative;
+        right: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        font-size: 35px;
+        color: #bccfd5;
+        cursor: pointer;
+
+
+        &:hover {
+
+            .select-title,
+            .select-arrow-button {
+                color: #bccfd5;
+                transition: color linear 0.2s;
+            }
+        }
+
+        .checker-area-code,
+        .checker-phone-number {
+            position: relative;
+            top: 10px;
+            right: 7px;
+            color: #128194;
+
+            .checker-icon {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .select-title {
+            font-size: 35px;
+            text-align: start;
+            width: 90%;
+            color: #128194;
+            position: relative;
+            right: 5px;
+            padding: 5px;
+            border-bottom: #128194 solid 1px;
+        }
+
+        .select-value-active {
+            font-size: 35px;
+            text-align: center;
+            width: 90%;
+            color: #128194;
+            padding: 5px;
+            animation: slide-in-fwd-bl 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            border-bottom: #128194 solid 1px;
+
+            @keyframes slide-in-fwd-bl {
+                0% {
+                    transform: translateZ(-20px) translateY(20px) translateX(-20px);
+                    opacity: 0;
+                }
+
+                100% {
+                    transform: translateZ(0) translateY(0) translateX(0);
+                    opacity: 1;
+                }
+            }
+
+        }
+
+        .select-arrow-button {
+
+            position: relative;
+            left: 10px;
+            display: flex;
+            align-items: center;
+            width: 35px;
+            color: #128194;
+            transition: all ease-in-out 0.4s;
+
+            &.active {
+                animation: arrow-icon ease-in-out 0.4s;
+                transform: rotate(-90deg);
+
+                @keyframes arrow-icon {
+                    from {
+                        transform: rotate(0deg)
+                    }
+
+                    to {
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
+        }
+    }
+
+    .select-container {
+
+        list-style-type: none;
+        margin: 5px 0;
+        padding: 0;
+        width: 100%;
+
+        .select-item {
+
+            cursor: pointer;
+            width: 100%;
+            animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+            font-size: 25px;
+            color: #bccfd5;
+            margin-bottom: 5px;
+
+            &:hover {
+                color: #128194;
+                transition: color linear 0.2s;
+            }
+
+            @keyframes swing-in-top-fwd {
+                0% {
+                    transform: rotateX(-100deg);
+                    transform-origin: top;
+                    opacity: 0;
+
+                }
+
+                100% {
+                    transform: rotateX(0deg);
+                    transform-origin: top;
+                    opacity: 1;
+
+                }
+            }
+        }
+    }
+}

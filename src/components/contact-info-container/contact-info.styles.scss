@@ -1,0 +1,252 @@
+ .contact-information-container {
+     width: 35%;
+     height: 100%;
+     background-color: rgba($color: #128194, $alpha: 0.5);
+
+     .contact-information-title {
+         font-size: 250%;
+         color: #e3e1e4;
+         padding: 15px;
+         font-kerning: auto;
+         letter-spacing: 0.05em;
+     }
+
+     .contact-information-content {
+
+
+         display: grid;
+         grid-auto-columns: repeat (6, 1fr);
+         grid-auto-rows: repeat(10, 1fr);
+         grid-template-areas:
+             "white-thokiman-contact-icon-0 white-thokiman-contact-icon-0 white-thokiman-contact-icon-1 white-thokiman-contact-icon-1 white-thokiman-contact-icon-2 white-thokiman-contact-icon-2"
+             "white-thokiman-contact-icon-0 white-thokiman-contact-icon-0 white-thokiman-contact-icon-1 white-thokiman-contact-icon-1 white-thokiman-contact-icon-2 white-thokiman-contact-icon-2"
+             "white-thokiman-contact-icon-0 white-thokiman-contact-icon-0 white-thokiman-contact-icon-1 white-thokiman-contact-icon-1 white-thokiman-contact-icon-2 white-thokiman-contact-icon-2"
+             "white-thokiman-contact-icon-3 white-thokiman-contact-icon-3 social-contact-link-icon-facebook social-contact-link-icon-instagram white-thokiman-contact-icon-4 white-thokiman-contact-icon-4"
+             "white-thokiman-contact-icon-3 white-thokiman-contact-icon-3 white-thokiman-contact-icon-5 white-thokiman-contact-icon-5 white-thokiman-contact-icon-4 white-thokiman-contact-icon-4"
+             "white-thokiman-contact-icon-3 white-thokiman-contact-icon-3 white-thokiman-contact-icon-5 white-thokiman-contact-icon-5 white-thokiman-contact-icon-4 white-thokiman-contact-icon-4"
+             "social-contact-link-icon-github social-contact-link-icon-twitter white-thokiman-contact-icon-5 white-thokiman-contact-icon-5 social-contact-link-icon-linkedin social-contact-link-icon-whatsapp"
+             "white-thokiman-contact-icon-6 white-thokiman-contact-icon-6 photo-contact-link-icon-adobe-stock photo-contact-link-icon-adobe-stock white-thokiman-contact-icon-7 white-thokiman-contact-icon-7"
+             "white-thokiman-contact-icon-6 white-thokiman-contact-icon-6 photo-contact-link-icon-eye-em photo-contact-link-icon-eye-em white-thokiman-contact-icon-7 white-thokiman-contact-icon-7"
+             "white-thokiman-contact-icon-6 white-thokiman-contact-icon-6 photo-contact-link-icon-shutter-stock photo-contact-link-icon-shutter-stock white-thokiman-contact-icon-7 white-thokiman-contact-icon-7";
+         justify-content: center;
+         align-items: center;
+
+         .white-thokiman-contact-icon-0 {
+             grid-area: white-thokiman-contact-icon-0;
+
+
+         }
+
+         .white-thokiman-contact-icon-1 {
+             grid-area: white-thokiman-contact-icon-1;
+             border-left: #74c6d4 solid 1px;
+         }
+
+         .white-thokiman-contact-icon-2 {
+             grid-area: white-thokiman-contact-icon-2;
+
+         }
+
+         .white-thokiman-contact-icon-3 {
+             grid-area: white-thokiman-contact-icon-3;
+         }
+
+         .white-thokiman-contact-icon-4 {
+             grid-area: white-thokiman-contact-icon-4;
+             border-left: #74c6d4 solid 1px;
+         }
+
+         .white-thokiman-contact-icon-5 {
+             grid-area: white-thokiman-contact-icon-5;
+             border-bottom: #74c6d4 solid 1px;
+
+         }
+
+         .white-thokiman-contact-icon-6 {
+             grid-area: white-thokiman-contact-icon-6;
+         }
+
+         .white-thokiman-contact-icon-7 {
+             grid-area: white-thokiman-contact-icon-7;
+         }
+
+
+         .social-contact-link-icon-github {
+             grid-area: social-contact-link-icon-github;
+
+
+         }
+
+         .social-contact-link-icon-twitter {
+             grid-area: social-contact-link-icon-twitter;
+
+
+         }
+
+         .social-contact-link-icon-linkedin {
+             grid-area: social-contact-link-icon-linkedin;
+
+             border-left: #74c6d4 solid 1px;
+
+         }
+
+         .social-contact-link-icon-whatsapp {
+             grid-area: social-contact-link-icon-whatsapp;
+
+
+         }
+
+         .social-contact-link-icon-facebook {
+             grid-area: social-contact-link-icon-facebook;
+             border-top: #74c6d4 solid 1px;
+
+
+         }
+
+         .social-contact-link-icon-instagram {
+             grid-area: social-contact-link-icon-instagram;
+             border-top: #74c6d4 solid 1px;
+
+         }
+
+         .photo-contact-link-icon-shutter-stock {
+             grid-area: photo-contact-link-icon-shutter-stock;
+
+             border-left: #74c6d4 solid 1px;
+
+         }
+
+         .photo-contact-link-icon-eye-em {
+             grid-area: photo-contact-link-icon-eye-em;
+             border-bottom: #74c6d4 solid 1px;
+             border-right: #74c6d4 solid 1px;
+
+         }
+
+         .photo-contact-link-icon-adobe-stock {
+             grid-area: photo-contact-link-icon-adobe-stock;
+             border-left: #74c6d4 solid 1px;
+             border-bottom: #74c6d4 solid 1px;
+
+         }
+
+
+
+
+
+         .white-thokiman-contact-icon-0,
+         .white-thokiman-contact-icon-1,
+         .white-thokiman-contact-icon-2,
+         .white-thokiman-contact-icon-3,
+         .white-thokiman-contact-icon-4,
+         .white-thokiman-contact-icon-5,
+         .white-thokiman-contact-icon-6,
+         .white-thokiman-contact-icon-7 {
+             padding: 4px 0;
+             width: 100%;
+             height: 121px;
+
+             &:hover {
+                 .thoki-out-cream {
+                     animation: thoki-out-cream-hover 2s ease-in-out infinite alternate-reverse;
+                     transition: all 1.4s linear;
+                     stroke-dasharray: 500 40;
+                     stroke-dashoffset: 80%;
+                     stroke-miterlimit: 10;
+                 }
+
+                 svg:hover {
+                     animation-play-state: running;
+                 }
+
+                 @keyframes thoki-out-cream-hover {
+                     to {
+                         stroke: #74c6d4;
+                         stroke-dashoffset: 0%;
+                     }
+                 }
+             }
+
+             path.thoki-out-cream {
+                 stroke-dasharray: 200 40;
+                 stroke-dashoffset: 50%;
+                 stroke-miterlimit: 10;
+                 animation: thoki-out-cream-display 5s ease-in-out infinite alternate;
+
+                 transition: all 1.4s linear;
+
+                 @keyframes thoki-out-cream-display {
+                     to {
+                         stroke-dashoffset: 0%;
+                     }
+                 }
+             }
+
+         }
+
+         .social-contact-link-icon-facebook,
+         .social-contact-link-icon-github,
+         .social-contact-link-icon-instagram,
+         .social-contact-link-icon-linkedin,
+         .social-contact-link-icon-twitter,
+         .social-contact-link-icon-whatsapp {
+             .social-contact-icon {
+                 display: flex;
+                 align-items: center;
+                 left: 25px;
+                 width: 100%;
+                 height: 50px;
+
+
+                 &:hover {
+                     animation: color-change-5x 8s linear infinite alternate both;
+                 }
+             }
+         }
+
+         .photo-contact-link-icon-adobe-stock,
+         .photo-contact-link-icon-eye-em,
+         .photo-contact-link-icon-shutter-stock {
+             .photo-contact-icon {
+
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+                 width: 100%;
+                 height: 50px;
+
+                 &:hover {
+                     animation: color-change-5x 8s linear infinite alternate both;
+                 }
+             }
+         }
+     }
+
+ }
+
+ @keyframes color-change-5x {
+     0% {
+         background: #19dcea;
+         opacity: 0.6;
+     }
+
+     25% {
+         background: #b22cff;
+         opacity: 0.8;
+     }
+
+     50% {
+         background: #ea2222;
+         opacity: 0.7;
+     }
+
+     75% {
+         background: #f5be10;
+         opacity: 0.9;
+     }
+
+     100% {
+         background: #3bd80d;
+         opacity: 1;
+     }
+ }

@@ -1,0 +1,90 @@
+.timeline-container {
+
+    width: 70%;
+    height: 86%;
+    position: relative;
+    top: -240px;
+    right: 30px;
+
+    font-family: futura-demi;
+
+    .timeline-career-title {
+        background-color: rgba($color: #74c6d4, $alpha: 0.2);
+
+        text-align: left;
+        font-size: 350%;
+        padding: 0 10px;
+
+        animation: color-change-2x 9s ease-in-out infinite alternate both;
+
+        @keyframes color-change-2x {
+            0% {
+                color: rgba($color: #74c6d4, $alpha: 0.8);
+            }
+
+            100% {
+                color: rgba($color:#e3e1e4, $alpha: 1);
+            }
+        }
+    }
+
+    .scroll-to-the-top {
+        position: relative;
+        bottom: 55px;
+        left: 500px;
+        color: rgba($color: #e3e1e4, $alpha: 0.9);
+
+        width: 30px;
+        height: 30px;
+        animation: bounce-bottom 2s both infinite;
+
+        @keyframes bounce-bottom {
+            0% {
+                transform: translateY(45px);
+                animation-timing-function: ease-in;
+                opacity: 1;
+                color: rgba($color: #128194, $alpha: 0.9);
+            }
+
+            24% {
+                opacity: 1;
+            }
+
+            40% {
+                transform: translateY(24px);
+                animation-timing-function: ease-in;
+            }
+
+            65% {
+                transform: translateY(12px);
+                animation-timing-function: ease-in;
+                color: rgba($color: #e3e1e4, $alpha: 0.5);
+            }
+
+            82% {
+                transform: translateY(6px);
+                animation-timing-function: ease-in;
+            }
+
+            93% {
+                transform: translateY(4px);
+                animation-timing-function: ease-in;
+            }
+
+            25%,
+            55%,
+            75%,
+            87% {
+                transform: translateY(0px);
+                animation-timing-function: ease-out;
+            }
+
+            100% {
+                transform: translateY(0px);
+                animation-timing-function: ease-out;
+
+                color: rgba($color: #3f4249, $alpha: 0.9);
+            }
+        }
+    }
+}

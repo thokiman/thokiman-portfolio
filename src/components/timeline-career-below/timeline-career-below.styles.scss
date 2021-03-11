@@ -1,0 +1,13 @@
+  .below-timeline-header-container {
+      grid-area: below-timeline-header-container;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+
+      margin: 20px 0;
+      cursor: pointer;
+      height: 100%;
+
+
+
+  }

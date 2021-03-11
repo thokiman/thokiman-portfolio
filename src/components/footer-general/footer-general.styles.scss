@@ -1,0 +1,151 @@
+.footer-container {
+    position: relative;
+    top: 10px;
+    bottom: 10px;
+    right: 10px;
+    height: 14vh;
+
+    display: flex;
+    justify-content: flex-end;
+
+    .profile-footer-container {
+
+        position: relative;
+        right: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        width: 30%;
+        height: 100%;
+
+        .profile-footer-icon {
+            width: 30%;
+            height: 50%;
+
+            .thoki-out-cream {
+                animation: pi-cream-animate 1s ease-in-out infinite;
+            }
+
+            .pi-cream {
+                animation: pi-cream-animate 1s ease-in-out infinite;
+
+            }
+
+            .pi-cream-one {
+                animation: pi-cream-animate 1s ease-in-out infinite;
+
+            }
+
+
+
+            @keyframes pi-cream-animate {
+                from {
+                    stroke: #bccfd5;
+                    opacity: 0.6;
+                }
+
+                to {
+                    stroke: #e3e1e4;
+                    opacity: 1;
+                }
+            }
+
+            .footer-icon {
+                width: 50%;
+                height: 90%;
+
+            }
+        }
+
+        .profile-footer-text {
+
+            width: 100%;
+            font-family: futura-medium;
+            font-kerning: auto;
+            letter-spacing: 0.03em;
+            text-align: end;
+            color: #e3e1e4;
+        }
+    }
+
+    .social-footer-container {
+
+        width: 15%;
+        height: 90%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 1fr;
+        align-items: center;
+        justify-items: center;
+        border-left: #e3e1e4 solid 1px;
+
+
+
+        .social-item {
+            background-repeat: no-repeat;
+            height: 80%;
+            width: 50%;
+            object-fit: cover;
+
+
+
+
+            &:hover {
+
+                animation: shake-top 2s ease-in-out infinite;
+
+
+                @keyframes shake-top {
+
+                    0%,
+                    100% {
+                        transform: rotate(0deg);
+                        transform-origin: 50% 0;
+                        background-color: #128194;
+                        border-radius: 5px 5px 5px;
+                        opacity: 1;
+                    }
+
+                    10% {
+                        transform: rotate(2deg);
+                        border-radius: 5px 5px 5px;
+                        opacity: 0.6;
+                    }
+
+                    20%,
+                    40%,
+                    60% {
+                        transform: rotate(-4deg);
+                        background-color: #128194;
+                        border-radius: 5px 5px 5px;
+                        opacity: 1;
+                    }
+
+                    30%,
+                    50%,
+                    70% {
+                        transform: rotate(4deg);
+                        border-radius: 5px 5px 5px;
+                        opacity: 0.5;
+                    }
+
+                    80% {
+                        transform: rotate(-2deg);
+                        background-color: #128194;
+                        border-radius: 5px 5px 5px;
+                        opacity: 1;
+                    }
+
+                    90% {
+                        transform: rotate(2deg);
+                        border-radius: 5px 5px 5px;
+                        opacity: 0.3;
+                    }
+                }
+
+            }
+        }
+
+    }
+}

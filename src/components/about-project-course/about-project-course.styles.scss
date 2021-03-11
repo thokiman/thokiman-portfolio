@@ -1,0 +1,108 @@
+.course-project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+
+    .course-project-title {
+        font-size: 400%;
+        padding: 10px;
+        color: #e3e1e4;
+        letter-spacing: 0.04em;
+        text-align: left;
+        display: flex;
+        align-items: center;
+    }
+
+    .course-project {
+
+        width: 90%;
+        height: 100%;
+        display: grid;
+        grid-auto-columns: repeat(4, 1fr);
+        grid-auto-rows: repeat(3, 1fr);
+        gap: 0px 0px;
+        grid-template-areas:
+            "name-course-project name-course-project related-course-project related-course-project"
+            "name-course-project name-course-project related-course-project related-course-project"
+            "description-course-project description-course-project description-course-project description-course-project";
+
+
+
+
+
+        .name-course-project {
+
+            width: 85%;
+            text-decoration: none;
+            grid-area: name-course-project;
+            font-size: 330%;
+            padding: 10px;
+            color: #e3e1e4;
+            letter-spacing: 0.09em;
+            text-align: right;
+            display: flex;
+            align-items: center;
+            position: relative;
+            right: 32px;
+
+
+            &:hover {
+                animation: link-course-project 0.5s ease-in-out;
+                color: #74c6d4;
+
+
+                @keyframes link-course-project {
+                    from {
+                        opacity: 0.2;
+                        color: #e3e1e4;
+
+                    }
+
+                    to {
+                        opacity: 1;
+                        color: #74c6d4;
+
+                    }
+                }
+            }
+
+        }
+
+        .related-course-project {
+            grid-area: related-course-project;
+            border: #74c6d4 solid 1px;
+            width: 120%;
+            position: relative;
+            right: 70px;
+            text-decoration: none;
+
+            font-size: 170%;
+            padding: 15px;
+            color: #e3e1e4;
+            letter-spacing: 0.06em;
+            text-align: left;
+            display: flex;
+            align-items: center;
+        }
+
+        .description-course-project {
+
+            border-bottom: #74c6d4 solid 1px;
+            width: 100%;
+
+            grid-area: description-course-project;
+            font-size: 150%;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            text-align: justify;
+            line-height: 1.2em;
+            color: #e3e1e4;
+            letter-spacing: 0.05em;
+            margin: 10px auto;
+
+        }
+    }
+}

@@ -1,0 +1,251 @@
+.left-service-container {
+    width: 25%;
+    height: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba($color: #128194, $alpha: .5);
+    position: relative;
+    left: 40px;
+    transition: height 0.5s ease-in-out, top 0.2s ease;
+
+
+
+    .directory-service {
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 5px 5px;
+        grid-template-areas:
+            "directory-service-text-eng directory-service-text-eng directory-service-text-fsd directory-service-text-fsd"
+            "directory-service-text-gd directory-service-text-gd directory-service-text-fsd directory-service-text-fsd"
+            "directory-service-text-gd directory-service-text-gd directory-service-text-pg directory-service-text-pg";
+        height: 76%;
+        width: 95%;
+        cursor: pointer;
+
+        .directory-service-text-eng {
+
+            grid-area: directory-service-text-eng;
+            text-decoration: none;
+            font-size: 235%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: justify;
+            letter-spacing: 0.02em;
+            padding: 0 10px;
+
+            color: #e3e1e4;
+
+
+            border-bottom: rgba($color: #128194, $alpha: .5) solid 2px;
+            border-right: rgba($color: #128194, $alpha: .5) solid 2px;
+            transition: color 1s linear;
+
+
+            &:hover {
+                animation: directory-service-hover 1s alternate-reverse infinite;
+            }
+
+        }
+
+        .directory-service-text-eng-active {
+
+            grid-area: directory-service-text-eng;
+            text-decoration: none;
+            font-size: 235%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: justify;
+            letter-spacing: 0.02em;
+            padding: 0 10px;
+            color: #3f4249;
+
+
+            animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            cursor: default;
+        }
+
+        .directory-service-text-fsd {
+
+            grid-area: directory-service-text-fsd;
+            text-decoration: none;
+            font-size: 235%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            line-height: 1.1em;
+            letter-spacing: 0.02em;
+            padding: 0 10px;
+
+            color: #e3e1e4;
+
+            border-bottom: rgba($color: #128194, $alpha: .5) solid 2px;
+            border-left: rgba($color: #128194, $alpha: .5) solid 2px;
+            transition: color 1s linear;
+
+
+            &:hover {
+                animation: directory-service-hover 1s alternate-reverse infinite;
+            }
+
+        }
+
+        .directory-service-text-fsd-active {
+
+            grid-area: directory-service-text-fsd;
+            text-decoration: none;
+            font-size: 235%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            line-height: 1.1em;
+            letter-spacing: 0.02em;
+            padding: 0 10px;
+
+            color: #3f4249;
+
+
+            animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            cursor: default;
+        }
+
+        .directory-service-text-gd {
+
+            grid-area: directory-service-text-gd;
+            text-decoration: none;
+            font-size: 235%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: end;
+            line-height: 1.1em;
+            letter-spacing: 0.02em;
+            padding: 0 10px;
+
+            color: #e3e1e4;
+
+            border-top: rgba($color: #128194, $alpha: .5) solid 2px;
+            border-right: rgba($color: #128194, $alpha: .5) solid 2px;
+
+            transition: color 1s linear;
+
+
+            &:hover {
+                animation: directory-service-hover 1s alternate-reverse infinite;
+            }
+
+        }
+
+        .directory-service-text-gd-active {
+
+            grid-area: directory-service-text-gd;
+            text-decoration: none;
+            font-size: 235%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: end;
+            line-height: 1.1em;
+            letter-spacing: 0.02em;
+            padding: 0 10px;
+
+            color: #3f4249;
+
+
+
+            animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            cursor: default;
+        }
+
+        .directory-service-text-pg {
+
+            grid-area: directory-service-text-pg;
+            text-decoration: none;
+            font-size: 235%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            line-height: 1.1em;
+            letter-spacing: 0.02em;
+            padding: 0 10px;
+            padding-right: 55px;
+            color: #e3e1e4;
+
+
+            border-top: rgba($color: #128194, $alpha: .5) solid 2px;
+            border-left: rgba($color: #128194, $alpha: .5) solid 2px;
+            transition: color 1s linear;
+
+
+            &:hover {
+                animation: directory-service-hover 1s alternate-reverse infinite;
+            }
+
+        }
+
+        .directory-service-text-pg-active {
+
+            grid-area: directory-service-text-pg;
+            text-decoration: none;
+            font-size: 235%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            line-height: 1.1em;
+            letter-spacing: 0.02em;
+            padding: 0 10px;
+            padding-right: 55px;
+            color: #3f4249;
+
+
+
+
+            animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            cursor: default;
+        }
+    }
+}
+
+@keyframes directory-service-hover {
+    0% {
+        background-position: 100% 50%;
+        color: #e3e1e4;
+    }
+
+    100% {
+        background-position: 0% 50%;
+        color: #74c6d4;
+    }
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,11 +1,17 @@
 import React from "react";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 
-import { about } from "../../data.object/abouts.data";
+import PageShell from "../../components/page-shell/page-shell.component";
 import { ReactComponent as BlueOutlineThokiman } from "../../assets/collections-icon/thokiman-icon/logo/outline/thokiman_head_logo_blue.svg";
 import { ReactComponent as WhiteOutlineThokimanSkeleton } from "../../assets/collections-icon/thokiman-icon/page/thokiman_skeleton_white.svg";
 import "./homepage.styles.scss";
+import {
+  selectPersonalSummaryQuote,
+  selectPersonalSummaryShortDescription,
+} from "../../redux/about/about.selectors";
 
-const HomePage = () => {
+const HomePage = ({ shortDescription, quote }) => {
   return (
     <div className="homepage-container">
       <div className="thokiman-content-container">
@@ -22,18 +28,14 @@ const HomePage = () => {
       <div className="about-content-container">
         <div className="profile-image-container">
           <div className="background-profile-image">
-            <div className="profile-image"></div>
+            <div className="profile-image" />
           </div>
         </div>
         <div className="profile-text-container">
           <div className="background-profile-text">
             <div className="name-text">Thomas Santosa</div>
-            <div className="activity-text">
-              {about.aboutPath.items.personalSummary.items.shortDescription}
-            </div>
-            <div className="quote-text">
-              {about.aboutPath.items.personalSummary.items.quote}
-            </div>
+            <div className="activity-text">{shortDescription}</div>
+            <div className="quote-text">{quote}</div>
           </div>
         </div>
       </div>
@@ -41,4 +43,8 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+const mapStateToProps = createStructuredSelector({
+  shortDescription: selectPersonalSummaryShortDescription,
+  quote: selectPersonalSummaryQuote,
+});
+export default PageShell(connect(mapStateToProps)(HomePage));
