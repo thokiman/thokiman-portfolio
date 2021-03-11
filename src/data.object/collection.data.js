@@ -2,7 +2,7 @@ export const collection = {
   all: {
     id: "a3597be8-1ba1-4ac9-9c25-bf8290d756ae",
     title: "all",
-    routeName: "/all",
+    routeName: "/portfolio",
     items: [
       {
         id: "500bd9f8-f031-45e2-a09b-d76f2243ed97",
@@ -2744,7 +2744,7 @@ export const collection = {
   brand: {
     id: "aea62e4f-dbd3-492e-94fb-d194b01c3194",
     title: "Thokiman",
-    routeName: "/thokiman",
+    routeName: "/portfolio/thokiman",
     items: [
       {
         id: "500bd9f8-f031-45e2-a09b-d76f2243ed97",
@@ -2786,7 +2786,7 @@ export const collection = {
   digitalArt: {
     id: "0651dcbb-0e87-4532-9d6f-26b0b7667a97",
     title: "Digital Art",
-    routeName: "/visualart",
+    routeName: "/portfolio/visualart",
     items: [
       {
         id: "53192fd1-45ab-449f-998f-a7fb9e2b5128",
@@ -2838,12 +2838,12 @@ export const collection = {
   photography: {
     id: "4ab48d3d-6fda-43fb-99c4-332a3f13edc4",
     title: "Photography",
-    routeName: "/photography",
+    routeName: "/portfolio/photography",
     items: {
       bw: {
         id: "1e031eca-4bd7-48ec-a69c-aed418853af4",
         title: "Photography Black And White",
-        routeName: "/photography/photobw",
+        routeName: "/portfolio/photography/photobw",
         bwItems: [
           {
             id: "4cbae380-ba70-400f-b339-43bebbf2c1ac",
@@ -3420,7 +3420,7 @@ export const collection = {
       color: {
         id: "cb8aa9ca-41c4-43f3-9f37-4f01a114f982",
         title: "Photography Color",
-        routeName: "/photography/photocolor",
+        routeName: "/portfolio/photography/photocolor",
         colorItems: [
           {
             id: "69acd33e-f0b3-4119-8da1-37105d28a1c9",

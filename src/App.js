@@ -1,5 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 
 import Header from "./components/header/header.component";
 import HomePage from "./pages/homepage/homepage.component";
@@ -9,21 +11,32 @@ import Service from "./pages/service/service.component";
 import Contact from "./pages/contact/contact.component";
 import Footer from "./components/footer/footer.component.jsx";
 import "./App.styles.scss";
+import { selectAboutRoute } from "./redux/about/about.selectors";
+import { selectServiceRoute } from "./redux/service/service.selectors";
+import { selectPortfolioRoute } from "./redux/collection/collection.selectors";
+import { selectContactRoute } from "./redux/contact/contact.selectors";
 
-const App = () => {
+const App = ({ aboutRoute, serviceRoute, portfolioRoute, contactRoute }) => {
   return (
     <div>
       <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/about" component={About} />
-        <Route path="/service" component={Service} />
-        <Route path="/portfolio" component={Portfolio} />
-        <Route path="/contact" component={Contact} />
+        <Route path={aboutRoute} component={About} />
+        <Route path={serviceRoute} component={Service} />
+        <Route path={portfolioRoute} component={Portfolio} />
+        <Route path={contactRoute} component={Contact} />
       </Switch>
       <Footer />
     </div>
   );
 };
 
-export default App;
+const mapStateToProps = createStructuredSelector({
+  aboutRoute: selectAboutRoute,
+  serviceRoute: selectServiceRoute,
+  portfolioRoute: selectPortfolioRoute,
+  contactRoute: selectContactRoute,
+});
+
+export default connect(mapStateToProps)(App);

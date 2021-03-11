@@ -1,16 +1,30 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 
 import "./about-skill-header.styles.scss";
+import {
+  selectSkillEngineerRoute,
+  selectSkillRoute,
+  selectSkillTechnologyRoute,
+  selectSkillVisualArtRoute,
+} from "../../redux/about/about.selectors";
 
-const SkillHeader = ({ match: { url }, location: { pathname } }) => {
+const SkillHeader = ({
+  location: { pathname },
+  skillRoute,
+  visualArtRoute,
+  engineerRoute,
+  technologyRoute,
+}) => {
   return (
     <div className="header-skill-container">
       <div className="skill-box">
         <Link
-          to={`${url}/visualart`}
+          to={`${visualArtRoute}`}
           className={`${
-            pathname.match(/\/about\/skill\/visualart/)
+            pathname.match(`(${skillRoute}$|${visualArtRoute}$)`)
               ? "active-text-box"
               : "text-box"
           }`}
@@ -20,11 +34,9 @@ const SkillHeader = ({ match: { url }, location: { pathname } }) => {
       </div>
       <div className="skill-box">
         <Link
-          to={`${url}/engineer`}
+          to={`${engineerRoute}`}
           className={`${
-            pathname.match(/\/about\/skill\/engineer/)
-              ? "active-text-box"
-              : "text-box"
+            pathname.match(`${engineerRoute}$`) ? "active-text-box" : "text-box"
           }`}
         >
           Engineer
@@ -32,9 +44,9 @@ const SkillHeader = ({ match: { url }, location: { pathname } }) => {
       </div>
       <div className="skill-box">
         <Link
-          to={`${url}/technology`}
+          to={`${technologyRoute}`}
           className={`${
-            pathname.match(/\/about\/skill\/technology/)
+            pathname.match(`${technologyRoute}`)
               ? "active-text-box"
               : "text-box"
           }`}
@@ -46,4 +58,11 @@ const SkillHeader = ({ match: { url }, location: { pathname } }) => {
   );
 };
 
-export default withRouter(SkillHeader);
+const mapStateToProps = createStructuredSelector({
+  skillRoute: selectSkillRoute,
+  visualArtRoute: selectSkillVisualArtRoute,
+  engineerRoute: selectSkillEngineerRoute,
+  technologyRoute: selectSkillTechnologyRoute,
+});
+
+export default withRouter(connect(mapStateToProps)(SkillHeader));

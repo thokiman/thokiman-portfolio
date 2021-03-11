@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Rings from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import { CSSTransitionGroup } from "react-transition-group";
 
 import PorfolioItem from "../portfolio-item/portfolio-item.component";
 import "./portfolio-container.styles.scss";
@@ -25,24 +26,32 @@ const PortfolioContainer = ({ items }) => {
   };
 
   return (
-    <InfiniteScroll
-      dataLength={collectedImages}
-      next={() => fetchImages()}
-      hasMore={hasMore}
-      loader={
-        <div className="loading-state">
-          <Rings
-            type="Puff"
-            color="#e3e1e4"
-            height={100}
-            width={100}
-            visible={hasMore}
-          />
-        </div>
-      }
+    <CSSTransitionGroup
+      transitionAppear={true}
+      transitionAppearTimeout={960}
+      transitionEnterTimeout={800}
+      transitionLeaveTimeout={200}
+      transitionName={"slide-out"}
     >
-      <PorfolioItem items={collectedImages} />
-    </InfiniteScroll>
+      <InfiniteScroll
+        dataLength={collectedImages}
+        next={() => fetchImages()}
+        hasMore={hasMore}
+        loader={
+          <div className="loading-state">
+            <Rings
+              type="Puff"
+              color="#e3e1e4"
+              height={100}
+              width={100}
+              visible={hasMore}
+            />
+          </div>
+        }
+      >
+        <PorfolioItem items={collectedImages} />
+      </InfiniteScroll>
+    </CSSTransitionGroup>
   );
 };
 

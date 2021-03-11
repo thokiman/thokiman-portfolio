@@ -1,5 +1,5 @@
 import React from "react";
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+import { CSSTransitionGroup } from "react-transition-group";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
@@ -23,7 +23,7 @@ const AboutEducation = ({
 }) => {
   return (
     <div className="education-container">
-      <ReactCSSTransitionGroup
+      <CSSTransitionGroup
         transitionAppear={true}
         transitionAppearTimeout={800}
         transitionEnterTimeout={600}
@@ -34,7 +34,7 @@ const AboutEducation = ({
         <AboutEducationExperience lastExperience={lastExperiences} />
         <AboutEducationCourse lastCourse={lastCourses} />
         <AboutEducationPersonality personality={personality} />
-      </ReactCSSTransitionGroup>
+      </CSSTransitionGroup>
     </div>
   );
 };

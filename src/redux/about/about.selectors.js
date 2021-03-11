@@ -3,13 +3,64 @@ import { createSelector } from "reselect";
 const selectAbout = (state) => state.about;
 const selectAllAbout = (state) => state.about.about;
 
+//route
+
+export const selectAboutRoute = createSelector(
+  [selectAllAbout],
+  (about) => about.aboutPath.routeName
+);
+
+export const selectSkillRoute = createSelector(
+  [selectAllAbout],
+  (about) => about.aboutPath.items.personalSkill.routeName
+);
+
+export const selectSkillVisualArtRoute = createSelector(
+  [selectAllAbout],
+  (about) =>
+    about.aboutPath.items.personalSkill.items.visualDesignCommunication
+      .routeName
+);
+
+export const selectSkillEngineerRoute = createSelector(
+  [selectAllAbout],
+  (about) => about.aboutPath.items.personalSkill.items.engineer.routeName
+);
+
+export const selectSkillTechnologyRoute = createSelector(
+  [selectAllAbout],
+  (about) => about.aboutPath.items.personalSkill.items.technology.routeName
+);
+
+export const selectSummaryRoute = createSelector(
+  [selectAllAbout],
+  (about) => about.aboutPath.items.personalSummary.routeName
+);
+
+export const selectEducationRoute = createSelector(
+  [selectAllAbout],
+  (about) => about.aboutPath.items.personalEducation.routeName
+);
+
+export const selectProjectRoute = createSelector(
+  [selectAllAbout],
+  (about) => about.aboutPath.items.personalProject.routeName
+);
+
+export const selectTimelineCareerRoute = createSelector(
+  [selectAllAbout],
+  (about) => about.careerPath.routeName
+);
+
 //page
+
 export const selectIsDropdownHidden = createSelector(
   [selectAbout],
   (about) => about.isDropdownHidden
 );
 
 //skill
+
 export const selectSkillVisualDesignCommunication = createSelector(
   [selectAllAbout],
   (about) => about.aboutPath.items.personalSkill.items.visualDesignCommunication

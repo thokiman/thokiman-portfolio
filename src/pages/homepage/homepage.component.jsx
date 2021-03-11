@@ -47,4 +47,4 @@ const mapStateToProps = createStructuredSelector({
   shortDescription: selectPersonalSummaryShortDescription,
   quote: selectPersonalSummaryQuote,
 });
-export default PageShell(connect(mapStateToProps)(HomePage));
+export default connect(mapStateToProps)(PageShell(HomePage));

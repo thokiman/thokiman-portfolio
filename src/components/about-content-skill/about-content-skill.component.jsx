@@ -1,6 +1,6 @@
 import React from "react";
 import { Switch, Route, withRouter } from "react-router-dom";
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+import { CSSTransitionGroup } from "react-transition-group";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
@@ -23,7 +23,7 @@ const AboutSkill = ({
 }) => {
   return (
     <div className="skill-container">
-      <ReactCSSTransitionGroup
+      <CSSTransitionGroup
         transitionAppear={true}
         transitionAppearTimeout={800}
         transitionEnterTimeout={600}
@@ -50,7 +50,7 @@ const AboutSkill = ({
             render={() => <TechnologySkill skill={technology} />}
           />
         </Switch>
-      </ReactCSSTransitionGroup>
+      </CSSTransitionGroup>
     </div>
   );
 };

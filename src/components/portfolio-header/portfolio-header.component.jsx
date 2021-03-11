@@ -12,12 +12,14 @@ import {
   selectPhotographyBwTitle,
   selectPhotographyColorRoute,
   selectPhotographyColorTitle,
+  selectPortfolioRoute,
 } from "../../redux/collection/collection.selectors";
 import "./portfolio-header.styles.scss";
 
 const PortfolioHeader = ({
   location: { pathname },
   match: { url },
+  portfolioRoute,
   brandRoute,
   brandTitle,
   digitalArtRoute,
@@ -30,45 +32,37 @@ const PortfolioHeader = ({
   return (
     <div className="options">
       <Link
-        to={`${url}`}
-        className={pathname.match(`${url}$`) ? "option-active" : "option"}
+        to={portfolioRoute}
+        className={
+          pathname.match(`${portfolioRoute}$`) ? "option-active" : "option"
+        }
       >
         All
       </Link>
       <Link
-        to={`${url}${brandRoute}`}
-        className={
-          pathname.match(`${url}${brandRoute}`) ? "option-active" : "option"
-        }
+        to={brandRoute}
+        className={pathname.match(brandRoute) ? "option-active" : "option"}
       >
         {`${brandTitle}`}
       </Link>
       <Link
-        to={`${url}${digitalArtRoute}`}
-        className={
-          pathname.match(`${url}${digitalArtRoute}`)
-            ? "option-active"
-            : "option"
-        }
+        to={digitalArtRoute}
+        className={pathname.match(digitalArtRoute) ? "option-active" : "option"}
       >
         {`${digitalArtTitle}`}
       </Link>
       <Link
-        to={`${url}${photographyBwRoute}`}
+        to={photographyBwRoute}
         className={
-          pathname.match(`${url}${photographyBwRoute}`)
-            ? "option-active"
-            : "option"
+          pathname.match(photographyBwRoute) ? "option-active" : "option"
         }
       >
-        {`${photographyBwTitle}`}
+        {photographyBwTitle}
       </Link>
       <Link
-        to={`${url}${photographyColorRoute}`}
+        to={photographyColorRoute}
         className={
-          pathname.match(`${url}${photographyColorRoute}`)
-            ? "option-active"
-            : "option"
+          pathname.match(photographyColorRoute) ? "option-active" : "option"
         }
       >
         {`${photographyColorTitle}`}
@@ -78,6 +72,7 @@ const PortfolioHeader = ({
 };
 
 const mapStateToProps = createStructuredSelector({
+  portfolioRoute: selectPortfolioRoute,
   brandRoute: selectBrandRoute,
   brandTitle: selectBrandTitle,
   digitalArtRoute: selectDigitalArtRoute,

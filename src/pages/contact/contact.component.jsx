@@ -6,6 +6,7 @@ import {
   selectInfoContact,
   selectTitleContact,
   selectItemsContact,
+  selectContactRoute,
 } from "../../redux/contact/contact.selectors";
 import ContactForm from "../../components/contact-form-container/contact-form-container.component";
 import ContactInfo from "../../components/contact-info-container/contact-info.component";
@@ -27,6 +28,7 @@ const mapStateToProps = createStructuredSelector({
   title: selectTitleContact,
   info: selectInfoContact,
   items: selectItemsContact,
+  routeName: selectContactRoute,
 });
 
-export default PageShell(connect(mapStateToProps)(Contact));
+export default connect(mapStateToProps)(PageShell(Contact));

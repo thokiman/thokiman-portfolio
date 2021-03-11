@@ -16,6 +16,11 @@ export const selectTitleContact = createSelector(
   [selectAllContact],
   (contact) => contact.title
 );
+
+export const selectContactRoute = createSelector(
+  [selectAllContact],
+  (contact) => contact.routeName
+);
 export const selectInfoContact = createSelector(
   [selectAllContact],
   (contact) => contact.info

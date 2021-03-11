@@ -1,15 +1,24 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 
+import {
+  selectAboutRoute,
+  selectTimelineCareerRoute,
+} from "../../redux/about/about.selectors";
 import AboutDropdownBar from "../about-dropdown-content/about-dropdown-bar.component";
 import "./about-dropdown.styles.scss";
 
-const AboutDropdown = ({ location: { pathname }, match: { url } }) => {
+const AboutDropdown = ({
+  location: { pathname },
+  timelineCareerRoute,
+  aboutRoute,
+}) => {
   return (
     <div
       className={
-        pathname.match(`${url}/timelinecareer$`)
+        pathname.match(`${aboutRoute}${timelineCareerRoute}`)
           ? "left-page-container-timeline"
           : "left-page-container"
       }
@@ -19,4 +28,8 @@ const AboutDropdown = ({ location: { pathname }, match: { url } }) => {
   );
 };
 
-export default withRouter(AboutDropdown);
+const mapStateToProps = createStructuredSelector({
+  timelineCareerRoute: selectTimelineCareerRoute,
+  aboutRoute: selectAboutRoute,
+});
+export default withRouter(connect(mapStateToProps)(AboutDropdown));

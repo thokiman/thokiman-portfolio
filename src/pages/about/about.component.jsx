@@ -1,5 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 
 import PageShell from "../../components/page-shell/page-shell.component";
 import AboutDropdown from "../../components/about-dropdown/about-dropdown.component";
@@ -11,27 +13,56 @@ import AboutSummary from "../../components/about-content-summary/about-content-s
 import AboutTimelineCareer from "../../components/about-timeline-career/about-timeline-career.component";
 
 import "./about.styles.scss";
+import {
+  selectAboutRoute,
+  selectEducationRoute,
+  selectProjectRoute,
+  selectSkillRoute,
+  selectSummaryRoute,
+  selectTimelineCareerRoute,
+} from "../../redux/about/about.selectors";
 
-const About = ({ match: { url }, location: { pathname } }) => {
+const About = ({
+  match: { url },
+  location: { pathname },
+  aboutRoute,
+  skillRoute,
+  educationRoute,
+  projectRoute,
+  summaryRoute,
+  timelineCareerRoute,
+}) => {
   return (
     <div
       className={
-        pathname.match(`${url}/timelinecareer$`)
+        pathname.match(`${aboutRoute}${timelineCareerRoute}$`)
           ? "about-container-timeline"
           : "about-container"
       }
     >
       <AboutDropdown />
       <Switch>
-        <Route exact path={`${url}`} component={AboutHomeContent} />
-        <Route path={`${url}/skill`} component={AboutSkill} />
-        <Route path={`${url}/education`} component={AboutEducation} />
-        <Route path={`${url}/project`} component={AboutProject} />
-        <Route path={`${url}/summary`} component={AboutSummary} />
-        <Route path={`${url}/timelinecareer`} component={AboutTimelineCareer} />
+        <Route exact path={aboutRoute} component={AboutHomeContent} />
+        <Route path={skillRoute} component={AboutSkill} />
+        <Route path={educationRoute} component={AboutEducation} />
+        <Route path={projectRoute} component={AboutProject} />
+        <Route path={summaryRoute} component={AboutSummary} />
+        <Route
+          path={`${aboutRoute}${timelineCareerRoute}`}
+          component={AboutTimelineCareer}
+        />
       </Switch>
     </div>
   );
 };
 
-export default PageShell(About);
+const mapStateToProps = createStructuredSelector({
+  aboutRoute: selectAboutRoute,
+  skillRoute: selectSkillRoute,
+  educationRoute: selectEducationRoute,
+  projectRoute: selectProjectRoute,
+  summaryRoute: selectSummaryRoute,
+  timelineCareerRoute: selectTimelineCareerRoute,
+});
+
+export default connect(mapStateToProps)(PageShell(About));

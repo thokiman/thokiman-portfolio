@@ -17,6 +17,7 @@ const AboutAchievementProject = ({ lastExperience }) => {
               {imagePath.map(({ id, field, iconPath }) => {
                 return (
                   <img
+                    key={id}
                     src={iconPath}
                     alt={field}
                     className="image-achievement-experience"

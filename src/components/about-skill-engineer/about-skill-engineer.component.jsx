@@ -3,10 +3,10 @@ import React from "react";
 import EngineerGrid from "../engineer-grid/engineer-grid.component";
 import "./about-skill-engineer.styles.scss";
 
-const EngineerSkill = ({ skill }) => {
+const EngineerSkill = ({ skill: { itemsPoint } }) => {
   return (
     <div className="engineer-skill-container">
-      <EngineerGrid engineerSkill={skill} />
+      <EngineerGrid engineerSkill={itemsPoint} />
     </div>
   );
 };

@@ -1,31 +1,35 @@
 import React from "react";
 
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+import { CSSTransitionGroup } from "react-transition-group";
 
 function PageShell(Page) {
   function PageTransition(props) {
     const {
       location: { pathname },
+      aboutRoute,
+      portfolioRoute,
+      serviceRoute,
+      contactRoute,
     } = props;
     return (
       <div className="page">
-        <ReactCSSTransitionGroup
+        <CSSTransitionGroup
           transitionAppear={true}
           transitionAppearTimeout={1200}
           transitionEnterTimeout={800}
           transitionLeaveTimeout={500}
           transitionName={
-            pathname.match(RegExp(/^\/+/)) |
-            pathname.match(RegExp(/^\/about+/)) |
-            pathname.match(RegExp(/^\/portfolio+/)) |
-            pathname.match(RegExp(/^\/service+/)) |
-            pathname.match(RegExp(/^\/contact+/))
+            !!pathname.match(RegExp(/^\/+/)) |
+            !!pathname.match(RegExp(`^${aboutRoute}$`)) |
+            !!pathname.match(RegExp(`^${portfolioRoute}$`)) |
+            !!pathname.match(RegExp(`^${serviceRoute}$`)) |
+            !!pathname.match(RegExp(`^${contactRoute}$`))
               ? "slide-in"
               : "slide-out"
           }
         >
           <Page {...props} />
-        </ReactCSSTransitionGroup>
+        </CSSTransitionGroup>
       </div>
     );
   }

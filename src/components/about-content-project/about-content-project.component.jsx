@@ -1,5 +1,5 @@
 import React from "react";
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+import { CSSTransitionGroup } from "react-transition-group";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
@@ -18,10 +18,18 @@ import "./about-content-project.styles.scss";
 const AboutProject = ({ thesis, courses, experiences, lastExperiences }) => {
   return (
     <div className="project-container">
-      <AboutThesisProject thesis={thesis} />
-      <AboutCourseProject course={courses} />
-      <AboutExperienceProject experience={experiences} />
-      <AboutAchievementExperience lastExperience={lastExperiences} />
+      <CSSTransitionGroup
+        transitionAppear={true}
+        transitionAppearTimeout={800}
+        transitionEnterTimeout={600}
+        transitionLeaveTimeout={200}
+        transitionName={"slide-out"}
+      >
+        <AboutThesisProject thesis={thesis} />
+        <AboutCourseProject course={courses} />
+        <AboutExperienceProject experience={experiences} />
+        <AboutAchievementExperience lastExperience={lastExperiences} />
+      </CSSTransitionGroup>
     </div>
   );
 };

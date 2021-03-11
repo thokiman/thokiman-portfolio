@@ -6,6 +6,10 @@ export const selectAllItems = createSelector(
   [selectAllCollection],
   (collection) => collection.all.items
 );
+export const selectPortfolioRoute = createSelector(
+  [selectAllCollection],
+  (collection) => collection.all.routeName
+);
 
 export const selectBrandItems = createSelector(
   [selectAllCollection],

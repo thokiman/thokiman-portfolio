@@ -1,645 +1,646 @@
 export const about = {
   aboutPath: {
-    id: "88b404a9-b358-4519-a8e0-45328d548c06",
+    id: "e7da8005-4419-4c32-b859-dbb03c1099bb",
     title: "About",
     routeName: "/about",
     items: {
       personalSkill: {
-        id: "3d26cfa0-3a1a-42b9-9090-ccccd6da2933",
+        id: "b9fba2b4-3ef9-4977-b7a0-3fbe51b2fd22",
         title: "Personal Skill",
-        routeName: "/about/personalskill",
+        routeName: "/about/skill",
         items: {
           visualDesignCommunication: {
-            id: "735e9ce4-4efa-4662-81f2-995577b2d306",
+            id: "5c57a0fc-52ed-426f-8f2c-77617b7febda",
             name: "Visual Design Communication",
+            routeName: "/about/skill/visualart",
             itemsPoint: {
               digitalArt: {
-                id: "e6a49d91-e36a-42c7-9f12-670dab3c839f",
+                id: "ee242346-9fdd-458a-9785-a6a584fb65b8",
                 name: "Digital Art",
                 itemsPoint: [
                   {
-                    id: "4fa262fd-67a1-4f5e-9ca4-d0460466bf6a",
+                    id: "4c12336b-e5cc-44cc-8491-dd835a1e32ba",
                     field: "Amazon Girl",
                     iconPath:
                       "/images/collections/digital-arts/Amazon Girl.png",
                   },
                   {
-                    id: "36b2467e-f40e-4a0e-8468-478270422e57",
+                    id: "0c1f8238-48ec-478b-81ca-fd187256c832",
                     field: "Chaos",
                     iconPath: "/images/collections/digital-arts/Chaos.png",
                   },
                   {
-                    id: "98efd689-08b9-429b-a775-179adb201fc5",
+                    id: "f9938456-d900-4401-b786-9696872b1e3e",
                     field: "Eye Sore",
                     iconPath: "/images/collections/digital-arts/Eye Sore.png",
                   },
                   {
-                    id: "2d036caf-9da9-4a47-8fc9-dde54f21c91e",
+                    id: "b9b954c6-47d7-478e-a1f2-686d87633af7",
                     field: "Goddess of The Water",
                     iconPath:
                       "/images/collections/digital-arts/Goddess of The Water.png",
                   },
                   {
-                    id: "f5d7c093-067e-4201-8b5e-7f782c3f8fd4",
+                    id: "6c52b0bd-bb03-488d-a8fb-897d52dfe711",
                     field: "Lonely Wolf",
                     iconPath:
                       "/images/collections/digital-arts/Lonely Wolf.png",
                   },
                   {
-                    id: "1209b32c-78df-4655-9e10-42f4142e5cc3",
+                    id: "b1b9e53a-333f-451e-a7ba-a32d71dbcc7c",
                     field: "Lover",
                     iconPath: "/images/collections/digital-arts/Lover.png",
                   },
                   {
-                    id: "e7284f49-ffd1-4206-8533-eb0cd720c51f",
+                    id: "8f1110da-2753-4001-8481-a4b8b0287df6",
                     field: "Malicious Girl",
                     iconPath:
                       "/images/collections/digital-arts/Malicious Girl.png",
                   },
                   {
-                    id: "740a5904-9310-46fe-9a8e-be1cb86b1f55",
+                    id: "383033ce-f698-4f4c-887b-03f725269ae9",
                     field: "Samurai Porn",
                     iconPath:
                       "/images/collections/digital-arts/Samurai Porn.png",
                   },
                   {
-                    id: "49a06d5a-68b9-4bc8-803e-4210fa5a284e",
+                    id: "8d408d6a-4750-4c3b-a927-e5c8cff34ef8",
                     field: "Smoke Girl",
                     iconPath: "/images/collections/digital-arts/Smoke Girl.png",
                   },
                 ],
               },
               photography: {
-                id: "eb9e2a17-bc40-40cd-b6fc-a7e31516490e",
+                id: "2a406515-5f82-41a2-8690-a90ca6cb6c0e",
                 name: "Photography",
                 itemsPoint: [
                   {
-                    id: "e2cd8133-b447-47af-a8e2-3bfbd6dac701",
+                    id: "929bea85-86af-46f9-a845-7533eae13c0a",
                     field: "photo-bw-1",
                     iconPath: "/images/collections/photos/bw/photo-bw-1.jpg",
                   },
                   {
-                    id: "7f2556b4-9a33-4df9-b616-6cf039bb61c9",
+                    id: "b5a9a89f-64ed-43f2-8b29-be25c7561dc2",
                     field: "photo-bw-10",
                     iconPath: "/images/collections/photos/bw/photo-bw-10.jpg",
                   },
                   {
-                    id: "6a308a6e-4837-4960-957a-8e99edd85f37",
+                    id: "bac4d78d-5b69-4aff-95d6-a32958cac230",
                     field: "photo-bw-100",
                     iconPath: "/images/collections/photos/bw/photo-bw-100.jpg",
                   },
                   {
-                    id: "4c95f50b-0747-43f0-bd9c-c6439d81ef2e",
+                    id: "ef3cbca1-1781-4006-aa74-bf0b2b166898",
                     field: "photo-bw-101",
                     iconPath: "/images/collections/photos/bw/photo-bw-101.jpg",
                   },
                   {
-                    id: "0e9d55bd-45d6-4907-9260-02b78bf0febd",
+                    id: "f9834e78-38a1-4514-b563-a17722d13cf3",
                     field: "photo-bw-102",
                     iconPath: "/images/collections/photos/bw/photo-bw-102.jpg",
                   },
                   {
-                    id: "a57f300b-3dde-44e0-a868-37f7bfed94a2",
+                    id: "b5326ae8-ba29-4f5e-8093-39ed8f95642e",
                     field: "photo-bw-103",
                     iconPath: "/images/collections/photos/bw/photo-bw-103.jpg",
                   },
                   {
-                    id: "edf96543-9d35-4b2d-b228-a9e24b7c67cc",
+                    id: "c9fdb9f2-e46d-4c98-adff-ecf89a231abc",
                     field: "photo-bw-104",
                     iconPath: "/images/collections/photos/bw/photo-bw-104.jpg",
                   },
                   {
-                    id: "774e0c85-981b-4ab6-b407-595f76e503f3",
+                    id: "afabdd43-5507-4cd5-95eb-fa901d2ce7b6",
                     field: "photo-bw-105",
                     iconPath: "/images/collections/photos/bw/photo-bw-105.jpg",
                   },
                   {
-                    id: "0b837a0d-2d2e-4ebd-8933-b74facad6c64",
+                    id: "a1162b14-adb4-4a9f-9110-50a2206d8b6a",
                     field: "photo-bw-106",
                     iconPath: "/images/collections/photos/bw/photo-bw-106.jpg",
                   },
                   {
-                    id: "1f02ce2a-20ee-4fba-a616-6d41d63e063d",
+                    id: "d87c8907-0872-4b04-b967-c6ab08f9eff0",
                     field: "photo-bw-107",
                     iconPath: "/images/collections/photos/bw/photo-bw-107.jpg",
                   },
                   {
-                    id: "960aa34b-a174-40a6-9254-231c2b3857ec",
+                    id: "51d69fce-b9f3-4d78-94ad-14773206e7fd",
                     field: "photo-bw-108",
                     iconPath: "/images/collections/photos/bw/photo-bw-108.jpg",
                   },
                   {
-                    id: "03cb6813-4282-4f50-8bce-04881cb7f8d8",
+                    id: "406450ae-e6fe-4648-b502-369541ea28db",
                     field: "photo-bw-109",
                     iconPath: "/images/collections/photos/bw/photo-bw-109.jpg",
                   },
                   {
-                    id: "2a129e72-de0c-4285-b846-f1afb6a6c4d0",
+                    id: "7ead53e4-2325-4cca-9928-10eca9184781",
                     field: "photo-bw-11",
                     iconPath: "/images/collections/photos/bw/photo-bw-11.jpg",
                   },
                   {
-                    id: "11d516f6-f0f9-44f8-b70b-3c4bdeb81bfc",
+                    id: "4e36b2d6-1c7f-4bbf-8baa-f8e717d4d1b7",
                     field: "photo-bw-110",
                     iconPath: "/images/collections/photos/bw/photo-bw-110.jpg",
                   },
                   {
-                    id: "1b3da4ae-c5df-43c8-9b78-09415adc9e64",
+                    id: "7758a554-fead-4a90-8e49-60c8adcdf094",
                     field: "photo-bw-111",
                     iconPath: "/images/collections/photos/bw/photo-bw-111.jpg",
                   },
                   {
-                    id: "2714f189-c659-4ba5-b136-d4ae665f0bfa",
+                    id: "2eb322a9-2dd3-47e5-bcee-00b4ffc21899",
                     field: "photo-bw-112",
                     iconPath: "/images/collections/photos/bw/photo-bw-112.jpg",
                   },
                   {
-                    id: "7b43a4fd-f60e-4fe4-8cdd-6f4e0dd38491",
+                    id: "0f5cbee1-f51a-4bb2-bd7d-d2b41b6c1b1a",
                     field: "photo-bw-113",
                     iconPath: "/images/collections/photos/bw/photo-bw-113.jpg",
                   },
                   {
-                    id: "bad72db0-185f-47b3-bc1b-5969708beb5f",
+                    id: "9f7ecc66-c408-483b-8779-41c159027981",
                     field: "photo-bw-114",
                     iconPath: "/images/collections/photos/bw/photo-bw-114.jpg",
                   },
                   {
-                    id: "49a065b7-c0a3-4e50-bf90-90e0c9003226",
+                    id: "ab7e1ccb-2b2d-4455-b733-b350a1109914",
                     field: "photo-bw-12",
                     iconPath: "/images/collections/photos/bw/photo-bw-12.jpg",
                   },
                   {
-                    id: "44400970-9729-4e05-8af6-bdb7c1def103",
+                    id: "ed5a921c-1e90-4aa3-aa7f-657548d17705",
                     field: "photo-bw-13",
                     iconPath: "/images/collections/photos/bw/photo-bw-13.jpg",
                   },
                   {
-                    id: "b68373ea-bc31-4407-8249-5fa2c4acb92a",
+                    id: "86e0c7c5-6f67-4c3b-aaa3-c54620c29b2a",
                     field: "photo-bw-14",
                     iconPath: "/images/collections/photos/bw/photo-bw-14.jpg",
                   },
                   {
-                    id: "cebff1d5-20ec-4db7-8a24-5dbf63423702",
+                    id: "dd647134-7569-423b-9e4f-b864a182ff3f",
                     field: "photo-bw-15",
                     iconPath: "/images/collections/photos/bw/photo-bw-15.jpg",
                   },
                   {
-                    id: "03202361-cbb1-41ca-9aee-44b706e87d25",
+                    id: "95e06766-3364-46d9-9348-f270751427ec",
                     field: "photo-bw-16",
                     iconPath: "/images/collections/photos/bw/photo-bw-16.jpg",
                   },
                   {
-                    id: "9b6fdd4e-08c7-4a8d-ad4e-5d021b811cfc",
+                    id: "413d9b84-4e5b-41ed-b9b6-27e670dc1be0",
                     field: "photo-bw-17",
                     iconPath: "/images/collections/photos/bw/photo-bw-17.jpg",
                   },
                   {
-                    id: "ec4f36fc-fa8b-43c3-b2d0-d017de9f9930",
+                    id: "e57cd23e-e3ed-4c7e-972b-af573e781f90",
                     field: "photo-bw-18",
                     iconPath: "/images/collections/photos/bw/photo-bw-18.jpg",
                   },
                   {
-                    id: "25bde0c3-b6a4-473d-9991-2418e1f9f0db",
+                    id: "58a059b4-6540-4e9f-8e10-1ffb7a918d4e",
                     field: "photo-bw-19",
                     iconPath: "/images/collections/photos/bw/photo-bw-19.jpg",
                   },
                   {
-                    id: "0543aec4-4efc-401f-a7fb-4d3aa4fdc47d",
+                    id: "1f031ac2-20cf-4963-8890-5d664833386e",
                     field: "photo-bw-2",
                     iconPath: "/images/collections/photos/bw/photo-bw-2.jpg",
                   },
                   {
-                    id: "56bff6bc-91e3-4970-a036-ac9fe4705f80",
+                    id: "d659d81d-7971-4829-a0a3-020a709a375d",
                     field: "photo-bw-20",
                     iconPath: "/images/collections/photos/bw/photo-bw-20.jpg",
                   },
                   {
-                    id: "1efac232-7625-4594-9b24-85d1bc9ec025",
+                    id: "b43adcbb-83f8-43fd-92fd-984c415e966f",
                     field: "photo-bw-21",
                     iconPath: "/images/collections/photos/bw/photo-bw-21.jpg",
                   },
                   {
-                    id: "4dc2700f-98d4-4d4d-bbf9-13d27bc2a8bb",
+                    id: "846953c1-2eca-4442-b1f5-b8b309406c2f",
                     field: "photo-bw-22",
                     iconPath: "/images/collections/photos/bw/photo-bw-22.jpg",
                   },
                   {
-                    id: "928781ef-7cdf-43a0-9278-7d8efe1f9f59",
+                    id: "dd1f61b3-f900-4f91-848c-0b71e6cc8756",
                     field: "photo-bw-23",
                     iconPath: "/images/collections/photos/bw/photo-bw-23.jpg",
                   },
                   {
-                    id: "ec882c16-1117-4266-954e-29f2dda8c090",
+                    id: "8c86e1ca-f4f4-46e2-9299-379faa3a09f5",
                     field: "photo-bw-24",
                     iconPath: "/images/collections/photos/bw/photo-bw-24.jpg",
                   },
                   {
-                    id: "f5d917eb-8746-4238-a5f0-14c9d34b940c",
+                    id: "43d01528-6e94-45dd-af92-a39b93e2b0e5",
                     field: "photo-bw-25",
                     iconPath: "/images/collections/photos/bw/photo-bw-25.jpg",
                   },
                   {
-                    id: "25aec9ee-9dad-476b-920d-fabeda64c6eb",
+                    id: "3aa93acb-64bd-4a5b-bfe8-76cd4cb4a185",
                     field: "photo-bw-26",
                     iconPath: "/images/collections/photos/bw/photo-bw-26.jpg",
                   },
                   {
-                    id: "348fdd82-8516-4076-b76e-1aec76c85a44",
+                    id: "c000e8fb-f65a-4506-894f-ddca36d8126e",
                     field: "photo-bw-27",
                     iconPath: "/images/collections/photos/bw/photo-bw-27.jpg",
                   },
                   {
-                    id: "0592c310-e59e-431d-9965-ab482ff93323",
+                    id: "fd38c4a9-db54-44ea-98b8-c5fac60a6376",
                     field: "photo-bw-28",
                     iconPath: "/images/collections/photos/bw/photo-bw-28.jpg",
                   },
                   {
-                    id: "0ac1b859-316f-4844-afc3-8ffa2a986aab",
+                    id: "bb074f18-4291-485d-a445-352e54008d01",
                     field: "photo-bw-29",
                     iconPath: "/images/collections/photos/bw/photo-bw-29.jpg",
                   },
                   {
-                    id: "7d4141f0-f6b7-42b5-969b-597316a7430e",
+                    id: "46a8643e-e6cf-4612-afb2-5e540115fd9b",
                     field: "photo-bw-3",
                     iconPath: "/images/collections/photos/bw/photo-bw-3.jpg",
                   },
                   {
-                    id: "1db70281-3fef-4217-bb36-c06e3d6dd4f3",
+                    id: "88b6e3bd-86fe-4a1b-a959-e2a6febecde4",
                     field: "photo-bw-30",
                     iconPath: "/images/collections/photos/bw/photo-bw-30.jpg",
                   },
                   {
-                    id: "e71a5fb7-efcb-4738-a947-db7a3939e848",
+                    id: "343085b2-274c-4067-8de4-74b070e59f63",
                     field: "photo-bw-31",
                     iconPath: "/images/collections/photos/bw/photo-bw-31.jpg",
                   },
                   {
-                    id: "a9be2c1a-87e3-4f57-ab0b-b1b0a48e77a9",
+                    id: "76aee2bc-2716-4378-a849-83b31162da13",
                     field: "photo-bw-32",
                     iconPath: "/images/collections/photos/bw/photo-bw-32.jpg",
                   },
                   {
-                    id: "f8743585-ce3f-43df-8f6a-b30598b0ff59",
+                    id: "8630d374-caed-45d1-9f2e-26dc9cb296be",
                     field: "photo-bw-33",
                     iconPath: "/images/collections/photos/bw/photo-bw-33.jpg",
                   },
                   {
-                    id: "d843ed17-9712-4a05-ab4b-7db42759ef1f",
+                    id: "087e80df-fd6c-469c-ad45-65cdf042e90c",
                     field: "photo-bw-34",
                     iconPath: "/images/collections/photos/bw/photo-bw-34.jpg",
                   },
                   {
-                    id: "fa8fc484-5c81-4a46-82b9-e784a52ecfa3",
+                    id: "2b445ce1-4cb8-4c83-b956-e5bfc88a25f8",
                     field: "photo-bw-35",
                     iconPath: "/images/collections/photos/bw/photo-bw-35.jpg",
                   },
                   {
-                    id: "06c7f06e-185f-4e0d-9d80-bd946b2e95b2",
+                    id: "199a9fab-1639-445d-b068-f6449325f77a",
                     field: "photo-bw-36",
                     iconPath: "/images/collections/photos/bw/photo-bw-36.jpg",
                   },
                   {
-                    id: "dc603ac8-e218-4f54-9dcb-5b8258586bf6",
+                    id: "2edd86d2-faf1-4ce9-82df-3dbe382435ee",
                     field: "photo-bw-37",
                     iconPath: "/images/collections/photos/bw/photo-bw-37.jpg",
                   },
                   {
-                    id: "21ec2fe9-eca2-44cf-af4b-400e633f19b2",
+                    id: "51675db3-ac20-4a67-b2a3-a9cbc4b78f44",
                     field: "photo-bw-38",
                     iconPath: "/images/collections/photos/bw/photo-bw-38.jpg",
                   },
                   {
-                    id: "2a912e8e-f862-47cc-8cb7-88e8bbfd6f8c",
+                    id: "dd64b7b3-9c08-454a-a9b9-202c95d26b3d",
                     field: "photo-bw-39",
                     iconPath: "/images/collections/photos/bw/photo-bw-39.jpg",
                   },
                   {
-                    id: "4c97cdc5-0498-4e2d-a7e3-ff74988596c2",
+                    id: "85727d05-2c3d-419f-8f20-841fbb442efa",
                     field: "photo-bw-4",
                     iconPath: "/images/collections/photos/bw/photo-bw-4.jpg",
                   },
                   {
-                    id: "329731f7-0fbb-42d2-85cf-b2ab6ab77e22",
+                    id: "c920cade-6a90-432f-88e3-8d8a4f4793dd",
                     field: "photo-bw-40",
                     iconPath: "/images/collections/photos/bw/photo-bw-40.jpg",
                   },
                   {
-                    id: "6d924627-fb5d-4636-b55a-bfe6d0ce015c",
+                    id: "265e0161-372a-4bd4-a3aa-05bb9965ae3f",
                     field: "photo-bw-41",
                     iconPath: "/images/collections/photos/bw/photo-bw-41.jpg",
                   },
                   {
-                    id: "2b0b1fd2-3034-4cc1-adeb-bce0d6f65d53",
+                    id: "296412b9-47c5-448a-9f67-1a521067a035",
                     field: "photo-bw-42",
                     iconPath: "/images/collections/photos/bw/photo-bw-42.jpg",
                   },
                   {
-                    id: "a107e8a2-35f1-48ce-ad14-521bd3dafac1",
+                    id: "ce75ecdb-1902-4d11-86f6-5d80d8598896",
                     field: "photo-bw-43",
                     iconPath: "/images/collections/photos/bw/photo-bw-43.jpg",
                   },
                   {
-                    id: "a3e95409-5504-4957-ac8c-53404ad86769",
+                    id: "926569d6-ba15-4974-bf4c-427871fc8f6a",
                     field: "photo-bw-44",
                     iconPath: "/images/collections/photos/bw/photo-bw-44.jpg",
                   },
                   {
-                    id: "80bcc783-7482-4cdd-a7f6-fb0c032c51cc",
+                    id: "95e4762a-4029-4660-b85b-10467488ad43",
                     field: "photo-bw-45",
                     iconPath: "/images/collections/photos/bw/photo-bw-45.jpg",
                   },
                   {
-                    id: "c9099889-d92b-4d95-b93f-732973b4c587",
+                    id: "37b1e4b5-62ba-4c43-981f-b0ed55a8978a",
                     field: "photo-bw-46",
                     iconPath: "/images/collections/photos/bw/photo-bw-46.jpg",
                   },
                   {
-                    id: "d69c130a-af98-4162-bb29-85f62ace26c1",
+                    id: "915bfae3-d50b-4e83-9b9e-020a840f8b0c",
                     field: "photo-bw-47",
                     iconPath: "/images/collections/photos/bw/photo-bw-47.jpg",
                   },
                   {
-                    id: "39210063-06da-4c1d-9f28-f522daa2bf35",
+                    id: "d6007736-bc2c-43c9-ac60-21f4238af2cf",
                     field: "photo-bw-48",
                     iconPath: "/images/collections/photos/bw/photo-bw-48.jpg",
                   },
                   {
-                    id: "2586f4b4-366e-4d50-a6b2-9dd66533fe87",
+                    id: "4e42683d-9c9b-407e-a39e-01903052778d",
                     field: "photo-bw-49",
                     iconPath: "/images/collections/photos/bw/photo-bw-49.jpg",
                   },
                   {
-                    id: "31ab09fa-9cd7-4c78-9f58-b6d543427beb",
+                    id: "7a568e57-762a-4daa-9510-42dac23e7fba",
                     field: "photo-bw-5",
                     iconPath: "/images/collections/photos/bw/photo-bw-5.jpg",
                   },
                   {
-                    id: "cf1d6da5-637c-4d1c-a7c1-ee18a2c56491",
+                    id: "36d50646-06bd-46a7-a365-d93307d8b65e",
                     field: "photo-bw-50",
                     iconPath: "/images/collections/photos/bw/photo-bw-50.jpg",
                   },
                   {
-                    id: "88c994bb-6ac9-4c01-8cd3-8aa978d3811f",
+                    id: "a293c04c-f57e-4add-a6a3-d0f46fdef763",
                     field: "photo-bw-51",
                     iconPath: "/images/collections/photos/bw/photo-bw-51.jpg",
                   },
                   {
-                    id: "4524aa0f-3780-4a11-9093-1671c8ccfc09",
+                    id: "2c9b4165-f8c4-409c-845d-c2a07c20ed21",
                     field: "photo-bw-52",
                     iconPath: "/images/collections/photos/bw/photo-bw-52.jpg",
                   },
                   {
-                    id: "e65d3eea-9ce9-4c48-9032-d2822134d7dd",
+                    id: "a336df62-2468-49cc-ae26-9cec57bd316e",
                     field: "photo-bw-53",
                     iconPath: "/images/collections/photos/bw/photo-bw-53.jpg",
                   },
                   {
-                    id: "73358613-7583-4396-b9c1-64f77ed4c5f8",
+                    id: "4b2df25a-e78e-4672-b05d-c108b518709f",
                     field: "photo-bw-54",
                     iconPath: "/images/collections/photos/bw/photo-bw-54.jpg",
                   },
                   {
-                    id: "3df92f76-0d29-487c-aa7e-97f466d3944b",
+                    id: "ef181028-99de-4443-879a-ccc1bf9eaa36",
                     field: "photo-bw-55",
                     iconPath: "/images/collections/photos/bw/photo-bw-55.jpg",
                   },
                   {
-                    id: "38e70724-05e2-452e-ae2f-f68ec343c6a5",
+                    id: "6573483f-5b00-40c6-8ecc-98422f2a5079",
                     field: "photo-bw-56",
                     iconPath: "/images/collections/photos/bw/photo-bw-56.jpg",
                   },
                   {
-                    id: "e747a0d8-88d7-4ba6-930c-9d2b6f7735cf",
+                    id: "71c5e8e3-b6dd-4271-8435-bf10e9a3f023",
                     field: "photo-bw-57",
                     iconPath: "/images/collections/photos/bw/photo-bw-57.jpg",
                   },
                   {
-                    id: "15f7684f-2adc-4b55-9a4b-885d93b4d658",
+                    id: "f608f4c6-8cb5-4d55-997a-adcc39fe775e",
                     field: "photo-bw-58",
                     iconPath: "/images/collections/photos/bw/photo-bw-58.jpg",
                   },
                   {
-                    id: "837525f6-28cb-4649-86b1-7291fc7b2a23",
+                    id: "5b85b159-0511-4031-a21a-79f4851fb5d0",
                     field: "photo-bw-59",
                     iconPath: "/images/collections/photos/bw/photo-bw-59.jpg",
                   },
                   {
-                    id: "5f2e4dd2-a64f-4c9a-9fd3-25effb45c195",
+                    id: "e5e8e7ae-3d01-4d36-8632-2807480257d4",
                     field: "photo-bw-6",
                     iconPath: "/images/collections/photos/bw/photo-bw-6.jpg",
                   },
                   {
-                    id: "ab093fee-92c6-42b2-af29-b7e60a24297c",
+                    id: "922d718e-8473-4d60-8ee5-83fb2e832953",
                     field: "photo-bw-60",
                     iconPath: "/images/collections/photos/bw/photo-bw-60.jpg",
                   },
                   {
-                    id: "0abe278e-d7d3-47a2-8fae-c1ef29d294e3",
+                    id: "c61e6b16-009a-4bbf-b7f9-a37206119aab",
                     field: "photo-bw-61",
                     iconPath: "/images/collections/photos/bw/photo-bw-61.jpg",
                   },
                   {
-                    id: "7fb69743-f6bd-4184-9fd0-27daabe12fe6",
+                    id: "e1fe5e50-cdb0-405c-a3ce-ead9401b596d",
                     field: "photo-bw-62",
                     iconPath: "/images/collections/photos/bw/photo-bw-62.jpg",
                   },
                   {
-                    id: "5043711e-59eb-47c3-adf9-bc81171eba3a",
+                    id: "a5a2f5a2-f30a-4bd8-93bb-f04a3c238421",
                     field: "photo-bw-63",
                     iconPath: "/images/collections/photos/bw/photo-bw-63.jpg",
                   },
                   {
-                    id: "b44d2574-ec6c-4be0-b6c3-65d8320f1059",
+                    id: "2b229037-9f13-45b4-bda0-d8dd911256d2",
                     field: "photo-bw-64",
                     iconPath: "/images/collections/photos/bw/photo-bw-64.jpg",
                   },
                   {
-                    id: "2b612736-27f5-4e43-ab2c-b43cfb0f2170",
+                    id: "6fc4c285-34e3-49ba-aae1-70eaf5f6fe8d",
                     field: "photo-bw-65",
                     iconPath: "/images/collections/photos/bw/photo-bw-65.jpg",
                   },
                   {
-                    id: "f552d9ad-25c0-4270-bd45-79b8acc8ad91",
+                    id: "5b14f85a-9073-4a69-8e78-55d39ef38d4f",
                     field: "photo-bw-66",
                     iconPath: "/images/collections/photos/bw/photo-bw-66.jpg",
                   },
                   {
-                    id: "a1c3344e-b977-45e5-bef0-9f3a5d07e007",
+                    id: "edbe4ff5-2681-4d79-a319-1af24520334c",
                     field: "photo-bw-67",
                     iconPath: "/images/collections/photos/bw/photo-bw-67.jpg",
                   },
                   {
-                    id: "10cccfe6-8d43-400e-9105-1ad481560755",
+                    id: "4cb1dce3-a956-4daf-9f0e-5ad54ba9eb81",
                     field: "photo-bw-68",
                     iconPath: "/images/collections/photos/bw/photo-bw-68.jpg",
                   },
                   {
-                    id: "e8831512-b934-4806-8991-7605ab9b3cf4",
+                    id: "670c08d4-c0b7-489d-8630-b45b88388e64",
                     field: "photo-bw-69",
                     iconPath: "/images/collections/photos/bw/photo-bw-69.jpg",
                   },
                   {
-                    id: "da390622-446f-4f76-a507-34840c98b67b",
+                    id: "43d56592-38ea-4f31-99f3-16c7cbdb017e",
                     field: "photo-bw-7",
                     iconPath: "/images/collections/photos/bw/photo-bw-7.jpg",
                   },
                   {
-                    id: "9b509b54-3e0c-4e52-87b3-a769edd30dcb",
+                    id: "e6139ea3-9c6b-4d49-a050-77218c1d8c51",
                     field: "photo-bw-70",
                     iconPath: "/images/collections/photos/bw/photo-bw-70.jpg",
                   },
                   {
-                    id: "dc6208db-2223-465b-bfff-0caf0ea8c450",
+                    id: "35ead5b0-801c-4afd-a4c7-e11d8d1e36d6",
                     field: "photo-bw-71",
                     iconPath: "/images/collections/photos/bw/photo-bw-71.jpg",
                   },
                   {
-                    id: "c907f4c8-7d6a-46d2-a686-23e2b52b0335",
+                    id: "fe030f17-244c-4a60-a93f-95f635012b9a",
                     field: "photo-bw-72",
                     iconPath: "/images/collections/photos/bw/photo-bw-72.jpg",
                   },
                   {
-                    id: "39731c79-30d5-4af6-bb72-609f5bfd2f11",
+                    id: "f2732bfc-56fa-4b54-8eb3-7bd7edf7604a",
                     field: "photo-bw-73",
                     iconPath: "/images/collections/photos/bw/photo-bw-73.jpg",
                   },
                   {
-                    id: "f99e35fe-2b81-49da-a9d9-335324e566a3",
+                    id: "bd62e9a9-50fd-438b-967b-e2575ef4ee7a",
                     field: "photo-bw-74",
                     iconPath: "/images/collections/photos/bw/photo-bw-74.jpg",
                   },
                   {
-                    id: "0608d8c5-b764-42bc-9983-4d714ec48d8c",
+                    id: "3ec75e93-e682-48f1-93cf-0fc36556aea6",
                     field: "photo-bw-75",
                     iconPath: "/images/collections/photos/bw/photo-bw-75.jpg",
                   },
                   {
-                    id: "ecbb4d9d-5389-4931-8af8-85a8f52df9e3",
+                    id: "5616a9f1-ec15-4e7e-a715-c850e3518769",
                     field: "photo-bw-76",
                     iconPath: "/images/collections/photos/bw/photo-bw-76.jpg",
                   },
                   {
-                    id: "827e592b-6845-4634-a2fe-5df077f706e9",
+                    id: "f93572d4-da36-44dd-a46a-c91ad6466eb4",
                     field: "photo-bw-77",
                     iconPath: "/images/collections/photos/bw/photo-bw-77.jpg",
                   },
                   {
-                    id: "957807ae-866e-4ba9-9706-cfa4e3b67dce",
+                    id: "85f1e32f-b7f6-46a1-93f6-dd8c76f0c7ea",
                     field: "photo-bw-78",
                     iconPath: "/images/collections/photos/bw/photo-bw-78.jpg",
                   },
                   {
-                    id: "c178846a-c65c-4680-bdfc-8e885fba89eb",
+                    id: "bce1fed7-c0cc-4a93-bb0a-84dff2ad89ab",
                     field: "photo-bw-79",
                     iconPath: "/images/collections/photos/bw/photo-bw-79.jpg",
                   },
                   {
-                    id: "10a187f0-6747-42bb-9028-1c0b24fe6ab4",
+                    id: "7e7200f5-1af5-4aac-ba20-6fec5de3628b",
                     field: "photo-bw-8",
                     iconPath: "/images/collections/photos/bw/photo-bw-8.jpg",
                   },
                   {
-                    id: "ae37fed3-0139-4c76-8fd7-25efe2c0a84d",
+                    id: "3ad9bee5-6f52-4f62-9430-82f8afad8dc4",
                     field: "photo-bw-80",
                     iconPath: "/images/collections/photos/bw/photo-bw-80.jpg",
                   },
                   {
-                    id: "0044ed24-5858-4920-bf87-87a83a9a9761",
+                    id: "9df6142a-b0f8-458e-a2ce-61962e010495",
                     field: "photo-bw-81",
                     iconPath: "/images/collections/photos/bw/photo-bw-81.jpg",
                   },
                   {
-                    id: "e5df4d14-ec66-4954-bed1-7ec641b261da",
+                    id: "62dce880-7798-486f-ac01-8eaf24cf666c",
                     field: "photo-bw-82",
                     iconPath: "/images/collections/photos/bw/photo-bw-82.jpg",
                   },
                   {
-                    id: "68b9ca0a-efd9-462b-af1c-0da777f8c966",
+                    id: "c71af185-2bda-4008-a38f-b04a72ea5d26",
                     field: "photo-bw-83",
                     iconPath: "/images/collections/photos/bw/photo-bw-83.jpg",
                   },
                   {
-                    id: "b8d0ba26-bcc5-47e4-b255-ecc08a51a397",
+                    id: "444d9dab-693f-4234-a725-01ea4af433c4",
                     field: "photo-bw-84",
                     iconPath: "/images/collections/photos/bw/photo-bw-84.jpg",
                   },
                   {
-                    id: "ae8405f7-00d4-4611-9050-deec96579226",
+                    id: "931ec69f-7b48-4461-a7be-466f4b521896",
                     field: "photo-bw-85",
                     iconPath: "/images/collections/photos/bw/photo-bw-85.jpg",
                   },
                   {
-                    id: "93d88a3a-37f6-4499-bfed-6785d315c8d8",
+                    id: "456205a4-3bb8-4655-9450-474eac9137bc",
                     field: "photo-bw-86",
                     iconPath: "/images/collections/photos/bw/photo-bw-86.jpg",
                   },
                   {
-                    id: "6831e0f5-5f49-4ca2-af7f-91a37b7375fa",
+                    id: "226ea604-3f35-4201-aa03-43106cde3f71",
                     field: "photo-bw-87",
                     iconPath: "/images/collections/photos/bw/photo-bw-87.jpg",
                   },
                   {
-                    id: "eb252236-4f56-420b-a401-8cc15fad73c7",
+                    id: "856e77a1-058d-441e-b9bd-048f054ad6bb",
                     field: "photo-bw-88",
                     iconPath: "/images/collections/photos/bw/photo-bw-88.jpg",
                   },
                   {
-                    id: "516511cb-e638-4374-9447-13e0fcb83a2e",
+                    id: "983a4eca-bab4-4f20-b963-4dd57d8d0167",
                     field: "photo-bw-89",
                     iconPath: "/images/collections/photos/bw/photo-bw-89.jpg",
                   },
                   {
-                    id: "b4ae0cdb-ab9e-4438-b376-a397ec8abde2",
+                    id: "f4542fd4-29a1-47e2-92bf-6b725690c257",
                     field: "photo-bw-9",
                     iconPath: "/images/collections/photos/bw/photo-bw-9.jpg",
                   },
                   {
-                    id: "cda232c5-b891-4c70-b2ff-f8b81bf3c847",
+                    id: "b6911b63-3566-4fdb-84e1-015edf400874",
                     field: "photo-bw-90",
                     iconPath: "/images/collections/photos/bw/photo-bw-90.jpg",
                   },
                   {
-                    id: "351ae419-0be1-4066-8193-5d9c203e8b23",
+                    id: "d6fecf70-f2bb-4027-8bf0-f30f69f6f467",
                     field: "photo-bw-91",
                     iconPath: "/images/collections/photos/bw/photo-bw-91.jpg",
                   },
                   {
-                    id: "519f71bc-099d-46a8-9867-0452e46dc7db",
+                    id: "024ed87f-5477-4fcd-8751-fcc1b6ccd6d7",
                     field: "photo-bw-92",
                     iconPath: "/images/collections/photos/bw/photo-bw-92.jpg",
                   },
                   {
-                    id: "9df4e2cc-a8be-4ae9-914e-b008738f3d54",
+                    id: "2c2b8089-85fe-4fd6-8d1e-c28fb1b63a8d",
                     field: "photo-bw-93",
                     iconPath: "/images/collections/photos/bw/photo-bw-93.jpg",
                   },
                   {
-                    id: "56af2f29-047b-4625-af32-52484e98860b",
+                    id: "9c87cd10-e803-4da1-b53b-f4b98e27062d",
                     field: "photo-bw-94",
                     iconPath: "/images/collections/photos/bw/photo-bw-94.jpg",
                   },
                   {
-                    id: "b030a522-0e07-4eaa-9a6b-805e7e04736e",
+                    id: "4aea43bd-519f-4cbb-bba6-1359e8bd767b",
                     field: "photo-bw-95",
                     iconPath: "/images/collections/photos/bw/photo-bw-95.jpg",
                   },
                   {
-                    id: "39bfb25a-eb28-4479-ab75-a63a240cfa43",
+                    id: "1dd77fc8-5e28-4fbb-9d3a-05971a5ffaca",
                     field: "photo-bw-96",
                     iconPath: "/images/collections/photos/bw/photo-bw-96.jpg",
                   },
                   {
-                    id: "5e417ce6-8c6d-418c-94e9-5d3277ed970c",
+                    id: "84d9e8f3-4d72-493f-b9b1-5317e26aa592",
                     field: "photo-bw-97",
                     iconPath: "/images/collections/photos/bw/photo-bw-97.jpg",
                   },
                   {
-                    id: "56156f4b-c989-42db-86b8-580a061c3ecb",
+                    id: "6850aced-e4d6-46ab-b7bf-677945b3a063",
                     field: "photo-bw-98",
                     iconPath: "/images/collections/photos/bw/photo-bw-98.jpg",
                   },
                   {
-                    id: "b026ee7f-cb11-43e2-baf2-c87d05e05048",
+                    id: "599df2f7-a5c0-47d5-b49f-b8a701947a67",
                     field: "photo-bw-99",
                     iconPath: "/images/collections/photos/bw/photo-bw-99.jpg",
                   },
@@ -647,78 +648,84 @@ export const about = {
               },
             },
           },
-          engineer: [
-            {
-              id: "14a9259d-dbd4-4c3f-a022-f8b1b44f4db3",
-              name: "Problem Solving",
-              itemsPoint: [
-                {
-                  id: "0a4845d1-2014-44b1-83b3-cbdfe0c53d3a",
-                  description: "Research",
-                },
-                {
-                  id: "8b00b20e-6f12-4d34-84d3-62f4e2469d6f",
-                  description: "Chemical Plant Design",
-                },
-              ],
-            },
-            {
-              id: "2139770f-11eb-451a-8f7e-241f0003c465",
-              name: "Analytical and Numerical Method",
-              itemsPoint: [
-                {
-                  id: "a471c18c-b450-4244-b2ca-2a7bfaa21819",
-                  description: "Chemical Engineering Computation",
-                },
-                {
-                  id: "7e127939-942c-4de0-adee-fa9227b129c3",
-                  description: "Mass and Energy Balance",
-                },
-                {
-                  id: "8a9c8321-8a43-4ca1-8df1-95bbd33b9b61",
-                  description: "Transport Phenomena",
-                },
-              ],
-            },
-            {
-              id: "5dae431d-50f7-4ff4-aba2-09cd2991a180",
-              name: "Statistical Data Processing",
-              itemsPoint: [
-                {
-                  id: "4ccdfd76-18fd-4e76-a72e-9744847753e1",
-                  description: "Design and Analysis Experiment",
-                },
-              ],
-            },
-          ],
+          engineer: {
+            id: "f4230f7d-9c45-4d9a-aa38-94a98d993027",
+            name: "Engineer",
+            routeName: "/about/skill/engineer",
+            itemsPoint: [
+              {
+                id: "32fa439f-d100-435f-ad3b-8e2dd957672b",
+                name: "Problem Solving",
+                itemsPoint: [
+                  {
+                    id: "bd4061c5-45a1-47a7-8ce7-a5b109757b70",
+                    description: "Research",
+                  },
+                  {
+                    id: "20075ca8-056b-4391-93e2-539dcf3a201e",
+                    description: "Chemical Plant Design",
+                  },
+                ],
+              },
+              {
+                id: "5a03b346-94a6-404c-8b8b-4984eb998fd6",
+                name: "Analytical and Numerical Method",
+                itemsPoint: [
+                  {
+                    id: "55b4c3de-3eb2-4c76-948e-84e8b1732001",
+                    description: "Chemical Engineering Computation",
+                  },
+                  {
+                    id: "cb117efc-d6c1-4c46-8018-b4eb5a1a7588",
+                    description: "Mass and Energy Balance",
+                  },
+                  {
+                    id: "53fcc3c9-4610-430a-a371-66f8611ef87b",
+                    description: "Transport Phenomena",
+                  },
+                ],
+              },
+              {
+                id: "1ed809cc-8e62-4261-ba3d-f6b143027ee1",
+                name: "Statistical Data Processing",
+                itemsPoint: [
+                  {
+                    id: "3628a772-da48-4459-b1df-26a1a54c4b55",
+                    description: "Design and Analysis Experiment",
+                  },
+                ],
+              },
+            ],
+          },
           technology: {
-            id: "77c5d6e3-4291-402c-8a44-710e2e1b3739",
+            id: "dee470ad-9fcd-4551-87e0-4866073525d5",
             name: "Technology",
+            routeName: "/about/skill/technology",
             itemsPoint: {
               general: {
-                id: "01852d8c-cbbd-4427-bf13-ed4ba3a9449a",
+                id: "c7cba96e-5da7-4969-b76f-c4f99f791d0d",
                 name: "General",
                 itemsPoint: [
                   {
-                    id: "e22017b2-d79c-4504-928b-483b365d2d22",
+                    id: "e626c13f-4a62-4d77-ac92-a726526a5be0",
                     field: "git-and-github",
                     iconPath:
                       "/images/icon/about/information-technology-icon/general/git-and-github.svg",
                   },
                   {
-                    id: "c9a92a54-07bc-4258-a5ef-ee1e45ad6744",
+                    id: "b691e84e-fa6d-4cb8-b3ba-189d66e399bb",
                     field: "microsoft-excel",
                     iconPath:
                       "/images/icon/about/information-technology-icon/general/microsoft-excel.svg",
                   },
                   {
-                    id: "d3f786f2-b92f-422b-9707-c35119b18e8c",
+                    id: "8b5900b1-1f7a-4037-a5bf-483dd0ba0d43",
                     field: "microsoft-powerpoint",
                     iconPath:
                       "/images/icon/about/information-technology-icon/general/microsoft-powerpoint.svg",
                   },
                   {
-                    id: "d2577cfb-7d1a-4430-8c1f-9847e7ab7bd0",
+                    id: "7d47cd22-c161-4c14-9b86-cb0f7fc6e41e",
                     field: "microsoft-word",
                     iconPath:
                       "/images/icon/about/information-technology-icon/general/microsoft-word.svg",
@@ -726,29 +733,29 @@ export const about = {
                 ],
               },
               content: {
-                id: "6b128ec1-938d-4feb-adea-8c3828f4481d",
+                id: "1c3664d6-7d91-4ace-b809-d9bb647df18e",
                 name: "Content",
                 itemsPoint: [
                   {
-                    id: "d65ac728-a16a-4e09-9d01-5bd0cf4db9d8",
+                    id: "ede76d0d-3d11-4281-a8ea-36913b8afbe5",
                     field: "adobe-illustrator",
                     iconPath:
                       "/images/icon/about/information-technology-icon/content/adobe-illustrator.svg",
                   },
                   {
-                    id: "c76b3fe4-7565-4bc9-848b-dffcee3809ac",
+                    id: "57eb0201-715e-4fc2-8ba0-87d30ee62ff8",
                     field: "adobe-lightroom",
                     iconPath:
                       "/images/icon/about/information-technology-icon/content/adobe-lightroom.svg",
                   },
                   {
-                    id: "578e1250-0ff3-4a5e-8f8b-f259b0f1ad81",
+                    id: "14c9984e-bde4-491e-b9f0-4557b8e83d48",
                     field: "adobe-photoshop",
                     iconPath:
                       "/images/icon/about/information-technology-icon/content/adobe-photoshop.svg",
                   },
                   {
-                    id: "d9dc22de-cfaf-41b1-890b-39569cdcdcc9",
+                    id: "7c4edc15-22b2-47f5-8d55-a7b6bb25375d",
                     field: "canon-eos-technology",
                     iconPath:
                       "/images/icon/about/information-technology-icon/content/canon-eos-technology.svg",
@@ -757,11 +764,11 @@ export const about = {
               },
               frontend: {
                 html: {
-                  id: "b654a835-3465-46ee-a661-a8b08b428815",
+                  id: "629e207f-b8de-423f-a23a-8d3bc0cff79d",
                   name: "HTML",
                   itemsPoint: [
                     {
-                      id: "5a23a8d1-832a-47d6-a359-4860a5f55918",
+                      id: "cecc8c04-b975-4953-9b72-39b3464ddaec",
                       field: "html5",
                       iconPath:
                         "/images/icon/about/information-technology-icon/front-end/html/html5.svg",
@@ -769,23 +776,23 @@ export const about = {
                   ],
                 },
                 css: {
-                  id: "563c985b-5fd4-47c3-9ac6-bb8b2c33f03d",
+                  id: "20da95a6-89bd-4e50-aff0-8242ea1762b6",
                   name: "CSS",
                   itemsPoint: [
                     {
-                      id: "41b10233-1432-4fcf-beab-6b38c0904425",
+                      id: "84be2bae-efb0-4916-9120-ffec37590817",
                       field: "css3",
                       iconPath:
                         "/images/icon/about/information-technology-icon/front-end/css/css3.svg",
                     },
                     {
-                      id: "eb6f0e90-9b44-4c14-b356-21275076691f",
+                      id: "eedc6b1d-0c7c-4a8f-b50e-714f97b9f7b1",
                       field: "sass",
                       iconPath:
                         "/images/icon/about/information-technology-icon/front-end/css/sass.svg",
                     },
                     {
-                      id: "794393d2-3b1b-4ebc-b0e2-73e9694b9c61",
+                      id: "884cf9e6-d194-424d-a1a4-7616b352e9c3",
                       field: "styled-components",
                       iconPath:
                         "/images/icon/about/information-technology-icon/front-end/css/styled-components.svg",
@@ -793,41 +800,41 @@ export const about = {
                   ],
                 },
                 javascript: {
-                  id: "cdbef951-fae9-436c-9376-4de3357c9e0a",
+                  id: "d7df9677-34f4-4525-b39c-1f64cc3cc727",
                   name: "Javascript",
                   itemsPoint: [
                     {
-                      id: "e3c81b46-cdf6-4ccd-ba50-e82b477f8b2a",
+                      id: "e0c98e81-3809-4cb3-8607-15942c1485a5",
                       field: "react-context",
                       iconPath:
                         "/images/icon/about/information-technology-icon/front-end/js/react-context.svg",
                     },
                     {
-                      id: "73c16b0c-663e-4f81-a714-8a043fbcb30c",
+                      id: "0159bc5e-062c-4110-a3c7-3351cbf6649d",
                       field: "react-hooks",
                       iconPath:
                         "/images/icon/about/information-technology-icon/front-end/js/react-hooks.svg",
                     },
                     {
-                      id: "c339e6ed-14b9-45dd-ba70-48e68c30827e",
+                      id: "0bda12f0-6080-410e-a8f2-b79a1d413947",
                       field: "react-redux",
                       iconPath:
                         "/images/icon/about/information-technology-icon/front-end/js/react-redux.svg",
                     },
                     {
-                      id: "8d370427-2409-4ab1-827f-7fd62caa461b",
+                      id: "2bb6f70f-ca74-4f1a-9341-47bf6e187ea7",
                       field: "react-ui-library",
                       iconPath:
                         "/images/icon/about/information-technology-icon/front-end/js/react-ui-library.svg",
                     },
                     {
-                      id: "6f13c66e-ea08-4623-b54a-2564599d1eaa",
+                      id: "7090afad-8463-4160-8387-a612f54c7611",
                       field: "redux-saga",
                       iconPath:
                         "/images/icon/about/information-technology-icon/front-end/js/redux-saga.svg",
                     },
                     {
-                      id: "a9817d01-f064-4859-8f5a-366e81f7d0e9",
+                      id: "5dc2e85a-d698-4a56-81c6-e1fbd4091b0d",
                       field: "vanilla-javascript",
                       iconPath:
                         "/images/icon/about/information-technology-icon/front-end/js/vanilla-javascript.svg",
@@ -837,17 +844,17 @@ export const about = {
               },
               backend: {
                 language: {
-                  id: "e4021751-4aea-49ce-a131-997a57f64a78",
+                  id: "a4428655-6108-4752-9966-746af5a01209",
                   name: "Language",
                   itemsPoint: [
                     {
-                      id: "c0bf1538-241e-4815-9567-90ee7e8a7e37",
+                      id: "27435682-6826-4e1d-b3c0-8c1a46473302",
                       field: "node-js",
                       iconPath:
                         "/images/icon/about/information-technology-icon/back-end/language/node-js.svg",
                     },
                     {
-                      id: "7e0ce5b8-5a72-4520-a540-6d56aa8dbd0f",
+                      id: "34c91b44-15a7-4960-bcb0-f639dba0634a",
                       field: "python",
                       iconPath:
                         "/images/icon/about/information-technology-icon/back-end/language/python.svg",
@@ -855,35 +862,35 @@ export const about = {
                   ],
                 },
                 framework: {
-                  id: "7ff66beb-7ee1-4605-a6da-00acb9e4181b",
+                  id: "c9add6ab-c5a1-4037-8235-e9d5a9356c5d",
                   name: "Framework",
                   itemsPoint: [
                     {
-                      id: "c147ada3-9b8e-46e9-abd4-1651bdb3621b",
+                      id: "16daec91-2615-4da5-86e3-ffc3415b91f0",
                       field: "apollo",
                       iconPath:
                         "/images/icon/about/information-technology-icon/back-end/framework/apollo.svg",
                     },
                     {
-                      id: "82734461-8dd6-44ae-b2d4-a3459898b9d8",
+                      id: "b8e8de69-6087-4106-b0bf-ce6dc36e3dcc",
                       field: "express",
                       iconPath:
                         "/images/icon/about/information-technology-icon/back-end/framework/express.svg",
                     },
                     {
-                      id: "eb027abe-d7cc-4000-a6a8-f100fd93b638",
+                      id: "aa6d9b14-1e2a-4657-bb4c-73de5e661dfd",
                       field: "graphql",
                       iconPath:
                         "/images/icon/about/information-technology-icon/back-end/framework/graphql.svg",
                     },
                     {
-                      id: "b1406cb6-2e0b-4686-9e55-9417fde88059",
+                      id: "cf9599d6-3b51-4960-8273-5c90632c3c1c",
                       field: "mongoose",
                       iconPath:
                         "/images/icon/about/information-technology-icon/back-end/framework/mongoose.svg",
                     },
                     {
-                      id: "748af390-acf2-4321-98f1-ad77eefc3b9c",
+                      id: "bc64307a-71f2-42ae-82ec-b7597547e288",
                       field: "stripe",
                       iconPath:
                         "/images/icon/about/information-technology-icon/back-end/framework/stripe.svg",
@@ -891,29 +898,29 @@ export const about = {
                   ],
                 },
                 database: {
-                  id: "34c11a98-de0f-40ed-adab-f16d368a930f",
+                  id: "c06ed8f0-81cc-429b-81d3-8cc924084942",
                   name: "Database",
                   itemsPoint: [
                     {
-                      id: "d3640a6a-8687-4410-b9e9-65aec04cf85a",
+                      id: "52d740f4-03ab-4e00-b957-58681d6c2bfc",
                       field: "firebase-db",
                       iconPath:
                         "/images/icon/about/information-technology-icon/back-end/database/firebase-db.svg",
                     },
                     {
-                      id: "8a24f1b6-8a62-40d1-9292-d8104b14a34e",
+                      id: "7367f418-be37-4a35-a787-fb3ff1f57b32",
                       field: "mongo-db",
                       iconPath:
                         "/images/icon/about/information-technology-icon/back-end/database/mongo-db.svg",
                     },
                     {
-                      id: "51beab4f-6e7e-416d-8591-9eb2be26699a",
+                      id: "ea5be2ae-b4e8-457f-81ee-c29748a8427d",
                       field: "osisoft",
                       iconPath:
                         "/images/icon/about/information-technology-icon/back-end/database/osisoft.svg",
                     },
                     {
-                      id: "2e344122-8edd-4ef9-bb72-96cbe68bb447",
+                      id: "037c17f2-15aa-44c3-8ebe-e08b8995240a",
                       field: "sql",
                       iconPath:
                         "/images/icon/about/information-technology-icon/back-end/database/sql.svg",
@@ -922,23 +929,23 @@ export const about = {
                 },
               },
               architecture: {
-                id: "0292a357-583b-4b76-9820-680de28c3a7c",
+                id: "a43cfc0e-ea12-4059-bd97-f2b304cfc448",
                 name: "Architecture",
                 itemsPoint: [
                   {
-                    id: "37adc831-4dfe-4793-bc63-da92aab12574",
+                    id: "82383032-aeb0-4041-8418-ea370d636da6",
                     field: "pwa-api",
                     iconPath:
                       "/images/icon/about/information-technology-icon/architecture/pwa-api.svg",
                   },
                   {
-                    id: "e0207d49-b886-4f82-b839-913241f24034",
+                    id: "3e8b880c-89df-4640-82ec-f86b6a24412d",
                     field: "rest-api",
                     iconPath:
                       "/images/icon/about/information-technology-icon/architecture/rest-api.svg",
                   },
                   {
-                    id: "cf554061-3f93-42ca-b31c-8f3b4a8fc098",
+                    id: "bd9f04a8-e9ce-4978-bf9a-10ae875d0ef8",
                     field: "spa-api",
                     iconPath:
                       "/images/icon/about/information-technology-icon/architecture/spa-api.svg",
@@ -946,17 +953,17 @@ export const about = {
                 ],
               },
               test: {
-                id: "78015d59-d490-4790-9500-b261ff995c4a",
+                id: "f623f396-e2d4-4ec2-a1f6-f4e31d7fdbba",
                 name: "Test",
                 itemsPoint: [
                   {
-                    id: "67f919b6-0b2f-45f8-81e8-adb0f5f9bf09",
+                    id: "247e6616-af68-441f-af01-a7e37f751b2b",
                     field: "enzyme",
                     iconPath:
                       "/images/icon/about/information-technology-icon/test/enzyme.svg",
                   },
                   {
-                    id: "780f03c5-3a70-4097-b623-ea20f2d6cee6",
+                    id: "596472ef-dc4d-442f-ac6c-95f722812335",
                     field: "jest",
                     iconPath:
                       "/images/icon/about/information-technology-icon/test/jest.svg",
@@ -967,20 +974,20 @@ export const about = {
           },
           language: [
             {
-              id: "56b0c672-ef3e-4eeb-9f1a-eb68413a3de4",
+              id: "304378cc-da52-4512-b528-e766c24a3a7e",
               description: "English",
             },
             {
-              id: "0ad15e21-7bc2-4d8b-a966-43ed4f4385cf",
+              id: "a6cdfbd2-8525-490c-b0d6-987dec863597",
               description: "Bahasa",
             },
           ],
         },
       },
       personalSummary: {
-        id: "de6a4454-7089-4d29-a571-42864566f903",
+        id: "c9f80a7b-c776-4e28-a3b3-f0eb55ed903c",
         title: "Personal Summary",
-        routeName: "/about/personalsummary",
+        routeName: "/about/summary",
         items: {
           longDescription: {
             p1:
@@ -997,7 +1004,7 @@ export const about = {
           quote:
             "Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world. – Albert Einstein",
           cv: {
-            id: "3c44d956-0ad0-4dd8-8eb8-b2944bf37ec2",
+            id: "50f8aa7a-1c9a-41e7-bafd-4fa346f9a18f",
             field: "thomas-santosa-curriculum-vitae",
             iconPath:
               "/images/about/summary/thomas-santosa-curriculum-vitae.pdf",
@@ -1005,18 +1012,17 @@ export const about = {
         },
       },
       personalEducation: {
-        id: "ae200d3c-c350-4a60-9636-20d0f0600f00",
+        id: "3d26a8a8-b93c-4ddb-890b-dcc2ef0dad3a",
         title: "Personal Education",
-        routeName: "/about/personaleducation",
+        routeName: "/about/education",
         items: {
           education: {
-            id: "a985f843-1d7f-4dee-8f23-2ff9f3a2949c",
+            id: "636697e4-0fab-472c-a135-1c7d2b053dcc",
             title: "Education",
-            routeName: "/about/personaleducation/education/",
             items: {
               lastBachelor: [
                 {
-                  id: "61a542f3-3dc4-4f07-b1d1-423d564ee467",
+                  id: "b3ae576d-0a66-4566-a90f-09b07eb518fe",
                   school: "Parahyangan Catholic University",
                   degree: "Bachelor of Engineering, B.Eng",
                   field: "Chemical Engineering",
@@ -1026,19 +1032,19 @@ export const about = {
                   grade: "3.12 of 4",
                   imagePath: [
                     {
-                      id: "86440148-803c-4024-80c3-e8fcbf69b688",
+                      id: "5daacff4-78ee-448f-8d9b-0ce34d8c858d",
                       field: "chemeng-bahasa",
                       iconPath:
                         "/images/about/education/last-bachelor/chemeng/chemeng-bahasa.jpg",
                     },
                     {
-                      id: "74e35861-2446-464b-a9cb-820ede8e35f2",
+                      id: "eafea480-2fce-4a06-b737-0e817a9a9ed2",
                       field: "chemeng-english",
                       iconPath:
                         "/images/about/education/last-bachelor/chemeng/chemeng-english.jpg",
                     },
                     {
-                      id: "a7b03703-fae8-4936-be5c-f17f5e3caade",
+                      id: "5d77f995-6461-4582-a795-463830971ee2",
                       field: "chemeng-transcript",
                       iconPath:
                         "/images/about/education/last-bachelor/chemeng/chemeng-transcript.jpg",
@@ -1048,7 +1054,7 @@ export const about = {
               ],
               lastExperiences: [
                 {
-                  id: "e53b8288-7995-48cb-8010-4228c9884d41",
+                  id: "d37c1129-bce9-4f9a-b3ea-0ea4beae4300",
                   company: "Asia Pacific International Holding",
                   field: "Engineering Development Trainee",
                   startDate: "Dec 2017",
@@ -1058,19 +1064,19 @@ export const about = {
                   grade: "78.36 of 100",
                   imagePath: [
                     {
-                      id: "35b31dd7-aa34-4590-9214-f81f77368798",
+                      id: "b4bdd036-7e11-4e32-a43f-9084a7721545",
                       field: "edt-certificate",
                       iconPath:
                         "/images/about/education/last-experiences/edt/edt-certificate.jpg",
                     },
                     {
-                      id: "ff94fc31-220c-494d-89cf-7d4c11f42a6a",
+                      id: "5e2b8c1b-4a36-4dd1-86dd-c73ff75789b8",
                       field: "edt-mental-building",
                       iconPath:
                         "/images/about/education/last-experiences/edt/edt-mental-building.jpg",
                     },
                     {
-                      id: "c263af9c-0fdb-4e02-b2bd-e0e843427095",
+                      id: "c3c3b9da-e51b-4543-9bf6-f1f22e3bf554",
                       field: "edt-transcript",
                       iconPath:
                         "/images/about/education/last-experiences/edt/edt-transcript.jpg",
@@ -1080,7 +1086,7 @@ export const about = {
               ],
               lastCourses: [
                 {
-                  id: "b8a60f8a-afca-4814-8554-07e4bcf90ac0",
+                  id: "f50eb0aa-914b-438f-9918-0007396ed975",
                   name: "The Web Developer Bootcamp 2021",
                   organization: "Udemy",
                   field: "web",
@@ -1089,7 +1095,7 @@ export const about = {
                     "http://ude.my/UC-2a96ecf5-2fc5-4677-b3af-6f24aa064e13",
                   imagePath: [
                     {
-                      id: "fb129532-99e6-479e-bd7b-a78c5c957ea1",
+                      id: "4f063486-828f-40b4-95b3-73247df2001b",
                       field: "web-course",
                       iconPath:
                         "/images/about/education/last-courses/web/web-course.jpg",
@@ -1097,7 +1103,7 @@ export const about = {
                   ],
                 },
                 {
-                  id: "d3e6677b-fdc1-44db-8205-ec6530cc9aa6",
+                  id: "db766c21-d3e8-49f4-89ab-2ee74ec30ce4",
                   name:
                     "Complete React Developer in 2021 (with Redux, Hooks, GraphQL)",
                   organization: "Udemy and Zero To Mastery Academy",
@@ -1107,7 +1113,7 @@ export const about = {
                     "http://ude.my/UC-62aeee60-def8-4695-9a43-b66c81114fde",
                   imagePath: [
                     {
-                      id: "93c4fbb2-0cd4-42ae-a93d-da3d05097d22",
+                      id: "2623196c-87f7-4304-bfa8-b806cf0cd3e8",
                       field: "react-course",
                       iconPath:
                         "/images/about/education/last-courses/react/react-course.jpg",
@@ -1115,7 +1121,7 @@ export const about = {
                   ],
                 },
                 {
-                  id: "1bf1c055-bff0-4e3b-be3c-eff89d83e2ff",
+                  id: "78b501dc-3f29-485a-96e1-c8802f27fe67",
                   name:
                     "2021 Complete Python Bootcamp from Zero to Hero in Python",
                   organization: "Udemy",
@@ -1125,7 +1131,7 @@ export const about = {
                     "https://www.udemy.com/certificate/UC-4b2915ae-57d6-4419-b3f2-433991373866/",
                   imagePath: [
                     {
-                      id: "5d1a67d0-71cb-458b-beb3-37e49026728b",
+                      id: "6dc134f4-f755-46fb-9d0c-8b8c60e03ecc",
                       field: "python-course",
                       iconPath:
                         "/images/about/education/last-courses/python/python-course.jpg",
@@ -1133,7 +1139,7 @@ export const about = {
                   ],
                 },
                 {
-                  id: "714f17d8-ed47-4cbf-8f91-308b44c74b13",
+                  id: "91f54ed5-2ff5-43d2-83a2-2f6b6dbb7323",
                   name:
                     "The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert",
                   organization: "Udemy",
@@ -1143,7 +1149,7 @@ export const about = {
                     "https://www.udemy.com/certificate/UC-28a6574c-0022-45a7-9f79-8077b2faf7aa/",
                   imagePath: [
                     {
-                      id: "4bec80d4-97cf-49d1-8807-40ca5c1b757b",
+                      id: "1db1ecc8-c305-448f-98a8-a167651a4f83",
                       field: "sql-course",
                       iconPath:
                         "/images/about/education/last-courses/sql/sql-course.jpg",
@@ -1154,73 +1160,72 @@ export const about = {
             },
           },
           personality: {
-            id: "19a364ec-a555-44f0-9c13-4a99e258dae3",
+            id: "317b1f31-e566-4016-b675-9167100c5eb8",
             title: "Personality",
-            routeName: "/about/personaleducation/education",
             items: {
               personality: [
                 {
-                  id: "1a56023c-3c5f-4b16-a8b7-266a37f4389f",
+                  id: "52ad428a-5fc8-41c5-afd2-d7c25dda062d",
                   description: "Achievement- riven",
                 },
                 {
-                  id: "7e7d3900-ef58-418e-acb8-45ce5d79371a",
+                  id: "830d292f-deca-4760-bfc1-057faabeaf82",
                   description: "Action Oriented",
                 },
                 {
-                  id: "fb96c3f1-9bf7-49eb-a168-9ee51fb5422d",
+                  id: "a50918a4-2e48-4d8d-91a3-7c80d4222d5e",
                   description: "Ambitious",
                 },
                 {
-                  id: "6db24c97-f9b9-4f4c-b5c3-6fa368676d25",
+                  id: "5eacd980-316f-4660-bb86-256fbc4cd006",
                   description: "Analitycal",
                 },
                 {
-                  id: "ba48cce4-a18f-4296-8deb-7caa663e61a3",
+                  id: "078a9078-58b8-4b46-af6f-a5c7488e8ebb",
                   description: "Appreciative",
                 },
                 {
-                  id: "b51bcde6-9fe1-4587-a5ac-95da46f59ffd",
+                  id: "b0f2897c-3720-4f3b-b196-76dd7149ae55",
                   description: "Business-Like",
                 },
                 {
-                  id: "f4d6cdcc-d5a9-4278-886d-4daa6fc5cbaa",
+                  id: "a6ecc855-3dac-4a31-93a5-71985a835985",
                   description: "Consistent",
                 },
                 {
-                  id: "d385705b-72c9-4270-b219-420367a56576",
+                  id: "9e753cc7-dea2-4489-8239-fd3682229e26",
                   description: "Creative",
                 },
                 {
-                  id: "73cdd2fc-86b1-46a4-b65c-f23583fa3851",
+                  id: "2e190f18-e704-484b-a4c1-e5974b44fedf",
                   description: "Dynamic",
                 },
                 {
-                  id: "a0331ba7-7b43-48b0-973a-7afc6aba969c",
+                  id: "0c20ac78-1318-4f0d-9970-9f017a409002",
                   description: "Focused",
                 },
                 {
-                  id: "65e5358b-6a74-4137-a317-fb199c88ca2a",
+                  id: "8301c133-f63b-4b9a-8b68-e09ef3ab60a7",
                   description: "Independent",
                 },
                 {
-                  id: "c7cdc0f9-f41a-4e65-814f-2dd187c8713b",
+                  id: "8b0ca15c-d31e-41ff-8102-977901211a18",
                   description: "Proactive",
                 },
                 {
-                  id: "85bde94a-db2f-494a-af33-573efe260678",
+                  id: "907b1512-2312-4d55-a681-5155c04f46b3",
                   description: "Self-Motivated",
                 },
                 {
-                  id: "f60c914c-f9ee-49a1-bcf6-82d8902de774",
+                  id: "ff7d64d2-b28a-40ca-a0ba-ccbac29a126c",
                   description: "Teamwork",
                 },
                 {
-                  id: "d5c52e2f-f26c-44cf-9fbb-392fa7c1d665",
+                  id: "6b7d14c4-a9eb-48f4-a291-52fabaa520de",
                   description: "Unique",
                 },
                 {
-                  id: "140ce3f2-30cf-49ef-a57d-ff74d55deffe",
+                  id: "23bdab63-6321-438e-a908-da81108165ed",
                   description: "Willful",
                 },
               ],
@@ -1229,18 +1234,17 @@ export const about = {
         },
       },
       personalProject: {
-        id: "be6bc8c9-68c9-4f2e-8bd4-a4ada91d3fd1",
+        id: "8bb3b47f-9300-4754-941b-a4f0ed930158",
         title: "Personal Project",
-        routeName: "/about/personalproject",
+        routeName: "/about/project",
         items: {
           accomplishment: {
-            id: "0cf82bd7-17e2-4a40-aa99-848b58fc45ac",
+            id: "2c566224-03ba-4b7b-a604-0966b62717de",
             title: "Accomplishment",
-            routeName: "/about/personalproject/accomplishment",
             items: {
               thesis: [
                 {
-                  id: "4f3659ce-d672-4ab3-b552-145088de0573",
+                  id: "e038e585-2b3e-4b1c-b319-4cfdbf62f252",
                   name:
                     "Design Chemical Manufacture Based On Arenga Pinnata Palm Tree To Produce Liquor Drink",
                   type: "full - time",
@@ -1252,7 +1256,7 @@ export const about = {
                     "Commercially producing palm wine and suitably packed to increase awareness a local and global consumer by using sugar palm from palm tree (Arenga pinnata).",
                 },
                 {
-                  id: "eef19d5a-1882-4657-95a8-2d6ff181d888",
+                  id: "d62a1db6-c7c6-4800-a6f8-fce7131ce628",
                   name:
                     "Making Heterogenous Acid Catalyst Based On Silica/ Carbon Composite With TEOS And Sulfonic Acid",
                   type: "full - time",
@@ -1267,7 +1271,7 @@ export const about = {
               project: {
                 courses: [
                   {
-                    id: "beaa3825-95d0-4447-8074-fd78159a43e1",
+                    id: "217a99f3-9554-4420-8a25-2d28cabc1bf3",
                     name: "Crown Clothing.Ltd",
                     description:
                       "Building an application for the e-commerce website that gives user interface and experience in shopping self-service with a hundred branded clothing apparel, which provides special streetwear for the young customer who loves well-designed apparel. Integrating with the featured online payment that can be accessed by all the country and visual communicating design.",
@@ -1276,7 +1280,7 @@ export const about = {
                     url: "https://crowned-ltd.herokuapp.com/",
                   },
                   {
-                    id: "515bcbd8-cc51-4f9c-9eb6-df8c89503d65",
+                    id: "8b7ebbad-44cf-4f01-944f-a873e9664f92",
                     name: "Campground Application Interface",
                     description:
                       "Building campgrounds apps that help people who love to share their personal experiences. Campgrounds apps are the apps, who have a feature on sharing the post, location, and comment, also rate with the purpose, which gives information about up to date campgrounds information and improves personal camping experience.",
@@ -1286,7 +1290,7 @@ export const about = {
                 ],
                 experiences: [
                   {
-                    id: "8324e929-d593-4667-b630-be3a3ba1acb1",
+                    id: "a0db9c83-a7cb-4a24-92e9-e6c960df0f13",
                     name:
                       "Commissioning  Acacia Excellence Conversion As Transitions Between Kraft Pulp To Acacia Excellence Production",
                     description:
@@ -1294,7 +1298,7 @@ export const about = {
                     related: "Process Engineer",
                   },
                   {
-                    id: "748f02c2-2978-4f6d-b935-e57f314808bd",
+                    id: "2dc57fda-b15f-4c1e-b764-bb8d5d980c7e",
                     name:
                       "Creating Totalizer In Terms Of Capacity Heat Properties Of White Liquor And Black Liquor Based On Data Streamline Condition As Per Day",
                     description:
@@ -1302,7 +1306,7 @@ export const about = {
                     related: "Process Engineer",
                   },
                   {
-                    id: "8731e2e8-eb89-4cbd-b09c-0293ac7d9381",
+                    id: "7a52f1a4-8787-42a7-acb5-347f15d01d64",
                     name:
                       "Commissioning Fiberline Plant For Increasing Total Production As Per Day",
                     description:
@@ -1310,7 +1314,7 @@ export const about = {
                     related: "Process Engineer",
                   },
                   {
-                    id: "3734c18e-363f-4cde-9835-b8134f380bd2",
+                    id: "95735937-a8f4-4862-b808-fd4625562db1",
                     name:
                       "Maintaining Hindrance Of Clogging Up Material Wood Chip Isolating Operational During As Per Startup/Shutdown Event",
                     description:
@@ -1318,7 +1322,7 @@ export const about = {
                     related: "Process Engineer",
                   },
                   {
-                    id: "0cbaac4c-7035-4647-b02c-fac57cf49e99",
+                    id: "fcdcf800-3eb6-4d4b-b9b1-ad736f932ae6",
                     name:
                       "Monitoring Delay Sequence As Per Digester Based On Operational Time",
                     description:
@@ -1326,7 +1330,7 @@ export const about = {
                     related: "Process Engineer",
                   },
                   {
-                    id: "d578c187-4235-4316-8d1c-e0b5d44d8450",
+                    id: "72051c9d-cee9-4103-afef-101a85061e2e",
                     name:
                       "Monitoring Hot Black Liquor Efficiency In Each Digester Toward Time, So The Temperature Of Heating Sequence And Cooking Sequence Kraft Pulp As An Indication Of Quality Parameter Pulp",
                     description:
@@ -1334,7 +1338,7 @@ export const about = {
                     related: "Process Engineer",
                   },
                   {
-                    id: "9912da5e-d641-4e48-8656-75ad5ebbe93a",
+                    id: "07be778b-e7be-4790-a7e9-41c44048f68e",
                     name:
                       "Monitoring Kappa Number Based on H-Factor & P-Factor as per Discharge Sequence of Superbatch Condition",
                     description:
@@ -1342,7 +1346,7 @@ export const about = {
                     related: "Process Engineer",
                   },
                   {
-                    id: "5af453db-9ef3-438a-960d-5bbb908599c2",
+                    id: "62bdaca5-fb9b-4cb1-a9e6-bd58effeaa6b",
                     name:
                       "Monitoring Superbatch Administrator as per Parameter Value Based on PI OSIsoft database",
                     description:
@@ -1350,7 +1354,7 @@ export const about = {
                     related: "Process Engineer",
                   },
                   {
-                    id: "567a7dce-6b13-4df1-8fd4-6458f6220b6a",
+                    id: "77838184-fe57-435e-bf68-5ca1a946ccb9",
                     name:
                       "Projecting Simulation of Superbatch Administrator Hot Liquor Filling Efficiency Metso",
                     description:
@@ -1358,7 +1362,7 @@ export const about = {
                     related: "Process Engineer",
                   },
                   {
-                    id: "255addf6-9bcf-49ee-97dd-3c46b9f6b5e1",
+                    id: "8ea77132-c780-4e58-b070-55bf917e610d",
                     name:
                       "Simulating Superbatch Administrators at Shutdown Schedule for Last Hot Liquor Filling Kraft Sequence based on Reverse Schedule Time as per Reported Sequence Time",
                     description:
@@ -1370,13 +1374,12 @@ export const about = {
             },
           },
           achievement: {
-            id: "2d79b2bb-1196-49cc-8dfd-f06cf1684d77",
+            id: "39f9399e-c3d8-40c5-a876-b71b6f760efc",
             title: "Achievement",
-            routeName: "/about/personalproject/achievement",
             items: {
               lastExperiences: [
                 {
-                  id: "0087ff0c-7baf-4c11-bd48-61ddd28ff4ad",
+                  id: "781afa6e-1b70-4939-95ec-a62a624aff0f",
                   name: "Kaizen",
                   field: "kaizen",
                   description:
@@ -1385,7 +1388,7 @@ export const about = {
                   date: "Jan 2017",
                   imagePath: [
                     {
-                      id: "09fe669f-ad24-4771-8a19-1f0fcb6c8528",
+                      id: "0072c7c0-506b-4905-896c-6f14683fbad2",
                       field: "kaizen",
                       iconPath:
                         "/images/about/achievement/last-experiences/kaizen/kaizen.jpg",
@@ -1393,7 +1396,7 @@ export const about = {
                   ],
                 },
                 {
-                  id: "2bf3b661-b972-404f-9fae-a5538d00b800",
+                  id: "12c5ec86-7aec-4b1a-bab9-7d422640d003",
                   name: "LEAN",
                   field: "lean",
                   description:
@@ -1402,7 +1405,7 @@ export const about = {
                   date: "Jan 2017",
                   imagePath: [
                     {
-                      id: "38b37aed-fe7e-445c-83de-bb96c6db9cbd",
+                      id: "fc23b21f-f5ef-46e2-b807-ee4cf7c032a3",
                       field: "lean",
                       iconPath:
                         "/images/about/achievement/last-experiences/lean/lean.jpg",
@@ -1410,7 +1413,7 @@ export const about = {
                   ],
                 },
                 {
-                  id: "5bfb3c73-c506-436f-8a57-43408f59a5bc",
+                  id: "0e4b636b-5fc5-40aa-91ad-b2b131063970",
                   name: "Occapational Safety and Health Competition",
                   field: "ohs",
                   description:
@@ -1419,7 +1422,7 @@ export const about = {
                   date: "Feb 2019",
                   imagePath: [
                     {
-                      id: "64534b56-4a3d-4378-a579-3e48835f91a5",
+                      id: "906f9627-29fc-4d46-bbbf-bb83960a36d9",
                       field: "ohs",
                       iconPath:
                         "/images/about/achievement/last-experiences/ohs/ohs.jpg",
@@ -1434,13 +1437,13 @@ export const about = {
     },
   },
   careerPath: {
-    id: "198f0bb2-4c86-4b49-a700-fb478ed2ba1d",
+    id: "534facb5-19ed-4255-ba92-784c66638912",
     title: "Timeline Career",
-    routeName: "/career",
+    routeName: "/timelinecareer",
     items: {
       beforeWorking: [
         {
-          id: "9214af7b-fe1c-4908-9a5e-b3a0879161d4",
+          id: "6c513381-a7d7-4678-bde0-89b075efe329",
           year: 2016,
           company: "Air Liquide",
           title: "Internship",
@@ -1453,7 +1456,7 @@ export const about = {
           description: "Learning to act as a process engineer role",
         },
         {
-          id: "186d1a80-357b-4765-9ca2-8831f366c341",
+          id: "1fef33e1-9673-431b-bbf6-1fb59a567f1c",
           year: 2017,
           company: "Asia Pacific Resource International Holding",
           title: "Engineering Development Program (EDT)",
@@ -1467,7 +1470,7 @@ export const about = {
             "Assisted manager area job to support parameter data based on actual and guideline conditions running within teamwork reliability.",
         },
         {
-          id: "a068c441-5691-472e-bb97-878ecd1aedc8",
+          id: "0f956e7e-27d5-4310-a1c5-b2ee30b3b25b",
           year: 2018,
           company: "Asia Pacific Resource International Holding",
           title: "Process Engineer, Fiberline Department",
@@ -1481,7 +1484,7 @@ export const about = {
             "Determining the analytical root cause based on incoming data and daily monitoring process parameters ensures a successful streamlined production level using the PI OSIsoft application.",
         },
         {
-          id: "d1bc985e-4d5e-4126-9903-02fb7c037047",
+          id: "e21318fa-e12d-4d32-b055-9807021137af",
           year: 2018,
           company: "Asia Pacific Resource International Holding",
           title: "Data Engineer, Fiberline Department",
@@ -1495,7 +1498,7 @@ export const about = {
             "Master PI OSIsoft application as processors of data control to create a monitoring parameter tool.",
         },
         {
-          id: "d89dcefc-9e0a-47af-890c-bcf9a8551831",
+          id: "b9e83671-2351-49e8-8791-1d701389eeca",
           year: 2019,
           company: "Asia Pacific Resource International Holding",
           title: "Field Operations, Fiberline Department",
@@ -1509,7 +1512,7 @@ export const about = {
             "Informing condition for the operational DCS from abnormality equipment during manufacture running within teamwork reliability.",
         },
         {
-          id: "d2958ffe-aee8-4efe-b844-3d4569d5b7a9",
+          id: "a95b8384-a52c-4054-bd0e-bea333fb5a25",
           year: "Today",
           company: "Self Employed",
           title: "Freelance",

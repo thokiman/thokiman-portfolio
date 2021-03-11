@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
+import { CSSTransitionGroup } from "react-transition-group";
 
 import { ReactComponent as ThokimanSkeletonGray } from "../../assets/collections-icon/thokiman-icon/page/thokiman_skeleton_gray.svg";
 import { ReactComponent as ThokimanBodyGray } from "../../assets/collections-icon/thokiman-icon/page/thokiman_body_gray.svg";
@@ -12,129 +13,137 @@ import { selectIsDropdownHidden } from "../../redux/about/about.selectors";
 const AboutHomeContent = ({ isDropdownHidden }) => {
   return (
     <div className="right-page-container">
-      <div className="right-page-content">
-        <div
-          className={
-            isDropdownHidden
-              ? "thokiman-skeleton-gray-left-hide"
-              : "thokiman-skeleton-gray-left-show"
-          }
-        >
-          <ThokimanSkeletonGray
+      <CSSTransitionGroup
+        transitionAppear={true}
+        transitionAppearTimeout={800}
+        transitionEnterTimeout={600}
+        transitionLeaveTimeout={200}
+        transitionName={"slide-out"}
+      >
+        <div className="right-page-content">
+          <div
             className={
               isDropdownHidden
-                ? "thokiman-skeleton-content-hide"
-                : "thokiman-skeleton-content-show"
+                ? "thokiman-skeleton-gray-left-hide"
+                : "thokiman-skeleton-gray-left-show"
             }
-          />
-        </div>
-        <div
-          className={
-            isDropdownHidden
-              ? "thokiman-skeleton-gray-middle-hide"
-              : "thokiman-skeleton-gray-middle-show"
-          }
-        >
-          <ThokimanSkeletonGray
+          >
+            <ThokimanSkeletonGray
+              className={
+                isDropdownHidden
+                  ? "thokiman-skeleton-content-hide"
+                  : "thokiman-skeleton-content-show"
+              }
+            />
+          </div>
+          <div
             className={
               isDropdownHidden
-                ? "thokiman-skeleton-content-hide"
-                : "thokiman-skeleton-content-show"
+                ? "thokiman-skeleton-gray-middle-hide"
+                : "thokiman-skeleton-gray-middle-show"
             }
-          />
-        </div>
-        <div
-          className={
-            isDropdownHidden
-              ? "thokiman-skeleton-gray-right-hide"
-              : "thokiman-skeleton-gray-right-show"
-          }
-        >
-          <ThokimanSkeletonGray
+          >
+            <ThokimanSkeletonGray
+              className={
+                isDropdownHidden
+                  ? "thokiman-skeleton-content-hide"
+                  : "thokiman-skeleton-content-show"
+              }
+            />
+          </div>
+          <div
             className={
               isDropdownHidden
-                ? "thokiman-skeleton-content-hide"
-                : "thokiman-skeleton-content-show"
+                ? "thokiman-skeleton-gray-right-hide"
+                : "thokiman-skeleton-gray-right-show"
             }
-          />
-        </div>
+          >
+            <ThokimanSkeletonGray
+              className={
+                isDropdownHidden
+                  ? "thokiman-skeleton-content-hide"
+                  : "thokiman-skeleton-content-show"
+              }
+            />
+          </div>
 
-        <div
-          className={
-            isDropdownHidden
-              ? "thokiman-right-hand-hide"
-              : "thokiman-right-hand-show"
-          }
-        >
-          <ThokimanHandGray
+          <div
             className={
               isDropdownHidden
-                ? "thokiman-right-hand-content-hide"
-                : "thokiman-right-hand-content-show"
+                ? "thokiman-right-hand-hide"
+                : "thokiman-right-hand-show"
             }
-          />
-        </div>
-        <div
-          className={
-            isDropdownHidden
-              ? "thokiman-body-middle-hide"
-              : "thokiman-body-middle-show"
-          }
-        >
-          <ThokimanBodyGray
+          >
+            <ThokimanHandGray
+              className={
+                isDropdownHidden
+                  ? "thokiman-right-hand-content-hide"
+                  : "thokiman-right-hand-content-show"
+              }
+            />
+          </div>
+          <div
             className={
               isDropdownHidden
-                ? "thokiman-body-content-hide"
-                : "thokiman-body-content-show"
+                ? "thokiman-body-middle-hide"
+                : "thokiman-body-middle-show"
             }
-          />
-        </div>
-        <div
-          className={
-            isDropdownHidden
-              ? "thokiman-left-hand-hide"
-              : "thokiman-left-hand-show"
-          }
-        >
-          <ThokimanHandGray
+          >
+            <ThokimanBodyGray
+              className={
+                isDropdownHidden
+                  ? "thokiman-body-content-hide"
+                  : "thokiman-body-content-show"
+              }
+            />
+          </div>
+          <div
             className={
               isDropdownHidden
-                ? "thokiman-left-hand-content-hide"
-                : "thokiman-left-hand-content-show"
+                ? "thokiman-left-hand-hide"
+                : "thokiman-left-hand-show"
             }
-          />
-        </div>
-        <div
-          className={
-            isDropdownHidden
-              ? "thokiman-right-leg-hide"
-              : "thokiman-right-leg-show"
-          }
-        >
-          <ThokimanLegGray
+          >
+            <ThokimanHandGray
+              className={
+                isDropdownHidden
+                  ? "thokiman-left-hand-content-hide"
+                  : "thokiman-left-hand-content-show"
+              }
+            />
+          </div>
+          <div
             className={
               isDropdownHidden
-                ? "thokiman-right-leg-content-hide"
-                : "thokiman-right-leg-content-show"
+                ? "thokiman-right-leg-hide"
+                : "thokiman-right-leg-show"
             }
-          />
-        </div>
-        <div
-          className={
-            isDropdownHidden
-              ? "thokiman-left-leg-hide"
-              : "thokiman-left-leg-show"
-          }
-        >
-          <ThokimanLegGray
+          >
+            <ThokimanLegGray
+              className={
+                isDropdownHidden
+                  ? "thokiman-right-leg-content-hide"
+                  : "thokiman-right-leg-content-show"
+              }
+            />
+          </div>
+          <div
             className={
               isDropdownHidden
-                ? "thokiman-left-leg-content-hide"
-                : "thokiman-left-leg-content-show"
+                ? "thokiman-left-leg-hide"
+                : "thokiman-left-leg-show"
             }
-          />
+          >
+            <ThokimanLegGray
+              className={
+                isDropdownHidden
+                  ? "thokiman-left-leg-content-hide"
+                  : "thokiman-left-leg-content-show"
+              }
+            />
+          </div>
         </div>
-      </div>
+      </CSSTransitionGroup>
     </div>
   );
 };

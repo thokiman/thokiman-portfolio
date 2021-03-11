@@ -4,7 +4,11 @@ import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
 import { toggleDropdownHidden } from "../../redux/about/about.actions";
-import { selectIsDropdownHidden } from "../../redux/about/about.selectors";
+import {
+  selectAboutRoute,
+  selectIsDropdownHidden,
+  selectTimelineCareerRoute,
+} from "../../redux/about/about.selectors";
 import AboutDropdownOptions from "../about-dropdown-options/about-dropdown-options.component";
 import { ReactComponent as ThokimanHeadColor } from "../../assets/collections-icon/thokiman-icon/logo/color/thokiman_head_color.svg";
 import "./about-dropdown-bar.styles.scss";
@@ -12,6 +16,8 @@ import "./about-dropdown-bar.styles.scss";
 const AboutDropdownBar = ({
   isDropdownHidden,
   toggleDropdownHidden,
+  aboutRoute,
+  timelineCareerRoute,
   location: { pathname },
 }) => {
   return (
@@ -23,10 +29,12 @@ const AboutDropdownBar = ({
       </div>
       <div className="dropdown-content">
         <Link
-          to="/about"
+          to={aboutRoute}
           className={
             pathname.match(
-              RegExp(/(\/about\/(skill|education|project|summary))|\/about$/)
+              RegExp(
+                `(${aboutRoute}/(skill|education|project|summary))|${aboutRoute}$`
+              )
             )
               ? "dropdown-link-container-active"
               : "dropdown-link-container"
@@ -49,9 +57,9 @@ const AboutDropdownBar = ({
       <div className="break-line"></div>
       <div className="dropdown-content">
         <Link
-          to="/about/timelinecareer"
+          to={`${aboutRoute}${timelineCareerRoute}`}
           className={
-            pathname.match(RegExp(/\/about\/timelinecareer$/))
+            pathname.match(RegExp(`${aboutRoute}${timelineCareerRoute}$`))
               ? "dropdown-link-container-active"
               : "dropdown-link-container"
           }
@@ -72,6 +80,8 @@ const AboutDropdownBar = ({
 
 const mapStateToProps = createStructuredSelector({
   isDropdownHidden: selectIsDropdownHidden,
+  aboutRoute: selectAboutRoute,
+  timelineCareerRoute: selectTimelineCareerRoute,
 });
 const mapDispatchToProps = (dispatch) => ({
   toggleDropdownHidden: () => dispatch(toggleDropdownHidden()),

@@ -17,11 +17,12 @@ import {
   selectPhotographyBwRoute,
   selectPhotographyColorItems,
   selectPhotographyColorRoute,
+  selectPortfolioRoute,
 } from "../../redux/collection/collection.selectors";
 import "./portfolio.styles.scss";
 
 const Portfolio = ({
-  match: { url },
+  portfolioRoute,
   allItems,
   brandItems,
   brandRoute,
@@ -37,29 +38,30 @@ const Portfolio = ({
       <PortfolioHeader />
       <Route
         exact
-        path={`${url}`}
+        path={portfolioRoute}
         render={() => <PortfolioContainer items={allItems} />}
       />
       <Route
-        path={`${url}${brandRoute}`}
+        path={brandRoute}
         render={() => <PortfolioContainer items={brandItems} />}
       />
       <Route
-        path={`${url}${digitalArtRoute}`}
+        path={digitalArtRoute}
         render={() => <PortfolioContainer items={digitalArtItems} />}
       />
       <Route
-        path={`${url}${photographyBwRoute}`}
+        path={photographyBwRoute}
         render={() => <PortfolioContainer items={photographyBwItems} />}
       />
       <Route
-        path={`${url}${photographyColorRoute}`}
+        path={photographyColorRoute}
         render={() => <PortfolioContainer items={photographyColorItems} />}
       />
     </div>
   );
 };
 const mapStateToProps = createStructuredSelector({
+  portfolioRoute: selectPortfolioRoute,
   allItems: selectAllItems,
   brandItems: selectBrandItems,
   brandRoute: selectBrandRoute,
@@ -71,4 +73,4 @@ const mapStateToProps = createStructuredSelector({
   photographyColorRoute: selectPhotographyColorRoute,
 });
 
-export default PageShell(connect(mapStateToProps)(Portfolio));
+export default connect(mapStateToProps)(PageShell(Portfolio));

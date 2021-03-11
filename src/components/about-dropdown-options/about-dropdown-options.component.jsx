@@ -1,16 +1,32 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 
 import "./about-dropdown-options.styles.scss";
+import {
+  selectEducationRoute,
+  selectProjectRoute,
+  selectSkillRoute,
+  selectSummaryRoute,
+  selectTimelineCareerRoute,
+} from "../../redux/about/about.selectors";
 
-const AboutDropdownOptions = ({ location: { pathname } }) => {
+const AboutDropdownOptions = ({
+  location: { pathname },
+  skillRoute,
+  summaryRoute,
+  educationRoute,
+  projectRoute,
+  timelineCareerRoute,
+}) => {
   return (
     <div className="dropdown-options">
       <div className="dropdown-option">
         <Link
-          to="/about/skill"
+          to={skillRoute}
           className={
-            pathname.match(RegExp(/\/about\/skill$/))
+            pathname.match(RegExp(`${skillRoute}$`))
               ? "dropdown-link-option-active"
               : "dropdown-link-option"
           }
@@ -20,9 +36,9 @@ const AboutDropdownOptions = ({ location: { pathname } }) => {
       </div>
       <div className="dropdown-option">
         <Link
-          to="/about/education"
+          to={educationRoute}
           className={
-            pathname.match(RegExp(/\/about\/education$/))
+            pathname.match(RegExp(`${educationRoute}$`))
               ? "dropdown-link-option-active"
               : "dropdown-link-option"
           }
@@ -32,9 +48,9 @@ const AboutDropdownOptions = ({ location: { pathname } }) => {
       </div>
       <div className="dropdown-option">
         <Link
-          to="/about/project"
+          to={projectRoute}
           className={
-            pathname.match(RegExp(/\/about\/project$/))
+            pathname.match(RegExp(`${projectRoute}$`))
               ? "dropdown-link-option-active"
               : "dropdown-link-option"
           }
@@ -44,9 +60,9 @@ const AboutDropdownOptions = ({ location: { pathname } }) => {
       </div>
       <div className="dropdown-option">
         <Link
-          to="/about/summary"
+          to={summaryRoute}
           className={
-            pathname.match(RegExp(/\/about\/summary$/))
+            pathname.match(RegExp(`${summaryRoute}$`))
               ? "dropdown-link-option-active"
               : "dropdown-link-option"
           }
@@ -58,4 +74,11 @@ const AboutDropdownOptions = ({ location: { pathname } }) => {
   );
 };
 
-export default withRouter(AboutDropdownOptions);
+const mapStateToProps = createStructuredSelector({
+  skillRoute: selectSkillRoute,
+  summaryRoute: selectSummaryRoute,
+  educationRoute: selectEducationRoute,
+  projectRoute: selectProjectRoute,
+  timelineCareerRoute: selectTimelineCareerRoute,
+});
+export default withRouter(connect(mapStateToProps)(AboutDropdownOptions));
