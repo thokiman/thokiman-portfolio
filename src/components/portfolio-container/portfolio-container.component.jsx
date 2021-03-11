@@ -21,6 +21,7 @@ const PortfolioContainer = ({ items }) => {
       setHasMore(false);
       return null;
     }
+
     setImages([...collectedImages, ...items.slice(count, count + countImages)]);
     setCount(count + countImages);
   };
