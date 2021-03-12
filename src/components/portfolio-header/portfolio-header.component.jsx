@@ -18,7 +18,6 @@ import "./portfolio-header.styles.scss";
 
 const PortfolioHeader = ({
   location: { pathname },
-  match: { url },
   portfolioRoute,
   brandRoute,
   brandTitle,

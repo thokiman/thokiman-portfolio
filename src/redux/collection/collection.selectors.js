@@ -1,6 +1,17 @@
 import { createSelector } from "reselect";
 
+const selectCollection = (state) => state.collection;
 const selectAllCollection = (state) => state.collection.collection;
+
+export const selectIsLoadingCollectionList = createSelector(
+  [selectCollection],
+  (collection) => collection.isLoading
+);
+
+export const selectCollectionList = createSelector(
+  [selectCollection],
+  (collection) => collection.collectionList
+);
 
 export const selectAllItems = createSelector(
   [selectAllCollection],
