@@ -4,6 +4,7 @@ import { GiDiamondsSmile } from "react-icons/gi";
 import { RiMailSendFill } from "react-icons/ri";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
+import { bindActionCreators } from "redux";
 
 import { toTitleCase } from "../../utils/contact.component.utils";
 import FormInput from "../form-input/form-input.component";
@@ -11,8 +12,6 @@ import FormInputPhoneNumber from "../form-input-phone-number/form-input-phone-nu
 import FormInputSelect from "../form-select/form-select.component";
 import FormTextArea from "../form-text-area/form-text-area.component";
 import FormButton from "../form-button/form-button.component";
-import "./contact-form-container.styles.scss";
-import { createUserForm } from "../../utils/firebase/firebase.utils";
 import {
   selectIsButtonClickContact,
   selectIsTypeClickContact,
@@ -21,7 +20,9 @@ import {
   toggleSubmitButtonClick,
   toggleTypeFillFormClick,
   toggleTypeSubmitFormClick,
+  postFormContactStart,
 } from "../../redux/contact/contact.actions";
+import "./contact-form-container.styles.scss";
 
 const ContactForm = ({
   isTypeClick,
@@ -29,6 +30,9 @@ const ContactForm = ({
   toggleSubmitButtonClick,
   toggleTypeFillFormClick,
   toggleTypeSubmitFormClick,
+  postFormContactStart,
+  formData,
+  isPosted,
 }) => {
   const [form, setForm] = useState({
     name: "",
@@ -61,7 +65,8 @@ const ContactForm = ({
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    createUserForm(form);
+    postFormContactStart(form);
+
     setForm({
       name: "",
       email: "",
@@ -173,10 +178,15 @@ const mapStateToProps = createStructuredSelector({
   isButtonClick: selectIsButtonClickContact,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  toggleSubmitButtonClick: () => dispatch(toggleSubmitButtonClick()),
-  toggleTypeFillFormClick: () => dispatch(toggleTypeFillFormClick()),
-  toggleTypeSubmitFormClick: () => dispatch(toggleTypeSubmitFormClick()),
-});
+const mapDispatchToProps = (dispatch) =>
+  bindActionCreators(
+    {
+      toggleSubmitButtonClick: toggleSubmitButtonClick,
+      toggleTypeFillFormClick: toggleTypeFillFormClick,
+      toggleTypeSubmitFormClick: toggleTypeSubmitFormClick,
+      postFormContactStart: postFormContactStart,
+    },
+    dispatch
+  );
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContactForm);

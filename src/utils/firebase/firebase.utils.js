@@ -13,33 +13,6 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-export const createUserForm = async (userForm) => {
-  const collectionRef = firestore.collection("users");
-  try {
-    userForm["createdAt"] = new Date();
-    const { id } = await collectionRef.add(userForm);
-    const documentRef = collectionRef.doc(id);
-    const documentSnapshot = await documentRef.get();
-    const { message, type } = documentSnapshot.data();
-
-    const previousMessageRef = await collectionRef
-      .where("message", "==", `${message}`)
-      .where("type", "==", `${type}`)
-      .get();
-    const previousMessageSnapshot = previousMessageRef.docs;
-
-    if (previousMessageSnapshot.length > 1) {
-      for (let { id } of previousMessageSnapshot.slice(1)) {
-        await collectionRef.doc(id).delete();
-      }
-    } else {
-      return documentSnapshot.data();
-    }
-  } catch (e) {
-    console.log("failed to save data", e);
-  }
-};
-
 export const firestore = firebase.firestore();
 
 export default firebase;
