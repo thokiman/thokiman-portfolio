@@ -1,29 +1,31 @@
 import React from "react";
-import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 
-import "./form-input.styles.scss";
+import {
+  FormInputGroup,
+  FormInputCheckerContainer,
+  FormInputCheckerIconTrue,
+  FormInputCheckerIconFalse,
+  FormInputElement,
+  FormLabelElement,
+} from "./form-input.styles";
 
 const FormInput = ({ handleChange, label, ...props }) => {
   return (
-    <div className="group">
+    <FormInputGroup>
       {
-        <span className="checker-area-code">
+        <FormInputCheckerContainer>
           {props.value.length ? (
-            <FaCheckCircle className="checker-icon" />
+            <FormInputCheckerIconTrue />
           ) : (
-            <FaTimesCircle className="checker-icon" />
+            <FormInputCheckerIconFalse />
           )}
-        </span>
+        </FormInputCheckerContainer>
       }
-      <input className="form-input" onChange={handleChange} {...props} />
+      <FormInputElement onChange={handleChange} {...props} />
       {label ? (
-        <label
-          className={`form-input-label${props.value.length ? " shrink" : ""}`}
-        >
-          {label}
-        </label>
+        <FormLabelElement value={props.value}>{label}</FormLabelElement>
       ) : null}
-    </div>
+    </FormInputGroup>
   );
 };
 

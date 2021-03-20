@@ -14,7 +14,20 @@ import {
 import { toggleVibrate, toggleDownload } from "../../redux/about/about.actions";
 import { ReactComponent as ThokimanExcitedFace } from "../../assets/collections-icon/thokiman-icon/collections/excited_face.svg";
 import { ReactComponent as ThokimanNormalFace } from "../../assets/collections-icon/thokiman-icon/collections/normal_face.svg";
-import "./about-content-summary.styles.scss";
+import {
+  ThokimanExcitedFaceIcon,
+  ThokimanNormalFaceIcon,
+  AboutDownloadLink,
+  AboutDownloadText,
+  AboutSummaryContainer,
+  AboutSummaryTextFour,
+  AboutSummaryTextOne,
+  AboutSummaryTextThree,
+  AboutSummaryTextTwo,
+  AboutSummaryTitle,
+  AboutThankYouText,
+  SummaryContainer,
+} from "./about-content-summary.styles";
 
 const AboutSummary = ({
   longDescription: { p1, p2, p3, p4 },
@@ -25,47 +38,35 @@ const AboutSummary = ({
   toggleVibrate,
 }) => {
   return (
-    <div className="summary-container">
-      <div className="about-summary-container">
-        <ThokimanNormalFace className="thokiman-normal-face" />
-        <div className="about-summary-title">
+    <SummaryContainer>
+      <AboutSummaryContainer>
+        <ThokimanNormalFaceIcon />
+        <AboutSummaryTitle>
           Summary of Thomas Santosa A.K.A Thokiman
-        </div>
-        <p className="about-summary-text-1">{p1}</p>
-        <p className="about-summary-text-2">{p2}</p>
-        <p className="about-summary-text-3">{p3}</p>
-        <p className="about-summary-text-4">{p4}</p>
-        <Link
-          to={`${iconPath}`}
-          download
-          target="_blank"
-          className="download-link"
-        >
-          <div
-            className="download-text"
+        </AboutSummaryTitle>
+        <AboutSummaryTextOne>{p1}</AboutSummaryTextOne>
+        <AboutSummaryTextTwo>{p2}</AboutSummaryTextTwo>
+        <AboutSummaryTextThree>{p3}</AboutSummaryTextThree>
+        <AboutSummaryTextFour>{p4}</AboutSummaryTextFour>
+        <AboutDownloadLink to={`${iconPath}`} download target="_blank">
+          <AboutDownloadText
             onMouseEnter={() => toggleVibrate()}
             onMouseLeave={() => toggleVibrate()}
             onClick={() => toggleDownload()}
           >
             Download CV
-          </div>
+          </AboutDownloadText>
           {isDownloadClick ? (
-            <div className="thankyou-text">
+            <AboutThankYouText>
               Thanks <GiSharpSmile /> <ImGrin /> <GiSharpSmile />
-            </div>
+            </AboutThankYouText>
           ) : (
             ""
           )}
-          <ThokimanExcitedFace
-            className={
-              isVibrate
-                ? "thokiman-excited-face-vibrate"
-                : "thokiman-excited-face"
-            }
-          />
-        </Link>
-      </div>
-    </div>
+          <ThokimanExcitedFaceIcon $isvibrate={isVibrate} />
+        </AboutDownloadLink>
+      </AboutSummaryContainer>
+    </SummaryContainer>
   );
 };
 

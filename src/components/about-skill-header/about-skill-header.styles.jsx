@@ -1,0 +1,61 @@
+import { Link } from "react-router-dom";
+import styled, { css, keyframes } from "styled-components";
+
+export const AboutHeaderSkillContainer = styled.div`
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 10%;
+  width: 60vw;
+  padding: 15px;
+  margin-bottom: 10px;
+`;
+
+const AboutTextBoxStyles = css`
+  text-decoration: none;
+  padding: 5px;
+  margin: 0 5px;
+  color: #74c6d4;
+  font-family: futura-book;
+  font-size: 20px;
+  letter-spacing: 0.03em;
+`;
+const AboutTextBoxActive = css`
+  ${AboutTextBoxStyles}
+  cursor: default;
+  transition: all 0.7s linear;
+  box-shadow: rgb(116, 198, 212) 0px 20px 21px -9px;
+`;
+const aboutTextBoxHover = keyframes`
+    from{
+      opacity:0
+    }
+    to{
+      opacity:1
+    }
+`;
+const AboutTextBoxHide = css`
+  ${AboutTextBoxStyles}
+  transition: all 0.7s linear;
+   &:hover {
+    
+           transition: all 0.7s linear;
+            box-shadow: rgb(116, 198, 212) 0px 20px 21px -9px;
+            animation: ${aboutTextBoxHover} 0.5s ease-in-out both;
+            
+`;
+
+const getAboutTextBox = ({ $matchpath }) => {
+  if ($matchpath) {
+    return AboutTextBoxActive;
+  }
+  return AboutTextBoxHide;
+};
+
+export const AboutTextBox = styled(Link)`
+  ${getAboutTextBox}
+`;
+
+AboutHeaderSkillContainer.displayName = "AboutHeaderSkillContainer";
+AboutTextBox.displayName = "AboutTextBox";

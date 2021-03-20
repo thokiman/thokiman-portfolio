@@ -9,12 +9,12 @@ import {
   selectIsYearCurrentClick,
 } from "../../redux/about/about.selectors";
 import TimelineCareerLink from "../timeline-career-link/timeline-career-link.component";
-import "./timeline-career-upper.styles.scss";
 import {
   toggleYear2016Click,
   toggleYear2018Click,
   toggleYearCurrentClick,
 } from "../../redux/about/about.actions";
+import { UpperTimelineHeaderContainer } from "./timeline-career-upper.styles";
 
 const TimelineCareerUpper = ({
   isYear2016Click,
@@ -25,7 +25,7 @@ const TimelineCareerUpper = ({
   toggleYearCurrentClick,
 }) => {
   return (
-    <div className="upper-timeline-header-container">
+    <UpperTimelineHeaderContainer>
       <TimelineCareerLink
         isClick={isYear2016Click}
         yearClick={toggleYear2016Click}
@@ -47,7 +47,7 @@ const TimelineCareerUpper = ({
         TimelineIcon={GiGasMask}
         year="Today"
       />
-    </div>
+    </UpperTimelineHeaderContainer>
   );
 };
 

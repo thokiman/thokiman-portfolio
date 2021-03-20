@@ -7,5 +7,7 @@
 			"path": "../../udemy/reactdev/crwn-clothing"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "thomas_portfolio"
+	}
 }

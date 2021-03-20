@@ -1,24 +1,26 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-import "./service-url-icon-content.styles.scss";
+import {
+  ServiceUrlIcon,
+  ServiceUrlIconContainer,
+  ServiceUrlIconItem,
+} from "./service-url-icon-content.styles";
 
 const ServiceUrlIconContent = ({ items }) => {
   return (
-    <div className="service-url-icon">
+    <ServiceUrlIcon>
       {items.map(({ id, linkUrl, iconPath: { field, iconPath } }) => {
         return (
-          <Link
+          <ServiceUrlIconContainer
             key={id}
             to={{ pathname: `${linkUrl}` }}
             target="_blank"
-            className="service-url-icon-container"
           >
-            <img src={iconPath} alt={field} className="service-url-icon-item" />
-          </Link>
+            <ServiceUrlIconItem src={iconPath} alt={field} />
+          </ServiceUrlIconContainer>
         );
       })}
-    </div>
+    </ServiceUrlIcon>
   );
 };
 

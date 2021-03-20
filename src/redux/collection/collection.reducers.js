@@ -15,7 +15,6 @@ const collectionReducer = (state = INITIAL_STATE, action) => {
         isLoading: true,
       };
     case CollectionActionTypes.FETCH_COLLECTION_LIST_SUCCESS:
-      console.log("fetch colList success", action.payload);
       return {
         ...state,
         collectionList: action.payload,

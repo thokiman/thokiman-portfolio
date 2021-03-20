@@ -1,5 +1,4 @@
 import { all, call, put, takeLatest } from "redux-saga/effects";
-import * as mbxGeocoding from "@mapbox/mapbox-sdk/services/geocoding";
 
 import ContactActionTypes from "./contact.types";
 import {

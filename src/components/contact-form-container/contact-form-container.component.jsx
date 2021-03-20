@@ -8,7 +8,7 @@ import { bindActionCreators } from "redux";
 
 import { toTitleCase } from "../../utils/contact.component.utils";
 import FormInput from "../form-input/form-input.component";
-import FormInputPhoneNumber from "../form-input-phone-number/form-input-phone-number.component";
+import FormInputTel from "../form-input-tel/form-input-tel.component";
 import FormInputSelect from "../form-select/form-select.component";
 import FormTextArea from "../form-text-area/form-text-area.component";
 import FormButton from "../form-button/form-button.component";
@@ -22,7 +22,13 @@ import {
   toggleTypeSubmitFormClick,
   postFormContactStart,
 } from "../../redux/contact/contact.actions";
-import "./contact-form-container.styles.scss";
+import {
+  ButtonIcon,
+  ContactFormContainer,
+  ContactFormGroup,
+  ContactFormHead,
+  ContactFormSubhead,
+} from "./contact-form-container.styles";
 
 const ContactForm = ({
   isTypeClick,
@@ -31,8 +37,6 @@ const ContactForm = ({
   toggleTypeFillFormClick,
   toggleTypeSubmitFormClick,
   postFormContactStart,
-  formData,
-  isPosted,
 }) => {
   const [form, setForm] = useState({
     name: "",
@@ -82,13 +86,13 @@ const ContactForm = ({
   };
 
   return (
-    <div className="contact-form-container">
-      <div className={`contact-form-group${isTypeClick ? " active" : ""}`}>
-        <div className="contact-form-head">General Inquiries</div>
-        <div className="contact-form-subhead">
+    <ContactFormContainer>
+      <ContactFormGroup $istypeclick={isTypeClick}>
+        <ContactFormHead>General Inquiries</ContactFormHead>
+        <ContactFormSubhead>
           Interested in working together ? Tell me about your company... Happy
           to help <FaPeace /> <FaRegHandPeace />
-        </div>
+        </ContactFormSubhead>
         <form onSubmit={handleSubmit}>
           <FormInput
             handleChange={handleItemChange}
@@ -122,22 +126,27 @@ const ContactForm = ({
             label="Country"
             required
           />
-          <FormInputPhoneNumber
+          <FormInputTel
+            type="tel"
             handleChange={handleItemChange}
-            nameAreaCode="area"
-            valueAreaCode={area}
-            patternAreaCode="\+[0-9]{2,3}"
-            labelAreaNumber="Country Code | +xx | +xxx"
-            maxLengthAreaCode={4}
-            minLengthAreaCode={3}
-            namePhoneNumber="phone"
-            valuePhoneNumber={phone}
-            patternPhoneNumber="[0-9]{7,13}"
-            labelPhoneNumber="Phone Number | xxxxxxxxx"
-            maxLengthPhoneNumber={13}
-            minLengthPhoneNumber={7}
-            required
+            name="area"
+            value={area}
+            pattern="\+[0-9]{2,3}$"
+            label="Country Code | +xx | +xxx"
+            maxLength="4"
+            minLength="3"
           />
+          <FormInputTel
+            type="tel"
+            handleChange={handleItemChange}
+            name="phone"
+            value={phone}
+            pattern="^[0-9]{7,13}$"
+            label="Phone Number | xxxxxxxxx"
+            maxLength="13"
+            minLength="7"
+          />
+
           <FormInputSelect
             handleType={toggleTypeFillFormClick}
             handleClick={handleItemChange}
@@ -156,20 +165,20 @@ const ContactForm = ({
           <FormButton type="submit">
             {isButtonClick &&
             !type &&
-            !area.match(RegExp(/\+[0-9]{2,3}/)) &&
-            !phone.match(RegExp(/[0-9]{7,13}/)) ? (
-              <span className="button-icon">
+            !area.match(RegExp(/\+[0-9]{2,3}$/)) &&
+            !phone.match(RegExp(/^[0-9]{7,13}$/)) ? (
+              <ButtonIcon>
                 <GiDiamondsSmile /> Thanks
-              </span>
+              </ButtonIcon>
             ) : (
-              <span className="button-icon">
+              <ButtonIcon>
                 <RiMailSendFill /> Send
-              </span>
+              </ButtonIcon>
             )}
           </FormButton>
         </form>
-      </div>
-    </div>
+      </ContactFormGroup>
+    </ContactFormContainer>
   );
 };
 

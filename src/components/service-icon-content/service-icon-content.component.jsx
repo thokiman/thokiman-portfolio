@@ -1,18 +1,22 @@
 import React from "react";
 
-import "./service-icon-content.styles.scss";
+import {
+  ServiceIcon,
+  ServiceIconContainer,
+  ServiceIconItem,
+} from "./service-icon.styles";
 
 const ServiceIconContent = ({ items }) => {
   return (
-    <div className="service-icon">
+    <ServiceIcon>
       {items.map(({ id, field, iconPath }) => {
         return (
-          <div key={id} className="service-icon-container">
-            <img src={iconPath} alt={field} className="service-icon-item" />
-          </div>
+          <ServiceIconContainer key={id}>
+            <ServiceIconItem src={iconPath} alt={field} />
+          </ServiceIconContainer>
         );
       })}
-    </div>
+    </ServiceIcon>
   );
 };
 

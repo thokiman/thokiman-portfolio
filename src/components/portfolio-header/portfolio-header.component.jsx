@@ -14,7 +14,10 @@ import {
   selectPhotographyColorTitle,
   selectPortfolioRoute,
 } from "../../redux/collection/collection.selectors";
-import "./portfolio-header.styles.scss";
+import {
+  PortfolioHeaderOptions,
+  PortfolioHeaderOption,
+} from "./portfolio-header.styles";
 
 const PortfolioHeader = ({
   location: { pathname },
@@ -29,44 +32,38 @@ const PortfolioHeader = ({
   photographyColorRoute,
 }) => {
   return (
-    <div className="options">
-      <Link
+    <PortfolioHeaderOptions className="options">
+      <PortfolioHeaderOption
         to={portfolioRoute}
-        className={
-          pathname.match(`${portfolioRoute}$`) ? "option-active" : "option"
-        }
+        $matchpath={!!pathname.match(`${portfolioRoute}$`)}
       >
         All
-      </Link>
-      <Link
+      </PortfolioHeaderOption>
+      <PortfolioHeaderOption
         to={brandRoute}
-        className={pathname.match(brandRoute) ? "option-active" : "option"}
+        $matchpath={!!pathname.match(brandRoute)}
       >
         {`${brandTitle}`}
-      </Link>
-      <Link
+      </PortfolioHeaderOption>
+      <PortfolioHeaderOption
         to={digitalArtRoute}
-        className={pathname.match(digitalArtRoute) ? "option-active" : "option"}
+        $matchpath={!!pathname.match(digitalArtRoute)}
       >
         {`${digitalArtTitle}`}
-      </Link>
-      <Link
+      </PortfolioHeaderOption>
+      <PortfolioHeaderOption
         to={photographyBwRoute}
-        className={
-          pathname.match(photographyBwRoute) ? "option-active" : "option"
-        }
+        $matchpath={!!pathname.match(photographyBwRoute)}
       >
         {photographyBwTitle}
-      </Link>
-      <Link
+      </PortfolioHeaderOption>
+      <PortfolioHeaderOption
         to={photographyColorRoute}
-        className={
-          pathname.match(photographyColorRoute) ? "option-active" : "option"
-        }
+        $matchpath={!!pathname.match(photographyColorRoute)}
       >
         {`${photographyColorTitle}`}
-      </Link>
-    </div>
+      </PortfolioHeaderOption>
+    </PortfolioHeaderOptions>
   );
 };
 

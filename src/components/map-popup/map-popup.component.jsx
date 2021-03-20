@@ -1,10 +1,11 @@
 import React from "react";
 
-import "./map-popup.styles.scss";
+import { MapPopupTitle } from "./map-popup.styles";
+
 const MapPopUp = ({ placeName }) => {
   return (
-    <div className="pop-up">
-      <div className="pop-up-title">Hello, I'm Thokiman.</div>
+    <div>
+      <MapPopupTitle>Hello, I'm Thokiman.</MapPopupTitle>
       Now, I live in <br />
       {placeName}
     </div>

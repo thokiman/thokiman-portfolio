@@ -1,12 +1,12 @@
 import React from "react";
 
-import "./form-button.style.scss";
+import { FormButtonContainer } from "./form-button.styles";
 
 export const FormButton = ({ children, ...props }) => {
   return (
-    <button className="form-button" type="button" {...props}>
+    <FormButtonContainer type="button" {...props}>
       {children}
-    </button>
+    </FormButtonContainer>
   );
 };
 

@@ -12,7 +12,7 @@ import {
   selectIsYear2019Click,
 } from "../../redux/about/about.selectors";
 import TimelineCareerLink from "../timeline-career-link/timeline-career-link.component";
-import "./timeline-career-below.styles.scss";
+import { BelowTimelineHeaderContainer } from "./timeline-career-below.styles";
 
 const TimelineCareerBelow = ({
   isYear2017Click,
@@ -21,7 +21,7 @@ const TimelineCareerBelow = ({
   toggleYear2019Click,
 }) => {
   return (
-    <div className="below-timeline-header-container">
+    <BelowTimelineHeaderContainer>
       <TimelineCareerLink
         isClick={isYear2017Click}
         yearClick={toggleYear2017Click}
@@ -36,7 +36,7 @@ const TimelineCareerBelow = ({
         placement="below"
         year="2019"
       />
-    </div>
+    </BelowTimelineHeaderContainer>
   );
 };
 

@@ -13,7 +13,7 @@ import AboutEducationBachelor from "../about-education-bachelor/about-education-
 import AboutEducationExperience from "../about-education-experience/about-education-experience.component";
 import AboutEducationCourse from "../about-education-course/about-education-course.component";
 import AboutEducationPersonality from "../about-education-personality/about-education-personality.component";
-import "./about-content-education.styles.scss";
+import { EducationContainer } from "./about-content-education.styles";
 
 const AboutEducation = ({
   lastBachelor,
@@ -22,7 +22,7 @@ const AboutEducation = ({
   personality,
 }) => {
   return (
-    <div className="education-container">
+    <EducationContainer>
       <CSSTransitionGroup
         transitionAppear={true}
         transitionAppearTimeout={800}
@@ -35,7 +35,7 @@ const AboutEducation = ({
         <AboutEducationCourse lastCourse={lastCourses} />
         <AboutEducationPersonality personality={personality} />
       </CSSTransitionGroup>
-    </div>
+    </EducationContainer>
   );
 };
 

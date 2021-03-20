@@ -13,7 +13,7 @@ import SkillHeader from "../about-skill-header/about-skill-header.component";
 import VisualArtSkill from "../about-skill-visual-art/about-skill-visual-art.component";
 import EngineerSkill from "../about-skill-engineer/about-skill-engineer.component";
 import TechnologySkill from "../about-skill-technology/about-skill-technology.component";
-import "./about-content-skill.styles.scss";
+import { SkillContainer } from "./about-content-skill.styles";
 
 const AboutSkill = ({
   match: { url },
@@ -22,7 +22,7 @@ const AboutSkill = ({
   technology,
 }) => {
   return (
-    <div className="skill-container">
+    <SkillContainer className="skill-container">
       <CSSTransitionGroup
         transitionAppear={true}
         transitionAppearTimeout={800}
@@ -51,7 +51,7 @@ const AboutSkill = ({
           />
         </Switch>
       </CSSTransitionGroup>
-    </div>
+    </SkillContainer>
   );
 };
 

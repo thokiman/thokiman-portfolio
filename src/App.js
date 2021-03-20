@@ -10,15 +10,19 @@ import Portfolio from "./pages/portfolio/portfolio.component";
 import Service from "./pages/service/service.component";
 import Contact from "./pages/contact/contact.component";
 import Footer from "./components/footer/footer.component.jsx";
-import "./App.styles.scss";
+import SideBarHeader from "./components/sidebar-header/sidebar-header.component";
+
+import { GlobalStyle } from "./global.styles";
 import { selectAboutRoute } from "./redux/about/about.selectors";
 import { selectServiceRoute } from "./redux/service/service.selectors";
 import { selectPortfolioRoute } from "./redux/collection/collection.selectors";
 import { selectContactRoute } from "./redux/contact/contact.selectors";
-
 const App = ({ aboutRoute, serviceRoute, portfolioRoute, contactRoute }) => {
   return (
-    <div>
+    <>
+      <GlobalStyle />
+
+      <SideBarHeader />
       <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
@@ -28,7 +32,7 @@ const App = ({ aboutRoute, serviceRoute, portfolioRoute, contactRoute }) => {
         <Route path={contactRoute} component={Contact} />
       </Switch>
       <Footer />
-    </div>
+    </>
   );
 };
 

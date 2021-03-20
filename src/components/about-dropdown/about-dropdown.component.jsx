@@ -8,23 +8,19 @@ import {
   selectTimelineCareerRoute,
 } from "../../redux/about/about.selectors";
 import AboutDropdownBar from "../about-dropdown-content/about-dropdown-bar.component";
-import "./about-dropdown.styles.scss";
+import { AboutDropdownContainer } from "./about-dropdown.styles";
 
 const AboutDropdown = ({
   location: { pathname },
-  timelineCareerRoute,
   aboutRoute,
+  timelineCareerRoute,
 }) => {
   return (
-    <div
-      className={
-        pathname.match(`${aboutRoute}${timelineCareerRoute}`)
-          ? "left-page-container-timeline"
-          : "left-page-container"
-      }
+    <AboutDropdownContainer
+      $matchpath={!!pathname.match(`${aboutRoute}${timelineCareerRoute}`)}
     >
       <AboutDropdownBar />
-    </div>
+    </AboutDropdownContainer>
   );
 };
 

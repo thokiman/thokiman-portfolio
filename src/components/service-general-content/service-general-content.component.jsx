@@ -1,22 +1,29 @@
 import React from "react";
 
-import "./service-general-content.styles.scss";
+import {
+  ServiceDescription,
+  ServiceDescriptionContainer,
+  ServiceDescriptionItem,
+  ServiceDescriptionTitle,
+  ServiceGeneralContentContainer,
+  ServiceTitle,
+} from "./service-general-content.styles";
 
 const ServiceGeneralContent = ({ title, description }) => {
   return (
-    <div className="service-general-content">
-      <div className="service-title">{title}</div>
-      <div className="service-description">
+    <ServiceGeneralContentContainer>
+      <ServiceTitle>{title}</ServiceTitle>
+      <ServiceDescription>
         {description.map(({ id, title, description }) => {
           return (
-            <div key={id} className="service-description-container">
-              <div className="service-description-title">{title}</div>
-              <div className="service-description-item">{description}</div>
-            </div>
+            <ServiceDescriptionContainer key={id}>
+              <ServiceDescriptionTitle>{title}</ServiceDescriptionTitle>
+              <ServiceDescriptionItem>{description}</ServiceDescriptionItem>
+            </ServiceDescriptionContainer>
           );
         })}
-      </div>
-    </div>
+      </ServiceDescription>
+    </ServiceGeneralContentContainer>
   );
 };
 

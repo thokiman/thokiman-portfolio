@@ -1,11 +1,17 @@
 import React from "react";
 import { CSSTransitionGroup } from "react-transition-group";
 
-import "./visual-art-grid.styles.scss";
+import {
+  VisualArtGridContent,
+  VisualArtGridContainer,
+  VisualArtGridItem,
+  VisualArtImage,
+  VisualArtTitle,
+} from "./visual-art-grid.styles";
 
 const VisualArtGrid = ({ visualSkill: { name, itemsPoint } }) => {
   return (
-    <div className="visual-art-grid-container">
+    <VisualArtGridContainer>
       <CSSTransitionGroup
         transitionAppear={true}
         transitionAppearTimeout={800}
@@ -13,18 +19,18 @@ const VisualArtGrid = ({ visualSkill: { name, itemsPoint } }) => {
         transitionLeaveTimeout={200}
         transitionName={"slide-out"}
       >
-        <div className="visual-art-title">{name}</div>
-        <div className="visual-art-grid">
+        <VisualArtTitle>{name}</VisualArtTitle>
+        <VisualArtGridContent>
           {itemsPoint.map(({ id, field, iconPath }) => {
             return (
-              <div key={id} className="visual-art-grid-item">
-                <img src={iconPath} alt={field} className="visual-art-image" />
-              </div>
+              <VisualArtGridItem key={id}>
+                <VisualArtImage src={iconPath} alt={field} />
+              </VisualArtGridItem>
             );
           })}
-        </div>
+        </VisualArtGridContent>
       </CSSTransitionGroup>
-    </div>
+    </VisualArtGridContainer>
   );
 };
 

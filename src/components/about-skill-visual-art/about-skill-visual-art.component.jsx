@@ -2,14 +2,17 @@ import React from "react";
 import { CSSTransitionGroup } from "react-transition-group";
 
 import VisualArtGrid from "../visual-art-grid/visual-art-grid.component";
-import "./about-skil-visual-art.styles.scss";
+import {
+  AboutVisualArtContentContainer,
+  AboutVisualArtSkillContainer,
+} from "./about-skill-visual-art.styles";
 
 const VisualArtSkill = ({ skill }) => {
   const {
     itemsPoint: { digitalArt, photography },
   } = skill;
   return (
-    <div className="visual-art-skill-container">
+    <AboutVisualArtSkillContainer>
       <CSSTransitionGroup
         transitionAppear={true}
         transitionAppearTimeout={800}
@@ -17,14 +20,14 @@ const VisualArtSkill = ({ skill }) => {
         transitionLeaveTimeout={200}
         transitionName={"slide-out"}
       >
-        <div className="visual-art-content-container">
+        <AboutVisualArtContentContainer>
           <VisualArtGrid visualSkill={digitalArt} />
-        </div>
-        <div className="visual-art-content-container">
+        </AboutVisualArtContentContainer>
+        <AboutVisualArtContentContainer>
           <VisualArtGrid visualSkill={photography} />
-        </div>
+        </AboutVisualArtContentContainer>
       </CSSTransitionGroup>
-    </div>
+    </AboutVisualArtSkillContainer>
   );
 };
 

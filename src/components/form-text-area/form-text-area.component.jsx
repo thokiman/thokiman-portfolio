@@ -1,31 +1,31 @@
 import React from "react";
-import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 
-import "./form-text-area.styles.scss";
+import {
+  FormLabelElement,
+  FormTextAreaCheckerContainer,
+  FormTextAreaCheckerIconFalse,
+  FormTextAreaCheckerIconTrue,
+  FormTextAreaElement,
+  FormTextAreaGroup,
+} from "./form-text-area.styles";
 
 const FormTextArea = ({ handleChange, label, ...props }) => {
   return (
-    <div className="group-text-area">
+    <FormTextAreaGroup>
       {
-        <span className="checker-area-code">
+        <FormTextAreaCheckerContainer>
           {props.value.length ? (
-            <FaCheckCircle className="checker-icon" />
+            <FormTextAreaCheckerIconTrue />
           ) : (
-            <FaTimesCircle className="checker-icon" />
+            <FormTextAreaCheckerIconFalse />
           )}
-        </span>
+        </FormTextAreaCheckerContainer>
       }
-      <textarea className="form-text-area" onChange={handleChange} {...props} />
+      <FormTextAreaElement onChange={handleChange} {...props} />
       {label ? (
-        <label
-          className={`form-text-area-label${
-            props.value.length ? " shrink" : ""
-          }`}
-        >
-          {label}
-        </label>
+        <FormLabelElement value={props.value}>{label}</FormLabelElement>
       ) : null}
-    </div>
+    </FormTextAreaGroup>
   );
 };
 

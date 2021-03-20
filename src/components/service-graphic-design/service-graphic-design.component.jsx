@@ -1,13 +1,19 @@
 import React from "react";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 import { CSSTransitionGroup } from "react-transition-group";
 
+import {
+  RightServiceContainerGd,
+  RightServiceContentGd,
+} from "./service-graphic-design.styles";
 import ServiceGeneralContent from "../service-general-content/service-general-content.component";
 import ServiceIconContent from "../service-icon-content/service-icon-content.component";
-import "./service-graphic-design.styles.scss";
+import { selectArtService } from "../../redux/service/service.selectors";
 
 const ServiceGraphicDesign = ({ art: { title, description, items } }) => {
   return (
-    <div className="right-service-container-gd">
+    <RightServiceContainerGd>
       <CSSTransitionGroup
         transitionAppear={true}
         transitionAppearTimeout={800}
@@ -15,13 +21,15 @@ const ServiceGraphicDesign = ({ art: { title, description, items } }) => {
         transitionLeaveTimeout={200}
         transitionName={"slide-out"}
       >
-        <div className="right-service-content-gd">
+        <RightServiceContentGd>
           <ServiceGeneralContent title={title} description={description} />
           <ServiceIconContent items={items} />
-        </div>
+        </RightServiceContentGd>
       </CSSTransitionGroup>
-    </div>
+    </RightServiceContainerGd>
   );
 };
-
-export default ServiceGraphicDesign;
+const mapStateToProps = createStructuredSelector({
+  art: selectArtService,
+});
+export default connect(mapStateToProps)(ServiceGraphicDesign);

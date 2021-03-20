@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import mapboxgl, { Marker, Popup } from "mapbox-gl";
 import * as mbxGeocoding from "@mapbox/mapbox-sdk/services/geocoding";
 
-const mapBoxAccessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
+export const mapBoxAccessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
 mapboxgl.accessToken = mapBoxAccessToken;
 
 export const geoCoder = async (address) => {

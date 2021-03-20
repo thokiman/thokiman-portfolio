@@ -13,11 +13,11 @@ import AboutAchievementExperience from "../about-achievement-experience/about-ac
 import AboutCourseProject from "../about-project-course/about-project-course.component";
 import AboutExperienceProject from "../about-project-experience/about-project-experience.component";
 import AboutThesisProject from "../about-project-thesis/about-project-thesis.component";
-import "./about-content-project.styles.scss";
+import { ProjectContainer } from "./about-content-project.styles";
 
 const AboutProject = ({ thesis, courses, experiences, lastExperiences }) => {
   return (
-    <div className="project-container">
+    <ProjectContainer>
       <CSSTransitionGroup
         transitionAppear={true}
         transitionAppearTimeout={800}
@@ -30,7 +30,7 @@ const AboutProject = ({ thesis, courses, experiences, lastExperiences }) => {
         <AboutExperienceProject experience={experiences} />
         <AboutAchievementExperience lastExperience={lastExperiences} />
       </CSSTransitionGroup>
-    </div>
+    </ProjectContainer>
   );
 };
 

@@ -1,13 +1,13 @@
 import React from "react";
 
 import EngineerGrid from "../engineer-grid/engineer-grid.component";
-import "./about-skill-engineer.styles.scss";
+import { AboutEngineerSkillContainer } from "./about-skill-engineer.styles";
 
 const EngineerSkill = ({ skill: { itemsPoint } }) => {
   return (
-    <div className="engineer-skill-container">
+    <AboutEngineerSkillContainer>
       <EngineerGrid engineerSkill={itemsPoint} />
-    </div>
+    </AboutEngineerSkillContainer>
   );
 };
 

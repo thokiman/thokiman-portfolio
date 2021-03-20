@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import { CSSTransitionGroup } from "react-transition-group";
@@ -10,7 +10,14 @@ import {
   selectFullstackService,
   selectPhotoService,
 } from "../../redux/service/service.selectors";
-import "./service-header.styles.scss";
+import {
+  LeftServiceContainer,
+  DirectoryService,
+  DirectoryServiceTextEng,
+  DirectoryServiceTextFsd,
+  DirectoryServiceTextGd,
+  DirectoryServiceTextPg,
+} from "./service-header.styles";
 
 const ServiceHeader = ({
   location: { pathname },
@@ -20,7 +27,7 @@ const ServiceHeader = ({
   fullstack,
 }) => {
   return (
-    <div className="left-service-container">
+    <LeftServiceContainer>
       <CSSTransitionGroup
         transitionAppear={true}
         transitionAppearTimeout={800}
@@ -28,57 +35,41 @@ const ServiceHeader = ({
         transitionLeaveTimeout={200}
         transitionName={"slide-out"}
       >
-        <div className="directory-service">
-          <Link
+        <DirectoryService>
+          <DirectoryServiceTextEng
             to={engineer.routeName}
-            className={
-              pathname.match(RegExp(`${engineer.routeName}$`))
-                ? "directory-service-text-eng-active"
-                : "directory-service-text-eng"
-            }
+            $matchpath={!!pathname.match(RegExp(`${engineer.routeName}$`))}
           >
             engineer
-          </Link>
-          <Link
+          </DirectoryServiceTextEng>
+          <DirectoryServiceTextFsd
             to={fullstack.routeName}
-            className={
-              pathname.match(RegExp(`${fullstack.routeName}$`))
-                ? "directory-service-text-fsd-active"
-                : "directory-service-text-fsd"
-            }
+            $matchpath={!!pathname.match(RegExp(`${fullstack.routeName}$`))}
           >
             full
             <br />
             stack <br />
             developer
-          </Link>
-          <Link
+          </DirectoryServiceTextFsd>
+          <DirectoryServiceTextGd
             to={art.routeName}
-            className={
-              pathname.match(RegExp(`${art.routeName}$`))
-                ? "directory-service-text-gd-active"
-                : "directory-service-text-gd"
-            }
+            $matchpath={!!pathname.match(RegExp(`${art.routeName}$`))}
           >
             graphic
             <br />
             design
-          </Link>
-          <Link
+          </DirectoryServiceTextGd>
+          <DirectoryServiceTextPg
             to={photo.routeName}
-            className={
-              pathname.match(RegExp(`${photo.routeName}$`))
-                ? "directory-service-text-pg-active"
-                : "directory-service-text-pg"
-            }
+            $matchpath={!!pathname.match(RegExp(`${photo.routeName}$`))}
           >
             photo
             <br />
             graphy
-          </Link>
-        </div>
+          </DirectoryServiceTextPg>
+        </DirectoryService>
       </CSSTransitionGroup>
-    </div>
+    </LeftServiceContainer>
   );
 };
 

@@ -1,12 +1,20 @@
 import React from "react";
-import { Element } from "react-scroll";
 import { CSSTransitionGroup } from "react-transition-group";
 
-import "./timeline-career-item.styles.scss";
+import {
+  TimelineTextContainer,
+  TimelineCareerYearElement,
+  TimelineCareerYear,
+  TimelineCareerCompany,
+  TimelineCareerTitleType,
+  TimelineCareerDateLength,
+  TimelineCareerDescription,
+  TimelineCareerLocation,
+} from "./timeline-career-item.styles";
 
 const TimelineCareerItem = ({ beforeWorking }) => {
   return (
-    <div className="timeline-text-container">
+    <TimelineTextContainer>
       <CSSTransitionGroup
         transitionAppear={true}
         transitionAppearTimeout={800}
@@ -27,31 +35,29 @@ const TimelineCareerItem = ({ beforeWorking }) => {
             description,
           }) => {
             return (
-              <Element
-                key={id}
-                name={`${year}`}
-                className="timeline-career-year-element"
-              >
-                <div className="timeline-career-year">{year}</div>
-                <div className="timeline-career-company">{company}</div>
-                <div className="timeline-career-title-type">
+              <TimelineCareerYearElement key={id} name={`${year}`}>
+                <TimelineCareerYear>{year}</TimelineCareerYear>
+                <TimelineCareerCompany>{company}</TimelineCareerCompany>
+                <TimelineCareerTitleType>
                   {title}
                   <br />
                   {type}
-                </div>
-                <div className="timeline-career-date-length">
+                </TimelineCareerTitleType>
+                <TimelineCareerDateLength>
                   {date}
                   <br />
                   {length}
-                </div>
-                <div className="timeline-career-location">{location}</div>
-                <div className="timeline-career-description">{description}</div>
-              </Element>
+                </TimelineCareerDateLength>
+                <TimelineCareerLocation>{location}</TimelineCareerLocation>
+                <TimelineCareerDescription>
+                  {description}
+                </TimelineCareerDescription>
+              </TimelineCareerYearElement>
             );
           }
         )}
       </CSSTransitionGroup>
-    </div>
+    </TimelineTextContainer>
   );
 };
 

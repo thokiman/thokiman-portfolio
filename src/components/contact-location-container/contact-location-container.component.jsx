@@ -1,7 +1,12 @@
 import React from "react";
 import MapContent from "../map/map.component";
 
-import "./contact-location-container.styles.scss";
+import {
+  ContactLocationContainer,
+  ContactLocationInfo,
+  ContactLocationItem,
+  ContactLocationTitle,
+} from "./contact-location-container.styles";
 
 const ContactLocation = ({
   info: {
@@ -11,15 +16,15 @@ const ContactLocation = ({
   },
 }) => {
   return (
-    <div className="contact-location-container">
+    <ContactLocationContainer>
       <MapContent zoom={zoom} address={address} />
-      <div className="contact-location-info">
-        <div className="contact-location-title">Current Location</div>
-        <div className="contact-location-item">{address}</div>
-        <div className="contact-location-item">{email}</div>
-        <div className="contact-location-item">{phone}</div>
-      </div>
-    </div>
+      <ContactLocationInfo>
+        <ContactLocationTitle>Current Location</ContactLocationTitle>
+        <ContactLocationItem>{address}</ContactLocationItem>
+        <ContactLocationItem>{email}</ContactLocationItem>
+        <ContactLocationItem>{phone}</ContactLocationItem>
+      </ContactLocationInfo>
+    </ContactLocationContainer>
   );
 };
 

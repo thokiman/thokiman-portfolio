@@ -1,15 +1,17 @@
 import React from "react";
 
-import { ReactComponent as ThokimanHeadColor } from "../../assets/collections-icon/thokiman-icon/logo/color/thokiman_head_color.svg";
-import { ReactComponent as WhiteOutlineThokiman } from "../../assets/collections-icon/thokiman-icon/logo/outline/thokiman_head_logo_cream.svg";
-import "./service-content.styles.scss";
+import {
+  RightServiceContainer,
+  ThokimanHeadColor,
+  ThokimanHeadOutlineCream,
+} from "./service-content.styles";
 
 const ServiceHomeContent = () => {
   return (
-    <div className="right-service-container">
-      <ThokimanHeadColor className="thokiman-head-color" />
-      <WhiteOutlineThokiman className="thokiman-head-outline-cream" />
-    </div>
+    <RightServiceContainer>
+      <ThokimanHeadColor />
+      <ThokimanHeadOutlineCream />
+    </RightServiceContainer>
   );
 };
 

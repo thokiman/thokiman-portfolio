@@ -2,11 +2,10 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
-
 import PageShell from "../../components/page-shell/page-shell.component";
-import PortfolioContainer from "../../components/portfolio-container/portfolio-container.component";
+import PortfolioContentContainer from "../../components/portfolio-content/portfolio-content-container";
 import PortfolioHeader from "../../components/portfolio-header/portfolio-header.component";
-
+import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 import {
   selectAllItems,
   selectBrandItems,
@@ -19,7 +18,7 @@ import {
   selectPhotographyColorRoute,
   selectPortfolioRoute,
 } from "../../redux/collection/collection.selectors";
-import "./portfolio.styles.scss";
+import { PortfolioContainer } from "./portfolio.styles";
 
 const Portfolio = ({
   portfolioRoute,
@@ -32,32 +31,35 @@ const Portfolio = ({
   photographyBwRoute,
   photographyColorItems,
   photographyColorRoute,
+  isSideBarHidden,
 }) => {
   return (
-    <div className="collections-container">
+    <PortfolioContainer $issidebarhidden={isSideBarHidden}>
       <PortfolioHeader />
       <Route
         exact
         path={portfolioRoute}
-        render={() => <PortfolioContainer items={allItems} />}
+        render={() => <PortfolioContentContainer items={allItems} />}
       />
       <Route
         path={brandRoute}
-        render={() => <PortfolioContainer items={brandItems} />}
+        render={() => <PortfolioContentContainer items={brandItems} />}
       />
       <Route
         path={digitalArtRoute}
-        render={() => <PortfolioContainer items={digitalArtItems} />}
+        render={() => <PortfolioContentContainer items={digitalArtItems} />}
       />
       <Route
         path={photographyBwRoute}
-        render={() => <PortfolioContainer items={photographyBwItems} />}
+        render={() => <PortfolioContentContainer items={photographyBwItems} />}
       />
       <Route
         path={photographyColorRoute}
-        render={() => <PortfolioContainer items={photographyColorItems} />}
+        render={() => (
+          <PortfolioContentContainer items={photographyColorItems} />
+        )}
       />
-    </div>
+    </PortfolioContainer>
   );
 };
 const mapStateToProps = createStructuredSelector({
@@ -71,6 +73,7 @@ const mapStateToProps = createStructuredSelector({
   photographyBwRoute: selectPhotographyBwRoute,
   photographyColorItems: selectPhotographyColorItems,
   photographyColorRoute: selectPhotographyColorRoute,
+  isSideBarHidden: selectIsSideBarHidden,
 });
 
 export default connect(mapStateToProps)(PageShell(Portfolio));

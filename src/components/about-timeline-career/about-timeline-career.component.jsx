@@ -1,13 +1,16 @@
 import React from "react";
 import { animateScroll as scroll } from "react-scroll";
-import { FaArrowCircleUp } from "react-icons/fa";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
 import { selectCareerPath } from "../../redux/about/about.selectors";
 import TimelineCareerHeader from "../timeline-career-header/timeline-career-header.component";
 import TimelineCareerItem from "../timeline-career-item/timeline-career-item.component";
-import "./about-timeline-career.styles.scss";
+import {
+  AboutScrollToTheTop,
+  AboutTimelineCareerTitle,
+  AboutTimelineContainer,
+} from "./about-timeline-career.styles";
 
 const AboutTimelineCareer = ({
   careerPath: {
@@ -20,12 +23,12 @@ const AboutTimelineCareer = ({
   };
 
   return (
-    <div className="timeline-container">
+    <AboutTimelineContainer>
       <TimelineCareerHeader />
-      <div className="timeline-career-title">{title}</div>
+      <AboutTimelineCareerTitle>{title}</AboutTimelineCareerTitle>
       <TimelineCareerItem beforeWorking={beforeWorking} />
-      <FaArrowCircleUp className="scroll-to-the-top" onClick={scrollToTop} />
-    </div>
+      <AboutScrollToTheTop onClick={scrollToTop} />
+    </AboutTimelineContainer>
   );
 };
 

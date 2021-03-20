@@ -1,25 +1,36 @@
 import React from "react";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
-import { ReactComponent as CreamPrickInklaim } from "../../assets/collections-icon/prick-inklaim-icon/logo/prick_inklaim_logo_cream.svg";
-import { ReactComponent as WhiteOutlineThokiman } from "../../assets/collections-icon/thokiman-icon/logo/outline/thokiman_head_logo_cream.svg";
-import "./footer-contact.styles.scss";
+import {
+  FooterContainerContact,
+  FooterCreamPrickInklaim,
+  FooterWhiteOutlineThokiman,
+  ProfileFooterContainerContact,
+  ProfileFooterIconContact,
+  ProfileFooterTextContact,
+} from "./footer-contact.styles";
 
-const FooterContact = () => {
+const FooterContact = ({ isSideBarHidden }) => {
   return (
-    <div className="footer-container-contact">
-      <div className="profile-footer-container-contact">
-        <div className="profile-footer-icon-contact">
-          <CreamPrickInklaim className="footer-icon-contact" />
-          <WhiteOutlineThokiman className="footer-icon-contact" />
-        </div>
-        <div className="profile-footer-text-contact">
+    <FooterContainerContact $issidebarhidden={isSideBarHidden}>
+      <ProfileFooterContainerContact>
+        <ProfileFooterIconContact>
+          <FooterCreamPrickInklaim />
+          <FooterWhiteOutlineThokiman />
+        </ProfileFooterIconContact>
+        <ProfileFooterTextContact>
           Copyright<sup>&#9400;</sup>2021.
           <em>Allright reserved </em>| Thomas Santosa, B. Eng.
-        </div>
-      </div>
+        </ProfileFooterTextContact>
+      </ProfileFooterContainerContact>
       <br />
-    </div>
+    </FooterContainerContact>
   );
 };
+const mapStateToProps = createStructuredSelector({
+  isSideBarHidden: selectIsSideBarHidden,
+});
 
-export default FooterContact;
+export default connect(mapStateToProps)(FooterContact);

@@ -1,12 +1,21 @@
 import React from "react";
 
 import EducationGrid from "../education-grid/education-grid.component";
-import "./about-education-bachelor.styles.scss";
+import {
+  AboutEducationBachelorContent,
+  AboutEducationBachelorTitle,
+  AboutEducationBachelorAttributes,
+  AboutEducationBachelorSchool,
+  AboutEducationBachelorDegree,
+  AboutEducationBachelorGrade,
+  AboutEducationBachelorLength,
+  AboutEducationBachelorStartEndDate,
+} from "./about-education-bachelor.styles";
 
 const AboutEducationBachelor = ({ lastBachelor }) => {
   return (
-    <div className="education-bachelor-content">
-      <div className="education-bachelor-title">Bachelor</div>
+    <AboutEducationBachelorContent>
+      <AboutEducationBachelorTitle>Bachelor</AboutEducationBachelorTitle>
       {lastBachelor.map(
         ({
           id,
@@ -20,23 +29,29 @@ const AboutEducationBachelor = ({ lastBachelor }) => {
         }) => {
           return (
             <div key={id}>
-              <div className="education-bachelor-attributes">
-                <div className="education-bachelor-school">{school}</div>
-                <div className="education-bachelor-degree">{degree}</div>
-                <div className="education-bachelor-start-end-date">
+              <AboutEducationBachelorAttributes>
+                <AboutEducationBachelorSchool>
+                  {school}
+                </AboutEducationBachelorSchool>
+                <AboutEducationBachelorDegree>
+                  {degree}
+                </AboutEducationBachelorDegree>
+                <AboutEducationBachelorStartEndDate>
                   {startDate} - {endDate}
-                </div>
-                <div className="education-bachelor-length">{length}</div>
-                <div className="education-bachelor-grade">{grade}</div>
-              </div>
-              <div className="education-bachelor-images">
-                <EducationGrid imagePath={imagePath} />
-              </div>
+                </AboutEducationBachelorStartEndDate>
+                <AboutEducationBachelorLength>
+                  {length}
+                </AboutEducationBachelorLength>
+                <AboutEducationBachelorGrade>
+                  {grade}
+                </AboutEducationBachelorGrade>
+              </AboutEducationBachelorAttributes>
+              <EducationGrid imagePath={imagePath} />
             </div>
           );
         }
       )}
-    </div>
+    </AboutEducationBachelorContent>
   );
 };
 

@@ -12,7 +12,7 @@ import AboutProject from "../../components/about-content-project/about-content-p
 import AboutSummary from "../../components/about-content-summary/about-content-summary.component";
 import AboutTimelineCareer from "../../components/about-timeline-career/about-timeline-career.component";
 
-import "./about.styles.scss";
+import { AboutPage } from "./about.styles";
 import {
   selectAboutRoute,
   selectEducationRoute,
@@ -21,9 +21,9 @@ import {
   selectSummaryRoute,
   selectTimelineCareerRoute,
 } from "../../redux/about/about.selectors";
+import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
 const About = ({
-  match: { url },
   location: { pathname },
   aboutRoute,
   skillRoute,
@@ -31,14 +31,12 @@ const About = ({
   projectRoute,
   summaryRoute,
   timelineCareerRoute,
+  isSideBarHidden,
 }) => {
   return (
-    <div
-      className={
-        pathname.match(`${aboutRoute}${timelineCareerRoute}$`)
-          ? "about-container-timeline"
-          : "about-container"
-      }
+    <AboutPage
+      matchpath={!!pathname.match(`${aboutRoute}${timelineCareerRoute}$`)}
+      $issidebarhidden={isSideBarHidden}
     >
       <AboutDropdown />
       <Switch>
@@ -52,7 +50,7 @@ const About = ({
           component={AboutTimelineCareer}
         />
       </Switch>
-    </div>
+    </AboutPage>
   );
 };
 
@@ -63,6 +61,7 @@ const mapStateToProps = createStructuredSelector({
   projectRoute: selectProjectRoute,
   summaryRoute: selectSummaryRoute,
   timelineCareerRoute: selectTimelineCareerRoute,
+  isSideBarHidden: selectIsSideBarHidden,
 });
 
 export default connect(mapStateToProps)(PageShell(About));

@@ -1,20 +1,30 @@
 import React from "react";
 
-import "./about-project-experience.styles.scss";
+import {
+  AboutDescriptionExperienceProject,
+  AboutExperienceProjectAtttributes,
+  AboutExperienceProjectContainer,
+  AboutExperienceProjectTitle,
+  AboutNameExperienceProject,
+} from "./about-project-experience.styles";
 
 const AboutExperienceProject = ({ experience }) => {
   return (
-    <div className="experience-project-container">
-      <div className="experience-project-title">Experience Project</div>
+    <AboutExperienceProjectContainer>
+      <AboutExperienceProjectTitle>
+        Experience Project
+      </AboutExperienceProjectTitle>
       {experience.map(({ id, name, description }) => {
         return (
-          <div key={id} className="experience-project">
-            <div className="name-experience-project">{name}</div>
-            <div className="description-experience-project">{description}</div>
-          </div>
+          <AboutExperienceProjectAtttributes key={id}>
+            <AboutNameExperienceProject>{name}</AboutNameExperienceProject>
+            <AboutDescriptionExperienceProject>
+              {description}
+            </AboutDescriptionExperienceProject>
+          </AboutExperienceProjectAtttributes>
         );
       })}
-    </div>
+    </AboutExperienceProjectContainer>
   );
 };
 

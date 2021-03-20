@@ -1,123 +1,126 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-import { ReactComponent as WhiteOutlineThokiman } from "../../assets/collections-icon/thokiman-icon/logo/outline/thokiman_head_logo_cream.svg";
-import "./contact-info.styles.scss";
+import {
+  ContactInformationContainer,
+  ContactInformationContent,
+  ContactInformationTitle,
+  WhiteThokimanContactIcon0,
+  WhiteThokimanContactIcon1,
+  WhiteThokimanContactIcon2,
+  WhiteThokimanContactIcon3,
+  WhiteThokimanContactIcon4,
+  WhiteThokimanContactIcon5,
+  WhiteThokimanContactIcon6,
+  WhiteThokimanContactIcon7,
+  SocialContactIcon,
+  SocialContactLinkIconFacebook,
+  SocialContactLinkIconGithub,
+  SocialContactLinkIconInstagram,
+  SocialContactLinkIconLinkedin,
+  SocialContactLinkIconTwitter,
+  SocialContactLinkIconWhatsapp,
+  PhotoContactIcon,
+  PhotoContactLinkIconAdobeStock,
+  PhotoContactLinkIconEyeEm,
+  PhotoContactLinkIconShutterStock,
+} from "./contact-info.styles";
 
 const ContactInfo = ({ title, items: { socialIcon, photoIcon } }) => {
   return (
-    <div className="contact-information-container">
-      <div className="contact-information-title">{title}</div>
-      <div className="contact-information-content">
-        <WhiteOutlineThokiman className="white-thokiman-contact-icon-0" />
-        <WhiteOutlineThokiman className="white-thokiman-contact-icon-1" />
-        <WhiteOutlineThokiman className="white-thokiman-contact-icon-2" />
-        <WhiteOutlineThokiman className="white-thokiman-contact-icon-3" />
-        <WhiteOutlineThokiman className="white-thokiman-contact-icon-4" />
-        <WhiteOutlineThokiman className="white-thokiman-contact-icon-5" />
-        <WhiteOutlineThokiman className="white-thokiman-contact-icon-6" />
-        <WhiteOutlineThokiman className="white-thokiman-contact-icon-7" />
-        <Link
+    <ContactInformationContainer>
+      <ContactInformationTitle>{title}</ContactInformationTitle>
+      <ContactInformationContent>
+        <WhiteThokimanContactIcon0 />
+        <WhiteThokimanContactIcon1 />
+        <WhiteThokimanContactIcon2 />
+        <WhiteThokimanContactIcon3 />
+        <WhiteThokimanContactIcon4 />
+        <WhiteThokimanContactIcon5 />
+        <WhiteThokimanContactIcon6 />
+        <WhiteThokimanContactIcon7 />
+        <SocialContactLinkIconFacebook
           to={{ pathname: socialIcon[0].linkUrl }}
           target="_blank"
-          className={`social-contact-link-icon-${socialIcon[0].iconPath.field}`}
         >
-          <img
+          <SocialContactIcon
             src={socialIcon[0].iconPath.iconPath}
             alt={socialIcon[0].iconPath.field}
-            className="social-contact-icon"
           />
-        </Link>
-        <Link
+        </SocialContactLinkIconFacebook>
+        <SocialContactLinkIconGithub
           to={{ pathname: socialIcon[1].linkUrl }}
           target="_blank"
-          className={`social-contact-link-icon-${socialIcon[1].iconPath.field}`}
         >
-          <img
+          <SocialContactIcon
             src={socialIcon[1].iconPath.iconPath}
             alt={socialIcon[1].iconPath.field}
-            className="social-contact-icon"
           />
-        </Link>
-        <Link
+        </SocialContactLinkIconGithub>
+        <SocialContactLinkIconInstagram
           to={{ pathname: socialIcon[2].linkUrl }}
           target="_blank"
-          className={`social-contact-link-icon-${socialIcon[2].iconPath.field}`}
         >
-          <img
+          <SocialContactIcon
             src={socialIcon[2].iconPath.iconPath}
             alt={socialIcon[2].iconPath.field}
-            className="social-contact-icon"
           />
-        </Link>
-        <Link
+        </SocialContactLinkIconInstagram>
+        <SocialContactLinkIconLinkedin
           to={{ pathname: socialIcon[3].linkUrl }}
           target="_blank"
-          className={`social-contact-link-icon-${socialIcon[3].iconPath.field}`}
         >
-          <img
+          <SocialContactIcon
             src={socialIcon[3].iconPath.iconPath}
             alt={socialIcon[3].iconPath.field}
-            className="social-contact-icon"
           />
-        </Link>
-        <Link
+        </SocialContactLinkIconLinkedin>
+        <SocialContactLinkIconTwitter
           to={{ pathname: socialIcon[4].linkUrl }}
           target="_blank"
-          className={`social-contact-link-icon-${socialIcon[4].iconPath.field}`}
         >
-          <img
+          <SocialContactIcon
             src={socialIcon[4].iconPath.iconPath}
             alt={socialIcon[4].iconPath.field}
-            className="social-contact-icon"
           />
-        </Link>
-        <Link
+        </SocialContactLinkIconTwitter>
+        <SocialContactLinkIconWhatsapp
           to={{ pathname: socialIcon[5].linkUrl }}
           target="_blank"
-          className={`social-contact-link-icon-${socialIcon[5].iconPath.field}`}
         >
-          <img
+          <SocialContactIcon
             src={socialIcon[5].iconPath.iconPath}
             alt={socialIcon[5].iconPath.field}
-            className="social-contact-icon"
           />
-        </Link>
-        <Link
+        </SocialContactLinkIconWhatsapp>
+        <PhotoContactLinkIconAdobeStock
           to={{ pathname: photoIcon[0].linkUrl }}
           target="_blank"
-          className={`photo-contact-link-icon-${photoIcon[0].iconPath.field}`}
         >
-          <img
+          <PhotoContactIcon
             src={photoIcon[0].iconPath.iconPath}
             alt={photoIcon[0].iconPath.field}
-            className="photo-contact-icon"
           />
-        </Link>
-        <Link
+        </PhotoContactLinkIconAdobeStock>
+        <PhotoContactLinkIconEyeEm
           to={{ pathname: photoIcon[1].linkUrl }}
           target="_blank"
-          className={`photo-contact-link-icon-${photoIcon[1].iconPath.field}`}
         >
-          <img
+          <PhotoContactIcon
             src={photoIcon[1].iconPath.iconPath}
             alt={photoIcon[1].iconPath.field}
-            className="photo-contact-icon"
           />
-        </Link>
-        <Link
+        </PhotoContactLinkIconEyeEm>
+        <PhotoContactLinkIconShutterStock
           to={{ pathname: photoIcon[2].linkUrl }}
           target="_blank"
-          className={`photo-contact-link-icon-${photoIcon[2].iconPath.field}`}
         >
-          <img
+          <PhotoContactIcon
             src={photoIcon[2].iconPath.iconPath}
             alt={photoIcon[2].iconPath.field}
-            className="photo-contact-icon"
           />
-        </Link>
-      </div>
-    </div>
+        </PhotoContactLinkIconShutterStock>
+      </ContactInformationContent>
+    </ContactInformationContainer>
   );
 };
 

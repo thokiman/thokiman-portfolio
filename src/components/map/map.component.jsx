@@ -8,10 +8,11 @@ import {
 } from "../../utils/mapbox/mapbox.utils";
 import MarkerContent from "../map-marker/map-marker.component";
 import MapPopUp from "../map-popup/map-popup.component";
-import "./map.styles.scss";
+import { MapContainer } from "./map.styles";
 
 const MapContent = ({ address, zoom }) => {
   const mapContainerRef = useRef();
+
   useEffect(() => {
     fetchMap();
   }, []);
@@ -23,7 +24,7 @@ const MapContent = ({ address, zoom }) => {
     return unSubscribeMap;
   };
 
-  return <div ref={mapContainerRef} className="map-container" />;
+  return <MapContainer ref={mapContainerRef} className="map-container" />;
 };
 
 export default MapContent;

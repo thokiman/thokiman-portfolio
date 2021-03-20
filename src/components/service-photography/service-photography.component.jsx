@@ -1,13 +1,19 @@
 import React from "react";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 import { CSSTransitionGroup } from "react-transition-group";
 
 import ServiceUrlGeneralContent from "../service-url-general-content/service-url-general-content.component";
 import ServiceUrlIconContent from "../service-url-icon-content/service-url-icon-content.component";
-import "./service-photography.styles.scss";
+import {
+  RightServiceContainerPg,
+  RightServiceContentPg,
+} from "./service-photography.styles";
+import { selectPhotoService } from "../../redux/service/service.selectors";
 
 const ServicePhotography = ({ photo: { title, description, items } }) => {
   return (
-    <div className="right-service-container-pg">
+    <RightServiceContainerPg>
       <CSSTransitionGroup
         transitionAppear={true}
         transitionAppearTimeout={800}
@@ -15,13 +21,15 @@ const ServicePhotography = ({ photo: { title, description, items } }) => {
         transitionLeaveTimeout={200}
         transitionName={"slide-out"}
       >
-        <div className="right-service-content-pg">
+        <RightServiceContentPg>
           <ServiceUrlGeneralContent title={title} description={description} />
           <ServiceUrlIconContent items={items} />
-        </div>
+        </RightServiceContentPg>
       </CSSTransitionGroup>
-    </div>
+    </RightServiceContainerPg>
   );
 };
-
-export default ServicePhotography;
+const mapStateToProps = createStructuredSelector({
+  photo: selectPhotoService,
+});
+export default connect(mapStateToProps)(ServicePhotography);

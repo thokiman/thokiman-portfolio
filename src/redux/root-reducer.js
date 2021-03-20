@@ -6,6 +6,7 @@ import aboutReducer from "./about/about.reducers";
 import collectionReducer from "./collection/collection.reducers";
 import contactReducer from "./contact/contact.reducers";
 import serviceReducer from "./service/service.reducers";
+import headerReducer from "./header/header.reducers";
 
 const persistConfig = {
   key: "root",
@@ -18,6 +19,7 @@ const rootReducer = combineReducers({
   collection: collectionReducer,
   contact: contactReducer,
   service: serviceReducer,
+  header: headerReducer,
 });
 
 export default persistReducer(persistConfig, rootReducer);

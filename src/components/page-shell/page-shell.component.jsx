@@ -1,5 +1,6 @@
 import React from "react";
 
+import { PageContainer } from "./page-shell.styles";
 import { CSSTransitionGroup } from "react-transition-group";
 
 function PageShell(Page) {
@@ -12,7 +13,7 @@ function PageShell(Page) {
       contactRoute,
     } = props;
     return (
-      <div className="page">
+      <PageContainer>
         <CSSTransitionGroup
           transitionAppear={true}
           transitionAppearTimeout={1200}
@@ -30,7 +31,7 @@ function PageShell(Page) {
         >
           <Page {...props} />
         </CSSTransitionGroup>
-      </div>
+      </PageContainer>
     );
   }
   return PageTransition;

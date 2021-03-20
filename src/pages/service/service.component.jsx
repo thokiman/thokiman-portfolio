@@ -9,7 +9,7 @@ import ServiceHeader from "../../components/service-header/service-header.compon
 import ServiceEngineer from "../../components/service-engineer/service-engineer.component";
 import ServicePhotography from "../../components/service-photography/service-photography.component";
 import ServiceFullStackDeveloper from "../../components/service-full-stack-developer/service-full-stack-developer.component";
-import "./service.styles.scss";
+import { ServiceContainer } from "./service.styles";
 import ServiceGraphicDesign from "../../components/service-graphic-design/service-graphic-design.component";
 import {
   selectArtService,
@@ -18,35 +18,29 @@ import {
   selectPhotoService,
   selectServiceRoute,
 } from "../../redux/service/service.selectors";
-
-const Service = ({ art, photo, engineer, fullstack, serviceRoute }) => {
+import { selectIsSideBarHidden } from "../../redux/header/header.selectors.js";
+const Service = ({
+  art,
+  photo,
+  engineer,
+  fullstack,
+  serviceRoute,
+  isSideBarHidden,
+}) => {
   return (
-    <div className="service-container">
+    <ServiceContainer $issidebarhidden={isSideBarHidden}>
       <ServiceHeader />
       <Switch>
-        <Route
-          exact
-          path={serviceRoute}
-          render={() => <ServiceHomeContent />}
-        />
-        <Route
-          path={engineer.routeName}
-          render={() => <ServiceEngineer engineer={engineer} />}
-        />
+        <Route exact path={serviceRoute} component={ServiceHomeContent} />
+        <Route path={engineer.routeName} component={ServiceEngineer} />
         <Route
           path={fullstack.routeName}
-          render={() => <ServiceFullStackDeveloper fullstack={fullstack} />}
+          component={ServiceFullStackDeveloper}
         />
-        <Route
-          path={art.routeName}
-          render={() => <ServiceGraphicDesign art={art} />}
-        />
-        <Route
-          path={photo.routeName}
-          render={() => <ServicePhotography photo={photo} />}
-        />
+        <Route path={art.routeName} component={ServiceGraphicDesign} />
+        <Route path={photo.routeName} component={ServicePhotography} />
       </Switch>
-    </div>
+    </ServiceContainer>
   );
 };
 
@@ -56,6 +50,7 @@ const mapStateToProps = createStructuredSelector({
   engineer: selectEngineerService,
   fullstack: selectFullstackService,
   serviceRoute: selectServiceRoute,
+  isSideBarHidden: selectIsSideBarHidden,
 });
 
 export default connect(mapStateToProps)(PageShell(Service));

@@ -1,19 +1,24 @@
 import React from "react";
 
+import {
+  TimelineHeaderContainer,
+  SeparatedLineTimelineHeader,
+  TimelineLine,
+  TimelineOverlay,
+} from "./timeline-career-header.styles";
 import TimelineCareerUpper from "../timeline-career-upper/timeline-career-upper.component";
 import TimelineCareerBelow from "../timeline-career-below/timeline-career-below.component";
-import "./timeline-career-header.styles.scss";
 
 const TimelineCareerHeader = () => {
   return (
-    <div className="timeline-header-container">
+    <TimelineHeaderContainer>
       <TimelineCareerUpper />
-      <div className="separated-line-timeline-header" id="straigh-line">
-        <div className="overlay"></div>
-        <div className="line"></div>
-      </div>
+      <SeparatedLineTimelineHeader>
+        <TimelineOverlay />
+        <TimelineLine />
+      </SeparatedLineTimelineHeader>
       <TimelineCareerBelow />
-    </div>
+    </TimelineHeaderContainer>
   );
 };
 

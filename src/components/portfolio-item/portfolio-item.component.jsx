@@ -1,18 +1,22 @@
 import React from "react";
 
-import "./portfolio-item.styles.scss";
+import {
+  PortfolioImageCollection,
+  PortfolioImageCollectionsContainer,
+  PortfolioImageItem,
+} from "./portfolio-item.styles";
 
 const PortfolioItem = ({ items }) => {
   return (
-    <div className="image-collections-container">
+    <PortfolioImageCollectionsContainer>
       {items.map((item) => {
         return (
-          <div key={item.id} className="image-collection">
-            <img className="image-item" src={item.iconPath} alt={item.field} />
-          </div>
+          <PortfolioImageCollection key={item.id}>
+            <PortfolioImageItem src={item.iconPath} alt={item.field} />
+          </PortfolioImageCollection>
         );
       })}
-    </div>
+    </PortfolioImageCollectionsContainer>
   );
 };
 

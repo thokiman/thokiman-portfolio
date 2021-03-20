@@ -2,7 +2,10 @@ import React from "react";
 import { CSSTransitionGroup } from "react-transition-group";
 
 import TechnologyGrid from "../technology-grid/technology-grid.component";
-import "./about-skill-technology.styles.scss";
+import {
+  AboutTechnologyContentContainer,
+  AboutTechnologySkillContainer,
+} from "./about-skill-technology.styles";
 
 const TechnologySkill = ({ skill }) => {
   const {
@@ -16,7 +19,7 @@ const TechnologySkill = ({ skill }) => {
     },
   } = skill;
   return (
-    <div className="technology-skill-container">
+    <AboutTechnologySkillContainer>
       <CSSTransitionGroup
         transitionAppear={true}
         transitionAppearTimeout={800}
@@ -24,38 +27,38 @@ const TechnologySkill = ({ skill }) => {
         transitionLeaveTimeout={200}
         transitionName={"slide-out"}
       >
-        <div className="technology-content-container">
+        <AboutTechnologyContentContainer>
           <TechnologyGrid technologySkill={general} />
-        </div>
-        <div className="technology-content-container">
+        </AboutTechnologyContentContainer>
+        <AboutTechnologyContentContainer>
           <TechnologyGrid technologySkill={content} />
-        </div>
-        <div className="technology-content-container">
+        </AboutTechnologyContentContainer>
+        <AboutTechnologyContentContainer>
           <TechnologyGrid technologySkill={html} />
-        </div>
-        <div className="technology-content-container">
+        </AboutTechnologyContentContainer>
+        <AboutTechnologyContentContainer>
           <TechnologyGrid technologySkill={css} />
-        </div>
-        <div className="technology-content-container">
+        </AboutTechnologyContentContainer>
+        <AboutTechnologyContentContainer>
           <TechnologyGrid technologySkill={javascript} />
-        </div>
-        <div className="technology-content-container">
+        </AboutTechnologyContentContainer>
+        <AboutTechnologyContentContainer>
           <TechnologyGrid technologySkill={language} />
-        </div>
-        <div className="technology-content-container">
+        </AboutTechnologyContentContainer>
+        <AboutTechnologyContentContainer>
           <TechnologyGrid technologySkill={framework} />
-        </div>
-        <div className="technology-content-container">
+        </AboutTechnologyContentContainer>
+        <AboutTechnologyContentContainer>
           <TechnologyGrid technologySkill={database} />
-        </div>
-        <div className="technology-content-container">
+        </AboutTechnologyContentContainer>
+        <AboutTechnologyContentContainer>
           <TechnologyGrid technologySkill={architecture} />
-        </div>
-        <div className="technology-content-container">
+        </AboutTechnologyContentContainer>
+        <AboutTechnologyContentContainer>
           <TechnologyGrid technologySkill={test} />
-        </div>
+        </AboutTechnologyContentContainer>
       </CSSTransitionGroup>
-    </div>
+    </AboutTechnologySkillContainer>
   );
 };
 

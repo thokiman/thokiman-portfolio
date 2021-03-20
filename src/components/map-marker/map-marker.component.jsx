@@ -1,6 +1,6 @@
 import React from "react";
-import "./map-marker.styles.scss";
+import { Marker } from "./map-marker.styles";
 
-const MarkerContent = () => <div className="marker" />;
+const MarkerContent = () => <Marker />;
 
 export default MarkerContent;

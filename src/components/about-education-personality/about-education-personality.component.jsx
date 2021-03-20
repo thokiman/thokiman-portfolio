@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 
 import { getRandomColor } from "../../utils/about.component.utils";
-import "./about-education-personality.styles.scss";
+import {
+  AboutPersonalityContainer,
+  AboutPersonalityBox,
+  AboutPersonalityTitle,
+  AboutPersonalityTextBox,
+} from "./about-education-personality.styles";
 
 const AboutEducationPersonality = ({ personality }) => {
   const [backgroundColor, setBackgroundColor] = useState({
@@ -246,6 +251,11 @@ const AboutEducationPersonality = ({ personality }) => {
       }%, ${color.a})`,
     });
     setColor({
+      14: `hsla(${color.h + Math.random() * color.h}, ${color.s}%, ${
+        color.l + Math.random() * color.l
+      }%, ${color.a})`,
+    });
+    setColor({
       15: `hsla(${color.h + Math.random() * color.h}, ${color.s}%, ${
         color.l + Math.random() * color.l
       }%, ${color.a})`,
@@ -258,23 +268,24 @@ const AboutEducationPersonality = ({ personality }) => {
   };
 
   return (
-    <div className="personality-container">
-      <div className="personality-title">Personality</div>
+    <AboutPersonalityContainer>
+      <AboutPersonalityTitle>Personality</AboutPersonalityTitle>
       {personality.map(({ id }, i) => {
         return (
-          <div
+          <AboutPersonalityBox
             key={id}
             style={{
               color: `${color[i + 1]}`,
               backgroundColor: `${backgroundColor[i + 1]}`,
             }}
-            className="personality-box"
           >
-            <div className="text-box">{personality[i].description}</div>
-          </div>
+            <AboutPersonalityTextBox>
+              {personality[i].description}
+            </AboutPersonalityTextBox>
+          </AboutPersonalityBox>
         );
       })}
-    </div>
+    </AboutPersonalityContainer>
   );
 };
 

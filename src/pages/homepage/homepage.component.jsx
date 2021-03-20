@@ -3,48 +3,34 @@ import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
 import PageShell from "../../components/page-shell/page-shell.component";
-import { ReactComponent as BlueOutlineThokiman } from "../../assets/collections-icon/thokiman-icon/logo/outline/thokiman_head_logo_blue.svg";
-import { ReactComponent as WhiteOutlineThokimanSkeleton } from "../../assets/collections-icon/thokiman-icon/page/thokiman_skeleton_white.svg";
-import "./homepage.styles.scss";
+import HomePageThokimanContentContainer from "../../components/homepage-thokiman-container/homepage-thokiman-container.component";
+import HomePageProfileImageContainer from "../../components/homepage-profile-image-container/homepage-profile-image-container.component";
+import HomePageProfileTextContainer from "../../components/homepage-background-profile-text-container/homepage-background-profile-text-container.component";
+import {
+  HomepageContainer,
+  HomepageAboutContentContainer,
+} from "./homepage.styles";
 import {
   selectPersonalSummaryQuote,
   selectPersonalSummaryShortDescription,
 } from "../../redux/about/about.selectors";
+import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
-const HomePage = ({ shortDescription, quote }) => {
+const HomePage = (props) => {
   return (
-    <div className="homepage-container">
-      <div className="thokiman-content-container">
-        <div className="thokiman-container">
-          <div className="thokiman-head-container">
-            <BlueOutlineThokiman className="thokiman-head-outline" />
-          </div>
-
-          <div className="thokiman-body-container">
-            <WhiteOutlineThokimanSkeleton className="white-thokiman-skeleton" />
-          </div>
-        </div>
-      </div>
-      <div className="about-content-container">
-        <div className="profile-image-container">
-          <div className="background-profile-image">
-            <div className="profile-image" />
-          </div>
-        </div>
-        <div className="profile-text-container">
-          <div className="background-profile-text">
-            <div className="name-text">Thomas Santosa</div>
-            <div className="activity-text">{shortDescription}</div>
-            <div className="quote-text">{quote}</div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <HomepageContainer $issidebarhidden={props.isSideBarHidden}>
+      <HomePageThokimanContentContainer />
+      <HomepageAboutContentContainer>
+        <HomePageProfileImageContainer />
+        <HomePageProfileTextContainer {...props} />
+      </HomepageAboutContentContainer>
+    </HomepageContainer>
   );
 };
 
 const mapStateToProps = createStructuredSelector({
   shortDescription: selectPersonalSummaryShortDescription,
   quote: selectPersonalSummaryQuote,
+  isSideBarHidden: selectIsSideBarHidden,
 });
 export default connect(mapStateToProps)(PageShell(HomePage));

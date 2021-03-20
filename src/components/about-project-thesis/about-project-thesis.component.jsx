@@ -1,11 +1,21 @@
 import React from "react";
 
-import "./about-project-thesis.styles.scss";
+import {
+  AboutDescriptionThesisProject,
+  AboutLengthThesisProject,
+  AboutLocationThesisProject,
+  AboutNameThesisProject,
+  AboutStartEndDateThesisProject,
+  AboutThesisProjectAttributes,
+  AboutThesisProjectContainer,
+  AboutThesisProjectTitle,
+  AboutTypeThesisProject,
+} from "./about-project-thesis.styles";
 
 const AboutThesisProject = ({ thesis }) => {
   return (
-    <div className="thesis-project-container">
-      <div className="thesis-project-title">Thesis</div>
+    <AboutThesisProjectContainer>
+      <AboutThesisProjectTitle>Thesis</AboutThesisProjectTitle>
       {thesis.map(
         ({
           id,
@@ -18,25 +28,29 @@ const AboutThesisProject = ({ thesis }) => {
           description,
         }) => {
           return (
-            <div key={id} className="thesis-project">
-              <div className="name-thesis-project">{name}</div>
-              <div className="type-thesis-project">
+            <AboutThesisProjectAttributes key={id}>
+              <AboutNameThesisProject>{name}</AboutNameThesisProject>
+              <AboutTypeThesisProject>
                 {type.charAt(0).toUpperCase()}
                 {type.slice(1, 7)}
                 {type.charAt(7).toUpperCase()}
                 {type.slice(8)}
-              </div>
-              <div className="start-end-date-thesis-project">
+              </AboutTypeThesisProject>
+              <AboutStartEndDateThesisProject>
                 {startDate} - {endDate}
-              </div>
-              <div className="length-thesis-project">{length}</div>
-              <div className="location-thesis-project">{location}</div>
-              <div className="description-thesis-project">{description}</div>
-            </div>
+              </AboutStartEndDateThesisProject>
+              <AboutLengthThesisProject>{length}</AboutLengthThesisProject>
+              <AboutLocationThesisProject>
+                {location}
+              </AboutLocationThesisProject>
+              <AboutDescriptionThesisProject>
+                {description}
+              </AboutDescriptionThesisProject>
+            </AboutThesisProjectAttributes>
           );
         }
       )}
-    </div>
+    </AboutThesisProjectContainer>
   );
 };
 

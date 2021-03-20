@@ -1,37 +1,49 @@
 import React from "react";
 
-import "./about-achievement-experience.styles.scss";
+import {
+  AchievementExperienceProjectContainer,
+  AchievementExperienceProjectTitle,
+  AchievementExperienceProject,
+  DateAchievementExperienceProject,
+  NameAchievementExperienceProject,
+  ImageAchievementExperience,
+  ImageAchievementExperienceContainer,
+  DescriptionAchievementExperienceProject,
+} from "./about-achievement-experience.styles";
 
 const AboutAchievementProject = ({ lastExperience }) => {
   return (
-    <div className="achievement-experience-project-container">
-      <div className="achievement-experience-project-title">
+    <AchievementExperienceProjectContainer>
+      <AchievementExperienceProjectTitle>
         Experience of Achievement
-      </div>
+      </AchievementExperienceProjectTitle>
       {lastExperience.map(({ id, name, description, date, imagePath }) => {
         return (
-          <div key={id} className="achievement-experience-project">
-            <div className="name-achievement-experience-project">{name}</div>
-            <div className="date-achievement-experience-project">{date}</div>
-            <div key={id} className="image-achievement-experience-container">
+          <AchievementExperienceProject key={id}>
+            <NameAchievementExperienceProject>
+              {name}
+            </NameAchievementExperienceProject>
+            <DateAchievementExperienceProject>
+              {date}
+            </DateAchievementExperienceProject>
+            <ImageAchievementExperienceContainer key={id}>
               {imagePath.map(({ id, field, iconPath }) => {
                 return (
-                  <img
+                  <ImageAchievementExperience
                     key={id}
                     src={iconPath}
                     alt={field}
-                    className="image-achievement-experience"
                   />
                 );
               })}
-            </div>
-            <div className="description-achievement-experience-project">
+            </ImageAchievementExperienceContainer>
+            <DescriptionAchievementExperienceProject>
               {description}
-            </div>
-          </div>
+            </DescriptionAchievementExperienceProject>
+          </AchievementExperienceProject>
         );
       })}
-    </div>
+    </AchievementExperienceProjectContainer>
   );
 };
 

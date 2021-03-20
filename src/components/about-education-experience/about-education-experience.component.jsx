@@ -1,12 +1,21 @@
 import React from "react";
 
 import EducationGrid from "../education-grid/education-grid.component";
-import "./about-education-experience.styles.scss";
+import {
+  AboutEducationExperienceAttributes,
+  AboutEducationExperienceCompany,
+  AboutEducationExperienceContent,
+  AboutEducationExperienceDescription,
+  AboutEducationExperienceField,
+  AboutEducationExperienceGrade,
+  AboutEducationExperienceStartEndDate,
+  AboutEducationExperienceTitle,
+} from "./about-education-experience.styles";
 
 const AboutEducationExperience = ({ lastExperience }) => {
   return (
-    <div className="education-experience-content">
-      <div className="education-experience-title">Experience</div>
+    <AboutEducationExperienceContent>
+      <AboutEducationExperienceTitle>Experience</AboutEducationExperienceTitle>
       {lastExperience.map(
         ({
           id,
@@ -20,25 +29,29 @@ const AboutEducationExperience = ({ lastExperience }) => {
         }) => {
           return (
             <div key={id}>
-              <div className="education-experience-attributes">
-                <div className="education-experience-company">{company}</div>
-                <div className="education-experience-field">{field}</div>
-                <div className="education-experience-grade">{grade}</div>
-                <div className="education-experience-start-end-date">
+              <AboutEducationExperienceAttributes>
+                <AboutEducationExperienceCompany>
+                  {company}
+                </AboutEducationExperienceCompany>
+                <AboutEducationExperienceField>
+                  {field}
+                </AboutEducationExperienceField>
+                <AboutEducationExperienceGrade>
+                  {grade}
+                </AboutEducationExperienceGrade>
+                <AboutEducationExperienceStartEndDate>
                   {startDate} - {endDate}
-                </div>
-                <div className="education-experience-description">
+                </AboutEducationExperienceStartEndDate>
+                <AboutEducationExperienceDescription>
                   {description}
-                </div>
-              </div>
-              <div className="education-experience-images">
-                <EducationGrid imagePath={imagePath} />
-              </div>
+                </AboutEducationExperienceDescription>
+              </AboutEducationExperienceAttributes>
+              <EducationGrid imagePath={imagePath} />
             </div>
           );
         }
       )}
-    </div>
+    </AboutEducationExperienceContent>
   );
 };
 

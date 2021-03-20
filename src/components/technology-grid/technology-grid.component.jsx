@@ -1,21 +1,27 @@
 import React from "react";
 
-import "./technology-grid.styles.scss";
+import {
+  TechnologyGridContent,
+  TechnologyGridContainer,
+  TechnologyGridItem,
+  TechnologyImage,
+  TechnologyTitle,
+} from "./technology-grid.styles";
 
 const TechnologyGrid = ({ technologySkill: { name, itemsPoint } }) => {
   return (
-    <div className="technology-grid-container">
-      <div className="technology-title">{name}</div>
-      <div className="technology-grid">
+    <TechnologyGridContainer>
+      <TechnologyTitle>{name}</TechnologyTitle>
+      <TechnologyGridContent>
         {itemsPoint.map(({ id, field, iconPath }) => {
           return (
-            <div key={id} className="technology-grid-item">
-              <img src={iconPath} alt={field} className="technology-image" />
-            </div>
+            <TechnologyGridItem key={id}>
+              <TechnologyImage src={iconPath} alt={field} />
+            </TechnologyGridItem>
           );
         })}
-      </div>
-    </div>
+      </TechnologyGridContent>
+    </TechnologyGridContainer>
   );
 };
 

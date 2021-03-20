@@ -1,22 +1,22 @@
 import React from "react";
 
-import "./education-grid.styles.scss";
+import {
+  EducationImage,
+  EducationImageContainer,
+  EducationImageItems,
+} from "./education-grid.styles";
 
 const EducationGrid = ({ imagePath }) => {
   return (
-    <div className="education-image-container">
+    <EducationImageContainer>
       {imagePath.map(({ id, field, iconPath }) => {
         return (
-          <div key={id} className="education-image-items">
-            <img
-              className="education-image"
-              src={`${iconPath}`}
-              alt={`${field}`}
-            />
-          </div>
+          <EducationImageItems key={id}>
+            <EducationImage src={`${iconPath}`} alt={`${field}`} />
+          </EducationImageItems>
         );
       })}
-    </div>
+    </EducationImageContainer>
   );
 };
 

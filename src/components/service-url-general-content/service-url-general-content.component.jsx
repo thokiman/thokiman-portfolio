@@ -1,34 +1,42 @@
 import React from "react";
 
-import "./service-url-general-content.styles.scss";
+import {
+  ServiceDescription,
+  ServiceDescriptionContainer,
+  ServiceDescriptionIconContainer,
+  ServiceDescriptionIconItem,
+  ServiceDescriptionItem,
+  ServiceDescriptionTitle,
+  ServiceGeneralContent,
+  ServiceTitle,
+} from "./service-url-general-content.styles";
 
 const ServiceUrlGeneralContent = ({ title, description }) => {
   return (
-    <div className="service-general-content">
-      <div className="service-title">{title}</div>
-      <div className="service-description">
+    <ServiceGeneralContent>
+      <ServiceTitle>{title}</ServiceTitle>
+      <ServiceDescription>
         {description.map(({ id, title, description, items }) => {
           return (
-            <div key={id} className="service-description-container">
-              <div className="service-description-title">{title}</div>
-              <div className="service-description-item">{description}</div>
-              <div className="service-description-icon-container">
+            <ServiceDescriptionContainer key={id}>
+              <ServiceDescriptionTitle>{title}</ServiceDescriptionTitle>
+              <ServiceDescriptionItem>{description}</ServiceDescriptionItem>
+              <ServiceDescriptionIconContainer>
                 {items.map(({ id, name, iconPath }) => {
                   return (
-                    <img
-                      className="service-description-icon-item"
+                    <ServiceDescriptionIconItem
                       key={id}
                       src={iconPath}
                       alt={name}
                     />
                   );
                 })}
-              </div>
-            </div>
+              </ServiceDescriptionIconContainer>
+            </ServiceDescriptionContainer>
           );
         })}
-      </div>
-    </div>
+      </ServiceDescription>
+    </ServiceGeneralContent>
   );
 };
 

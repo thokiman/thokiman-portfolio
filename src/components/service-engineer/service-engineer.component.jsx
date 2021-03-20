@@ -1,13 +1,19 @@
 import React from "react";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 import { CSSTransitionGroup } from "react-transition-group";
 
+import {
+  RightServiceContainerEng,
+  RightServiceContentEng,
+} from "./service-enginner.styles";
 import ServiceGeneralContent from "../service-general-content/service-general-content.component";
 import ServiceIconContent from "../service-icon-content/service-icon-content.component";
-import "./service-engineer.styles.scss";
+import { selectEngineerService } from "../../redux/service/service.selectors";
 
 const ServiceEngineer = ({ engineer: { title, description, items } }) => {
   return (
-    <div className="right-service-container-eng">
+    <RightServiceContainerEng>
       <CSSTransitionGroup
         transitionAppear={true}
         transitionAppearTimeout={800}
@@ -15,13 +21,16 @@ const ServiceEngineer = ({ engineer: { title, description, items } }) => {
         transitionLeaveTimeout={200}
         transitionName={"slide-out"}
       >
-        <div className="right-service-content-eng">
+        <RightServiceContentEng>
           <ServiceGeneralContent title={title} description={description} />
           <ServiceIconContent items={items} />
-        </div>
+        </RightServiceContentEng>
       </CSSTransitionGroup>
-    </div>
+    </RightServiceContainerEng>
   );
 };
 
-export default ServiceEngineer;
+const mapStateToProps = createStructuredSelector({
+  engineer: selectEngineerService,
+});
+export default connect(mapStateToProps)(ServiceEngineer);

@@ -1,48 +1,53 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
+import {
+  FooterContainer,
+  FooterCreamPrickInklaim,
+  FooterWhiteOutlineThokiman,
+  ProfileFooterContainer,
+  ProfileFooterIcon,
+  ProfileFooterText,
+  SocialFooterContainer,
+  SocialItem,
+} from "./footer-general.styles";
 import { selectSocialIconContact } from "../../redux/contact/contact.selectors.js";
-import { ReactComponent as CreamPrickInklaim } from "../../assets/collections-icon/prick-inklaim-icon/logo/prick_inklaim_logo_cream.svg";
-import { ReactComponent as WhiteOutlineThokiman } from "../../assets/collections-icon/thokiman-icon/logo/outline/thokiman_head_logo_cream.svg";
-import "./footer-general.styles.scss";
+import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
-const FooterGeneral = ({ socialIcon }) => {
+const FooterGeneral = ({ socialIcon, isSideBarHidden }) => {
   return (
-    <div className="footer-container">
-      <div className="profile-footer-container">
-        <div className="profile-footer-icon">
-          <CreamPrickInklaim className="footer-icon" />
-          <WhiteOutlineThokiman className="footer-icon" />
-        </div>
-        <div className="profile-footer-text">
+    <FooterContainer $issidebarhidden={isSideBarHidden}>
+      <ProfileFooterContainer>
+        <ProfileFooterIcon>
+          <FooterCreamPrickInklaim />
+          <FooterWhiteOutlineThokiman />
+        </ProfileFooterIcon>
+        <ProfileFooterText $issidebarhidden={isSideBarHidden}>
           Copyright<sup>&#9400;</sup>2021.
           <em>Allright reserved </em>| Thomas Santosa, B. Eng.
-        </div>
-      </div>
+        </ProfileFooterText>
+      </ProfileFooterContainer>
       <br />
-      <div className="social-footer-container">
+      <SocialFooterContainer>
         {socialIcon.map(({ iconPath, linkUrl }) => {
           return (
-            <Link
+            <SocialItem
               key={iconPath.id}
               to={{ pathname: linkUrl }}
               target="_blank"
-              className="social-item"
-              style={{
-                backgroundImage: `url(${iconPath.iconPath})`,
-              }}
-            ></Link>
+              backgroundimage={iconPath}
+            />
           );
         })}
-      </div>
-    </div>
+      </SocialFooterContainer>
+    </FooterContainer>
   );
 };
 
 const mapStatetoProps = createStructuredSelector({
   socialIcon: selectSocialIconContact,
+  isSideBarHidden: selectIsSideBarHidden,
 });
 
 export default connect(mapStatetoProps)(FooterGeneral);

@@ -1,28 +1,32 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-import "./about-project-course.styles.scss";
+import {
+  AboutCourseProjectAttributes,
+  AboutCourseProjectContainer,
+  AboutCourseProjectTitle,
+  AboutDescriptionCourseProject,
+  AboutNameCourseProject,
+  AboutRelatedCourseProject,
+} from "./about-project-course.styles";
 
 const AboutCourseProject = ({ course }) => {
   return (
-    <div className="course-project-container">
-      <div className="course-project-title">Course Project</div>
+    <AboutCourseProjectContainer>
+      <AboutCourseProjectTitle>Course Project</AboutCourseProjectTitle>
       {course.map(({ id, name, description, related, url }) => {
         return (
-          <div key={id} className="course-project">
-            <div className="related-course-project">{related}</div>
-            <Link
-              to={{ pathname: `${url}` }}
-              target="_blank"
-              className="name-course-project"
-            >
+          <AboutCourseProjectAttributes key={id}>
+            <AboutRelatedCourseProject>{related}</AboutRelatedCourseProject>
+            <AboutNameCourseProject to={{ pathname: `${url}` }} target="_blank">
               {name}
-            </Link>
-            <div className="description-course-project">{description}</div>
-          </div>
+            </AboutNameCourseProject>
+            <AboutDescriptionCourseProject>
+              {description}
+            </AboutDescriptionCourseProject>
+          </AboutCourseProjectAttributes>
         );
       })}
-    </div>
+    </AboutCourseProjectContainer>
   );
 };
 

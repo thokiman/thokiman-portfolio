@@ -12,15 +12,16 @@ import ContactForm from "../../components/contact-form-container/contact-form-co
 import ContactInfo from "../../components/contact-info-container/contact-info.component";
 import ContactLocation from "../../components/contact-location-container/contact-location-container.component";
 import PageShell from "../../components/page-shell/page-shell.component";
-import "./contact.styles.scss";
+import { ContactContainer } from "./contact.styles";
+import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
-const Contact = ({ title, info, items }) => {
+const Contact = ({ title, info, items, isSideBarHidden }) => {
   return (
-    <div className="contact-container">
+    <ContactContainer $issidebarhidden={isSideBarHidden}>
       <ContactInfo title={title} items={items} />
       <ContactForm />
       <ContactLocation info={info} />
-    </div>
+    </ContactContainer>
   );
 };
 
@@ -29,6 +30,7 @@ const mapStateToProps = createStructuredSelector({
   info: selectInfoContact,
   items: selectItemsContact,
   routeName: selectContactRoute,
+  isSideBarHidden: selectIsSideBarHidden,
 });
 
 export default connect(mapStateToProps)(PageShell(Contact));

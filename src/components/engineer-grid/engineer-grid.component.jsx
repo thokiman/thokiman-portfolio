@@ -1,7 +1,11 @@
 import React from "react";
 import { CSSTransitionGroup } from "react-transition-group";
 
-import "./engineer-grid.styles.scss";
+import EngineerGridItem from "../engineer-grid-item/engineer-grid-item.component";
+import {
+  EngineerContentContainer,
+  NameEngineerSkill,
+} from "./enginner-grid.styles";
 
 const EngineerGrid = ({ engineerSkill }) => {
   return engineerSkill.map(({ id, name, itemsPoint }) => {
@@ -12,18 +16,12 @@ const EngineerGrid = ({ engineerSkill }) => {
         transitionEnterTimeout={600}
         transitionLeaveTimeout={200}
         transitionName={"slide-out"}
+        key={id}
       >
-        <div key={id} className="engineer-content-container">
-          <div className="name-engineer-skill">{name}</div>
-
-          {itemsPoint.map(({ id, description }) => {
-            return (
-              <div key={id} className="description-engineer-skill">
-                {description}
-              </div>
-            );
-          })}
-        </div>
+        <EngineerContentContainer>
+          <NameEngineerSkill>{name}</NameEngineerSkill>
+          <EngineerGridItem itemsPoint={itemsPoint} />
+        </EngineerContentContainer>
       </CSSTransitionGroup>
     );
   });

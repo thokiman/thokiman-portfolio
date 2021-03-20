@@ -1,15 +1,21 @@
 import React from "react";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 import { CSSTransitionGroup } from "react-transition-group";
 
+import {
+  RightServiceContainerFS,
+  RightServiceContentFS,
+} from "./service-full-stack-developer.styles";
 import ServiceGeneralContent from "../service-general-content/service-general-content.component";
 import ServiceIconContent from "../service-icon-content/service-icon-content.component";
-import "./service-full-stack-developer.styles.scss";
+import { selectFullstackService } from "../../redux/service/service.selectors";
 
 const ServiceFullStackDeveloper = ({
   fullstack: { title, description, items },
 }) => {
   return (
-    <div className="right-service-container-fs">
+    <RightServiceContainerFS>
       <CSSTransitionGroup
         transitionAppear={true}
         transitionAppearTimeout={800}
@@ -17,13 +23,15 @@ const ServiceFullStackDeveloper = ({
         transitionLeaveTimeout={200}
         transitionName={"slide-out"}
       >
-        <div className="right-service-content-fs">
+        <RightServiceContentFS>
           <ServiceGeneralContent title={title} description={description} />
           <ServiceIconContent items={items} />
-        </div>
+        </RightServiceContentFS>
       </CSSTransitionGroup>
-    </div>
+    </RightServiceContainerFS>
   );
 };
-
-export default ServiceFullStackDeveloper;
+const mapStateToProps = createStructuredSelector({
+  fullstack: selectFullstackService,
+});
+export default connect(mapStateToProps)(ServiceFullStackDeveloper);
