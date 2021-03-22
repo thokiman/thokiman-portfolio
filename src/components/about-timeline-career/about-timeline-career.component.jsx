@@ -11,19 +11,21 @@ import {
   AboutTimelineCareerTitle,
   AboutTimelineContainer,
 } from "./about-timeline-career.styles";
+import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
 const AboutTimelineCareer = ({
   careerPath: {
     title,
     items: { beforeWorking },
   },
+  isSideBarHidden,
 }) => {
   const scrollToTop = () => {
     scroll.scrollToTop();
   };
 
   return (
-    <AboutTimelineContainer>
+    <AboutTimelineContainer $issidebarhidden={isSideBarHidden}>
       <TimelineCareerHeader />
       <AboutTimelineCareerTitle>{title}</AboutTimelineCareerTitle>
       <TimelineCareerItem beforeWorking={beforeWorking} />
@@ -34,6 +36,7 @@ const AboutTimelineCareer = ({
 
 const mapStateToProps = createStructuredSelector({
   careerPath: selectCareerPath,
+  isSideBarHidden: selectIsSideBarHidden,
 });
 
 export default connect(mapStateToProps)(AboutTimelineCareer);

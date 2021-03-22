@@ -56,6 +56,9 @@ const TimelineYearBoxUpperHide = css`
   &:hover {
     animation: ${pulsateBck} 0.5s ease-in-out infinite both;
   }
+  @media only screen and (max-width: 800px) {
+    font-size: 150%;
+  }
 `;
 
 const TimelineYearBoxUpperActive = css`
@@ -68,7 +71,9 @@ const TimelineYearBoxUpperActive = css`
   color: #3f4249;
   transition: color, border, background-color 0.5s linear;
   animation: ${rotate90BlCcw} 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-
+  @media only screen and (max-width: 800px) {
+    font-size: 120%;
+  }
   &:hover {
     color: #e3e1e4;
   }
@@ -91,6 +96,9 @@ const TimelinePointerUpperHide = css`
     width 0.5s ease-in-out;
   animation: ${colorChange2x} 2s linear infinite alternate both;
   cursor: default;
+  @media only screen and (max-width: 800px) {
+    animation: none;
+  }
 `;
 
 const TimelinePointerUpperActive = css`
@@ -102,6 +110,11 @@ const TimelinePointerUpperActive = css`
   transition: top 0.2s ease-in-out, color 0.5s ease-in-out, height,
     width 0.5s ease-in-out;
   cursor: default;
+  @media only screen and (max-width: 800px) {
+    height: 70px;
+    width: 70px;
+    top: -25px;
+  }
 `;
 
 const getTimelinePointerUpper = (props) => {

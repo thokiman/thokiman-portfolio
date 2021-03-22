@@ -9,7 +9,13 @@ const shrinkLabel = css`
   font-size: 30px;
   color: ${mainColor};
 `;
-
+const shrinkLabelMobile = css`
+  @media only screen and (max-width: 800px) {
+    color: ${mainColor};
+    font-size: 7vw;
+    top: -4vh;
+  }
+`;
 export const FormTextAreaGroup = styled.div`
   position: relative;
   display: flex;
@@ -22,10 +28,17 @@ export const FormTextAreaCheckerContainer = styled.span`
   top: 29vh;
   left: -0.97vw;
   color: ${subColor};
+  @media only screen and (max-width: 800px) {
+    left: -0.5vw;
+  }
 `;
 const FormTextAreaCheckerIconStyles = css`
   width: 2vw;
   height: 2vh;
+  @media only screen and (max-width: 800px) {
+    width: 3.5vw;
+    height: 3.5vh;
+  }
 `;
 export const FormTextAreaCheckerIconTrue = styled(FaCheckCircle)`
   ${FormTextAreaCheckerIconStyles}
@@ -64,12 +77,19 @@ export const FormTextAreaElement = styled.textarea`
   &:focus ~ label {
     ${shrinkLabel}
   }
+  @media only screen and (max-width: 800px) {
+    &:focus ~ label {
+      ${shrinkLabelMobile}
+    }
+  }
 `;
 
 const getFormLabelElementShrink = (props) => {
-  if (props.value.length) return shrinkLabel;
+  if (props.$value.length) return shrinkLabel;
 };
-
+const getFormLabelElementShrinkMobile = (props) => {
+  if (props.$value.length) return shrinkLabelMobile;
+};
 export const FormLabelElement = styled.label`
   color: ${subColor};
   font-size: 35px;
@@ -80,6 +100,12 @@ export const FormLabelElement = styled.label`
   top: 30px;
   transition: 300ms ease all;
   ${getFormLabelElementShrink}
+  @media only screen and (max-width: 800px) {
+    font-size: 9vw;
+    top: 2vh;
+    left: 5vw;
+    ${getFormLabelElementShrinkMobile}
+  }
 `;
 FormTextAreaGroup.displayName = "FormTextAreaGroup";
 FormTextAreaCheckerContainer.displayName = "FormTextAreaCheckerContainer";

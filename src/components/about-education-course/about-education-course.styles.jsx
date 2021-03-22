@@ -23,6 +23,9 @@ export const AboutEducationCourseTitle = styled.div`
   font-kerning: auto;
   padding: 0 2px;
   color: #e3e1e4;
+  @media only screen and (max-width: 800px) {
+    font-size: 400%;
+  }
 `;
 
 export const AboutEducationCourseAttributes = styled.div`
@@ -56,6 +59,10 @@ export const AboutEducationCourseName = styled.div`
   font-size: 200%;
   padding: 10px 0;
   width: 95%;
+  @media only screen and (max-width: 800px) {
+    text-align: left;
+    font-size: 200%;
+  }
 `;
 
 export const AboutEducationCourseOrganization = styled.div`
@@ -63,6 +70,10 @@ export const AboutEducationCourseOrganization = styled.div`
   grid-area: education-experience-organization;
   font-size: 150%;
   padding: 0 10px;
+  @media only screen and (max-width: 800px) {
+    padding: 4px;
+    font-size: 120%;
+  }
 `;
 
 export const AboutEducationCourseDate = styled.div`
@@ -70,6 +81,10 @@ export const AboutEducationCourseDate = styled.div`
   grid-area: education-experience-date;
   padding: 10px 0;
   font-size: 150%;
+  @media only screen and (max-width: 800px) {
+    font-size: 120%;
+    padding: 4px;
+  }
 `;
 
 export const AboutEducationCourseLink = styled.div`
@@ -99,6 +114,10 @@ export const AboutCourseLink = styled(Link)`
   text-decoration: none;
   font-size: 120%;
   cursor: pointer;
+  @media only screen and (max-width: 800px) {
+    font-size: 110%;
+  }
+
   &:hover {
     border-bottom: #3f4249 solid 2px;
     display: flex;

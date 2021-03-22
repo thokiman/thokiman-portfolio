@@ -1,6 +1,34 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import ContactImage from "../../assets/layout/water-2.jpg";
 
+const contactSideBarHide = keyframes`
+  0% {
+    transform: rotateX(100deg);
+    transform-origin: bottom;
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0);
+    transform-origin: bottom;
+    opacity: 1;
+  }
+
+`;
+
+export const ContactSideBarHide = styled.div`
+  font-family: futura-demi;
+  color: #e3e1e4;
+  position: absolute;
+  top: 10vh;
+  left: 6vw;
+  font-size: 550%;
+  letter-spacing: 0.17em;
+  width: 50vw;
+  line-height: 1.5em;
+
+  animation: ${contactSideBarHide} 2s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    both;
+`;
 const ContactSideBarActive = css`
   @media only screen and (max-width: 800px) {
     position: relative;
@@ -8,6 +36,9 @@ const ContactSideBarActive = css`
     transition: left 0.5s ease;
     opacity: 1;
     width: 100vw;
+    height: 350vh;
+
+    flex-direction: column;
   }
 `;
 const getContactSideBarActive = (props) => {

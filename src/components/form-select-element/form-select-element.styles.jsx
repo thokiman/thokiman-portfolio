@@ -104,10 +104,18 @@ export const FormInputCheckerContainer = styled.span`
   position: absolute;
   left: -1vw;
   color: ${subColor};
+  @media only screen and (max-width: 800px) {
+    left: -3vw;
+    top: 1vh;
+  }
 `;
 const FormInputTelCheckerIconStyles = css`
   width: 2vw;
   height: 2vh;
+  @media only screen and (max-width: 800px) {
+    width: 3.5vw;
+    height: 3.5vh;
+  }
 `;
 export const FormInputCheckerIconTrue = styled(FaCheckCircle)`
   ${FormInputTelCheckerIconStyles}

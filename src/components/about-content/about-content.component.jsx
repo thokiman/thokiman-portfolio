@@ -2,12 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import { CSSTransitionGroup } from "react-transition-group";
-
-import { ReactComponent as ThokimanSkeletonGray } from "../../assets/collections-icon/thokiman-icon/page/thokiman_skeleton_gray.svg";
-import { ReactComponent as ThokimanBodyGray } from "../../assets/collections-icon/thokiman-icon/page/thokiman_body_gray.svg";
-import { ReactComponent as ThokimanHandGray } from "../../assets/collections-icon/thokiman-icon/page/thokiman_hand_gray.svg";
-import { ReactComponent as ThokimanLegGray } from "../../assets/collections-icon/thokiman-icon/page/thokiman_leg_gray.svg";
 import { selectIsDropdownHidden } from "../../redux/about/about.selectors";
+import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
 import {
   RightPageContainer,
@@ -29,9 +25,9 @@ import {
   ThokimanLegRightContainer,
 } from "./about-content.styles";
 
-const AboutHomeContent = ({ isDropdownHidden }) => {
+const AboutHomeContent = ({ isDropdownHidden, isSideBarHidden }) => {
   return (
-    <RightPageContainer>
+    <RightPageContainer $issidebarhidden={isSideBarHidden}>
       <CSSTransitionGroup
         transitionAppear={true}
         transitionAppearTimeout={800}
@@ -78,6 +74,7 @@ const AboutHomeContent = ({ isDropdownHidden }) => {
 
 const mapStateToProps = createStructuredSelector({
   isDropdownHidden: selectIsDropdownHidden,
+  isSideBarHidden: selectIsSideBarHidden,
 });
 
 export default connect(mapStateToProps)(AboutHomeContent);

@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import { ReactComponent as BlueOutlineThokiman } from "../../assets/collections-icon/thokiman-icon/logo/outline/thokiman_head_logo_blue.svg";
 import { ReactComponent as WhiteOutlineThokimanSkeleton } from "../../assets/collections-icon/thokiman-icon/page/thokiman_skeleton_white.svg";
 import HomepageImage from "../../assets/layout/water-1.jpg";
@@ -11,6 +11,13 @@ export const HomepageThokimanContentContainer = styled.div`
   background-image: url(${HomepageImage});
   background-size: cover;
 `;
+const SideBarActive = css`
+  display: none;
+`;
+const getSideBarActive = (props) => {
+  if (props.$issidebarhidden) return SideBarActive;
+  return null;
+};
 export const HomepageThokimanContainer = styled.div`
   height: 100%;
   display: flex;
@@ -19,6 +26,9 @@ export const HomepageThokimanContainer = styled.div`
   align-items: center;
   background-color: rgba(116, 198, 212, 0.5);
   width: 96vw;
+  @media only screen and (max-width: 800px) {
+    ${getSideBarActive}
+  }
 `;
 export const HomepageThokimanHeadContainer = styled.div`
   display: flex;

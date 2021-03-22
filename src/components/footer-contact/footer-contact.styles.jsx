@@ -33,6 +33,7 @@ export const FooterContainerContact = styled.div`
     transition: left 0.5s ease;
     width: 66vw;
   }
+  ${getFooterSideBarActive}
 `;
 
 export const ProfileFooterContainerContact = styled.div`

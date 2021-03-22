@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import { GiSharpSmile } from "react-icons/gi";
@@ -12,8 +12,6 @@ import {
   selectPersonalSummaryCV,
 } from "../../redux/about/about.selectors";
 import { toggleVibrate, toggleDownload } from "../../redux/about/about.actions";
-import { ReactComponent as ThokimanExcitedFace } from "../../assets/collections-icon/thokiman-icon/collections/excited_face.svg";
-import { ReactComponent as ThokimanNormalFace } from "../../assets/collections-icon/thokiman-icon/collections/normal_face.svg";
 import {
   ThokimanExcitedFaceIcon,
   ThokimanNormalFaceIcon,
@@ -28,6 +26,7 @@ import {
   AboutThankYouText,
   SummaryContainer,
 } from "./about-content-summary.styles";
+import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
 const AboutSummary = ({
   longDescription: { p1, p2, p3, p4 },
@@ -36,9 +35,10 @@ const AboutSummary = ({
   isDownloadClick,
   toggleDownload,
   toggleVibrate,
+  isSideBarHidden,
 }) => {
   return (
-    <SummaryContainer>
+    <SummaryContainer $issidebarhidden={isSideBarHidden}>
       <AboutSummaryContainer>
         <ThokimanNormalFaceIcon />
         <AboutSummaryTitle>
@@ -75,6 +75,7 @@ const mapStateToProps = createStructuredSelector({
   isDownloadClick: selectIsDownloadClick,
   longDescription: selectPersonalSummaryLongDescription,
   cv: selectPersonalSummaryCV,
+  isSideBarHidden: selectIsSideBarHidden,
 });
 
 const mapDispatchToProps = (dispatch) => ({

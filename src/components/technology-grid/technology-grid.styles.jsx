@@ -10,6 +10,9 @@ export const TechnologyGridContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  @media only screen and (max-width: 800px) {
+    top: 0;
+  }
 `;
 
 export const TechnologyTitle = styled.div`
@@ -21,6 +24,9 @@ export const TechnologyTitle = styled.div`
   letter-spacing: 0.01em;
   color: #e3e1e4;
   width: 15%;
+  @media only screen and (max-width: 800px) {
+    font-size: 25px;
+  }
 `;
 
 export const TechnologyGridContent = styled.div`
@@ -34,6 +40,10 @@ export const TechnologyGridContent = styled.div`
   justify-content: center;
   align-items: center;
   width: 30vw;
+  @media only screen and (max-width: 800px) {
+    justify-content: flex-end;
+    left: 175px;
+  }
 `;
 
 export const TechnologyGridItem = styled.div`
@@ -46,6 +56,10 @@ export const TechnologyGridItem = styled.div`
 export const TechnologyImage = styled.img`
   width: 80%;
   height: 100%;
+  @media only screen and (max-width: 800px) {
+    width: 55px;
+    height: 55px;
+  }
 `;
 TechnologyGridContainer.displayName = "TechnologyGridContainer";
 TechnologyTitle.displayName = "TechnologyTitle";

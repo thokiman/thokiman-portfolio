@@ -18,7 +18,7 @@ import {
   selectPhotographyColorRoute,
   selectPortfolioRoute,
 } from "../../redux/collection/collection.selectors";
-import { PortfolioContainer } from "./portfolio.styles";
+import { PortfolioContainer, PortfolioSideBarHide } from "./portfolio.styles";
 
 const Portfolio = ({
   portfolioRoute,
@@ -35,6 +35,9 @@ const Portfolio = ({
 }) => {
   return (
     <PortfolioContainer $issidebarhidden={isSideBarHidden}>
+      {isSideBarHidden ? (
+        <PortfolioSideBarHide>Port folio</PortfolioSideBarHide>
+      ) : null}
       <PortfolioHeader />
       <Route
         exact

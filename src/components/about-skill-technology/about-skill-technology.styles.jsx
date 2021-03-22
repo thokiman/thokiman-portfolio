@@ -6,11 +6,12 @@ export const AboutTechnologySkillContainer = styled.div`
   overflow-y: scroll;
   overflow-x: hidden;
   margin: 0 auto;
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+  }
 `;
 export const AboutTechnologyContentContainer = styled.div`
-  position: relative;
-  top: 5px;
-  margin: 10px auto;
+  margin: 20px auto;
   border-top: #74c6d4 solid 2px;
   border-bottom: #74c6d4 solid 2px;
 `;

@@ -62,6 +62,9 @@ const TimelineYearBoxBelowHide = css`
   &:hover {
     animation: ${pulsateBck} 0.5s ease-in-out infinite both;
   }
+  @media only screen and (max-width: 800px) {
+    font-size: 150%;
+  }
 `;
 
 const TimelineYearBoxBelowActive = css`
@@ -76,7 +79,9 @@ const TimelineYearBoxBelowActive = css`
   position: relative;
 
   cursor: pointer;
-
+  @media only screen and (max-width: 800px) {
+    font-size: 120%;
+  }
   &:hover {
     color: #e3e1e4;
   }
@@ -97,6 +102,9 @@ const TimelinePointerBelowHide = css`
     width 0.5s ease-in-out;
   animation: ${colorChange2x} 2s linear infinite alternate both;
   cursor: default;
+  @media only screen and (max-width: 800px) {
+    animation: none;
+  }
 `;
 
 const TimelinePointerBelowActive = css`
@@ -110,6 +118,11 @@ const TimelinePointerBelowActive = css`
   transition: top 0.2s ease-in-out, color 0.5s ease-in-out, height,
     width 0.5s ease-in-out;
   cursor: default;
+  @media only screen and (max-width: 800px) {
+    height: 70px;
+    width: 70px;
+    top: 6px;
+  }
 `;
 
 const getTimelinePointerBelow = (props) => {

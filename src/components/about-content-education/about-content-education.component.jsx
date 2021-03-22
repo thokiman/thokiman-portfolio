@@ -14,15 +14,17 @@ import AboutEducationExperience from "../about-education-experience/about-educat
 import AboutEducationCourse from "../about-education-course/about-education-course.component";
 import AboutEducationPersonality from "../about-education-personality/about-education-personality.component";
 import { EducationContainer } from "./about-content-education.styles";
+import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
 const AboutEducation = ({
   lastBachelor,
   lastExperiences,
   lastCourses,
   personality,
+  isSideBarHidden,
 }) => {
   return (
-    <EducationContainer>
+    <EducationContainer $issidebarhidden={isSideBarHidden}>
       <CSSTransitionGroup
         transitionAppear={true}
         transitionAppearTimeout={800}
@@ -44,6 +46,7 @@ const mapStateToProps = createStructuredSelector({
   lastExperiences: selectEducationItemsLastExperiences,
   lastCourses: selectEducationItemsLastCourses,
   personality: selectPersonality,
+  isSideBarHidden: selectIsSideBarHidden,
 });
 
 export default connect(mapStateToProps)(AboutEducation);

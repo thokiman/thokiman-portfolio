@@ -34,6 +34,9 @@ export const TimelineCareerYear = styled.div`
   letter-spacing: 0.5em;
   padding-left: 30px;
   text-shadow: #74c6d4 10px 23px;
+  @media only screen and (max-width: 800px) {
+    font-size: 250%;
+  }
 `;
 
 export const TimelineCareerCompany = styled.div`
@@ -45,6 +48,9 @@ export const TimelineCareerCompany = styled.div`
   padding: 10px 20px;
   position: relative;
   top: 91px;
+  @media only screen and (max-width: 800px) {
+    font-size: 150%;
+  }
 `;
 export const TimelineCareerTitleType = styled.div`
   ${TimelineCareerTextStyles}
@@ -58,6 +64,11 @@ export const TimelineCareerTitleType = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  @media only screen and (max-width: 800px) {
+    font-size: 140%;
+    font-weight: bold;
+    padding: 4px;
+  }
 `;
 
 export const TimelineCareerDateLength = styled.div`
@@ -73,6 +84,11 @@ export const TimelineCareerDateLength = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  @media only screen and (max-width: 800px) {
+    font-size: 100%;
+    font-weight: bold;
+    padding: 4px;
+  }
 `;
 
 export const TimelineCareerLocation = styled.div`
@@ -86,6 +102,12 @@ export const TimelineCareerLocation = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  @media only screen and (max-width: 800px) {
+    font-size: 100%;
+    font-weight: bold;
+
+    padding: 4px;
+  }
 `;
 export const TimelineCareerDescription = styled.div`
   ${TimelineCareerTextStyles}
@@ -99,6 +121,13 @@ export const TimelineCareerDescription = styled.div`
   line-height: 1.3em;
   margin-top: 60px;
   padding: 10px 20px;
+  @media only screen and (max-width: 800px) {
+    font-size: 100%;
+    letter-spacing: 0.08em;
+    font-weight: bold;
+    text-align: left;
+    padding: 4px;
+  }
 `;
 TimelineTextContainer.displayName = "TimelineTextContainer";
 TimelineCareerYearElement.displayName = "TimelineCareerYearElement";

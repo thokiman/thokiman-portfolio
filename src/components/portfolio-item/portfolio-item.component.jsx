@@ -1,14 +1,17 @@
 import React from "react";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 
 import {
   PortfolioImageCollection,
   PortfolioImageCollectionsContainer,
   PortfolioImageItem,
 } from "./portfolio-item.styles";
+import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
-const PortfolioItem = ({ items }) => {
+const PortfolioItem = ({ items, isSideBarHidden }) => {
   return (
-    <PortfolioImageCollectionsContainer>
+    <PortfolioImageCollectionsContainer $issidebarhidden={isSideBarHidden}>
       {items.map((item) => {
         return (
           <PortfolioImageCollection key={item.id}>
@@ -20,4 +23,8 @@ const PortfolioItem = ({ items }) => {
   );
 };
 
-export default PortfolioItem;
+const mapStateToProps = createStructuredSelector({
+  isSideBarHidden: selectIsSideBarHidden,
+});
+
+export default connect(mapStateToProps)(PortfolioItem);

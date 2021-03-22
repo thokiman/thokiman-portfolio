@@ -18,6 +18,7 @@ import {
   DirectoryServiceTextGd,
   DirectoryServiceTextPg,
 } from "./service-header.styles";
+import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
 const ServiceHeader = ({
   location: { pathname },
@@ -25,9 +26,10 @@ const ServiceHeader = ({
   photo,
   engineer,
   fullstack,
+  isSideBarHidden,
 }) => {
   return (
-    <LeftServiceContainer>
+    <LeftServiceContainer $issidebarhidden={isSideBarHidden}>
       <CSSTransitionGroup
         transitionAppear={true}
         transitionAppearTimeout={800}
@@ -78,6 +80,7 @@ const mapStateToProps = createStructuredSelector({
   photo: selectPhotoService,
   engineer: selectEngineerService,
   fullstack: selectFullstackService,
+  isSideBarHidden: selectIsSideBarHidden,
 });
 
 export default withRouter(connect(mapStateToProps)(ServiceHeader));

@@ -9,7 +9,7 @@ import ServiceHeader from "../../components/service-header/service-header.compon
 import ServiceEngineer from "../../components/service-engineer/service-engineer.component";
 import ServicePhotography from "../../components/service-photography/service-photography.component";
 import ServiceFullStackDeveloper from "../../components/service-full-stack-developer/service-full-stack-developer.component";
-import { ServiceContainer } from "./service.styles";
+import { ServiceContainer, ServiceSideBarHide } from "./service.styles";
 import ServiceGraphicDesign from "../../components/service-graphic-design/service-graphic-design.component";
 import {
   selectArtService,
@@ -29,6 +29,9 @@ const Service = ({
 }) => {
   return (
     <ServiceContainer $issidebarhidden={isSideBarHidden}>
+      {isSideBarHidden ? (
+        <ServiceSideBarHide>Serv ice</ServiceSideBarHide>
+      ) : null}
       <ServiceHeader />
       <Switch>
         <Route exact path={serviceRoute} component={ServiceHomeContent} />

@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import styled, { css, keyframes } from "styled-components";
 
 export const AboutHeaderSkillContainer = styled.div`
-  margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -10,6 +9,11 @@ export const AboutHeaderSkillContainer = styled.div`
   width: 60vw;
   padding: 15px;
   margin-bottom: 10px;
+
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+    height: 40px;
+  }
 `;
 
 const AboutTextBoxStyles = css`
@@ -20,6 +24,9 @@ const AboutTextBoxStyles = css`
   font-family: futura-book;
   font-size: 20px;
   letter-spacing: 0.03em;
+  @media only screen and (max-width: 800px) {
+    font-size: 20px;
+  }
 `;
 const AboutTextBoxActive = css`
   ${AboutTextBoxStyles}

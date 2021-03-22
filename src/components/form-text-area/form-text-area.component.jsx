@@ -23,7 +23,7 @@ const FormTextArea = ({ handleChange, label, ...props }) => {
       }
       <FormTextAreaElement onChange={handleChange} {...props} />
       {label ? (
-        <FormLabelElement value={props.value}>{label}</FormLabelElement>
+        <FormLabelElement $value={props.value}>{label}</FormLabelElement>
       ) : null}
     </FormTextAreaGroup>
   );

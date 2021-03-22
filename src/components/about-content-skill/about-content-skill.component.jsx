@@ -14,15 +14,17 @@ import VisualArtSkill from "../about-skill-visual-art/about-skill-visual-art.com
 import EngineerSkill from "../about-skill-engineer/about-skill-engineer.component";
 import TechnologySkill from "../about-skill-technology/about-skill-technology.component";
 import { SkillContainer } from "./about-content-skill.styles";
+import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
 const AboutSkill = ({
   match: { url },
   visualDesignCommunication,
   engineer,
   technology,
+  isSideBarHidden,
 }) => {
   return (
-    <SkillContainer className="skill-container">
+    <SkillContainer $issidebarhidden={isSideBarHidden}>
       <CSSTransitionGroup
         transitionAppear={true}
         transitionAppearTimeout={800}
@@ -59,6 +61,7 @@ const mapStateToProps = createStructuredSelector({
   visualDesignCommunication: selectSkillVisualDesignCommunication,
   engineer: selectSkillEngineer,
   technology: selectSkillTechnology,
+  isSideBarHidden: selectIsSideBarHidden,
 });
 
 export default withRouter(connect(mapStateToProps)(AboutSkill));

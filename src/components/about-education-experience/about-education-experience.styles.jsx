@@ -22,6 +22,9 @@ export const AboutEducationExperienceTitle = styled.div`
   font-kerning: auto;
   padding: 0 2px;
   color: #e3e1e4;
+  @media only screen and (max-width: 800px) {
+    font-size: 400%;
+  }
 `;
 
 export const AboutEducationExperienceAttributes = styled.div`
@@ -55,6 +58,11 @@ export const AboutEducationExperienceCompany = styled.div`
   grid-area: education-experience-company;
   font-size: 250%;
   padding: 10px 0;
+  @media only screen and (max-width: 800px) {
+    padding: 4px;
+    font-size: 220%;
+    text-align: left;
+  }
 `;
 
 export const AboutEducationExperienceField = styled.div`
@@ -63,6 +71,10 @@ export const AboutEducationExperienceField = styled.div`
   font-size: 200%;
   padding: 0 10px;
   border-left: #74c6d4 solid 2px;
+  @media only screen and (max-width: 800px) {
+    padding: 4px;
+    font-size: 140%;
+  }
 `;
 
 export const AboutEducationExperienceStartEndDate = styled.div`
@@ -70,6 +82,10 @@ export const AboutEducationExperienceStartEndDate = styled.div`
   grid-area: education-experience-start-end-date;
   padding: 10px 0;
   font-size: 150%;
+  @media only screen and (max-width: 800px) {
+    padding: 4px;
+    font-size: 120%;
+  }
 `;
 
 export const AboutEducationExperienceDescription = styled.div`
@@ -79,6 +95,10 @@ export const AboutEducationExperienceDescription = styled.div`
   text-align: left;
   font-size: 120%;
   border-left: #74c6d4 solid 2px;
+  @media only screen and (max-width: 800px) {
+    padding: 4px;
+    font-size: 95%;
+  }
 `;
 
 export const AboutEducationExperienceGrade = styled.div`
@@ -86,6 +106,10 @@ export const AboutEducationExperienceGrade = styled.div`
   grid-area: education-experience-grade;
   padding: 10px 0;
   font-size: 150%;
+  @media only screen and (max-width: 800px) {
+    padding: 4px;
+    font-size: 140%;
+  }
 `;
 
 AboutEducationExperienceContent.displayName = "AboutEducationExperienceContent";

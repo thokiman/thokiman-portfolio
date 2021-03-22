@@ -29,7 +29,10 @@ const Header = ({
   return (
     <>
       <SideBarIcon />
-      <HeaderContainer $issidebarhidden={isSideBarHidden}>
+      <HeaderContainer
+        $issidebarhidden={isSideBarHidden}
+        $matchpath={!!pathname.match(RegExp(`${portfolioRoute}+`))}
+      >
         <HeaderPILogoContainer to="/" $issidebarhidden={isSideBarHidden}>
           <HeaderPILogo />
         </HeaderPILogoContainer>
@@ -37,7 +40,6 @@ const Header = ({
           <HeaderLink $matchpath={!!pathname.match(RegExp(/^\/$/))} to="/">
             Home
           </HeaderLink>
-
           <HeaderLink
             to={aboutRoute}
             $matchpath={!!pathname.match(RegExp(`${aboutRoute}+`))}

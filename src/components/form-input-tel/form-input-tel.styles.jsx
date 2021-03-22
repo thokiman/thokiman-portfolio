@@ -9,6 +9,13 @@ const shrinkLabel = css`
   font-size: 2vw;
   color: ${mainColor};
 `;
+const shrinkLabelMobile = css`
+  @media only screen and (max-width: 800px) {
+    color: ${mainColor};
+    font-size: 5vw;
+    top: -0.5vh;
+  }
+`;
 
 export const FormInputTelGroup = styled.div`
   position: relative;
@@ -22,10 +29,17 @@ export const FormInputTelCheckerContainer = styled.span`
   color: ${subColor};
   position: absolute;
   left: -1.5vw;
+  @media only screen and (max-width: 800px) {
+    left: -3vw;
+  }
 `;
 const FormInputTelCheckerIconStyles = css`
   width: 2vw;
   height: 2vh;
+  @media only screen and (max-width: 800px) {
+    width: 3.5vw;
+    height: 3.5vh;
+  }
 `;
 export const FormInputTelCheckerIconTrue = styled(FaCheckCircle)`
   ${FormInputTelCheckerIconStyles}
@@ -64,6 +78,11 @@ const FormInputTelElementStyles = css`
   &:focus ~ label {
     ${shrinkLabel}
   }
+  @media only screen and (max-width: 800px) {
+    &:focus ~ label {
+      ${shrinkLabelMobile}
+    }
+  }
 `;
 
 const FormInputTelElementAreaCode = css`
@@ -85,7 +104,10 @@ export const FormInputTelElement = styled.input`
 `;
 
 const getFormLabelElementShrink = (props) => {
-  if (props.value.length) return shrinkLabel;
+  if (props.$value.length) return shrinkLabel;
+};
+const getFormLabelElementShrinkMobile = (props) => {
+  if (props.$value.length) return shrinkLabelMobile;
 };
 
 export const FormLabelElement = styled.label`
@@ -98,6 +120,12 @@ export const FormLabelElement = styled.label`
   left: 2vw;
   transition: 300ms ease all;
   ${getFormLabelElementShrink}
+  @media only screen and (max-width: 800px) {
+    font-size: 6vw;
+    top: 2vh;
+    left: 5vw;
+    ${getFormLabelElementShrinkMobile}
+  }
 `;
 
 FormInputTelGroup.displayName = "FormInputTelGroup";

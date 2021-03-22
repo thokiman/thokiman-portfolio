@@ -1,11 +1,22 @@
 import { Link } from "react-router-dom";
 import styled, { css, keyframes } from "styled-components";
 import { ReactComponent as WhiteOutlineThokiman } from "../../assets/collections-icon/thokiman-icon/logo/outline/thokiman_head_logo_cream.svg";
-
+const SideBarActive = css`
+  display: none;
+`;
+const getSideBarActive = (props) => {
+  if (props.$issidebarhidden) return SideBarActive;
+  return null;
+};
 export const ContactInformationContainer = styled.div`
   width: 35%;
   height: 72vh;
   background-color: rgba(18, 129, 148, 0.5);
+  @media only screen and (max-width: 800px) {
+    width: 100vw;
+    height: 120vh;
+    ${getSideBarActive}
+  }
 `;
 export const ContactInformationTitle = styled.div`
   font-size: 3.4vw;
@@ -15,6 +26,11 @@ export const ContactInformationTitle = styled.div`
   letter-spacing: 0.05em;
   position: relative;
   top: 2vh;
+  @media only screen and (max-width: 800px) {
+    font-size: 8vw;
+    padding-left: 10vw;
+    ${getSideBarActive}
+  }
 `;
 
 export const ContactInformationContent = styled.div`
@@ -41,6 +57,10 @@ export const ContactInformationContent = styled.div`
   height: 45vh;
   position: relative;
   top: 4vh;
+  @media only screen and (max-width: 800px) {
+    width: 80vw;
+    height: 54.5vh;
+  }
 `;
 
 const contactThokiOutCreamHover = keyframes`

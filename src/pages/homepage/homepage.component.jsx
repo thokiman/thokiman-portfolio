@@ -9,6 +9,7 @@ import HomePageProfileTextContainer from "../../components/homepage-background-p
 import {
   HomepageContainer,
   HomepageAboutContentContainer,
+  HomepageSideBarHide,
 } from "./homepage.styles";
 import {
   selectPersonalSummaryQuote,
@@ -19,6 +20,9 @@ import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 const HomePage = (props) => {
   return (
     <HomepageContainer $issidebarhidden={props.isSideBarHidden}>
+      {props.isSideBarHidden ? (
+        <HomepageSideBarHide>Ho me</HomepageSideBarHide>
+      ) : null}
       <HomePageThokimanContentContainer />
       <HomepageAboutContentContainer>
         <HomePageProfileImageContainer />

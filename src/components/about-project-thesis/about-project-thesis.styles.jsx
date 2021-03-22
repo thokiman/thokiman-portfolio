@@ -16,6 +16,9 @@ export const AboutThesisProjectTitle = styled.div`
   text-align: left;
   display: flex;
   align-items: center;
+  @media only screen and (max-width: 800px) {
+    font-size: 350%;
+  }
 `;
 
 export const AboutThesisProjectAttributes = styled.div`
@@ -51,6 +54,9 @@ export const AboutNameThesisProject = styled.div`
   grid-area: name-thesis-project;
   font-size: 220%;
   padding: 10px;
+  @media only screen and (max-width: 800px) {
+    font-size: 190%;
+  }
 `;
 
 export const AboutTypeThesisProject = styled.div`
@@ -73,9 +79,11 @@ export const AboutStartEndDateThesisProject = styled.div`
   font-size: 130%;
   border-bottom: #74c6d4 solid 1px;
   line-height: 1.1em;
-
   letter-spacing: 0.05em;
   padding: 10px 0;
+  @media only screen and (max-width: 800px) {
+    font-size: 110%;
+  }
 `;
 export const AboutLengthThesisProject = styled.div`
   ${AboutThesisProjectStyles}
@@ -85,6 +93,9 @@ export const AboutLengthThesisProject = styled.div`
   letter-spacing: 0.05em;
   padding: 10px 0;
   border-bottom: #74c6d4 solid 1px;
+  @media only screen and (max-width: 800px) {
+    font-size: 110%;
+  }
 `;
 export const AboutDescriptionThesisProject = styled.div`
   ${AboutThesisProjectStyles}
@@ -92,6 +103,9 @@ export const AboutDescriptionThesisProject = styled.div`
   font-size: 120%;
   line-height: 1.1em;
   letter-spacing: 0.05em;
+  @media only screen and (max-width: 800px) {
+    font-size: 100%;
+  }
 `;
 
 AboutThesisProjectContainer.displayName = "AboutThesisProjectContainer";

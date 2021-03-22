@@ -22,39 +22,41 @@ const SideBarHeader = ({
   serviceRoute,
   contactRoute,
 }) => {
+  const homeText = "Home";
+  const AboutText = "About";
+  const portfolioText = "Portfolio";
+  const serviceText = "Service";
+  const contactText = "Contact";
   return (
     <SideBarHeaderContainer $issidebarhidden={isSideBarHidden}>
       <SideBarHeaderTextContainer>
         <SideBarHeaderLink $matchpath={!!pathname.match(RegExp(/^\/$/))} to="/">
-          Home
+          {homeText}
         </SideBarHeaderLink>
-
         <SideBarHeaderLink
           to={aboutRoute}
           $matchpath={!!pathname.match(RegExp(`${aboutRoute}+`))}
         >
-          About
+          {AboutText}
         </SideBarHeaderLink>
 
         <SideBarHeaderLink
           to={portfolioRoute}
           $matchpath={!!pathname.match(RegExp(`${portfolioRoute}+`))}
         >
-          Portfolio
+          {portfolioText}
         </SideBarHeaderLink>
-
         <SideBarHeaderLink
           to={serviceRoute}
           $matchpath={!!pathname.match(RegExp(`${serviceRoute}+`))}
         >
-          Service
+          {serviceText}
         </SideBarHeaderLink>
-
         <SideBarHeaderLink
           to={contactRoute}
           $matchpath={pathname.match(RegExp(`${contactRoute}+`))}
         >
-          Contact
+          {contactText}
         </SideBarHeaderLink>
       </SideBarHeaderTextContainer>
     </SideBarHeaderContainer>

@@ -2,6 +2,13 @@ import styled, { keyframes, css } from "styled-components";
 import { Link } from "react-router-dom";
 import { ReactComponent as ThokimanExcitedFace } from "../../assets/collections-icon/thokiman-icon/collections/excited_face.svg";
 import { ReactComponent as ThokimanNormalFace } from "../../assets/collections-icon/thokiman-icon/collections/normal_face.svg";
+const SideBarActive = css`
+  display: none;
+`;
+const getSideBarActive = (props) => {
+  if (props.$issidebarhidden) return SideBarActive;
+  return null;
+};
 
 export const SummaryContainer = styled.div`
   background-color: rgba(18, 129, 148, 0.8);
@@ -12,6 +19,11 @@ export const SummaryContainer = styled.div`
   overflow-x: hidden;
   font-family: baskerville-old-face;
   padding: 40px 0;
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+    margin: 0;
+    ${getSideBarActive}
+  }
 `;
 
 SummaryContainer.displayName = "SummaryContainer";
@@ -33,6 +45,10 @@ export const AboutSummaryContainer = styled.div`
     "download-link download-link download-link download-link";
   margin: 0 auto;
   width: 94.5%;
+  @media only screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 AboutSummaryContainer.displayName = "AboutSummaryContainer";
@@ -157,6 +173,10 @@ export const AboutSummaryTitle = styled.div`
   text-align: left;
   margin: 0 auto;
   padding-left: 15px;
+  @media only screen and (max-width: 800px) {
+    font-size: 180%;
+    line-height: 1.2em;
+  }
 `;
 
 AboutSummaryTitle.displayName = "AboutSummaryTitle";
@@ -170,6 +190,11 @@ const AboutSummaryParagraphStyles = css`
   padding-left: 15px;
   line-height: 1.3em;
   text-indent: 1em;
+  @media only screen and (max-width: 800px) {
+    font-size: 89%;
+    letter-spacing: 0.06em;
+    text-align: left;
+  }
 `;
 export const AboutSummaryTextOne = styled.p`
   ${AboutSummaryTextStyles}
@@ -224,6 +249,9 @@ export const AboutDownloadText = styled.div`
   border-bottom: #3f4249 solid 1px;
   padding-bottom: 3px;
   letter-spacing: 0.125em;
+  @media only screen and (max-width: 800px) {
+    font-size: 150%;
+  }
   &:hover {
     animation: ${downloadText} 1.5s linear infinite;
   }
@@ -239,6 +267,9 @@ export const AboutThankYouText = styled.div`
   animation: ${thankYouText} 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
   padding-bottom: 3px;
   letter-spacing: 0.125em;
+  @media only screen and (max-width: 800px) {
+    font-size: 150%;
+  }
 `;
 AboutThankYouText.displayName = "AboutThankYouText";
 
@@ -355,6 +386,10 @@ export const ThokimanExcitedFaceIcon = styled(ThokimanExcitedFace)`
   height: 75%;
   opacity: 0.8;
   ${getThokimanFaceIcon}
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 ThokimanExcitedFaceIcon.displayName = "ThokimanExcitedFaceIcon";

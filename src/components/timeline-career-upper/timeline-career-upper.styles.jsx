@@ -5,7 +5,6 @@ export const UpperTimelineHeaderContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
-
   margin: 20px 0;
   cursor: pointer;
   height: 100%;

@@ -6,6 +6,5 @@ export const PortfolioLoadingState = styled(Rings)`
   margin: 10px auto;
   display: flex;
   justify-content: center;
-  #
 `;
 PortfolioLoadingState.displayName = "PortfolioLoadingState";

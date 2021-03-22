@@ -5,11 +5,12 @@ export const AboutVisualArtSkillContainer = styled.div`
   height: 88%;
   overflow-y: scroll;
   overflow-x: hidden;
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+  }
 `;
 export const AboutVisualArtContentContainer = styled.div`
-  position: relative;
-  top: 5px;
-  margin: 10px auto;
+  margin: 20px auto;
 `;
 
 AboutVisualArtSkillContainer.displayName = "AboutVisualArtSkillContainer";

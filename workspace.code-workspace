@@ -1,13 +1,10 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "../../udemy/reactdev/crwn-clothing"
-		}
-	],
-	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "thomas_portfolio"
-	}
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "../../udemy/reactdev/crwn-clothing"
+    }
+  ]
 }

@@ -11,6 +11,11 @@ export const RightServiceContainerPg = styled.div`
   justify-content: center;
   overflow-y: scroll;
   overflow-x: hidden;
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+    right: 0;
+    height: 50vh;
+  }
 `;
 
 export const RightServiceContentPg = styled.div`

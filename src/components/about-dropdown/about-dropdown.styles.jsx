@@ -1,5 +1,14 @@
 import styled, { css } from "styled-components";
 import TimelineImage from "../../assets/layout/water-2.jpg";
+
+const SideBarActive = css`
+  display: none;
+`;
+const getSideBarActive = (props) => {
+  if (props.$issidebarhidden) return SideBarActive;
+  return null;
+};
+
 const AboutDropdownStyles = css`
   width: 30vw;
   display: flex;
@@ -8,10 +17,18 @@ const AboutDropdownStyles = css`
   text-align: center;
   margin-left: 2vw;
   transition: height 0.5s ease-in-out, top 0.2s ease;
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+    height: 50vh;
+    margin-left: 0;
+    margin-top: 20px;
+    ${getSideBarActive}
+  }
 `;
 
 const AboutDropdownLeftPageContainer = css`
   ${AboutDropdownStyles}
+
   height: 98%;
 `;
 
@@ -21,6 +38,9 @@ const AboutDropdownLeftPageContainerTimeline = css`
   width: 320px;
   background: url(${TimelineImage});
   background-size: cover;
+  @media only screen and (max-width: 800px) {
+    background-image: none;
+  }
 `;
 
 const getAboutDropdownContainer = ({ $matchpath }) => {

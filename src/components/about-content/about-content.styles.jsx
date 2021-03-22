@@ -3,13 +3,27 @@ import { ReactComponent as ThokimanSkeletonGray } from "../../assets/collections
 import { ReactComponent as ThokimanBodyGray } from "../../assets/collections-icon/thokiman-icon/page/thokiman_body_gray.svg";
 import { ReactComponent as ThokimanHandGray } from "../../assets/collections-icon/thokiman-icon/page/thokiman_hand_gray.svg";
 import { ReactComponent as ThokimanLegGray } from "../../assets/collections-icon/thokiman-icon/page/thokiman_leg_gray.svg";
-
+const SideBarActive = css`
+  display: none;
+`;
+const getSideBarActive = (props) => {
+  if (props.$issidebarhidden) return SideBarActive;
+  return null;
+};
 export const RightPageContainer = styled.div`
   background-color: rgba(18, 129, 148, 0.85);
   width: 64.5vw;
   margin-right: 2vw;
   padding: 40px 0;
   height: 98%;
+
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+    height: 80vh;
+    margin: 0;
+
+    ${getSideBarActive}
+  }
 `;
 
 RightPageContainer.displayName = "RightPageContainer";
@@ -27,6 +41,11 @@ export const RightPageContent = styled.div`
     "topgrid-skeletonleft topgrid-skeletonmiddle topgrid-skeletonright"
     "middlegrid-lefthand maingrid-body middlegrid-righthand"
     "bottomgrid-leftleg maingrid-body bottomgrid-rightleg";
+  @media only screen and (max-width: 800px) {
+    width: 95%;
+    height: 100%;
+    gap: 0 18px;
+  }
 `;
 
 RightPageContent.displayName = "RightPageContent ";
@@ -90,7 +109,7 @@ const thokimanLegShow = keyframes`
 
 //skeleton
 const ThokimanSkeletonContentStyles = css`
-  width: 120px;
+  width: 105px;
   height: 100%;
 `;
 
@@ -330,6 +349,10 @@ const ThokimanHandRightContainerShow = css`
   transform: rotate(-90deg);
   animation: ${thokimanSkeletonShow} 2s ease-in-out;
   transition: all 4s ease-in-out;
+  @media only screen and (max-width: 800px) {
+    top: -28px;
+    right: 20px;
+  }
 `;
 const getThokimanHandRightContainer = (props) => {
   if (props.$isdropdownhidden) {
@@ -374,6 +397,10 @@ const ThokimanHandLeftContainerShow = css`
   transform: rotate(-90deg) scaleY(-1);
   transition: all 4s ease-in-out;
   animation: ${thokimanSkeletonShow} 2s ease-in-out;
+  @media only screen and (max-width: 800px) {
+    top: -28px;
+    left: 20px;
+  }
 `;
 
 const getThokimanHandLeftContainer = (props) => {
@@ -420,6 +447,9 @@ const ThokimanLegRightContainerShow = css`
   grid-area: bottomgrid-rightleg;
   transition: all 4s ease-in-out;
   animation: ${thokimanLegShow} 2s ease-in-out;
+  @media only screen and (max-width: 800px) {
+    right: 50px;
+  }
 `;
 
 const getThokimanLegRightContainer = (props) => {
@@ -466,6 +496,9 @@ const ThokimanLegLeftContainerShow = css`
   transition: all 4s ease-in-out;
   transform: rotate(-135deg) scaleY(-1);
   animation: ${thokimanLegShow} 2s ease-in-out;
+  @media only screen and (max-width: 800px) {
+    left: 55px;
+  }
 `;
 
 const getThokimanLegLeftContainer = (props) => {

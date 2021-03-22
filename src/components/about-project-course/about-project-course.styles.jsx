@@ -17,6 +17,9 @@ export const AboutCourseProjectTitle = styled.div`
   text-align: left;
   display: flex;
   align-items: center;
+  @media only screen and (max-width: 800px) {
+    font-size: 350%;
+  }
 `;
 
 export const AboutCourseProjectAttributes = styled.div`
@@ -62,6 +65,9 @@ export const AboutNameCourseProject = styled(Link)`
   letter-spacing: 0.09em;
   display: flex;
   justify-content: flex-end;
+  @media only screen and (max-width: 800px) {
+    font-size: 170%;
+  }
 
   &:hover {
     animation: ${aboutLinkCourseProject} 0.5s ease-in-out;
@@ -77,6 +83,10 @@ export const AboutRelatedCourseProject = styled.div`
   padding: 15px;
   letter-spacing: 0.06em;
   text-align: left;
+  @media only screen and (max-width: 800px) {
+    font-size: 120%;
+    line-height: 1.2em;
+  }
 `;
 
 export const AboutDescriptionCourseProject = styled.div`
@@ -90,6 +100,10 @@ export const AboutDescriptionCourseProject = styled.div`
   line-height: 1.2em;
   letter-spacing: 0.05em;
   margin: 10px auto;
+  @media only screen and (max-width: 800px) {
+    font-size: 100%;
+    text-align: left;
+  }
 `;
 
 AboutCourseProjectContainer.displayName = "AboutCourseProjectContainer";

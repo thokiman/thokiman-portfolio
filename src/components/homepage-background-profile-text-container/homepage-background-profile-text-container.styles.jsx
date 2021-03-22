@@ -1,5 +1,11 @@
 import styled, { css } from "styled-components";
-
+const SideBarActive = css`
+  display: none;
+`;
+const getSideBarActive = (props) => {
+  if (props.$issidebarhidden) return SideBarActive;
+  return null;
+};
 export const HomepageProfileTextContainer = styled.div`
   height: 100%;
   width: 100%;
@@ -8,6 +14,7 @@ export const HomepageProfileTextContainer = styled.div`
   justify-content: center;
   @media only screen and (max-width: 800px) {
     background-color: #3f4249;
+    ${getSideBarActive}
   }
 `;
 

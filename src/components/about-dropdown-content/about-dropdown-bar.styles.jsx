@@ -9,6 +9,10 @@ export const AboutDropdownContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  @media only screen and (max-width: 800px) {
+    width: 100vw;
+    height: 50vh;
+  }
 `;
 AboutDropdownContainer.displayName = "AboutDropdownContainer";
 const thokimanHeadColorShow = keyframes`
@@ -19,6 +23,17 @@ const thokimanHeadColorShow = keyframes`
 
                  100% {
                      transform: translateY(0) rotate(0deg);
+                     opacity: 1;
+                 }
+`;
+const thokimanHeadColorShowMobile = keyframes`
+                 0% {
+                     transform: translateX(800px) rotate(-540deg);
+                     opacity: 0;
+                 }
+
+                 100% {
+                     transform: translateX(0) rotate(0deg);
                      opacity: 1;
                  }
 `;
@@ -35,6 +50,19 @@ const thokimanHeadColorHide = keyframes`
     }
 
 `;
+const thokimanHeadColorHideMobile = keyframes`
+    0% {
+      transform: translateX(-800px) rotate(540deg);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateX(0) rotate(0deg);
+      opacity: 1;
+    }
+
+`;
+
 export const AboutThokimanHeadColorContainer = styled.div`
   display: block;
   width: 100%;
@@ -50,6 +78,9 @@ export const AboutThokimanHeadColorShow = styled(ThokimanHeadColor)`
   position: relative;
   top: -10px;
   animation: ${thokimanHeadColorShow} 0.6s ease-out both;
+  @media only screen and (max-width: 800px) {
+    animation: ${thokimanHeadColorShowMobile} 0.6s ease-out both;
+  }
 `;
 AboutThokimanHeadColorShow.displayName = "AboutThokimanHeadColorShow";
 export const AboutThokimanHeadColorHide = styled(ThokimanHeadColor)`
@@ -58,6 +89,9 @@ export const AboutThokimanHeadColorHide = styled(ThokimanHeadColor)`
   position: relative;
   top: 20px;
   animation: ${thokimanHeadColorHide} 0.6s ease-out both;
+  @media only screen and (max-width: 800px) {
+    animation: ${thokimanHeadColorHideMobile} 0.6s ease-out both;
+  }
 `;
 AboutThokimanHeadColorHide.displayName = "AboutThokimanHeadColorHide";
 const aboutDropdownContent = keyframes`
@@ -77,6 +111,9 @@ export const AboutDropdownContent = styled.div`
   height: 8%;
   display: flex;
   align-items: center;
+  @media only screen and (max-width: 800px) {
+    height: 50px;
+  }
   &:hover {
     background-color: rgba($color: #128194, $alpha: 0.7);
     animation: ${aboutDropdownContent} 0.3s ease-in-out;

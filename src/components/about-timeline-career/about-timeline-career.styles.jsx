@@ -1,9 +1,27 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import { FaArrowCircleUp } from "react-icons/fa";
+import TimelineImage from "../../assets/layout/water-2.jpg";
+const SideBarActive = css`
+  display: none;
+`;
+const getSideBarActive = (props) => {
+  console.log(props);
+  if (props.$issidebarhidden) return SideBarActive;
+  return null;
+};
 
 export const AboutTimelineContainer = styled.div`
   width: 80%;
   font-family: futura-demi;
+
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+    background-image: url(${TimelineImage});
+    background-color: rgba(116, 198, 212, 1);
+    background-size: cover;
+    background-blend-mode: multiply;
+    ${getSideBarActive}
+  }
 `;
 
 const aboutTimelineCareerTitle = keyframes`
@@ -83,6 +101,9 @@ export const AboutScrollToTheTop = styled(FaArrowCircleUp)`
   width: 30px;
   height: 30px;
   animation: ${aboutScrollToTheTop} 2s both infinite;
+  @media only screen and (max-width: 800px) {
+    left: 20px;
+  }
 `;
 
 AboutTimelineContainer.displayName = "AboutTimelineContainer";

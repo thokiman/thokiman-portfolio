@@ -25,6 +25,10 @@ export const FormInputCheckerContainer = styled.span`
 const FormInputCheckerIconStyles = css`
   width: 2vw;
   height: 2vh;
+  @media only screen and (max-width: 800px) {
+    width: 3.5vw;
+    height: 3.5vh;
+  }
 `;
 export const FormInputCheckerIconTrue = styled(FaCheckCircle)`
   ${FormInputCheckerIconStyles}

@@ -16,6 +16,9 @@ export const AboutExperienceProjectTitle = styled.div`
   text-align: left;
   display: flex;
   align-items: center;
+  @media only screen and (max-width: 800px) {
+    font-size: 350%;
+  }
 `;
 
 export const AboutExperienceProjectAtttributes = styled.div`
@@ -43,6 +46,9 @@ export const AboutNameExperienceProject = styled.div`
   font-size: 200%;
   padding: 10px;
   letter-spacing: 0.09em;
+  @media only screen and (max-width: 800px) {
+    font-size: 150%;
+  }
 `;
 
 export const AboutDescriptionExperienceProject = styled.div`
@@ -55,6 +61,9 @@ export const AboutDescriptionExperienceProject = styled.div`
   line-height: 1.1em;
   letter-spacing: 0.05em;
   margin: 10px auto;
+  @media only screen and (max-width: 800px) {
+    font-size: 100%;
+  }
 `;
 AboutExperienceProjectContainer.displayName = "AboutExperienceProjectContainer";
 AboutExperienceProjectTitle.displayName = "AboutExperienceProjectTitle";

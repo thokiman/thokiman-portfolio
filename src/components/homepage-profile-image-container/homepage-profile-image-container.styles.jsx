@@ -1,7 +1,14 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import HomepageProfile from "../../assets/profile/profile.png";
 
+const SideBarActive = css`
+  display: none;
+`;
+const getSideBarActive = (props) => {
+  if (props.$issidebarhidden) return SideBarActive;
+  return null;
+};
 export const HomepageProfileImageContainer = styled.div`
   height: 100%;
   max-width: 51.3vw;
@@ -11,7 +18,7 @@ export const HomepageProfileImageContainer = styled.div`
   position: relative;
   background-color: #080808;
   @media only screen and (max-width: 800px) {
-    display: none;
+    ${getSideBarActive}
   }
 `;
 

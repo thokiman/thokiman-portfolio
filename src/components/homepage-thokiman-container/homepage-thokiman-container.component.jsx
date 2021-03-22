@@ -1,5 +1,8 @@
 import React from "react";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 
+import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 import {
   HomepageThokimanBodyContainer,
   HomepageThokimanContainer,
@@ -9,10 +12,10 @@ import {
   HomepageWhiteThokimanSkeleton,
 } from "./homepage-thokiman-container.styles";
 
-const HomePageThokimanContentContainer = () => {
+const HomePageThokimanContentContainer = ({ isSideBarHidden }) => {
   return (
     <HomepageThokimanContentContainer>
-      <HomepageThokimanContainer>
+      <HomepageThokimanContainer $issidebarhidden={isSideBarHidden}>
         <HomepageThokimanHeadContainer>
           <HomepageThokimanHeadOutline />
         </HomepageThokimanHeadContainer>
@@ -24,4 +27,8 @@ const HomePageThokimanContentContainer = () => {
   );
 };
 
-export default HomePageThokimanContentContainer;
+const mapStateToProps = createStructuredSelector({
+  isSideBarHidden: selectIsSideBarHidden,
+});
+
+export default connect(mapStateToProps)(HomePageThokimanContentContainer);

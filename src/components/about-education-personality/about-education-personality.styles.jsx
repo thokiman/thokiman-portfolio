@@ -13,6 +13,9 @@ export const AboutPersonalityTitle = styled.div`
   padding: 40px 10px;
   font-size: 250%;
   color: #e3e1e4;
+  @media only screen and (max-width: 800px) {
+    font-size: 120%;
+  }
 `;
 
 export const AboutPersonalityBox = styled.div`
@@ -32,6 +35,9 @@ export const AboutPersonalityTextBox = styled.div`
   transition: color 0.2s ease-in-out;
   font-kerning: auto;
   letter-spacing: 0.025em;
+  @media only screen and (max-width: 800px) {
+    font-size: 100%;
+  }
 `;
 
 AboutPersonalityContainer.displayName = "AboutPersonalityContainer";

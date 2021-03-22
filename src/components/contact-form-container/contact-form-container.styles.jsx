@@ -1,5 +1,13 @@
 import styled, { css } from "styled-components";
 
+const SideBarActive = css`
+  display: none;
+`;
+const getSideBarActive = (props) => {
+  if (props.$issidebarhidden) return SideBarActive;
+  return null;
+};
+
 export const ContactFormContainer = styled.div`
   width: 35vw;
   height: 72vh;
@@ -8,6 +16,13 @@ export const ContactFormContainer = styled.div`
   justify-content: center;
   overflow-y: scroll;
   overflow-x: hidden;
+  @media only screen and (max-width: 800px) {
+    margin: 10px 0;
+    border: red solid 1px;
+    width: 100vw;
+    height: 120vh;
+    ${getSideBarActive}
+  }
 `;
 
 const ContactFormGroupStyles = css`
@@ -16,7 +31,6 @@ const ContactFormGroupStyles = css`
 `;
 const ContactFormGroupHide = css`
   ${ContactFormGroupStyles}
-
   height: 1600px;
   padding-top: 15px;
 `;
@@ -42,6 +56,9 @@ export const ContactFormHead = styled.div`
   letter-spacing: 0.01em;
   color: #128194;
   text-indent: 0.5em;
+  @media only screen and (max-width: 800px) {
+    font-size: 9vw;
+  }
 `;
 
 export const ContactFormSubhead = styled.div`
@@ -50,6 +67,9 @@ export const ContactFormSubhead = styled.div`
   line-height: 1.7em;
   letter-spacing: 0.05em;
   color: #bccfd5;
+  @media only screen and (max-width: 800px) {
+    font-size: 6vw;
+  }
 `;
 
 export const ButtonIcon = styled.span`

@@ -1,4 +1,12 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+const SideBarActive = css`
+  display: none;
+`;
+const getSideBarActive = (props) => {
+  if (props.$issidebarhidden) return SideBarActive;
+  return null;
+};
 
 export const PortfolioImageCollectionsContainer = styled.div`
   width: 100%;
@@ -8,6 +16,9 @@ export const PortfolioImageCollectionsContainer = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(auto-fill, 1fr);
   overflow: hidden;
+  @media only screen and (max-width: 800px) {
+    ${getSideBarActive}
+  }
 `;
 export const PortfolioImageCollection = styled.div`
   width: 100%;

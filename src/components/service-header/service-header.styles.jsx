@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom";
 import styled, { css, keyframes } from "styled-components";
 
+const SideBarActive = css`
+  display: none;
+`;
+const getSideBarActive = (props) => {
+  if (props.$issidebarhidden) return SideBarActive;
+  return null;
+};
+
 export const LeftServiceContainer = styled.div`
   width: 25vw;
   height: 68vh;
@@ -11,6 +19,11 @@ export const LeftServiceContainer = styled.div`
   position: relative;
   left: 4vw;
   transition: height 0.5s ease-in-out, top 0.2s ease;
+  @media only screen and (max-width: 800px) {
+    width: 100vw;
+    left: 0;
+    ${getSideBarActive}
+  }
 `;
 export const DirectoryService = styled.div`
   display: grid;
@@ -24,6 +37,10 @@ export const DirectoryService = styled.div`
   height: 76%;
   width: 95%;
   cursor: pointer;
+  @media only screen and (max-width: 800px) {
+    width: 98vw;
+    height: 50vh;
+  }
 `;
 const directoryServiceHover = keyframes`
     0% {
@@ -61,6 +78,10 @@ const DirectoryServiceTextStyles = css`
   padding: 0 10px;
   color: #e3e1e4;
   transition: color 1s linear;
+  @media only screen and (max-width: 800px) {
+    font-size: 6vw;
+    padding: 25px;
+  }
 `;
 
 const DirectoryServiceTextEngStyles = css`

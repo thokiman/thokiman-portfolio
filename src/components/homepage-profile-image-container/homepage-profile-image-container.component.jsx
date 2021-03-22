@@ -1,4 +1,7 @@
 import React from "react";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
 import {
   HomepageBackgroundProfileImage,
@@ -6,9 +9,9 @@ import {
   HomepageProfileImageContainer,
 } from "./homepage-profile-image-container.styles";
 
-const HomePageProfileImageContainer = () => {
+const HomePageProfileImageContainer = ({ isSideBarHidden }) => {
   return (
-    <HomepageProfileImageContainer>
+    <HomepageProfileImageContainer $issidebarhidden={isSideBarHidden}>
       <HomepageBackgroundProfileImage>
         <HomepageProfileImage />
       </HomepageBackgroundProfileImage>
@@ -16,4 +19,8 @@ const HomePageProfileImageContainer = () => {
   );
 };
 
-export default HomePageProfileImageContainer;
+const mapStateToProps = createStructuredSelector({
+  isSideBarHidden: selectIsSideBarHidden,
+});
+
+export default connect(mapStateToProps)(HomePageProfileImageContainer);

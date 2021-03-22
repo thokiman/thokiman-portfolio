@@ -12,6 +12,11 @@ export const TimelineHeaderContainer = styled.div`
     "below-timeline-header-container below-timeline-header-container below-timeline-header-container below-timeline-header-container";
 
   align-items: center;
+  padding: 10px;
+  @media only screen and (max-width: 800px) {
+    position: relative;
+    left: -10px;
+  }
 `;
 export const SeparatedLineTimelineHeader = styled.div`
   width: 420%;
@@ -19,6 +24,10 @@ export const SeparatedLineTimelineHeader = styled.div`
   overflow: hidden;
   position: relative;
   left: 120px;
+  @media only screen and (max-width: 800px) {
+    width: 90vw;
+    left: 15px;
+  }
 `;
 const timelineWipe = keyframes`
       to {

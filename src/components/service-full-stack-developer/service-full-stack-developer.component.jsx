@@ -10,12 +10,14 @@ import {
 import ServiceGeneralContent from "../service-general-content/service-general-content.component";
 import ServiceIconContent from "../service-icon-content/service-icon-content.component";
 import { selectFullstackService } from "../../redux/service/service.selectors";
+import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
 const ServiceFullStackDeveloper = ({
+  isSideBarHidden,
   fullstack: { title, description, items },
 }) => {
   return (
-    <RightServiceContainerFS>
+    <RightServiceContainerFS $issidebarhidden={isSideBarHidden}>
       <CSSTransitionGroup
         transitionAppear={true}
         transitionAppearTimeout={800}
@@ -33,5 +35,6 @@ const ServiceFullStackDeveloper = ({
 };
 const mapStateToProps = createStructuredSelector({
   fullstack: selectFullstackService,
+  isSideBarHidden: selectIsSideBarHidden,
 });
 export default connect(mapStateToProps)(ServiceFullStackDeveloper);

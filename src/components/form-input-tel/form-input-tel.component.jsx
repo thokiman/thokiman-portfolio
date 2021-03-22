@@ -23,7 +23,7 @@ const FormInputTel = ({ handleChange, label, ...props }) => {
       }
       <FormInputTelElement onChange={handleChange} {...props} />
       {label ? (
-        <FormLabelElement value={props.value}>{label}</FormLabelElement>
+        <FormLabelElement $value={props.value}>{label}</FormLabelElement>
       ) : null}
     </FormInputTelGroup>
   );

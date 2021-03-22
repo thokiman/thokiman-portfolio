@@ -16,11 +16,13 @@ export const VisualArtTitle = styled.div`
   margin: 7px auto;
   text-align: center;
   line-height: 1.5em;
-
   font-size: 500%;
   font-kerning: auto;
   letter-spacing: 0.02em;
   color: #e3e1e4;
+  @media only screen and (max-width: 800px) {
+    font-size: 400%;
+  }
 `;
 
 export const VisualArtGridContent = styled.div`
@@ -29,6 +31,10 @@ export const VisualArtGridContent = styled.div`
   grid-gap: 3px;
   grid-auto-columns: minmax(150px, auto);
   grid-auto-rows: minmax(150px, auto);
+  @media only screen and (max-width: 800px) {
+    grid-auto-columns: minmax(115px, auto);
+    grid-auto-rows: minmax(115px, auto);
+  }
 `;
 
 export const VisualArtGridItem = styled.div`

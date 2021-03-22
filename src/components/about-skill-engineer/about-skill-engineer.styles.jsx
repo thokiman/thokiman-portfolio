@@ -6,5 +6,8 @@ export const AboutEngineerSkillContainer = styled.div`
   overflow-y: scroll;
   overflow-x: hidden;
   margin: 0 auto;
+  @media only screen and (max-width: 800px) {
+    width: 98%;
+  }
 `;
 AboutEngineerSkillContainer.displayName = "AboutEngineerSkillContainer";

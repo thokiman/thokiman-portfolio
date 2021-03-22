@@ -10,10 +10,14 @@ import {
 import ServiceGeneralContent from "../service-general-content/service-general-content.component";
 import ServiceIconContent from "../service-icon-content/service-icon-content.component";
 import { selectArtService } from "../../redux/service/service.selectors";
+import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
-const ServiceGraphicDesign = ({ art: { title, description, items } }) => {
+const ServiceGraphicDesign = ({
+  isSideBarHidden,
+  art: { title, description, items },
+}) => {
   return (
-    <RightServiceContainerGd>
+    <RightServiceContainerGd $issidebarhidden={isSideBarHidden}>
       <CSSTransitionGroup
         transitionAppear={true}
         transitionAppearTimeout={800}
@@ -31,5 +35,6 @@ const ServiceGraphicDesign = ({ art: { title, description, items } }) => {
 };
 const mapStateToProps = createStructuredSelector({
   art: selectArtService,
+  isSideBarHidden: selectIsSideBarHidden,
 });
 export default connect(mapStateToProps)(ServiceGraphicDesign);

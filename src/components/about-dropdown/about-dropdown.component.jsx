@@ -9,15 +9,17 @@ import {
 } from "../../redux/about/about.selectors";
 import AboutDropdownBar from "../about-dropdown-content/about-dropdown-bar.component";
 import { AboutDropdownContainer } from "./about-dropdown.styles";
-
+import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 const AboutDropdown = ({
   location: { pathname },
   aboutRoute,
   timelineCareerRoute,
+  isSideBarHidden,
 }) => {
   return (
     <AboutDropdownContainer
       $matchpath={!!pathname.match(`${aboutRoute}${timelineCareerRoute}`)}
+      $issidebarhidden={isSideBarHidden}
     >
       <AboutDropdownBar />
     </AboutDropdownContainer>
@@ -27,5 +29,6 @@ const AboutDropdown = ({
 const mapStateToProps = createStructuredSelector({
   timelineCareerRoute: selectTimelineCareerRoute,
   aboutRoute: selectAboutRoute,
+  isSideBarHidden: selectIsSideBarHidden,
 });
 export default withRouter(connect(mapStateToProps)(AboutDropdown));

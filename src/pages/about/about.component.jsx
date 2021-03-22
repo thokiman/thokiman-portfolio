@@ -12,7 +12,7 @@ import AboutProject from "../../components/about-content-project/about-content-p
 import AboutSummary from "../../components/about-content-summary/about-content-summary.component";
 import AboutTimelineCareer from "../../components/about-timeline-career/about-timeline-career.component";
 
-import { AboutPage } from "./about.styles";
+import { AboutPage, AboutSideBarHide } from "./about.styles";
 import {
   selectAboutRoute,
   selectEducationRoute,
@@ -38,6 +38,7 @@ const About = ({
       matchpath={!!pathname.match(`${aboutRoute}${timelineCareerRoute}$`)}
       $issidebarhidden={isSideBarHidden}
     >
+      {isSideBarHidden ? <AboutSideBarHide>Abo ut</AboutSideBarHide> : null}
       <AboutDropdown />
       <Switch>
         <Route exact path={aboutRoute} component={AboutHomeContent} />

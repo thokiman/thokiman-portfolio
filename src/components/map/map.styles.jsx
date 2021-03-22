@@ -25,12 +25,12 @@ export const MapContainer = styled.div`
   position: relative;
   top: 4px;
   .mapboxgl-popup-content {
-    max-width: 200px;
-    height: 115px;
+    height: 16vh;
+    width: 25vh;
     box-shadow: 3px 3px 2px ${greenColor};
     font-family: futura-book;
-    font-size: 20px;
-    line-height: 1.1em;
+    font-size: 2vw;
+    line-height: 1.25em;
     background-color: ${grayColor};
     opacity: 0.9;
     letter-spacing: 0.15em;
@@ -50,6 +50,10 @@ export const MapContainer = styled.div`
   .mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip,
   .mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip {
     border-bottom-color: ${grayColor};
+  }
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+    height: 50vh;
   }
 `;
 MapContainer.displayName = "MapContainer";

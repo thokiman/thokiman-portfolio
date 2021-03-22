@@ -29,8 +29,10 @@ import {
   ContactFormHead,
   ContactFormSubhead,
 } from "./contact-form-container.styles";
+import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
 const ContactForm = ({
+  isSideBarHidden,
   isTypeClick,
   isButtonClick,
   toggleSubmitButtonClick,
@@ -86,7 +88,7 @@ const ContactForm = ({
   };
 
   return (
-    <ContactFormContainer>
+    <ContactFormContainer $issidebarhidden={isSideBarHidden}>
       <ContactFormGroup $istypeclick={isTypeClick}>
         <ContactFormHead>General Inquiries</ContactFormHead>
         <ContactFormSubhead>
@@ -185,6 +187,7 @@ const ContactForm = ({
 const mapStateToProps = createStructuredSelector({
   isTypeClick: selectIsTypeClickContact,
   isButtonClick: selectIsButtonClickContact,
+  isSideBarHidden: selectIsSideBarHidden,
 });
 
 const mapDispatchToProps = (dispatch) =>

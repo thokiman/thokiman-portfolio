@@ -16,6 +16,9 @@ export const DescriptionEngineerSkill = styled.div`
   width: 100%;
   font-size: 2.3vw;
   letter-spacing: 0.03em;
+  @media only screen and (max-width: 800px) {
+    font-size: 15px;
+  }
 `;
 
 DescriptionEngineerSkill.displayName = "DescriptionEngineerSkill";

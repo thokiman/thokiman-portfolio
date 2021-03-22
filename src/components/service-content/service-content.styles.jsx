@@ -1,6 +1,13 @@
 import styled, { keyframes, css } from "styled-components";
 import { ReactComponent as ThokimanHeadGrayColor } from "../../assets/collections-icon/thokiman-icon/logo/color/thokiman_head_color.svg";
 import { ReactComponent as WhiteOutlineThokiman } from "../../assets/collections-icon/thokiman-icon/logo/outline/thokiman_head_logo_cream.svg";
+const SideBarActive = css`
+  display: none;
+`;
+const getSideBarActive = (props) => {
+  if (props.$issidebarhidden) return SideBarActive;
+  return null;
+};
 
 export const RightServiceContainer = styled.div`
   background-color: rgba(18, 129, 148, 0.7);
@@ -11,6 +18,13 @@ export const RightServiceContainer = styled.div`
   right: 4vw;
   display: flex;
   justify-content: center;
+  @media only screen and (max-width: 800px) {
+    border: red solid 1px;
+    width: 100%;
+    right: 0;
+    height: 50vh;
+    ${getSideBarActive}
+  }
 `;
 const thokimanHeadColor = keyframes`
       0% {

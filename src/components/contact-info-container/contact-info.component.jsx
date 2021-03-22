@@ -1,5 +1,7 @@
 import React from "react";
-
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 import {
   ContactInformationContainer,
   ContactInformationContent,
@@ -25,9 +27,13 @@ import {
   PhotoContactLinkIconShutterStock,
 } from "./contact-info.styles";
 
-const ContactInfo = ({ title, items: { socialIcon, photoIcon } }) => {
+const ContactInfo = ({
+  isSideBarHidden,
+  title,
+  items: { socialIcon, photoIcon },
+}) => {
   return (
-    <ContactInformationContainer>
+    <ContactInformationContainer $issidebarhidden={isSideBarHidden}>
       <ContactInformationTitle>{title}</ContactInformationTitle>
       <ContactInformationContent>
         <WhiteThokimanContactIcon0 />
@@ -124,4 +130,8 @@ const ContactInfo = ({ title, items: { socialIcon, photoIcon } }) => {
   );
 };
 
-export default ContactInfo;
+const mapStateToProps = createStructuredSelector({
+  isSideBarHidden: selectIsSideBarHidden,
+});
+
+export default connect(mapStateToProps)(ContactInfo);

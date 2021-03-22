@@ -30,6 +30,9 @@ export const NameEngineerSkill = styled.div`
   padding: 10px;
   font-size: 3vw;
   letter-spacing: 0.04em;
+  @media only screen and (max-width: 800px) {
+    font-size: 20px;
+  }
 `;
 
 EngineerContentContainer.displayName = "EngineerContentContainer";

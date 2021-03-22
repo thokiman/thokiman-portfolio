@@ -28,6 +28,9 @@ export const ServiceTitle = styled.div`
   letter-spacing: 0.1em;
   font-kerning: auto;
   animation: ${serviceTitle} 3s linear infinite alternate both;
+  @media only screen and (max-width: 800px) {
+    font-size: 8vw;
+  }
 `;
 
 export const ServiceDescription = styled.div`
@@ -55,6 +58,9 @@ export const ServiceDescriptionTitle = styled.div`
   color: rgba(188, 207, 213, 0.9);
   letter-spacing: 0.02em;
   font-kerning: auto;
+  @media only screen and (max-width: 800px) {
+    font-size: 6vw;
+  }
 `;
 export const ServiceDescriptionItem = styled.div`
   font-size: 2.5vw;
@@ -63,6 +69,10 @@ export const ServiceDescriptionItem = styled.div`
   letter-spacing: 0.06em;
   line-height: 1.5em;
   font-kerning: auto;
+  @media only screen and (max-width: 800px) {
+    font-size: 3.7vw;
+    text-align: left;
+  }
 `;
 
 ServiceGeneralContentContainer.displayName = "ServiceGeneralContentContainer";

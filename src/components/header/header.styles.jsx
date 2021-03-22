@@ -21,6 +21,15 @@ const getHeaderSideBarActive = (props) => {
   return HeaderSideBarActive;
 };
 
+const HeaderPortfolioColor = css`
+  transition: background-color 0.5s ease;
+  background-color: black;
+`;
+
+const getHeaderPortfolioColor = (props) => {
+  if (props.$matchpath) return HeaderPortfolioColor;
+};
+
 export const HeaderContainer = styled.div`
   background-color: ${grayColor};
   color: ${greenColor};
@@ -29,7 +38,8 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 14vh;
-
+  transition: background-color 0.5s ease;
+  ${getHeaderPortfolioColor}
   @media only screen and (max-width: 800px) {
     position: relative;
     top: 0;
@@ -38,6 +48,7 @@ export const HeaderContainer = styled.div`
     bottom: 0;
     width: 66vw;
     transition: left 0.5s ease;
+    opacity: 0.5;
   }
   ${getHeaderSideBarActive};
 `;
@@ -65,7 +76,7 @@ const piBlueDisplay = keyframes`
 `;
 
 const HeaderPILogoContainerActive = css`
-  left: 140px;
+  left: 35vw;
   transition: left 0.5s ease;
 `;
 
@@ -85,7 +96,7 @@ export const HeaderPILogoContainer = styled(Link)`
   @media only screen and (max-width: 800px) {
     width: 120px;
     position: absolute;
-    left: -8px;
+    left: -2vw;
     transition: left 0.5s ease;
     ${getHeaderPILogoContainerActive}
   }

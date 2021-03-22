@@ -65,6 +65,4 @@ export const SideBarHeaderLink = styled(Link)`
     font-size: 30px;
     margin: 10px 0;
     padding: 5px 0;
-    
-    
 `;
