@@ -1,5 +1,5 @@
 export const contact = {
-  id: "6abfc40c-ba16-47a4-8c86-0dfdfcb4632d",
+  id: "334fe5d8-5a48-49dc-91ad-38f98e73ea4f",
   title: "Contact Information",
   routeName: "/contact",
   info: {
@@ -13,61 +13,61 @@ export const contact = {
   items: {
     socialIcon: [
       {
-        id: "c7705c55-870a-4880-b322-e84d13f9738e",
+        id: "9dbed783-13cb-4aca-8310-7f9be8357e14",
         field: "Facebook",
         linkUrl: "https://www.facebook.com/santosa.thomas",
         iconPath: {
-          id: "e9723a6e-b76c-42ad-8ce8-810349e92bf2",
+          id: "f0ddff78-4225-40cf-9d17-5f8816631f33",
           field: "facebook",
           iconPath: "/images/icon/contact/social-icon/facebook.svg",
         },
       },
       {
-        id: "15b175b3-66c2-4dde-be4f-c3b5cfef15eb",
+        id: "d48437c3-32b3-4ce2-abb5-6adb75f8280f",
         field: "Github",
         linkUrl: "https://github.com/thokiman",
         iconPath: {
-          id: "6b556ede-0540-45aa-ad9c-94b8e1649e7a",
+          id: "b2539d83-2926-4101-bad5-43a96334ffc9",
           field: "github",
           iconPath: "/images/icon/contact/social-icon/github.svg",
         },
       },
       {
-        id: "08478561-dba3-4702-b98e-4fa6bc45f72b",
+        id: "edf999c2-f13b-44a2-aed2-6fd87db2d5ff",
         field: "Instagram",
         linkUrl: "https://www.instagram.com/thokiman.peace",
         iconPath: {
-          id: "ddd57e32-a5f7-437d-8092-c866ada852e1",
+          id: "589a41f1-bb63-4806-b9fc-42f0e129eed2",
           field: "instagram",
           iconPath: "/images/icon/contact/social-icon/instagram.svg",
         },
       },
       {
-        id: "6ccd6bc6-2fc7-42d4-aa9c-521975e459fb",
+        id: "01f2dc72-896c-4a66-a495-67e547dee561",
         field: "Linkedin",
         linkUrl: "https://www.linkedin.com/in/thomasantosa",
         iconPath: {
-          id: "52097fc1-c644-4991-a69c-1c0691f7ff01",
+          id: "a760e49f-3697-4da0-a05b-5b86ff356224",
           field: "linkedin",
           iconPath: "/images/icon/contact/social-icon/linkedin.svg",
         },
       },
       {
-        id: "13855c7f-843a-498b-ae17-d8a9c964b3b7",
+        id: "b51ed723-dbef-49b3-b790-98bd363110fa",
         field: "Twitter",
         linkUrl: "https://twitter.com/thokithepricker",
         iconPath: {
-          id: "d1c5cfe9-f758-465d-9067-6a73debfc94b",
+          id: "68dd6f48-c9a9-4144-ada9-0d24b42413df",
           field: "twitter",
           iconPath: "/images/icon/contact/social-icon/twitter.svg",
         },
       },
       {
-        id: "b341167a-b24f-430d-9f00-c7a0478087f5",
+        id: "f66048f8-0132-4383-b3fb-2e3ccf3f7aae",
         field: "Whatsapp",
         linkUrl: "https://api.whatsapp.com/send?phone=6282121448894",
         iconPath: {
-          id: "3bc1b38a-759d-4fd3-b90b-62a62f9a5aa1",
+          id: "0f5943a9-12c3-4f1f-a3d0-06451fa0c580",
           field: "whatsapp",
           iconPath: "/images/icon/contact/social-icon/whatsapp.svg",
         },
@@ -75,33 +75,33 @@ export const contact = {
     ],
     photoIcon: [
       {
-        id: "47339662-dfaa-4c2b-8931-cce8fd26294c",
+        id: "f633aae0-7442-4553-9932-b6f84044ea7e",
         field: "Adobe Stock",
         linkUrl: "https://stock.adobe.com/contributor/209666177/Thomas",
         iconPath: {
-          id: "fa3bb3bc-814b-435e-a2fa-0d4cf3d4c6f5",
+          id: "413e3c66-b86d-4d17-b72e-a7b8e26cfe47",
           field: "adobe-stock",
           iconPath:
             "/images/icon/service/photography-icon/photo-stock-icon/adobe-stock.svg",
         },
       },
       {
-        id: "64040327-7f9c-4565-8951-83e4c01e21b4",
+        id: "a9cc3c7f-ee6d-4fff-9918-cd225998b6b8",
         field: "EyeEm",
         linkUrl: "https://www.eyeem.com/u/thokimanpeace",
         iconPath: {
-          id: "4de9b70a-98a8-47a1-8f04-0d785c7f8cfc",
+          id: "19dbae63-8a69-4520-811f-9acfa7fb9031",
           field: "eye-em",
           iconPath:
             "/images/icon/service/photography-icon/photo-stock-icon/eye-em.svg",
         },
       },
       {
-        id: "26f8abaf-db69-47e2-a790-db297fc430fc",
+        id: "69f11497-13ed-4c36-9eff-82c5c066f20f",
         field: "ShutterStock",
         linkUrl: "http://www.shutterstock.com/g/ThomasSantosa",
         iconPath: {
-          id: "ad282fc3-bed5-488b-bfdc-012233171229",
+          id: "bd586c8f-3ca9-467a-8e7c-7c6b484d42d8",
           field: "shutter-stock",
           iconPath:
             "/images/icon/service/photography-icon/photo-stock-icon/shutter-stock.svg",

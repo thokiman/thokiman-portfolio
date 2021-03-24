@@ -25,7 +25,7 @@ const FooterGeneral = ({ socialIcon, isSideBarHidden }) => {
         </ProfileFooterIcon>
         <ProfileFooterText $issidebarhidden={isSideBarHidden}>
           Copyright<sup>&#9400;</sup>2021.
-          <em>Allright reserved </em>| Thomas Santosa, B. Eng.
+          <em>Allright reserved </em>| Thomas Santosa, B.Eng.
         </ProfileFooterText>
       </ProfileFooterContainer>
       <br />

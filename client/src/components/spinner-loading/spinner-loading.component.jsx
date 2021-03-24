@@ -10,8 +10,8 @@ const SpinnerLoading = () => {
       <Loader
         type="Watch"
         color="#e3e1e4"
-        height={400}
-        width={400}
+        height={200}
+        width={200}
         visible={true}
       />
     </SpinnerContainer>

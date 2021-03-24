@@ -8,9 +8,8 @@ export const SpinnerContainer = styled.div`
   align-items: center;
   justify-content: center;
   @media only screen and (max-width: 800px) {
-    height: 30vh;
     position: absolute;
-    top: 20vh;
+    top: 25vh;
     padding: 0;
   }
 `;
