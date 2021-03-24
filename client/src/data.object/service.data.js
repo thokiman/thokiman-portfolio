@@ -1,25 +1,25 @@
 export const service = {
-  id: "0299dc4f-fce3-4521-8df9-978f68d2bd86",
+  id: "d891eb78-4f6d-49c4-b519-5ccf34cf8f26",
   title: "Service",
   routeName: "/service",
   art: {
-    id: "0821f166-9f5c-437c-a4ab-c523e0aa3441",
+    id: "ebefb7a3-60d6-4037-b186-a94a87b5bb6e",
     title: ".visual design communication",
     description: [
       {
-        id: "9d069b18-2b71-4909-ab44-78c1cf0ef267",
+        id: "e1da1acf-863a-4c75-a026-6117679fbac0",
         title: "Sketch",
         description:
           "Rough drawing representing the chief features of an object or scene and often made as a preliminary study",
       },
       {
-        id: "1da03200-d991-45bb-ad9d-7fe5c0956e4e",
+        id: "3d4e3ff0-3dba-4364-a1b2-51bff5c274dc",
         title: "Raster",
         description:
           "Raster graphics are bitmaps. A bitmap is a grid of individual pixels that collectively compose an image. Raster graphics render images as a collection of countless tiny squares. Each square, or pixel, is coded in a specific hue or shade.",
       },
       {
-        id: "1953a41f-0536-448a-9956-a68c750df877",
+        id: "5fc37585-0f4d-43df-b2e2-ae7397cbfe62",
         title: "Vector",
         description:
           "Computer graphics images that are defined in terms of points on a Cartesian plane, which are connected by lines and curves to form polygons and other shapes.",
@@ -28,46 +28,46 @@ export const service = {
     routeName: "/service/visualart",
     items: [
       {
-        id: "6cb7efca-11af-479b-88d8-0f16dfc5c92a",
+        id: "940edb01-85f5-41f0-ad77-5729346c1c8c",
         field: "adobe-illustrator",
         iconPath: "/images/icon/service/visual-art-icon/adobe-illustrator.svg",
       },
       {
-        id: "f6f16221-b65a-4e14-b165-2c77a95ee125",
+        id: "d98e4c47-4fca-47c5-9b56-8b6e5d354753",
         field: "procreate",
         iconPath: "/images/icon/service/visual-art-icon/procreate.svg",
       },
       {
-        id: "9783332b-8ef8-4f6a-8cf2-a67df5fdc91a",
+        id: "f02b430d-6eb8-4020-bb97-a6c55d9620a9",
         field: "sketchbook",
         iconPath: "/images/icon/service/visual-art-icon/sketchbook.svg",
       },
     ],
   },
   photo: {
-    id: "193feaa9-eec6-4c32-9e74-b6c4f86fe4c4",
+    id: "889f498a-a85d-4997-84f4-a0d814015230",
     title: ".photography",
     description: [
       {
-        id: "a89eff79-9261-4388-a6b7-7a3198b25c8c",
+        id: "7bf08bf8-af95-476f-aee1-c29c7921b04b",
         title: "Photo Shoot",
         description:
           "Photography is the art, application, and practice of creating durable images by recording light, either electronically by means of an image sensor, or chemically by means of a light sensitive material such as photographic film.",
         items: [
           {
-            id: "fe83906e-b593-40b0-b737-7ba7f76afdc8",
+            id: "4411dcc8-939e-4609-86f9-a3024bd9e461",
             name: "adobe-lightroom",
             iconPath:
               "/images/icon/service/photography-icon/adobe-lightroom.svg",
           },
           {
-            id: "eef18bb7-e1d4-4446-981d-faa0f8992fdf",
+            id: "69a48969-d0ef-4579-9a85-f40560040171",
             name: "adobe-photoshop",
             iconPath:
               "/images/icon/service/photography-icon/adobe-photoshop.svg",
           },
           {
-            id: "413bc933-11dd-4f53-8f30-a45256f7f833",
+            id: "ba528ea5-3d7e-4209-95fd-ab11c9fe1304",
             name: "canon-eos-technology",
             iconPath:
               "/images/icon/service/photography-icon/canon-eos-technology.svg",
@@ -78,33 +78,33 @@ export const service = {
     routeName: "/service/photo",
     items: [
       {
-        id: "1015d55e-a41b-4ef3-9474-c964a17755e8",
+        id: "2de1db99-bb70-4ade-83a6-5925a0049569",
         field: "Adobe Stock",
         linkUrl: "https://stock.adobe.com/contributor/209666177/Thomas",
         iconPath: {
-          id: "413e3c66-b86d-4d17-b72e-a7b8e26cfe47",
+          id: "ffc57df6-e619-4a9b-9669-3bee2ed3df82",
           field: "adobe-stock",
           iconPath:
             "/images/icon/service/photography-icon/photo-stock-icon/adobe-stock.svg",
         },
       },
       {
-        id: "22eae288-e40a-4997-95ad-9415f30f637a",
+        id: "c2122e50-bcad-4641-a2d7-5d80d364b145",
         field: "EyeEm",
         linkUrl: "https://www.eyeem.com/u/thokimanpeace",
         iconPath: {
-          id: "19dbae63-8a69-4520-811f-9acfa7fb9031",
+          id: "3180ceb1-29cf-44a4-a545-65ea7069c41e",
           field: "eye-em",
           iconPath:
             "/images/icon/service/photography-icon/photo-stock-icon/eye-em.svg",
         },
       },
       {
-        id: "b01b5728-e910-45f4-b3ef-75064f1d62dc",
+        id: "add4aa85-03ee-40a9-9673-4c1d2cf7d880",
         field: "ShutterStock",
         linkUrl: "http://www.shutterstock.com/g/ThomasSantosa",
         iconPath: {
-          id: "bd586c8f-3ca9-467a-8e7c-7c6b484d42d8",
+          id: "2a0aecbf-5275-4179-a5e5-04028740c123",
           field: "shutter-stock",
           iconPath:
             "/images/icon/service/photography-icon/photo-stock-icon/shutter-stock.svg",
@@ -113,23 +113,23 @@ export const service = {
     ],
   },
   engineer: {
-    id: "bcbf3b2b-ca81-4e6b-9a20-8a4e78b13099",
+    id: "57758919-a683-4cd4-a528-4c3633afe99a",
     title: ".engineer",
     description: [
       {
-        id: "83718ee2-0ed2-47ed-b18f-299f0293bf65",
+        id: "6ee8d57e-55a9-40a9-92a4-3f6cf7ffa219",
         title: "Process Engineer",
         description:
           "Responsible for designing, implementing, controlling and optimizing industrial processes, especially continuous ones within the chemical, petrochemical, agriculture, mineral processing, food, pharmaceutical, and biotechnological industries.",
       },
       {
-        id: "fb5710e0-b817-4307-877b-30b642187507",
+        id: "beda7bab-582f-4ba6-b638-56e3e32a27cd",
         title: "Distributed Control System Operator",
         description:
           "Responsible for recording, compiling, reporting and documenting operating data, and monitoring process indicators. Coordinate the start-up, shut-down (normal and emergency) and normal operations/maintenance activities with lead operator and field operators.",
       },
       {
-        id: "706a1e17-e295-4b4d-9b01-4eb26dcb1aa7",
+        id: "7a5b6b8a-7f69-47e2-97ee-abe04a0fa32c",
         title: "Field Operator",
         description:
           "Responsible for setting up, operating and troubleshooting a variety of machines and/or equipment on customer site in accordance with established procedures and guidelines. Reads and interprets blueprints and diagrams to select, position and secure machinery.",
@@ -138,28 +138,28 @@ export const service = {
     routeName: "/service/engineer",
     items: [
       {
-        id: "8ca4469d-b7a2-45d4-92d3-8eb09f180eae",
+        id: "0bf1e5a9-7f95-45b7-9fe9-ac13e44bc2cd",
         field: "dcs",
         iconPath: "/images/icon/service/engineer-icon/dcs.svg",
       },
       {
-        id: "961175cc-1cae-4dfc-9927-6e982f434f92",
+        id: "2472fe52-7377-4e83-acd4-f9f7933c88f4",
         field: "field-operation",
         iconPath: "/images/icon/service/engineer-icon/field-operation.svg",
       },
       {
-        id: "4993585e-a0b8-4188-aaf0-3400ff373fe6",
+        id: "b40f97c7-d61a-4fab-9eb2-a15ce4bee616",
         field: "process-engineer",
         iconPath: "/images/icon/service/engineer-icon/process-engineer.svg",
       },
     ],
   },
   fullstack: {
-    id: "e0fca64f-f67d-42a5-b704-d798f35b471f",
+    id: "d8b57b05-886c-4e8f-8db6-355ae8a3e250",
     title: ".fullstack web developer",
     description: [
       {
-        id: "923d0c35-72d3-4283-8f10-2de0d79ea871",
+        id: "840775df-9b7c-46b5-83d0-a0d9cf1e91c5",
         title: "Web Developer",
         description:
           "Designing user interactions on websites, developing servers and databases for website functionality and coding for mobile platforms.",
@@ -168,37 +168,37 @@ export const service = {
     routeName: "/service/fullstack",
     items: [
       {
-        id: "2556c227-6948-47db-bcfb-be57c2359d47",
+        id: "c949d0d4-c425-4d5e-9a1c-00b4a986128f",
         field: "express",
         iconPath:
           "/images/icon/service/full-stack-developer/back-end/express.svg",
       },
       {
-        id: "1e541d5e-36fc-4354-874b-dc85f53e8224",
+        id: "b9169754-1df4-4722-8f6b-b9e4de1169e0",
         field: "firebase-db",
         iconPath:
           "/images/icon/service/full-stack-developer/back-end/firebase-db.svg",
       },
       {
-        id: "6970205e-6750-4619-9f1b-c586cdee3173",
+        id: "8ce7ae09-a5c5-4c37-91d2-68f800841185",
         field: "node-js",
         iconPath:
           "/images/icon/service/full-stack-developer/back-end/node-js.svg",
       },
       {
-        id: "7c3ba037-e8c0-4725-ace3-57f6b056c02a",
+        id: "878e0575-bb71-451c-9b47-378d84e33d5c",
         field: "react-ui-library",
         iconPath:
           "/images/icon/service/full-stack-developer/front-end/react-ui-library.svg",
       },
       {
-        id: "1c3e607f-6403-4acf-8f38-76859c87f720",
+        id: "b80bf5c3-a31a-4c53-a29e-44bb908ec708",
         field: "python",
         iconPath:
           "/images/icon/service/full-stack-developer/data-engineer/python.svg",
       },
       {
-        id: "49118fac-2729-4f4b-9c35-9d0dc4ccc66f",
+        id: "6b4c7d56-a141-49a1-8304-a08f9fc6fc0a",
         field: "sql",
         iconPath:
           "/images/icon/service/full-stack-developer/data-engineer/sql.svg",
