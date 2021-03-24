@@ -9,6 +9,7 @@ import {
 import MarkerContent from "../map-marker/map-marker.component";
 import MapPopUp from "../map-popup/map-popup.component";
 import { MapContainer } from "./map.styles";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 const MapContent = ({ address, zoom }) => {
   const mapContainerRef = useRef();
