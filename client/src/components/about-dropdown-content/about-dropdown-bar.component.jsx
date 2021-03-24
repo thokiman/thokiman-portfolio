@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
@@ -10,7 +10,7 @@ import {
   selectTimelineCareerRoute,
 } from "../../redux/about/about.selectors";
 import AboutDropdownOptions from "../about-dropdown-options/about-dropdown-options.component";
-import { ReactComponent as ThokimanHeadColor } from "../../assets/collections-icon/thokiman-icon/logo/color/thokiman_head_color.svg";
+
 import {
   AboutDropdownContainer,
   AboutThokimanHeadColorContainer,
