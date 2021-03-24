@@ -18,7 +18,6 @@ export const ContactFormContainer = styled.div`
   overflow-x: hidden;
   @media only screen and (max-width: 800px) {
     margin: 10px 0;
-    border: red solid 1px;
     width: 100vw;
     height: 120vh;
     ${getSideBarActive}

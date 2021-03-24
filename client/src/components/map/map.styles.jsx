@@ -29,8 +29,8 @@ export const MapContainer = styled.div`
     width: 25vh;
     box-shadow: 3px 3px 2px ${greenColor};
     font-family: futura-book;
-    font-size: 2vw;
-    line-height: 1.25em;
+    font-size: 15px;
+    line-height: 1.4em;
     background-color: ${grayColor};
     opacity: 0.9;
     letter-spacing: 0.15em;
@@ -42,8 +42,8 @@ export const MapContainer = styled.div`
   .mapboxgl-popup-close-button {
     color: ${creamColor};
     position: relative;
-    left: 180px;
-    top: -110px;
+    left: 146px;
+    top: -100px;
   }
 
   .mapboxgl-popup-anchor-top .mapboxgl-popup-tip,
