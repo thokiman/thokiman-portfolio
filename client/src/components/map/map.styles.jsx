@@ -25,15 +25,12 @@ export const MapContainer = styled.div`
   position: relative;
   top: 4px;
   .mapboxgl-popup-content {
-    height: 16vh;
-    width: 25vh;
     box-shadow: 3px 3px 2px ${greenColor};
     font-family: futura-book;
-    font-size: 15px;
-    line-height: 1.4em;
+
     background-color: ${grayColor};
     opacity: 0.9;
-    letter-spacing: 0.15em;
+
     color: ${creamColor};
     animation: ${mapPopupContent} 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
       both;
@@ -41,9 +38,6 @@ export const MapContainer = styled.div`
 
   .mapboxgl-popup-close-button {
     color: ${creamColor};
-    position: relative;
-    left: 146px;
-    top: -100px;
   }
 
   .mapboxgl-popup-anchor-top .mapboxgl-popup-tip,
