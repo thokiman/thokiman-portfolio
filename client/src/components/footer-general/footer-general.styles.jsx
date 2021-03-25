@@ -8,8 +8,7 @@ const FooterSideBarActive = css`
     position: relative;
     height: 16vh;
     width: 100vw;
-    margin-bottom: 20px;
-    left: 0;
+    left: 0px;
     transition: left 0.5s ease;
     padding: 0 4px;
   }
@@ -24,11 +23,15 @@ export const FooterContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  position: relative;
+  top: 0;
+  right: 3vw;
+  bottom: 0;
+
   @media only screen and (max-width: 800px) {
     position: relative;
     top: 0;
     left: 140px;
-    right: 0;
     bottom: 0;
     transition: left 0.5s ease;
     width: 64vw;
@@ -115,11 +118,11 @@ export const ProfileFooterText = styled.div`
 export const SocialFooterContainer = styled.div`
   width: 170px;
   height: 11vh;
-  padding: 0 5px 0;
+  padding: 0 15px 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 1fr;
-  gap: 5px 5px;
+  gap: 15px 15px;
   align-items: center;
   justify-items: center;
   border-left: #e3e1e4 solid 1px;
@@ -174,8 +177,8 @@ const socialItem = keyframes`
 
 export const SocialItem = styled(Link)`
   background-repeat: no-repeat;
-  height: 42px;
-  width: 42px;
+  height: 35px;
+  width: 35px;
   object-fit: cover;
   background-image: url(${({ backgroundimage }) => backgroundimage.iconPath});
   @media only screen and (max-width: 800px) {
