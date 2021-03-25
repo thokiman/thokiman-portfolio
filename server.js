@@ -6,7 +6,7 @@ const compression = require("compression");
 const enforce = require("express-sslify");
 
 if (process.env.NODE_ENV !== "production") require("dotenv").config();
-console.log(process.env.REACT_APP_MAPBOX_ACCESS_TOKEN);
+
 const app = express();
 
 const port = process.env.PORT || 5000;

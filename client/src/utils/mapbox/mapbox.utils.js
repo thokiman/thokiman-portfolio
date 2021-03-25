@@ -1,7 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import mapboxgl, { Marker, Popup } from "mapbox-gl";
+import mapboxgl, { Marker, Popup } from "mapbox-gl/dist/mapbox-gl-csp";
 import * as mbxGeocoding from "@mapbox/mapbox-sdk/services/geocoding";
+
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import MapboxWorker from "worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker";
+mapboxgl.workerClass = MapboxWorker;
 
 export const mapBoxAccessToken =
   "pk.eyJ1IjoidGhvbWFzOTRtYXAiLCJhIjoiY2toOXBrZ2xyMG0wYzJ5azg5ZXNyOHllcSJ9.rpgW1UPijqpcrVFBNsQ93Q";
@@ -29,6 +33,7 @@ export const map = (container, mapBoxData, zoom) => {
 
 export const loadMap = (map, MarkerComponent, PopUpComponent, mapBoxData) => {
   map.on("load", () => {
+    map.resize();
     map.addControl(new mapboxgl.NavigationControl(), "bottom-right");
 
     const markerNode = document.createElement("div");
