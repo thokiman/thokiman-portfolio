@@ -14,6 +14,7 @@ const HeaderSideBarActive = css`
     transition: left 0.5s ease;
     opacity: 1;
     width: 100vw;
+    margin-bottom: 5px;
   }
 `;
 const getHeaderSideBarActive = (props) => {
@@ -49,6 +50,7 @@ export const HeaderContainer = styled.div`
     width: 64vw;
     transition: left 0.5s ease;
     opacity: 0.5;
+    margin-bottom: 5px;
   }
   ${getHeaderSideBarActive};
 `;
