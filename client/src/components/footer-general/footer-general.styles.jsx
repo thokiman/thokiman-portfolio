@@ -10,7 +10,8 @@ const FooterSideBarActive = css`
     width: 100vw;
     left: 0px;
     transition: left 0.5s ease;
-    padding: 0 4px;
+    padding: 10px;
+    margin: 9px 0;
   }
 `;
 const getFooterSideBarActive = (props) => {
