@@ -51,7 +51,7 @@ export const TimelineCareerCompany = styled.div`
   @media only screen and (max-width: 800px) {
     font-size: 150%;
     position: relative;
-    right: 10px;
+    right: 20px;
   }
 `;
 export const TimelineCareerTitleType = styled.div`
