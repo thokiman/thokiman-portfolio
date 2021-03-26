@@ -12,7 +12,7 @@ import {
   HomepageWhiteThokimanSkeleton,
 } from "./homepage-thokiman-container.styles";
 
-const HomePageThokimanContentContainer = ({ isSideBarHidden }) => {
+export const HomePageThokimanContentContainer = ({ isSideBarHidden }) => {
   return (
     <HomepageThokimanContentContainer>
       <HomepageThokimanContainer $issidebarhidden={isSideBarHidden}>

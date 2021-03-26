@@ -25,7 +25,7 @@ import {
   ThokimanLegRightContainer,
 } from "./about-content.styles";
 
-const AboutHomeContent = ({ isDropdownHidden, isSideBarHidden }) => {
+export const AboutHomeContent = ({ isDropdownHidden, isSideBarHidden }) => {
   return (
     <RightPageContainer $issidebarhidden={isSideBarHidden}>
       <CSSTransitionGroup

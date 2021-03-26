@@ -5,7 +5,7 @@ import {
   FormSelectTitleContainer,
 } from "./form-select-label.styles";
 
-const FormInputSelectLabel = ({ value }) => {
+export const FormInputSelectLabel = ({ value }) => {
   return (
     <FormSelectTitleContainer value={value}>
       {value ? (

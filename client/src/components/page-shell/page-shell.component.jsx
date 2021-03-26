@@ -3,7 +3,7 @@ import React from "react";
 import { PageContainer } from "./page-shell.styles";
 import { CSSTransitionGroup } from "react-transition-group";
 
-function PageShell(Page) {
+export function PageShell(Page) {
   function PageTransition(props) {
     const {
       location: { pathname },

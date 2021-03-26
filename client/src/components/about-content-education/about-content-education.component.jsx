@@ -16,7 +16,7 @@ import AboutEducationPersonality from "../about-education-personality/about-educ
 import { EducationContainer } from "./about-content-education.styles";
 import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
-const AboutEducation = ({
+export const AboutEducation = ({
   lastBachelor,
   lastExperiences,
   lastCourses,

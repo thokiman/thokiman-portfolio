@@ -10,7 +10,7 @@ import {
 import AboutDropdownBar from "../about-dropdown-content/about-dropdown-bar.component";
 import { AboutDropdownContainer } from "./about-dropdown.styles";
 import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
-const AboutDropdown = ({
+export const AboutDropdown = ({
   location: { pathname },
   aboutRoute,
   timelineCareerRoute,

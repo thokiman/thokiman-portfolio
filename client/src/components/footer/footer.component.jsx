@@ -13,7 +13,8 @@ import {
   selectTimelineCareerRoute,
 } from "../../redux/about/about.selectors";
 import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
-const Footer = ({
+
+export const Footer = ({
   location: { pathname },
   contactRoute,
   portfolioRoute,

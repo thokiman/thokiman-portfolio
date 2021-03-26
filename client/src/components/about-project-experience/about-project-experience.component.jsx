@@ -8,7 +8,7 @@ import {
   AboutNameExperienceProject,
 } from "./about-project-experience.styles";
 
-const AboutExperienceProject = ({ experience }) => {
+export const AboutExperienceProject = ({ experience }) => {
   return (
     <AboutExperienceProjectContainer>
       <AboutExperienceProjectTitle>

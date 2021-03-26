@@ -7,7 +7,7 @@ import {
   AboutTechnologySkillContainer,
 } from "./about-skill-technology.styles";
 
-const TechnologySkill = ({ skill }) => {
+export const TechnologySkill = ({ skill }) => {
   const {
     itemsPoint: {
       general,

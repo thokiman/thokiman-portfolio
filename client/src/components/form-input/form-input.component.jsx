@@ -9,7 +9,7 @@ import {
   FormLabelElement,
 } from "./form-input.styles";
 
-const FormInput = ({ handleChange, label, ...props }) => {
+export const FormInput = ({ handleChange, label, ...props }) => {
   return (
     <FormInputGroup>
       {

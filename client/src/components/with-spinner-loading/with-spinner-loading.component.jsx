@@ -3,7 +3,7 @@ import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { SpinnerContainer } from "./with-spinner-loading.styles";
 
-const WithSpinnerLoading = (Page) => {
+export const WithSpinnerLoading = (Page) => {
   const Spinner = (props) => {
     return props.isLoading ? (
       <SpinnerContainer>

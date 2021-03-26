@@ -12,7 +12,7 @@ import ServiceIconContent from "../service-icon-content/service-icon-content.com
 import { selectArtService } from "../../redux/service/service.selectors";
 import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
-const ServiceGraphicDesign = ({
+export const ServiceGraphicDesign = ({
   isSideBarHidden,
   art: { title, description, items },
 }) => {

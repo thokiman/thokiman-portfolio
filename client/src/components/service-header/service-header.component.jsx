@@ -20,7 +20,7 @@ import {
 } from "./service-header.styles";
 import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
-const ServiceHeader = ({
+export const ServiceHeader = ({
   location: { pathname },
   art,
   photo,

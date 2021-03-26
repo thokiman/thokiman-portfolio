@@ -16,7 +16,7 @@ import TechnologySkill from "../about-skill-technology/about-skill-technology.co
 import { SkillContainer } from "./about-content-skill.styles";
 import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
-const AboutSkill = ({
+export const AboutSkill = ({
   match: { url },
   visualDesignCommunication,
   engineer,

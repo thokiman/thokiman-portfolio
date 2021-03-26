@@ -12,7 +12,7 @@ import {
   AboutTypeThesisProject,
 } from "./about-project-thesis.styles";
 
-const AboutThesisProject = ({ thesis }) => {
+export const AboutThesisProject = ({ thesis }) => {
   return (
     <AboutThesisProjectContainer>
       <AboutThesisProjectTitle>Thesis</AboutThesisProjectTitle>

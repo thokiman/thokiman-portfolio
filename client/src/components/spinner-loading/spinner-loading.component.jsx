@@ -4,7 +4,7 @@ import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { SpinnerContainer } from "./spinner-loading.styles";
 
-const SpinnerLoading = () => {
+export const SpinnerLoading = () => {
   return (
     <SpinnerContainer>
       <Loader

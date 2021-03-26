@@ -9,7 +9,7 @@ import {
   VisualArtTitle,
 } from "./visual-art-grid.styles";
 
-const VisualArtGrid = ({ visualSkill: { name, itemsPoint } }) => {
+export const VisualArtGrid = ({ visualSkill: { name, itemsPoint } }) => {
   return (
     <VisualArtGridContainer>
       <CSSTransitionGroup

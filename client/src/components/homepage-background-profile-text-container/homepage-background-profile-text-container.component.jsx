@@ -11,7 +11,7 @@ import {
   HomepageQuoteText,
 } from "./homepage-background-profile-text-container.styles";
 
-const HomePageProfileTextContainer = ({
+export const HomePageProfileTextContainer = ({
   shortDescription,
   quote,
   isSideBarHidden,

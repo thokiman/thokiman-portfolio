@@ -16,7 +16,7 @@ import {
 } from "../../redux/about/about.actions";
 import { UpperTimelineHeaderContainer } from "./timeline-career-upper.styles";
 
-const TimelineCareerUpper = ({
+export const TimelineCareerUpper = ({
   isYear2016Click,
   isYear2018Click,
   isYearCurrentClick,

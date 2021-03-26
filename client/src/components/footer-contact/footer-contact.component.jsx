@@ -12,7 +12,7 @@ import {
   ProfileFooterTextContact,
 } from "./footer-contact.styles";
 
-const FooterContact = ({ isSideBarHidden }) => {
+export const FooterContact = ({ isSideBarHidden }) => {
   return (
     <FooterContainerContact $issidebarhidden={isSideBarHidden}>
       <ProfileFooterContainerContact>

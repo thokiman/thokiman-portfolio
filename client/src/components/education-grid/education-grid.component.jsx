@@ -6,7 +6,7 @@ import {
   EducationImageItems,
 } from "./education-grid.styles";
 
-const EducationGrid = ({ imagePath }) => {
+export const EducationGrid = ({ imagePath }) => {
   return (
     <EducationImageContainer>
       {imagePath.map(({ id, field, iconPath }) => {

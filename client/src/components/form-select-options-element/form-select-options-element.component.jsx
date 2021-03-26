@@ -5,7 +5,7 @@ import {
   FormSelectItem,
 } from "./form-select-options-element.styles";
 
-const FormInputSelectOptions = ({ handleClick }) => {
+export const FormInputSelectOptions = ({ handleClick }) => {
   return (
     <FormSelectContainer>
       <FormSelectItem onClick={handleClick}>Engineering</FormSelectItem>

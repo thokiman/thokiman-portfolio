@@ -12,7 +12,7 @@ import ServiceIconContent from "../service-icon-content/service-icon-content.com
 import { selectEngineerService } from "../../redux/service/service.selectors";
 import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
-const ServiceEngineer = ({
+export const ServiceEngineer = ({
   isSideBarHidden,
   engineer: { title, description, items },
 }) => {

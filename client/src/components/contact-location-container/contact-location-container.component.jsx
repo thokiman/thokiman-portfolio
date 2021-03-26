@@ -11,7 +11,7 @@ import {
 } from "./contact-location-container.styles";
 import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
-const ContactLocation = ({
+export const ContactLocation = ({
   isSideBarHidden,
   info: {
     location: { address, zoom },

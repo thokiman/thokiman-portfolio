@@ -14,7 +14,6 @@ const HeaderSideBarActive = css`
     transition: left 0.5s ease;
     opacity: 1;
     width: 100vw;
-    margin-bottom: 5px;
   }
 `;
 const getHeaderSideBarActive = (props) => {
@@ -50,7 +49,6 @@ export const HeaderContainer = styled.div`
     width: 64vw;
     transition: left 0.5s ease;
     opacity: 0.5;
-    margin-bottom: 5px;
   }
   ${getHeaderSideBarActive};
 `;
@@ -96,7 +94,7 @@ export const HeaderPILogoContainer = styled(Link)`
   margin-left: 1.8vw;
 
   @media only screen and (max-width: 800px) {
-    width: 120px;
+    width: 105px;
     position: absolute;
     left: -2vw;
     transition: left 0.5s ease;

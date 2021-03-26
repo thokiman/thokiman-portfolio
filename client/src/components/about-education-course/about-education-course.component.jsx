@@ -12,7 +12,7 @@ import {
   AboutEducationCourseTitle,
 } from "./about-education-course.styles";
 
-const AboutEducationCourse = ({ lastCourse }) => {
+export const AboutEducationCourse = ({ lastCourse }) => {
   return (
     <AboutEducationCourseContent>
       <AboutEducationCourseTitle>Course</AboutEducationCourseTitle>

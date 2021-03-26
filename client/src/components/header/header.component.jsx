@@ -18,7 +18,7 @@ import { selectContactRoute } from "../../redux/contact/contact.selectors";
 import SideBarIcon from "../sidebar-icon/sidebar-icon.component";
 import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
-const Header = ({
+export const Header = ({
   location: { pathname },
   aboutRoute,
   portfolioRoute,

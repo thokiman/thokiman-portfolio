@@ -34,7 +34,7 @@ const ServiceSideBarActive = css`
     transition: all 0.5s ease;
     opacity: 1;
     width: 100vw;
-
+    height: 100vh;
     flex-direction: column;
   }
 `;
@@ -66,6 +66,7 @@ export const ServiceContainer = styled.div`
     overflow-y: scroll;
     overflow-x: hidden;
     opacity: 0.5;
+    height: 70.8vh;
   }
   ${getServiceSideBarActive};
 `;

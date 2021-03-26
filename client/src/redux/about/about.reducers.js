@@ -1,6 +1,6 @@
 import AboutActionTypes from "./about.types";
-
 import { about } from "../../data.object/about.data";
+
 const INTIAL_STATE = {
   isDropdownHidden: true,
   isVibrate: false,

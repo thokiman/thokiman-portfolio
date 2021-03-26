@@ -25,7 +25,7 @@ const PortfolioHeader = lazy(() =>
   import("../../components/portfolio-header/portfolio-header.component")
 );
 
-const Portfolio = ({
+export const Portfolio = ({
   portfolioRoute,
   allItems,
   brandItems,

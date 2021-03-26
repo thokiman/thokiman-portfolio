@@ -9,7 +9,7 @@ import {
   ThokimanHeadOutlineCream,
 } from "./service-content.styles";
 
-const ServiceHomeContent = ({ isSideBarHidden }) => {
+export const ServiceHomeContent = ({ isSideBarHidden }) => {
   return (
     <RightServiceContainer $issidebarhidden={isSideBarHidden}>
       <ThokimanHeadColor />

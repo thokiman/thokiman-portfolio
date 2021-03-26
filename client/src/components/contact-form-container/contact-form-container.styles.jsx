@@ -8,6 +8,26 @@ const getSideBarActive = (props) => {
   return null;
 };
 
+const ContactFormContainerHide = css`
+  @media only screen and (max-width: 800px) {
+    height: 250vh;
+    transition: all ease-in-out 1s;
+  }
+`;
+const ContactFormContainerActive = css`
+  @media only screen and (max-width: 800px) {
+    height: 340vh;
+    transition: all ease-in-out 1s;
+  }
+`;
+
+const getContactFormContainer = ({ $istypeclick }) => {
+  if ($istypeclick) {
+    return ContactFormContainerActive;
+  }
+  return ContactFormContainerHide;
+};
+
 export const ContactFormContainer = styled.div`
   width: 35vw;
   height: 72vh;
@@ -19,7 +39,9 @@ export const ContactFormContainer = styled.div`
   @media only screen and (max-width: 800px) {
     margin: 10px 0;
     width: 100vw;
-    height: 120vh;
+
+    ${getContactFormContainer}
+
     ${getSideBarActive}
   }
 `;
@@ -32,11 +54,16 @@ const ContactFormGroupHide = css`
   ${ContactFormGroupStyles}
   height: 1600px;
   padding-top: 15px;
+  @media only screen and (max-width: 800px) {
+    height: 180vh;
+  }
 `;
 const ContactFormGroupActive = css`
   ${ContactFormGroupStyles}
-
   height: 1650px;
+  @media only screen and (max-width: 800px) {
+    height: 210vh;
+  }
 `;
 const getContactFormGroup = ({ $istypeclick }) => {
   if ($istypeclick) {

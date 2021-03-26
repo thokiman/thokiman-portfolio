@@ -46,7 +46,7 @@ const AboutTimelineCareer = lazy(() =>
   )
 );
 
-const About = ({
+export const About = ({
   location: { pathname },
   aboutRoute,
   skillRoute,

@@ -14,7 +14,7 @@ import {
 import TimelineCareerLink from "../timeline-career-link/timeline-career-link.component";
 import { BelowTimelineHeaderContainer } from "./timeline-career-below.styles";
 
-const TimelineCareerBelow = ({
+export const TimelineCareerBelow = ({
   isYear2017Click,
   isYear2019Click,
   toggleYear2017Click,

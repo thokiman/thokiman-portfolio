@@ -12,7 +12,7 @@ import ServiceIconContent from "../service-icon-content/service-icon-content.com
 import { selectFullstackService } from "../../redux/service/service.selectors";
 import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
-const ServiceFullStackDeveloper = ({
+export const ServiceFullStackDeveloper = ({
   isSideBarHidden,
   fullstack: { title, description, items },
 }) => {

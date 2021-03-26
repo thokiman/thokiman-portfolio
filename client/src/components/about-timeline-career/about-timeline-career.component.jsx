@@ -13,7 +13,7 @@ import {
 } from "./about-timeline-career.styles";
 import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
-const AboutTimelineCareer = ({
+export const AboutTimelineCareer = ({
   careerPath: {
     title,
     items: { beforeWorking },

@@ -9,7 +9,7 @@ import {
 import TimelineCareerUpper from "../timeline-career-upper/timeline-career-upper.component";
 import TimelineCareerBelow from "../timeline-career-below/timeline-career-below.component";
 
-const TimelineCareerHeader = () => {
+export const TimelineCareerHeader = () => {
   return (
     <TimelineHeaderContainer>
       <TimelineCareerUpper />

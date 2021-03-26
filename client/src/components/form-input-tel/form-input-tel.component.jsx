@@ -9,7 +9,7 @@ import {
   FormLabelElement,
 } from "./form-input-tel.styles";
 
-const FormInputTel = ({ handleChange, label, ...props }) => {
+export const FormInputTel = ({ handleChange, label, ...props }) => {
   return (
     <FormInputTelGroup>
       {

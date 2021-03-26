@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideBarHeader component should render SideBarHeader component 1`] = `ShallowWrapper {}`;

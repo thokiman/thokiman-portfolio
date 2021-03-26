@@ -7,7 +7,7 @@ import {
   NameEngineerSkill,
 } from "./enginner-grid.styles";
 
-const EngineerGrid = ({ engineerSkill }) => {
+export const EngineerGrid = ({ engineerSkill }) => {
   return engineerSkill.map(({ id, name, itemsPoint }) => {
     return (
       <CSSTransitionGroup

@@ -17,7 +17,7 @@ import PortfolioContentItem from "../portfolio-content-item/portfolio-content-it
 import PortfolioItem from "../portfolio-item/portfolio-item.component";
 import { PortfolioLoadingState } from "./portfolio-content.styles";
 
-const PortfolioContent = ({
+export const PortfolioContent = ({
   items,
   collectionList,
   isLoading,

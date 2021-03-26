@@ -14,7 +14,7 @@ import {
   AboutTextBox,
 } from "./about-skill-header.styles";
 
-const SkillHeader = ({
+export const SkillHeader = ({
   location: { pathname },
   skillRoute,
   visualArtRoute,

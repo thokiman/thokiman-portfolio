@@ -11,7 +11,7 @@ import {
   SideBarHeaderIcon,
 } from "./sidebar-icon.styles";
 
-const SideBarIcon = ({ toggleSideBarHidden, isSideBarHidden }) => {
+export const SideBarIcon = ({ toggleSideBarHidden, isSideBarHidden }) => {
   return (
     <SideBarHeaderIcon
       $issidebarhidden={isSideBarHidden}

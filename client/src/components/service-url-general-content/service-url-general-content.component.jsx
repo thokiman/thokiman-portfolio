@@ -11,7 +11,7 @@ import {
   ServiceTitle,
 } from "./service-url-general-content.styles";
 
-const ServiceUrlGeneralContent = ({ title, description }) => {
+export const ServiceUrlGeneralContent = ({ title, description }) => {
   return (
     <ServiceGeneralContent>
       <ServiceTitle>{title}</ServiceTitle>

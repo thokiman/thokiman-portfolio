@@ -26,7 +26,7 @@ const ContactLocation = lazy(() =>
   )
 );
 
-const Contact = ({ title, info, items, isSideBarHidden }) => {
+export const Contact = ({ title, info, items, isSideBarHidden }) => {
   return (
     <ContactContainer $issidebarhidden={isSideBarHidden}>
       {isSideBarHidden ? (

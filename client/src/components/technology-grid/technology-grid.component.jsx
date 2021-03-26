@@ -8,7 +8,7 @@ import {
   TechnologyTitle,
 } from "./technology-grid.styles";
 
-const TechnologyGrid = ({ technologySkill: { name, itemsPoint } }) => {
+export const TechnologyGrid = ({ technologySkill: { name, itemsPoint } }) => {
   return (
     <TechnologyGridContainer>
       <TechnologyTitle>{name}</TechnologyTitle>

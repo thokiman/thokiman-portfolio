@@ -31,7 +31,7 @@ import {
 } from "./contact-form-container.styles";
 import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
-const ContactForm = ({
+export const ContactForm = ({
   isSideBarHidden,
   isTypeClick,
   isButtonClick,
@@ -88,7 +88,10 @@ const ContactForm = ({
   };
 
   return (
-    <ContactFormContainer $issidebarhidden={isSideBarHidden}>
+    <ContactFormContainer
+      $istypeclick={isTypeClick}
+      $issidebarhidden={isSideBarHidden}
+    >
       <ContactFormGroup $istypeclick={isTypeClick}>
         <ContactFormHead>General Inquiries</ContactFormHead>
         <ContactFormSubhead>

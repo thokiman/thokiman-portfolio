@@ -11,7 +11,7 @@ import {
   DescriptionAchievementExperienceProject,
 } from "./about-achievement-experience.styles";
 
-const AboutAchievementProject = ({ lastExperience }) => {
+export const AboutAchievementProject = ({ lastExperience }) => {
   return (
     <AchievementExperienceProjectContainer>
       <AchievementExperienceProjectTitle>

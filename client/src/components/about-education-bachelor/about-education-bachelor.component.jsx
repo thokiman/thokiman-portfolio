@@ -12,7 +12,7 @@ import {
   AboutEducationBachelorStartEndDate,
 } from "./about-education-bachelor.styles";
 
-const AboutEducationBachelor = ({ lastBachelor }) => {
+export const AboutEducationBachelor = ({ lastBachelor }) => {
   return (
     <AboutEducationBachelorContent>
       <AboutEducationBachelorTitle>Bachelor</AboutEducationBachelorTitle>

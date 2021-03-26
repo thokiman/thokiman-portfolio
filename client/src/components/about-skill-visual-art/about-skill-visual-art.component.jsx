@@ -7,7 +7,7 @@ import {
   AboutVisualArtSkillContainer,
 } from "./about-skill-visual-art.styles";
 
-const VisualArtSkill = ({ skill }) => {
+export const VisualArtSkill = ({ skill }) => {
   const {
     itemsPoint: { digitalArt, photography },
   } = skill;

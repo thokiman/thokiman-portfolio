@@ -33,7 +33,7 @@ const ServiceFullStackDeveloper = lazy(() =>
   )
 );
 
-const Service = ({
+export const Service = ({
   art,
   photo,
   engineer,

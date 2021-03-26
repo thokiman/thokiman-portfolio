@@ -8,7 +8,7 @@ import {
   AboutPersonalityTextBox,
 } from "./about-education-personality.styles";
 
-const AboutEducationPersonality = ({ personality }) => {
+export const AboutEducationPersonality = ({ personality }) => {
   const [backgroundColor, setBackgroundColor] = useState({
     1: "",
     2: "",

@@ -28,7 +28,7 @@ import {
 } from "./about-content-summary.styles";
 import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
-const AboutSummary = ({
+export const AboutSummary = ({
   longDescription: { p1, p2, p3, p4 },
   cv: { iconPath },
   isVibrate,

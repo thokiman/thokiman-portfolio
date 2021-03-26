@@ -12,7 +12,7 @@ import {
   TimelineCareerLocation,
 } from "./timeline-career-item.styles";
 
-const TimelineCareerItem = ({ beforeWorking }) => {
+export const TimelineCareerItem = ({ beforeWorking }) => {
   return (
     <TimelineTextContainer>
       <CSSTransitionGroup

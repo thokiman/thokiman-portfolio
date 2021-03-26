@@ -6,7 +6,11 @@ import {
 } from "./portfolio-content-item.styles";
 import PorfolioItem from "../portfolio-item/portfolio-item.component";
 
-const PortfolioContentItem = ({ collectionList, handleScroll, isLoading }) => {
+export const PortfolioContentItem = ({
+  collectionList,
+  handleScroll,
+  isLoading,
+}) => {
   return (
     <PortfolioContent onScroll={handleScroll}>
       <PorfolioItem items={collectionList} />

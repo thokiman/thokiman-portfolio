@@ -16,7 +16,7 @@ import AboutThesisProject from "../about-project-thesis/about-project-thesis.com
 import { ProjectContainer } from "./about-content-project.styles";
 import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
-const AboutProject = ({
+export const AboutProject = ({
   thesis,
   courses,
   experiences,

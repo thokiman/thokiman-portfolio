@@ -9,7 +9,7 @@ import {
   AboutRelatedCourseProject,
 } from "./about-project-course.styles";
 
-const AboutCourseProject = ({ course }) => {
+export const AboutCourseProject = ({ course }) => {
   return (
     <AboutCourseProjectContainer>
       <AboutCourseProjectTitle>Course Project</AboutCourseProjectTitle>

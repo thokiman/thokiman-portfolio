@@ -9,7 +9,7 @@ import {
   HomepageProfileImageContainer,
 } from "./homepage-profile-image-container.styles";
 
-const HomePageProfileImageContainer = ({ isSideBarHidden }) => {
+export const HomePageProfileImageContainer = ({ isSideBarHidden }) => {
   return (
     <HomepageProfileImageContainer $issidebarhidden={isSideBarHidden}>
       <HomepageBackgroundProfileImage>

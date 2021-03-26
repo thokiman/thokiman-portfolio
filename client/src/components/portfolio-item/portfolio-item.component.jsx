@@ -9,7 +9,7 @@ import {
 } from "./portfolio-item.styles";
 import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
-const PortfolioItem = ({ items, isSideBarHidden }) => {
+export const PortfolioItem = ({ items, isSideBarHidden }) => {
   return (
     <PortfolioImageCollectionsContainer $issidebarhidden={isSideBarHidden}>
       {items.map((item) => {

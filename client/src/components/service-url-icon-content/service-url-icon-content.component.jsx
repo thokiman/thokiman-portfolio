@@ -6,7 +6,7 @@ import {
   ServiceUrlIconItem,
 } from "./service-url-icon-content.styles";
 
-const ServiceUrlIconContent = ({ items }) => {
+export const ServiceUrlIconContent = ({ items }) => {
   return (
     <ServiceUrlIcon>
       {items.map(({ id, linkUrl, iconPath: { field, iconPath } }) => {

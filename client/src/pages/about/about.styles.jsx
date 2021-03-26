@@ -34,6 +34,7 @@ const AboutSideBarActive = css`
     transition: left 0.5s ease;
     opacity: 1;
     flex-direction: column;
+    height: 140vh;
   }
 `;
 const getAboutSideBarActive = (props) => {
@@ -62,6 +63,7 @@ const AboutStyles = css`
     overflow-y: scroll;
     overflow-x: hidden;
     opacity: 0.5;
+    height: 70.8vh;
   }
   ${getAboutSideBarActive};
 `;

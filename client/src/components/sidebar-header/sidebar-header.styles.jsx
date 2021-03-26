@@ -16,7 +16,7 @@ export const SideBarHeaderContainer = styled.div`
     width: 140px;
     position: absolute;
     top: 14vh;
-    left: 140;
+    left: 140px;
     bottom: 0;
     transition: all 0.5s ease;
     display: flex;

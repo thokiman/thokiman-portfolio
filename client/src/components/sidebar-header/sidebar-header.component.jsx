@@ -14,7 +14,7 @@ import { selectPortfolioRoute } from "../../redux/collection/collection.selector
 import { selectServiceRoute } from "../../redux/service/service.selectors";
 import { selectContactRoute } from "../../redux/contact/contact.selectors";
 
-const SideBarHeader = ({
+export const SideBarHeader = ({
   isSideBarHidden,
   location: { pathname },
   aboutRoute,

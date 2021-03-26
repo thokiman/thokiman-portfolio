@@ -11,7 +11,9 @@ import {
 } from "./service-photography.styles";
 import { selectPhotoService } from "../../redux/service/service.selectors";
 
-const ServicePhotography = ({ photo: { title, description, items } }) => {
+export const ServicePhotography = ({
+  photo: { title, description, items },
+}) => {
   return (
     <RightServiceContainerPg>
       <CSSTransitionGroup

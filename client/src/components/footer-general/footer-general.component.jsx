@@ -15,7 +15,7 @@ import {
 import { selectSocialIconContact } from "../../redux/contact/contact.selectors.js";
 import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 
-const FooterGeneral = ({ socialIcon, isSideBarHidden }) => {
+export const FooterGeneral = ({ socialIcon, isSideBarHidden }) => {
   return (
     <FooterContainer $issidebarhidden={isSideBarHidden}>
       <ProfileFooterContainer>

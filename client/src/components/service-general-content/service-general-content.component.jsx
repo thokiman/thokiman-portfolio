@@ -9,7 +9,7 @@ import {
   ServiceTitle,
 } from "./service-general-content.styles";
 
-const ServiceGeneralContent = ({ title, description }) => {
+export const ServiceGeneralContent = ({ title, description }) => {
   return (
     <ServiceGeneralContentContainer>
       <ServiceTitle>{title}</ServiceTitle>

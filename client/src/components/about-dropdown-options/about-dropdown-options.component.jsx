@@ -15,7 +15,7 @@ import {
   AboutDropdownLinkOption,
 } from "./about-dropdown-options.styles";
 
-const AboutDropdownOptions = ({
+export const AboutDropdownOptions = ({
   location: { pathname },
   skillRoute,
   summaryRoute,

@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormInputSelectOptions component should render FormInputSelectOptions component 1`] = `ShallowWrapper {}`;

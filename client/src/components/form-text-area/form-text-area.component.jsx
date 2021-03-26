@@ -9,7 +9,7 @@ import {
   FormTextAreaGroup,
 } from "./form-text-area.styles";
 
-const FormTextArea = ({ handleChange, label, ...props }) => {
+export const FormTextArea = ({ handleChange, label, ...props }) => {
   return (
     <FormTextAreaGroup>
       {

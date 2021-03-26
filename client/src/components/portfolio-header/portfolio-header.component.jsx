@@ -20,7 +20,7 @@ import {
   PortfolioHeaderOption,
 } from "./portfolio-header.styles";
 
-const PortfolioHeader = ({
+export const PortfolioHeader = ({
   location: { pathname },
   portfolioRoute,
   brandRoute,

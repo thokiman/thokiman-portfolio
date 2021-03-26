@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ServiceFullStackDeveloper component should render ServiceFullStackDeveloper component 1`] = `ShallowWrapper {}`;

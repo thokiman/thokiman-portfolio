@@ -5,8 +5,12 @@ import FormInputSelectOptions from "../form-select-options-element/form-select-o
 
 import { FormGroupSelectContainer } from "./form-select.styles";
 
-const FormInputSelect = ({ handleType, isTypeClick, handleClick, value }) => {
-  console.log(value);
+export const FormInputSelect = ({
+  handleType,
+  isTypeClick,
+  handleClick,
+  value,
+}) => {
   return (
     <FormGroupSelectContainer>
       <FormInputSelectLabel value={value} />

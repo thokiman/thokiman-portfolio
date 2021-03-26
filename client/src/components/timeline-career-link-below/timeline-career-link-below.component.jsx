@@ -6,7 +6,7 @@ import {
   TimelineYearLinkBelow,
 } from "./timeline-career-link-below.styles";
 
-const TimelineCareerLinkBelow = ({
+export const TimelineCareerLinkBelow = ({
   TimelineIcon,
   year,
   isClick,

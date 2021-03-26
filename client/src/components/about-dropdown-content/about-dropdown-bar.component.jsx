@@ -25,7 +25,7 @@ import {
   AboutBreakLine,
 } from "./about-dropdown-bar.styles";
 
-const AboutDropdownBar = ({
+export const AboutDropdownBar = ({
   isDropdownHidden,
   toggleDropdownHidden,
   aboutRoute,

@@ -7,8 +7,8 @@
 .pnp.js
 
 # testing
-/coverage
-
+/client/coverage
+*.test
 # production
 /build
 
@@ -22,6 +22,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
 
 
 

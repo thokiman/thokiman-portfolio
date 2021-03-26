@@ -27,7 +27,7 @@ import {
   PhotoContactLinkIconShutterStock,
 } from "./contact-info.styles";
 
-const ContactInfo = ({
+export const ContactInfo = ({
   isSideBarHidden,
   title,
   items: { socialIcon, photoIcon },

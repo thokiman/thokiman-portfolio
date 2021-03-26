@@ -6,7 +6,7 @@ import {
   ServiceIconItem,
 } from "./service-icon.styles";
 
-const ServiceIconContent = ({ items }) => {
+export const ServiceIconContent = ({ items }) => {
   return (
     <ServiceIcon>
       {items.map(({ id, field, iconPath }) => {

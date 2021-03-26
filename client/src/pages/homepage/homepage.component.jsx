@@ -30,7 +30,7 @@ const HomePageProfileTextContainer = lazy(() =>
   )
 );
 
-const HomePage = (props) => {
+export const HomePage = (props) => {
   return (
     <HomepageContainer $issidebarhidden={props.isSideBarHidden}>
       <Suspense fallback={<SpinnerLoading />}>

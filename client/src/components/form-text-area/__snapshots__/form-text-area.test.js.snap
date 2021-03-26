@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormTextArea component should render FormTextAreaElement component 1`] = `ShallowWrapper {}`;
