@@ -8,7 +8,7 @@
 
 # testing
 /client/coverage
-*.test.js
+.test.js
 __snapshot__/
 # production
 /build
