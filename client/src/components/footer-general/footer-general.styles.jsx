@@ -6,12 +6,12 @@ import { ReactComponent as WhiteOutlineThokiman } from "../../assets/collections
 const FooterSideBarActive = css`
   @media only screen and (max-width: 800px) {
     position: relative;
-    height: 16vh;
     width: 100vw;
     left: 0px;
     transition: left 0.5s ease;
     padding: 10px;
     margin: 9px 0;
+    height: 18vh;
   }
 `;
 const getFooterSideBarActive = (props) => {
@@ -47,6 +47,9 @@ export const ProfileFooterContainer = styled.div`
   align-items: flex-end;
   justify-content: center;
   width: 60vw;
+  @media only screen and (max-width: 340px) {
+    display: none;
+  }
 `;
 
 const piCreamAnimate = keyframes`
@@ -68,8 +71,9 @@ export const ProfileFooterIcon = styled.div`
   display: flex;
   justify-content: center;
   @media only screen and (max-width: 800px) {
-    width: 150px;
+    width: 35vw;
   }
+
   .thoki-out-cream {
     animation: ${piCreamAnimate} 1s ease-in-out infinite;
   }
@@ -112,7 +116,7 @@ export const ProfileFooterText = styled.div`
   color: #e3e1e4;
 
   @media only screen and (max-width: 800px) {
-    font-size: 13px;
+    font-size: 3vw;
     ${getProfileFooterTextSideBarActive}
   }
 `;
@@ -127,6 +131,9 @@ export const SocialFooterContainer = styled.div`
   align-items: center;
   justify-items: center;
   border-left: #e3e1e4 solid 1px;
+  @media only screen and (max-width: 340px) {
+    width: 100%;
+  }
 `;
 
 const socialItem = keyframes`
@@ -186,6 +193,7 @@ export const SocialItem = styled(Link)`
     width: 35px;
     height: 35px;
   }
+
   &:hover {
     animation: ${socialItem} 2s ease-in-out infinite;
   }

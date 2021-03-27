@@ -72,15 +72,30 @@ const AboutContainer = css`
   height: 72vh;
   background-image: url(${AboutImage});
 `;
+const TimelineCareerContainerMobile = css`
+  @media only screen and (max-width: 800px) {
+    padding: 0;
+    background-color: rgba(18, 129, 148, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  } ;
+`;
 const TimelineCareerContainer = css`
   ${AboutStyles}
   background-color: rgba(18, 129, 148, 0.8);
   padding-top: 40px;
   align-items: flex-start;
-  @media only screen and (max-width: 800px) {
-    padding: 0;
-    height: 430vh;
-    background-color: rgba(18, 129, 148, 1);
+
+  ${TimelineCareerContainerMobile}
+  @media only screen and (max-width: 800px) and (min-width: 500px) {
+    height: 400vh;
+  }
+  @media only screen and (max-width: 500px) and (min-width: 370px) {
+    height: 460vh;
+  }
+  @media only screen and (max-width: 370px) {
+    height: 510vh;
   }
 `;
 

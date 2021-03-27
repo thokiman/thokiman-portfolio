@@ -64,7 +64,10 @@ export const ProfileFooterIconContact = styled.div`
   display: flex;
   justify-content: center;
   @media only screen and (max-width: 800px) {
-    width: 150px;
+    width: 130px;
+  }
+  @media only screen and (max-width: 370px) {
+    width: 100px;
   }
   .thoki-out-cream {
     animation: ${piCreamAnimate} 1s ease-in-out infinite;
@@ -101,6 +104,9 @@ export const ProfileFooterTextContact = styled.div`
   color: #e3e1e4;
   @media only screen and (max-width: 800px) {
     font-size: 15px;
+  }
+  @media only screen and (max-width: 370px) {
+    font-size: 10px;
   }
 `;
 

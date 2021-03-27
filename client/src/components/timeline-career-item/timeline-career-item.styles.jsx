@@ -53,6 +53,21 @@ export const TimelineCareerCompany = styled.div`
     position: relative;
     right: 20px;
   }
+  @media only screen and (max-width: 370px) {
+    font-size: 120%;
+    position: relative;
+    right: 20px;
+  }
+  @media only screen and (max-width: 289px) {
+    font-size: 100%;
+    position: relative;
+    right: 20px;
+  }
+  @media only screen and (max-width: 244px) {
+    font-size: 80%;
+    position: relative;
+    right: 20px;
+  }
 `;
 export const TimelineCareerTitleType = styled.div`
   ${TimelineCareerTextStyles}
@@ -70,6 +85,16 @@ export const TimelineCareerTitleType = styled.div`
     font-size: 140%;
     font-weight: bold;
     padding: 4px;
+    @media only screen and (max-width: 370px) {
+      font-size: 110%;
+      font-weight: bold;
+      padding: 4px;
+    }
+    @media only screen and (max-width: 289px) {
+      font-size: 80%;
+      font-weight: bold;
+      padding: 4px;
+    }
   }
 `;
 
