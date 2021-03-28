@@ -6,6 +6,9 @@ export const AboutPersonalityContainer = styled.div`
   grid-auto-rows: 1fr;
   width: 100%;
   margin: 0 auto;
+  @media only screen and (max-width: 800px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;
 
 export const AboutPersonalityTitle = styled.div`
@@ -14,7 +17,7 @@ export const AboutPersonalityTitle = styled.div`
   font-size: 250%;
   color: #e3e1e4;
   @media only screen and (max-width: 800px) {
-    font-size: 120%;
+    font-size: 7vw;
   }
 `;
 
@@ -36,7 +39,7 @@ export const AboutPersonalityTextBox = styled.div`
   font-kerning: auto;
   letter-spacing: 0.025em;
   @media only screen and (max-width: 800px) {
-    font-size: 100%;
+    font-size: 5vw;
   }
 `;
 

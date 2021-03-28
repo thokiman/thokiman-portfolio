@@ -17,7 +17,7 @@ export const AboutExperienceProjectTitle = styled.div`
   display: flex;
   align-items: center;
   @media only screen and (max-width: 800px) {
-    font-size: 350%;
+    font-size: 18vw;
   }
 `;
 
@@ -47,7 +47,7 @@ export const AboutNameExperienceProject = styled.div`
   padding: 10px;
   letter-spacing: 0.09em;
   @media only screen and (max-width: 800px) {
-    font-size: 150%;
+    font-size: 6vw;
   }
 `;
 
@@ -62,7 +62,7 @@ export const AboutDescriptionExperienceProject = styled.div`
   letter-spacing: 0.05em;
   margin: 10px auto;
   @media only screen and (max-width: 800px) {
-    font-size: 100%;
+    font-size: 4vw;
   }
 `;
 AboutExperienceProjectContainer.displayName = "AboutExperienceProjectContainer";

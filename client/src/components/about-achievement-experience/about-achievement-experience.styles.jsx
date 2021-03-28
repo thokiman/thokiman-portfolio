@@ -21,7 +21,7 @@ export const AchievementExperienceProjectTitle = styled.div`
   align-items: center;
   width: 100%;
   @media only screen and (max-width: 800px) {
-    font-size: 300%;
+    font-size: 14vw;
   }
 `;
 
@@ -61,7 +61,7 @@ export const NameAchievementExperienceProject = styled.div`
   ${AchievementExpericenceTextStyles}
   margin-bottom:10px;
   @media only screen and (max-width: 800px) {
-    font-size: 190%;
+    font-size: 7vw;
   }
 `;
 
@@ -75,7 +75,7 @@ export const DateAchievementExperienceProject = styled.div`
   font-size: 190%;
   padding: 0 20px;
   @media only screen and (max-width: 800px) {
-    font-size: 150%;
+    font-size: 6vw;
   }
   ${AchievementExpericenceTextStyles}
 `;
@@ -114,7 +114,7 @@ export const DescriptionAchievementExperienceProject = styled.div`
   ${AchievementExpericenceTextStyles}\
   margin-bottom: 10px;
   @media only screen and (max-width: 800px) {
-    font-size: 100%;
+    font-size: 5vw;
   }
 `;
 

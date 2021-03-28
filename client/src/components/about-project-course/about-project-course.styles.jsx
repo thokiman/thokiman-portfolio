@@ -18,7 +18,7 @@ export const AboutCourseProjectTitle = styled.div`
   display: flex;
   align-items: center;
   @media only screen and (max-width: 800px) {
-    font-size: 350%;
+    font-size: 18vw;
   }
 `;
 
@@ -66,7 +66,7 @@ export const AboutNameCourseProject = styled(Link)`
   display: flex;
   justify-content: flex-end;
   @media only screen and (max-width: 800px) {
-    font-size: 170%;
+    font-size: 6vw;
   }
 
   &:hover {
@@ -84,7 +84,7 @@ export const AboutRelatedCourseProject = styled.div`
   letter-spacing: 0.06em;
   text-align: left;
   @media only screen and (max-width: 800px) {
-    font-size: 120%;
+    font-size: 5vw;
     line-height: 1.2em;
   }
 `;
@@ -101,7 +101,7 @@ export const AboutDescriptionCourseProject = styled.div`
   letter-spacing: 0.05em;
   margin: 10px auto;
   @media only screen and (max-width: 800px) {
-    font-size: 100%;
+    font-size: 4vw;
     text-align: left;
   }
 `;

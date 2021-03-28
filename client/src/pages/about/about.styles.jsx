@@ -90,12 +90,15 @@ const TimelineCareerContainer = css`
   ${TimelineCareerContainerMobile}
   @media only screen and (max-width: 800px) and (min-width: 500px) {
     height: 400vh;
+    overflow-y: hidden;
   }
   @media only screen and (max-width: 500px) and (min-width: 370px) {
     height: 460vh;
+    overflow-y: hidden;
   }
   @media only screen and (max-width: 370px) {
     height: 510vh;
+    overflow-y: hidden;
   }
 `;
 

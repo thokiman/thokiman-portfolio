@@ -23,7 +23,7 @@ export const AboutEducationBachelorTitle = styled.div`
   padding: 0 2px;
   color: #e3e1e4;
   @media only screen and (max-width: 800px) {
-    font-size: 400%;
+    font-size: 18vw;
   }
 `;
 
@@ -60,7 +60,7 @@ export const AboutEducationBachelorSchool = styled.div`
   font-size: 250%;
   @media only screen and (max-width: 800px) {
     padding: 4px;
-    font-size: 195%;
+    font-size: 7vw;
     text-align: left;
   }
 `;
@@ -72,7 +72,7 @@ export const AboutEducationBachelorDegree = styled.div`
   padding: 0 10px;
   border-left: #74c6d4 solid 2px;
   @media only screen and (max-width: 800px) {
-    font-size: 140%;
+    font-size: 6vw;
     padding: 4px;
   }
 `;
@@ -85,7 +85,7 @@ export const AboutEducationBachelorStartEndDate = styled.div`
   border-left: #74c6d4 solid 2px;
   @media only screen and (max-width: 800px) {
     padding: 4px;
-    font-size: 120%;
+    font-size: 4.5vw;
   }
 `;
 
@@ -96,7 +96,7 @@ export const AboutEducationBachelorLength = styled.div`
   border-left: #74c6d4 solid 2px;
   @media only screen and (max-width: 800px) {
     padding: 4px;
-    font-size: 120%;
+    font-size: 4.5vw;
   }
 `;
 
@@ -106,7 +106,7 @@ export const AboutEducationBachelorGrade = styled.div`
   font-size: 180%;
   @media only screen and (max-width: 800px) {
     padding: 4px;
-    font-size: 150%;
+    font-size: 5.5vw;
   }
 `;
 

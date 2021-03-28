@@ -17,7 +17,7 @@ export const AboutThesisProjectTitle = styled.div`
   display: flex;
   align-items: center;
   @media only screen and (max-width: 800px) {
-    font-size: 350%;
+    font-size: 18vw;
   }
 `;
 
@@ -55,23 +55,29 @@ export const AboutNameThesisProject = styled.div`
   font-size: 220%;
   padding: 10px;
   @media only screen and (max-width: 800px) {
-    font-size: 190%;
+    font-size: 9vw;
   }
 `;
 
 export const AboutTypeThesisProject = styled.div`
   ${AboutThesisProjectStyles}
   grid-area: type-thesis-project;
-  font-size: 150%;
+  font-size: 140%;
   line-height: 1.1em;
   border-bottom: #74c6d4 solid 1px;
+  @media only screen and (max-width: 800px) {
+    font-size: 6vw;
+  }
 `;
 
 export const AboutLocationThesisProject = styled.div`
   ${AboutThesisProjectStyles}
   grid-area: location-thesis-project;
-  font-size: 150%;
+  font-size: 140%;
   line-height: 1.1em;
+  @media only screen and (max-width: 800px) {
+    font-size: 6vw;
+  }
 `;
 export const AboutStartEndDateThesisProject = styled.div`
   ${AboutThesisProjectStyles}
@@ -82,7 +88,7 @@ export const AboutStartEndDateThesisProject = styled.div`
   letter-spacing: 0.05em;
   padding: 10px 0;
   @media only screen and (max-width: 800px) {
-    font-size: 110%;
+    font-size: 5.5vw;
   }
 `;
 export const AboutLengthThesisProject = styled.div`
@@ -94,7 +100,7 @@ export const AboutLengthThesisProject = styled.div`
   padding: 10px 0;
   border-bottom: #74c6d4 solid 1px;
   @media only screen and (max-width: 800px) {
-    font-size: 110%;
+    font-size: 5.5vw;
   }
 `;
 export const AboutDescriptionThesisProject = styled.div`
@@ -104,7 +110,7 @@ export const AboutDescriptionThesisProject = styled.div`
   line-height: 1.1em;
   letter-spacing: 0.05em;
   @media only screen and (max-width: 800px) {
-    font-size: 100%;
+    font-size: 4.5vw;
   }
 `;
 
