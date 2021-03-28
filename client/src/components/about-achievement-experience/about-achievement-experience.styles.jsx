@@ -22,6 +22,7 @@ export const AchievementExperienceProjectTitle = styled.div`
   width: 100%;
   @media only screen and (max-width: 800px) {
     font-size: 14vw;
+    display: block;
   }
 `;
 

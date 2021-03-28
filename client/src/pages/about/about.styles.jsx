@@ -86,18 +86,18 @@ const TimelineCareerContainer = css`
   background-color: rgba(18, 129, 148, 0.8);
   padding-top: 40px;
   align-items: flex-start;
-
+  height: 545vh;
   ${TimelineCareerContainerMobile}
   @media only screen and (max-width: 800px) and (min-width: 500px) {
-    height: 400vh;
+    height: 500vh;
     overflow-y: hidden;
   }
   @media only screen and (max-width: 500px) and (min-width: 370px) {
-    height: 460vh;
+    height: 560vh;
     overflow-y: hidden;
   }
   @media only screen and (max-width: 370px) {
-    height: 510vh;
+    height: 610vh;
     overflow-y: hidden;
   }
 `;

@@ -6,6 +6,7 @@ export const AboutCourseProjectContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 95%;
+  height: fit-content;
   margin: 0 auto;
 `;
 
@@ -19,6 +20,7 @@ export const AboutCourseProjectTitle = styled.div`
   align-items: center;
   @media only screen and (max-width: 800px) {
     font-size: 18vw;
+    display: block;
   }
 `;
 
@@ -86,6 +88,8 @@ export const AboutRelatedCourseProject = styled.div`
   @media only screen and (max-width: 800px) {
     font-size: 5vw;
     line-height: 1.2em;
+    padding: 4vw;
+    margin: 1vw;
   }
 `;
 
@@ -103,6 +107,7 @@ export const AboutDescriptionCourseProject = styled.div`
   @media only screen and (max-width: 800px) {
     font-size: 4vw;
     text-align: left;
+    margin: 2vw;
   }
 `;
 

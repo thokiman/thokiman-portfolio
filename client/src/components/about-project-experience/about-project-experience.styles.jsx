@@ -38,6 +38,9 @@ const AboutExperienceProjectStyles = css`
   align-items: center;
   color: #e3e1e4;
   text-align: left;
+  width: 100%;
+  height: fit-content;
+  display: block;
 `;
 export const AboutNameExperienceProject = styled.div`
   ${AboutExperienceProjectStyles}
@@ -48,6 +51,8 @@ export const AboutNameExperienceProject = styled.div`
   letter-spacing: 0.09em;
   @media only screen and (max-width: 800px) {
     font-size: 6vw;
+    margin: 2vw 0;
+    display: block;
   }
 `;
 
@@ -63,6 +68,8 @@ export const AboutDescriptionExperienceProject = styled.div`
   margin: 10px auto;
   @media only screen and (max-width: 800px) {
     font-size: 4vw;
+    margin: 2vw 0;
+    display: block;
   }
 `;
 AboutExperienceProjectContainer.displayName = "AboutExperienceProjectContainer";
