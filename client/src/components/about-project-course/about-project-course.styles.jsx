@@ -35,6 +35,12 @@ export const AboutCourseProjectAttributes = styled.div`
     "name-course-project name-course-project related-course-project related-course-project"
     "name-course-project name-course-project related-course-project related-course-project"
     "description-course-project description-course-project description-course-project description-course-project";
+
+  @media only screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }
 `;
 
 const aboutLinkCourseProject = keyframes`
@@ -68,7 +74,11 @@ export const AboutNameCourseProject = styled(Link)`
   display: flex;
   justify-content: flex-end;
   @media only screen and (max-width: 800px) {
+    text-align: center;
     font-size: 6vw;
+    width: 100%;
+    justify-content: center;
+    padding: 2vh 0;
   }
 
   &:hover {
@@ -90,6 +100,7 @@ export const AboutRelatedCourseProject = styled.div`
     line-height: 1.2em;
     padding: 4vw;
     margin: 1vw;
+    justify-content: flex-start;
   }
 `;
 
@@ -108,6 +119,7 @@ export const AboutDescriptionCourseProject = styled.div`
     font-size: 4vw;
     text-align: left;
     margin: 2vw;
+    justify-content: flex-start;
   }
 `;
 

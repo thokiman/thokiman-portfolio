@@ -32,6 +32,10 @@ export const AboutExperienceProjectAtttributes = styled.div`
     "name-experience-project name-experience-project name-experience-project name-experience-project"
     "description-experience-project description-experience-project description-experience-project description-experience-project"
     "description-experience-project description-experience-project description-experience-project description-experience-project";
+  @media only screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 const AboutExperienceProjectStyles = css`
   display: flex;
