@@ -36,6 +36,7 @@ export const ContactFormContainer = styled.div`
   justify-content: center;
   overflow-y: scroll;
   overflow-x: hidden;
+  padding-bottom: 3vh;
   @media only screen and (max-width: 800px) {
     margin: 10px 0;
     width: 100vw;
