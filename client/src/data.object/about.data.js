@@ -1096,7 +1096,7 @@ export const about = {
                 },
                 {
                   id: "6cb4d58d-3eed-4e71-b8ec-2253a981ea6d",
-                  description: "Analitycal",
+                  description: "Analytical",
                 },
                 {
                   id: "9653b88c-4c64-4da1-941c-55d0ad697a4a",
