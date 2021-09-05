@@ -1,8 +1,10 @@
 import { contact } from "../../data.object/contact.data";
+import { other } from "../../data.object/other.data";
 import ContactActionTypes from "./contact.types";
 
 const INITIAL_STATE = {
   contact,
+  other,
   isTypeClick: false,
   isButtonClick: false,
   isPosted: false,

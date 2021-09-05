@@ -1,5 +1,8 @@
-import styled, { css, keyframes } from "styled-components";
-import AboutImage from "../../assets/layout/water-1.jpg";
+import styled, { css, keyframes } from 'styled-components';
+
+const getAboutImage = ({ $rockWaveImage }) => {
+  return $rockWaveImage.item.iconPath;
+};
 
 const aboutSideBarHide = keyframes`
   0% {
@@ -70,7 +73,7 @@ const AboutStyles = css`
 const AboutContainer = css`
   ${AboutStyles}
   height: 72vh;
-  background-image: url(${AboutImage});
+  background-image: url(${getAboutImage});
 `;
 const TimelineCareerContainerMobile = css`
   @media only screen and (max-width: 800px) {
@@ -110,4 +113,4 @@ const getAboutPage = (props) => {
 export const AboutPage = styled.div`
   ${getAboutPage}
 `;
-AboutPage.displayName = "AboutPage";
+AboutPage.displayName = 'AboutPage';

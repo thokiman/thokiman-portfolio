@@ -1,6 +1,7 @@
-import { createSelector } from "reselect";
+import { createSelector } from 'reselect';
 
 const selectAllService = (state) => state.service.service;
+const selectAllOther = (state) => state.service.other;
 
 export const selectArtService = createSelector(
   [selectAllService],
@@ -14,12 +15,18 @@ export const selectEngineerService = createSelector(
   [selectAllService],
   (service) => service.engineer
 );
-export const selectFullstackService = createSelector(
+export const selectDevService = createSelector(
   [selectAllService],
   (service) => service.fullstack
+
 );
 
 export const selectServiceRoute = createSelector(
   [selectAllService],
   (service) => service.routeName
+);
+
+export const selectBigWaveImage = createSelector(
+  [selectAllOther],
+  (other) => other.layout.items.bigWave
 );

@@ -1,10 +1,10 @@
-import { createSelector } from "reselect";
+import { createSelector } from 'reselect';
 
 const selectAbout = (state) => state.about;
 const selectAllAbout = (state) => state.about.about;
+const selectAllOther = (state) => state.about.other;
 
 //route
-
 export const selectAboutRoute = createSelector(
   [selectAllAbout],
   (about) => about.aboutPath.routeName
@@ -71,7 +71,10 @@ export const selectSkillEngineer = createSelector(
 );
 export const selectSkillTechnology = createSelector(
   [selectAllAbout],
-  (about) => about.aboutPath.items.personalSkill.items.technology
+  (about) => {
+    console.log(about);
+    return about.aboutPath.items.personalSkill.items.technology;
+  }
 );
 
 //education
@@ -175,4 +178,16 @@ export const selectIsYear2019Click = createSelector(
 export const selectIsYearCurrentClick = createSelector(
   [selectAbout],
   (about) => about.isYearCurrentClick
+);
+
+// layout
+
+export const selectRockWaveImage = createSelector(
+  [selectAllOther],
+  (other) => other.layout.items.rockWave
+);
+
+export const selectLowWaveImage = createSelector(
+  [selectAllOther],
+  (other) => other.layout.items.lowWave
 );

@@ -1,7 +1,8 @@
-import { createSelector } from "reselect";
+import { createSelector } from 'reselect';
 
 const selectContact = (state) => state.contact;
 const selectAllContact = (state) => state.contact.contact;
+const selectAllOther = (state) => state.contact.other;
 
 export const selectIsTypeClickContact = createSelector(
   [selectContact],
@@ -34,4 +35,9 @@ export const selectItemsContact = createSelector(
 export const selectSocialIconContact = createSelector(
   [selectAllContact],
   (contact) => contact.items.socialIcon
+);
+
+export const selectLowWaveImage = createSelector(
+  [selectAllOther],
+  (other) => other.layout.items.lowWave
 );

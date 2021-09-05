@@ -1,35 +1,36 @@
-import React, { lazy, Suspense } from "react";
-import { Switch, Route } from "react-router-dom";
-import { connect } from "react-redux";
-import { createStructuredSelector } from "reselect";
-
-import PageShell from "../../components/page-shell/page-shell.component";
-import { ServiceContainer, ServiceSideBarHide } from "./service.styles";
-import ServiceGraphicDesign from "../../components/service-graphic-design/service-graphic-design.component";
+import React, { lazy, Suspense } from 'react';
+import { connect } from 'react-redux';
+import { Route, Switch } from 'react-router-dom';
+import { createStructuredSelector } from 'reselect';
+import PageShell from '../../components/commons/page-shell/page-shell.component';
+import SpinnerLoading from '../../components/commons/spinner-loading/spinner-loading.component';
+import { selectIsSideBarHidden } from '../../redux/header/header.selectors.js';
 import {
   selectArtService,
-  selectEngineerService,
-  selectFullstackService,
-  selectPhotoService,
-  selectServiceRoute,
-} from "../../redux/service/service.selectors";
-import { selectIsSideBarHidden } from "../../redux/header/header.selectors.js";
-import SpinnerLoading from "../../components/spinner-loading/spinner-loading.component";
+  selectBigWaveImage, selectDevService, selectEngineerService, selectPhotoService, selectServiceRoute
+} from '../../redux/service/service.selectors';
+import { ServiceContainer, ServiceSideBarHide } from './service.styles';
+
+
 const ServiceHomeContent = lazy(() =>
-  import("../../components/service-content/service-content.component")
+  import('../../components/services/service-contents/service-content/service-content.component')
 );
+
+const ServiceGraphicDesign = lazy(() =>
+  import('../../components/services/service-contents/service-graphic-design/service-graphic-design.component')
+)
 const ServiceHeader = lazy(() =>
-  import("../../components/service-header/service-header.component")
+  import('../../components/services/service-header/service-header.component')
 );
 const ServiceEngineer = lazy(() =>
-  import("../../components/service-engineer/service-engineer.component")
+  import('../../components/services/service-contents/service-engineer/service-engineer.component')
 );
 const ServicePhotography = lazy(() =>
-  import("../../components/service-photography/service-photography.component")
+  import('../../components/services/service-contents/service-photography/service-photography.component')
 );
-const ServiceFullStackDeveloper = lazy(() =>
+const ServiceDev = lazy(() =>
   import(
-    "../../components/service-full-stack-developer/service-full-stack-developer.component"
+    '../../components/services/service-contents/service-dev/service-dev.component'
   )
 );
 
@@ -37,12 +38,16 @@ export const Service = ({
   art,
   photo,
   engineer,
-  fullstack,
+  dev,
   serviceRoute,
   isSideBarHidden,
+  bigWaveImage,
 }) => {
   return (
-    <ServiceContainer $issidebarhidden={isSideBarHidden}>
+    <ServiceContainer
+      $issidebarhidden={isSideBarHidden}
+      $bigWaveImage={bigWaveImage}
+    >
       {isSideBarHidden ? (
         <ServiceSideBarHide>
           Serv
@@ -56,8 +61,8 @@ export const Service = ({
           <Route exact path={serviceRoute} component={ServiceHomeContent} />
           <Route path={engineer.routeName} component={ServiceEngineer} />
           <Route
-            path={fullstack.routeName}
-            component={ServiceFullStackDeveloper}
+            path={dev.routeName}
+            component={ServiceDev}
           />
           <Route path={art.routeName} component={ServiceGraphicDesign} />
           <Route path={photo.routeName} component={ServicePhotography} />
@@ -71,9 +76,10 @@ const mapStateToProps = createStructuredSelector({
   art: selectArtService,
   photo: selectPhotoService,
   engineer: selectEngineerService,
-  fullstack: selectFullstackService,
+  dev: selectDevService,
   serviceRoute: selectServiceRoute,
   isSideBarHidden: selectIsSideBarHidden,
+  bigWaveImage: selectBigWaveImage,
 });
 
 export default connect(mapStateToProps)(PageShell(Service));

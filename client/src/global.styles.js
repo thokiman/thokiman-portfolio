@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 body {
-  background-color: #3f4249;
+  background-color: #000000;
   font-family: futura-book;
   overscroll-behavior: none;
 }

@@ -1,9 +1,9 @@
 import React, { lazy, Suspense } from "react";
-import { Route } from "react-router-dom";
 import { connect } from "react-redux";
+import { Route } from "react-router-dom";
 import { createStructuredSelector } from "reselect";
-import PageShell from "../../components/page-shell/page-shell.component";
-import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
+import PageShell from '../../components/commons/page-shell/page-shell.component';
+import SpinnerLoading from '../../components/commons/spinner-loading/spinner-loading.component';
 import {
   selectAllItems,
   selectBrandItems,
@@ -14,15 +14,16 @@ import {
   selectPhotographyBwRoute,
   selectPhotographyColorItems,
   selectPhotographyColorRoute,
-  selectPortfolioRoute,
+  selectPortfolioRoute
 } from "../../redux/collection/collection.selectors";
+import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 import { PortfolioContainer, PortfolioSideBarHide } from "./portfolio.styles";
-import SpinnerLoading from "../../components/spinner-loading/spinner-loading.component";
+
 const PortfolioContentContainer = lazy(() =>
-  import("../../components/portfolio-content/portfolio-content-container")
+  import("../../components/collections/portfolio-contents/portfolio-content/portfolio-content-container")
 );
 const PortfolioHeader = lazy(() =>
-  import("../../components/portfolio-header/portfolio-header.component")
+  import("../../components/collections/portfolio-header/portfolio-header.component")
 );
 
 export const Portfolio = ({

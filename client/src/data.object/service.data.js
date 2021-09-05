@@ -1,208 +1,398 @@
-export const service = {
-  id: "d891eb78-4f6d-49c4-b519-5ccf34cf8f26",
-  title: "Service",
-  routeName: "/service",
-  art: {
-    id: "ebefb7a3-60d6-4037-b186-a94a87b5bb6e",
-    title: ".visual design communication",
-    description: [
-      {
-        id: "e1da1acf-863a-4c75-a026-6117679fbac0",
-        title: "Sketch",
-        description:
-          "Rough drawing representing the chief features of an object or scene and often made as a preliminary study",
-      },
-      {
-        id: "3d4e3ff0-3dba-4364-a1b2-51bff5c274dc",
-        title: "Raster",
-        description:
-          "Raster graphics are bitmaps. A bitmap is a grid of individual pixels that collectively compose an image. Raster graphics render images as a collection of countless tiny squares. Each square, or pixel, is coded in a specific hue or shade.",
-      },
-      {
-        id: "5fc37585-0f4d-43df-b2e2-ae7397cbfe62",
-        title: "Vector",
-        description:
-          "Computer graphics images that are defined in terms of points on a Cartesian plane, which are connected by lines and curves to form polygons and other shapes.",
-      },
-    ],
-    routeName: "/service/visualart",
-    items: [
-      {
-        id: "940edb01-85f5-41f0-ad77-5729346c1c8c",
-        field: "adobe-illustrator",
-        iconPath: "/images/icon/service/visual-art-icon/adobe-illustrator.svg",
-      },
-      {
-        id: "d98e4c47-4fca-47c5-9b56-8b6e5d354753",
-        field: "procreate",
-        iconPath: "/images/icon/service/visual-art-icon/procreate.svg",
-      },
-      {
-        id: "f02b430d-6eb8-4020-bb97-a6c55d9620a9",
-        field: "sketchbook",
-        iconPath: "/images/icon/service/visual-art-icon/sketchbook.svg",
-      },
-    ],
-  },
-  photo: {
-    id: "889f498a-a85d-4997-84f4-a0d814015230",
-    title: ".photography",
-    description: [
-      {
-        id: "7bf08bf8-af95-476f-aee1-c29c7921b04b",
-        title: "Photo Shoot",
-        description:
-          "Photography is the art, application, and practice of creating durable images by recording light, either electronically by means of an image sensor, or chemically by means of a light sensitive material such as photographic film.",
-        items: [
-          {
-            id: "4411dcc8-939e-4609-86f9-a3024bd9e461",
-            name: "adobe-lightroom",
-            iconPath:
-              "/images/icon/service/photography-icon/adobe-lightroom.svg",
-          },
-          {
-            id: "69a48969-d0ef-4579-9a85-f40560040171",
-            name: "adobe-photoshop",
-            iconPath:
-              "/images/icon/service/photography-icon/adobe-photoshop.svg",
-          },
-          {
-            id: "ba528ea5-3d7e-4209-95fd-ab11c9fe1304",
-            name: "canon-eos-technology",
-            iconPath:
-              "/images/icon/service/photography-icon/canon-eos-technology.svg",
-          },
+module.exports.service = {
+    id: '289016f7-df20-4d4f-b4c3-88def8d081e0',
+    title: 'Service',
+    routeName: '/service',
+    art: {
+        id: 'ab36dbd0-7c8b-4a97-b48e-d83c9a20ddcb',
+        title: '.graphic designer',
+        description: [
+            {
+                id: 'd00a3b4c-d15b-42be-a829-bbb40796ae4a',
+                title: 'Sketcher',
+                description:
+                    'Rough drawing representing the chief features of an object or scene and often made as a preliminary study',
+            },
+            {
+                id: '9dca3a03-b5f0-4310-a539-49f1c2b7e906',
+                title: 'Illustrator',
+                description:
+                    'Creating raster and vector graphics. Raster graphics are bitmaps. A bitmap is a grid of individual pixels that collectively compose an image. Raster graphics render images as a collection of countless tiny squares. Each square, or pixel, is coded in a specific hue or shade. Vector graphics is computer graphics images that are defined in terms of points on a Cartesian plane, which are connected by lines and curves to form polygons and other shapes.',
+            },
         ],
-      },
-    ],
-    routeName: "/service/photo",
-    items: [
-      {
-        id: "2de1db99-bb70-4ade-83a6-5925a0049569",
-        field: "Adobe Stock",
-        linkUrl: "https://stock.adobe.com/contributor/209666177/Thomas",
-        iconPath: {
-          id: "ffc57df6-e619-4a9b-9669-3bee2ed3df82",
-          field: "adobe-stock",
-          iconPath:
-            "/images/icon/service/photography-icon/photo-stock-icon/adobe-stock.svg",
+        routeName: '/service/graphicdesigner',
+        items: [
+            {
+                id: '61321498bdfd815868bd6842',
+                field: 'procreate_b2619cc8-394c-4607-b3dc-28ef745a4ce3',
+                tags: null,
+                customCoordinates: null,
+                iconPath:
+                    'https://ik.imagekit.io/thokiman/thokiman-portfolio/service/graphicdesign/procreate_b2619cc8-394c-4607-b3dc-28ef745a4ce3',
+                filePath:
+                    '/thokiman-portfolio/service/graphicdesign/procreate_b2619cc8-394c-4607-b3dc-28ef745a4ce3',
+                height: 100,
+                width: 100,
+                size: 6888,
+            },
+            {
+                id: '61321498bdfd815868bd6845',
+                field: 'adobe-illustrator_24d5be78-869c-4bc5-b305-3b8affafa173',
+                tags: null,
+                customCoordinates: null,
+                iconPath:
+                    'https://ik.imagekit.io/thokiman/thokiman-portfolio/service/graphicdesign/adobe-illustrator_24d5be78-869c-4bc5-b305-3b8affafa173',
+                filePath:
+                    '/thokiman-portfolio/service/graphicdesign/adobe-illustrator_24d5be78-869c-4bc5-b305-3b8affafa173',
+                height: 210,
+                width: 240,
+                size: 1243,
+            },
+            {
+                id: '61321498bdfd815868bd6847',
+                field: 'sketchbook_ba058e6c-d006-493e-9743-24b01cae6d0d',
+                tags: null,
+                customCoordinates: null,
+                iconPath:
+                    'https://ik.imagekit.io/thokiman/thokiman-portfolio/service/graphicdesign/sketchbook_ba058e6c-d006-493e-9743-24b01cae6d0d',
+                filePath:
+                    '/thokiman-portfolio/service/graphicdesign/sketchbook_ba058e6c-d006-493e-9743-24b01cae6d0d',
+                height: 512,
+                width: 512,
+                size: 5703,
+            },
+        ],
+    },
+    photo: {
+        id: '63f020f6-83b5-4986-a02a-16ffe58f6096',
+        title: '.photographer',
+        description: [
+            {
+                id: 'e7694a7b-7c7a-4df6-ae34-af5c0e73126b',
+                title: 'Event Photographer',
+                description:
+                    'Photography is the art, application, and practice of creating durable images by recording light, either electronically by means of an image sensor, or chemically by means of a light sensitive material such as photographic film.',
+            },
+            {
+                id: 'c8de943a-36d9-4f9c-af1e-be3c7804ffa8',
+                title: 'Street Photographer',
+                description:
+                    'Street photography is a genre of photography that features subjects in candid situations within public places and does not necessitate the presence of a street or even the urban environment. ‘Street’ simply refers to a place where human activity can be seen, a place to observe and capture social interaction. The subject can even be absent of any people and can be that of object or environment where an object projects a human character or an environment is decidedly human. Framing and timing are key aspects of the craft, with the aim of creating images at a decisive or poignant moment. Alternatively, the street photographer may seek a more prosaic depiction of the scene, as a form of social documentary.',
+            },
+        ],
+        routeName: '/service/photographer',
+        photographyIconItems: [
+            {
+                id: '6132150abdfd815868bd6909',
+                field: 'adobe-lightroom_8dd78ce4-7f24-4e9e-9aa0-9ebb384bac38',
+                tags: null,
+                customCoordinates: null,
+                iconPath:
+                    'https://ik.imagekit.io/thokiman/thokiman-portfolio/service/photography/photographyicon/adobe-lightroom_8dd78ce4-7f24-4e9e-9aa0-9ebb384bac38',
+                filePath:
+                    '/thokiman-portfolio/service/photography/photographyicon/adobe-lightroom_8dd78ce4-7f24-4e9e-9aa0-9ebb384bac38',
+                height: 210,
+                width: 240,
+                size: 1111,
+            },
+            {
+                id: '6132150abdfd815868bd690f',
+                field: 'canon-eos-technology_cb1b7475-5d25-437b-942b-913c99f8b467',
+                tags: null,
+                customCoordinates: null,
+                iconPath:
+                    'https://ik.imagekit.io/thokiman/thokiman-portfolio/service/photography/photographyicon/canon-eos-technology_cb1b7475-5d25-437b-942b-913c99f8b467',
+                filePath:
+                    '/thokiman-portfolio/service/photography/photographyicon/canon-eos-technology_cb1b7475-5d25-437b-942b-913c99f8b467',
+                height: 512,
+                width: 512,
+                size: 1691,
+            },
+            {
+                id: '6132150abdfd815868bd6918',
+                field: 'adobe-photoshop_506dc27b-4dff-4a2b-9f32-bf10bf04ccd7',
+                tags: null,
+                customCoordinates: null,
+                iconPath:
+                    'https://ik.imagekit.io/thokiman/thokiman-portfolio/service/photography/photographyicon/adobe-photoshop_506dc27b-4dff-4a2b-9f32-bf10bf04ccd7',
+                filePath:
+                    '/thokiman-portfolio/service/photography/photographyicon/adobe-photoshop_506dc27b-4dff-4a2b-9f32-bf10bf04ccd7',
+                height: 210,
+                width: 240,
+                size: 1500,
+            },
+        ],
+        photoStockItems: [
+            {
+                id: '669ac0dc-bee1-4dc2-b3fc-5f45602bd6e5',
+                field: 'Adobe Stock',
+                linkUrl: 'https://stock.adobe.com/contributor/209666177/Thomas',
+                iconPath: {
+                    id: '6132150abdfd815868bd6912',
+                    field: 'adobe-stock_0b8bbc0a-ce02-4ec6-8e26-14bc15cf1118',
+                    tags: null,
+                    customCoordinates: null,
+                    iconPath:
+                        'https://ik.imagekit.io/thokiman/thokiman-portfolio/service/photography/photostock/adobestock/adobe-stock_0b8bbc0a-ce02-4ec6-8e26-14bc15cf1118',
+                    filePath:
+                        '/thokiman-portfolio/service/photography/photostock/adobestock/adobe-stock_0b8bbc0a-ce02-4ec6-8e26-14bc15cf1118',
+                    height: 813,
+                    width: 713,
+                    size: 1573,
+                },
+            },
+            {
+                id: '75930783-4eb1-4265-9bc8-7aff4616020b',
+                field: 'EyeEm',
+                linkUrl: 'https://www.eyeem.com/u/thokimanpeace',
+                iconPath: {
+                    id: '6132150abdfd815868bd6915',
+                    field: 'eye-em_14449c54-1e89-4ce6-976b-9d597b00aad8',
+                    tags: null,
+                    customCoordinates: null,
+                    iconPath:
+                        'https://ik.imagekit.io/thokiman/thokiman-portfolio/service/photography/photostock/undefined/eye-em_14449c54-1e89-4ce6-976b-9d597b00aad8',
+                    filePath:
+                        '/thokiman-portfolio/service/photography/photostock/undefined/eye-em_14449c54-1e89-4ce6-976b-9d597b00aad8',
+                    height: 331,
+                    width: 712,
+                    size: 1859,
+                },
+            },
+            {
+                id: '6eb45e5d-6142-404b-94ee-32ce58bf79e9',
+                field: 'ShutterStock',
+                linkUrl: 'http://www.shutterstock.com/g/ThomasSantosa',
+                iconPath: {
+                    id: '6132150abdfd815868bd690c',
+                    field: 'shutter-stock_163f62e3-2b53-476e-835b-800dbc73016f',
+                    tags: null,
+                    customCoordinates: null,
+                    iconPath:
+                        'https://ik.imagekit.io/thokiman/thokiman-portfolio/service/photography/photostock/shutterstock/shutter-stock_163f62e3-2b53-476e-835b-800dbc73016f',
+                    filePath:
+                        '/thokiman-portfolio/service/photography/photostock/shutterstock/shutter-stock_163f62e3-2b53-476e-835b-800dbc73016f',
+                    height: 361,
+                    width: 787,
+                    size: 3236,
+                },
+            },
+        ],
+    },
+    engineer: {
+        id: '8032f44b-173c-45ce-b3ff-9d90a31355ad',
+        title: '.chemical engineer',
+        description: [
+            {
+                id: 'cfa30a3f-84cd-470c-90b3-f727f2d2955f',
+                title: 'Process Engineer',
+                description:
+                    'Responsible for designing, implementing, controlling and optimizing industrial processes, especially continuous ones within the chemical, petrochemical, agriculture, mineral processing, food, pharmaceutical, and biotechnological industries.',
+            },
+            {
+                id: '5fc19033-f172-4f75-99f0-f6e0bd453007',
+                title: 'Distributed Control System Operator',
+                description:
+                    'Responsible for recording, compiling, reporting and documenting operating data, and monitoring process indicators. Coordinate the start-up, shut-down (normal and emergency) and normal operations/maintenance activities with lead operator and field operators.',
+            },
+            {
+                id: 'e45e2c84-decc-4fe1-819e-8648616ed7f4',
+                title: 'Field Operator',
+                description:
+                    'Responsible for setting up, operating and troubleshooting a variety of machines and/or equipment on customer site in accordance with established procedures and guidelines. Reads and interprets blueprints and diagrams to select, position and secure machinery.',
+            },
+        ],
+        routeName: '/service/chemicalengineer',
+        items: [
+            {
+                id: '6132144bbdfd815868bd64d9',
+                field: 'process-engineer_896d7940-c7a3-414c-ae0d-27d35c10e6b2',
+                tags: null,
+                customCoordinates: null,
+                iconPath:
+                    'https://ik.imagekit.io/thokiman/thokiman-portfolio/service/engineer/process-engineer_896d7940-c7a3-414c-ae0d-27d35c10e6b2',
+                filePath:
+                    '/thokiman-portfolio/service/engineer/process-engineer_896d7940-c7a3-414c-ae0d-27d35c10e6b2',
+                height: 512,
+                width: 512,
+                size: 5187,
+            },
+            {
+                id: '6132144bbdfd815868bd64dc',
+                field: 'dcs_bc2cd482-a65b-4978-ac06-8b5d8fb1731d',
+                tags: null,
+                customCoordinates: null,
+                iconPath:
+                    'https://ik.imagekit.io/thokiman/thokiman-portfolio/service/engineer/dcs_bc2cd482-a65b-4978-ac06-8b5d8fb1731d',
+                filePath:
+                    '/thokiman-portfolio/service/engineer/dcs_bc2cd482-a65b-4978-ac06-8b5d8fb1731d',
+                height: 512,
+                width: 512,
+                size: 4603,
+            },
+            {
+                id: '6132144bbdfd815868bd64df',
+                field: 'field-operation_243aeb12-33a2-4a19-ae75-bdd12c8a2170',
+                tags: null,
+                customCoordinates: null,
+                iconPath:
+                    'https://ik.imagekit.io/thokiman/thokiman-portfolio/service/engineer/field-operation_243aeb12-33a2-4a19-ae75-bdd12c8a2170',
+                filePath:
+                    '/thokiman-portfolio/service/engineer/field-operation_243aeb12-33a2-4a19-ae75-bdd12c8a2170',
+                height: 512,
+                width: 512,
+                size: 4097,
+            },
+        ],
+    },
+    fullstack: {
+        id: '7c54aad9-af5b-4c8b-8958-c33e14cbe1f9',
+        title: '.full stack developer',
+        description: [
+            {
+                id: '8e624d65-0d90-4f41-80f2-92bc90cf59ed',
+                title: 'Web Developer',
+                description:
+                    'Designing user interactions on websites, developing servers and databases for website functionality and coding for mobile platforms.',
+            },
+        ],
+        routeName: '/service/fullstackdeveloper',
+        items: {
+            frontend: [
+                {
+                    id: '61330aaabdfd815868c2421c',
+                    field: 'react-ui-library_55c0837c-3264-45ca-9dcd-e59c3003cdcd',
+                    tags: null,
+                    customCoordinates: null,
+                    iconPath:
+                        'https://ik.imagekit.io/thokiman/thokiman-portfolio/service/dev/frontend/react-ui-library_55c0837c-3264-45ca-9dcd-e59c3003cdcd',
+                    filePath:
+                        '/thokiman-portfolio/service/dev/frontend/react-ui-library_55c0837c-3264-45ca-9dcd-e59c3003cdcd',
+                    height: 3619,
+                    width: 3619,
+                    size: 1266,
+                },
+            ],
+            backend: [
+                {
+                    id: '61330aaabdfd815868c2421e',
+                    field: 'mongo-db_f2c75370-ff49-4262-9db4-9be8f5e90d6c',
+                    tags: null,
+                    customCoordinates: null,
+                    iconPath:
+                        'https://ik.imagekit.io/thokiman/thokiman-portfolio/service/dev/backend/mongo-db_f2c75370-ff49-4262-9db4-9be8f5e90d6c',
+                    filePath:
+                        '/thokiman-portfolio/service/dev/backend/mongo-db_f2c75370-ff49-4262-9db4-9be8f5e90d6c',
+                    height: 2500,
+                    width: 2500,
+                    size: 1214,
+                },
+                {
+                    id: '61330aaabdfd815868c24223',
+                    field: 'express_5b81923f-0ac6-4850-9872-d825e6b6100c',
+                    tags: null,
+                    customCoordinates: null,
+                    iconPath:
+                        'https://ik.imagekit.io/thokiman/thokiman-portfolio/service/dev/backend/express_5b81923f-0ac6-4850-9872-d825e6b6100c',
+                    filePath:
+                        '/thokiman-portfolio/service/dev/backend/express_5b81923f-0ac6-4850-9872-d825e6b6100c',
+                    height: 728,
+                    width: 2500,
+                    size: 5196,
+                },
+                {
+                    id: '61330aaabdfd815868c24229',
+                    field: 'node-js_f3bf507f-79d9-4aad-8b2a-13d19113d9bb',
+                    tags: null,
+                    customCoordinates: null,
+                    iconPath:
+                        'https://ik.imagekit.io/thokiman/thokiman-portfolio/service/dev/backend/node-js_f3bf507f-79d9-4aad-8b2a-13d19113d9bb',
+                    filePath:
+                        '/thokiman-portfolio/service/dev/backend/node-js_f3bf507f-79d9-4aad-8b2a-13d19113d9bb',
+                    height: 338,
+                    width: 558,
+                    size: 8746,
+                },
+                {
+                    id: '61330aaabdfd815868c24232',
+                    field: 'firebase-db_b959fa54-6966-4aae-8eb7-db57fb1d2073',
+                    tags: null,
+                    customCoordinates: null,
+                    iconPath:
+                        'https://ik.imagekit.io/thokiman/thokiman-portfolio/service/dev/backend/firebase-db_b959fa54-6966-4aae-8eb7-db57fb1d2073',
+                    filePath:
+                        '/thokiman-portfolio/service/dev/backend/firebase-db_b959fa54-6966-4aae-8eb7-db57fb1d2073',
+                    height: 2467,
+                    width: 1781,
+                    size: 926,
+                },
+                {
+                    id: '61330aaabdfd815868c24235',
+                    field: 'spring-boot_35c790da-9504-4571-a7b6-8b774dcae51e',
+                    tags: null,
+                    customCoordinates: null,
+                    iconPath:
+                        'https://ik.imagekit.io/thokiman/thokiman-portfolio/service/dev/backend/spring-boot_35c790da-9504-4571-a7b6-8b774dcae51e',
+                    filePath:
+                        '/thokiman-portfolio/service/dev/backend/spring-boot_35c790da-9504-4571-a7b6-8b774dcae51e',
+                    height: 954,
+                    width: 3276,
+                    size: 9337,
+                },
+            ],
+            dataengineer: [
+                {
+                    id: '61330aaabdfd815868c24220',
+                    field: 'sql_82711fea-9dfe-4026-ab5c-ea78ad08bbd6',
+                    tags: null,
+                    customCoordinates: null,
+                    iconPath:
+                        'https://ik.imagekit.io/thokiman/thokiman-portfolio/service/dev/dataengineer/sql_82711fea-9dfe-4026-ab5c-ea78ad08bbd6',
+                    filePath:
+                        '/thokiman-portfolio/service/dev/dataengineer/sql_82711fea-9dfe-4026-ab5c-ea78ad08bbd6',
+                    height: 480,
+                    width: 480,
+                    size: 3689,
+                },
+                {
+                    id: '61330aaabdfd815868c24226',
+                    field: 'nosql_e775d98b-e2b8-4ed5-958c-b14787ebfa57',
+                    tags: null,
+                    customCoordinates: null,
+                    iconPath:
+                        'https://ik.imagekit.io/thokiman/thokiman-portfolio/service/dev/dataengineer/nosql_e775d98b-e2b8-4ed5-958c-b14787ebfa57',
+                    filePath:
+                        '/thokiman-portfolio/service/dev/dataengineer/nosql_e775d98b-e2b8-4ed5-958c-b14787ebfa57',
+                    height: 287,
+                    width: 745,
+                    size: 1794,
+                },
+                {
+                    id: '61330aaabdfd815868c2422c',
+                    field: 'java_e70da30c-42ce-43b9-aca8-8bca9681c8cd',
+                    tags: null,
+                    customCoordinates: null,
+                    iconPath:
+                        'https://ik.imagekit.io/thokiman/thokiman-portfolio/service/dev/dataengineer/java_e70da30c-42ce-43b9-aca8-8bca9681c8cd',
+                    filePath:
+                        '/thokiman-portfolio/service/dev/dataengineer/java_e70da30c-42ce-43b9-aca8-8bca9681c8cd',
+                    height: 2500,
+                    width: 2500,
+                    size: 3339,
+                },
+                {
+                    id: '61330aaabdfd815868c2422f',
+                    field: 'python_a7efae26-48d2-4c99-be72-d3cf22037227',
+                    tags: null,
+                    customCoordinates: null,
+                    iconPath:
+                        'https://ik.imagekit.io/thokiman/thokiman-portfolio/service/dev/dataengineer/python_a7efae26-48d2-4c99-be72-d3cf22037227',
+                    filePath:
+                        '/thokiman-portfolio/service/dev/dataengineer/python_a7efae26-48d2-4c99-be72-d3cf22037227',
+                    height: 2326,
+                    width: 2080,
+                    size: 4809,
+                },
+            ],
         },
-      },
-      {
-        id: "c2122e50-bcad-4641-a2d7-5d80d364b145",
-        field: "EyeEm",
-        linkUrl: "https://www.eyeem.com/u/thokimanpeace",
-        iconPath: {
-          id: "3180ceb1-29cf-44a4-a545-65ea7069c41e",
-          field: "eye-em",
-          iconPath:
-            "/images/icon/service/photography-icon/photo-stock-icon/eye-em.svg",
-        },
-      },
-      {
-        id: "add4aa85-03ee-40a9-9673-4c1d2cf7d880",
-        field: "ShutterStock",
-        linkUrl: "http://www.shutterstock.com/g/ThomasSantosa",
-        iconPath: {
-          id: "2a0aecbf-5275-4179-a5e5-04028740c123",
-          field: "shutter-stock",
-          iconPath:
-            "/images/icon/service/photography-icon/photo-stock-icon/shutter-stock.svg",
-        },
-      },
-    ],
-  },
-  engineer: {
-    id: "57758919-a683-4cd4-a528-4c3633afe99a",
-    title: ".engineer",
-    description: [
-      {
-        id: "6ee8d57e-55a9-40a9-92a4-3f6cf7ffa219",
-        title: "Process Engineer",
-        description:
-          "Responsible for designing, implementing, controlling and optimizing industrial processes, especially continuous ones within the chemical, petrochemical, agriculture, mineral processing, food, pharmaceutical, and biotechnological industries.",
-      },
-      {
-        id: "beda7bab-582f-4ba6-b638-56e3e32a27cd",
-        title: "Distributed Control System Operator",
-        description:
-          "Responsible for recording, compiling, reporting and documenting operating data, and monitoring process indicators. Coordinate the start-up, shut-down (normal and emergency) and normal operations/maintenance activities with lead operator and field operators.",
-      },
-      {
-        id: "7a5b6b8a-7f69-47e2-97ee-abe04a0fa32c",
-        title: "Field Operator",
-        description:
-          "Responsible for setting up, operating and troubleshooting a variety of machines and/or equipment on customer site in accordance with established procedures and guidelines. Reads and interprets blueprints and diagrams to select, position and secure machinery.",
-      },
-    ],
-    routeName: "/service/engineer",
-    items: [
-      {
-        id: "0bf1e5a9-7f95-45b7-9fe9-ac13e44bc2cd",
-        field: "dcs",
-        iconPath: "/images/icon/service/engineer-icon/dcs.svg",
-      },
-      {
-        id: "2472fe52-7377-4e83-acd4-f9f7933c88f4",
-        field: "field-operation",
-        iconPath: "/images/icon/service/engineer-icon/field-operation.svg",
-      },
-      {
-        id: "b40f97c7-d61a-4fab-9eb2-a15ce4bee616",
-        field: "process-engineer",
-        iconPath: "/images/icon/service/engineer-icon/process-engineer.svg",
-      },
-    ],
-  },
-  fullstack: {
-    id: "d8b57b05-886c-4e8f-8db6-355ae8a3e250",
-    title: ".fullstack web developer",
-    description: [
-      {
-        id: "840775df-9b7c-46b5-83d0-a0d9cf1e91c5",
-        title: "Web Developer",
-        description:
-          "Designing user interactions on websites, developing servers and databases for website functionality and coding for mobile platforms.",
-      },
-    ],
-    routeName: "/service/fullstack",
-    items: [
-      {
-        id: "c949d0d4-c425-4d5e-9a1c-00b4a986128f",
-        field: "express",
-        iconPath:
-          "/images/icon/service/full-stack-developer/back-end/express.svg",
-      },
-      {
-        id: "b9169754-1df4-4722-8f6b-b9e4de1169e0",
-        field: "firebase-db",
-        iconPath:
-          "/images/icon/service/full-stack-developer/back-end/firebase-db.svg",
-      },
-      {
-        id: "8ce7ae09-a5c5-4c37-91d2-68f800841185",
-        field: "node-js",
-        iconPath:
-          "/images/icon/service/full-stack-developer/back-end/node-js.svg",
-      },
-      {
-        id: "878e0575-bb71-451c-9b47-378d84e33d5c",
-        field: "react-ui-library",
-        iconPath:
-          "/images/icon/service/full-stack-developer/front-end/react-ui-library.svg",
-      },
-      {
-        id: "b80bf5c3-a31a-4c53-a29e-44bb908ec708",
-        field: "python",
-        iconPath:
-          "/images/icon/service/full-stack-developer/data-engineer/python.svg",
-      },
-      {
-        id: "6b4c7d56-a141-49a1-8304-a08f9fc6fc0a",
-        field: "sql",
-        iconPath:
-          "/images/icon/service/full-stack-developer/data-engineer/sql.svg",
-      },
-    ],
-  },
+    },
 };

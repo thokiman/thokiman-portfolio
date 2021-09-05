@@ -1,5 +1,8 @@
-import styled, { css, keyframes } from "styled-components";
-import ContactImage from "../../assets/layout/water-2.jpg";
+import styled, { css, keyframes } from 'styled-components';
+
+const getContactImage = ({ $lowWaveImage }) => {
+  return $lowWaveImage.item.iconPath;
+};
 
 const contactSideBarHide = keyframes`
   0% {
@@ -47,7 +50,7 @@ const getContactSideBarActive = (props) => {
 };
 
 export const ContactContainer = styled.div`
-  background-image: url(${ContactImage});
+  background-image: url(${getContactImage});
   opacity: 0.9;
   background-size: cover;
   display: flex;
@@ -73,4 +76,4 @@ export const ContactContainer = styled.div`
   ${getContactSideBarActive};
 `;
 
-ContactContainer.displayName = "ContactContainer";
+ContactContainer.displayName = 'ContactContainer';

@@ -1,5 +1,9 @@
-import styled, { css, keyframes } from "styled-components";
-import ServiceImage from "../../assets/layout/water-3.jpg";
+import styled, { css, keyframes } from 'styled-components';
+
+const getServiceImage = ({ $bigWaveImage }) => {
+  return $bigWaveImage.item.iconPath;
+};
+
 const serviceSideBarHide = keyframes`
   0% {
     transform: rotateX(100deg);
@@ -44,7 +48,7 @@ const getServiceSideBarActive = (props) => {
 };
 
 export const ServiceContainer = styled.div`
-  background-image: url(${ServiceImage});
+  background-image: url(${getServiceImage});
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -71,4 +75,4 @@ export const ServiceContainer = styled.div`
   ${getServiceSideBarActive};
 `;
 
-ServiceContainer.displayName = "ServiceContainer";
+ServiceContainer.displayName = 'ServiceContainer';
