@@ -11,7 +11,9 @@ import {
   selectPhotographyBwTitle,
   selectPhotographyColorRoute,
   selectPhotographyColorTitle,
-  selectPortfolioRoute
+  selectPortfolioRoute,
+  selectWebsiteRoute,
+  selectWebsiteTitle
 } from "../../../redux/collection/collection.selectors";
 import { selectIsSideBarHidden } from "../../../redux/header/header.selectors";
 import {
@@ -30,8 +32,11 @@ export const PortfolioHeader = ({
   photographyBwRoute,
   photographyColorTitle,
   photographyColorRoute,
+  websiteRoute,
+  websiteTitle,
   isSideBarHidden,
 }) => {
+
   return (
     <PortfolioHeaderOptions
       className="options"
@@ -67,6 +72,12 @@ export const PortfolioHeader = ({
       >
         {photographyBwTitle}
       </PortfolioHeaderOption>
+      <PortfolioHeaderOption
+        to={websiteRoute}
+        $matchpath={!!pathname.match(websiteRoute)}
+      >
+        {websiteTitle}
+      </PortfolioHeaderOption>
     </PortfolioHeaderOptions>
   );
 };
@@ -81,6 +92,8 @@ const mapStateToProps = createStructuredSelector({
   photographyBwRoute: selectPhotographyBwRoute,
   photographyColorTitle: selectPhotographyColorTitle,
   photographyColorRoute: selectPhotographyColorRoute,
+  websiteTitle: selectWebsiteTitle,
+  websiteRoute: selectWebsiteRoute,
   isSideBarHidden: selectIsSideBarHidden,
 });
 

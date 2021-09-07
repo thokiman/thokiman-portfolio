@@ -81,3 +81,19 @@ export const selectPhotographyColorTitle = createSelector(
   [selectAllCollection],
   (collection) => collection.photography.items.color.title
 );
+
+export const selectWebsiteRoute = createSelector(
+  [selectAllCollection],
+  (collection) => collection.website.routeName
+)
+
+export const selectWebsiteTitle = createSelector(
+  [selectAllCollection],
+  (collection) => collection.website.title
+)
+
+export const selectWebsiteItems = createSelector(
+  [selectAllCollection],
+  (collection) => collection.website.items
+
+)

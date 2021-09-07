@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import HomepageProfile from "../../../../assets/profile/profile.png";
 
+const backgroundProfileImage = "#000000"
 
 const SideBarActive = css`
   display: none;
@@ -16,11 +17,11 @@ export const HomepageProfileImageContainer = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  background-color: #080808;
+  background-color: ${ backgroundProfileImage };
   @media only screen and (max-width: 800px) {
     ${ getSideBarActive }
     width: 100%;
-    background: #27292e;
+    background-color: ${ backgroundProfileImage };
   }
 `;
 
@@ -31,58 +32,22 @@ export const HomepageBackgroundProfileImage = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  @media only screen and (max-width: 800px) {
-    width: 74vw;
-    height: 40vh;
 
-    ::before {
-      border-radius: 200px;
-      background: linear-gradient(
-        to right,
-        hsl(89, 85%, 66%),
-        rgba(18, 129, 148, 0.66),
-        hsl(134, 85%, 66%),
-        hsl(179, 85%, 66%),
-        rgba(227, 225, 228, 0.66)
-      );
-      background-size: 200%;
-      animation: linearGradientFlow 4s infinite ease-in-out alternate-reverse
-        both;
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 70%;
-      height: 63%;
-      padding: 5px;
-      transform: translate(-50%, -50%);
-      z-index: 1;
-    }
-    @keyframes linearGradientFlow {
-      0% {
-        background-position: 0%;
-      }
-
-      100% {
-        background-position: 300%;
-      }
-    }
-  }
 `;
 
 export const HomepageProfileImage = styled.div`
   width: 100%;
   height: 100%;
+  box-shadow: 0px 0px 20px 15px rgba(0,0,0,1) inset;
   background-image: url(${ HomepageProfile });
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
   @media only screen and (max-width: 800px) {
-    border-radius: 200px 200px 200px 200px;
-    background-position: 28% 28%;
-    position: relative;
-    z-index: 2;
+
+    background-position: 100% 100%;
+
   }
 `;
 

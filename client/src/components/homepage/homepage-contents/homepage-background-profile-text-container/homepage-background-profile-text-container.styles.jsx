@@ -1,4 +1,6 @@
 import styled, { css } from "styled-components";
+
+const backgroundProfileText = "#000000"
 const SideBarActive = css`
   display: none;
 `;
@@ -7,14 +9,14 @@ const getSideBarActive = (props) => {
   return null;
 };
 export const HomepageProfileTextContainer = styled.div`
-  height: 100%;
+  height: 45%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   @media only screen and (max-width: 800px) {
-    background-color: #3f4249;
-    ${getSideBarActive}
+    background-color: ${ backgroundProfileText };
+    ${ getSideBarActive }
   }
 `;
 
@@ -53,7 +55,7 @@ const HomepageTextStyles = css`
   padding-right: 10px;
 `;
 export const HomepageActivityText = styled.div`
-  ${HomepageTextStyles}
+  ${ HomepageTextStyles }
   font-size: 200%;
   letter-spacing: 0.1em;
   line-height: 1.1em;
@@ -70,7 +72,7 @@ export const HomepageActivityText = styled.div`
 `;
 
 export const HomepageQuoteText = styled.div`
-  ${HomepageTextStyles}
+  ${ HomepageTextStyles }
   font-size: 140%;
   letter-spacing: 0.1em;
   line-height: 1.15em;

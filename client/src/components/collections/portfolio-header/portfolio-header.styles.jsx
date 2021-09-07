@@ -1,45 +1,16 @@
-import { Link } from "react-router-dom";
-import styled, { css, keyframes } from "styled-components";
+import { Link } from 'react-router-dom';
+import styled, { css, keyframes } from 'styled-components';
 
-const backgroundColor = "black";
-const greenColor = "#128194";
-const greenHover10 = "rgba(18, 129, 148, 0.1)";
-const greenHover20 = "rgba(18, 129, 148, 0.2)";
-const greenHover25 = "rgba(18, 129, 148, 0.25)";
-const greenHover35 = "rgba(18, 129, 148, 0.35)";
-const greenHover40 = "rgba(18, 129, 148, 0.40)";
-const greenHover45 = "rgba(18, 129, 148, 0.45)";
-const greenHover55 = "rgba(18, 129, 148, 0.55)";
-const greenHover60 = "rgba(18, 129, 148, 0.6)";
-
-const SideBarActive = css`
-  display: none;
-`;
-const getSideBarActive = (props) => {
-  if (props.$issidebarhidden) return SideBarActive;
-  return null;
-};
-
-export const PortfolioHeaderOptions = styled.div`
-  background-color: ${backgroundColor};
-  height: 8vh;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  @media only screen and (max-width: 800px) {
-    background-color: black;
-    width: 98%;
-    margin: 0 auto;
-    height: 24vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 0px 0px;
-    justify-content: center;
-    align-items: center;
-    ${getSideBarActive}
-  }
-`;
+const backgroundColor = '#000000';
+const greenColor = '#128194';
+const greenHover10 = 'rgba(18, 129, 148, 0.1)';
+const greenHover20 = 'rgba(18, 129, 148, 0.2)';
+const greenHover25 = 'rgba(18, 129, 148, 0.25)';
+const greenHover35 = 'rgba(18, 129, 148, 0.35)';
+const greenHover40 = 'rgba(18, 129, 148, 0.40)';
+const greenHover45 = 'rgba(18, 129, 148, 0.45)';
+const greenHover55 = 'rgba(18, 129, 148, 0.55)';
+const greenHover60 = 'rgba(18, 129, 148, 0.6)';
 
 const optionHover = keyframes`
  0% {
@@ -166,12 +137,15 @@ const optionHover = keyframes`
     text-shadow: 0 0 30px ${greenHover60}, 0 0 60px ${greenHover45}, 0 0 110px ${greenHover25}, 0 0 100px ${greenHover10};
   }
 `;
+
 const fadeHeaderMobile = keyframes`
 from{
-    box-shadow: rgba(18, 129, 148, 0) 0px 3px 10px -10px;
+    
+    box-shadow: rgba(18, 129, 148, 0) -3px 3px 10px -10px ;
 }
 to{
-  box-shadow: rgba(18, 129, 148, 0.4) 0px 7px 20px -10px;
+  
+  box-shadow: rgba(18, 129, 148, 0.3) 0px 2px 10px 5px ;
 }
 `;
 const fadeActiveMobile = keyframes`
@@ -185,6 +159,42 @@ const fadeActiveMobile = keyframes`
     color: #146C80;
   }
 `;
+
+const SideBarActive = css`
+  display: none;
+`;
+const getSideBarActive = (props) => {
+  if (props.$issidebarhidden) return SideBarActive;
+  return null;
+};
+
+export const PortfolioHeaderOptions = styled.div`
+  background-color: ${backgroundColor};
+  height: 8vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  @media only screen and (max-width: 800px) {
+    background-color: black;
+    width: 98%;
+    margin: 15px auto;
+    height: max-content;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 15px 0px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+
+    ${getSideBarActive}
+  }
+`;
+
 const PortfolioHeaderOptionStyles = css`
   margin: auto 0px;
   text-decoration: none;
@@ -193,26 +203,46 @@ const PortfolioHeaderOptionStyles = css`
   font-size: 120%;
   padding: 9px;
   color: ${greenColor};
-  text-align: center;
+
   font-family: futura-medium;
+  display: block;
+
   @media only screen and (max-width: 800px) {
     font-size: 110%;
-    animation: ${fadeHeaderMobile} 2s ease-in-out infinite alternate both;
-    width: 35vw;
-    height: 7vh;
-    letter-spacing: 0.15em;
+    text-align: left;
+    animation: ${fadeHeaderMobile} 1.3s ease-in-out infinite alternate both;
 
+    width: 35vw;
+    height: min-content;
+    letter-spacing: 0.15em;
+    &:nth-child(1) {
+      width: 45vw;
+      padding-left: 20px;
+      grid-column: 1;
+    }
     &:nth-child(2) {
-      width: 61vw;
+      width: 48vw;
+      padding-left: 10px;
       grid-column: 2 / span 2;
     }
-
+    &:nth-child(3) {
+      width: 45vw;
+      padding-left: 20px;
+      grid-column: 1;
+    }
     &:nth-child(4) {
-      width: 61vw;
+      width: 48vw;
+      padding-left: 10px;
       grid-column: 2 / span 2;
     }
     &:nth-child(5) {
-      width: 96vw;
+      width: 93vw;
+      padding-left: 20px;
+      grid-column: 1 / span 3;
+    }
+    &:nth-child(6) {
+      width: 93vw;
+      padding-left: 20px;
       grid-column: 1 / span 3;
     }
   }
@@ -233,9 +263,9 @@ const getPortfolioHeaderOption = (props) => {
 export const PortfolioHeaderOption = styled(Link)`
   ${PortfolioHeaderOptionStyles}
   ${getPortfolioHeaderOption}
-         &:hover {
+    &:hover {
     animation: ${optionHover} 1s linear both;
   }
 `;
-PortfolioHeaderOptions.displayName = "PortfolioHeaderOptions";
-PortfolioHeaderOption.displayName = "PortfolioHeaderOption";
+PortfolioHeaderOptions.displayName = 'PortfolioHeaderOptions';
+PortfolioHeaderOption.displayName = 'PortfolioHeaderOption';

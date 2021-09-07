@@ -10,6 +10,7 @@ import {
 
 
 export const PortfolioItem = ({ items, isSideBarHidden }) => {
+
   return (
     <PortfolioImageCollectionsContainer $issidebarhidden={isSideBarHidden}>
       {items.map((item) => {

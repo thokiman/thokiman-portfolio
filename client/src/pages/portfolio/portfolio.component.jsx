@@ -14,13 +14,18 @@ import {
   selectPhotographyBwRoute,
   selectPhotographyColorItems,
   selectPhotographyColorRoute,
-  selectPortfolioRoute
+  selectPortfolioRoute,
+  selectWebsiteItems,
+  selectWebsiteRoute
 } from "../../redux/collection/collection.selectors";
 import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
 import { PortfolioContainer, PortfolioSideBarHide } from "./portfolio.styles";
 
+const PortfolioWebsite = lazy(() =>
+  import("../../components/collections/portfolio-contents/portfolio-websites/portfolio-websites.component")
+)
 const PortfolioContentContainer = lazy(() =>
-  import("../../components/collections/portfolio-contents/portfolio-content/portfolio-content-container")
+  import("../../components/collections/portfolio-contents/portfolio-content/portfolio-content-container.component")
 );
 const PortfolioHeader = lazy(() =>
   import("../../components/collections/portfolio-header/portfolio-header.component")
@@ -37,8 +42,11 @@ export const Portfolio = ({
   photographyBwRoute,
   photographyColorItems,
   photographyColorRoute,
+  websiteItems,
+  websiteRoute,
   isSideBarHidden,
 }) => {
+
   return (
     <PortfolioContainer $issidebarhidden={isSideBarHidden}>
       <Suspense fallback={<SpinnerLoading />}>
@@ -75,6 +83,12 @@ export const Portfolio = ({
             <PortfolioContentContainer items={photographyColorItems} />
           )}
         />
+        <Route
+          path={websiteRoute}
+          render={() => {
+            <PortfolioWebsite websiteItems={websiteItems} />
+          }}
+        />
       </Suspense>
     </PortfolioContainer>
   );
@@ -90,6 +104,8 @@ const mapStateToProps = createStructuredSelector({
   photographyBwRoute: selectPhotographyBwRoute,
   photographyColorItems: selectPhotographyColorItems,
   photographyColorRoute: selectPhotographyColorRoute,
+  websiteItems: selectWebsiteItems,
+  websiteRoute: selectWebsiteRoute,
   isSideBarHidden: selectIsSideBarHidden,
 });
 

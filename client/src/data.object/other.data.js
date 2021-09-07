@@ -1,11 +1,11 @@
 module.exports.other = {
     layout: {
-        id: '964d97a2-08bb-4014-a1d1-2d7521a507c0',
+        id: '45d161c2-06c1-4d67-9b0d-04f4e3b447ce',
         title: 'layout',
         items: {
             bigWave: {
                 item: {
-                    id: '613216a8bdfd815868bd6ed8',
+                    id: '95d28c23-87c3-4c6e-a04b-3c6b1eb37b7c',
                     field: 'layout-big-wave_0b34f2ce-fdc8-434c-86d5-09b5c5d59c5a',
                     tags: null,
                     customCoordinates: null,
@@ -20,7 +20,7 @@ module.exports.other = {
             },
             lowWave: {
                 item: {
-                    id: '613216a8bdfd815868bd6edb',
+                    id: '124936ef-45cd-4ddf-aa86-037a4a26c06e',
                     field: 'layout-low-wave_293a85bb-cfd2-4f6f-9d27-e88ad3ad8ecf',
                     tags: null,
                     customCoordinates: null,
@@ -35,7 +35,7 @@ module.exports.other = {
             },
             rockWave: {
                 item: {
-                    id: '613216a8bdfd815868bd6ede',
+                    id: '031e39dc-636a-4270-a563-03188aa5a33c',
                     field: 'layout-rock-wave_909fde8d-b86a-4046-b1d7-2c3ae5ddc187',
                     tags: null,
                     customCoordinates: null,
