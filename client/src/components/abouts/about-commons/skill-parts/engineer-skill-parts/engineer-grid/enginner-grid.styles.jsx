@@ -1,9 +1,12 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
+const lightBlueColor = '#74c6d4';
+const whiteSmokeColor = '#e3e1e4';
+const maxWidthSmartphone = 800;
 export const EngineerContentContainer = styled.div`
   margin: 4px auto;
-  border-top: #74c6d4 solid 2px;
-  border-bottom: #74c6d4 solid 2px;
+  border-top: ${lightBlueColor} solid 2px;
+  border-bottom: ${lightBlueColor} solid 2px;
   position: relative;
   top: 10px;
   width: 100%;
@@ -18,7 +21,7 @@ const EngineerSkillStyles = css`
   grid-row: span 3;
   text-align: center;
   font-kerning: auto;
-  color: #e3e1e4;
+  color: ${whiteSmokeColor};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,10 +33,10 @@ export const NameEngineerSkill = styled.div`
   padding: 10px;
   font-size: 3vw;
   letter-spacing: 0.04em;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 20px;
   }
 `;
 
-EngineerContentContainer.displayName = "EngineerContentContainer";
-NameEngineerSkill.displayName = "NameEngineerSkill";
+EngineerContentContainer.displayName = 'EngineerContentContainer';
+NameEngineerSkill.displayName = 'NameEngineerSkill';

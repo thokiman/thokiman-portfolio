@@ -1,17 +1,18 @@
-import styled, { css } from "styled-components";
-import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
+import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
+import styled, { css } from 'styled-components';
 
-const subColor = "#128194";
-const mainColor = "#bccfd5";
+const greenBlueColor = '#128194';
+const heavyLightBlueColor = '#bccfd5';
+const maxWidthSmartphone = 800;
 
 const shrinkLabel = css`
   top: -15px;
   font-size: 2vw;
-  color: ${mainColor};
+  color: ${heavyLightBlueColor};
 `;
 const shrinkLabelMobile = css`
-  @media only screen and (max-width: 800px) {
-    color: ${mainColor};
+  @media only screen and (max-width: ${maxWidthSmartphone}) {
+    color: ${heavyLightBlueColor};
     font-size: 5vw;
     top: -0.5vh;
   }
@@ -26,17 +27,17 @@ export const FormInputTelGroup = styled.div`
   justify-content: flex-start;
 `;
 export const FormInputTelCheckerContainer = styled.span`
-  color: ${subColor};
+  color: ${greenBlueColor};
   position: absolute;
   left: -1.5vw;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}) {
     left: -3vw;
   }
 `;
 const FormInputTelCheckerIconStyles = css`
   width: 2vw;
   height: 2vh;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}) {
     width: 3.5vw;
     height: 3.5vh;
   }
@@ -53,21 +54,21 @@ const FormInputTelElementStyles = css`
   position: relative;
   top: 1.5vh;
   left: 1.5vw;
-  color: ${subColor};
+  color: ${greenBlueColor};
   font-size: 25px;
   letter-spacing: 0.1em;
   padding: 10px 10px 10px 5px;
   display: block;
   border: none;
   border-radius: 0;
-  border-bottom: 1px solid ${subColor};
+  border-bottom: 1px solid ${greenBlueColor};
   margin: 15px 1vw;
 
   &:-webkit-autofill,
   &:-webkit-autofill:hover,
   &:-webkit-autofill:focus,
   &:-webkit-autofill::first-line {
-    -webkit-text-fill-color: ${subColor};
+    -webkit-text-fill-color: ${greenBlueColor};
     transition: background-color 6000s ease-in-out;
     font-family: futura-medium;
     font-size: 25px;
@@ -78,7 +79,7 @@ const FormInputTelElementStyles = css`
   &:focus ~ label {
     ${shrinkLabel}
   }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}) {
     &:focus ~ label {
       ${shrinkLabelMobile}
     }
@@ -95,7 +96,7 @@ const FormInputTelElementPhoneNumber = css`
 `;
 
 const getFormInputTelElement = (props) => {
-  if (props.name === "area") return FormInputTelElementAreaCode;
+  if (props.name === 'area') return FormInputTelElementAreaCode;
   return FormInputTelElementPhoneNumber;
 };
 
@@ -103,15 +104,15 @@ export const FormInputTelElement = styled.input`
   ${getFormInputTelElement}
 `;
 
-const getFormLabelElementShrink = (props) => {
-  if (props.$value.length) return shrinkLabel;
+const getFormLabelElementShrink = ({ $formvalue }) => {
+  if ($formvalue.length) return shrinkLabel;
 };
-const getFormLabelElementShrinkMobile = (props) => {
-  if (props.$value.length) return shrinkLabelMobile;
+const getFormLabelElementShrinkMobile = ({ $formvalue }) => {
+  if ($formvalue.length) return shrinkLabelMobile;
 };
 
 export const FormLabelElement = styled.label`
-  color: ${subColor};
+  color: ${greenBlueColor};
   font-size: 2vw;
   font-weight: normal;
   pointer-events: none;
@@ -120,7 +121,7 @@ export const FormLabelElement = styled.label`
   left: 2vw;
   transition: 300ms ease all;
   ${getFormLabelElementShrink}
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}) {
     font-size: 6vw;
     top: 2vh;
     left: 5vw;
@@ -128,9 +129,9 @@ export const FormLabelElement = styled.label`
   }
 `;
 
-FormInputTelGroup.displayName = "FormInputTelGroup";
-FormInputTelCheckerContainer.displayName = "FormInputTelCheckerContainer ";
-FormInputTelCheckerIconTrue.displayName = "FormInputTelCheckerIconTrue";
-FormInputTelCheckerIconFalse.displayName = "FormInputTelCheckerIconFalse";
-FormInputTelElement.displayName = "FormInputTelElement";
-FormLabelElement.displayName = "FormLabelElement";
+FormInputTelGroup.displayName = 'FormInputTelGroup';
+FormInputTelCheckerContainer.displayName = 'FormInputTelCheckerContainer ';
+FormInputTelCheckerIconTrue.displayName = 'FormInputTelCheckerIconTrue';
+FormInputTelCheckerIconFalse.displayName = 'FormInputTelCheckerIconFalse';
+FormInputTelElement.displayName = 'FormInputTelElement';
+FormLabelElement.displayName = 'FormLabelElement';

@@ -1,5 +1,5 @@
-import HeaderActionTypes from "./header.types";
+import HeaderActionTypes from './header.types';
 
-export const toggleSideBarHidden = () => ({
-  type: HeaderActionTypes.IS_SIDEBAR_HIDDEN,
+export const toggleSideBarActive = () => ({
+  type: HeaderActionTypes.IS_SIDEBAR_ACTIVE,
 });

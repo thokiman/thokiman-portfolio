@@ -1,13 +1,16 @@
-import styled, { css } from "styled-components";
-const SideBarActive = css`
+import styled, { css } from 'styled-components';
+
+const backgroundEducationContainerColor = 'rgba(18, 129, 148, 0.8)';
+const maxWidthSmartphone = 800;
+const AboutContentEducationIsNotActivated = css`
   display: none;
 `;
-const getSideBarActive = (props) => {
-  if (props.$issidebarhidden) return SideBarActive;
+const getSideBarActive = ({ $issidebaractive }) => {
+  if ($issidebaractive) return AboutContentEducationIsNotActivated;
   return null;
 };
 export const EducationContainer = styled.div`
-  background-color: rgba(18, 129, 148, 0.8);
+  background-color: ${backgroundEducationContainerColor};
   width: 64.5vw;
   margin-right: 2vw;
   padding: 40px 0;
@@ -15,11 +18,11 @@ export const EducationContainer = styled.div`
   overflow-y: scroll;
   overflow-x: hidden;
   font-family: baskerville-old-face;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 100%;
     margin-right: 0;
     ${getSideBarActive}
   }
 `;
 
-EducationContainer.displayName = "EducationContainer";
+EducationContainer.displayName = 'EducationContainer';

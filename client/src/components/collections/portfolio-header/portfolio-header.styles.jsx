@@ -1,16 +1,28 @@
 import { Link } from 'react-router-dom';
 import styled, { css, keyframes } from 'styled-components';
 
-const backgroundColor = '#000000';
-const greenColor = '#128194';
-const greenHover10 = 'rgba(18, 129, 148, 0.1)';
-const greenHover20 = 'rgba(18, 129, 148, 0.2)';
-const greenHover25 = 'rgba(18, 129, 148, 0.25)';
-const greenHover35 = 'rgba(18, 129, 148, 0.35)';
-const greenHover40 = 'rgba(18, 129, 148, 0.40)';
-const greenHover45 = 'rgba(18, 129, 148, 0.45)';
-const greenHover55 = 'rgba(18, 129, 148, 0.55)';
-const greenHover60 = 'rgba(18, 129, 148, 0.6)';
+const maxWidthSmartphone = 800;
+const boxShadowPortfolioHeaderOptionActive = 'rgba(18, 129, 148, 0.4)';
+const backgroundColorPortfolioHeaderOptions = '#000000';
+const fadeHeaderMobileAnimationColor0 = 'rgba(18, 129, 148, 0)';
+const fadeHeaderMobileAnimationColor100 = 'rgba(18, 129, 148, 0.3)';
+const greenBlueColor1 = '#0A3940';
+const greenBlueColor2 = '#0A4650';
+const greenBlueColor3 = '#147280';
+const greenBlueColor4 = '#0F6D7D';
+const greenBlueColor5 = '#146C80';
+const greenBlueColor7 = '#0C5967';
+const greenBlueColor8 = '#128194';
+const greenBlueColor9 = '#8BFDFE';
+const greenBlueColor10 = '#28D7FE';
+const greenOptionHoverColor10 = 'rgba(18, 129, 148, 0.1)';
+const greenOptionHoverColor20 = 'rgba(18, 129, 148, 0.2)';
+const greenOptionHoverColor25 = 'rgba(18, 129, 148, 0.25)';
+const greenOptionHoverColor35 = 'rgba(18, 129, 148, 0.35)';
+const greenOptionHoverColor40 = 'rgba(18, 129, 148, 0.40)';
+const greenOptionHoverColor45 = 'rgba(18, 129, 148, 0.45)';
+const greenOptionHoverColor55 = 'rgba(18, 129, 148, 0.55)';
+const greenOptionHoverColor60 = 'rgba(18, 129, 148, 0.6)';
 
 const optionHover = keyframes`
  0% {
@@ -34,7 +46,7 @@ const optionHover = keyframes`
   }
   20.1% {
     opacity: 1;
-    text-shadow: 0 0 30px ${greenHover25};
+    text-shadow: 0 0 30px ${greenOptionHoverColor25};
   }
   20.6% {
     opacity: 0;
@@ -46,11 +58,11 @@ const optionHover = keyframes`
   }
   30.1% {
     opacity: 1;
-    text-shadow: 0 0 30px ${greenHover45}, 0 0 60px ${greenHover25};
+    text-shadow: 0 0 30px ${greenOptionHoverColor45}, 0 0 60px ${greenOptionHoverColor25};
   }
   30.5% {
     opacity: 1;
-    text-shadow: 0 0 30px ${greenHover45}, 0 0 60px ${greenHover25};
+    text-shadow: 0 0 30px ${greenOptionHoverColor45}, 0 0 60px ${greenOptionHoverColor25};
   }
   30.6% {
     opacity: 0;
@@ -62,15 +74,15 @@ const optionHover = keyframes`
   }
   45.1% {
     opacity: 1;
-    text-shadow: 0 0 30px ${greenHover45}, 0 0 60px ${greenHover25};
+    text-shadow: 0 0 30px ${greenOptionHoverColor45}, 0 0 60px ${greenOptionHoverColor25};
   }
   50% {
     opacity: 1;
-    text-shadow: 0 0 30px ${greenHover45}, 0 0 60px ${greenHover25};
+    text-shadow: 0 0 30px ${greenOptionHoverColor45}, 0 0 60px ${greenOptionHoverColor25};
   }
   55% {
     opacity: 1;
-    text-shadow: 0 0 30px ${greenHover45}, 0 0 60px ${greenHover25};
+    text-shadow: 0 0 30px ${greenOptionHoverColor45}, 0 0 60px ${greenOptionHoverColor25};
   }
   55.1% {
     opacity: 0;
@@ -82,11 +94,11 @@ const optionHover = keyframes`
   }
   57.1% {
     opacity: 1;
-    text-shadow: 0 0 30px ${greenHover55}, 0 0 60px ${greenHover35};
+    text-shadow: 0 0 30px ${greenOptionHoverColor55}, 0 0 60px ${greenOptionHoverColor35};
   }
   60% {
     opacity: 1;
-    text-shadow: 0 0 30px ${greenHover55}, 0 0 60px ${greenHover35};
+    text-shadow: 0 0 30px ${greenOptionHoverColor55}, 0 0 60px ${greenOptionHoverColor35};
   }
   60.1% {
     opacity: 0;
@@ -98,11 +110,11 @@ const optionHover = keyframes`
   }
   65.1% {
     opacity: 1;
-    text-shadow: 0 0 30px ${greenHover55}, 0 0 60px ${greenHover35}, 0 0 100px ${greenHover10};
+    text-shadow: 0 0 30px ${greenOptionHoverColor55}, 0 0 60px ${greenOptionHoverColor35}, 0 0 100px ${greenOptionHoverColor10};
   }
   75% {
     opacity: 1;
-    text-shadow: 0 0 30px ${greenHover55}, 0 0 60px ${greenHover35}, 0 0 100px ${greenHover10};
+    text-shadow: 0 0 30px ${greenOptionHoverColor55}, 0 0 60px ${greenOptionHoverColor35}, 0 0 100px ${greenOptionHoverColor10};
   }
   75.1% {
     opacity: 0;
@@ -114,11 +126,11 @@ const optionHover = keyframes`
   }
   77.1% {
     opacity: 1;
-    text-shadow: 0 0 30px ${greenHover55}, 0 0 60px ${greenHover40}, 0 0 110px ${greenHover20}, 0 0 100px ${greenHover20};
+    text-shadow: 0 0 30px ${greenOptionHoverColor55}, 0 0 60px ${greenOptionHoverColor40}, 0 0 110px ${greenOptionHoverColor20}, 0 0 100px ${greenOptionHoverColor20};
   }
   85% {
     opacity: 1;
-    text-shadow: 0 0 30px ${greenHover55}, 0 0 60px ${greenHover40}, 0 0 110px ${greenHover20}, 0 0 100px ${greenHover20};
+    text-shadow: 0 0 30px ${greenOptionHoverColor55}, 0 0 60px ${greenOptionHoverColor40}, 0 0 110px ${greenOptionHoverColor20}, 0 0 100px ${greenOptionHoverColor20};
   }
   85.1% {
     opacity: 0;
@@ -130,53 +142,53 @@ const optionHover = keyframes`
   }
   86.1% {
     opacity: 1;
-    text-shadow: 0 0 30px ${greenHover60}, 0 0 60px ${greenHover45}, 0 0 110px ${greenHover25}, 0 0 100px ${greenHover10};
+    text-shadow: 0 0 30px ${greenOptionHoverColor60}, 0 0 60px ${greenOptionHoverColor45}, 0 0 110px ${greenOptionHoverColor25}, 0 0 100px ${greenOptionHoverColor10};
   }
   100% {
     opacity: 1;
-    text-shadow: 0 0 30px ${greenHover60}, 0 0 60px ${greenHover45}, 0 0 110px ${greenHover25}, 0 0 100px ${greenHover10};
+    text-shadow: 0 0 30px ${greenOptionHoverColor60}, 0 0 60px ${greenOptionHoverColor45}, 0 0 110px ${greenOptionHoverColor25}, 0 0 100px ${greenOptionHoverColor10};
   }
 `;
 
 const fadeHeaderMobile = keyframes`
 from{
     
-    box-shadow: rgba(18, 129, 148, 0) -3px 3px 10px -10px ;
+    box-shadow: ${fadeHeaderMobileAnimationColor0} -3px 3px 10px -10px ;
 }
 to{
   
-  box-shadow: rgba(18, 129, 148, 0.3) 0px 2px 10px 5px ;
+  box-shadow: ${fadeHeaderMobileAnimationColor100} 0px 2px 10px 5px ;
 }
 `;
 const fadeActiveMobile = keyframes`
   0%,
   100% {
-    text-shadow: 0 0 1vw ${greenColor}, 0 0 3vw ${greenColor}, 0 0 10vw ${greenColor}, 0 0 10vw ${greenColor}, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
-    color: #28D7FE;
+    text-shadow: 0 0 1vw ${greenBlueColor8}, 0 0 3vw ${greenBlueColor8}, 0 0 10vw ${greenBlueColor8}, 0 0 10vw ${greenBlueColor8}, 0 0 .4vw ${greenBlueColor9}, .5vw .5vw .1vw ${greenBlueColor3};
+    color: ${greenBlueColor10};
   }
   50% {
-    text-shadow: 0 0 .5vw #0A4650, 0 0 1.5vw #0C5967, 0 0 5vw #0F6D7D, 0 0 5vw #0C5967, 0 0 .2vw #128194, .5vw .5vw .1vw #0A3940;
-    color: #146C80;
+    text-shadow: 0 0 .5vw ${greenBlueColor2}, 0 0 1.5vw ${greenBlueColor7}, 0 0 5vw ${greenBlueColor4}, 0 0 5vw ${greenBlueColor7}, 0 0 .2vw ${greenBlueColor8}, .5vw .5vw .1vw ${greenBlueColor1};
+    color: ${greenBlueColor5};
   }
 `;
 
-const SideBarActive = css`
+const PortfolioHeaderIsNotActivated = css`
   display: none;
 `;
-const getSideBarActive = (props) => {
-  if (props.$issidebarhidden) return SideBarActive;
+const getSideBarActive = ({ $issidebaractive }) => {
+  if ($issidebaractive) return PortfolioHeaderIsNotActivated;
   return null;
 };
 
 export const PortfolioHeaderOptions = styled.div`
-  background-color: ${backgroundColor};
+  background-color: ${backgroundColorPortfolioHeaderOptions};
   height: 8vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 
-  @media only screen and (max-width: 800px) {
-    background-color: black;
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    background-color: ${backgroundColorPortfolioHeaderOptions};
     width: 98%;
     margin: 15px auto;
     height: max-content;
@@ -202,12 +214,12 @@ const PortfolioHeaderOptionStyles = css`
   letter-spacing: 0.04em;
   font-size: 120%;
   padding: 9px;
-  color: ${greenColor};
+  color: ${greenBlueColor8};
 
   font-family: futura-medium;
   display: block;
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 110%;
     text-align: left;
     animation: ${fadeHeaderMobile} 1.3s ease-in-out infinite alternate both;
@@ -249,15 +261,15 @@ const PortfolioHeaderOptionStyles = css`
 `;
 const PortfolioHeaderOptionActive = css`
   transition: box-shadow 0.5s ease-in-out;
-  box-shadow: rgba(18, 129, 148, 0.4) 0px 4px 6px;
+  box-shadow: ${boxShadowPortfolioHeaderOptionActive} 0px 4px 6px;
   animation: ${fadeActiveMobile} 1s ease-in-out infinite alternate both;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     animation: ${fadeActiveMobile} 1s ease-in-out infinite alternate both;
     box-shadow: none;
   } ;
 `;
-const getPortfolioHeaderOption = (props) => {
-  if (props.$matchpath) return PortfolioHeaderOptionActive;
+const getPortfolioHeaderOption = ({ $matchpath }) => {
+  if ($matchpath) return PortfolioHeaderOptionActive;
 };
 
 export const PortfolioHeaderOption = styled(Link)`

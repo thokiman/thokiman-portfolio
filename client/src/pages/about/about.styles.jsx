@@ -1,5 +1,10 @@
 import styled, { css, keyframes } from 'styled-components';
 
+const whiteSmokeColor = '#e3e1e4';
+const greenBlueColor = '#128194';
+
+const backgroundColorTimelineCareerContainer = 'rgba(18, 129, 148, 0.8)';
+const maxWidthSmartphone = 800;
 const getAboutImage = ({ $rockWaveImage }) => {
   return $rockWaveImage.item.iconPath;
 };
@@ -18,19 +23,19 @@ const aboutSideBarHide = keyframes`
 
 `;
 
-export const AboutSideBarHide = styled.div`
+export const AboutIsNotActivated = styled.div`
   font-family: futura-demi;
-  color: #e3e1e4;
+  color: ${whiteSmokeColor};
   position: absolute;
   top: 10vh;
   left: 6vw;
-  font-size: 480%;
+  font-size: 450%;
   letter-spacing: 0.17em;
   animation: ${aboutSideBarHide} 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 `;
 
-const AboutSideBarActive = css`
-  @media only screen and (max-width: 800px) {
+const AboutIsActived = css`
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     position: relative;
     left: 0;
     width: 100vw;
@@ -40,9 +45,9 @@ const AboutSideBarActive = css`
     height: 140vh;
   }
 `;
-const getAboutSideBarActive = (props) => {
-  if (props.$issidebarhidden) return null;
-  return AboutSideBarActive;
+const getAboutSideBarActive = ({ $issidebaractive }) => {
+  if ($issidebaractive) return null;
+  return AboutIsActived;
 };
 
 const AboutStyles = css`
@@ -54,7 +59,7 @@ const AboutStyles = css`
   align-items: center;
   font-family: futura-medium;
   transition: background-image 0.7s ease-in-out, height 0.4s ease-in-out;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     position: relative;
     top: 0;
     width: 64vw;
@@ -76,9 +81,9 @@ const AboutContainer = css`
   background-image: url(${getAboutImage});
 `;
 const TimelineCareerContainerMobile = css`
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     padding: 0;
-    background-color: rgba(18, 129, 148, 1);
+    background-color: ${greenBlueColor};
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -86,12 +91,12 @@ const TimelineCareerContainerMobile = css`
 `;
 const TimelineCareerContainer = css`
   ${AboutStyles}
-  background-color: rgba(18, 129, 148, 0.8);
+  background-color: ${backgroundColorTimelineCareerContainer};
   padding-top: 40px;
   align-items: flex-start;
   height: 545vh;
   ${TimelineCareerContainerMobile}
-  @media only screen and (max-width: 800px) and (min-width: 500px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) and (min-width: 500px) {
     height: 500vh;
     overflow-y: hidden;
   }
@@ -105,8 +110,8 @@ const TimelineCareerContainer = css`
   }
 `;
 
-const getAboutPage = (props) => {
-  if (props.matchpath) return TimelineCareerContainer;
+const getAboutPage = ({ $matchpath }) => {
+  if ($matchpath) return TimelineCareerContainer;
   return AboutContainer;
 };
 

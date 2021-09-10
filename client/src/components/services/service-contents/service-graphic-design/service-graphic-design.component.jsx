@@ -1,30 +1,28 @@
-import React from "react";
-import { connect } from "react-redux";
-import { CSSTransitionGroup } from "react-transition-group";
-import { createStructuredSelector } from "reselect";
-import { selectIsSideBarHidden } from "../../../../redux/header/header.selectors";
-import { selectArtService } from "../../../../redux/service/service.selectors";
-import ServiceGeneralContent from "../../service-commons/service-general-content/service-general-content.component";
-import ServiceIconContent from "../../service-commons/service-icon-content/service-icon-content.component";
+import React from 'react';
+import { connect } from 'react-redux';
+import { CSSTransitionGroup } from 'react-transition-group';
+import { createStructuredSelector } from 'reselect';
+import { selectIsSideBarActive } from '../../../../redux/header/header.selectors';
+import { selectArtService } from '../../../../redux/service/service.selectors';
+import ServiceGeneralContent from '../../service-commons/service-general-content/service-general-content.component';
+import ServiceIconContent from '../../service-commons/service-icon-content/service-icon-content.component';
 import {
   RightServiceContainerGd,
-  RightServiceContentGd
-} from "./service-graphic-design.styles";
-
+  RightServiceContentGd,
+} from './service-graphic-design.styles';
 
 export const ServiceGraphicDesign = ({
-  isSideBarHidden,
+  isSideBarActive,
   art: { title, description, items },
 }) => {
-
   return (
-    <RightServiceContainerGd $issidebarhidden={isSideBarHidden}>
+    <RightServiceContainerGd $issidebaractive={isSideBarActive}>
       <CSSTransitionGroup
         transitionAppear={true}
         transitionAppearTimeout={800}
         transitionEnterTimeout={800}
         transitionLeaveTimeout={200}
-        transitionName={"slide-out"}
+        transitionName={'slide-out'}
       >
         <RightServiceContentGd>
           <ServiceGeneralContent title={title} description={description} />
@@ -36,6 +34,6 @@ export const ServiceGraphicDesign = ({
 };
 const mapStateToProps = createStructuredSelector({
   art: selectArtService,
-  isSideBarHidden: selectIsSideBarHidden,
+  isSideBarActive: selectIsSideBarActive,
 });
 export default connect(mapStateToProps)(ServiceGraphicDesign);

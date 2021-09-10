@@ -1,5 +1,8 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
+const maxWidthSmartphone = 800;
+const backgroundColorTimelineOverlay = 'rgba(18, 129, 148, 0.5)';
+const borderTimeLine = 'rgba(188, 207, 213, 0.4)';
 export const TimelineHeaderContainer = styled.div`
   width: 100%;
   display: grid;
@@ -7,13 +10,13 @@ export const TimelineHeaderContainer = styled.div`
   grid-auto-rows: repeat(3, 1fr);
   gap: 10px 0px;
   grid-template-areas:
-    "upper-timeline-header-container upper-timeline-header-container upper-timeline-header-container upper-timeline-header-container"
-    "separated-line-timeline-header separated-line-timeline-header separated-line-timeline-header separated-line-timeline-header"
-    "below-timeline-header-container below-timeline-header-container below-timeline-header-container below-timeline-header-container";
+    'upper-timeline-header-container upper-timeline-header-container upper-timeline-header-container upper-timeline-header-container'
+    'separated-line-timeline-header separated-line-timeline-header separated-line-timeline-header separated-line-timeline-header'
+    'below-timeline-header-container below-timeline-header-container below-timeline-header-container below-timeline-header-container';
 
   align-items: center;
   padding: 10px;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     position: relative;
     left: -10px;
   }
@@ -24,7 +27,7 @@ export const SeparatedLineTimelineHeader = styled.div`
   overflow: hidden;
   position: relative;
   left: 120px;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 90vw;
     left: 15px;
   }
@@ -35,7 +38,7 @@ const timelineWipe = keyframes`
         }
 `;
 export const TimelineOverlay = styled.div`
-  background: rgba(18, 129, 148, 0.5);
+  background: ${backgroundColorTimelineOverlay};
   border-radius: 20px 20px 20px 20px;
   height: 10px;
   position: absolute;
@@ -48,11 +51,11 @@ export const TimelineOverlay = styled.div`
 `;
 
 export const TimelineLine = styled.div`
-  border: 3px solid rgba(188, 207, 213, 0.4);
+  border: ${borderTimeLine} 3px solid;
   border-radius: 10px 10px 10px 10px;
   backface-visibility: hidden;
 `;
-TimelineHeaderContainer.displayName = "TimelineHeaderContainer";
-SeparatedLineTimelineHeader.displayName = "SeparatedLineTimelineHeader";
-TimelineOverlay.displayName = "TimelineOverlay";
-TimelineLine.displayName = "TimelineLine";
+TimelineHeaderContainer.displayName = 'TimelineHeaderContainer';
+SeparatedLineTimelineHeader.displayName = 'SeparatedLineTimelineHeader';
+TimelineOverlay.displayName = 'TimelineOverlay';
+TimelineLine.displayName = 'TimelineLine';

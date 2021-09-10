@@ -1,13 +1,12 @@
-import React from "react";
-
+import React from 'react';
 import {
-  FormInputTelGroup,
   FormInputTelCheckerContainer,
-  FormInputTelCheckerIconTrue,
   FormInputTelCheckerIconFalse,
+  FormInputTelCheckerIconTrue,
   FormInputTelElement,
+  FormInputTelGroup,
   FormLabelElement,
-} from "./form-input-tel.styles";
+} from './form-input-tel.styles';
 
 export const FormInputTel = ({ handleChange, label, ...props }) => {
   return (
@@ -23,7 +22,7 @@ export const FormInputTel = ({ handleChange, label, ...props }) => {
       }
       <FormInputTelElement onChange={handleChange} {...props} />
       {label ? (
-        <FormLabelElement $value={props.value}>{label}</FormLabelElement>
+        <FormLabelElement $formvalue={props.value}>{label}</FormLabelElement>
       ) : null}
     </FormInputTelGroup>
   );

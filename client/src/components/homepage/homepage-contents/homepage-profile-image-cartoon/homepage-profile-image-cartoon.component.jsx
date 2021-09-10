@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import {
   HomepageCartoonContainer,
   HomepageCloudComputingOne,
@@ -32,46 +32,46 @@ import {
   HomepageZigzagMoustacheFour,
   HomepageZigzagMoustacheOne,
   HomepageZigzagMoustacheThree,
-  HomepageZigzagMoustacheTwo
+  HomepageZigzagMoustacheTwo,
 } from './homepage-profile-image-cartoon.styles';
 
 export const HompageProfileImageCartoon = () => {
   return (
     <HomepageCartoonContainer>
-      <HomepageCloudComputingOne />
-      <HomepageCloudComputingTwo />
-      <HomepageComputer />
-      <HomepagePaintPallete />
-      <HomepageDslrCamera />
-      <HomepagePenTablet />
-      <HomepageLightBulb />
-      <HomepageTools />
-      <HomepageSettingsOne />
-      <HomepageSettingsTwo />
-      <HomepageEnergyOne />
-      <HomepageEnergyTwo />
-      <HomepageEnergyThree />
-      <HomepageEnergyFour />
-      <HomepageEnergyFive />
-      <HomepageMusicSingleSoundWaveLineOne />
-      <HomepageMusicSingleSoundWaveLineTwo />
-      <HomepageMusicSoundWaveLineOne />
-      <HomepageMusicSoundWaveLineTwo />
-      <HomepageSurf />
-      <HomepageSurfing />
-      <HomepageSunset />
-      <HomepageShakespeare />
-      <HomepageSkull />
-      <HomepageSkateboarding />
-      <HomepageSeaWaves />
       <HomepageZigzagLinesInSideViewPosition />
+      <HomepageSunset />
       <HomepageZigzagMoustacheOne />
       <HomepageZigzagMoustacheTwo />
-      <HomepageZigzagMoustacheThree />
       <HomepageZigzagMoustacheFour />
       <HomepageZigzagMoustacheFive />
+      <HomepageZigzagMoustacheThree />
+      <HomepageSkateboarding />
+      <HomepageSettingsOne />
+      <HomepageSettingsTwo />
+      <HomepageMusicSoundWaveLineOne />
+      <HomepageSkull />
+      <HomepageMusicSoundWaveLineTwo />
+      <HomepageSurf />
+      <HomepageTools />
+      <HomepageEnergyThree />
+      <HomepageLightBulb />
+      <HomepageEnergyFour />
+      <HomepageShakespeare />
+      <HomepageSeaWaves />
+      <HomepagePaintPallete />
+      <HomepageSurfing />
+      <HomepageCloudComputingOne />
+      <HomepageCloudComputingTwo />
+      <HomepageEnergyTwo />
+      <HomepageEnergyOne />
+      <HomepageComputer />
+      <HomepageMusicSingleSoundWaveLineOne />
+      <HomepageMusicSingleSoundWaveLineTwo />
+      <HomepageEnergyFive />
+      <HomepageDslrCamera />
+      <HomepagePenTablet />
     </HomepageCartoonContainer>
   );
 };
 
-export default HompageProfileImageCartoon;
+export default memo(HompageProfileImageCartoon);

@@ -8,10 +8,10 @@ import {
   selectInfoContact,
   selectItemsContact,
   selectLowWaveImage,
-  selectTitleContact
+  selectTitleContact,
 } from '../../redux/contact/contact.selectors';
-import { selectIsSideBarHidden } from '../../redux/header/header.selectors';
-import { ContactContainer, ContactSideBarHide } from './contact.styles';
+import { selectIsSideBarActive } from '../../redux/header/header.selectors';
+import { ContactContainer, ContactIsNotActivated } from './contact.styles';
 
 const ContactForm = lazy(() =>
   import(
@@ -20,7 +20,8 @@ const ContactForm = lazy(() =>
 );
 
 const ContactInfo = lazy(() =>
-  import('../../components/contacts/contact-contents/contact-info-container/contact-info.component'
+  import(
+    '../../components/contacts/contact-contents/contact-info-container/contact-info.component'
   )
 );
 
@@ -34,19 +35,19 @@ export const Contact = ({
   title,
   info,
   items,
-  isSideBarHidden,
+  isSideBarActive,
   lowWaveImage,
 }) => (
   <ContactContainer
-    $issidebarhidden={isSideBarHidden}
+    $issidebaractive={isSideBarActive}
     $lowWaveImage={lowWaveImage}
   >
-    {isSideBarHidden ? (
-      <ContactSideBarHide>
+    {isSideBarActive ? (
+      <ContactIsNotActivated>
         Cont
         <br />
         act
-      </ContactSideBarHide>
+      </ContactIsNotActivated>
     ) : null}
     <Suspense fallback={<SpinnerLoading />}>
       <ContactInfo title={title} items={items} />
@@ -61,7 +62,7 @@ const mapStateToProps = createStructuredSelector({
   info: selectInfoContact,
   items: selectItemsContact,
   routeName: selectContactRoute,
-  isSideBarHidden: selectIsSideBarHidden,
+  isSideBarActive: selectIsSideBarActive,
   lowWaveImage: selectLowWaveImage,
 });
 

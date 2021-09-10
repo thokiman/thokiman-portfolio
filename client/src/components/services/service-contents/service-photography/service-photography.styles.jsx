@@ -1,7 +1,18 @@
-import styled from "styled-components";
+import styled, { css } from 'styled-components';
+
+const backgroundColorRightServiceContainerPg = 'rgba(18, 129, 148, 0.75)';
+const maxWidthSmartphone = 800;
+
+const ServicePhotographyIsNotActivated = css`
+  display: none;
+`;
+const getSideBarActive = ({ $issidebaractive }) => {
+  if ($issidebaractive) return ServicePhotographyIsNotActivated;
+  return null;
+};
 
 export const RightServiceContainerPg = styled.div`
-  background-color: rgba(18, 129, 148, 0.75);
+  background-color: ${backgroundColorRightServiceContainerPg};
   width: 66.3vw;
   height: 68vh;
   padding: 10px 20px;
@@ -11,10 +22,11 @@ export const RightServiceContainerPg = styled.div`
   justify-content: center;
   overflow-y: scroll;
   overflow-x: hidden;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 100%;
     right: 0;
     height: 50vh;
+    ${getSideBarActive}
   }
 `;
 
@@ -28,5 +40,5 @@ export const RightServiceContentPg = styled.div`
   padding: 20px;
 `;
 
-RightServiceContainerPg.displayName = "RightServiceContainerPg";
-RightServiceContentPg.displayName = "RightServiceContentPg";
+RightServiceContainerPg.displayName = 'RightServiceContainerPg';
+RightServiceContentPg.displayName = 'RightServiceContentPg';

@@ -1,20 +1,19 @@
-import React from "react";
-import { connect } from "react-redux";
-import { createStructuredSelector } from "reselect";
-import { selectIsSideBarHidden } from "../../../redux/header/header.selectors";
+import React from 'react';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { selectIsSideBarActive } from '../../../redux/header/header.selectors';
 import {
   FooterContainerContact,
   FooterCreamPrickInklaim,
   FooterWhiteOutlineThokiman,
   ProfileFooterContainerContact,
   ProfileFooterIconContact,
-  ProfileFooterTextContact
-} from "./footer-contact.styles";
+  ProfileFooterTextContact,
+} from './footer-contact.styles';
 
-
-export const FooterContact = ({ isSideBarHidden }) => {
+export const FooterContact = ({ isSideBarActive }) => {
   return (
-    <FooterContainerContact $issidebarhidden={isSideBarHidden}>
+    <FooterContainerContact $issidebaractive={isSideBarActive}>
       <ProfileFooterContainerContact>
         <ProfileFooterIconContact>
           <FooterCreamPrickInklaim />
@@ -30,7 +29,7 @@ export const FooterContact = ({ isSideBarHidden }) => {
   );
 };
 const mapStateToProps = createStructuredSelector({
-  isSideBarHidden: selectIsSideBarHidden,
+  isSideBarActive: selectIsSideBarActive,
 });
 
 export default connect(mapStateToProps)(FooterContact);

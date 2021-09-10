@@ -1,5 +1,9 @@
-import { Link } from "react-router-dom";
-import styled, { keyframes, css } from "styled-components";
+import { Link } from 'react-router-dom';
+import styled, { css, keyframes } from 'styled-components';
+
+const whiteSmokeColor = '#e3e1e4';
+const lightBlueColor = '#74c6d4';
+const maxWidthSmartphone = 800;
 
 export const AboutCourseProjectContainer = styled.div`
   display: flex;
@@ -13,12 +17,12 @@ export const AboutCourseProjectContainer = styled.div`
 export const AboutCourseProjectTitle = styled.div`
   font-size: 400%;
   padding: 10px;
-  color: #e3e1e4;
+  color: ${whiteSmokeColor};
   letter-spacing: 0.04em;
   text-align: left;
   display: flex;
   align-items: center;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 18vw;
     display: block;
   }
@@ -32,11 +36,11 @@ export const AboutCourseProjectAttributes = styled.div`
   grid-auto-rows: repeat(3, 1fr);
   gap: 0px 20px;
   grid-template-areas:
-    "name-course-project name-course-project related-course-project related-course-project"
-    "name-course-project name-course-project related-course-project related-course-project"
-    "description-course-project description-course-project description-course-project description-course-project";
+    'name-course-project name-course-project related-course-project related-course-project'
+    'name-course-project name-course-project related-course-project related-course-project'
+    'description-course-project description-course-project description-course-project description-course-project';
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     display: flex;
     flex-direction: column;
     height: fit-content;
@@ -46,20 +50,20 @@ export const AboutCourseProjectAttributes = styled.div`
 const aboutLinkCourseProject = keyframes`
                     from {
                         opacity: 0.2;
-                        color: #e3e1e4;
+                        color: ${whiteSmokeColor};
 
                     }
 
                     to {
                         opacity: 1;
-                        color: #74c6d4;
+                        color: ${lightBlueColor};
 
                     }
 `;
 
 const AboutCourseProjectStyles = css`
   text-decoration: none;
-  color: #e3e1e4;
+  color: ${whiteSmokeColor};
   display: flex;
   align-items: center;
 `;
@@ -73,7 +77,7 @@ export const AboutNameCourseProject = styled(Link)`
   letter-spacing: 0.09em;
   display: flex;
   justify-content: flex-end;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     text-align: center;
     font-size: 6vw;
     width: 100%;
@@ -83,19 +87,19 @@ export const AboutNameCourseProject = styled(Link)`
 
   &:hover {
     animation: ${aboutLinkCourseProject} 0.5s ease-in-out;
-    color: #74c6d4;
+    color: ${lightBlueColor};
   }
 `;
 export const AboutRelatedCourseProject = styled.div`
   ${AboutCourseProjectStyles}
-  border: #74c6d4 solid 1px;
+  border: ${lightBlueColor} solid 1px;
   grid-area: related-course-project;
   width: 100%;
   font-size: 150%;
   padding: 15px;
   letter-spacing: 0.06em;
   text-align: left;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 5vw;
     line-height: 1.2em;
     padding: 4vw;
@@ -106,7 +110,7 @@ export const AboutRelatedCourseProject = styled.div`
 
 export const AboutDescriptionCourseProject = styled.div`
   ${AboutCourseProjectStyles}
-  border-bottom: #74c6d4 solid 1px;
+  border-bottom: ${lightBlueColor} solid 1px;
   width: 100%;
   grid-area: description-course-project;
   font-size: 130%;
@@ -115,7 +119,7 @@ export const AboutDescriptionCourseProject = styled.div`
   line-height: 1.2em;
   letter-spacing: 0.05em;
   margin: 10px auto;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 4vw;
     text-align: left;
     margin: 2vw;
@@ -123,9 +127,9 @@ export const AboutDescriptionCourseProject = styled.div`
   }
 `;
 
-AboutCourseProjectContainer.displayName = "AboutCourseProjectContainer";
-AboutCourseProjectTitle.displayName = "AboutCourseProjectTitle";
-AboutCourseProjectAttributes.displayName = "AboutCourseProjectAttributes";
-AboutNameCourseProject.displayName = "AboutNameCourseProject";
-AboutRelatedCourseProject.displayName = "AboutRelatedCourseProject";
-AboutDescriptionCourseProject.displayName = "AboutDescriptionCourseProject";
+AboutCourseProjectContainer.displayName = 'AboutCourseProjectContainer';
+AboutCourseProjectTitle.displayName = 'AboutCourseProjectTitle';
+AboutCourseProjectAttributes.displayName = 'AboutCourseProjectAttributes';
+AboutNameCourseProject.displayName = 'AboutNameCourseProject';
+AboutRelatedCourseProject.displayName = 'AboutRelatedCourseProject';
+AboutDescriptionCourseProject.displayName = 'AboutDescriptionCourseProject';

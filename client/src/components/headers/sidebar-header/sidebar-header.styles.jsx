@@ -1,18 +1,22 @@
-import { Link } from "react-router-dom";
-import styled, { css } from "styled-components";
+import { Link } from 'react-router-dom';
+import styled, { css } from 'styled-components';
 
-const SideBarContainerHidden = css`
+const maxWidthSmartphone = 800;
+const greenBlueColor = '#128194';
+const whiteSmokeColor = '#e3e1e4';
+
+const SideBarContainerIsActivated = css`
   left: 0;
   transition: all 0.5s ease;
 `;
 
-const getSideBarContainer = (props) => {
-  if (props.$issidebarhidden) return SideBarContainerHidden;
+const getSideBarContainer = ({ $issidebaractive }) => {
+  if ($issidebaractive) return SideBarContainerIsActivated;
   return null;
 };
 
 export const SideBarHeaderContainer = styled.div`
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 140px;
     position: absolute;
     top: 14vh;
@@ -27,7 +31,7 @@ export const SideBarHeaderContainer = styled.div`
 `;
 
 export const SideBarHeaderTextContainer = styled.div`
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 100%;
     position: relative;
     top: 50px;
@@ -39,22 +43,22 @@ export const SideBarHeaderTextContainer = styled.div`
 `;
 
 const SideBarHeaderTextActive = css`
-  border-bottom: #128194 solid 1px;
-  color: #e3e1e4;
+  border-bottom: ${greenBlueColor} solid 1px;
+  color: ${whiteSmokeColor};
   transition: all 0.5s linear;
 `;
 const SideBarHeaderTextHide = css`
   border: none;
-  color: #128194;
+  color: ${greenBlueColor};
   transition: all 0.5s linear;
 `;
-const getSideBarHeaderTextActive = (props) => {
-  if (props.$matchpath) return SideBarHeaderTextActive;
+const getSideBarHeaderTextActive = ({ $matchpath }) => {
+  if ($matchpath) return SideBarHeaderTextActive;
   return SideBarHeaderTextHide;
 };
 export const SideBarHeaderLink = styled(Link)`
   display: none;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     ${getSideBarHeaderTextActive}
     text-decoration: none;
     width:fit-content;

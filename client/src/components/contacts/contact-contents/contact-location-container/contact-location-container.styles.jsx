@@ -1,9 +1,9 @@
-import styled, { css } from "styled-components";
-const SideBarActive = css`
+import styled, { css } from 'styled-components';
+const ContactLocationContainerIsNotActivated = css`
   display: none;
 `;
-const getSideBarActive = (props) => {
-  if (props.$issidebarhidden) return SideBarActive;
+const getSideBarActive = ({ $issidebaractive }) => {
+  if ($issidebaractive) return ContactLocationContainerIsNotActivated;
   return null;
 };
 export const ContactLocationContainer = styled.div`
@@ -57,7 +57,7 @@ export const ContactLocationItem = styled.div`
     font-size: 5vw;
   }
 `;
-ContactLocationContainer.displayName = "ContactLocationContainer";
-ContactLocationInfo.displayName = "ContactLocationInfo";
-ContactLocationTitle.displayName = "ContactLocationTitle";
-ContactLocationItem.displayName = "ContactLocationItem";
+ContactLocationContainer.displayName = 'ContactLocationContainer';
+ContactLocationInfo.displayName = 'ContactLocationInfo';
+ContactLocationTitle.displayName = 'ContactLocationTitle';
+ContactLocationItem.displayName = 'ContactLocationItem';

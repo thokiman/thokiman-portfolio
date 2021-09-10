@@ -1,7 +1,7 @@
-import { createSelector } from "reselect";
+import { createSelector } from 'reselect';
 const selectHeader = (state) => state.header;
 
-export const selectIsSideBarHidden = createSelector(
+export const selectIsSideBarActive = createSelector(
   [selectHeader],
-  (header) => header.isSideBarHidden
+  (header) => header.isSideBarActive
 );

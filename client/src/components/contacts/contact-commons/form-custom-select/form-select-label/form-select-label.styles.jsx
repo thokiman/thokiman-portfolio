@@ -1,5 +1,5 @@
-import styled, { css, keyframes } from "styled-components";
-const mainColor = "#bccfd5";
+import styled, { css, keyframes } from 'styled-components';
+const heavyLighBlueColor = '#bccfd5';
 
 const formSelectActive = keyframes`
             0% {
@@ -17,7 +17,7 @@ export const FormSelectTitleActive = styled.div`
   text-align: start;
   width: 100%;
   font-size: 30px;
-  color: ${mainColor};
+  color: ${heavyLighBlueColor};
   margin-bottom: 5px;
   animation: ${formSelectActive} 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 `;
@@ -26,8 +26,8 @@ const FormSelectTitleContainerActive = css`
   height: 39px;
 `;
 
-const getFormSelectTitleContainerActive = (props) => {
-  if (!!props.value) return FormSelectTitleContainerActive;
+const getFormSelectTitleContainerActive = ({ $formvalue }) => {
+  if (!!$formvalue) return FormSelectTitleContainerActive;
 };
 export const FormSelectTitleContainer = styled.div`
   display: block;
@@ -35,5 +35,5 @@ export const FormSelectTitleContainer = styled.div`
   transition: height 0.5s ease-in-out;
   ${getFormSelectTitleContainerActive}
 `;
-FormSelectTitleActive.displayName = "FormSelectTitleActive";
-FormSelectTitleContainer.displayName = "FormSelectTitleContainer";
+FormSelectTitleActive.displayName = 'FormSelectTitleActive';
+FormSelectTitleContainer.displayName = 'FormSelectTitleContainer';

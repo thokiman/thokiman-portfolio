@@ -1,4 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+
+const whiteSmokeColor = '#e3e1e4';
+const maxWidthSmartphone = 800;
 
 export const AboutPersonalityContainer = styled.div`
   display: grid;
@@ -6,7 +9,7 @@ export const AboutPersonalityContainer = styled.div`
   grid-auto-rows: 1fr;
   width: 100%;
   margin: 0 auto;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     grid-template-columns: repeat(3, 1fr);
   }
 `;
@@ -15,8 +18,8 @@ export const AboutPersonalityTitle = styled.div`
   text-align: center;
   padding: 40px 10px;
   font-size: 250%;
-  color: #e3e1e4;
-  @media only screen and (max-width: 800px) {
+  color: ${whiteSmokeColor};
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 7vw;
   }
 `;
@@ -38,12 +41,12 @@ export const AboutPersonalityTextBox = styled.div`
   transition: color 0.2s ease-in-out;
   font-kerning: auto;
   letter-spacing: 0.025em;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 5vw;
   }
 `;
 
-AboutPersonalityContainer.displayName = "AboutPersonalityContainer";
-AboutPersonalityTitle.displayName = "AboutPersonalityTitle";
-AboutPersonalityBox.displayName = "AboutPersonalityBox";
-AboutPersonalityTextBox.displayName = "AboutPersonalityTextBox";
+AboutPersonalityContainer.displayName = 'AboutPersonalityContainer';
+AboutPersonalityTitle.displayName = 'AboutPersonalityTitle';
+AboutPersonalityBox.displayName = 'AboutPersonalityBox';
+AboutPersonalityTextBox.displayName = 'AboutPersonalityTextBox';

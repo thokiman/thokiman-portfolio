@@ -1,14 +1,18 @@
-import styled, { css } from "styled-components";
-const SideBarActive = css`
+import styled, { css } from 'styled-components';
+
+const backgroundColorRightServiceContainerEng = 'rgba(18, 129, 148, 0.75)';
+const maxWidthSmartphone = 800;
+
+const ServiceEngineerIsNotActivated = css`
   display: none;
 `;
-const getSideBarActive = (props) => {
-  if (props.$issidebarhidden) return SideBarActive;
+const getSideBarActive = ({ $issidebarhidden }) => {
+  if ($issidebarhidden) return ServiceEngineerIsNotActivated;
   return null;
 };
 
 export const RightServiceContainerEng = styled.div`
-  background-color: rgba(18, 129, 148, 0.75);
+  background-color: ${backgroundColorRightServiceContainerEng};
   width: 66.3vw;
   height: 68vh;
   padding: 10px 20px;
@@ -18,7 +22,7 @@ export const RightServiceContainerEng = styled.div`
   justify-content: center;
   overflow-y: scroll;
   overflow-x: hidden;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 100%;
     right: 0;
     height: 50vh;
@@ -36,5 +40,5 @@ export const RightServiceContentEng = styled.div`
   padding: 20px;
 `;
 
-RightServiceContainerEng.displayName = "RightServiceContainerEng";
-RightServiceContentEng.displayName = "RightServiceContentEng";
+RightServiceContainerEng.displayName = 'RightServiceContainerEng';
+RightServiceContentEng.displayName = 'RightServiceContentEng';

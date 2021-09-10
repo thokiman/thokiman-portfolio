@@ -1,15 +1,15 @@
-import HeaderActionTypes from "./header.types";
+import HeaderActionTypes from './header.types';
 
 const INITIAL_STATE = {
-  isSideBarHidden: false,
+  isSideBarActive: false,
 };
 
 const headerReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case HeaderActionTypes.IS_SIDEBAR_HIDDEN:
+    case HeaderActionTypes.IS_SIDEBAR_ACTIVE:
       return {
         ...state,
-        isSideBarHidden: !state.isSideBarHidden,
+        isSideBarActive: !state.isSideBarActive,
       };
     default:
       return state;

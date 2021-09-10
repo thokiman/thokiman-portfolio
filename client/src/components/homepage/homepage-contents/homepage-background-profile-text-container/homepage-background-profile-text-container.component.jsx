@@ -1,23 +1,22 @@
-import React from "react";
-import { connect } from "react-redux";
-import { createStructuredSelector } from "reselect";
-import { selectIsSideBarHidden } from "../../../../redux/header/header.selectors";
+import React from 'react';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { selectIsSideBarActive } from '../../../../redux/header/header.selectors';
 import {
   HomepageActivityText,
   HomepageBackgroundProfileText,
   HomepageNameText,
   HomepageProfileTextContainer,
-  HomepageQuoteText
-} from "./homepage-background-profile-text-container.styles";
-
+  HomepageQuoteText,
+} from './homepage-background-profile-text-container.styles';
 
 export const HomePageProfileTextContainer = ({
   shortDescription,
   quote,
-  isSideBarHidden,
+  isSideBarHidden: isSideBarActive,
 }) => {
   return (
-    <HomepageProfileTextContainer $issidebarhidden={isSideBarHidden}>
+    <HomepageProfileTextContainer $issidebaractive={isSideBarActive}>
       <HomepageBackgroundProfileText>
         <HomepageNameText>Thomas Santosa</HomepageNameText>
         <HomepageActivityText>{shortDescription}</HomepageActivityText>
@@ -28,7 +27,7 @@ export const HomePageProfileTextContainer = ({
 };
 
 const mapStateToProps = createStructuredSelector({
-  isSideBarHidden: selectIsSideBarHidden,
+  isSideBarActive: selectIsSideBarActive,
 });
 
 export default connect(mapStateToProps)(HomePageProfileTextContainer);

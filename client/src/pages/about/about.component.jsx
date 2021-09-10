@@ -11,20 +11,25 @@ import {
   selectRockWaveImage,
   selectSkillRoute,
   selectSummaryRoute,
-  selectTimelineCareerRoute
+  selectTimelineCareerRoute,
 } from '../../redux/about/about.selectors';
-import { selectIsSideBarHidden } from '../../redux/header/header.selectors';
-import { AboutPage, AboutSideBarHide } from './about.styles';
-
+import { selectIsSideBarActive } from '../../redux/header/header.selectors';
+import { AboutIsNotActivated, AboutPage } from './about.styles';
 
 const AboutDropdown = lazy(() =>
-  import('../../components/abouts/about-dropdowns/about-dropdown/about-dropdown.component')
+  import(
+    '../../components/abouts/about-dropdowns/about-dropdown/about-dropdown.component'
+  )
 );
 const AboutHomeContent = lazy(() =>
-  import('../../components/abouts/about-contents/about-content/about-content.component')
+  import(
+    '../../components/abouts/about-contents/about-content/about-content.component'
+  )
 );
 const AboutSkill = lazy(() =>
-  import('../../components/abouts/about-contents/about-content-skill/about-content-skill.component')
+  import(
+    '../../components/abouts/about-contents/about-content-skill/about-content-skill.component'
+  )
 );
 const AboutEducation = lazy(() =>
   import(
@@ -55,20 +60,20 @@ export const About = ({
   projectRoute,
   summaryRoute,
   timelineCareerRoute,
-  isSideBarHidden,
+  isSideBarActive,
   rockWaveImage,
 }) => (
   <AboutPage
-    matchpath={!!pathname.match(`${ aboutRoute }${ timelineCareerRoute }$`)}
-    $issidebarhidden={isSideBarHidden}
+    $matchpath={!!pathname.match(`${aboutRoute}${timelineCareerRoute}$`)}
+    $issidebaractive={isSideBarActive}
     $rockWaveImage={rockWaveImage}
   >
-    {isSideBarHidden ? (
-      <AboutSideBarHide>
+    {isSideBarActive ? (
+      <AboutIsNotActivated>
         Abo
         <br />
         ut
-      </AboutSideBarHide>
+      </AboutIsNotActivated>
     ) : null}
     <AboutDropdown />
     <Switch>
@@ -79,7 +84,7 @@ export const About = ({
         <Route path={projectRoute} component={AboutProject} />
         <Route path={summaryRoute} component={AboutSummary} />
         <Route
-          path={`${ aboutRoute }${ timelineCareerRoute }`}
+          path={`${aboutRoute}${timelineCareerRoute}`}
           component={AboutTimelineCareer}
         />
       </Suspense>
@@ -94,7 +99,7 @@ const mapStateToProps = createStructuredSelector({
   projectRoute: selectProjectRoute,
   summaryRoute: selectSummaryRoute,
   timelineCareerRoute: selectTimelineCareerRoute,
-  isSideBarHidden: selectIsSideBarHidden,
+  isSideBarActive: selectIsSideBarActive,
   rockWaveImage: selectRockWaveImage,
 });
 

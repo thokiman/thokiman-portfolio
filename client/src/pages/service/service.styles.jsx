@@ -1,5 +1,7 @@
 import styled, { css, keyframes } from 'styled-components';
 
+const whiteSmokeColor = '#e3e1e4';
+const maxWidthSmartphone = 800;
 const getServiceImage = ({ $bigWaveImage }) => {
   return $bigWaveImage.item.iconPath;
 };
@@ -18,21 +20,21 @@ const serviceSideBarHide = keyframes`
 
 `;
 
-export const ServiceSideBarHide = styled.div`
+export const ServiceIsNotActivated = styled.div`
   font-family: futura-demi;
-  color: #e3e1e4;
+  color: ${whiteSmokeColor};
   position: absolute;
   top: 10vh;
   left: 6vw;
-  font-size: 480%;
+  font-size: 450%;
   letter-spacing: 0.17em;
   width: 50vw;
   line-height: 1.5em;
   animation: ${serviceSideBarHide} 2s cubic-bezier(0.175, 0.885, 0.32, 1.275)
     both;
 `;
-const ServiceSideBarActive = css`
-  @media only screen and (max-width: 800px) {
+const ServiceIsActivated = css`
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     position: relative;
     left: 0;
     transition: all 0.5s ease;
@@ -42,9 +44,9 @@ const ServiceSideBarActive = css`
     flex-direction: column;
   }
 `;
-const getServiceSideBarActive = (props) => {
-  if (props.$issidebarhidden) return null;
-  return ServiceSideBarActive;
+const getServiceSideBarActive = ({ $issidebaractive }) => {
+  if ($issidebaractive) return null;
+  return ServiceIsActivated;
 };
 
 export const ServiceContainer = styled.div`
@@ -58,7 +60,7 @@ export const ServiceContainer = styled.div`
   transition: background-image 0.7s ease-in-out, height 0.4s ease-in-out;
   font-family: futura-book;
   opacity: 0.9;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 64vw;
     position: relative;
     top: 0;

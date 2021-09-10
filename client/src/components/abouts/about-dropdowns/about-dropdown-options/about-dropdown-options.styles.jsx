@@ -1,8 +1,19 @@
-import { Link } from "react-router-dom";
-import styled, { keyframes, css } from "styled-components";
+import { Link } from 'react-router-dom';
+import styled, { css, keyframes } from 'styled-components';
+
+const backgroundAboutDropdownContainerColor = 'rgba(18, 129, 148, 0.5)';
+const aboutDropdownOptionsFadeAnimationColor0 = 'rgba(18, 129, 148,0)';
+const aboutDropdownOptionsFadeAnimationColor100 = 'rgba(18, 129, 148,0.4)';
+const aboutDropdownOptionHoverFadeAnimationColor0 = 'rgba(116, 198, 212,0.3)';
+const aboutDropdownOptionHoverFadeAnimationColor100 = 'rgba(116, 198, 212,0.7)';
+const backgroundAboutDropdownLinkOptionHoverStylesColor =
+  'rgba(116, 198, 212, 0.7)';
+const whiteSmokeColor = '#e3e1e4';
+const greenBlueColor = '#128194';
+const grayColor = '#3f4249';
 
 export const AboutDropdownOptionsContainer = styled.div`
-  background-color: rgba(18, 129, 148, 0.5);
+  background-color: ${backgroundAboutDropdownContainerColor};
   width: 100%;
 `;
 
@@ -18,11 +29,11 @@ const aboutDropdownOptionSlide = keyframes`
 `;
 const aboutDropdownOptionsFade = keyframes`{
          0% {
-                 background-color: rgba(18, 129, 148,0);
+                 background-color: ${aboutDropdownOptionsFadeAnimationColor0};
              }
 
              100% {
-                 background-color:   rgba(18, 129, 148,0.4);
+                 background-color:   ${aboutDropdownOptionsFadeAnimationColor100};
              }
 }`;
 
@@ -38,11 +49,11 @@ export const AboutDropdownOption = styled.div`
 
 const aboutDropdownOptionHoverFade = keyframes`
       0% {
-        background-color:  rgba(116, 198, 212,0.3);
+        background-color:  ${aboutDropdownOptionHoverFadeAnimationColor0};
       }
 
       100% {
-        background-color: rgba(116, 198, 212,0.7);
+        background-color: ${aboutDropdownOptionHoverFadeAnimationColor100};
       }
 
 `;
@@ -56,21 +67,21 @@ const AboutDropdownLinkOptionStyles = css`
   cursor: pointer;
 `;
 const AboutDropdownLinkOptionHoverStyles = css`
-  background-color: rgba(116, 198, 212, 0.7);
+  background-color: ${backgroundAboutDropdownLinkOptionHoverStylesColor};
   animation: ${aboutDropdownOptionHoverFade} 0.3s ease-in-out;
 `;
 
 const AboutDropdownLinkOptionHide = css`
   ${AboutDropdownLinkOptionStyles}
-  color: #e3e1e4;
+  color:${whiteSmokeColor};
   &:hover {
     ${AboutDropdownLinkOptionHoverStyles}
-    color: #128194;
+    color: ${greenBlueColor};
   }
 `;
 const AboutDropdownLinkOptionActive = css`
   ${AboutDropdownLinkOptionStyles}
-  color: #3f4249;
+  color: ${grayColor};
   &:hover {
     ${AboutDropdownLinkOptionHoverStyles}
   }
@@ -86,6 +97,6 @@ const getAboutDropdownLinkOption = ({ $matchpath }) => {
 export const AboutDropdownLinkOption = styled(Link)`
   ${getAboutDropdownLinkOption}
 `;
-AboutDropdownOptionsContainer.displayName = "AboutDropdownOptionsContainer";
-AboutDropdownOption.displayName = "AboutDropdownOption";
-AboutDropdownLinkOption.displayName = "AboutDropdownLinkOption";
+AboutDropdownOptionsContainer.displayName = 'AboutDropdownOptionsContainer';
+AboutDropdownOption.displayName = 'AboutDropdownOption';
+AboutDropdownLinkOption.displayName = 'AboutDropdownLinkOption';

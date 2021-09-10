@@ -1,6 +1,13 @@
-import { Link } from "react-scroll";
-import styled, { keyframes, css } from "styled-components";
+import { Link } from 'react-scroll';
+import styled, { css, keyframes } from 'styled-components';
 
+const maxWidthSmartphone = 800;
+const colorChange2xAnimationColor0 = 'rgba(18,129,148,0.6)';
+const colorChange2xAnimationColor100 = 'rgba(63,66,73,0.9)';
+const backgroundColorTimelineYearBelowHide = 'rgba(144, 150, 174, 0.4)';
+const whiteSmokeColor = '#e3e1e4';
+const grayColor = '#3f4249';
+const lightGrayColor = '#9096ae';
 const pulsateBck = keyframes`
     0% {
         transform: scale(1);
@@ -31,11 +38,11 @@ const rotate90TrCcw = keyframes`
 
 const colorChange2x = keyframes`
     0% {
-        color: rgba(18,129,148,0.6);
+        color:${colorChange2xAnimationColor0} ;
     }
 
     100% {
-        color: rgba($color:rgba(63,66,73,0.9), $alpha: 0.9);
+        color: rgba($color:${colorChange2xAnimationColor100}, $alpha: 0.9);
     }
 `;
 
@@ -55,14 +62,14 @@ const TimelineYearBoxBelowHide = css`
   width: fit-content;
   font-size: 200%;
   border-radius: 0px 20px 0px 20px;
-  background-color: rgba(144, 150, 174, 0.4);
+  background-color: ${backgroundColorTimelineYearBelowHide};
   padding: 5px;
-  color: #e3e1e4;
+  color: ${whiteSmokeColor};
 
   &:hover {
     animation: ${pulsateBck} 0.5s ease-in-out infinite both;
   }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 150%;
   }
 `;
@@ -73,21 +80,21 @@ const TimelineYearBoxBelowActive = css`
   font-size: 200%;
   border: none;
   background-color: none;
-  color: #3f4249;
+  color: ${grayColor};
   transition: color, border, background-color 0.5s linear;
   animation: ${rotate90TrCcw} 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   position: relative;
 
   cursor: pointer;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 120%;
   }
   &:hover {
-    color: #e3e1e4;
+    color: ${whiteSmokeColor};
   }
 `;
-const getTimelineYearBoxBelow = (props) => {
-  if (props.$isclick) return TimelineYearBoxBelowActive;
+const getTimelineYearBoxBelow = ({ $isclick }) => {
+  if ($isclick) return TimelineYearBoxBelowActive;
   return TimelineYearBoxBelowHide;
 };
 export const TimelineYearBoxBelow = styled(Link)`
@@ -95,14 +102,14 @@ export const TimelineYearBoxBelow = styled(Link)`
 `;
 
 const TimelinePointerBelowHide = css`
-  color: #9096ae;
+  color: ${lightGrayColor};
   height: 40px;
   width: 40px;
   transition: top 0.2s ease-in-out, color 0.5s ease-in-out, height,
     width 0.5s ease-in-out;
   animation: ${colorChange2x} 2s linear infinite alternate both;
   cursor: default;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     animation: none;
   }
 `;
@@ -112,21 +119,21 @@ const TimelinePointerBelowActive = css`
   top: 45px;
   right: 20px;
 
-  color: #3f4249;
+  color: ${grayColor};
   height: 90px;
   width: 90px;
   transition: top 0.2s ease-in-out, color 0.5s ease-in-out, height,
     width 0.5s ease-in-out;
   cursor: default;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     height: 70px;
     width: 70px;
     top: 6px;
   }
 `;
 
-const getTimelinePointerBelow = (props) => {
-  if (props.$isclick) return TimelinePointerBelowActive;
+const getTimelinePointerBelow = ({ $isclick }) => {
+  if ($isclick) return TimelinePointerBelowActive;
   return TimelinePointerBelowHide;
 };
 export const TimelinePointerBelow = styled.div`
@@ -137,6 +144,6 @@ export const TimelinePointerBelow = styled.div`
   }
 `;
 
-TimelineYearLinkBelow.displayName = "TimelineYearLinkBelow";
-TimelineYearBoxBelow.displayName = "TimelineYearBoxBelow";
-TimelinePointerBelow.displayName = "TimelinePointerBelow";
+TimelineYearLinkBelow.displayName = 'TimelineYearLinkBelow';
+TimelineYearBoxBelow.displayName = 'TimelineYearBoxBelow';
+TimelinePointerBelow.displayName = 'TimelinePointerBelow';

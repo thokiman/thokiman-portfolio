@@ -1,6 +1,13 @@
-import { Link } from "react-scroll";
-import styled, { keyframes, css } from "styled-components";
+import { Link } from 'react-scroll';
+import styled, { css, keyframes } from 'styled-components';
 
+const colorChange2xAnimationColor0 = 'rgba(18,129,148,0.6)';
+const colorChange2xAnimationColor100 = 'rgba(63,66,73,0.9)';
+const backgroundColorTimelineYearBoxUpperHide = 'rgba(144, 150, 174, 0.4)';
+const whiteSmokeColor = '#e3e1e4';
+const grayColor = '#3f4249';
+const lightGrayColor = '#9096ae';
+const maxWidthSmartphone = 800;
 const pulsateBck = keyframes`
     0% {
         transform: scale(1);
@@ -31,11 +38,11 @@ const rotate90BlCcw = keyframes`
 
 const colorChange2x = keyframes`
     0% {
-        color: rgba(18,129,148,0.6);
+        color: ${colorChange2xAnimationColor0};
     }
 
     100% {
-        color: rgba($color:rgba(63,66,73,0.9), $alpha: 0.9);
+        color: rgba($color:${colorChange2xAnimationColor100}, $alpha: 0.9);
     }
 `;
 
@@ -50,13 +57,13 @@ const TimelineYearBoxUpperHide = css`
   width: fit-content;
   font-size: 200%;
   border-radius: 0px 20px 0px 20px;
-  background-color: rgba(144, 150, 174, 0.4);
+  background-color: ${backgroundColorTimelineYearBoxUpperHide};
   padding: 5px;
-  color: #e3e1e4;
+  color: ${whiteSmokeColor};
   &:hover {
     animation: ${pulsateBck} 0.5s ease-in-out infinite both;
   }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 150%;
   }
 `;
@@ -68,18 +75,18 @@ const TimelineYearBoxUpperActive = css`
   top: 45px;
   right: 20px;
   border: none;
-  color: #3f4249;
+  color: ${grayColor};
   transition: color, border, background-color 0.5s linear;
   animation: ${rotate90BlCcw} 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 120%;
   }
   &:hover {
-    color: #e3e1e4;
+    color: ${whiteSmokeColor};
   }
 `;
-const getTimelineYearBoxUpper = (props) => {
-  if (props.$isclick) return TimelineYearBoxUpperActive;
+const getTimelineYearBoxUpper = ({ $isclick }) => {
+  if ($isclick) return TimelineYearBoxUpperActive;
   return TimelineYearBoxUpperHide;
 };
 export const TimelineYearBoxUpper = styled(Link)`
@@ -89,14 +96,14 @@ export const TimelineYearBoxUpper = styled(Link)`
 const TimelinePointerUpperHide = css`
   position: relative;
   top: 20px;
-  color: #9096ae;
+  color: ${lightGrayColor};
   height: 40px;
   width: 40px;
   transition: top 0.2s ease-in-out, color 0.5s ease-in-out, height,
     width 0.5s ease-in-out;
   animation: ${colorChange2x} 2s linear infinite alternate both;
   cursor: default;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     animation: none;
   }
 `;
@@ -104,21 +111,21 @@ const TimelinePointerUpperHide = css`
 const TimelinePointerUpperActive = css`
   position: relative;
   top: -35px;
-  color: #3f4249;
+  color: ${grayColor};
   height: 90px;
   width: 90px;
   transition: top 0.2s ease-in-out, color 0.5s ease-in-out, height,
     width 0.5s ease-in-out;
   cursor: default;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     height: 70px;
     width: 70px;
     top: -25px;
   }
 `;
 
-const getTimelinePointerUpper = (props) => {
-  if (props.$isclick) return TimelinePointerUpperActive;
+const getTimelinePointerUpper = ({ $isclick }) => {
+  if ($isclick) return TimelinePointerUpperActive;
   return TimelinePointerUpperHide;
 };
 export const TimelinePointerUpper = styled.div`
@@ -129,6 +136,6 @@ export const TimelinePointerUpper = styled.div`
   }
 `;
 
-TimelineYearLinkUpper.displayName = "TimelineYearLinkUpper";
-TimelineYearBoxUpper.displayName = "TimelineYearBoxUpper";
-TimelinePointerUpper.displayName = "TimelinePointerUpper";
+TimelineYearLinkUpper.displayName = 'TimelineYearLinkUpper';
+TimelineYearBoxUpper.displayName = 'TimelineYearBoxUpper';
+TimelinePointerUpper.displayName = 'TimelinePointerUpper';

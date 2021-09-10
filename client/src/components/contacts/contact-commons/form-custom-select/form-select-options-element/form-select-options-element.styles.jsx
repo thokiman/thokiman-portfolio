@@ -1,7 +1,7 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
-const subColor = "#128194";
-const mainColor = "#bccfd5";
+const greenBlueColor = '#128194';
+const heavyLightBlueColor = '#bccfd5';
 
 export const FormSelectContainer = styled.ul`
   list-style-type: none;
@@ -32,14 +32,14 @@ export const FormSelectItem = styled.li`
   animation: ${formSelectItemHover} 1s cubic-bezier(0.175, 0.885, 0.32, 1.275)
     both;
   font-size: 20px;
-  color: ${mainColor};
+  color: ${heavyLightBlueColor};
   margin-bottom: 5px;
 
   &:hover {
-    color: ${subColor};
+    color: ${greenBlueColor};
     transition: color linear 0.2s;
   }
 `;
 
-FormSelectContainer.displayName = "FormSelectContainer";
-FormSelectItem.displayName = "FormSelectItem";
+FormSelectContainer.displayName = 'FormSelectContainer';
+FormSelectItem.displayName = 'FormSelectItem';

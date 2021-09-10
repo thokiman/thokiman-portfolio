@@ -1,7 +1,7 @@
-import React from "react";
-import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
-import { createStructuredSelector } from "reselect";
+import React from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import { createStructuredSelector } from 'reselect';
 import {
   selectBrandRoute,
   selectBrandTitle,
@@ -13,13 +13,13 @@ import {
   selectPhotographyColorTitle,
   selectPortfolioRoute,
   selectWebsiteRoute,
-  selectWebsiteTitle
-} from "../../../redux/collection/collection.selectors";
-import { selectIsSideBarHidden } from "../../../redux/header/header.selectors";
+  selectWebsiteTitle,
+} from '../../../redux/collection/collection.selectors';
+import { selectIsSideBarActive } from '../../../redux/header/header.selectors';
 import {
-  PortfolioHeaderOption, PortfolioHeaderOptions
-} from "./portfolio-header.styles";
-
+  PortfolioHeaderOption,
+  PortfolioHeaderOptions,
+} from './portfolio-header.styles';
 
 export const PortfolioHeader = ({
   location: { pathname },
@@ -34,17 +34,16 @@ export const PortfolioHeader = ({
   photographyColorRoute,
   websiteRoute,
   websiteTitle,
-  isSideBarHidden,
+  isSideBarActive,
 }) => {
-
   return (
     <PortfolioHeaderOptions
-      className="options"
-      $issidebarhidden={isSideBarHidden}
+      className='options'
+      $issidebaractive={isSideBarActive}
     >
       <PortfolioHeaderOption
         to={portfolioRoute}
-        $matchpath={!!pathname.match(`${ portfolioRoute }$`)}
+        $matchpath={!!pathname.match(`${portfolioRoute}$`)}
       >
         All
       </PortfolioHeaderOption>
@@ -52,19 +51,19 @@ export const PortfolioHeader = ({
         to={brandRoute}
         $matchpath={!!pathname.match(brandRoute)}
       >
-        {`${ brandTitle }`}
+        {`${brandTitle}`}
       </PortfolioHeaderOption>
       <PortfolioHeaderOption
         to={digitalArtRoute}
         $matchpath={!!pathname.match(digitalArtRoute)}
       >
-        {`${ digitalArtTitle }`}
+        {`${digitalArtTitle}`}
       </PortfolioHeaderOption>
       <PortfolioHeaderOption
         to={photographyColorRoute}
         $matchpath={!!pathname.match(photographyColorRoute)}
       >
-        {`${ photographyColorTitle }`}
+        {`${photographyColorTitle}`}
       </PortfolioHeaderOption>
       <PortfolioHeaderOption
         to={photographyBwRoute}
@@ -94,7 +93,7 @@ const mapStateToProps = createStructuredSelector({
   photographyColorRoute: selectPhotographyColorRoute,
   websiteTitle: selectWebsiteTitle,
   websiteRoute: selectWebsiteRoute,
-  isSideBarHidden: selectIsSideBarHidden,
+  isSideBarActive: selectIsSideBarActive,
 });
 
 export default withRouter(connect(mapStateToProps)(PortfolioHeader));

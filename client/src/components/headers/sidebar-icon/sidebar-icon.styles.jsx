@@ -1,19 +1,21 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { css, keyframes } from 'styled-components';
 
+const greenBlueColor = '#128194';
+const maxWidthSmartphone = 800;
 //bar
-
-const SideBarHeaderIconActive = css`
+const SideBarHeaderIconIsActived = css`
   top: 50px;
   left: 50px;
 `;
-const getSideBarHeaderIconActive = (props) => {
-  if (props.$issidebarhidden) return SideBarHeaderIconActive;
+const getSideBarHeaderIconActive = ({ $issidebaractive }) => {
+  if ($issidebaractive) return SideBarHeaderIconIsActived;
+
   return null;
 };
 
 export const SideBarHeaderIcon = styled.div`
   display: none;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     display: block;
     position: absolute;
     z-index: 1;
@@ -29,7 +31,7 @@ export const SideBarHeaderIcon = styled.div`
 const SideBarHideStyles = css`
   width: 35px;
   height: 3px;
-  background-color: #128194;
+  background-color: ${greenBlueColor};
   margin: 6px 0;
   transition: 0.6s;
 `;
@@ -69,7 +71,7 @@ const sideBarThreeChange = keyframes`
 const SideBarChangeStyles = css`
   width: 30px;
   height: 3px;
-  background-color: #128194;
+  background-color: ${greenBlueColor};
   border-radius: 20px 20px 20px 20px;
 `;
 
@@ -90,20 +92,20 @@ const SideBarThreeChange = css`
   animation: ${sideBarThreeChange} 0.4s ease-in-out;
 `;
 
-const getSideBarOne = ({ $issidebarhidden }) => {
-  if ($issidebarhidden) {
+const getSideBarOne = ({ $issidebaractive }) => {
+  if ($issidebaractive) {
     return SideBarOneChange;
   }
   return SideBarOneHide;
 };
-const getSideBarTwo = ({ $issidebarhidden }) => {
-  if ($issidebarhidden) {
+const getSideBarTwo = ({ $issidebaractive }) => {
+  if ($issidebaractive) {
     return SideBarTwoChange;
   }
   return SideBarTwoHide;
 };
-const getSideBarThree = ({ $issidebarhidden }) => {
-  if ($issidebarhidden) {
+const getSideBarThree = ({ $issidebaractive }) => {
+  if ($issidebaractive) {
     return SideBarThreeChange;
   }
   return SideBarThreeHide;
@@ -118,7 +120,7 @@ export const SideBarTwo = styled.div`
 export const SideBarThree = styled.div`
   ${getSideBarThree}
 `;
-SideBarOne.displayName = "SideBarOne";
-SideBarTwo.displayName = "SideBarTwo";
-SideBarThree.displayName = "SideBarThree";
-SideBarHeaderIcon.displayName = "SideBarHeaderIcon";
+SideBarOne.displayName = 'SideBarOne';
+SideBarTwo.displayName = 'SideBarTwo';
+SideBarThree.displayName = 'SideBarThree';
+SideBarHeaderIcon.displayName = 'SideBarHeaderIcon';

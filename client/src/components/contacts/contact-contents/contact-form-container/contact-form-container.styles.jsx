@@ -1,21 +1,26 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
-const SideBarActive = css`
+const maxWidthSmartphone = 800;
+const backgroundColorContactFormContainer = 'rgba(116, 198, 212, 0.8)';
+const greenBlueColor = '#128194';
+const heavyLightBlueColor = '#bccfd5';
+
+const ContactFormContainerIsNotActivated = css`
   display: none;
 `;
-const getSideBarActive = (props) => {
-  if (props.$issidebarhidden) return SideBarActive;
+const getSideBarActive = ({ $issidebaractive }) => {
+  if ($issidebaractive) return ContactFormContainerIsNotActivated;
   return null;
 };
 
 const ContactFormContainerHide = css`
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     height: 250vh;
     transition: all ease-in-out 1s;
   }
 `;
 const ContactFormContainerActive = css`
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     height: 340vh;
     transition: all ease-in-out 1s;
   }
@@ -31,12 +36,12 @@ const getContactFormContainer = ({ $istypeclick }) => {
 export const ContactFormContainer = styled.div`
   width: 35vw;
   height: 72vh;
-  background-color: rgba(116, 198, 212, 0.8);
+  background-color: ${backgroundColorContactFormContainer};
   display: flex;
   justify-content: center;
   overflow-y: scroll;
   overflow-x: hidden;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     margin: 10px 0;
     width: 100vw;
 
@@ -54,14 +59,14 @@ const ContactFormGroupHide = css`
   ${ContactFormGroupStyles}
   height: 1600px;
   padding-top: 15px;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     height: 180vh;
   }
 `;
 const ContactFormGroupActive = css`
   ${ContactFormGroupStyles}
   height: 1650px;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     height: 210vh;
   }
 `;
@@ -80,9 +85,9 @@ export const ContactFormHead = styled.div`
   font-size: 4vw;
   text-align: left;
   letter-spacing: 0.01em;
-  color: #128194;
+  color: ${greenBlueColor};
   text-indent: 0.5em;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 9vw;
   }
 `;
@@ -92,8 +97,8 @@ export const ContactFormSubhead = styled.div`
   text-align: justifƒy;
   line-height: 1.7em;
   letter-spacing: 0.05em;
-  color: #bccfd5;
-  @media only screen and (max-width: 800px) {
+  color: ${heavyLightBlueColor};
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 6vw;
   }
 `;
@@ -104,8 +109,8 @@ export const ButtonIcon = styled.span`
   justify-content: center;
 `;
 
-ContactFormContainer.displayName = "ContactFormContainer";
-ContactFormGroup.displayName = "ContactFormGroup";
-ContactFormHead.displayName = "ContactFormHead";
-ContactFormSubhead.displayName = "ContactFormSubhead";
-ButtonIcon.displayName = "ButtonIcon";
+ContactFormContainer.displayName = 'ContactFormContainer';
+ContactFormGroup.displayName = 'ContactFormGroup';
+ContactFormHead.displayName = 'ContactFormHead';
+ContactFormSubhead.displayName = 'ContactFormSubhead';
+ButtonIcon.displayName = 'ButtonIcon';

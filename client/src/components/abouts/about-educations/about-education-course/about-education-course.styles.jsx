@@ -1,6 +1,10 @@
-import { Link } from "react-router-dom";
-import styled, { css, keyframes } from "styled-components";
+import { Link } from 'react-router-dom';
+import styled, { css, keyframes } from 'styled-components';
 
+const whiteSmokeColor = '#e3e1e4';
+const lightBlueColor = '#74c6d4';
+const grayColor = '#3f4249';
+const maxWidthSmartphone = 800;
 export const AboutEducationCourseContent = styled.div`
   padding: 5px;
   display: flex;
@@ -22,8 +26,8 @@ export const AboutEducationCourseTitle = styled.div`
   letter-spacing: 0.04em;
   font-kerning: auto;
   padding: 0 2px;
-  color: #e3e1e4;
-  @media only screen and (max-width: 800px) {
+  color: ${whiteSmokeColor};
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 18vw;
   }
 `;
@@ -34,9 +38,9 @@ export const AboutEducationCourseAttributes = styled.div`
   grid-auto-rows: repeat(3, 1fr);
   gap: 2px 0px;
   grid-template-areas:
-    "education-experience-company education-experience-company education-experience-organization education-experience-organization"
-    "education-experience-company education-experience-company education-experience-date education-experience-date"
-    "education-experience-company education-experience-company education-experience-link education-experience-link";
+    'education-experience-company education-experience-company education-experience-organization education-experience-organization'
+    'education-experience-company education-experience-company education-experience-date education-experience-date'
+    'education-experience-company education-experience-company education-experience-link education-experience-link';
   width: 100%;
   height: 100%;
 `;
@@ -46,8 +50,8 @@ const AboutEducationCourseStyles = css`
   line-height: 1.3em;
   letter-spacing: 0.04em;
   font-kerning: auto;
-  border-bottom: #74c6d4 solid 2px;
-  color: #e3e1e4;
+  border-bottom: ${lightBlueColor} solid 2px;
+  color: ${whiteSmokeColor};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,7 +63,7 @@ export const AboutEducationCourseName = styled.div`
   font-size: 200%;
   padding: 10px 0;
   width: 95%;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     text-align: left;
     font-size: 6vw;
   }
@@ -70,7 +74,7 @@ export const AboutEducationCourseOrganization = styled.div`
   grid-area: education-experience-organization;
   font-size: 150%;
   padding: 0 10px;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     padding: 4px;
     font-size: 4.5vw;
   }
@@ -81,7 +85,7 @@ export const AboutEducationCourseDate = styled.div`
   grid-area: education-experience-date;
   padding: 10px 0;
   font-size: 150%;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 4.5vw;
     padding: 4px;
   }
@@ -114,12 +118,12 @@ export const AboutCourseLink = styled(Link)`
   text-decoration: none;
   font-size: 120%;
   cursor: pointer;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 4.5vw;
   }
 
   &:hover {
-    border-bottom: #3f4249 solid 2px;
+    border-bottom: ${grayColor} solid 2px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -127,12 +131,12 @@ export const AboutCourseLink = styled(Link)`
   }
 `;
 
-AboutEducationCourseContent.displayName = "AboutEducationCourseContent";
-AboutEducationCourseTitle.displayName = "AboutEducationCourseTitle";
-AboutEducationCourseAttributes.displayName = "AboutEducationCourseAttributes";
-AboutEducationCourseName.displayName = "AboutEducationCourseName";
+AboutEducationCourseContent.displayName = 'AboutEducationCourseContent';
+AboutEducationCourseTitle.displayName = 'AboutEducationCourseTitle';
+AboutEducationCourseAttributes.displayName = 'AboutEducationCourseAttributes';
+AboutEducationCourseName.displayName = 'AboutEducationCourseName';
 AboutEducationCourseOrganization.displayName =
-  "AboutEducationCourseOrganization";
-AboutEducationCourseDate.displayName = "AboutEducationCourseDate";
-AboutEducationCourseLink.displayName = "AboutEducationCourseLink";
-AboutCourseLink.displayName = "AboutCourseLink";
+  'AboutEducationCourseOrganization';
+AboutEducationCourseDate.displayName = 'AboutEducationCourseDate';
+AboutEducationCourseLink.displayName = 'AboutEducationCourseLink';
+AboutCourseLink.displayName = 'AboutCourseLink';

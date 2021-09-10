@@ -1,4 +1,9 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { css, keyframes } from 'styled-components';
+
+const whiteSmokeColor = '#e3e1e4';
+const maxWidthDesktop = 1675;
+const maxWidthTabletPro = 1024;
+const maxWidthSmartphone = 800;
 
 const homepageSideBarHide = keyframes`
   0% {
@@ -11,12 +16,12 @@ const homepageSideBarHide = keyframes`
     transform-origin: bottom;
     opacity: 1;
   }
-
 `;
 
-export const HomepageSideBarHide = styled.div`
+export const HomepageIsNotActivated = styled.div`
   font-family: futura-demi;
-  color: #e3e1e4;
+
+  color: ${whiteSmokeColor};
   position: absolute;
   top: 10vh;
   left: 6vw;
@@ -24,30 +29,47 @@ export const HomepageSideBarHide = styled.div`
   letter-spacing: 0.17em;
   width: 50vw;
   line-height: 1.5em;
+
   animation: ${homepageSideBarHide} 2s cubic-bezier(0.175, 0.885, 0.32, 1.275)
     both;
 `;
 
-const HomepageSideBarActive = css`
-  @media only screen and (max-width: 800px) {
+const HomepageIsActivated = css`
+  @media only screen and (max-width: ${maxWidthDesktop}px) {
     position: relative;
     left: 0;
     width: 100vw;
     transition: left 0.5s ease;
     opacity: 1;
-    height: 235vh;
+    height: 500vh;
+  }
+  @media only screen and (max-width: ${maxWidthTabletPro}px) {
+    position: relative;
+    left: 0;
+    width: 100vw;
+    transition: left 0.5s ease;
+    opacity: 1;
+    height: 380vh;
+  }
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    position: relative;
+    left: 0;
+    width: 100vw;
+    transition: left 0.5s ease;
+    opacity: 1;
+    height: 350vh;
   }
 `;
 
-const getHomepageSideBarActive = (props) => {
-  if (props.$issidebarhidden) return null;
-  return HomepageSideBarActive;
+const getHomepageSideBarActive = ({ $issidebaractive }) => {
+  if ($issidebaractive) return null;
+  return HomepageIsActivated;
 };
 export const HomepageContainer = styled.div`
   text-align: center;
   transition: background-image 0.7s ease-in-out, height 0.4s ease-in-out;
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthDesktop}px) {
     position: relative;
     top: 0;
     width: 64vw;
@@ -55,7 +77,6 @@ export const HomepageContainer = styled.div`
     right: 0;
     bottom: 0;
     transition: left 0.5s ease;
-    height: 118vh;
     overflow-y: hidden;
     overflow-x: hidden;
     opacity: 0.5;
@@ -65,15 +86,15 @@ export const HomepageContainer = styled.div`
 `;
 
 export const HomepageAboutContentContainer = styled.div`
-  color: #e3e1e4;
+  color: ${whiteSmokeColor};
   height: 120vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthDesktop}px) {
     flex-direction: column;
   }
 `;
 
-HomepageContainer.displayName = "HomepageContainer";
-HomepageAboutContentContainer.displayName = "HomepageAboutContentContainer";
+HomepageContainer.displayName = 'HomepageContainer';
+HomepageAboutContentContainer.displayName = 'HomepageAboutContentContainer';

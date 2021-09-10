@@ -1,7 +1,7 @@
-import React, { lazy, Suspense } from "react";
-import { connect } from "react-redux";
-import { Route } from "react-router-dom";
-import { createStructuredSelector } from "reselect";
+import React, { lazy, Suspense } from 'react';
+import { connect } from 'react-redux';
+import { Route } from 'react-router-dom';
+import { createStructuredSelector } from 'reselect';
 import PageShell from '../../components/commons/page-shell/page-shell.component';
 import SpinnerLoading from '../../components/commons/spinner-loading/spinner-loading.component';
 import {
@@ -16,19 +16,28 @@ import {
   selectPhotographyColorRoute,
   selectPortfolioRoute,
   selectWebsiteItems,
-  selectWebsiteRoute
-} from "../../redux/collection/collection.selectors";
-import { selectIsSideBarHidden } from "../../redux/header/header.selectors";
-import { PortfolioContainer, PortfolioSideBarHide } from "./portfolio.styles";
+  selectWebsiteRoute,
+} from '../../redux/collection/collection.selectors';
+import { selectIsSideBarActive } from '../../redux/header/header.selectors';
+import {
+  PortfolioContainer,
+  PortfolioIsNotActivated,
+} from './portfolio.styles';
 
 const PortfolioWebsite = lazy(() =>
-  import("../../components/collections/portfolio-contents/portfolio-websites/portfolio-websites.component")
-)
+  import(
+    '../../components/collections/portfolio-contents/portfolio-websites/portfolio-websites.component'
+  )
+);
 const PortfolioContentContainer = lazy(() =>
-  import("../../components/collections/portfolio-contents/portfolio-content/portfolio-content-container.component")
+  import(
+    '../../components/collections/portfolio-contents/portfolio-content/portfolio-content-container.component'
+  )
 );
 const PortfolioHeader = lazy(() =>
-  import("../../components/collections/portfolio-header/portfolio-header.component")
+  import(
+    '../../components/collections/portfolio-header/portfolio-header.component'
+  )
 );
 
 export const Portfolio = ({
@@ -44,18 +53,17 @@ export const Portfolio = ({
   photographyColorRoute,
   websiteItems,
   websiteRoute,
-  isSideBarHidden,
+  isSideBarActive,
 }) => {
-
   return (
-    <PortfolioContainer $issidebarhidden={isSideBarHidden}>
+    <PortfolioContainer $issidebaractive={isSideBarActive}>
       <Suspense fallback={<SpinnerLoading />}>
-        {isSideBarHidden ? (
-          <PortfolioSideBarHide>
+        {isSideBarActive ? (
+          <PortfolioIsNotActivated>
             Port
             <br />
             folio
-          </PortfolioSideBarHide>
+          </PortfolioIsNotActivated>
         ) : null}
         <PortfolioHeader />
         <Route
@@ -86,7 +94,7 @@ export const Portfolio = ({
         <Route
           path={websiteRoute}
           render={() => {
-            <PortfolioWebsite websiteItems={websiteItems} />
+            <PortfolioWebsite websiteItems={websiteItems} />;
           }}
         />
       </Suspense>
@@ -106,7 +114,7 @@ const mapStateToProps = createStructuredSelector({
   photographyColorRoute: selectPhotographyColorRoute,
   websiteItems: selectWebsiteItems,
   websiteRoute: selectWebsiteRoute,
-  isSideBarHidden: selectIsSideBarHidden,
+  isSideBarActive: selectIsSideBarActive,
 });
 
 export default connect(mapStateToProps)(PageShell(Portfolio));

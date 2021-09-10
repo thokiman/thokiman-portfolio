@@ -1,37 +1,37 @@
-import React, { useState } from "react";
-import { FaPeace, FaRegHandPeace } from "react-icons/fa";
-import { GiDiamondsSmile } from "react-icons/gi";
-import { RiMailSendFill } from "react-icons/ri";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import { createStructuredSelector } from "reselect";
+import React, { useState } from 'react';
+import { FaPeace, FaRegHandPeace } from 'react-icons/fa';
+import { GiDiamondsSmile } from 'react-icons/gi';
+import { RiMailSendFill } from 'react-icons/ri';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { createStructuredSelector } from 'reselect';
 import {
-  postFormContactStart, toggleSubmitButtonClick,
+  postFormContactStart,
+  toggleSubmitButtonClick,
   toggleTypeFillFormClick,
-  toggleTypeSubmitFormClick
-} from "../../../../redux/contact/contact.actions";
+  toggleTypeSubmitFormClick,
+} from '../../../../redux/contact/contact.actions';
 import {
   selectIsButtonClickContact,
-  selectIsTypeClickContact
-} from "../../../../redux/contact/contact.selectors";
-import { selectIsSideBarHidden } from "../../../../redux/header/header.selectors";
-import { toTitleCase } from "../../../../utils/contact.component.utils";
-import FormButton from "../../contact-commons/form-button/form-button.component";
-import FormInputSelect from "../../contact-commons/form-custom-select/form-select/form-select.component";
-import FormInputTel from "../../contact-commons/form-input-tel/form-input-tel.component";
-import FormInput from "../../contact-commons/form-input/form-input.component";
-import FormTextArea from "../../contact-commons/form-text-area/form-text-area.component";
+  selectIsTypeClickContact,
+} from '../../../../redux/contact/contact.selectors';
+import { selectIsSideBarActive } from '../../../../redux/header/header.selectors';
+import { toTitleCase } from '../../../../utils/contact.component.utils';
+import FormButton from '../../contact-commons/form-button/form-button.component';
+import FormInputSelect from '../../contact-commons/form-custom-select/form-select/form-select.component';
+import FormInputTel from '../../contact-commons/form-input-tel/form-input-tel.component';
+import FormInput from '../../contact-commons/form-input/form-input.component';
+import FormTextArea from '../../contact-commons/form-text-area/form-text-area.component';
 import {
   ButtonIcon,
   ContactFormContainer,
   ContactFormGroup,
   ContactFormHead,
-  ContactFormSubhead
-} from "./contact-form-container.styles";
-
+  ContactFormSubhead,
+} from './contact-form-container.styles';
 
 export const ContactForm = ({
-  isSideBarHidden,
+  isSideBarActive,
   isTypeClick,
   isButtonClick,
   toggleSubmitButtonClick,
@@ -40,28 +40,28 @@ export const ContactForm = ({
   postFormContactStart,
 }) => {
   const [form, setForm] = useState({
-    name: "",
-    email: "",
-    country: "",
-    area: "",
-    phone: "",
-    company: "",
-    type: "",
-    message: "",
+    name: '',
+    email: '',
+    country: '',
+    area: '',
+    phone: '',
+    company: '',
+    type: '',
+    message: '',
   });
 
   const { name, email, country, area, phone, company, type, message } = form;
 
   const handleItemChange = (e) => {
-    if (e.target.tagName === "LI") {
+    if (e.target.tagName === 'LI') {
       const { textContent } = e.target;
       setForm({ ...form, type: textContent });
     } else {
       const { value, name } = e.target;
       if (
-        e.target.name === "name" ||
-        e.target.name === "company" ||
-        e.target.name === "country"
+        e.target.name === 'name' ||
+        e.target.name === 'company' ||
+        e.target.name === 'country'
       ) {
         setForm({ ...form, [name]: toTitleCase(value) });
       } else setForm({ ...form, [name]: value });
@@ -73,14 +73,14 @@ export const ContactForm = ({
     postFormContactStart(form);
 
     setForm({
-      name: "",
-      email: "",
-      country: "",
-      area: "",
-      phone: "",
-      company: "",
-      type: "",
-      message: "",
+      name: '',
+      email: '',
+      country: '',
+      area: '',
+      phone: '',
+      company: '',
+      type: '',
+      message: '',
     });
     toggleTypeSubmitFormClick();
     toggleSubmitButtonClick();
@@ -89,7 +89,7 @@ export const ContactForm = ({
   return (
     <ContactFormContainer
       $istypeclick={isTypeClick}
-      $issidebarhidden={isSideBarHidden}
+      $issidebaractive={isSideBarActive}
     >
       <ContactFormGroup $istypeclick={isTypeClick}>
         <ContactFormHead>General Inquiries</ContactFormHead>
@@ -100,55 +100,55 @@ export const ContactForm = ({
         <form onSubmit={handleSubmit}>
           <FormInput
             handleChange={handleItemChange}
-            type="text"
-            name="name"
+            type='text'
+            name='name'
             value={name}
-            label="Name"
+            label='Name'
             required
           />
           <FormInput
             handleChange={handleItemChange}
-            type="email"
-            name="email"
+            type='email'
+            name='email'
             value={email}
-            label="Email"
+            label='Email'
             required
           />
           <FormInput
             handleChange={handleItemChange}
-            type="text"
-            name="company"
+            type='text'
+            name='company'
             value={company}
-            label="Company"
+            label='Company'
             required
           />
           <FormInput
             handleChange={handleItemChange}
-            type="text"
-            name="country"
+            type='text'
+            name='country'
             value={country}
-            label="Country"
+            label='Country'
             required
           />
           <FormInputTel
-            type="tel"
+            type='tel'
             handleChange={handleItemChange}
-            name="area"
+            name='area'
             value={area}
-            pattern="\+[0-9]{2,3}$"
-            label="Country Code | +xx | +xxx"
-            maxLength="4"
-            minLength="3"
+            pattern='\+[0-9]{2,3}$'
+            label='Country Code | +xx | +xxx'
+            maxLength='4'
+            minLength='3'
           />
           <FormInputTel
-            type="tel"
+            type='tel'
             handleChange={handleItemChange}
-            name="phone"
+            name='phone'
             value={phone}
-            pattern="^[0-9]{7,13}$"
-            label="Phone Number | xxxxxxxxx"
-            maxLength="13"
-            minLength="7"
+            pattern='^[0-9]{7,13}$'
+            label='Phone Number | xxxxxxxxx'
+            maxLength='13'
+            minLength='7'
           />
 
           <FormInputSelect
@@ -159,18 +159,18 @@ export const ContactForm = ({
           />
           <FormTextArea
             handleChange={handleItemChange}
-            type="text"
-            name="message"
+            type='text'
+            name='message'
             value={message}
-            label="Message"
+            label='Message'
             rows={9}
             required
           />
-          <FormButton type="submit">
+          <FormButton type='submit'>
             {isButtonClick &&
-              !type &&
-              !area.match(RegExp(/\+[0-9]{2,3}$/)) &&
-              !phone.match(RegExp(/^[0-9]{7,13}$/)) ? (
+            !type &&
+            !area.match(RegExp(/\+[0-9]{2,3}$/)) &&
+            !phone.match(RegExp(/^[0-9]{7,13}$/)) ? (
               <ButtonIcon>
                 <GiDiamondsSmile /> Thanks
               </ButtonIcon>
@@ -189,7 +189,7 @@ export const ContactForm = ({
 const mapStateToProps = createStructuredSelector({
   isTypeClick: selectIsTypeClickContact,
   isButtonClick: selectIsButtonClickContact,
-  isSideBarHidden: selectIsSideBarHidden,
+  isSideBarActive: selectIsSideBarActive,
 });
 
 const mapDispatchToProps = (dispatch) =>

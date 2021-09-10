@@ -1,4 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+
+const maxWidthSmartphone = 800;
 
 export const AboutEngineerSkillContainer = styled.div`
   width: 95%;
@@ -6,8 +8,8 @@ export const AboutEngineerSkillContainer = styled.div`
   overflow-y: scroll;
   overflow-x: hidden;
   margin: 0 auto;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 98%;
   }
 `;
-AboutEngineerSkillContainer.displayName = "AboutEngineerSkillContainer";
+AboutEngineerSkillContainer.displayName = 'AboutEngineerSkillContainer';

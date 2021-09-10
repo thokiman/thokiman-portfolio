@@ -5,9 +5,9 @@ import { createStructuredSelector } from 'reselect';
 import {
   selectAboutRoute,
   selectLowWaveImage,
-  selectTimelineCareerRoute
+  selectTimelineCareerRoute,
 } from '../../../../redux/about/about.selectors';
-import { selectIsSideBarHidden } from '../../../../redux/header/header.selectors';
+import { selectIsSideBarActive } from '../../../../redux/header/header.selectors';
 import AboutDropdownBar from '../about-dropdown-content/about-dropdown-bar.component';
 import { AboutDropdownContainer } from './about-dropdown.styles';
 
@@ -15,13 +15,13 @@ export const AboutDropdown = ({
   location: { pathname },
   aboutRoute,
   timelineCareerRoute,
-  isSideBarHidden,
+  isSideBarActive,
   lowWaveImage,
 }) => {
   return (
     <AboutDropdownContainer
-      $matchpath={!!pathname.match(`${ aboutRoute }${ timelineCareerRoute }`)}
-      $issidebarhidden={isSideBarHidden}
+      $matchpath={!!pathname.match(`${aboutRoute}${timelineCareerRoute}`)}
+      $issidebaractive={isSideBarActive}
       $lowWaveImage={lowWaveImage}
     >
       <AboutDropdownBar />
@@ -32,7 +32,7 @@ export const AboutDropdown = ({
 const mapStateToProps = createStructuredSelector({
   timelineCareerRoute: selectTimelineCareerRoute,
   aboutRoute: selectAboutRoute,
-  isSideBarHidden: selectIsSideBarHidden,
+  isSideBarActive: selectIsSideBarActive,
   lowWaveImage: selectLowWaveImage,
 });
 export default withRouter(connect(mapStateToProps)(AboutDropdown));

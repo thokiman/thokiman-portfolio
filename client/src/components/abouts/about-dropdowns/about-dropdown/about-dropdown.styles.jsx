@@ -1,14 +1,17 @@
 import styled, { css } from 'styled-components';
 
+const maxWidthSmartphone = 800;
+
 const getTimelineImage = ({ $lowWaveImage }) => {
   return $lowWaveImage.item.iconPath;
 };
 
-const SideBarActive = css`
+const AboutDropdownIsNotActivated = css`
   display: none;
 `;
-const getSideBarActive = (props) => {
-  if (props.$issidebarhidden) return SideBarActive;
+
+const getSideBarActive = ({ $issidebaractive }) => {
+  if ($issidebaractive) return AboutDropdownIsNotActivated;
   return null;
 };
 
@@ -20,7 +23,7 @@ const AboutDropdownStyles = css`
   text-align: center;
   margin-left: 2vw;
   transition: height 0.5s ease-in-out, top 0.2s ease;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 100%;
     height: 50vh;
     margin-left: 0;
@@ -41,7 +44,7 @@ const AboutDropdownLeftPageContainerTimeline = css`
   width: 320px;
   background: url(${getTimelineImage});
   background-size: cover;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     background-image: none;
   }
 `;

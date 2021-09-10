@@ -1,20 +1,19 @@
-import React from "react";
-import { connect } from "react-redux";
-import { createStructuredSelector } from "reselect";
-import { selectIsSideBarHidden } from "../../../../redux/header/header.selectors";
-import HomepageProfileImageCartoon from "../homepage-profile-image-cartoon/homepage-profile-image-cartoon.component.jsx";
+import React from 'react';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { selectIsSideBarActive } from '../../../../redux/header/header.selectors';
+import HomepageProfileImageCartoon from '../homepage-profile-image-cartoon/homepage-profile-image-cartoon.component.jsx';
 import {
   HomepageBackgroundProfileImage,
   HomepageProfileImage,
-  HomepageProfileImageContainer
-} from "./homepage-profile-image-container.styles";
+  HomepageProfileImageContainer,
+} from './homepage-profile-image-container.styles';
 
-
-export const HomePageProfileImageContainer = ({ isSideBarHidden }) => {
+export const HomePageProfileImageContainer = ({ isSideBarActive }) => {
   return (
-    <HomepageProfileImageContainer $issidebarhidden={isSideBarHidden}>
+    <HomepageProfileImageContainer $issidebaractive={isSideBarActive}>
+      <HomepageProfileImageCartoon />
       <HomepageBackgroundProfileImage>
-        <HomepageProfileImageCartoon/>
         <HomepageProfileImage />
       </HomepageBackgroundProfileImage>
     </HomepageProfileImageContainer>
@@ -22,7 +21,7 @@ export const HomePageProfileImageContainer = ({ isSideBarHidden }) => {
 };
 
 const mapStateToProps = createStructuredSelector({
-  isSideBarHidden: selectIsSideBarHidden,
+  isSideBarActive: selectIsSideBarActive,
 });
 
 export default connect(mapStateToProps)(HomePageProfileImageContainer);

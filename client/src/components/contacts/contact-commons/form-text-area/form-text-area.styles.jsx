@@ -1,17 +1,18 @@
-import styled, { css } from "styled-components";
-import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
+import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
+import styled, { css } from 'styled-components';
 
-const subColor = "#128194";
-const mainColor = "#bccfd5";
+const greenBlueColor = '#128194';
+const heavyLightBlueColor = '#bccfd5';
+const maxWidthSmartphone = 800;
 
 const shrinkLabel = css`
   top: -35px;
   font-size: 30px;
-  color: ${mainColor};
+  color: ${heavyLightBlueColor};
 `;
 const shrinkLabelMobile = css`
-  @media only screen and (max-width: 800px) {
-    color: ${mainColor};
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    color: ${heavyLightBlueColor};
     font-size: 7vw;
     top: -4vh;
   }
@@ -27,15 +28,15 @@ export const FormTextAreaCheckerContainer = styled.span`
   position: absolute;
   top: 29vh;
   left: -0.97vw;
-  color: ${subColor};
-  @media only screen and (max-width: 800px) {
+  color: ${greenBlueColor};
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     left: -0.5vw;
   }
 `;
 const FormTextAreaCheckerIconStyles = css`
   width: 2vw;
   height: 2vh;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 3.5vw;
     height: 3.5vh;
   }
@@ -49,7 +50,7 @@ export const FormTextAreaCheckerIconFalse = styled(FaTimesCircle)`
 
 export const FormTextAreaElement = styled.textarea`
   background: none;
-  color: ${subColor};
+  color: ${greenBlueColor};
   font-size: 25px;
   letter-spacing: 0.1em;
   padding: 10px 10px 10px 5px;
@@ -57,15 +58,15 @@ export const FormTextAreaElement = styled.textarea`
   width: 90%;
   border: none;
   border-radius: 0;
-  border-top: 1px solid ${subColor};
-  border-bottom: 1px solid ${subColor};
+  border-top: 1px solid ${greenBlueColor};
+  border-bottom: 1px solid ${greenBlueColor};
   margin: 15px 0;
 
   &:-webkit-autofill,
   &:-webkit-autofill:hover,
   &:-webkit-autofill:focus,
   &:-webkit-autofill::first-line {
-    -webkit-text-fill-color: ${subColor};
+    -webkit-text-fill-color: ${greenBlueColor};
     transition: background-color 6000s ease-in-out;
     font-family: futura-medium;
     font-size: 25px;
@@ -77,21 +78,21 @@ export const FormTextAreaElement = styled.textarea`
   &:focus ~ label {
     ${shrinkLabel}
   }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     &:focus ~ label {
       ${shrinkLabelMobile}
     }
   }
 `;
 
-const getFormLabelElementShrink = (props) => {
-  if (props.$value.length) return shrinkLabel;
+const getFormLabelElementShrink = ({ $formvalue }) => {
+  if ($formvalue.length) return shrinkLabel;
 };
-const getFormLabelElementShrinkMobile = (props) => {
-  if (props.$value.length) return shrinkLabelMobile;
+const getFormLabelElementShrinkMobile = ({ $formvalue }) => {
+  if ($formvalue.length) return shrinkLabelMobile;
 };
 export const FormLabelElement = styled.label`
-  color: ${subColor};
+  color: ${greenBlueColor};
   font-size: 35px;
   font-weight: normal;
   position: absolute;
@@ -100,16 +101,16 @@ export const FormLabelElement = styled.label`
   top: 30px;
   transition: 300ms ease all;
   ${getFormLabelElementShrink}
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 9vw;
     top: 2vh;
     left: 5vw;
     ${getFormLabelElementShrinkMobile}
   }
 `;
-FormTextAreaGroup.displayName = "FormTextAreaGroup";
-FormTextAreaCheckerContainer.displayName = "FormTextAreaCheckerContainer";
-FormTextAreaCheckerIconTrue.displayName = "FormTextAreaCheckerIconTrue";
-FormTextAreaCheckerIconFalse.displayName = "FormTextAreaCheckerIconFalse";
-FormTextAreaElement.displayName = "FormTextAreaElement";
-FormLabelElement.displayName = "FormLabelElement";
+FormTextAreaGroup.displayName = 'FormTextAreaGroup';
+FormTextAreaCheckerContainer.displayName = 'FormTextAreaCheckerContainer';
+FormTextAreaCheckerIconTrue.displayName = 'FormTextAreaCheckerIconTrue';
+FormTextAreaCheckerIconFalse.displayName = 'FormTextAreaCheckerIconFalse';
+FormTextAreaElement.displayName = 'FormTextAreaElement';
+FormLabelElement.displayName = 'FormLabelElement';

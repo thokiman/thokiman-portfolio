@@ -1,5 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
+const whiteSmokeColor = '#e3e1e4';
+const maxWidthSmartphone = 800;
 export const VisualArtGridContainer = styled.div`
   position: relative;
   top: -35px;
@@ -19,8 +21,8 @@ export const VisualArtTitle = styled.div`
   font-size: 500%;
   font-kerning: auto;
   letter-spacing: 0.02em;
-  color: #e3e1e4;
-  @media only screen and (max-width: 800px) {
+  color: ${whiteSmokeColor};
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 400%;
   }
 `;
@@ -31,7 +33,7 @@ export const VisualArtGridContent = styled.div`
   grid-gap: 3px;
   grid-auto-columns: minmax(150px, auto);
   grid-auto-rows: minmax(150px, auto);
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     grid-auto-columns: minmax(115px, auto);
     grid-auto-rows: minmax(115px, auto);
   }
@@ -56,8 +58,8 @@ export const VisualArtImage = styled.img`
   object-fit: cover;
   object-position: center 30%;
 `;
-VisualArtGridContainer.displayName = "VisualArtGridContainer";
-VisualArtTitle.displayName = "VisualArtTitle";
-VisualArtGridContent.displayName = "VisualArtGridContent";
-VisualArtGridItem.displayName = "VisualArtGridItem";
-VisualArtImage.displayName = "VisualArtImage";
+VisualArtGridContainer.displayName = 'VisualArtGridContainer';
+VisualArtTitle.displayName = 'VisualArtTitle';
+VisualArtGridContent.displayName = 'VisualArtGridContent';
+VisualArtGridItem.displayName = 'VisualArtGridItem';
+VisualArtImage.displayName = 'VisualArtImage';

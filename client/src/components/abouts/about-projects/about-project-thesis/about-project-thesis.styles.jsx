@@ -1,4 +1,8 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
+
+const maxWidthSmartphone = 800;
+const whiteSmokeColor = '#e3e1e4';
+const lightBlueColor = '#74c6d4';
 
 export const AboutThesisProjectContainer = styled.div`
   display: flex;
@@ -11,12 +15,12 @@ export const AboutThesisProjectContainer = styled.div`
 export const AboutThesisProjectTitle = styled.div`
   font-size: 400%;
   padding: 10px;
-  color: #e3e1e4;
+  color: ${whiteSmokeColor};
   letter-spacing: 0.04em;
   text-align: left;
   display: flex;
   align-items: center;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 18vw;
   }
 `;
@@ -29,13 +33,13 @@ export const AboutThesisProjectAttributes = styled.div`
   grid-auto-rows: repeat(5, 1fr);
   gap: 2px 2px;
   grid-template-areas:
-    "name-thesis-project name-thesis-project name-thesis-project name-thesis-project name-thesis-project"
-    "type-thesis-project type-thesis-project start-end-date-thesis-project start-end-date-thesis-project start-end-date-thesis-project"
-    "type-thesis-project type-thesis-project length-thesis-project length-thesis-project length-thesis-project"
-    "location-thesis-project location-thesis-project description-thesis-project description-thesis-project description-thesis-project"
-    "location-thesis-project location-thesis-project description-thesis-project description-thesis-project description-thesis-project";
+    'name-thesis-project name-thesis-project name-thesis-project name-thesis-project name-thesis-project'
+    'type-thesis-project type-thesis-project start-end-date-thesis-project start-end-date-thesis-project start-end-date-thesis-project'
+    'type-thesis-project type-thesis-project length-thesis-project length-thesis-project length-thesis-project'
+    'location-thesis-project location-thesis-project description-thesis-project description-thesis-project description-thesis-project'
+    'location-thesis-project location-thesis-project description-thesis-project description-thesis-project description-thesis-project';
 
-  border-bottom: #74c6d4 solid 1px;
+  border-bottom: ${lightBlueColor} solid 1px;
   margin: 10px auto;
 `;
 
@@ -47,14 +51,14 @@ const AboutThesisProjectStyles = css`
   align-items: center;
   text-align: left;
   letter-spacing: 0.04em;
-  color: #e3e1e4;
+  color: ${whiteSmokeColor};
 `;
 export const AboutNameThesisProject = styled.div`
   ${AboutThesisProjectStyles}
   grid-area: name-thesis-project;
   font-size: 220%;
   padding: 10px;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 9vw;
   }
 `;
@@ -64,8 +68,8 @@ export const AboutTypeThesisProject = styled.div`
   grid-area: type-thesis-project;
   font-size: 140%;
   line-height: 1.1em;
-  border-bottom: #74c6d4 solid 1px;
-  @media only screen and (max-width: 800px) {
+  border-bottom: ${lightBlueColor} solid 1px;
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 6vw;
   }
 `;
@@ -75,7 +79,7 @@ export const AboutLocationThesisProject = styled.div`
   grid-area: location-thesis-project;
   font-size: 140%;
   line-height: 1.1em;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 6vw;
   }
 `;
@@ -83,11 +87,11 @@ export const AboutStartEndDateThesisProject = styled.div`
   ${AboutThesisProjectStyles}
   grid-area: start-end-date-thesis-project;
   font-size: 130%;
-  border-bottom: #74c6d4 solid 1px;
+  border-bottom: ${lightBlueColor} solid 1px;
   line-height: 1.1em;
   letter-spacing: 0.05em;
   padding: 10px 0;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 5.5vw;
   }
 `;
@@ -98,8 +102,8 @@ export const AboutLengthThesisProject = styled.div`
   line-height: 1.1em;
   letter-spacing: 0.05em;
   padding: 10px 0;
-  border-bottom: #74c6d4 solid 1px;
-  @media only screen and (max-width: 800px) {
+  border-bottom: ${lightBlueColor} solid 1px;
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 5.5vw;
   }
 `;
@@ -109,17 +113,17 @@ export const AboutDescriptionThesisProject = styled.div`
   font-size: 120%;
   line-height: 1.1em;
   letter-spacing: 0.05em;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 4.5vw;
   }
 `;
 
-AboutThesisProjectContainer.displayName = "AboutThesisProjectContainer";
-AboutThesisProjectTitle.displayName = "AboutThesisProjectTitle";
-AboutThesisProjectAttributes.displayName = "AboutThesisProjectAttributes";
-AboutNameThesisProject.displayName = "AboutNameThesisProject";
-AboutTypeThesisProject.displayName = "AboutTypeThesisProject";
-AboutLocationThesisProject.displayName = "AboutLocationThesisProject";
-AboutStartEndDateThesisProject.displayName = "AboutStartEndDateThesisProject";
-AboutLengthThesisProject.displayName = "AboutLengthThesisProject";
-AboutDescriptionThesisProject.displayName = "AboutDescriptionThesisProject";
+AboutThesisProjectContainer.displayName = 'AboutThesisProjectContainer';
+AboutThesisProjectTitle.displayName = 'AboutThesisProjectTitle';
+AboutThesisProjectAttributes.displayName = 'AboutThesisProjectAttributes';
+AboutNameThesisProject.displayName = 'AboutNameThesisProject';
+AboutTypeThesisProject.displayName = 'AboutTypeThesisProject';
+AboutLocationThesisProject.displayName = 'AboutLocationThesisProject';
+AboutStartEndDateThesisProject.displayName = 'AboutStartEndDateThesisProject';
+AboutLengthThesisProject.displayName = 'AboutLengthThesisProject';
+AboutDescriptionThesisProject.displayName = 'AboutDescriptionThesisProject';

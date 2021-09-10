@@ -1,5 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
+const heavyBlueLightColor = '#bccfd5';
+const backgroundColorFormButtonContainer = 'rgba(63, 66, 73, 0.7)';
+const greenBlueColor = '#128194';
 export const FormButtonContainer = styled.button`
   min-width: 165px;
   width: auto;
@@ -8,8 +11,8 @@ export const FormButtonContainer = styled.button`
   line-height: 50px;
   padding: 0 35px 0 35px;
   font-size: 35px;
-  background-color: rgba(63, 66, 73, 0.7);
-  color: #bccfd5;
+  background-color: ${backgroundColorFormButtonContainer};
+  color: ${heavyBlueLightColor};
   border: none;
   cursor: pointer;
   display: flex;
@@ -17,9 +20,9 @@ export const FormButtonContainer = styled.button`
   font-family: futura-medium;
   &:hover {
     transition: all ease-in-out 0.3s;
-    background-color: rgba(18, 129, 148, 1);
-    color: #bccfd5;
+    background-color: ${greenBlueColor};
+    color: ${heavyBlueLightColor};
   }
 `;
 
-FormButtonContainer.displayName = "FormButtonContainer";
+FormButtonContainer.displayName = 'FormButtonContainer';

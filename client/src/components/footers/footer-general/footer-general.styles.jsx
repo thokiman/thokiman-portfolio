@@ -1,10 +1,16 @@
-import { Link } from "react-router-dom";
-import styled, { css, keyframes } from "styled-components";
-import { ReactComponent as CreamPrickInklaim } from "../../../assets/collections-icon/prick-inklaim-icon/logo/prick_inklaim_logo_cream.svg";
-import { ReactComponent as WhiteOutlineThokiman } from "../../../assets/collections-icon/thokiman-icon/logo/outline/thokiman_head_logo_cream.svg";
+import { Link } from 'react-router-dom';
+import styled, { css, keyframes } from 'styled-components';
+import { ReactComponent as CreamPrickInklaim } from '../../../assets/collections-icon/prick-inklaim-icon/logo/prick_inklaim_logo_cream.svg';
+import { ReactComponent as WhiteOutlineThokiman } from '../../../assets/collections-icon/thokiman-icon/logo/outline/thokiman_head_logo_cream.svg';
 
-const FooterSideBarActive = css`
-  @media only screen and (max-width: 800px) {
+const maxWidthSmartphone = 800;
+const blackColor = '#000000';
+const heavyLightBlueColor = '#bccfd5';
+const whiteSmokeColor = '#e3e1e4';
+const greenBlueColor = '#128194';
+
+const FooterIsActivated = css`
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     position: relative;
     width: 100vw;
     left: 0px;
@@ -14,13 +20,14 @@ const FooterSideBarActive = css`
     height: 18vh;
   }
 `;
-const getFooterSideBarActive = (props) => {
-  if (props.$issidebarhidden) return null;
-  return FooterSideBarActive;
+
+const getFooterSideBarActive = ({ $issidebaractive }) => {
+  if ($issidebaractive) return null;
+  return FooterIsActivated;
 };
 export const FooterContainer = styled.div`
-  background-color: #000000;
-  
+  background-color: ${blackColor};
+
   height: 14vh;
   display: flex;
   align-items: center;
@@ -30,7 +37,7 @@ export const FooterContainer = styled.div`
   right: 3vw;
   bottom: 0;
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     position: relative;
     top: 0;
     left: 140px;
@@ -38,7 +45,7 @@ export const FooterContainer = styled.div`
     transition: left 0.5s ease;
     width: 64vw;
   }
-  ${ getFooterSideBarActive }
+  ${getFooterSideBarActive}
 `;
 
 export const ProfileFooterContainer = styled.div`
@@ -55,12 +62,12 @@ export const ProfileFooterContainer = styled.div`
 
 const piCreamAnimate = keyframes`
                 from {
-                    stroke: #bccfd5;
+                    stroke: ${heavyLightBlueColor};
                     opacity: 0.6;
                 }
 
                 to {
-                    stroke: #e3e1e4;
+                    stroke: ${whiteSmokeColor};
                     opacity: 1;
                 }    
 
@@ -71,20 +78,20 @@ export const ProfileFooterIcon = styled.div`
   height: 8vh;
   display: flex;
   justify-content: center;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 35vw;
   }
 
   .thoki-out-cream {
-    animation: ${ piCreamAnimate } 1s ease-in-out infinite;
+    animation: ${piCreamAnimate} 1s ease-in-out infinite;
   }
 
   .pi-cream {
-    animation: ${ piCreamAnimate } 1s ease-in-out infinite;
+    animation: ${piCreamAnimate} 1s ease-in-out infinite;
   }
 
   .pi-cream-one {
-    animation: ${ piCreamAnimate } 1s ease-in-out infinite;
+    animation: ${piCreamAnimate} 1s ease-in-out infinite;
   }
 `;
 
@@ -95,17 +102,17 @@ const FooterIcon = css`
 `;
 
 export const FooterCreamPrickInklaim = styled(CreamPrickInklaim)`
-  ${ FooterIcon }
+  ${FooterIcon}
 `;
 export const FooterWhiteOutlineThokiman = styled(WhiteOutlineThokiman)`
-  ${ FooterIcon }
+  ${FooterIcon}
 `;
 
 const ProfileFooterTextSideBarActive = css`
   display: none;
 `;
-const getProfileFooterTextSideBarActive = (props) => {
-  if (props.$issidebarhidden) return ProfileFooterTextSideBarActive;
+const getProfileFooterTextSideBarActive = ({ $issidebaractive }) => {
+  if ($issidebaractive) return ProfileFooterTextSideBarActive;
   return null;
 };
 export const ProfileFooterText = styled.div`
@@ -114,11 +121,11 @@ export const ProfileFooterText = styled.div`
   font-kerning: auto;
   letter-spacing: 0.03em;
   text-align: end;
-  color: #e3e1e4;
+  color: ${whiteSmokeColor};
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 3vw;
-    ${ getProfileFooterTextSideBarActive }
+    ${getProfileFooterTextSideBarActive}
   }
 `;
 export const SocialFooterContainer = styled.div`
@@ -131,9 +138,10 @@ export const SocialFooterContainer = styled.div`
   gap: 15px 15px;
   align-items: center;
   justify-items: center;
-  border-left: #e3e1e4 solid 1px;
+  border-left: ${whiteSmokeColor} solid 1px;
   @media only screen and (max-width: 340px) {
     width: 100%;
+    margin-bottom: 50px;
   }
 `;
 
@@ -142,7 +150,7 @@ const socialItem = keyframes`
                     100% {
                         transform: rotate(0deg);
                         transform-origin: 50% 0;
-                        background-color: #128194;
+                        background-color: ${greenBlueColor};
                         border-radius: 5px 5px 5px;
                         opacity: 1;
                     }
@@ -157,7 +165,7 @@ const socialItem = keyframes`
                     40%,
                     60% {
                         transform: rotate(-4deg);
-                        background-color: #128194;
+                        background-color: ${greenBlueColor};
                         border-radius: 5px 5px 5px;
                         opacity: 1;
                     }
@@ -172,7 +180,7 @@ const socialItem = keyframes`
 
                     80% {
                         transform: rotate(-2deg);
-                        background-color: #128194;
+                        background-color: ${greenBlueColor};
                         border-radius: 5px 5px 5px;
                         opacity: 1;
                     }
@@ -189,22 +197,22 @@ export const SocialItem = styled(Link)`
   height: 35px;
   width: 35px;
   object-fit: cover;
-  background-image: url(${ ({ backgroundimage }) => backgroundimage.iconPath });
-  @media only screen and (max-width: 800px) {
+  background-image: url(${({ backgroundimage }) => backgroundimage.iconPath});
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 35px;
     height: 35px;
   }
 
   &:hover {
-    animation: ${ socialItem } 2s ease-in-out infinite;
+    animation: ${socialItem} 2s ease-in-out infinite;
   }
 `;
 
-FooterContainer.displayName = "FooterContainer";
-ProfileFooterContainer.displayName = "ProfileFooterContainer";
-ProfileFooterIcon.displayName = "ProfileFooterIcon";
-FooterCreamPrickInklaim.displayName = "FooterCreamPrickInklaim";
-FooterWhiteOutlineThokiman.displayName = "FooterWhiteOutlineThokiman";
-ProfileFooterText.displayName = "ProfileFooterText";
-SocialFooterContainer.displayName = "SocialFooterContainer";
-SocialItem.displayName = "SocialItem";
+FooterContainer.displayName = 'FooterContainer';
+ProfileFooterContainer.displayName = 'ProfileFooterContainer';
+ProfileFooterIcon.displayName = 'ProfileFooterIcon';
+FooterCreamPrickInklaim.displayName = 'FooterCreamPrickInklaim';
+FooterWhiteOutlineThokiman.displayName = 'FooterWhiteOutlineThokiman';
+ProfileFooterText.displayName = 'ProfileFooterText';
+SocialFooterContainer.displayName = 'SocialFooterContainer';
+SocialItem.displayName = 'SocialItem';

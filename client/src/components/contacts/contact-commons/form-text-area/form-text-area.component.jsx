@@ -1,5 +1,4 @@
-import React from "react";
-
+import React from 'react';
 import {
   FormLabelElement,
   FormTextAreaCheckerContainer,
@@ -7,7 +6,7 @@ import {
   FormTextAreaCheckerIconTrue,
   FormTextAreaElement,
   FormTextAreaGroup,
-} from "./form-text-area.styles";
+} from './form-text-area.styles';
 
 export const FormTextArea = ({ handleChange, label, ...props }) => {
   return (
@@ -23,7 +22,7 @@ export const FormTextArea = ({ handleChange, label, ...props }) => {
       }
       <FormTextAreaElement onChange={handleChange} {...props} />
       {label ? (
-        <FormLabelElement $value={props.value}>{label}</FormLabelElement>
+        <FormLabelElement $formvalue={props.value}>{label}</FormLabelElement>
       ) : null}
     </FormTextAreaGroup>
   );

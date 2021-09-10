@@ -1,33 +1,36 @@
-import React from "react";
-import { connect } from "react-redux";
-import { createStructuredSelector } from "reselect";
-import { toggleSideBarHidden } from "../../../redux/header/header.actions.js";
-import { selectIsSideBarHidden } from "../../../redux/header/header.selectors";
+import React from 'react';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { toggleSideBarActive } from '../../../redux/header/header.actions.js';
+import { selectIsSideBarActive } from '../../../redux/header/header.selectors';
 import {
-  SideBarHeaderIcon, SideBarOne,
+  SideBarHeaderIcon,
+  SideBarOne,
   SideBarThree,
-  SideBarTwo
-} from "./sidebar-icon.styles";
+  SideBarTwo,
+} from './sidebar-icon.styles';
 
-
-export const SideBarIcon = ({ toggleSideBarHidden, isSideBarHidden }) => {
+export const SideBarIcon = ({
+  toggleSideBarActive,
+  isSideBarHidden: isSideBarActive,
+}) => {
   return (
     <SideBarHeaderIcon
-      $issidebarhidden={isSideBarHidden}
-      onClick={() => toggleSideBarHidden()}
+      $issidebaractive={isSideBarActive}
+      onClick={() => toggleSideBarActive()}
     >
-      <SideBarOne $issidebarhidden={isSideBarHidden} />
-      <SideBarTwo $issidebarhidden={isSideBarHidden} />
-      <SideBarThree $issidebarhidden={isSideBarHidden} />
+      <SideBarOne $issidebaractive={isSideBarActive} />
+      <SideBarTwo $issidebaractive={isSideBarActive} />
+      <SideBarThree $issidebaractive={isSideBarActive} />
     </SideBarHeaderIcon>
   );
 };
 
 const mapStateToProps = createStructuredSelector({
-  isSideBarHidden: selectIsSideBarHidden,
+  isSideBarHidden: selectIsSideBarActive,
 });
 const mapDispatchToProps = (dispatch) => ({
-  toggleSideBarHidden: () => dispatch(toggleSideBarHidden()),
+  toggleSideBarActive: () => dispatch(toggleSideBarActive()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SideBarIcon);

@@ -1,6 +1,10 @@
-import styled, { css } from "styled-components";
-import { Element } from "react-scroll";
+import { Element } from 'react-scroll';
+import styled, { css } from 'styled-components';
 
+const backgroundColorTimelineCareerYearElement = 'rgba(116, 198, 212, 0.5)';
+const lightBlueColor = '#74c6d4';
+const heavyLightBlueColor = '#bccfd5';
+const maxWidthSmartphone = 800;
 export const TimelineTextContainer = styled.div`
   font-family: futura-book;
 `;
@@ -11,16 +15,16 @@ export const TimelineCareerYearElement = styled(Element)`
   grid-auto-rows: repeat(5, 1fr);
   gap: 10px 10px;
   grid-template-areas:
-    "timeline-career-year timeline-career-year timeline-career-company timeline-career-company"
-    "timeline-career-title-type timeline-career-title-type timeline-career-company timeline-career-company"
-    "timeline-career-title-type timeline-career-title-type timeline-career-description timeline-career-description"
-    "timeline-career-date-length timeline-career-date-length timeline-career-description timeline-career-description"
-    "timeline-career-location timeline-career-location timeline-career-description timeline-career-description";
-  background-color: rgba(116, 198, 212, 0.5);
+    'timeline-career-year timeline-career-year timeline-career-company timeline-career-company'
+    'timeline-career-title-type timeline-career-title-type timeline-career-company timeline-career-company'
+    'timeline-career-title-type timeline-career-title-type timeline-career-description timeline-career-description'
+    'timeline-career-date-length timeline-career-date-length timeline-career-description timeline-career-description'
+    'timeline-career-location timeline-career-location timeline-career-description timeline-career-description';
+  background-color: ${backgroundColorTimelineCareerYearElement};
 `;
 
 const TimelineCareerTextStyles = css`
-  color: #bccfd5;
+  color: ${heavyLightBlueColor};
   font-kerning: auto;
   margin-bottom: 10px;
   text-align: left;
@@ -33,8 +37,8 @@ export const TimelineCareerYear = styled.div`
   font-size: 350%;
   letter-spacing: 0.5em;
   padding-left: 30px;
-  text-shadow: #74c6d4 10px 23px;
-  @media only screen and (max-width: 800px) {
+  text-shadow: ${lightBlueColor} 10px 23px;
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 250%;
   }
 `;
@@ -48,7 +52,7 @@ export const TimelineCareerCompany = styled.div`
   padding: 10px 20px;
   position: relative;
   top: 91px;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 150%;
     position: relative;
     right: 20px;
@@ -81,7 +85,7 @@ export const TimelineCareerTitleType = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 140%;
     font-weight: bold;
     padding: 4px;
@@ -111,7 +115,7 @@ export const TimelineCareerDateLength = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 100%;
     font-weight: bold;
     padding: 4px;
@@ -129,7 +133,7 @@ export const TimelineCareerLocation = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 100%;
     font-weight: bold;
 
@@ -148,7 +152,7 @@ export const TimelineCareerDescription = styled.div`
   line-height: 1.3em;
   margin-top: 60px;
   padding: 10px 20px;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 100%;
     letter-spacing: 0.08em;
     font-weight: bold;
@@ -156,11 +160,11 @@ export const TimelineCareerDescription = styled.div`
     padding: 4px;
   }
 `;
-TimelineTextContainer.displayName = "TimelineTextContainer";
-TimelineCareerYearElement.displayName = "TimelineCareerYearElement";
-TimelineCareerYear.displayName = "TimelineCareerYear";
-TimelineCareerCompany.displayName = "TimelineCareerCompany";
-TimelineCareerTitleType.displayName = "TimelineCareerTitleType";
-TimelineCareerDateLength.displayName = "TimelineCareerDateLength";
-TimelineCareerLocation.displayName = "TimelineCareerLocation";
-TimelineCareerDescription.displayName = "TimelineCareerDescription";
+TimelineTextContainer.displayName = 'TimelineTextContainer';
+TimelineCareerYearElement.displayName = 'TimelineCareerYearElement';
+TimelineCareerYear.displayName = 'TimelineCareerYear';
+TimelineCareerCompany.displayName = 'TimelineCareerCompany';
+TimelineCareerTitleType.displayName = 'TimelineCareerTitleType';
+TimelineCareerDateLength.displayName = 'TimelineCareerDateLength';
+TimelineCareerLocation.displayName = 'TimelineCareerLocation';
+TimelineCareerDescription.displayName = 'TimelineCareerDescription';

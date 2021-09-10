@@ -6,9 +6,9 @@ import {
   selectProjectAccomplishmentCourses,
   selectProjectAccomplishmentExperiences,
   selectProjectAccomplishmentThesis,
-  selectProjectAchievementExperiences
+  selectProjectAchievementExperiences,
 } from '../../../../redux/about/about.selectors';
-import { selectIsSideBarHidden } from '../../../../redux/header/header.selectors';
+import { selectIsSideBarActive } from '../../../../redux/header/header.selectors';
 import AboutAchievementProject from '../../about-projects/about-project-achievement/about-project-achievement.component';
 import AboutCourseProject from '../../about-projects/about-project-course/about-project-course.component';
 import AboutExperienceProject from '../../about-projects/about-project-experience/about-project-experience.component';
@@ -20,10 +20,10 @@ export const AboutProject = ({
   courses,
   experiences,
   lastExperiences,
-  isSideBarHidden,
+  isSideBarActive,
 }) => {
   return (
-    <ProjectContainer $issidebarhidden={isSideBarHidden}>
+    <ProjectContainer $issidebaractive={isSideBarActive}>
       <CSSTransitionGroup
         transitionAppear={true}
         transitionAppearTimeout={800}
@@ -45,7 +45,7 @@ const mapStateToProps = createStructuredSelector({
   courses: selectProjectAccomplishmentCourses,
   experiences: selectProjectAccomplishmentExperiences,
   lastExperiences: selectProjectAchievementExperiences,
-  isSideBarHidden: selectIsSideBarHidden,
+  isSideBarActive: selectIsSideBarActive,
 });
 
 export default connect(mapStateToProps)(AboutProject);

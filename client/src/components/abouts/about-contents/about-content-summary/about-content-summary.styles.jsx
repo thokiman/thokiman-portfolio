@@ -1,17 +1,25 @@
-import { Link } from "react-router-dom";
-import styled, { css, keyframes } from "styled-components";
-import { ReactComponent as ThokimanExcitedFace } from "../../../../assets/collections-icon/thokiman-icon/collections/excited_face.svg";
-import { ReactComponent as ThokimanNormalFace } from "../../../../assets/collections-icon/thokiman-icon/collections/normal_face.svg";
-const SideBarActive = css`
+import { Link } from 'react-router-dom';
+import styled, { css, keyframes } from 'styled-components';
+import { ReactComponent as ThokimanExcitedFace } from '../../../../assets/collections-icon/thokiman-icon/collections/excited_face.svg';
+import { ReactComponent as ThokimanNormalFace } from '../../../../assets/collections-icon/thokiman-icon/collections/normal_face.svg';
+
+const backgroundSummaryContainerColor = 'rgba(18, 129, 148, 0.8)';
+const maxWidthSmartphone = 800;
+const grayColor = '#3f4249';
+const greenBlueColor = '#128194';
+const lightBlueColor = '#74c6d4';
+const whiteSmokeColor = '#e3e1e4';
+
+const AboutContentSummaryIsNotActivated = css`
   display: none;
 `;
-const getSideBarActive = (props) => {
-  if (props.$issidebarhidden) return SideBarActive;
+const getSideBarActive = ({ $issidebaractive }) => {
+  if ($issidebaractive) return AboutContentSummaryIsNotActivated;
   return null;
 };
 
 export const SummaryContainer = styled.div`
-  background-color: rgba(18, 129, 148, 0.8);
+  background-color: ${backgroundSummaryContainerColor};
   width: 64.5vw;
   height: 96%;
   margin-right: 2vw;
@@ -19,14 +27,14 @@ export const SummaryContainer = styled.div`
   overflow-x: hidden;
   font-family: baskerville-old-face;
   padding: 40px 0;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 100%;
     margin: 0;
-    ${ getSideBarActive }
+    ${getSideBarActive}
   }
 `;
 
-SummaryContainer.displayName = "SummaryContainer";
+SummaryContainer.displayName = 'SummaryContainer';
 
 export const AboutSummaryContainer = styled.div`
   display: grid;
@@ -34,33 +42,33 @@ export const AboutSummaryContainer = styled.div`
   grid-auto-rows: repeat(9, 1fr);
   gap: 6px 2px;
   grid-template-areas:
-    "thokiman-normal-face thokiman-normal-face about-summary-title about-summary-title"
-    "thokiman-normal-face thokiman-normal-face about-summary-title about-summary-title"
-    "thokiman-normal-face thokiman-normal-face about-summary-title about-summary-title"
-    "about-summary-text-1 about-summary-text-1 about-summary-text-1 about-summary-text-1"
-    "about-summary-text-2 about-summary-text-2 about-summary-text-2 about-summary-text-2"
-    "about-summary-text-3 about-summary-text-3 about-summary-text-3 about-summary-text-3"
-    "about-summary-text-4 about-summary-text-4 about-summary-text-4 about-summary-text-4"
-    "download-link download-link download-link download-link"
-    "download-link download-link download-link download-link";
+    'thokiman-normal-face thokiman-normal-face about-summary-title about-summary-title'
+    'thokiman-normal-face thokiman-normal-face about-summary-title about-summary-title'
+    'thokiman-normal-face thokiman-normal-face about-summary-title about-summary-title'
+    'about-summary-text-1 about-summary-text-1 about-summary-text-1 about-summary-text-1'
+    'about-summary-text-2 about-summary-text-2 about-summary-text-2 about-summary-text-2'
+    'about-summary-text-3 about-summary-text-3 about-summary-text-3 about-summary-text-3'
+    'about-summary-text-4 about-summary-text-4 about-summary-text-4 about-summary-text-4'
+    'download-link download-link download-link download-link'
+    'download-link download-link download-link download-link';
   margin: 0 auto;
   width: 94.5%;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     display: flex;
     flex-direction: column;
   }
 `;
 
-AboutSummaryContainer.displayName = "AboutSummaryContainer";
+AboutSummaryContainer.displayName = 'AboutSummaryContainer';
 
 const normalFace = keyframes`
     0% {
-      stroke: #3f4249;
+      stroke: ${grayColor};
       opacity: 0.7;
     }
 
     100% {
-      stroke: #128194;
+      stroke: ${greenBlueColor};
       opacity: 0.9;
     }
 `;
@@ -92,14 +100,14 @@ const excitedFace = keyframes`
 const downloadText = keyframes`
 
       from {
-        color: #74c6d4;
+        color: ${lightBlueColor};
         opacity: 0.5;
       }
 
       to {
-        color: #e3e1e4;
+        color: ${whiteSmokeColor};
         opacity: 0.9;
-        border-bottom: #3f4249 solid 1px;
+        border-bottom: ${grayColor} solid 1px;
       }
     
 
@@ -151,21 +159,21 @@ export const ThokimanNormalFaceIcon = styled(ThokimanNormalFace)`
   .normal-face25,
   .normal-face26,
   .normal-face27 {
-    animation: ${ normalFace } 2s ease-in-out infinite;
+    animation: ${normalFace} 2s ease-in-out infinite;
   }
 `;
 
-ThokimanNormalFaceIcon.displayName = "ThokimanNormalFaceIcon";
+ThokimanNormalFaceIcon.displayName = 'ThokimanNormalFaceIcon';
 
 const AboutSummaryTextStyles = css`
-  color: #e3e1e4;
+  color: ${whiteSmokeColor};
   display: flex;
   align-items: center;
   font-kerning: auto;
 `;
 
 export const AboutSummaryTitle = styled.div`
-  ${ AboutSummaryTextStyles }
+  ${AboutSummaryTextStyles}
   grid-area: about-summary-title;
   width: 100%;
   font-size: 300%;
@@ -173,13 +181,13 @@ export const AboutSummaryTitle = styled.div`
   text-align: left;
   margin: 0 auto;
   padding-left: 15px;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 180%;
     line-height: 1.2em;
   }
 `;
 
-AboutSummaryTitle.displayName = "AboutSummaryTitle";
+AboutSummaryTitle.displayName = 'AboutSummaryTitle';
 
 const AboutSummaryParagraphStyles = css`
   margin: 0 auto;
@@ -190,43 +198,43 @@ const AboutSummaryParagraphStyles = css`
   padding-left: 15px;
   line-height: 1.3em;
   text-indent: 1em;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 89%;
     letter-spacing: 0.06em;
     text-align: left;
   }
 `;
 export const AboutSummaryTextOne = styled.p`
-  ${ AboutSummaryTextStyles }
-  ${ AboutSummaryParagraphStyles }
+  ${AboutSummaryTextStyles}
+  ${AboutSummaryParagraphStyles}
   grid-area: about-summary-text-1;
 `;
 
-AboutSummaryTextOne.displayName = "AboutSummaryTextOne";
+AboutSummaryTextOne.displayName = 'AboutSummaryTextOne';
 
 export const AboutSummaryTextTwo = styled.p`
-  ${ AboutSummaryTextStyles }
-  ${ AboutSummaryParagraphStyles }
+  ${AboutSummaryTextStyles}
+  ${AboutSummaryParagraphStyles}
 grid-area: about-summary-text-2;
 `;
 
-AboutSummaryTextTwo.displayName = "AboutSummaryTextTwo";
+AboutSummaryTextTwo.displayName = 'AboutSummaryTextTwo';
 
 export const AboutSummaryTextThree = styled.p`
-  ${ AboutSummaryTextStyles }
-  ${ AboutSummaryParagraphStyles }
+  ${AboutSummaryTextStyles}
+  ${AboutSummaryParagraphStyles}
 grid-area: about-summary-text-3;
 `;
 
-AboutSummaryTextThree.displayName = "AboutSummaryTextThree";
+AboutSummaryTextThree.displayName = 'AboutSummaryTextThree';
 
 export const AboutSummaryTextFour = styled.p`
-  ${ AboutSummaryTextStyles }
-  ${ AboutSummaryParagraphStyles }
+  ${AboutSummaryTextStyles}
+  ${AboutSummaryParagraphStyles}
 grid-area: about-summary-text-4;
 `;
 
-AboutSummaryTextFour.displayName = "AboutSummaryTextFour";
+AboutSummaryTextFour.displayName = 'AboutSummaryTextFour';
 
 export const AboutDownloadLink = styled(Link)`
   grid-area: download-link;
@@ -239,39 +247,39 @@ export const AboutDownloadLink = styled(Link)`
   font-family: futura-book;
 `;
 
-AboutDownloadLink.displayName = "AboutDownloadLink";
+AboutDownloadLink.displayName = 'AboutDownloadLink';
 
 export const AboutDownloadText = styled.div`
-  color: #e3e1e4;
+  color: ${whiteSmokeColor};
   text-decoration: none;
   text-align: center;
   font-size: 180%;
-  border-bottom: #3f4249 solid 1px;
+  border-bottom: ${grayColor} solid 1px;
   padding-bottom: 3px;
   letter-spacing: 0.125em;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 150%;
   }
   &:hover {
-    animation: ${ downloadText } 1.5s linear infinite;
+    animation: ${downloadText} 1.5s linear infinite;
   }
 `;
-AboutDownloadText.displayName = "AboutDownloadText";
+AboutDownloadText.displayName = 'AboutDownloadText';
 
 export const AboutThankYouText = styled.div`
-  color: #74c6d4;
+  color: ${lightBlueColor};
   margin: 15px;
   text-decoration: none;
   text-align: center;
   font-size: 180%;
-  animation: ${ thankYouText } 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  animation: ${thankYouText} 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
   padding-bottom: 3px;
   letter-spacing: 0.125em;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 150%;
   }
 `;
-AboutThankYouText.displayName = "AboutThankYouText";
+AboutThankYouText.displayName = 'AboutThankYouText';
 
 const ThokimanExcitedFaceNoVibration = css`
   opacity: 0.8;
@@ -279,7 +287,7 @@ const ThokimanExcitedFaceNoVibration = css`
 const ThokimanExcitedFaceVibration = css`
   opacity: 0.9;
   transition: opacity ease-in-out 0.5s;
-  animation: ${ excitedFace } 1.2s ease-in-out both infinite;
+  animation: ${excitedFace} 1.2s ease-in-out both infinite;
   svg:hover .excited-face0,
   svg:hover .excited-face1,
   svg:hover .excited-face2,
@@ -385,11 +393,11 @@ export const ThokimanExcitedFaceIcon = styled(ThokimanExcitedFace)`
   width: 75%;
   height: 75%;
   opacity: 0.8;
-  ${ getThokimanFaceIcon }
-  @media only screen and (max-width: 800px) {
+  ${getThokimanFaceIcon}
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 100%;
     height: 100%;
   }
 `;
 
-ThokimanExcitedFaceIcon.displayName = "ThokimanExcitedFaceIcon";
+ThokimanExcitedFaceIcon.displayName = 'ThokimanExcitedFaceIcon';

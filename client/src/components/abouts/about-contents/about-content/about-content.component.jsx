@@ -1,28 +1,38 @@
-import React from "react";
-import { connect } from "react-redux";
-import { CSSTransitionGroup } from "react-transition-group";
-import { createStructuredSelector } from "reselect";
-import { selectIsDropdownHidden } from "../../../../redux/about/about.selectors";
-import { selectIsSideBarHidden } from "../../../../redux/header/header.selectors";
+import React from 'react';
+import { connect } from 'react-redux';
+import { CSSTransitionGroup } from 'react-transition-group';
+import { createStructuredSelector } from 'reselect';
+import { selectIsDropdownHidden } from '../../../../redux/about/about.selectors';
+import { selectIsSideBarActive } from '../../../../redux/header/header.selectors';
 import {
   RightPageContainer,
-  RightPageContent, ThokimanBodyContainer,
+  RightPageContent,
+  ThokimanBodyContainer,
   ThokimanBodyGrayContent,
-  ThokimanHandGrayLeftContent, ThokimanHandGrayRightContent, ThokimanHandLeftContainer, ThokimanHandRightContainer,
-  ThokimanLegGrayLeftContent, ThokimanLegGrayRightContent, ThokimanLegLeftContainer, ThokimanLegRightContainer, ThokimanSkeletonGrayLeft, ThokimanSkeletonGrayMiddle, ThokimanSkeletonGrayRight,
-  ThokimanSkeletonLeftRightContent, ThokimanSkeletonMiddleContent
-} from "./about-content.styles";
+  ThokimanHandGrayLeftContent,
+  ThokimanHandGrayRightContent,
+  ThokimanHandLeftContainer,
+  ThokimanHandRightContainer,
+  ThokimanLegGrayLeftContent,
+  ThokimanLegGrayRightContent,
+  ThokimanLegLeftContainer,
+  ThokimanLegRightContainer,
+  ThokimanSkeletonGrayLeft,
+  ThokimanSkeletonGrayMiddle,
+  ThokimanSkeletonGrayRight,
+  ThokimanSkeletonLeftRightContent,
+  ThokimanSkeletonMiddleContent,
+} from './about-content.styles';
 
-
-export const AboutHomeContent = ({ isDropdownHidden, isSideBarHidden }) => {
+export const AboutHomeContent = ({ isDropdownHidden, isSideBarActive }) => {
   return (
-    <RightPageContainer $issidebarhidden={isSideBarHidden}>
+    <RightPageContainer $issidebaractive={isSideBarActive}>
       <CSSTransitionGroup
         transitionAppear={true}
         transitionAppearTimeout={800}
         transitionEnterTimeout={600}
         transitionLeaveTimeout={200}
-        transitionName={"slide-out"}
+        transitionName={'slide-out'}
       >
         <RightPageContent>
           <ThokimanSkeletonGrayLeft $isdropdownhidden={isDropdownHidden}>
@@ -63,7 +73,7 @@ export const AboutHomeContent = ({ isDropdownHidden, isSideBarHidden }) => {
 
 const mapStateToProps = createStructuredSelector({
   isDropdownHidden: selectIsDropdownHidden,
-  isSideBarHidden: selectIsSideBarHidden,
+  isSideBarActive: selectIsSideBarActive,
 });
 
 export default connect(mapStateToProps)(AboutHomeContent);

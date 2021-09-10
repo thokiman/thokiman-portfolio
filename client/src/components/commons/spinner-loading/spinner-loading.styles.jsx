@@ -1,4 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+
+const maxWidthSmartphone = 800;
 
 export const SpinnerContainer = styled.div`
   height: 72vh;
@@ -7,11 +9,11 @@ export const SpinnerContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     position: absolute;
     top: 25vh;
     padding: 0;
   }
 `;
 
-SpinnerContainer.displayName = "SpinnerContainer";
+SpinnerContainer.displayName = 'SpinnerContainer';

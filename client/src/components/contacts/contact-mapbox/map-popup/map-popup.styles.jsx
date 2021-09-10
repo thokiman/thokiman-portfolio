@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-const greenColor = "#128194";
+const greenBlueColor = '#128194';
 
 export const MapPopupTitle = styled.div`
   font-family: futura-medium;
   font-size: 25px;
-  color: ${greenColor};
+  color: ${greenBlueColor};
 `;
 
-MapPopupTitle.displayName = "MapPopupTitle";
+MapPopupTitle.displayName = 'MapPopupTitle';

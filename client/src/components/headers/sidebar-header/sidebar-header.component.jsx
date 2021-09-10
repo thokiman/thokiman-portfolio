@@ -1,58 +1,59 @@
-import React from "react";
-import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
-import { createStructuredSelector } from "reselect";
-import { selectAboutRoute } from "../../../redux/about/about.selectors";
-import { selectPortfolioRoute } from "../../../redux/collection/collection.selectors";
-import { selectContactRoute } from "../../../redux/contact/contact.selectors";
-import { selectIsSideBarHidden } from "../../../redux/header/header.selectors";
-import { selectServiceRoute } from "../../../redux/service/service.selectors";
+import React from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import { createStructuredSelector } from 'reselect';
+import { selectAboutRoute } from '../../../redux/about/about.selectors';
+import { selectPortfolioRoute } from '../../../redux/collection/collection.selectors';
+import { selectContactRoute } from '../../../redux/contact/contact.selectors';
+import { selectIsSideBarActive } from '../../../redux/header/header.selectors';
+import { selectServiceRoute } from '../../../redux/service/service.selectors';
 import {
-  SideBarHeaderContainer, SideBarHeaderLink, SideBarHeaderTextContainer
-} from "./sidebar-header.styles";
-
+  SideBarHeaderContainer,
+  SideBarHeaderLink,
+  SideBarHeaderTextContainer,
+} from './sidebar-header.styles';
 
 export const SideBarHeader = ({
-  isSideBarHidden,
+  isSideBarActive,
   location: { pathname },
   aboutRoute,
   portfolioRoute,
   serviceRoute,
   contactRoute,
 }) => {
-  const homeText = "Home";
-  const AboutText = "About";
-  const portfolioText = "Portfolio";
-  const serviceText = "Service";
-  const contactText = "Contact";
+  const homeText = 'Home';
+  const AboutText = 'About';
+  const portfolioText = 'Portfolio';
+  const serviceText = 'Service';
+  const contactText = 'Contact';
   return (
-    <SideBarHeaderContainer $issidebarhidden={isSideBarHidden}>
+    <SideBarHeaderContainer $issidebaractive={isSideBarActive}>
       <SideBarHeaderTextContainer>
-        <SideBarHeaderLink $matchpath={!!pathname.match(RegExp(/^\/$/))} to="/">
+        <SideBarHeaderLink $matchpath={!!pathname.match(RegExp(/^\/$/))} to='/'>
           {homeText}
         </SideBarHeaderLink>
         <SideBarHeaderLink
           to={aboutRoute}
-          $matchpath={!!pathname.match(RegExp(`${ aboutRoute }+`))}
+          $matchpath={!!pathname.match(RegExp(`${aboutRoute}+`))}
         >
           {AboutText}
         </SideBarHeaderLink>
 
         <SideBarHeaderLink
           to={portfolioRoute}
-          $matchpath={!!pathname.match(RegExp(`${ portfolioRoute }+`))}
+          $matchpath={!!pathname.match(RegExp(`${portfolioRoute}+`))}
         >
           {portfolioText}
         </SideBarHeaderLink>
         <SideBarHeaderLink
           to={serviceRoute}
-          $matchpath={!!pathname.match(RegExp(`${ serviceRoute }+`))}
+          $matchpath={!!pathname.match(RegExp(`${serviceRoute}+`))}
         >
           {serviceText}
         </SideBarHeaderLink>
         <SideBarHeaderLink
           to={contactRoute}
-          $matchpath={pathname.match(RegExp(`${ contactRoute }+`))}
+          $matchpath={pathname.match(RegExp(`${contactRoute}+`))}
         >
           {contactText}
         </SideBarHeaderLink>
@@ -62,7 +63,7 @@ export const SideBarHeader = ({
 };
 
 const mapStateToProps = createStructuredSelector({
-  isSideBarHidden: selectIsSideBarHidden,
+  isSideBarActive: selectIsSideBarActive,
   aboutRoute: selectAboutRoute,
   portfolioRoute: selectPortfolioRoute,
   serviceRoute: selectServiceRoute,

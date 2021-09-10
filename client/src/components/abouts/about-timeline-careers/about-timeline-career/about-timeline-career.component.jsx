@@ -4,15 +4,15 @@ import { animateScroll as scroll } from 'react-scroll';
 import { createStructuredSelector } from 'reselect';
 import {
   selectCareerPath,
-  selectLowWaveImage
+  selectLowWaveImage,
 } from '../../../../redux/about/about.selectors';
-import { selectIsSideBarHidden } from '../../../../redux/header/header.selectors';
+import { selectIsSideBarActive } from '../../../../redux/header/header.selectors';
 import TimelineCareerHeader from '../timeline-career-header/timeline-career-header.component';
 import TimelineCareerItem from '../timeline-career-item/timeline-career-item.component';
 import {
   AboutScrollToTheTop,
   AboutTimelineCareerTitle,
-  AboutTimelineContainer
+  AboutTimelineContainer,
 } from './about-timeline-career.styles';
 
 export const AboutTimelineCareer = ({
@@ -20,7 +20,7 @@ export const AboutTimelineCareer = ({
     title,
     items: { beforeWorking },
   },
-  isSideBarHidden,
+  isSideBarActive,
   lowWaveImage,
 }) => {
   const scrollToTop = () => {
@@ -29,7 +29,7 @@ export const AboutTimelineCareer = ({
 
   return (
     <AboutTimelineContainer
-      $issidebarhidden={isSideBarHidden}
+      $issidebaractive={isSideBarActive}
       $lowWaveImage={lowWaveImage}
     >
       <TimelineCareerHeader />
@@ -42,7 +42,7 @@ export const AboutTimelineCareer = ({
 
 const mapStateToProps = createStructuredSelector({
   careerPath: selectCareerPath,
-  isSideBarHidden: selectIsSideBarHidden,
+  isSideBarActive: selectIsSideBarActive,
   lowWaveImage: selectLowWaveImage,
 });
 

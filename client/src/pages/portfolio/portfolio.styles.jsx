@@ -1,4 +1,7 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { css, keyframes } from 'styled-components';
+const blackColor = '#000000';
+const whiteSmokeColor = '#e3e1e4';
+const maxWidthSmartphone = 800;
 const portfolioSideBarHide = keyframes`
   0% {
     transform: rotateX(100deg);
@@ -13,21 +16,21 @@ const portfolioSideBarHide = keyframes`
 
 `;
 
-export const PortfolioSideBarHide = styled.div`
+export const PortfolioIsNotActivated = styled.div`
   font-family: futura-demi;
-  color: #e3e1e4;
+  color: ${whiteSmokeColor};
   position: absolute;
   top: 10vh;
   left: 6vw;
-  font-size: 480%;
+  font-size: 450%;
   letter-spacing: 0.17em;
   width: 50vw;
   line-height: 1.5em;
   animation: ${portfolioSideBarHide} 2s cubic-bezier(0.175, 0.885, 0.32, 1.275)
     both;
 `;
-const PortfolioSideBarActive = css`
-  @media only screen and (max-width: 800px) {
+const PortfolioIsActivated = css`
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     position: relative;
     left: 0;
     transition: left 0.5s ease;
@@ -35,14 +38,14 @@ const PortfolioSideBarActive = css`
     width: 100vw;
   }
 `;
-const getPortfolioSideBarActive = (props) => {
-  if (props.$issidebarhidden) return null;
-  return PortfolioSideBarActive;
+const getPortfolioSideBarActive = ({ $issidebaractive }) => {
+  if ($issidebaractive) return null;
+  return PortfolioIsActivated;
 };
 
 export const PortfolioContainer = styled.div`
-  background-color: black;
-  @media only screen and (max-width: 800px) {
+  background-color: ${blackColor};
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 64vw;
     position: relative;
     top: 0;
@@ -57,4 +60,4 @@ export const PortfolioContainer = styled.div`
   }
   ${getPortfolioSideBarActive};
 `;
-PortfolioContainer.displayName = "PortfolioContainer";
+PortfolioContainer.displayName = 'PortfolioContainer';

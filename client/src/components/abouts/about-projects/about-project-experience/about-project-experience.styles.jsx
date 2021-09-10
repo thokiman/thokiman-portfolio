@@ -1,4 +1,8 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
+
+const whiteSmokeColor = '#e3e1e4';
+const lightBlueColor = '#74c6d4';
+const maxWidthSmartphone = 800;
 
 export const AboutExperienceProjectContainer = styled.div`
   display: flex;
@@ -11,12 +15,12 @@ export const AboutExperienceProjectContainer = styled.div`
 export const AboutExperienceProjectTitle = styled.div`
   font-size: 400%;
   padding: 10px;
-  color: #e3e1e4;
+  color: ${whiteSmokeColor};
   letter-spacing: 0.04em;
   text-align: left;
   display: flex;
   align-items: center;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 18vw;
   }
 `;
@@ -29,10 +33,10 @@ export const AboutExperienceProjectAtttributes = styled.div`
   grid-auto-rows: repeat(3, 1fr);
   gap: 2px 2px;
   grid-template-areas:
-    "name-experience-project name-experience-project name-experience-project name-experience-project"
-    "description-experience-project description-experience-project description-experience-project description-experience-project"
-    "description-experience-project description-experience-project description-experience-project description-experience-project";
-  @media only screen and (max-width: 800px) {
+    'name-experience-project name-experience-project name-experience-project name-experience-project'
+    'description-experience-project description-experience-project description-experience-project description-experience-project'
+    'description-experience-project description-experience-project description-experience-project description-experience-project';
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     display: flex;
     flex-direction: column;
   }
@@ -40,7 +44,7 @@ export const AboutExperienceProjectAtttributes = styled.div`
 const AboutExperienceProjectStyles = css`
   display: flex;
   align-items: center;
-  color: #e3e1e4;
+  color: ${whiteSmokeColor};
   text-align: left;
   width: 100%;
   height: fit-content;
@@ -53,7 +57,7 @@ export const AboutNameExperienceProject = styled.div`
   font-size: 200%;
   padding: 10px;
   letter-spacing: 0.09em;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 6vw;
     margin: 2vw 0;
     display: block;
@@ -62,7 +66,7 @@ export const AboutNameExperienceProject = styled.div`
 
 export const AboutDescriptionExperienceProject = styled.div`
   ${AboutExperienceProjectStyles}
-  border-bottom: #74c6d4 solid 1px;
+  border-bottom: ${lightBlueColor} solid 1px;
   width: 100%;
   grid-area: description-experience-project;
   font-size: 130%;
@@ -70,16 +74,16 @@ export const AboutDescriptionExperienceProject = styled.div`
   line-height: 1.1em;
   letter-spacing: 0.05em;
   margin: 10px auto;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 4vw;
     margin: 2vw 0;
     display: block;
   }
 `;
-AboutExperienceProjectContainer.displayName = "AboutExperienceProjectContainer";
-AboutExperienceProjectTitle.displayName = "AboutExperienceProjectTitle";
+AboutExperienceProjectContainer.displayName = 'AboutExperienceProjectContainer';
+AboutExperienceProjectTitle.displayName = 'AboutExperienceProjectTitle';
 AboutExperienceProjectAtttributes.displayName =
-  "AboutExperienceProjectAtttributes";
-AboutNameExperienceProject.displayName = "AboutNameExperienceProject";
+  'AboutExperienceProjectAtttributes';
+AboutNameExperienceProject.displayName = 'AboutNameExperienceProject';
 AboutDescriptionExperienceProject.displayName =
-  "AboutDescriptionExperienceProject";
+  'AboutDescriptionExperienceProject';

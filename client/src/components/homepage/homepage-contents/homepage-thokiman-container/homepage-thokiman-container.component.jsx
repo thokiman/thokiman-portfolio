@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import { selectIsSideBarHidden } from '../../../../redux/header/header.selectors';
+import { selectIsSideBarActive } from '../../../../redux/header/header.selectors';
 import { selectRockWaveImage } from '../../../../redux/homepage/homepage.selectors';
 import {
   HomepageThokimanBodyContainer,
@@ -9,16 +9,16 @@ import {
   HomepageThokimanContentContainer,
   HomepageThokimanHeadContainer,
   HomepageThokimanHeadOutline,
-  HomepageWhiteThokimanSkeleton
+  HomepageWhiteThokimanSkeleton,
 } from './homepage-thokiman-container.styles';
 
 export const HomePageThokimanContentContainer = ({
-  isSideBarHidden,
+  isSideBarActive,
   rockWaveImage,
 }) => {
   return (
     <HomepageThokimanContentContainer $rockWaveImage={rockWaveImage}>
-      <HomepageThokimanContainer $issidebarhidden={isSideBarHidden}>
+      <HomepageThokimanContainer $issidebaractive={isSideBarActive}>
         <HomepageThokimanHeadContainer>
           <HomepageThokimanHeadOutline />
         </HomepageThokimanHeadContainer>
@@ -31,7 +31,7 @@ export const HomePageThokimanContentContainer = ({
 };
 
 const mapStateToProps = createStructuredSelector({
-  isSideBarHidden: selectIsSideBarHidden,
+  isSideBarActive: selectIsSideBarActive,
   rockWaveImage: selectRockWaveImage,
 });
 

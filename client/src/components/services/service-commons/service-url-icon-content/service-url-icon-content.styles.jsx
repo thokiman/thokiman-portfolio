@@ -1,5 +1,11 @@
-import { Link } from "react-router-dom";
-import styled, { keyframes } from "styled-components";
+import { Link } from 'react-router-dom';
+import styled, { keyframes } from 'styled-components';
+
+const blueColor = '#19dcea';
+const purpleColor = '#b22cff';
+const redColor = '#ea2222';
+const yellowColor = '#f5be10';
+const greenColor = '#3bd80d';
 
 export const ServiceUrlIcon = styled.div`
   display: grid;
@@ -11,27 +17,27 @@ export const ServiceUrlIcon = styled.div`
 
 const serviceUrlIconContainer = keyframes`
                  0% {
-                     background: #19dcea;
+                     background: ${blueColor};
                      opacity: 0.6;
                  }
 
                  25% {
-                     background: #b22cff;
+                     background: ${purpleColor};
                      opacity: 0.8;
                  }
 
                  50% {
-                     background: #ea2222;
+                     background: ${redColor};
                      opacity: 0.7;
                  }
 
                  75% {
-                     background: #f5be10;
+                     background:${yellowColor} ;
                      opacity: 0.9;
                  }
 
                  100% {
-                     background: #3bd80d;
+                     background: ${greenColor};
                      opacity: 1;
                  }
 `;
@@ -52,6 +58,6 @@ export const ServiceUrlIconItem = styled.img`
   width: 80%;
   height: 80%;
 `;
-ServiceUrlIcon.displayName = "ServiceUrlIcon";
-ServiceUrlIconContainer.displayName = "ServiceUrlIconContainer";
-ServiceUrlIconItem.displayName = "ServiceUrlIconItem";
+ServiceUrlIcon.displayName = 'ServiceUrlIcon';
+ServiceUrlIconContainer.displayName = 'ServiceUrlIconContainer';
+ServiceUrlIconItem.displayName = 'ServiceUrlIconItem';

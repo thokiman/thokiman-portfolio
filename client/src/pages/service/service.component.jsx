@@ -4,29 +4,40 @@ import { Route, Switch } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
 import PageShell from '../../components/commons/page-shell/page-shell.component';
 import SpinnerLoading from '../../components/commons/spinner-loading/spinner-loading.component';
-import { selectIsSideBarHidden } from '../../redux/header/header.selectors.js';
+import { selectIsSideBarActive } from '../../redux/header/header.selectors.js';
 import {
   selectArtService,
-  selectBigWaveImage, selectDevService, selectEngineerService, selectPhotoService, selectServiceRoute
+  selectBigWaveImage,
+  selectDevService,
+  selectEngineerService,
+  selectPhotoService,
+  selectServiceRoute,
 } from '../../redux/service/service.selectors';
-import { ServiceContainer, ServiceSideBarHide } from './service.styles';
-
+import { ServiceContainer, ServiceIsNotActivated } from './service.styles';
 
 const ServiceHomeContent = lazy(() =>
-  import('../../components/services/service-contents/service-content/service-content.component')
+  import(
+    '../../components/services/service-contents/service-content/service-content.component'
+  )
 );
 
 const ServiceGraphicDesign = lazy(() =>
-  import('../../components/services/service-contents/service-graphic-design/service-graphic-design.component')
-)
+  import(
+    '../../components/services/service-contents/service-graphic-design/service-graphic-design.component'
+  )
+);
 const ServiceHeader = lazy(() =>
   import('../../components/services/service-header/service-header.component')
 );
 const ServiceEngineer = lazy(() =>
-  import('../../components/services/service-contents/service-engineer/service-engineer.component')
+  import(
+    '../../components/services/service-contents/service-engineer/service-engineer.component'
+  )
 );
 const ServicePhotography = lazy(() =>
-  import('../../components/services/service-contents/service-photography/service-photography.component')
+  import(
+    '../../components/services/service-contents/service-photography/service-photography.component'
+  )
 );
 const ServiceDev = lazy(() =>
   import(
@@ -40,30 +51,27 @@ export const Service = ({
   engineer,
   dev,
   serviceRoute,
-  isSideBarHidden,
+  isSideBarActive,
   bigWaveImage,
 }) => {
   return (
     <ServiceContainer
-      $issidebarhidden={isSideBarHidden}
+      $issidebaractive={isSideBarActive}
       $bigWaveImage={bigWaveImage}
     >
-      {isSideBarHidden ? (
-        <ServiceSideBarHide>
+      {isSideBarActive ? (
+        <ServiceIsNotActivated>
           Serv
           <br />
           ice
-        </ServiceSideBarHide>
+        </ServiceIsNotActivated>
       ) : null}
       <ServiceHeader />
       <Switch>
         <Suspense fallback={<SpinnerLoading />}>
           <Route exact path={serviceRoute} component={ServiceHomeContent} />
           <Route path={engineer.routeName} component={ServiceEngineer} />
-          <Route
-            path={dev.routeName}
-            component={ServiceDev}
-          />
+          <Route path={dev.routeName} component={ServiceDev} />
           <Route path={art.routeName} component={ServiceGraphicDesign} />
           <Route path={photo.routeName} component={ServicePhotography} />
         </Suspense>
@@ -78,7 +86,7 @@ const mapStateToProps = createStructuredSelector({
   engineer: selectEngineerService,
   dev: selectDevService,
   serviceRoute: selectServiceRoute,
-  isSideBarHidden: selectIsSideBarHidden,
+  isSideBarActive: selectIsSideBarActive,
   bigWaveImage: selectBigWaveImage,
 });
 

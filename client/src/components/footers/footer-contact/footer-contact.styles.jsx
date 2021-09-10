@@ -1,10 +1,14 @@
-import styled, { css, keyframes } from "styled-components";
-import { ReactComponent as CreamPrickInklaim } from "../../../assets/collections-icon/prick-inklaim-icon/logo/prick_inklaim_logo_cream.svg";
-import { ReactComponent as WhiteOutlineThokiman } from "../../../assets/collections-icon/thokiman-icon/logo/outline/thokiman_head_logo_cream.svg";
+import styled, { css, keyframes } from 'styled-components';
+import { ReactComponent as CreamPrickInklaim } from '../../../assets/collections-icon/prick-inklaim-icon/logo/prick_inklaim_logo_cream.svg';
+import { ReactComponent as WhiteOutlineThokiman } from '../../../assets/collections-icon/thokiman-icon/logo/outline/thokiman_head_logo_cream.svg';
 
+const blackColor = '#000000';
+const heavyLightBlueColor = '#bccfd5';
+const whiteSmokeColor = '#e3e1e4';
+const maxWidthSmartphone = 800;
 
-const FooterSideBarActive = css`
-  @media only screen and (max-width: 800px) {
+const FooterIsActivated = css`
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     position: relative;
     height: 16vh;
     width: 100vw;
@@ -13,18 +17,19 @@ const FooterSideBarActive = css`
     transition: left 0.5s ease;
   }
 `;
-const getFooterSideBarActive = (props) => {
-  if (props.$issidebarhidden) return null;
-  return FooterSideBarActive;
+
+const getFooterSideBarActive = ({ $issidebaractive }) => {
+  if ($issidebaractive) return null;
+  return FooterIsActivated;
 };
 export const FooterContainerContact = styled.div`
-  background-color: #000000;
+  background-color: ${blackColor};
   height: 16vh;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     position: relative;
     top: 0;
     left: 140px;
@@ -33,7 +38,7 @@ export const FooterContainerContact = styled.div`
     transition: left 0.5s ease;
     width: 64vw;
   }
-  ${ getFooterSideBarActive }
+  ${getFooterSideBarActive}
 `;
 
 export const ProfileFooterContainerContact = styled.div`
@@ -47,12 +52,12 @@ export const ProfileFooterContainerContact = styled.div`
 
 const piCreamAnimate = keyframes`
                 from {
-                    stroke: #bccfd5;
+                    stroke: ${heavyLightBlueColor};
                     opacity: 0.6;
                 }
 
                 to {
-                    stroke: #e3e1e4;
+                    stroke: ${whiteSmokeColor};
                     opacity: 1;
                 }
 
@@ -63,22 +68,22 @@ export const ProfileFooterIconContact = styled.div`
   height: 8vh;
   display: flex;
   justify-content: center;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 130px;
   }
   @media only screen and (max-width: 370px) {
     width: 100px;
   }
   .thoki-out-cream {
-    animation: ${ piCreamAnimate } 1s ease-in-out infinite;
+    animation: ${piCreamAnimate} 1s ease-in-out infinite;
   }
 
   .pi-cream {
-    animation: ${ piCreamAnimate } 1s ease-in-out infinite;
+    animation: ${piCreamAnimate} 1s ease-in-out infinite;
   }
 
   .pi-cream-one {
-    animation: ${ piCreamAnimate } 1s ease-in-out infinite;
+    animation: ${piCreamAnimate} 1s ease-in-out infinite;
   }
 `;
 
@@ -89,10 +94,10 @@ const FooterIconContact = css`
 `;
 
 export const FooterCreamPrickInklaim = styled(CreamPrickInklaim)`
-  ${ FooterIconContact }
+  ${FooterIconContact}
 `;
 export const FooterWhiteOutlineThokiman = styled(WhiteOutlineThokiman)`
-  ${ FooterIconContact }
+  ${FooterIconContact}
 `;
 
 export const ProfileFooterTextContact = styled.div`
@@ -101,8 +106,8 @@ export const ProfileFooterTextContact = styled.div`
   font-kerning: auto;
   letter-spacing: 0.03em;
   text-align: center;
-  color: #e3e1e4;
-  @media only screen and (max-width: 800px) {
+  color: ${whiteSmokeColor};
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 15px;
   }
   @media only screen and (max-width: 370px) {
@@ -110,9 +115,9 @@ export const ProfileFooterTextContact = styled.div`
   }
 `;
 
-FooterContainerContact.displayName = "FooterContainerContact";
-ProfileFooterContainerContact.displayName = "ProfileFooterContainerContact";
-ProfileFooterIconContact.displayName = "ProfileFooterIconContact";
-FooterCreamPrickInklaim.displayName = "FooterCreamPrickInklaim";
-FooterWhiteOutlineThokiman.displayName = "FooterWhiteOutlineThokiman";
-ProfileFooterTextContact.displayName = "ProfileFooterTextContact";
+FooterContainerContact.displayName = 'FooterContainerContact';
+ProfileFooterContainerContact.displayName = 'ProfileFooterContainerContact';
+ProfileFooterIconContact.displayName = 'ProfileFooterIconContact';
+FooterCreamPrickInklaim.displayName = 'FooterCreamPrickInklaim';
+FooterWhiteOutlineThokiman.displayName = 'FooterWhiteOutlineThokiman';
+ProfileFooterTextContact.displayName = 'ProfileFooterTextContact';

@@ -1,18 +1,17 @@
-import React from "react";
-import { connect } from "react-redux";
-import { createStructuredSelector } from "reselect";
-import { selectIsSideBarHidden } from "../../../../redux/header/header.selectors";
-import MapContent from "../../contact-mapbox/map/map.component";
+import React from 'react';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { selectIsSideBarActive } from '../../../../redux/header/header.selectors';
+import MapContent from '../../contact-mapbox/map/map.component';
 import {
   ContactLocationContainer,
   ContactLocationInfo,
   ContactLocationItem,
-  ContactLocationTitle
-} from "./contact-location-container.styles";
-
+  ContactLocationTitle,
+} from './contact-location-container.styles';
 
 export const ContactLocation = ({
-  isSideBarHidden,
+  isSideBarActive,
   info: {
     location: { address, zoom },
     email,
@@ -20,7 +19,7 @@ export const ContactLocation = ({
   },
 }) => {
   return (
-    <ContactLocationContainer $issidebarhidden={isSideBarHidden}>
+    <ContactLocationContainer $issidebaractive={isSideBarActive}>
       <MapContent zoom={zoom} address={address} />
       <ContactLocationInfo>
         <ContactLocationTitle>Current Location</ContactLocationTitle>
@@ -33,7 +32,7 @@ export const ContactLocation = ({
 };
 
 const mapStateToProps = createStructuredSelector({
-  isSideBarHidden: selectIsSideBarHidden,
+  isSideBarActive: selectIsSideBarActive,
 });
 
 export default connect(mapStateToProps)(ContactLocation);

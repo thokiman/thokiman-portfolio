@@ -1,5 +1,8 @@
-import { Link } from "react-router-dom";
-import styled, { css, keyframes } from "styled-components";
+import { Link } from 'react-router-dom';
+import styled, { css, keyframes } from 'styled-components';
+
+const lightBlueColor = '#74c6d4';
+const maxWidthSmartphone = 800;
 
 export const AboutHeaderSkillContainer = styled.div`
   display: flex;
@@ -10,7 +13,7 @@ export const AboutHeaderSkillContainer = styled.div`
   padding: 15px;
   margin-bottom: 10px;
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 100%;
     height: 40px;
   }
@@ -20,11 +23,11 @@ const AboutTextBoxStyles = css`
   text-decoration: none;
   padding: 5px;
   margin: 0 5px;
-  color: #74c6d4;
+  color: ${lightBlueColor};
   font-family: futura-book;
   font-size: 20px;
   letter-spacing: 0.03em;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 20px;
   }
 `;
@@ -32,7 +35,7 @@ const AboutTextBoxActive = css`
   ${AboutTextBoxStyles}
   cursor: default;
   transition: all 0.7s linear;
-  box-shadow: rgb(116, 198, 212) 0px 20px 21px -9px;
+  box-shadow: ${lightBlueColor} 0px 20px 21px -9px;
 `;
 const aboutTextBoxHover = keyframes`
     from{
@@ -48,7 +51,7 @@ const AboutTextBoxHide = css`
    &:hover {
     
            transition: all 0.7s linear;
-            box-shadow: rgb(116, 198, 212) 0px 20px 21px -9px;
+            box-shadow: ${lightBlueColor} 0px 20px 21px -9px;
             animation: ${aboutTextBoxHover} 0.5s ease-in-out both;
             
 `;
@@ -64,5 +67,5 @@ export const AboutTextBox = styled(Link)`
   ${getAboutTextBox}
 `;
 
-AboutHeaderSkillContainer.displayName = "AboutHeaderSkillContainer";
-AboutTextBox.displayName = "AboutTextBox";
+AboutHeaderSkillContainer.displayName = 'AboutHeaderSkillContainer';
+AboutTextBox.displayName = 'AboutTextBox';

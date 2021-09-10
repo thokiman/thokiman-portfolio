@@ -1,11 +1,18 @@
-import { Link } from "react-router-dom";
-import styled, { css, keyframes } from "styled-components";
+import { Link } from 'react-router-dom';
+import styled, { css, keyframes } from 'styled-components';
 
-const SideBarActive = css`
+const backgroundColorLeftServiceContainer = 'rgba(18, 129, 148, 0.5)';
+const borderColorDirectoryService = 'rgba(18, 129, 148, 0.5)';
+const grayColor = '#3f4249';
+const whiteSmokeColor = '#e3e1e4';
+const lightBlueColor = '#74c6d4';
+const maxWidthSmartphone = 800;
+
+const ServiceHeaderIsNotActivated = css`
   display: none;
 `;
-const getSideBarActive = (props) => {
-  if (props.$issidebarhidden) return SideBarActive;
+const getSideBarActive = ({ $issidebaractive }) => {
+  if ($issidebaractive) return ServiceHeaderIsNotActivated;
   return null;
 };
 
@@ -15,14 +22,14 @@ export const LeftServiceContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(18, 129, 148, 0.5);
+  background-color: ${backgroundColorLeftServiceContainer};
   position: relative;
   left: 4vw;
   transition: height 0.5s ease-in-out, top 0.2s ease;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 100vw;
     left: 0;
-    ${ getSideBarActive }
+    ${getSideBarActive}
   }
 `;
 export const DirectoryService = styled.div`
@@ -31,13 +38,13 @@ export const DirectoryService = styled.div`
   grid-template-rows: repeat(3, 1fr);
   gap: 5px 5px;
   grid-template-areas:
-    "directory-service-text-eng directory-service-text-eng directory-service-text-fsd directory-service-text-fsd"
-    "directory-service-text-gd directory-service-text-gd directory-service-text-fsd directory-service-text-fsd"
-    "directory-service-text-gd directory-service-text-gd directory-service-text-pg directory-service-text-pg";
+    'directory-service-text-eng directory-service-text-eng directory-service-text-fsd directory-service-text-fsd'
+    'directory-service-text-gd directory-service-text-gd directory-service-text-fsd directory-service-text-fsd'
+    'directory-service-text-gd directory-service-text-gd directory-service-text-pg directory-service-text-pg';
   height: 76%;
   width: 95%;
   cursor: pointer;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 98vw;
     height: 50vh;
   }
@@ -45,12 +52,12 @@ export const DirectoryService = styled.div`
 const directoryServiceHover = keyframes`
     0% {
         background-position: 100% 50%;
-        color: #e3e1e4;
+        color: ${whiteSmokeColor};
     }
 
     100% {
         background-position: 0% 50%;
-        color: #74c6d4;
+        color: ${lightBlueColor};
     } 
 `;
 const directoryServiceActive = keyframes`
@@ -76,33 +83,33 @@ const DirectoryServiceTextStyles = css`
   align-items: center;
   letter-spacing: 0.02em;
   padding: 0 10px;
-  color: #e3e1e4;
+  color: ${whiteSmokeColor};
   transition: color 1s linear;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 6vw;
     padding: 25px;
   }
 `;
 
 const DirectoryServiceTextEngStyles = css`
-  ${ DirectoryServiceTextStyles }
+  ${DirectoryServiceTextStyles}
   grid-area: directory-service-text-eng;
   text-align: justify;
   justify-content: flex-end;
 `;
 const DirectoryServiceTextEngHide = css`
-  ${ DirectoryServiceTextEngStyles }
-  border-bottom: rgba(18, 129, 148, 0.5) solid 2px;
-  border-right: rgba(18, 129, 148, 0.5) solid 2px;
+  ${DirectoryServiceTextEngStyles}
+  border-bottom: ${borderColorDirectoryService} solid 2px;
+  border-right: ${borderColorDirectoryService} solid 2px;
 
   &:hover {
-    animation: ${ directoryServiceHover } 1s alternate-reverse infinite;
+    animation: ${directoryServiceHover} 1s alternate-reverse infinite;
   }
 `;
 const DirectoryServiceTextEngActive = css`
-  ${ DirectoryServiceTextEngStyles }
-  color: #3f4249;
-  animation: ${ directoryServiceActive } 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
+  ${DirectoryServiceTextEngStyles}
+  color: ${grayColor};
+  animation: ${directoryServiceActive} 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
     both;
   cursor: default;
 `;
@@ -112,29 +119,29 @@ const getDirectoryServiceTextEng = (props) => {
   return DirectoryServiceTextEngHide;
 };
 export const DirectoryServiceTextEng = styled(Link)`
-  ${ getDirectoryServiceTextEng }
+  ${getDirectoryServiceTextEng}
 `;
 
 const DirectoryServiceTextFsdStyles = css`
-  ${ DirectoryServiceTextStyles }
+  ${DirectoryServiceTextStyles}
   grid-area: directory-service-text-fsd;
   line-height: 1.1em;
   text-align: left;
   justify-content: flex-start;
 `;
 const DirectoryServiceTextFsdHide = css`
-  ${ DirectoryServiceTextFsdStyles }
-  border-bottom: rgba(18, 129, 148, 0.5) solid 2px;
-  border-left: rgba(18, 129, 148, 0.5) solid 2px;
+  ${DirectoryServiceTextFsdStyles}
+  border-bottom: ${borderColorDirectoryService} solid 2px;
+  border-left: ${borderColorDirectoryService} solid 2px;
 
   &:hover {
-    animation: ${ directoryServiceHover } 1s alternate-reverse infinite;
+    animation: ${directoryServiceHover} 1s alternate-reverse infinite;
   }
 `;
 const DirectoryServiceTextFsdActive = css`
-  ${ DirectoryServiceTextFsdStyles }
-  color: #3f4249;
-  animation: ${ directoryServiceActive } 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
+  ${DirectoryServiceTextFsdStyles}
+  color: ${grayColor};
+  animation: ${directoryServiceActive} 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
     both;
   cursor: default;
 `;
@@ -143,29 +150,29 @@ const getDirectoryServiceTextFsd = (props) => {
   return DirectoryServiceTextFsdHide;
 };
 export const DirectoryServiceTextFsd = styled(Link)`
-  ${ getDirectoryServiceTextFsd }
+  ${getDirectoryServiceTextFsd}
 `;
 
 const DirectoryServiceTextGdStyles = css`
-  ${ DirectoryServiceTextStyles }
+  ${DirectoryServiceTextStyles}
   grid-area: directory-service-text-gd;
   line-height: 1.45em;
   text-align: end;
   justify-content: flex-end;
 `;
 const DirectoryServiceTextGdHide = css`
-  ${ DirectoryServiceTextGdStyles }
-  border-top: rgba(18, 129, 148, 0.5) solid 2px;
-  border-right: rgba(18, 129, 148, 0.5) solid 2px;
+  ${DirectoryServiceTextGdStyles}
+  border-top: ${borderColorDirectoryService} solid 2px;
+  border-right: ${borderColorDirectoryService} solid 2px;
 
   &:hover {
-    animation: ${ directoryServiceHover } 1s alternate-reverse infinite;
+    animation: ${directoryServiceHover} 1s alternate-reverse infinite;
   }
 `;
 const DirectoryServiceTextGdActive = css`
-  ${ DirectoryServiceTextGdStyles }
-  color: #3f4249;
-  animation: ${ directoryServiceActive } 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
+  ${DirectoryServiceTextGdStyles}
+  color: ${grayColor};
+  animation: ${directoryServiceActive} 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
     both;
   cursor: default;
 `;
@@ -174,30 +181,30 @@ const getDirectoryServiceTextGd = (props) => {
   return DirectoryServiceTextGdHide;
 };
 export const DirectoryServiceTextGd = styled(Link)`
-  ${ getDirectoryServiceTextGd }
+  ${getDirectoryServiceTextGd}
 `;
 
 const DirectoryServiceTextPgStyles = css`
-  ${ DirectoryServiceTextStyles }
+  ${DirectoryServiceTextStyles}
   grid-area: directory-service-text-pg;
   line-height: 1.1em;
   text-align: left;
   justify-content: flex-start;
 `;
 const DirectoryServiceTextPgHide = css`
-  ${ DirectoryServiceTextPgStyles }
-  border-top: rgba(18, 129, 148, 0.5) solid 2px;
-  border-left: rgba(18, 129, 148, 0.5) solid 2px;
+  ${DirectoryServiceTextPgStyles}
+  border-top: ${borderColorDirectoryService} solid 2px;
+  border-left: ${borderColorDirectoryService} solid 2px;
 
   &:hover {
-    animation: ${ directoryServiceHover } 1s alternate-reverse infinite;
+    animation: ${directoryServiceHover} 1s alternate-reverse infinite;
   }
 `;
 
 const DirectoryServiceTextPgActive = css`
-  ${ DirectoryServiceTextPgStyles }
-  color: #3f4249;
-  animation: ${ directoryServiceActive } 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
+  ${DirectoryServiceTextPgStyles}
+  color: ${grayColor};
+  animation: ${directoryServiceActive} 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
     both;
   cursor: default;
 `;
@@ -206,12 +213,12 @@ const getDirectoryServiceTextPg = (props) => {
   return DirectoryServiceTextPgHide;
 };
 export const DirectoryServiceTextPg = styled(Link)`
-  ${ getDirectoryServiceTextPg }
+  ${getDirectoryServiceTextPg}
 `;
 
-LeftServiceContainer.displayName = "LeftServiceContainer";
-DirectoryService.displayName = "DirectoryService";
-DirectoryServiceTextEng.displayName = "DirectoryServiceTextEng";
-DirectoryServiceTextFsd.displayName = "DirectoryServiceTextFsd";
-DirectoryServiceTextGd.displayName = "DirectoryServiceTextGd";
-DirectoryServiceTextPg.displayName = "DirectoryServiceTextPg";
+LeftServiceContainer.displayName = 'LeftServiceContainer';
+DirectoryService.displayName = 'DirectoryService';
+DirectoryServiceTextEng.displayName = 'DirectoryServiceTextEng';
+DirectoryServiceTextFsd.displayName = 'DirectoryServiceTextFsd';
+DirectoryServiceTextGd.displayName = 'DirectoryServiceTextGd';
+DirectoryServiceTextPg.displayName = 'DirectoryServiceTextPg';

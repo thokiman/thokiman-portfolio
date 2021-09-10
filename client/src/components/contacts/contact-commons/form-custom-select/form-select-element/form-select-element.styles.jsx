@@ -1,8 +1,9 @@
-import styled, { css, keyframes } from "styled-components";
-import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
+import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
+import styled, { css, keyframes } from 'styled-components';
 
-const subColor = "#128194";
-const mainColor = "#bccfd5";
+const greenBlueColor = '#128194';
+const heavyLightBlueColor = '#bccfd5';
+const maxWidthSmartphone = 800;
 
 const formSelectActive = keyframes`
             0% {
@@ -24,7 +25,7 @@ export const FormSelectValue = styled.div`
   display: flex;
   flex-direction: row;
   font-size: 35px;
-  color: ${mainColor};
+  color: ${heavyLightBlueColor};
   cursor: pointer;
 `;
 
@@ -32,14 +33,14 @@ export const FormSelectValueActive = styled.div`
   font-size: 30px;
   text-align: center;
   width: 90%;
-  color: ${subColor};
+  color: ${greenBlueColor};
   padding: 5px;
   animation: ${formSelectActive} 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  border-bottom: ${subColor} solid 1px;
+  border-bottom: ${greenBlueColor} solid 1px;
 `;
 
 const FormSelectValueHoverStyles = css`
-  color: ${mainColor};
+  color: ${heavyLightBlueColor};
   transition: color linear 0.2s;
 `;
 
@@ -47,12 +48,12 @@ export const FormSelectTitle = styled.div`
   font-size: 35px;
   text-align: start;
   width: 90%;
-  color: ${subColor};
+  color: ${greenBlueColor};
   position: relative;
   right: -1.5vw;
   padding: 5px;
   padding-bottom: 15px;
-  border-bottom: ${subColor} solid 1px;
+  border-bottom: ${greenBlueColor} solid 1px;
   ${FormSelectValue}:hover & {
     ${FormSelectValueHoverStyles}
   }
@@ -83,8 +84,8 @@ const FormSelectArrowButtonActive = css`
   animation: ${formSelectButtonActive} linear 0.4s;
   transform: rotate(-90deg);
 `;
-const getFormSelectArrowButtonActive = (props) => {
-  if (props.$istypeclick) return FormSelectArrowButtonActive;
+const getFormSelectArrowButtonActive = ({ $istypeclick }) => {
+  if ($istypeclick) return FormSelectArrowButtonActive;
 };
 export const FormSelectArrowButton = styled.span`
   position: relative;
@@ -92,7 +93,7 @@ export const FormSelectArrowButton = styled.span`
   display: flex;
   align-items: center;
   width: 35px;
-  color: ${subColor};
+  color: ${greenBlueColor};
   animation: ${formSelectButtonHide} linear 0.4s;
   ${getFormSelectArrowButtonActive}
   ${FormSelectValue}:hover & {
@@ -103,8 +104,8 @@ export const FormSelectArrowButton = styled.span`
 export const FormInputCheckerContainer = styled.span`
   position: absolute;
   left: -1vw;
-  color: ${subColor};
-  @media only screen and (max-width: 800px) {
+  color: ${greenBlueColor};
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     left: -3vw;
     top: 1vh;
   }
@@ -112,7 +113,7 @@ export const FormInputCheckerContainer = styled.span`
 const FormInputTelCheckerIconStyles = css`
   width: 2vw;
   height: 2vh;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 3.5vw;
     height: 3.5vh;
   }
@@ -123,10 +124,10 @@ export const FormInputCheckerIconTrue = styled(FaCheckCircle)`
 export const FormInputCheckerIconFalse = styled(FaTimesCircle)`
   ${FormInputTelCheckerIconStyles}
 `;
-FormSelectValue.displayName = "FormSelectValue";
-FormSelectValueActive.displayName = "FormSelectValueActive";
-FormSelectTitle.displayName = "FormSelectTitle";
-FormSelectArrowButton.displayName = "FormSelectArrowButton";
-FormInputCheckerContainer.displayName = "FormInputCheckerContainer";
-FormInputCheckerIconTrue.displayName = "FormInputCheckerIconTrue";
-FormInputCheckerIconFalse.displayName = "FormInputCheckerIconFalse";
+FormSelectValue.displayName = 'FormSelectValue';
+FormSelectValueActive.displayName = 'FormSelectValueActive';
+FormSelectTitle.displayName = 'FormSelectTitle';
+FormSelectArrowButton.displayName = 'FormSelectArrowButton';
+FormInputCheckerContainer.displayName = 'FormInputCheckerContainer';
+FormInputCheckerIconTrue.displayName = 'FormInputCheckerIconTrue';
+FormInputCheckerIconFalse.displayName = 'FormInputCheckerIconFalse';

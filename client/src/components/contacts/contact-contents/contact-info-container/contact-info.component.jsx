@@ -1,36 +1,39 @@
-import React from "react";
-import { connect } from "react-redux";
-import { createStructuredSelector } from "reselect";
-import { selectIsSideBarHidden } from "../../../../redux/header/header.selectors";
+import React from 'react';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { selectIsSideBarActive } from '../../../../redux/header/header.selectors';
 import {
   ContactInformationContainer,
   ContactInformationContent,
-  ContactInformationTitle, PhotoContactIcon,
+  ContactInformationTitle,
+  PhotoContactIcon,
   PhotoContactLinkIconAdobeStock,
   PhotoContactLinkIconEyeEm,
-  PhotoContactLinkIconShutterStock, SocialContactIcon,
+  PhotoContactLinkIconShutterStock,
+  SocialContactIcon,
   SocialContactLinkIconFacebook,
   SocialContactLinkIconGithub,
   SocialContactLinkIconInstagram,
   SocialContactLinkIconLinkedin,
   SocialContactLinkIconTwitter,
-  SocialContactLinkIconWhatsapp, WhiteThokimanContactIcon0,
+  SocialContactLinkIconWhatsapp,
+  WhiteThokimanContactIcon0,
   WhiteThokimanContactIcon1,
   WhiteThokimanContactIcon2,
   WhiteThokimanContactIcon3,
   WhiteThokimanContactIcon4,
   WhiteThokimanContactIcon5,
   WhiteThokimanContactIcon6,
-  WhiteThokimanContactIcon7
-} from "./contact-info.styles";
+  WhiteThokimanContactIcon7,
+} from './contact-info.styles';
 
 export const ContactInfo = ({
-  isSideBarHidden,
+  isSideBarActive,
   title,
   items: { socialIcon, photoIcon },
 }) => {
   return (
-    <ContactInformationContainer $issidebarhidden={isSideBarHidden}>
+    <ContactInformationContainer $issidebaractive={isSideBarActive}>
       <ContactInformationTitle>{title}</ContactInformationTitle>
       <ContactInformationContent>
         <WhiteThokimanContactIcon0 />
@@ -43,7 +46,7 @@ export const ContactInfo = ({
         <WhiteThokimanContactIcon7 />
         <SocialContactLinkIconFacebook
           to={{ pathname: socialIcon[0].linkUrl }}
-          target="_blank"
+          target='_blank'
         >
           <SocialContactIcon
             src={socialIcon[0].iconPath.iconPath}
@@ -52,7 +55,7 @@ export const ContactInfo = ({
         </SocialContactLinkIconFacebook>
         <SocialContactLinkIconGithub
           to={{ pathname: socialIcon[1].linkUrl }}
-          target="_blank"
+          target='_blank'
         >
           <SocialContactIcon
             src={socialIcon[1].iconPath.iconPath}
@@ -61,7 +64,7 @@ export const ContactInfo = ({
         </SocialContactLinkIconGithub>
         <SocialContactLinkIconInstagram
           to={{ pathname: socialIcon[2].linkUrl }}
-          target="_blank"
+          target='_blank'
         >
           <SocialContactIcon
             src={socialIcon[2].iconPath.iconPath}
@@ -70,7 +73,7 @@ export const ContactInfo = ({
         </SocialContactLinkIconInstagram>
         <SocialContactLinkIconLinkedin
           to={{ pathname: socialIcon[3].linkUrl }}
-          target="_blank"
+          target='_blank'
         >
           <SocialContactIcon
             src={socialIcon[3].iconPath.iconPath}
@@ -79,7 +82,7 @@ export const ContactInfo = ({
         </SocialContactLinkIconLinkedin>
         <SocialContactLinkIconTwitter
           to={{ pathname: socialIcon[4].linkUrl }}
-          target="_blank"
+          target='_blank'
         >
           <SocialContactIcon
             src={socialIcon[4].iconPath.iconPath}
@@ -88,7 +91,7 @@ export const ContactInfo = ({
         </SocialContactLinkIconTwitter>
         <SocialContactLinkIconWhatsapp
           to={{ pathname: socialIcon[5].linkUrl }}
-          target="_blank"
+          target='_blank'
         >
           <SocialContactIcon
             src={socialIcon[5].iconPath.iconPath}
@@ -97,7 +100,7 @@ export const ContactInfo = ({
         </SocialContactLinkIconWhatsapp>
         <PhotoContactLinkIconAdobeStock
           to={{ pathname: photoIcon[0].linkUrl }}
-          target="_blank"
+          target='_blank'
         >
           <PhotoContactIcon
             src={photoIcon[0].iconPath.iconPath}
@@ -106,7 +109,7 @@ export const ContactInfo = ({
         </PhotoContactLinkIconAdobeStock>
         <PhotoContactLinkIconEyeEm
           to={{ pathname: photoIcon[1].linkUrl }}
-          target="_blank"
+          target='_blank'
         >
           <PhotoContactIcon
             src={photoIcon[1].iconPath.iconPath}
@@ -115,7 +118,7 @@ export const ContactInfo = ({
         </PhotoContactLinkIconEyeEm>
         <PhotoContactLinkIconShutterStock
           to={{ pathname: photoIcon[2].linkUrl }}
-          target="_blank"
+          target='_blank'
         >
           <PhotoContactIcon
             src={photoIcon[2].iconPath.iconPath}
@@ -128,7 +131,7 @@ export const ContactInfo = ({
 };
 
 const mapStateToProps = createStructuredSelector({
-  isSideBarHidden: selectIsSideBarHidden,
+  isSideBarActive: selectIsSideBarActive,
 });
 
 export default connect(mapStateToProps)(ContactInfo);

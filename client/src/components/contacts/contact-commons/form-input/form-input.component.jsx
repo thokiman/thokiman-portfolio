@@ -1,13 +1,12 @@
-import React from "react";
-
+import React from 'react';
 import {
-  FormInputGroup,
   FormInputCheckerContainer,
-  FormInputCheckerIconTrue,
   FormInputCheckerIconFalse,
+  FormInputCheckerIconTrue,
   FormInputElement,
+  FormInputGroup,
   FormLabelElement,
-} from "./form-input.styles";
+} from './form-input.styles';
 
 export const FormInput = ({ handleChange, label, ...props }) => {
   return (
@@ -23,7 +22,7 @@ export const FormInput = ({ handleChange, label, ...props }) => {
       }
       <FormInputElement onChange={handleChange} {...props} />
       {label ? (
-        <FormLabelElement value={props.value}>{label}</FormLabelElement>
+        <FormLabelElement $formvalue={props.value}>{label}</FormLabelElement>
       ) : null}
     </FormInputGroup>
   );

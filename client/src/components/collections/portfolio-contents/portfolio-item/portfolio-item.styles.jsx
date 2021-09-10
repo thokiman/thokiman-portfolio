@@ -1,10 +1,13 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
-const SideBarActive = css`
+const boxShadowPortfolioImageCollectionColorOne = 'rgba(18, 129, 148, 0.2)';
+const boxShadowPortfolioImageCollectionColorTwo = 'rgba(18, 129, 148, 0.1)';
+
+const PortfolioItemIsNotActivated = css`
   display: none;
 `;
-const getSideBarActive = (props) => {
-  if (props.$issidebarhidden) return SideBarActive;
+const getSideBarActive = ({ $issidebaractive }) => {
+  if ($issidebaractive) return PortfolioItemIsNotActivated;
   return null;
 };
 
@@ -16,16 +19,16 @@ export const PortfolioImageCollectionsContainer = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(auto-fill, 1fr);
   overflow: hidden;
-  
+
   @media only screen and (max-width: 800px) {
-    ${ getSideBarActive }
+    ${getSideBarActive}
   }
 `;
 export const PortfolioImageCollection = styled.div`
   width: 100%;
   height: 100%;
-  box-shadow: 0 2px 2px 0 rgba(18, 129, 148, 0.2),
-    0 3px 15px 0 rgba(18, 129, 148, 0.1);
+  box-shadow: 0 2px 2px 0 ${boxShadowPortfolioImageCollectionColorOne},
+    0 3px 15px 0 ${boxShadowPortfolioImageCollectionColorTwo};
 
   &:nth-child(5n) {
     grid-column-end: span 2;
@@ -39,6 +42,6 @@ export const PortfolioImageItem = styled.img`
   width: 100%;
 `;
 PortfolioImageCollectionsContainer.displayName =
-  "PortfolioImageCollectionsContainer";
-PortfolioImageCollection.displayName = "PortfolioImageCollection";
-PortfolioImageItem.displayName = "PortfolioImageItem";
+  'PortfolioImageCollectionsContainer';
+PortfolioImageCollection.displayName = 'PortfolioImageCollection';
+PortfolioImageItem.displayName = 'PortfolioImageItem';

@@ -1,4 +1,6 @@
 import styled, { css, keyframes } from 'styled-components';
+const whiteSmokeColor = '#e3e1e4';
+const maxWidthSmartphone = 800;
 
 const getContactImage = ({ $lowWaveImage }) => {
   return $lowWaveImage.item.iconPath;
@@ -18,13 +20,13 @@ const contactSideBarHide = keyframes`
 
 `;
 
-export const ContactSideBarHide = styled.div`
+export const ContactIsNotActivated = styled.div`
   font-family: futura-demi;
-  color: #e3e1e4;
+  color: ${whiteSmokeColor};
   position: absolute;
   top: 10vh;
   left: 6vw;
-  font-size: 480%;
+  font-size: 450%;
   letter-spacing: 0.17em;
   width: 50vw;
   line-height: 1.5em;
@@ -32,8 +34,8 @@ export const ContactSideBarHide = styled.div`
   animation: ${contactSideBarHide} 2s cubic-bezier(0.175, 0.885, 0.32, 1.275)
     both;
 `;
-const ContactSideBarActive = css`
-  @media only screen and (max-width: 800px) {
+const ContactIsActivated = css`
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     position: relative;
     left: 0;
     transition: left 0.5s ease;
@@ -44,9 +46,9 @@ const ContactSideBarActive = css`
     flex-direction: column;
   }
 `;
-const getContactSideBarActive = (props) => {
-  if (props.$issidebarhidden) return null;
-  return ContactSideBarActive;
+const getContactSideBarActive = ({ $issidebaractive }) => {
+  if ($issidebaractive) return null;
+  return ContactIsActivated;
 };
 
 export const ContactContainer = styled.div`
@@ -60,7 +62,7 @@ export const ContactContainer = styled.div`
   height: 72vh;
   font-family: futura-medium;
   transition: background-image 0.7s ease-in-out, height 0.4s ease-in-out;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     position: relative;
     width: 64vw;
     top: 0;
