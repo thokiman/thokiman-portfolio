@@ -3,7 +3,7 @@ import { ReactComponent as ThokimanBodyGray } from '../../../../assets/collectio
 import { ReactComponent as ThokimanHandGray } from '../../../../assets/collections-icon/thokiman-icon/page/thokiman_hand_gray.svg';
 import { ReactComponent as ThokimanLegGray } from '../../../../assets/collections-icon/thokiman-icon/page/thokiman_leg_gray.svg';
 import { ReactComponent as ThokimanSkeletonGray } from '../../../../assets/collections-icon/thokiman-icon/page/thokiman_skeleton_gray.svg';
-
+const maxWidthTablet = 1024;
 const backgroundRightPageContainerColor = 'rgba(18, 129, 148, 0.85)';
 const maxWidthSmartphone = 800;
 const SideBarActive = css`
@@ -19,11 +19,16 @@ export const RightPageContainer = styled.div`
   margin-right: 2vw;
   padding: 40px 0;
   height: 98%;
+  @media only screen and (max-width: ${maxWidthTablet}px) {
+    width: 65%;
+    height: 44vh;
+    margin: 0;
 
+    ${getSideBarActive}
+  }
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 100%;
     height: 80vh;
-    margin: 0;
 
     ${getSideBarActive}
   }

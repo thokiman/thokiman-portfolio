@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch, withRouter } from 'react-router-dom';
-import { CSSTransitionGroup } from 'react-transition-group';
 import { createStructuredSelector } from 'reselect';
 import {
   selectSkillEngineer,
@@ -24,34 +23,26 @@ export const AboutSkill = ({
 }) => {
   return (
     <SkillContainer $issidebaractive={isSideBarActive}>
-      <CSSTransitionGroup
-        transitionAppear={true}
-        transitionAppearTimeout={800}
-        transitionEnterTimeout={600}
-        transitionLeaveTimeout={200}
-        transitionName={'slide-out'}
-      >
-        <SkillHeader />
-        <Switch>
-          <Route
-            exact
-            path={`${url}`}
-            render={() => <VisualArtSkill skill={visualDesignCommunication} />}
-          />
-          <Route
-            path={`${url}/visualart`}
-            render={() => <VisualArtSkill skill={visualDesignCommunication} />}
-          />
-          <Route
-            path={`${url}/engineer`}
-            render={() => <EngineerSkill skill={engineer} />}
-          />
-          <Route
-            path={`${url}/technology`}
-            render={() => <TechnologySkill skill={technology} />}
-          />
-        </Switch>
-      </CSSTransitionGroup>
+      <SkillHeader />
+      <Switch>
+        <Route
+          exact
+          path={`${url}`}
+          render={() => <VisualArtSkill skill={visualDesignCommunication} />}
+        />
+        <Route
+          path={`${url}/visualart`}
+          render={() => <VisualArtSkill skill={visualDesignCommunication} />}
+        />
+        <Route
+          path={`${url}/engineer`}
+          render={() => <EngineerSkill skill={engineer} />}
+        />
+        <Route
+          path={`${url}/technology`}
+          render={() => <TechnologySkill skill={technology} />}
+        />
+      </Switch>
     </SkillContainer>
   );
 };

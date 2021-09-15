@@ -9,15 +9,6 @@ const getHomepageImage = ({ $rockWaveImage }) => {
   return $rockWaveImage.item.iconPath;
 };
 
-export const HomepageThokimanContentContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 110vh;
-
-  background-image: url(${getHomepageImage});
-  background-size: cover;
-`;
 const HomepageThokimanContainerIsNotActivated = css`
   display: none;
 `;
@@ -26,6 +17,15 @@ const getSideBarActive = ({ $issidebaractive }) => {
   if ($issidebaractive) return HomepageThokimanContainerIsNotActivated;
   return null;
 };
+
+export const HomepageThokimanContentContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 110vh;
+  background-image: url(${getHomepageImage});
+  background-size: cover;
+`;
 
 export const HomepageThokimanContainer = styled.div`
   height: 100%;

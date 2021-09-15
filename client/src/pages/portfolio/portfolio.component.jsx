@@ -2,7 +2,6 @@ import React, { lazy, Suspense } from 'react';
 import { connect } from 'react-redux';
 import { Route } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
-import PageShell from '../../components/commons/page-shell/page-shell.component';
 import SpinnerLoading from '../../components/commons/spinner-loading/spinner-loading.component';
 import {
   selectAllItems,
@@ -26,7 +25,7 @@ import {
 
 const PortfolioWebsite = lazy(() =>
   import(
-    '../../components/collections/portfolio-contents/portfolio-websites/portfolio-websites.component'
+    '../../components/collections/portfolio-contents/portfolio-website/portfolio-website.component'
   )
 );
 const PortfolioContentContainer = lazy(() =>
@@ -34,9 +33,9 @@ const PortfolioContentContainer = lazy(() =>
     '../../components/collections/portfolio-contents/portfolio-content/portfolio-content-container.component'
   )
 );
-const PortfolioHeader = lazy(() =>
+const PortfolioContentHeader = lazy(() =>
   import(
-    '../../components/collections/portfolio-header/portfolio-header.component'
+    '../../components/collections/portfolio-content-header/portfolio-header.component'
   )
 );
 
@@ -65,7 +64,8 @@ export const Portfolio = ({
             folio
           </PortfolioIsNotActivated>
         ) : null}
-        <PortfolioHeader />
+        <PortfolioContentHeader />
+
         <Route
           exact
           path={portfolioRoute}
@@ -93,9 +93,7 @@ export const Portfolio = ({
         />
         <Route
           path={websiteRoute}
-          render={() => {
-            <PortfolioWebsite websiteItems={websiteItems} />;
-          }}
+          render={() => <PortfolioWebsite websiteItems={websiteItems} />}
         />
       </Suspense>
     </PortfolioContainer>
@@ -117,4 +115,4 @@ const mapStateToProps = createStructuredSelector({
   isSideBarActive: selectIsSideBarActive,
 });
 
-export default connect(mapStateToProps)(PageShell(Portfolio));
+export default connect(mapStateToProps)(Portfolio);

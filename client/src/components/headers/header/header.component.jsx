@@ -7,7 +7,6 @@ import { selectPortfolioRoute } from '../../../redux/collection/collection.selec
 import { selectContactRoute } from '../../../redux/contact/contact.selectors';
 import { selectIsSideBarActive } from '../../../redux/header/header.selectors';
 import { selectServiceRoute } from '../../../redux/service/service.selectors';
-import PageShell from '../../commons/page-shell/page-shell.component';
 import SideBarIcon from '../sidebar-icon/sidebar-icon.component';
 import {
   HeaderContainer,
@@ -80,4 +79,4 @@ const mapStateToProps = createStructuredSelector({
   isSideBarActive: selectIsSideBarActive,
 });
 
-export default withRouter(connect(mapStateToProps)(PageShell(Header)));
+export default withRouter(connect(mapStateToProps)(Header));

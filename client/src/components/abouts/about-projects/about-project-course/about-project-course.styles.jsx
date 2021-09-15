@@ -1,3 +1,4 @@
+import { FiGithub } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import styled, { css, keyframes } from 'styled-components';
 
@@ -32,17 +33,18 @@ export const AboutCourseProjectAttributes = styled.div`
   width: 90%;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-auto-rows: repeat(3, 1fr);
   gap: 0px 20px;
   grid-template-areas:
-    'name-course-project name-course-project related-course-project related-course-project'
-    'name-course-project name-course-project related-course-project related-course-project'
-    'description-course-project description-course-project description-course-project description-course-project';
+    'name-course-project name-course-project github-course-project related-course-project related-course-project'
+    'name-course-project name-course-project  github-course-project related-course-project related-course-project'
+    'description-course-project description-course-project description-course-project description-course-project description-course-project';
 
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: fit-content;
   }
 `;
@@ -77,6 +79,13 @@ export const AboutNameCourseProject = styled(Link)`
   letter-spacing: 0.09em;
   display: flex;
   justify-content: flex-end;
+  @media only screen and (max-width: 900px) {
+    text-align: center;
+    font-size: 4vw;
+    width: 100%;
+    justify-content: center;
+    padding: 2vh 0;
+  }
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     text-align: center;
     font-size: 6vw;
@@ -90,6 +99,39 @@ export const AboutNameCourseProject = styled(Link)`
     color: ${lightBlueColor};
   }
 `;
+export const AboutGithubCourseProject = styled(Link)`
+  ${AboutCourseProjectStyles}
+
+  grid-area: github-course-project;
+
+  display: flex;
+  justify-content: center;
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    height: min-content;
+    width: min-content;
+  }
+
+  &:hover {
+    animation: ${aboutLinkCourseProject} 0.5s ease-in-out;
+    color: ${lightBlueColor};
+  }
+`;
+
+export const AboutGithubIconCourseProject = styled(FiGithub)`
+  ${AboutCourseProjectStyles}
+  width: 5vw;
+  height: 5vh;
+
+  &:hover {
+    animation: ${aboutLinkCourseProject} 0.5s ease-in-out;
+    color: ${lightBlueColor};
+  }
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    width: 8vw;
+    height: 8vh;
+  }
+`;
+
 export const AboutRelatedCourseProject = styled.div`
   ${AboutCourseProjectStyles}
   border: ${lightBlueColor} solid 1px;

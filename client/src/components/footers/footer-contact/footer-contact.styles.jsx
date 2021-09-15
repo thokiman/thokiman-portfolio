@@ -38,6 +38,17 @@ export const FooterContainerContact = styled.div`
     transition: left 0.5s ease;
     width: 64vw;
   }
+  @media only screen and (max-width: 500px) {
+    left: 32vw;
+  }
+  @media only screen and (max-width: 400px) {
+    height: 18vh;
+    left: 34vw;
+  }
+  @media only screen and (max-width: 370px) {
+    height: 16vh;
+    left: 42vw;
+  }
   ${getFooterSideBarActive}
 `;
 
@@ -108,10 +119,11 @@ export const ProfileFooterTextContact = styled.div`
   text-align: center;
   color: ${whiteSmokeColor};
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    font-size: 15px;
+    margin-top: 1vh;
+    font-size: 12px;
   }
   @media only screen and (max-width: 370px) {
-    font-size: 10px;
+    font-size: 9px;
   }
 `;
 

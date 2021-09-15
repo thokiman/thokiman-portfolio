@@ -1,10 +1,14 @@
-import { collection } from "../../data.object/collection.data";
-import CollectionActionTypes from "./collection.types";
+import { collection } from '../../data.object/collection.data';
+import CollectionActionTypes from './collection.types';
 
 const INITIAL_STATE = {
   collection,
   collectionList: [],
-  isLoading: false,
+  isLoadingCollection: false,
+  isWebsiteLinkDropdownActive: false,
+  currentWebsitePathname: collection.website.routeName,
+  websiteItemsSlider: [],
+  isLoadingWebsiteItemsSlider: true,
 };
 
 const collectionReducer = (state = INITIAL_STATE, action) => {
@@ -12,29 +16,50 @@ const collectionReducer = (state = INITIAL_STATE, action) => {
     case CollectionActionTypes.FETCH_COLLECTION_LIST:
       return {
         ...state,
-        isLoading: true,
+        isLoadingCollection: true,
       };
     case CollectionActionTypes.FETCH_COLLECTION_LIST_SUCCESS:
       return {
         ...state,
         collectionList: action.payload,
-        isLoading: false,
+        isLoadingCollection: false,
       };
     case CollectionActionTypes.FETCH_LOAD_MORE_COLLECTION:
       return {
         ...state,
-        isLoading: true,
+        isLoadingCollection: true,
       };
     case CollectionActionTypes.FETCH_LOAD_MORE_COLLECTION_SUCCESS:
       return {
         ...state,
         collectionList: [...state.collectionList, ...action.payload],
-        isLoading: false,
+        isLoadingCollection: false,
       };
     case CollectionActionTypes.FETCH_COLLECTION_LIST_FINISHED:
       return {
         ...state,
-        isLoading: false,
+        isLoadingCollection: false,
+      };
+    case CollectionActionTypes.TOGGLE_WEBSITE_LINK_DROPDOWN:
+      return {
+        ...state,
+        isWebsiteLinkDropdownActive: !state.isWebsiteLinkDropdownActive,
+      };
+    case CollectionActionTypes.SET_CURRENT_WEBSITE_PATHNAME:
+      return {
+        ...state,
+        currentWebsitePathname: action.payload,
+      };
+
+    case CollectionActionTypes.FETCH_WEBSITE_ITEMS_SLIDER:
+      return {
+        ...state,
+        websiteItemsSlider: [...state.websiteItemsSlider, ...action.payload],
+      };
+    case CollectionActionTypes.FETCH_WEBSITE_ITEMS_SLIDER_FINISHED:
+      return {
+        ...state,
+        isLoadingWebsiteItemsSlider: false,
       };
     default:
       return state;

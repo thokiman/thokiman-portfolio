@@ -30,7 +30,8 @@ export const FormTextAreaCheckerContainer = styled.span`
   left: -0.97vw;
   color: ${greenBlueColor};
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    left: -0.5vw;
+    left: -2.5vw;
+    top: 6vh;
   }
 `;
 const FormTextAreaCheckerIconStyles = css`
@@ -82,6 +83,7 @@ export const FormTextAreaElement = styled.textarea`
     &:focus ~ label {
       ${shrinkLabelMobile}
     }
+    margin: 40px 0;
   }
 `;
 
@@ -102,8 +104,8 @@ export const FormLabelElement = styled.label`
   transition: 300ms ease all;
   ${getFormLabelElementShrink}
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    font-size: 9vw;
-    top: 2vh;
+    font-size: 6vw;
+    top: 6vh;
     left: 5vw;
     ${getFormLabelElementShrinkMobile}
   }

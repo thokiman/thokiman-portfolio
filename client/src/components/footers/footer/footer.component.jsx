@@ -8,7 +8,6 @@ import {
 } from '../../../redux/about/about.selectors';
 import { selectPortfolioRoute } from '../../../redux/collection/collection.selectors';
 import { selectContactRoute } from '../../../redux/contact/contact.selectors';
-import PageShell from '../../commons/page-shell/page-shell.component';
 import FooterContact from '../footer-contact/footer-contact.component';
 import FooterGeneral from '../footer-general/footer-general.component';
 
@@ -32,4 +31,4 @@ const mapStateToProps = createStructuredSelector({
   aboutRoute: selectAboutRoute,
   timelineRoute: selectTimelineCareerRoute,
 });
-export default withRouter(connect(mapStateToProps)(PageShell(Footer)));
+export default withRouter(connect(mapStateToProps)(Footer));

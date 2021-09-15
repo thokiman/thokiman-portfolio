@@ -21,7 +21,10 @@ export const FooterContact = ({ isSideBarActive }) => {
         </ProfileFooterIconContact>
         <ProfileFooterTextContact>
           Copyright<sup>&#9400;</sup>2021.
-          <em>Allright reserved </em>| Thomas Santosa, B.Eng.
+          <em>Allright reserved </em>
+          {window.innerWidth <= 800 ? null : '|'}
+          <br />
+          Thomas Santosa, B.Eng.
         </ProfileFooterTextContact>
       </ProfileFooterContainerContact>
       <br />

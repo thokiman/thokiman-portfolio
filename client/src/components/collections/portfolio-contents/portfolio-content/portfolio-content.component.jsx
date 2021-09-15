@@ -1,19 +1,20 @@
-import React, { useEffect, useState } from "react";
-import { connect } from "react-redux";
-import { CSSTransitionGroup } from "react-transition-group";
-import { bindActionCreators } from "redux";
-import { createStructuredSelector } from "reselect";
+import React, { useEffect, useState } from 'react';
+import { connect } from 'react-redux';
+import { CSSTransitionGroup } from 'react-transition-group';
+import { bindActionCreators } from 'redux';
+import { createStructuredSelector } from 'reselect';
 import {
-  loadCollectionList, loadCollectionListFinished, loadMoreCollection
-} from "../../../../redux/collection/collection.actions";
+  loadCollectionList,
+  loadCollectionListFinished,
+  loadMoreCollection,
+} from '../../../../redux/collection/collection.actions';
 import {
   selectCollectionList,
-  selectIsLoadingCollectionList
-} from "../../../../redux/collection/collection.selectors";
-import PortfolioContentItem from "../portfolio-content-item/portfolio-content-item.component";
-import PortfolioItem from "../portfolio-item/portfolio-item.component";
-import { PortfolioLoadingState } from "./portfolio-content.styles";
-
+  selectIsLoadingCollectionList,
+} from '../../../../redux/collection/collection.selectors';
+import PortfolioItem from '../../portfolio-commons/portfolio-items/portfolio-items.component';
+import PortfolioContentItem from '../portfolio-content-item/portfolio-content-item.component';
+import { PortfolioLoadingState } from './portfolio-content.styles';
 
 export const PortfolioContent = ({
   items,
@@ -44,7 +45,7 @@ export const PortfolioContent = ({
         transitionAppearTimeout={960}
         transitionEnterTimeout={800}
         transitionLeaveTimeout={200}
-        transitionName={"slide-out"}
+        transitionName={'slide-out'}
       >
         <PortfolioItem items={items} />
       </CSSTransitionGroup>
@@ -55,12 +56,12 @@ export const PortfolioContent = ({
       transitionAppearTimeout={960}
       transitionEnterTimeout={800}
       transitionLeaveTimeout={200}
-      transitionName={"slide-out"}
+      transitionName={'slide-out'}
     >
       {isLoading && collectionList.length === 0 ? (
         <PortfolioLoadingState
-          type="Puff"
-          color="#e3e1e4"
+          type='Puff'
+          color='#e3e1e4'
           height={100}
           width={100}
           visible={isLoading}

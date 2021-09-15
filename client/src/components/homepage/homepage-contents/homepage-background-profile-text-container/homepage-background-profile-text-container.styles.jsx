@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 const backgroundProfileText = '#000000';
 const lightGrayColor = '#9096ae';
-const maxWidth = 1675;
+const maxWidthDesktop = 1675;
 
 const HomepageIsNotActived = css`
   display: none;
@@ -17,7 +17,7 @@ export const HomepageProfileTextContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media only screen and (max-width: ${maxWidth}px) {
+  @media only screen and (max-width: ${maxWidthDesktop}px) {
     background-color: ${backgroundProfileText};
     ${getSideBarActive}
     height: max-content;
@@ -45,7 +45,7 @@ export const HomepageNameText = styled.div`
   word-spacing: -30px;
   padding-right: 10px;
   margin-bottom: 20px;
-  @media only screen and (max-width: ${maxWidth}px) {
+  @media only screen and (max-width: ${maxWidthDesktop}px) {
     padding-top: 40px;
     font-size: 17vw;
     word-spacing: -18px;
@@ -67,7 +67,7 @@ export const HomepageActivityText = styled.div`
   height: fit-content;
   margin-bottom: 10px;
   text-align: center;
-  @media only screen and (max-width: ${maxWidth}px) {
+  @media only screen and (max-width: ${maxWidthDesktop}px) {
     text-align: left;
     width: 80%;
     font-size: 7vw;
@@ -83,7 +83,7 @@ export const HomepageQuoteText = styled.div`
   width: 90%;
   height: fit-content;
   text-align: right;
-  @media only screen and (max-width: ${maxWidth}px) {
+  @media only screen and (max-width: ${maxWidthDesktop}px) {
     text-align: right;
     width: 80%;
     font-size: 4.5vw;

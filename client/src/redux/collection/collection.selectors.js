@@ -1,16 +1,21 @@
-import { createSelector } from "reselect";
+import { createSelector } from 'reselect';
 
 const selectCollection = (state) => state.collection;
 const selectAllCollection = (state) => state.collection.collection;
 
 export const selectIsLoadingCollectionList = createSelector(
   [selectCollection],
-  (collection) => collection.isLoading
+  (collection) => collection.isLoadingCollection
 );
 
 export const selectCollectionList = createSelector(
   [selectCollection],
   (collection) => collection.collectionList
+);
+
+export const selectWebsiteHeaderDropdown = createSelector(
+  [selectCollection],
+  (collection) => collection.isWebsiteLinkDropdownActive
 );
 
 export const selectAllItems = createSelector(
@@ -85,15 +90,53 @@ export const selectPhotographyColorTitle = createSelector(
 export const selectWebsiteRoute = createSelector(
   [selectAllCollection],
   (collection) => collection.website.routeName
-)
+);
 
 export const selectWebsiteTitle = createSelector(
   [selectAllCollection],
   (collection) => collection.website.title
-)
+);
 
 export const selectWebsiteItems = createSelector(
   [selectAllCollection],
   (collection) => collection.website.items
+);
+export const selectThokimanWebsiteRoute = createSelector(
+  [selectAllCollection],
+  (collection) => collection.website.items.thokiman.routeName
+);
+export const selectThokimanWebsiteTitle = createSelector(
+  [selectAllCollection],
+  (collection) => collection.website.items.thokiman.title
+);
 
-)
+export const selectCrownWebsiteRoute = createSelector(
+  [selectAllCollection],
+  (collection) => collection.website.items.crown.routeName
+);
+export const selectCrownWebsiteTitle = createSelector(
+  [selectAllCollection],
+  (collection) => collection.website.items.crown.title
+);
+export const selectYelpcampWebsiteRoute = createSelector(
+  [selectAllCollection],
+  (collection) => collection.website.items.yelpcamp.routeName
+);
+export const selectYelpcampWebsiteTitle = createSelector(
+  [selectAllCollection],
+  (collection) => collection.website.items.yelpcamp.title
+);
+
+export const selectCurrentWebsitePathname = createSelector(
+  [selectCollection],
+  (collection) => collection.currentWebsitePathname
+);
+
+export const selectIsLoadingWebsiteItemsSlider = createSelector(
+  [selectCollection],
+  (collection) => collection.isLoadingWebsiteItemsSlider
+);
+export const selectWebsiteItemsSlider = createSelector(
+  [selectCollection],
+  (collection) => collection.websiteItemsSlider
+);

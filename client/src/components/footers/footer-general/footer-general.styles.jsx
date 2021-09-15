@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import styled, { css, keyframes } from 'styled-components';
 import { ReactComponent as CreamPrickInklaim } from '../../../assets/collections-icon/prick-inklaim-icon/logo/prick_inklaim_logo_cream.svg';
 import { ReactComponent as WhiteOutlineThokiman } from '../../../assets/collections-icon/thokiman-icon/logo/outline/thokiman_head_logo_cream.svg';
-
+const maxWidthTablet = 1024;
 const maxWidthSmartphone = 800;
 const blackColor = '#000000';
 const heavyLightBlueColor = '#bccfd5';
@@ -10,14 +10,20 @@ const whiteSmokeColor = '#e3e1e4';
 const greenBlueColor = '#128194';
 
 const FooterIsActivated = css`
-  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+  @media only screen and (max-width: ${maxWidthTablet}px) {
     position: relative;
     width: 100vw;
-    left: 0px;
+    left: 0vw;
     transition: left 0.5s ease;
     padding: 10px;
     margin: 9px 0;
     height: 18vh;
+  }
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    left: -3vw;
+  }
+  @media only screen and (max-width: 700px) {
+    left: 0vw;
   }
 `;
 
@@ -36,14 +42,27 @@ export const FooterContainer = styled.div`
   top: 0;
   right: 3vw;
   bottom: 0;
-
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     position: relative;
-    top: 0;
-    left: 140px;
-    bottom: 0;
-    transition: left 0.5s ease;
     width: 64vw;
+    left: 16vw;
+    margin: 0.3vw;
+    transition: left 0.5s ease;
+  }
+  @media only screen and (max-width: 550px) {
+    left: 29vw;
+  }
+  @media only screen and (max-width: 500px) {
+    left: 32vw;
+  }
+  @media only screen and (max-width: 400px) {
+    left: 36vw;
+  }
+  @media only screen and (max-width: 350px) {
+    left: 33vw;
+  }
+  @media only screen and (max-width: 300px) {
+    left: 37vw;
   }
   ${getFooterSideBarActive}
 `;
@@ -139,9 +158,14 @@ export const SocialFooterContainer = styled.div`
   align-items: center;
   justify-items: center;
   border-left: ${whiteSmokeColor} solid 1px;
-  @media only screen and (max-width: 340px) {
-    width: 100%;
-    margin-bottom: 50px;
+  @media only screen and (max-width: 350px) {
+    grid-template-columns: repeat(3, 37px);
+    grid-auto-rows: 23px;
+    margin-bottom: 4vh;
+    margin-top: 4vh;
+  }
+  @media only screen and (max-width: 300px) {
+    grid-auto-rows: 28px;
   }
 `;
 
@@ -197,12 +221,24 @@ export const SocialItem = styled(Link)`
   height: 35px;
   width: 35px;
   object-fit: cover;
+
   background-image: url(${({ backgroundimage }) => backgroundimage.iconPath});
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    width: 35px;
-    height: 35px;
+    width: 6vw;
+    height: 4vh;
   }
-
+  @media only screen and (max-width: 400px) {
+    width: 7vw;
+    height: 5vh;
+  }
+  @media only screen and (max-width: 400px) and (max-height: 667px) {
+    width: 6vw;
+    height: 4vh;
+  }
+  @media only screen and (max-width: 350px) {
+    width: 7vw;
+    height: 4vh;
+  }
   &:hover {
     animation: ${socialItem} 2s ease-in-out infinite;
   }

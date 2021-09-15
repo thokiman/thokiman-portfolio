@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled, { css, keyframes } from 'styled-components';
-
+const maxWidthTablet = 1024;
+const maxWidthDesktop = 1366;
 const backgroundColorLeftServiceContainer = 'rgba(18, 129, 148, 0.5)';
 const borderColorDirectoryService = 'rgba(18, 129, 148, 0.5)';
 const grayColor = '#3f4249';
@@ -44,6 +45,14 @@ export const DirectoryService = styled.div`
   height: 76%;
   width: 95%;
   cursor: pointer;
+  @media only screen and (max-width: ${maxWidthDesktop}px) {
+    width: 98vw;
+    height: 20vh;
+  }
+  @media only screen and (max-width: ${maxWidthTablet}px) {
+    width: 98vw;
+    height: 15vh;
+  }
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 98vw;
     height: 50vh;
@@ -96,6 +105,16 @@ const DirectoryServiceTextEngStyles = css`
   grid-area: directory-service-text-eng;
   text-align: justify;
   justify-content: flex-end;
+  ${
+    '' /* @media only screen and (max-width: ${maxWidthDesktop}px) {
+    border: red solid 1px;
+    height: 10vh;
+  }
+  @media only screen and (max-width: ${maxWidthTablet}px) {
+    border: red solid 1px;
+    height: 9vh;
+  } */
+  }
 `;
 const DirectoryServiceTextEngHide = css`
   ${DirectoryServiceTextEngStyles}
@@ -128,6 +147,16 @@ const DirectoryServiceTextFsdStyles = css`
   line-height: 1.1em;
   text-align: left;
   justify-content: flex-start;
+  ${
+    '' /* @media only screen and (max-width: ${maxWidthDesktop}px) {
+    border: red solid 1px;
+    height: 10vh;
+  }
+  @media only screen and (max-width: ${maxWidthTablet}px) {
+    border: red solid 1px;
+    height: 9vh;
+  } */
+  }
 `;
 const DirectoryServiceTextFsdHide = css`
   ${DirectoryServiceTextFsdStyles}
@@ -159,6 +188,16 @@ const DirectoryServiceTextGdStyles = css`
   line-height: 1.45em;
   text-align: end;
   justify-content: flex-end;
+  ${
+    '' /* @media only screen and (max-width: ${maxWidthDesktop}px) {
+    border: red solid 1px;
+    height: 10vh;
+  }
+  @media only screen and (max-width: ${maxWidthTablet}px) {
+    border: red solid 1px;
+    height: 9vh;
+  } */
+  }
 `;
 const DirectoryServiceTextGdHide = css`
   ${DirectoryServiceTextGdStyles}
@@ -190,6 +229,16 @@ const DirectoryServiceTextPgStyles = css`
   line-height: 1.1em;
   text-align: left;
   justify-content: flex-start;
+  ${
+    '' /* @media only screen and (max-width: ${maxWidthDesktop}px) {
+    border: red solid 1px;
+    height: 10vh;
+  }
+  @media only screen and (max-width: ${maxWidthTablet}px) {
+    border: red solid 1px;
+    height: 9vh;
+  } */
+  }
 `;
 const DirectoryServiceTextPgHide = css`
   ${DirectoryServiceTextPgStyles}

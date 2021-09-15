@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled, { css, keyframes } from 'styled-components';
 import { ReactComponent as ThokimanHeadColor } from '../../../../assets/collections-icon/thokiman-icon/logo/color/thokiman_head_color.svg';
-
+const maxWidthTablet = 1024;
 const maxWidthSmartphone = 800;
 const greenBlueColor = '#128194';
 const lightBlueColor = '#74c6d4';
@@ -16,8 +16,11 @@ export const AboutDropdownContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+  @media only screen and (max-width: ${maxWidthTablet}px) {
     width: 100vw;
+    height: 55vh;
+  }
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     height: 50vh;
   }
 `;

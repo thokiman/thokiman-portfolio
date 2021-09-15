@@ -2,7 +2,6 @@ import React, { lazy, Suspense } from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
-import PageShell from '../../components/commons/page-shell/page-shell.component';
 import SpinnerLoading from '../../components/commons/spinner-loading/spinner-loading.component';
 import {
   selectAboutRoute,
@@ -103,4 +102,4 @@ const mapStateToProps = createStructuredSelector({
   rockWaveImage: selectRockWaveImage,
 });
 
-export default connect(mapStateToProps)(PageShell(About));
+export default connect(mapStateToProps)(About);

@@ -37,6 +37,11 @@ export const FormSelectValueActive = styled.div`
   padding: 5px;
   animation: ${formSelectActive} 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   border-bottom: ${greenBlueColor} solid 1px;
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    position: relative;
+    font-size: 6vw;
+    left: 3.5vw;
+  }
 `;
 
 const FormSelectValueHoverStyles = css`
@@ -56,6 +61,11 @@ export const FormSelectTitle = styled.div`
   border-bottom: ${greenBlueColor} solid 1px;
   ${FormSelectValue}:hover & {
     ${FormSelectValueHoverStyles}
+  }
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    font-size: 6vw;
+    top: 0vh;
+    left: 3.5vw;
   }
 `;
 
@@ -93,6 +103,7 @@ export const FormSelectArrowButton = styled.span`
   display: flex;
   align-items: center;
   width: 35px;
+
   color: ${greenBlueColor};
   animation: ${formSelectButtonHide} linear 0.4s;
   ${getFormSelectArrowButtonActive}

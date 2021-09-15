@@ -57,7 +57,7 @@ export const HomepageBackgroundProfileImage = styled.div`
     display: block;
 
     width: 100vw;
-    height: 67vh;
+    height: 78vh;
   }
 `;
 
@@ -74,7 +74,7 @@ export const HomepageProfileImage = styled.div`
     background-position: 100% 50%;
   }
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    background-position: 100% 100%;
+    background-position: 100% 85%;
   }
 `;
 

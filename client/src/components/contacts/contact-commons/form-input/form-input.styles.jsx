@@ -10,6 +10,13 @@ const shrinkLabel = css`
   font-size: 30px;
   color: ${heavyLightBlueColor};
 `;
+const shrinkLabelMobile = css`
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    color: ${heavyLightBlueColor};
+    font-size: 5vw;
+    top: -0.5vh;
+  }
+`;
 
 export const FormInputGroup = styled.div`
   position: relative;
@@ -22,6 +29,9 @@ export const FormInputCheckerContainer = styled.span`
   color: ${greenBlueColor};
   position: absolute;
   left: -1.1vw;
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    left: -3vw;
+  }
 `;
 const FormInputCheckerIconStyles = css`
   width: 2vw;
@@ -72,6 +82,10 @@ const getFormLabelElementShrink = ({ $formvalue }) => {
   if ($formvalue.length) return shrinkLabel;
 };
 
+const getFormLabelElementShrinkMobile = ({ $formvalue }) => {
+  if ($formvalue.length) return shrinkLabelMobile;
+};
+
 export const FormLabelElement = styled.label`
   color: ${greenBlueColor};
   font-size: 35px;
@@ -81,6 +95,12 @@ export const FormLabelElement = styled.label`
   left: 15px;
   top: 10px;
   transition: 300ms ease all;
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    font-size: 6vw;
+    top: 0.5vh;
+    left: 4vw;
+    ${getFormLabelElementShrinkMobile}
+  }
   ${getFormLabelElementShrink}
 `;
 FormInputGroup.displayName = 'FormInputGroup';

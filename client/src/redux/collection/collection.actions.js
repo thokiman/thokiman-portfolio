@@ -1,4 +1,4 @@
-import CollectionActionTypes from "./collection.types";
+import CollectionActionTypes from './collection.types';
 
 export const loadCollectionList = (items, initialPageNumber, pageSize) => ({
   type: CollectionActionTypes.FETCH_COLLECTION_LIST,
@@ -22,4 +22,22 @@ export const loadMoreCollectionSuccess = (loadItems) => ({
 
 export const loadCollectionListFinished = () => ({
   type: CollectionActionTypes.FETCH_COLLECTION_LIST_FINISHED,
+});
+
+export const toggleWebsiteLinkDropdown = () => ({
+  type: CollectionActionTypes.TOGGLE_WEBSITE_LINK_DROPDOWN,
+});
+
+export const setCurrentWebsitePahtname = (currentPath) => ({
+  type: CollectionActionTypes.SET_CURRENT_WEBSITE_PATHNAME,
+  payload: currentPath,
+});
+
+export const loadWebsiteItemsSlider = (items) => ({
+  type: CollectionActionTypes.FETCH_WEBSITE_ITEMS_SLIDER,
+  payload: items,
+});
+
+export const loadWebsiteItemsSliderFinished = () => ({
+  type: CollectionActionTypes.FETCH_WEBSITE_ITEMS_SLIDER_FINISHED,
 });

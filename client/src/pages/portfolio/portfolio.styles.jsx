@@ -22,7 +22,7 @@ export const PortfolioIsNotActivated = styled.div`
   position: absolute;
   top: 10vh;
   left: 6vw;
-  font-size: 450%;
+  font-size: 10vw;
   letter-spacing: 0.17em;
   width: 50vw;
   line-height: 1.5em;
@@ -45,6 +45,7 @@ const getPortfolioSideBarActive = ({ $issidebaractive }) => {
 
 export const PortfolioContainer = styled.div`
   background-color: ${blackColor};
+
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 64vw;
     position: relative;

@@ -34,7 +34,7 @@ export const SideBarHeaderTextContainer = styled.div`
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 100%;
     position: relative;
-    top: 50px;
+    top: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,8 +60,9 @@ export const SideBarHeaderLink = styled(Link)`
   display: none;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     ${getSideBarHeaderTextActive}
+
     text-decoration: none;
-    width:fit-content;
+    width: fit-content;
     height: 100%;
     display: block;
     text-align: center;
@@ -69,4 +70,5 @@ export const SideBarHeaderLink = styled(Link)`
     font-size: 30px;
     margin: 10px 0;
     padding: 5px 0;
+  }
 `;

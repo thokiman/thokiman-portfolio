@@ -1,4 +1,10 @@
 import styled, { css } from 'styled-components';
+
+const backgroundColorContactLocationContainer = 'rgba(18, 129, 148, 0.5)';
+const backgroundColorContactLocationInfo = 'rgba(116, 198, 212, 0.45)';
+const grayBlueColor = '#128194';
+const heavyLightBlueColor = '#bccfd5';
+
 const ContactLocationContainerIsNotActivated = css`
   display: none;
 `;
@@ -9,7 +15,7 @@ const getSideBarActive = ({ $issidebaractive }) => {
 export const ContactLocationContainer = styled.div`
   width: 30%;
   height: 100%;
-  background-color: rgba(18, 129, 148, 0.5);
+  background-color: ${backgroundColorContactLocationContainer};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,7 +34,7 @@ export const ContactLocationInfo = styled.div`
   justify-content: center;
   height: 45%;
   width: 98%;
-  background-color: rgba(116, 198, 212, 0.45);
+  background-color: ${backgroundColorContactLocationInfo};
   margin: 5px 0;
   @media only screen and (max-width: 800px) {
     height: 50vh;
@@ -38,7 +44,7 @@ export const ContactLocationInfo = styled.div`
 export const ContactLocationTitle = styled.div`
   text-align: left;
   font-size: 3vw;
-  color: #128194;
+  color: ${grayBlueColor};
   margin: 0 5px;
   letter-spacing: 0.02em;
   @media only screen and (max-width: 800px) {
@@ -49,7 +55,7 @@ export const ContactLocationTitle = styled.div`
 export const ContactLocationItem = styled.div`
   font-family: futura-book;
   text-align: left;
-  color: #bccfd5;
+  color: ${heavyLightBlueColor};
   font-size: 1.5vw;
   margin: 0 5px;
   letter-spacing: 0.1em;

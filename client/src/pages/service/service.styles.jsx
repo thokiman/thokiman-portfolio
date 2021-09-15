@@ -26,7 +26,7 @@ export const ServiceIsNotActivated = styled.div`
   position: absolute;
   top: 10vh;
   left: 6vw;
-  font-size: 450%;
+  font-size: 10vw;
   letter-spacing: 0.17em;
   width: 50vw;
   line-height: 1.5em;
@@ -73,6 +73,9 @@ export const ServiceContainer = styled.div`
     overflow-x: hidden;
     opacity: 0.5;
     height: 70.8vh;
+  }
+  @media only screen and (max-width: 350px) {
+    height: 71vh;
   }
   ${getServiceSideBarActive};
 `;

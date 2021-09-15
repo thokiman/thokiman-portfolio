@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { CSSTransitionGroup } from 'react-transition-group';
 import { selectIsSideBarActive } from 'redux/header/header.selectors';
 import { createStructuredSelector } from 'reselect';
 import { selectPhotoService } from '../../../../redux/service/service.selectors';
@@ -18,19 +17,11 @@ export const ServicePhotography = ({
 }) => {
   return (
     <RightServiceContainerPg $issidebaractive={isSideBarActive}>
-      <CSSTransitionGroup
-        transitionAppear={true}
-        transitionAppearTimeout={800}
-        transitionEnterTimeout={800}
-        transitionLeaveTimeout={200}
-        transitionName={'slide-out'}
-      >
-        <RightServiceContentPg>
-          <ServiceUrlGeneralContent title={title} description={description} />
-          <ServiceIconContent items={photographyIconItems} />
-          <ServiceUrlIconContent items={photoStockItems} />
-        </RightServiceContentPg>
-      </CSSTransitionGroup>
+      <RightServiceContentPg>
+        <ServiceUrlGeneralContent title={title} description={description} />
+        <ServiceIconContent items={photographyIconItems} />
+        <ServiceUrlIconContent items={photoStockItems} />
+      </RightServiceContentPg>
     </RightServiceContainerPg>
   );
 };

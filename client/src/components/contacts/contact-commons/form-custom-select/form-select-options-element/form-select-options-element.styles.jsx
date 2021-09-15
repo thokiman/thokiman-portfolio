@@ -2,7 +2,7 @@ import styled, { keyframes } from 'styled-components';
 
 const greenBlueColor = '#128194';
 const heavyLightBlueColor = '#bccfd5';
-
+const maxWidthSmartphone = 800;
 export const FormSelectContainer = styled.ul`
   list-style-type: none;
   margin: 5px 0;
@@ -38,6 +38,10 @@ export const FormSelectItem = styled.li`
   &:hover {
     color: ${greenBlueColor};
     transition: color linear 0.2s;
+  }
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    font-size: 4vw;
+    margin-bottom: 15px;
   }
 `;
 

@@ -6,7 +6,7 @@ import {
   PortfolioImageCollection,
   PortfolioImageCollectionsContainer,
   PortfolioImageItem,
-} from './portfolio-item.styles';
+} from './portfolio-items.styles';
 
 export const PortfolioItem = ({ items, isSideBarActive }) => {
   return (

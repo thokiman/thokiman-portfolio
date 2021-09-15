@@ -5,15 +5,23 @@ import { ReactComponent as BluePrickInklaimIcon } from '../../../assets/collecti
 const maxWidthSmartphone = 800;
 const blackColor = '#000000';
 const greenBlueColor = '#128194';
+const greenBlueLowColor = 'rgba(18,129,148,0.1)';
+const greenBlueMediumColor = 'rgba(18,129,148,0.3)';
 const greenBlueColor1 = '#3F96A8';
-const greenBlueColor2 = '#75C6D4';
+const greenBlueLowColor1 = 'rgb(63, 150, 168,0.1)';
+const greenBlueMediumColor1 = 'rgb(63, 150, 168,0.3)';
+const greenBlueColor2 = '#70b9c5';
+const greenBlueLowColor2 = 'rgba(112,185,197,0.1)';
+const greenBlueMediumColor2 = 'rgba(112,185,197,0.3)';
 const greenBlueColor3 = '#73cfdf';
+const greenBlueLowColor3 = 'rgba(115,207,223,0.1)';
+const greenBlueMediumColor3 = 'rgba(115,207,223,0.3)';
 const greenBlueColor4 = '#99f0ff';
+const greenBlueLowColor4 = 'rgba(153,240,255,0.1)';
+const greenBlueMediumColor4 = 'rgba(153,240,255,0.3)';
 const whiteSmokeColor = '#e3e1e4';
 const lightBlueColor = '#74c6d4';
 const heavyLightBlueColor = '#BBCED4';
-const flickerColor = 'rgba(116, 198, 212, 0.8)';
-const borderColorHandleLinkHide = 'rgba(116, 198, 212, 0.1)';
 
 const HeaderIsActivated = css`
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
@@ -58,6 +66,7 @@ export const HeaderContainer = styled.div`
     transition: left 0.5s ease;
     opacity: 0.5;
   }
+
   ${getHeaderSideBarActive};
 `;
 const piLogo = keyframes`
@@ -152,7 +161,6 @@ export const HeaderTextContainer = styled.div`
 `;
 
 const HeaderLinkStyles = css`
-  margin: 0 10px;
   font-size: 150%;
   padding: 10px 10px;
   text-decoration: none;
@@ -163,20 +171,21 @@ const HeaderLinkStyles = css`
 const colorChange = keyframes`
   
     0% {
-    color: ${whiteSmokeColor};
-    border-color: ${greenBlueColor1};
+    color: ${heavyLightBlueColor};
+  
+    
   }
   33.3333% {
-    color: ${heavyLightBlueColor};
-    border-color: ${greenBlueColor2};
+    color: ${greenBlueColor4};
+  
   }
   66.666% {
     color: ${lightBlueColor};
-    border-color: ${greenBlueColor3};
+  
   }
   100% {
-    color: ${whiteSmokeColor};
-    border-color: ${greenBlueColor4};
+    color: ${heavyLightBlueColor};
+  
   }
 
 
@@ -184,10 +193,15 @@ const colorChange = keyframes`
 
 const HeaderLinkActive = css`
   ${HeaderLinkStyles}
-  transition: all 0.7s linear;
+  transition: all 2.5s ease-in-out;
   color: ${lightBlueColor};
-  border-bottom: 2px solid;
-  animation: ${colorChange} 2.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite
+
+  box-shadow: ${greenBlueColor} 0px 2px 0px 0px,
+    ${greenBlueColor1} 0px 7px 0px 0px, ${greenBlueColor2} 0px 12px 0px 0px,
+    ${greenBlueColor3} 0px 17px 0px 0px, ${greenBlueColor4} 0px 22px 0px 0px,
+    0px 2px 15px 5px rgba(0, 0, 0, 0);
+
+  animation: ${colorChange} 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite
     alternate both;
   cursor: default;
 `;
@@ -196,46 +210,53 @@ const borderFlicker = keyframes`
   0% {
     opacity:0.1;
  
-box-shadow: 0px 0px 50px 2px ${flickerColor};
+text-shadow: 0px 0px 50px 1px ${greenBlueColor4};
 
   }
   2% {
     opacity:1;
  
-box-shadow: 0px 0px 50px 1px ${flickerColor};
+text-shadow: 0px 0px 50px 1px ${greenBlueColor4};
   }
   4% {
     opacity:0.1;
-    box-shadow: 0px 0px 50px 1px ${flickerColor};
+    text-shadow: 0px 0px 50px 1px ${greenBlueColor4};
   }
   
   8% {
     opacity:1;
-    box-shadow: 0px 0px 50px 1px ${flickerColor};
+    text-shadow: 0px 0px 50px 1px ${greenBlueColor4};
   }
   70% {
     opacity:0.7;
-    box-shadow: 0px 0px 50px 1px ${flickerColor};
+    text-shadow: 0px 0px 50px 1px ${greenBlueColor4};
   }
   100% {
     opacity:1;
-    box-shadow: 0px 0px 50px 1px ${flickerColor};
+    text-shadow: 0px 0px 50px 1px ${greenBlueColor4};
   }
 
 `;
 
 const HeaderLinkHide = css`
   ${HeaderLinkStyles}
-  color: ${greenBlueColor};
+  color: ${greenBlueColor3};
 
-  border: 2px solid ${borderColorHandleLinkHide};
-
-  opacity: 0.2;
-  animation: ${borderFlicker} 1.5s linear infinite;
+  animation: ${borderFlicker} 2.5s linear infinite;
+  box-shadow: ${greenBlueLowColor} 2px -2px 0px 0px,
+    ${greenBlueLowColor1} 7px -7px 0px 0px,
+    ${greenBlueLowColor2} 12px -12px 0px 0px,
+    ${greenBlueLowColor3} 17px -17px 0px 0px,
+    ${greenBlueLowColor4} 22px -22px 0px 0px, 2px -2px 15px 5px rgba(0, 0, 0, 0);
 
   transition: all 1s linear;
   &:hover {
-    border: 2px solid ${flickerColor};
+    box-shadow: ${greenBlueMediumColor} 2px 0px 0px 0px,
+      ${greenBlueMediumColor1} 7px 0px 0px 0px,
+      ${greenBlueMediumColor2} 12px 0px 0px 0px,
+      ${greenBlueMediumColor3} 17px 0px 0px 0px,
+      ${greenBlueMediumColor4} 22px 0px 0px 0px,
+      2px 0px 15px 5px rgba(0, 0, 0, 0);
     transition: all 0.5s linear;
   }
 `;

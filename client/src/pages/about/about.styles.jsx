@@ -29,7 +29,8 @@ export const AboutIsNotActivated = styled.div`
   position: absolute;
   top: 10vh;
   left: 6vw;
-  font-size: 450%;
+
+  font-size: 10vw;
   letter-spacing: 0.17em;
   animation: ${aboutSideBarHide} 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 `;
@@ -73,11 +74,18 @@ const AboutStyles = css`
     opacity: 0.5;
     height: 70.8vh;
   }
+  @media only screen and (max-width: 500px) {
+    height: 68vh;
+  }
+  @media only screen and (max-width: 350px) {
+    height: 71vh;
+  }
   ${getAboutSideBarActive};
 `;
 const AboutContainer = css`
   ${AboutStyles}
   height: 72vh;
+
   background-image: url(${getAboutImage});
 `;
 const TimelineCareerContainerMobile = css`

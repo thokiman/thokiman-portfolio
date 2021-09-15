@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { CSSTransitionGroup } from 'react-transition-group';
 import { createStructuredSelector } from 'reselect';
 import { selectIsSideBarActive } from '../../../../redux/header/header.selectors';
 import { selectEngineerService } from '../../../../redux/service/service.selectors';
@@ -17,18 +16,10 @@ export const ServiceEngineer = ({
 }) => {
   return (
     <RightServiceContainerEng $issidebaractive={isSideBarActive}>
-      <CSSTransitionGroup
-        transitionAppear={true}
-        transitionAppearTimeout={800}
-        transitionEnterTimeout={800}
-        transitionLeaveTimeout={200}
-        transitionName={'slide-out'}
-      >
-        <RightServiceContentEng>
-          <ServiceGeneralContent title={title} description={description} />
-          <ServiceIconContent items={items} />
-        </RightServiceContentEng>
-      </CSSTransitionGroup>
+      <RightServiceContentEng>
+        <ServiceGeneralContent title={title} description={description} />
+        <ServiceIconContent items={items} />
+      </RightServiceContentEng>
     </RightServiceContainerEng>
   );
 };

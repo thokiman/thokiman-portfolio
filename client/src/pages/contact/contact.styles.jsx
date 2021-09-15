@@ -26,7 +26,7 @@ export const ContactIsNotActivated = styled.div`
   position: absolute;
   top: 10vh;
   left: 6vw;
-  font-size: 450%;
+  font-size: 10vw;
   letter-spacing: 0.17em;
   width: 50vw;
   line-height: 1.5em;
@@ -70,10 +70,13 @@ export const ContactContainer = styled.div`
     right: 0;
     bottom: 0;
     transition: left 0.5s ease;
-    height: 115vh;
+    height: 62vh;
     overflow-y: scroll;
     overflow-x: hidden;
     opacity: 0.5;
+  }
+  @media only screen and (max-width: 350px) {
+    height: 70vh;
   }
   ${getContactSideBarActive};
 `;

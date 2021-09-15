@@ -24,7 +24,14 @@ export const FooterGeneral = ({ socialIcon, isSideBarActive }) => {
         </ProfileFooterIcon>
         <ProfileFooterText $issidebaractive={isSideBarActive}>
           Copyright<sup>&#9400;</sup>2021.
-          <em>Allright reserved </em>| Thomas Santosa, B.Eng.
+          <em>Allright reserved </em>
+          {window.innerWidth <= 800 ? (
+            <span>
+              <br /> Thomas Santosa, B.Eng.
+            </span>
+          ) : (
+            ' | Thomas Santosa, B.Eng.'
+          )}
         </ProfileFooterText>
       </ProfileFooterContainer>
       <br />

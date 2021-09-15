@@ -1,10 +1,9 @@
-import React from "react";
-
+import React from 'react';
+import PorfolioItem from '../../portfolio-commons/portfolio-items/portfolio-items.component';
 import {
-  PortfolioLoadingState,
   PortfolioContent,
-} from "./portfolio-content-item.styles";
-import PorfolioItem from "../portfolio-item/portfolio-item.component";
+  PortfolioLoadingState,
+} from './portfolio-content-item.styles';
 
 export const PortfolioContentItem = ({
   collectionList,
@@ -16,8 +15,8 @@ export const PortfolioContentItem = ({
       <PorfolioItem items={collectionList} />
       {isLoading && (
         <PortfolioLoadingState
-          type="Puff"
-          color="#e3e1e4"
+          type='Puff'
+          color='#e3e1e4'
           height={100}
           width={100}
           visible={isLoading}

@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { CSSTransitionGroup } from 'react-transition-group';
 import { createStructuredSelector } from 'reselect';
 import {
   selectProjectAccomplishmentCourses,
@@ -24,18 +23,10 @@ export const AboutProject = ({
 }) => {
   return (
     <ProjectContainer $issidebaractive={isSideBarActive}>
-      <CSSTransitionGroup
-        transitionAppear={true}
-        transitionAppearTimeout={800}
-        transitionEnterTimeout={600}
-        transitionLeaveTimeout={200}
-        transitionName={'slide-out'}
-      >
-        <AboutThesisProject thesis={thesis} />
-        <AboutCourseProject course={courses} />
-        <AboutExperienceProject experience={experiences} />
-        <AboutAchievementProject lastExperience={lastExperiences} />
-      </CSSTransitionGroup>
+      <AboutThesisProject thesis={thesis} />
+      <AboutCourseProject course={courses} />
+      <AboutExperienceProject experience={experiences} />
+      <AboutAchievementProject lastExperience={lastExperiences} />
     </ProjectContainer>
   );
 };

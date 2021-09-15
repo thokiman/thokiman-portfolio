@@ -79,10 +79,11 @@ export const TechnologyGridContent = styled.div`
 `;
 
 export const TechnologyImage = styled.img`
-  padding: 0.5vw;
+  padding: 0.6vw;
   width: 10vw;
   height: 17vh;
   justify-self: stretch;
+  border-radius: 1vw 1vw 1vw 1vw;
   animation: ${neon} 3s ease-in-out infinite alternate both;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 100px;

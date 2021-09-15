@@ -24,8 +24,8 @@ export const HomepageIsNotActivated = styled.div`
   color: ${whiteSmokeColor};
   position: absolute;
   top: 10vh;
-  left: 6vw;
-  font-size: 480%;
+  left: -10vw;
+  font-size: 10vw;
   letter-spacing: 0.17em;
   width: 50vw;
   line-height: 1.5em;
@@ -44,20 +44,10 @@ const HomepageIsActivated = css`
     height: 500vh;
   }
   @media only screen and (max-width: ${maxWidthTabletPro}px) {
-    position: relative;
-    left: 0;
-    width: 100vw;
-    transition: left 0.5s ease;
-    opacity: 1;
     height: 380vh;
   }
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    position: relative;
-    left: 0;
-    width: 100vw;
-    transition: left 0.5s ease;
-    opacity: 1;
-    height: 350vh;
+    height: 360vh;
   }
 `;
 
@@ -81,6 +71,9 @@ export const HomepageContainer = styled.div`
     overflow-x: hidden;
     opacity: 0.5;
     height: 70.8vh;
+  }
+  @media only screen and (max-width: 350px) {
+    height: 71vh;
   }
   ${getHomepageSideBarActive};
 `;

@@ -1,7 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import PageShell from '../../components/commons/page-shell/page-shell.component';
 import SpinnerLoading from '../../components/commons/spinner-loading/spinner-loading.component';
 import {
   selectContactRoute,
@@ -66,4 +65,4 @@ const mapStateToProps = createStructuredSelector({
   lowWaveImage: selectLowWaveImage,
 });
 
-export default connect(mapStateToProps)(PageShell(Contact));
+export default connect(mapStateToProps)(Contact);

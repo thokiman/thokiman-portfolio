@@ -11,7 +11,7 @@ const shrinkLabel = css`
   color: ${heavyLightBlueColor};
 `;
 const shrinkLabelMobile = css`
-  @media only screen and (max-width: ${maxWidthSmartphone}) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     color: ${heavyLightBlueColor};
     font-size: 5vw;
     top: -0.5vh;
@@ -30,14 +30,16 @@ export const FormInputTelCheckerContainer = styled.span`
   color: ${greenBlueColor};
   position: absolute;
   left: -1.5vw;
-  @media only screen and (max-width: ${maxWidthSmartphone}) {
-    left: -3vw;
+
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    left: -4vw;
   }
 `;
 const FormInputTelCheckerIconStyles = css`
   width: 2vw;
   height: 2vh;
-  @media only screen and (max-width: ${maxWidthSmartphone}) {
+
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 3.5vw;
     height: 3.5vh;
   }
@@ -79,7 +81,7 @@ const FormInputTelElementStyles = css`
   &:focus ~ label {
     ${shrinkLabel}
   }
-  @media only screen and (max-width: ${maxWidthSmartphone}) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     &:focus ~ label {
       ${shrinkLabelMobile}
     }
@@ -121,10 +123,11 @@ export const FormLabelElement = styled.label`
   left: 2vw;
   transition: 300ms ease all;
   ${getFormLabelElementShrink}
-  @media only screen and (max-width: ${maxWidthSmartphone}) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 6vw;
     top: 2vh;
-    left: 5vw;
+    left: 2vw;
+
     ${getFormLabelElementShrinkMobile}
   }
 `;
