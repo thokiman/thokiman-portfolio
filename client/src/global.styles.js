@@ -1,8 +1,11 @@
-import { createGlobalStyle } from "styled-components";
-
+import { createGlobalStyle } from 'styled-components';
+const blackColor = '#000000';
+const grayColor = '#3f4249';
+const lightBlueColor = '#74c6d4';
+const heavyLightBlueColor = '#bccfd5';
 export const GlobalStyle = createGlobalStyle`
 body {
-  background-color: #000000;
+  background-color: ${blackColor};
   font-family: futura-book;
   overscroll-behavior: none;
 }
@@ -19,19 +22,19 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px #3f4249;
+  box-shadow: inset 0 0 5px ${grayColor};
   border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #74c6d4;
+  background: ${lightBlueColor};
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #bccfd5;
+  background: ${heavyLightBlueColor};
 }
 
 
