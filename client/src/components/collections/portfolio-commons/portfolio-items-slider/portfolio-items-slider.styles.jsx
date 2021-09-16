@@ -1,7 +1,6 @@
 import { BiChevronsLeft, BiChevronsRight } from 'react-icons/bi';
-import Rings from 'react-loader-spinner';
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import styled, { keyframes } from 'styled-components';
+
 const maxWidthDesktop = 1679;
 const maxWidthSmartphone = 900;
 const greenBlueColor10 = '#1ff1ea';
@@ -106,11 +105,6 @@ export const NextArrow = styled(BiChevronsRight)`
   }
 `;
 
-export const PortfolioLoadingState = styled(Rings)`
-  margin: 10px auto;
-  display: flex;
-  justify-content: center;
-`;
 export const PortfolioItemsSliderImageContainer = styled.div``;
 export const PortfolioItemsSliderImage = styled.img`
   position: relative;

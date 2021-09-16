@@ -1,6 +1,6 @@
-import { about } from "../../data.object/about.data";
-import { other } from "../../data.object/other.data";
-import AboutActionTypes from "./about.types";
+import { about } from '../../data.object/about.data';
+import { other } from '../../data.object/other.data';
+import AboutActionTypes from './about.types';
 const INTIAL_STATE = {
   about,
   other,
@@ -12,6 +12,8 @@ const INTIAL_STATE = {
   isYear2018Click: false,
   isYear2019Click: false,
   isYearCurrentClick: true,
+  visualArtSkillImages: [],
+  isLoadingVisualArtSkillImages: true,
 };
 
 const aboutReducer = (state = INTIAL_STATE, action) => {
@@ -76,6 +78,7 @@ const aboutReducer = (state = INTIAL_STATE, action) => {
         isYear2018Click: false,
         isYear2019Click: false,
       };
+
     default:
       return state;
   }

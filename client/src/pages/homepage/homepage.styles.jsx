@@ -23,7 +23,7 @@ export const HomepageIsNotActivated = styled.div`
 
   color: ${whiteSmokeColor};
   position: absolute;
-  top: 10vh;
+  top: 10.5vh;
   left: -10vw;
   font-size: 10vw;
   letter-spacing: 0.17em;

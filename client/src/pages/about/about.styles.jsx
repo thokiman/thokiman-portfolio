@@ -27,7 +27,7 @@ export const AboutIsNotActivated = styled.div`
   font-family: futura-demi;
   color: ${whiteSmokeColor};
   position: absolute;
-  top: 10vh;
+  top: 19.5vh;
   left: 6vw;
 
   font-size: 10vw;
@@ -38,6 +38,7 @@ export const AboutIsNotActivated = styled.div`
 const AboutIsActived = css`
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     position: relative;
+
     left: 0;
     width: 100vw;
     transition: left 0.5s ease;

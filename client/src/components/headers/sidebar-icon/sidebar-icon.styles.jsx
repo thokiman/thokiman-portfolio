@@ -97,19 +97,20 @@ const SideBarOneChange = css`
   ${SideBarChangeStyles}
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     position: relative;
-    top: 20px;
-    left: -20px;
+
+    top: 2.1vh;
+    left: -2.5vw;
     transform: rotate(-45deg);
     animation: ${sideBarOneChange} 0.4s ease-in-out;
   }
   @media only screen and (max-width: 550px) {
-    top: 0px;
-    left: -9px;
+    top: 0.1vh;
+    left: -1.4vw;
   }
 
   @media only screen and (max-width: 300px) {
-    top: 7px;
-    left: 3px;
+    top: 1vh;
+    left: 1vw;
   }
 `;
 
@@ -121,21 +122,22 @@ const SideBarThreeChange = css`
   ${SideBarChangeStyles}
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     position: relative;
-    top: 18px;
-    left: -15px;
+
+    top: 2.1vh;
+    left: -1.9vw;
     transform: rotate(45deg);
     animation: ${sideBarThreeChange} 0.4s ease-in-out;
   }
   @media only screen and (max-width: 550px) {
-    top: -3px;
-    left: -5px;
+    top: -0.2vh;
+    left: -0.5vw;
   }
   @media only screen and (max-width: 350px) {
     top: -1px;
   }
   @media only screen and (max-width: 300px) {
-    top: 5px;
-    left: 5px;
+    top: 0.8vh;
+    left: 2vw;
   }
 `;
 

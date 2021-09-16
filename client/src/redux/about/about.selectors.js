@@ -71,10 +71,7 @@ export const selectSkillEngineer = createSelector(
 );
 export const selectSkillTechnology = createSelector(
   [selectAllAbout],
-  (about) => {
-    console.log(about);
-    return about.aboutPath.items.personalSkill.items.technology;
-  }
+  (about) => about.aboutPath.items.personalSkill.items.technology
 );
 
 //education

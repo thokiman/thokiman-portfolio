@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 import { createStructuredSelector } from 'reselect';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
+import SpinnerLoading from '../../../../components/commons/spinner-loading/spinner-loading.component.jsx';
 import {
   loadWebsiteItemsSlider,
   loadWebsiteItemsSliderFinished,
@@ -18,7 +19,6 @@ import {
   NextArrow,
   PortfolioItemsSliderImage,
   PortfolioItemsSliderImageContainer,
-  PortfolioLoadingState,
   PrevArrow,
   SingleDotImage,
   WrapperDots,
@@ -51,15 +51,7 @@ export const PortfolioItemsSlider = ({
   };
 
   if (isLoading && itemsSlider.length === 0) {
-    return (
-      <PortfolioLoadingState
-        type='Puff'
-        color='#e3e1e4'
-        height={100}
-        width={100}
-        visible={isLoading}
-      />
-    );
+    return <SpinnerLoading />;
   } else {
   }
   const customPaging = (indexAtSingleDot) => {

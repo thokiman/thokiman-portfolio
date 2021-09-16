@@ -1,4 +1,4 @@
-import AboutActionTypes from "./about.types";
+import AboutActionTypes from './about.types';
 
 export const toggleVibrate = () => ({
   type: AboutActionTypes.SUMMARY_TOGGLE_VIBRATE,

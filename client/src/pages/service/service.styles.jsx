@@ -24,7 +24,7 @@ export const ServiceIsNotActivated = styled.div`
   font-family: futura-demi;
   color: ${whiteSmokeColor};
   position: absolute;
-  top: 10vh;
+  top: 36vh;
   left: 6vw;
   font-size: 10vw;
   letter-spacing: 0.17em;

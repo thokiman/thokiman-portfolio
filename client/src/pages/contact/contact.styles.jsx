@@ -24,7 +24,7 @@ export const ContactIsNotActivated = styled.div`
   font-family: futura-demi;
   color: ${whiteSmokeColor};
   position: absolute;
-  top: 10vh;
+  top: 44.5vh;
   left: 6vw;
   font-size: 10vw;
   letter-spacing: 0.17em;

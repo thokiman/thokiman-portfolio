@@ -20,7 +20,7 @@ export const PortfolioIsNotActivated = styled.div`
   font-family: futura-demi;
   color: ${whiteSmokeColor};
   position: absolute;
-  top: 10vh;
+  top: 27.5vh;
   left: 6vw;
   font-size: 10vw;
   letter-spacing: 0.17em;

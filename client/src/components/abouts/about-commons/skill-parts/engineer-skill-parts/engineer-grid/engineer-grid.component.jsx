@@ -8,7 +8,7 @@ import {
 export const EngineerGrid = ({ engineerSkill }) => {
   return engineerSkill.map(({ id, name, itemsPoint }) => {
     return (
-      <EngineerContentContainer>
+      <EngineerContentContainer key={id}>
         <NameEngineerSkill>{name}</NameEngineerSkill>
         <EngineerGridItem itemsPoint={itemsPoint} />
       </EngineerContentContainer>
