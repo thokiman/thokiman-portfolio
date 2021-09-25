@@ -91,6 +91,20 @@ export const AboutThokimanHeadColorShow = styled(ThokimanHeadColor)`
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     animation: ${thokimanHeadColorShowMobile} 0.6s ease-out both;
   }
+  @media only screen and (max-width: 550px) {
+    width: 40%;
+    height: 80%;
+  }
+  @media only screen and (max-width: 375px) and (max-height: 667px) {
+    top: 0.5vh;
+    width: 30%;
+    height: 70%;
+  }
+  @media only screen and (max-width: 300px) {
+    top: -0.5vh;
+    width: 30%;
+    height: 80%;
+  }
 `;
 AboutThokimanHeadColorShow.displayName = 'AboutThokimanHeadColorShow';
 export const AboutThokimanHeadColorHide = styled(ThokimanHeadColor)`
@@ -101,6 +115,28 @@ export const AboutThokimanHeadColorHide = styled(ThokimanHeadColor)`
   animation: ${thokimanHeadColorHide} 0.6s ease-out both;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     animation: ${thokimanHeadColorHideMobile} 0.6s ease-out both;
+  }
+  @media only screen and (max-width: 550px) {
+    width: 40%;
+    height: 80%;
+  }
+  @media only screen and (max-width: 414px) and (max-height: 736px) {
+    top: 1.2vh;
+  }
+  @media only screen and (max-width: 375px) and (max-height: 667px) {
+    top: 1.5vh;
+    width: 30%;
+    height: 70%;
+  }
+  @media only screen and (max-width: 350px) {
+    top: 1.5vh;
+    width: 40%;
+    height: 80%;
+  }
+  @media only screen and (max-width: 300px) {
+    top: 2vh;
+    width: 30%;
+    height: 80%;
   }
 `;
 AboutThokimanHeadColorHide.displayName = 'AboutThokimanHeadColorHide';
@@ -145,6 +181,10 @@ const AboutDropdownLinkContainerStyles = css`
   cursor: pointer;
   ${AboutDropdownContent}:hover & {
     color: ${whiteSmokeColor};
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 120%;
   }
 `;
 const AboutDropdownLinkContainerActive = css`

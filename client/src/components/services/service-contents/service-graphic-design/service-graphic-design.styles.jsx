@@ -22,10 +22,40 @@ export const RightServiceContainerGd = styled.div`
   overflow-y: scroll;
   overflow-x: hidden;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    overflow-y: hidden;
     width: 100%;
     right: 0;
-    height: 50vh;
+    height: 175vh;
     ${getSideBarActive}
+
+    @media only screen and (max-width: 550px) {
+      height: 160vh;
+      ${getSideBarActive}
+    }
+    @media only screen and (max-width: 470px) and (max-height: 823px) {
+      height: 110vh;
+      ${getSideBarActive}
+    }
+    @media only screen and (max-width: 470px) and (max-height: 812px) {
+      height: 110vh;
+      ${getSideBarActive}
+    }
+    @media only screen and (max-width: 470px) and (max-height: 736px) {
+      height: 125vh;
+      ${getSideBarActive}
+    }
+    @media only screen and (max-width: 470px) and (max-height: 667px) {
+      height: 135vh;
+      ${getSideBarActive}
+    }
+    @media only screen and (max-width: 350px) and (max-height: 568px) {
+      height: 145vh;
+      ${getSideBarActive}
+    }
+    @media only screen and (max-width: 300px) {
+      height: 135vh;
+      ${getSideBarActive}
+    }
   }
 `;
 

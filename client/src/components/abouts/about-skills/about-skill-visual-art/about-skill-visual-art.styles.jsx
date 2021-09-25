@@ -9,6 +9,9 @@ export const AboutVisualArtSkillContainer = styled.div`
   overflow-x: hidden;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 100%;
+
+    overflow-y: hidden;
+    height: 100%;
   }
 `;
 export const AboutVisualArtContentContainer = styled.div`

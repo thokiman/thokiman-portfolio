@@ -123,7 +123,7 @@ const SideBarThreeChange = css`
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     position: relative;
 
-    top: 2.1vh;
+    top: 2vh;
     left: -1.9vw;
     transform: rotate(45deg);
     animation: ${sideBarThreeChange} 0.4s ease-in-out;

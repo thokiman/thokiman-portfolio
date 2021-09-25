@@ -3,7 +3,7 @@ import HomepageProfile from '../../../../assets/profile/profile.png';
 
 const blackColor = '#000000';
 
-const maxWidthDesktop = 1675;
+const maxWidthDesktop = 1366;
 const maxWidthTablet = 1024;
 const maxWidthSmartphone = 800;
 
@@ -32,7 +32,7 @@ export const HomepageProfileImageContainer = styled.div`
 `;
 
 export const HomepageBackgroundProfileImage = styled.div`
-  width: 900px;
+  width: 50vw;
   height: 100%;
   padding: 10px;
   display: flex;
@@ -47,15 +47,10 @@ export const HomepageBackgroundProfileImage = styled.div`
   }
 
   @media only screen and (max-width: ${maxWidthTablet}px) {
-    display: block;
-
-    width: 50vw;
     height: 50vh;
   }
 
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    display: block;
-
     width: 100vw;
     height: 78vh;
   }

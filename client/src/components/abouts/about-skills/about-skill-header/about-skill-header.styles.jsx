@@ -28,7 +28,14 @@ const AboutTextBoxStyles = css`
   font-size: 20px;
   letter-spacing: 0.03em;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    font-size: 20px;
+    font-size: 4vw;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 4.5vw;
+  }
+  @media only screen and (max-width: 300px) {
+    font-size: 5vw;
   }
 `;
 const AboutTextBoxActive = css`

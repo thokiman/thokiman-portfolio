@@ -18,12 +18,30 @@ export const selectEngineerService = createSelector(
 export const selectDevService = createSelector(
   [selectAllService],
   (service) => service.fullstack
-
 );
 
 export const selectServiceRoute = createSelector(
   [selectAllService],
   (service) => service.routeName
+);
+export const selectEngineerRoute = createSelector(
+  [selectAllService],
+  (service) => service.engineer.routeName
+);
+
+export const selectArtServiceRoute = createSelector(
+  [selectAllService],
+  (service) => service.art.routeName
+);
+
+export const selectPhotoServiceRoute = createSelector(
+  [selectAllService],
+  (service) => service.photo.routeName
+);
+
+export const selectDevServiceRoute = createSelector(
+  [selectAllService],
+  (service) => service.fullstack.routeName
 );
 
 export const selectBigWaveImage = createSelector(

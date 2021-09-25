@@ -18,7 +18,7 @@ export const DescriptionEngineerSkill = styled.div`
   font-size: 2.3vw;
   letter-spacing: 0.03em;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    font-size: 15px;
+    font-size: 3.5vw;
   }
 `;
 

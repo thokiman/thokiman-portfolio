@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const maxWidthSmartphone = 800;
 
@@ -13,9 +13,21 @@ const greenOptionHoverColor60 = 'rgba(18, 129, 148, 0.6)';
 
 const backgroundColor = '#000000';
 
-export const PortfolioWebsiteItemContainer = styled.div`
+const PortfolioWebsiteItemIsNotActivated = css`
+  display: none;
+`;
+const PortfolioWebsiteItemIsActivated = css`
   display: flex;
   flex-direction: column;
+`;
+
+const getSideBarActive = ({ $issidebaractive }) => {
+  if ($issidebaractive) return PortfolioWebsiteItemIsNotActivated;
+  return PortfolioWebsiteItemIsActivated;
+};
+
+export const PortfolioWebsiteItemContainer = styled.div`
+  ${getSideBarActive}
 `;
 
 export const PortfolioWebsiteItemLink = styled(Link)`
@@ -63,75 +75,114 @@ export const PortfolioWebsiteItemLink = styled(Link)`
     left: 45vw;
     margin: 0.5vw;
     box-shadow: none;
+    border: 1px solid ${greenBlueColor9};
     &:hover {
       top: 31.5vh;
       left: 45vw;
     }
   }
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    top: 18.2vh;
+    top: 17.5vh;
     left: 45vw;
-    box-shadow: none;
+
     &:hover {
-      top: 18.2vh;
+      top: 17.5vh;
       left: 45vw;
     }
   }
   @media only screen and (max-width: 673px) {
     top: 18vh;
     left: 47vw;
-    box-shadow: none;
+
     &:hover {
       top: 18.8vh;
       left: 47vw;
     }
   }
-  @media only screen and (max-width: 500px) {
-    top: 18.8vh;
-    left: 49vw;
-    box-shadow: none;
+  @media only screen and (max-width: 550px) {
+    top: 20vh;
+    left: 47vw;
+
     &:hover {
-      top: 18.8vh;
-      left: 49vw;
-    }
-  }
-  @media only screen and (max-width: 410px) {
-    top: 19vh;
-    left: 52vw;
-    box-shadow: none;
-    &:hover {
-      top: 19vh;
-      left: 52vw;
-    }
-  }
-  @media only screen and (max-width: 320px) {
-    top: 18.8vh;
-    left: 53vw;
-    box-shadow: none;
-    &:hover {
-      top: 18.8vh;
-      left: 53vw;
-    }
-  }
-  @media only screen and (max-width: 280px) {
-    font-size: 2vw;
-    top: 19vh;
-    left: 56vw;
-    box-shadow: none;
-    &:hover {
-      top: 19vh;
-      left: 56vw;
+      top: 20vh;
+      left: 47vw;
     }
   }
 
-  @media only screen and (max-width: 150px) {
-    font-size: 0.5vw;
-    top: 19.5vh;
-    left: 63vw;
-    box-shadow: none;
+  @media only screen and (max-width: 470px) {
+    top: 20.3vh;
+    left: 49.5vw;
+
     &:hover {
-      top: 19.5vh;
-      left: 63vw;
+      top: 20.3vh;
+      left: 49.5vw;
+    }
+  }
+  @media only screen and (max-width: 411px) and (max-height: 823px) {
+    top: 19.7vh;
+    left: 50vw;
+
+    &:hover {
+      top: 19.7vh;
+      left: 50vw;
+    }
+  }
+  @media only screen and (max-width: 411px) and (max-height: 731px) {
+    top: 20.4vh;
+    left: 50vw;
+
+    &:hover {
+      top: 20.4vh;
+      left: 50vw;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    top: 19.9vh;
+    left: 50.5vw;
+
+    &:hover {
+      top: 19.9vh;
+      left: 50.5vw;
+    }
+  }
+
+  @media only screen and (max-width: 400px) and (max-height: 667px) {
+    top: 21.2vh;
+    left: 50.5vw;
+
+    &:hover {
+      top: 21.2vh;
+      left: 50.5vw;
+    }
+  }
+  @media only screen and (max-width: 360px) and (max-height: 640px) {
+    top: 21.6vh;
+    left: 50.5vw;
+
+    &:hover {
+      top: 21.6vh;
+      left: 50.5vw;
+    }
+  }
+
+  @media only screen and (max-width: 350px) {
+    top: 22.7vh;
+    left: 51vw;
+
+    &:hover {
+      top: 22.7vh;
+      left: 51vw;
+    }
+  }
+  @media only screen and (max-width: 300px) {
+    font-size: 1.8vw;
+    top: 21.8vh;
+    left: 54vw;
+
+    &:hover {
+      top: 21.8vh;
+      left: 54vw;
     }
   }
 `;

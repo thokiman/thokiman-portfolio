@@ -4,8 +4,9 @@ import { ReactComponent as ThokimanHandGray } from '../../../../assets/collectio
 import { ReactComponent as ThokimanLegGray } from '../../../../assets/collections-icon/thokiman-icon/page/thokiman_leg_gray.svg';
 import { ReactComponent as ThokimanSkeletonGray } from '../../../../assets/collections-icon/thokiman-icon/page/thokiman_skeleton_gray.svg';
 const maxWidthTablet = 1024;
-const backgroundRightPageContainerColor = 'rgba(18, 129, 148, 0.85)';
 const maxWidthSmartphone = 800;
+
+const backgroundRightPageContainerColor = 'rgba(18, 129, 148, 0.85)';
 const SideBarActive = css`
   display: none;
 `;
@@ -58,90 +59,134 @@ export const RightPageContent = styled.div`
 
 RightPageContent.displayName = 'RightPageContent ';
 
-const thokimanSkeletonShow = keyframes`
-           0% {
-                transform: rotate(0deg);
-                transform: rotateX(0);
-            }
-
-            100% {
-
-                transform: rotate(720deg);
-                transform: rotateX(-720deg);
-            }
- `;
-const thokimanSkeletonGrayLeftRight = keyframes`
-            from {
-                opacity: 1;
-            }
-
-            to {
-                opacity: 0;
-            }`;
 const thokimanSkeletonContent = keyframes`
     to {
         stroke-dashoffset: 0%;
     }
 `;
 
-const thokimanBodyGrayShow = keyframes`
-     0% {
-
-                transform: rotate(0deg);
-                transform: rotateX(0);
-            }
-
-            100% {
-
-                transform: rotate(-720deg);
-                transform: rotateX(-720deg);
-
-            }
-`;
-
-const thokimanLegShow = keyframes`
+const thokimanSkeletonGrayMiddleDropdownShow = keyframes`
     0% {
+    transform: rotateX(-100deg);
+    transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg);
+    transform-origin: top;
+    opacity: 1;
+  }
+ `;
 
-                transform: rotate(0deg);
-                transform: rotateX(0);
-                  
-            }
+const thokimanSkeletonGrayMiddleDropdownHide = keyframes`
+     0% {
+    transform: rotateY(-100deg);
+    transform-origin: right;
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0);
+    transform-origin: right;
+    opacity: 1;
+  }
+ `;
 
-            100% {
+const thokimanSkeletonGrayLeftRightDropdownShow = keyframes`
+  
+      0% {
+    transform: rotateX(0);
+    transform-origin: bottom;
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(-70deg);
+    transform-origin: bottom;
+    opacity: 0;
+  }
+            
+            `;
 
-                transform: rotate(720deg);
-                transform: rotateX(-720deg);
-            }
+const thokimanSkeletonGrayLeftRightDropdownHide = keyframes`
+  0% {
+    transform: rotateY(-100deg);
+    transform-origin: right;
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0);
+    transform-origin: right;
+    opacity: 1;
+  }
+            `;
 
-`;
+const thokimanGrayBodyMiddleDropdownShow = keyframes`
+    0% {
+    transform: rotateY(-100deg);
+    transform-origin: right;
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0);
+    transform-origin: right;
+    opacity: 1;
+  }
+ `;
 
-//skeleton
+const thokimanGrayBodyMiddleDropdownHide = keyframes`
+  0% {
+    transform: rotateY(100deg);
+    transform-origin: left;
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0);
+    transform-origin: left;
+    opacity: 1;
+  }
+ `;
+
+//*************************************************************************************************************
+//-------------------------------------------------------------------------------------------------------------
+// all
+//-------------------------------------------------------------------------------------------------------------
 const ThokimanSkeletonContentStyles = css`
   width: 105px;
   height: 100%;
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    width: 80vw;
+  }
 `;
-
-const ThokimanSkeletonContentHide = css`
+//*************************************************************************************************************
+//-------------------------------------------------------------------------------------------------------------
+// left skeleton hide, animation
+// right skeleton hide, animation
+// middle skeleton hide, animation
+//-------------------------------------------------------------------------------------------------------------
+const ThokimanSkeletonContentDropdownHide = css`
   ${ThokimanSkeletonContentStyles}
+
   path.thokiman-skeleton-gray0 {
     stroke-dasharray: 200 40;
     stroke-dashoffset: 40%;
     stroke-miterlimit: 5;
+
     animation: ${thokimanSkeletonContent} 2s ease-in-out infinite
       alternate-reverse both;
   }
 `;
-//left and right skeleton
-const ThokimanSkeletonContentLeftRightShow = css`
+//-------------------------------------------------------------------------------------------------------------
+// left skeleton show, animation
+// right skeleton show, animation
+//-------------------------------------------------------------------------------------------------------------
+const ThokimanSkeletonContentLeftRightDropdownShow = css`
   ${ThokimanSkeletonContentStyles}
-  animation: ${thokimanSkeletonShow} 0.4s ease-in-out;
 `;
 
 const getThokimanSkeletonLeftRightContent = ({ $isdropdownhidden }) => {
   if ($isdropdownhidden) {
-    return ThokimanSkeletonContentHide;
+    return ThokimanSkeletonContentDropdownHide;
   }
-  return ThokimanSkeletonContentLeftRightShow;
+  return ThokimanSkeletonContentLeftRightDropdownShow;
 };
 
 export const ThokimanSkeletonLeftRightContent = styled(ThokimanSkeletonGray)`
@@ -149,9 +194,10 @@ export const ThokimanSkeletonLeftRightContent = styled(ThokimanSkeletonGray)`
 `;
 ThokimanSkeletonLeftRightContent.displayName =
   'ThokimanSkeletonLeftRightContent';
-
-//middle skeleton
-const ThokimanSkeletonMiddleContentShow = css`
+//-------------------------------------------------------------------------------------------------------------
+// middle skeleton show, animation
+//-------------------------------------------------------------------------------------------------------------
+const ThokimanSkeletonMiddleContentDropdownShow = css`
   ${ThokimanSkeletonContentStyles}
   path.thokiman-skeleton-gray0 {
     stroke-dasharray: 200 40;
@@ -164,18 +210,18 @@ const ThokimanSkeletonMiddleContentShow = css`
 
 const getThokimanSkeletonMiddleContent = ({ $isdropdownhidden }) => {
   if ($isdropdownhidden) {
-    return ThokimanSkeletonContentHide;
+    return ThokimanSkeletonContentDropdownHide;
   }
-  return ThokimanSkeletonMiddleContentShow;
+  return ThokimanSkeletonMiddleContentDropdownShow;
 };
 
 export const ThokimanSkeletonMiddleContent = styled(ThokimanSkeletonGray)`
   ${getThokimanSkeletonMiddleContent}
 `;
 ThokimanSkeletonMiddleContent.displayName = 'ThokimanSkeletonMiddleContent';
-
-//left skeleton container
-
+//-------------------------------------------------------------------------------------------------------------
+// left, right, middle skeleton container styles
+//-------------------------------------------------------------------------------------------------------------
 const ThokimanSkeletonGrayStyles = css`
   position: relative;
   margin: auto;
@@ -183,190 +229,324 @@ const ThokimanSkeletonGrayStyles = css`
   height: 100%;
   display: flex;
   justify-content: center;
+
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    width: 40vw;
+  }
+  @media only screen and (max-width: 500px) {
+    width: 30vw;
+  }
 `;
 
-const ThokimanSkeletonGrayLeftHide = css`
+//-------------------------------------------------------------------------------------------------------------
+// left skeleton container styles
+//-------------------------------------------------------------------------------------------------------------
+const ThokimanSkeletonGrayLeftDropdownHide = css`
   ${ThokimanSkeletonGrayStyles}
   grid-area: topgrid-skeletonleft;
   left: 35px;
-  transition: all 0.5s ease-in-out;
+
+  animation: ${thokimanSkeletonGrayLeftRightDropdownHide} 0.55s
+    cubic-bezier(0.6, -0.28, 0.735, 0.045) both;
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    left: 12vw;
+  }
+
+  @media only screen and (max-width: 500px) {
+    left: 4vw;
+  }
+  @media only screen and (max-width: 300px) {
+    left: 6vw;
+  }
 `;
 
-const ThokimanSkeletonGrayLeftShow = css`
+const ThokimanSkeletonGrayLeftDropdownShow = css`
   ${ThokimanSkeletonGrayStyles}
   grid-area: topgrid-skeletonleft;
-  top: 78px;
-  left: 100px;
-  opacity: 0;
-  animation: ${thokimanSkeletonGrayLeftRight} 0.4s ease-in-out;
+  left: 35px;
+
+  animation: ${thokimanSkeletonGrayLeftRightDropdownShow} 0.55s
+    cubic-bezier(0.6, -0.28, 0.735, 0.045) both;
+
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    left: 12vw;
+  }
+
+  @media only screen and (max-width: 300px) {
+    left: 7vw;
+  }
 `;
 
 const getThokimanSkeletonGrayLeft = ({ $isdropdownhidden }) => {
   if ($isdropdownhidden) {
-    return ThokimanSkeletonGrayLeftHide;
+    return ThokimanSkeletonGrayLeftDropdownHide;
   }
-  return ThokimanSkeletonGrayLeftShow;
+  return ThokimanSkeletonGrayLeftDropdownShow;
 };
 
 export const ThokimanSkeletonGrayLeft = styled.div`
   ${getThokimanSkeletonGrayLeft}
 `;
 ThokimanSkeletonGrayLeft.displayName = 'ThokimanSkeletonGrayLeft';
-
-//middle skeleton container
-const ThokimanSkeletonGrayMiddleHide = css`
+//-------------------------------------------------------------------------------------------------------------
+// middle skeleton container styles
+//-------------------------------------------------------------------------------------------------------------
+const ThokimanSkeletonGrayMiddleDropdownHide = css`
   ${ThokimanSkeletonGrayStyles}
   grid-area: topgrid-skeletonmiddle;
-  transition: all 0.5s ease-in-out;
+  animation: ${thokimanSkeletonGrayMiddleDropdownHide} 0.6s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 `;
 
-const ThokimanSkeletonGrayMiddleShow = css`
+const ThokimanSkeletonGrayMiddleDropdownShow = css`
   ${ThokimanSkeletonGrayStyles}
+
   grid-area: topgrid-skeletonmiddle;
-  animation: ${thokimanSkeletonShow} 2s ease-in-out;
-  transition: all 2s ease-in-out;
+  animation: ${thokimanSkeletonGrayMiddleDropdownShow} 0.6s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+  @media only screen and (max-width: ${maxWidthTablet}px) {
+    top: 1.5vh;
+    left: 0.5vw;
+  }
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    top: 2vh;
+    left: 1vw;
+  }
+  @media only screen and (max-width: 770px) {
+    top: -1vh;
+    left: 0.5vw;
+  }
+  @media only screen and (max-width: 550px) {
+    top: -1.5vh;
+    left: 0.5vw;
+  }
+  @media only screen and (max-width: 450px) and (max-height: 823px) {
+    top: 4vh;
+  }
+  @media only screen and (max-width: 450px) and (max-height: 736px) {
+    top: 0.5vh;
+  }
+  @media only screen and (max-width: 400px) and (max-height: 812px) {
+    top: 6vh;
+  }
+  @media only screen and (max-width: 400px) and (max-height: 667px) {
+    top: 0vh;
+  }
+  @media only screen and (max-width: 350px) {
+    top: -1vh;
+  }
+  @media only screen and (max-width: 300px) {
+    top: 2vh;
+  }
 `;
 
 const getThokimanSkeletonGrayMiddle = ({ $isdropdownhidden }) => {
   if ($isdropdownhidden) {
-    return ThokimanSkeletonGrayMiddleHide;
+    return ThokimanSkeletonGrayMiddleDropdownHide;
   }
-  return ThokimanSkeletonGrayMiddleShow;
+  return ThokimanSkeletonGrayMiddleDropdownShow;
 };
 
 export const ThokimanSkeletonGrayMiddle = styled.div`
   ${getThokimanSkeletonGrayMiddle}
 `;
 ThokimanSkeletonGrayMiddle.displayName = 'ThokimanSkeletonGrayMiddle';
-
-//right skeleton container
-const ThokimanSkeletonGrayRightHide = css`
+//-------------------------------------------------------------------------------------------------------------
+//right skeleton container styles
+//-------------------------------------------------------------------------------------------------------------
+const ThokimanSkeletonGrayRightDropdownHide = css`
   ${ThokimanSkeletonGrayStyles}
   grid-area: topgrid-skeletonright;
   right: 35px;
-  transition: all 0.5s ease-in-out;
+  animation: ${thokimanSkeletonGrayLeftRightDropdownHide} 0.55s
+    cubic-bezier(0.6, -0.28, 0.735, 0.045) both;
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    right: 12vw;
+  }
+  @media only screen and (max-width: 500px) {
+    right: 4vw;
+  }
+  @media only screen and (max-width: 300px) {
+    right: 6vw;
+  }
 `;
 
-const ThokimanSkeletonGrayRightShow = css`
+const ThokimanSkeletonGrayRightDropdownShow = css`
   ${ThokimanSkeletonGrayStyles}
-  top: 78px;
-  right: 100px;
+  right: 35px;
   grid-area: topgrid-skeletonright;
-  opacity: 0;
-  animation: ${thokimanSkeletonGrayLeftRight} 0.4s ease-in-out;
+
+  animation: ${thokimanSkeletonGrayLeftRightDropdownShow} 0.55s
+    cubic-bezier(0.6, -0.28, 0.735, 0.045) both;
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    right: 12vw;
+  }
+  @media only screen and (max-width: 300px) {
+    right: 6vw;
+  }
 `;
 
 const getThokimanSkeletonGrayRight = ({ $isdropdownhidden }) => {
   if ($isdropdownhidden) {
-    return ThokimanSkeletonGrayRightHide;
+    return ThokimanSkeletonGrayRightDropdownHide;
   }
-  return ThokimanSkeletonGrayRightShow;
+  return ThokimanSkeletonGrayRightDropdownShow;
 };
 
 export const ThokimanSkeletonGrayRight = styled.div`
   ${getThokimanSkeletonGrayRight}
 `;
 ThokimanSkeletonGrayRight.displayName = 'ThokimanSkeletonGrayRight';
-
-//body
-
-const ThokimanBodyGrayMiddleContentHide = css`
-  width: 100%;
-  height: 100%;
-`;
-const ThokimanBodyGrayMiddleContentShow = css`
-  width: 100%;
-  height: 60%;
-`;
-
-const ThokimanBodyMiddleContainerHide = css`
-  ${ThokimanSkeletonGrayStyles}
-  grid-area: maingrid-body;
-  transition: all 0.5s ease-in-out;
-`;
-
-const ThokimanBodyMiddleContainerShow = css`
+//*************************************************************************************************************
+//-------------------------------------------------------------------------------------------------------------
+// body animation
+//-------------------------------------------------------------------------------------------------------------
+const ThokimanBodyMiddleContainerDropdownHide = css`
   ${ThokimanSkeletonGrayStyles}
   grid-area: maingrid-body;
 
-  animation: ${thokimanBodyGrayShow} 2s ease-in-out;
-  transition: all 2s ease-in-out;
+  animation: ${thokimanGrayBodyMiddleDropdownHide} 0.6s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 `;
 
-const getThokimanBodyGrayContent = ({ $isdropdownhidden }) => {
-  if ($isdropdownhidden) {
-    return ThokimanBodyGrayMiddleContentHide;
-  }
-  return ThokimanBodyGrayMiddleContentShow;
-};
+const ThokimanBodyMiddleContainerDropdownShow = css`
+  ${ThokimanSkeletonGrayStyles}
+  grid-area: maingrid-body;
 
-export const ThokimanBodyGrayContent = styled(ThokimanBodyGray)`
-  ${getThokimanBodyGrayContent}
+  animation: ${thokimanGrayBodyMiddleDropdownShow} 0.6s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 `;
-ThokimanBodyGrayContent.displayName = 'ThokimanBodyGrayContent';
-
 const getThokimanBodyContainer = ({ $isdropdownhidden }) => {
   if ($isdropdownhidden) {
-    return ThokimanBodyMiddleContainerHide;
+    return ThokimanBodyMiddleContainerDropdownHide;
   }
-  return ThokimanBodyMiddleContainerShow;
+  return ThokimanBodyMiddleContainerDropdownShow;
 };
 
 export const ThokimanBodyContainer = styled.div`
   ${getThokimanBodyContainer}
 `;
 ThokimanBodyContainer.displayName = 'ThokimanBodyContainer';
-
-//part
-const ThokimanPartGrayHideStyles = css`
+//-------------------------------------------------------------------------------------------------------------
+// body styles
+//-------------------------------------------------------------------------------------------------------------
+const ThokimanBodyGrayMiddleContentDropdownHide = css`
   width: 100%;
   height: 100%;
-`;
-
-const ThokimanPartGrayShowStyles = css`
-  width: 100%;
-  height: 100%;
-`;
-
-//hand
-
-//right hand
-const getThokimanHandGrayRightContent = ({ $isdropdownhidden }) => {
-  if ($isdropdownhidden) {
-    return ThokimanPartGrayHideStyles;
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    width: 50vw;
   }
-  return ThokimanPartGrayShowStyles;
+`;
+
+const ThokimanBodyGrayMiddleContentDropdownShow = css`
+  width: 100%;
+  height: 60%;
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    width: 50vw;
+  }
+
+  @media only screen and (max-width: 300px) {
+    position: relative;
+    top: -4vh;
+  }
+`;
+
+const getThokimanBodyGrayContent = ({ $isdropdownhidden }) => {
+  if ($isdropdownhidden) {
+    return ThokimanBodyGrayMiddleContentDropdownHide;
+  } else {
+    return ThokimanBodyGrayMiddleContentDropdownShow;
+  }
 };
 
-export const ThokimanHandGrayRightContent = styled(ThokimanHandGray)`
-  ${getThokimanHandGrayRightContent}
+export const ThokimanBodyGrayContent = styled(ThokimanBodyGray)`
+  ${getThokimanBodyGrayContent}
 `;
-ThokimanHandGrayRightContent.displayName = 'ThokimanHandGrayRightContent';
+ThokimanBodyGrayContent.displayName = 'ThokimanBodyGrayContent';
+//*************************************************************************************************************
+//-------------------------------------------------------------------------------------------------------------
+// left hand styles,
+// right hand styles
+//-------------------------------------------------------------------------------------------------------------
+const ThokimanPartGrayDropdownHideStyles = css`
+  width: 100%;
+  height: 100%;
+`;
 
-const ThokimanHandRightContainerHide = css`
-  ${ThokimanSkeletonGrayStyles}
-  grid-area: middlegrid-righthand;
-  right: 35px;
-  transition: all 0.5s ease-in-out;
+const ThokimanPartGrayDropdownShowStyles = css`
+  width: 100%;
+  height: 100%;
 `;
-const ThokimanHandRightContainerShow = css`
+//-------------------------------------------------------------------------------------------------------------
+// hand
+//-------------------------------------------------------------------------------------------------------------
+// right hand animation
+//-------------------------------------------------------------------------------------------------------------
+const ThokimanHandRightContainerDropdownHide = css`
   ${ThokimanSkeletonGrayStyles}
   grid-area: middlegrid-righthand;
-  right: -15px;
-  top: -80px;
-  transform: rotate(-90deg);
-  animation: ${thokimanSkeletonShow} 2s ease-in-out;
-  transition: all 4s ease-in-out;
+  top: 0vh;
+  right: 1.8vw;
+  transition: all 0.5s ease-in-out;
+
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    top: -28px;
-    right: 20px;
+    right: 9vw;
+  }
+`;
+const ThokimanHandRightContainerDropdownShow = css`
+  ${ThokimanSkeletonGrayStyles}
+  grid-area: middlegrid-righthand;
+  top: -7vh;
+  right: 4.7vw;
+
+  transition: all 0.5s ease-in-out;
+  transform: rotate(-90deg);
+
+  @media only screen and (max-width: ${maxWidthTablet}px) {
+    top: -5vh;
+    right: 0vw;
+  }
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    transform: rotate(-160deg) scaleX(-1);
+    top: -18vh;
+    right: 13vw;
+  }
+  @media only screen and (max-width: 770px) {
+    top: -19vh;
+    right: 20vw;
+  }
+  @media only screen and (max-width: 550px) {
+    right: 23vw;
+  }
+  @media only screen and (max-width: 450px) and (max-height: 823px) {
+    top: -17.5vh;
+    right: 11vw;
+  }
+  @media only screen and (max-width: 450px) and (max-height: 736px) {
+    top: -18.5vh;
+  }
+  @media only screen and (max-width: 400px) {
+    right: 13vw;
+  }
+  @media only screen and (max-width: 375px) {
+    top: -17vh;
+    right: 10vw;
+  }
+  @media only screen and (max-width: 350px) {
+    top: -18vh;
+    right: 15vw;
+  }
+  @media only screen and (max-width: 300px) {
+    top: -20vh;
+    right: 10vw;
   }
 `;
 const getThokimanHandRightContainer = ({ $isdropdownhidden }) => {
   if ($isdropdownhidden) {
-    return ThokimanHandRightContainerHide;
+    return ThokimanHandRightContainerDropdownHide;
   }
-  return ThokimanHandRightContainerShow;
+  return ThokimanHandRightContainerDropdownShow;
 };
 
 export const ThokimanHandRightContainer = styled.div`
@@ -374,63 +554,97 @@ export const ThokimanHandRightContainer = styled.div`
 `;
 
 ThokimanHandRightContainer.displayName = 'ThokimanHandRightContainer';
-
-//left hand
-const getThokimanHandGrayLeftContent = ({ $isdropdownhidden }) => {
+//-------------------------------------------------------------------------------------------------------------
+// right hand styles
+//-------------------------------------------------------------------------------------------------------------
+const getThokimanHandGrayRightContent = ({ $isdropdownhidden }) => {
   if ($isdropdownhidden) {
-    return ThokimanPartGrayHideStyles;
+    return ThokimanPartGrayDropdownHideStyles;
   }
-  return ThokimanPartGrayShowStyles;
+  return ThokimanPartGrayDropdownShowStyles;
 };
 
-export const ThokimanHandGrayLeftContent = styled(ThokimanHandGray)`
-  ${getThokimanHandGrayLeftContent}
+export const ThokimanHandGrayRightContent = styled(ThokimanHandGray)`
+  ${getThokimanHandGrayRightContent}
 `;
-ThokimanHandGrayLeftContent.displayName = 'ThokimanHandGrayLeftContent';
-
-const ThokimanHandLeftContainerHide = css`
+ThokimanHandGrayRightContent.displayName = 'ThokimanHandGrayRightContent';
+//-------------------------------------------------------------------------------------------------------------
+// right leg animation
+//-------------------------------------------------------------------------------------------------------------
+const ThokimanLegRightContainerDropdownHide = css`
   ${ThokimanSkeletonGrayStyles}
 
-  left: 35px;
-  grid-area: middlegrid-lefthand;
-  transform: scaleX(-1);
+  top: 0vh;
+  right: 1.8vw;
+  grid-area: bottomgrid-rightleg;
   transition: all 0.5s ease-in-out;
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    right: 9vw;
+  }
 `;
-const ThokimanHandLeftContainerShow = css`
+
+const ThokimanLegRightContainerDropdownShow = css`
   ${ThokimanSkeletonGrayStyles}
 
-  grid-area: middlegrid-lefthand;
-  left: -15px;
-  top: -80px;
-  transform: rotate(-90deg) scaleY(-1);
-  transition: all 4s ease-in-out;
-  animation: ${thokimanSkeletonShow} 2s ease-in-out;
+  transform: rotate(-45deg);
+  top: -1vh;
+  right: 8vw;
+  grid-area: bottomgrid-rightleg;
+  transition: all 0.5s ease-in-out;
+
+  @media only screen and (max-width: ${maxWidthTablet}px) {
+    right: 5vw;
+  }
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    top: -28px;
-    left: 20px;
+    transform: rotate(0deg);
+    right: 28vw;
+  }
+  @media only screen and (max-width: 770px) {
+    top: 2vh;
+    right: 32vw;
+  }
+  @media only screen and (max-width: 550px) {
+    top: 0vh;
+    right: 32vw;
+  }
+  @media only screen and (max-width: 450px) {
+    top: 1vh;
+    right: 25vw;
+  }
+  @media only screen and (max-width: 400px) {
+    right: 30vw;
+  }
+  @media only screen and (max-width: 375px) {
+    top: 1vh;
+    right: 25vw;
+  }
+  @media only screen and (max-width: 350px) {
+  }
+  @media only screen and (max-width: 300px) {
+    top: -4vh;
+    right: 26vw;
   }
 `;
 
-const getThokimanHandLeftContainer = ({ $isdropdownhidden }) => {
+const getThokimanLegRightContainer = ({ $isdropdownhidden }) => {
   if ($isdropdownhidden) {
-    return ThokimanHandLeftContainerHide;
+    return ThokimanLegRightContainerDropdownHide;
   }
-  return ThokimanHandLeftContainerShow;
+  return ThokimanLegRightContainerDropdownShow;
 };
 
-export const ThokimanHandLeftContainer = styled.div`
-  ${getThokimanHandLeftContainer}
+export const ThokimanLegRightContainer = styled.div`
+  ${getThokimanLegRightContainer}
 `;
-ThokimanHandLeftContainer.displayName = 'ThokimanHandLeftContainer';
-
-//leg
-
-//right leg
+ThokimanLegRightContainer.displayName = 'ThokimanLegRightContainer';
+//-------------------------------------------------------------------------------------------------------------
+// right leg styles
+//-------------------------------------------------------------------------------------------------------------
 const getThokimanLegGrayRightContent = ({ $isdropdownhidden }) => {
   if ($isdropdownhidden) {
-    return ThokimanPartGrayHideStyles;
+    return ThokimanPartGrayDropdownHideStyles;
   }
-  return ThokimanPartGrayShowStyles;
+  return ThokimanPartGrayDropdownShowStyles;
 };
 
 export const ThokimanLegGrayRightContent = styled(ThokimanLegGray)`
@@ -438,47 +652,180 @@ export const ThokimanLegGrayRightContent = styled(ThokimanLegGray)`
 `;
 ThokimanLegGrayRightContent.displayName = 'ThokimanLegGrayRightContent';
 
-const ThokimanLegRightContainerHide = css`
+//*************************************************************************************************************
+//-------------------------------------------------------------------------------------------------------------
+// left hand animation
+//-------------------------------------------------------------------------------------------------------------
+const ThokimanHandLeftContainerDropdownHide = css`
   ${ThokimanSkeletonGrayStyles}
 
-  right: 35px;
-  grid-area: bottomgrid-rightleg;
-  transition: all 1s ease-in-out;
-`;
+  grid-area: middlegrid-lefthand;
+  top: 0vh;
+  left: 1.8vw;
+  transform: scaleX(-1);
+  transition: all 0.5s ease-in-out;
 
-const ThokimanLegRightContainerShow = css`
-  ${ThokimanSkeletonGrayStyles}
-
-  transform: rotate(-45deg);
-  top: -30px;
-  right: 5px;
-  grid-area: bottomgrid-rightleg;
-  transition: all 4s ease-in-out;
-  animation: ${thokimanLegShow} 2s ease-in-out;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    right: 50px;
+    left: 9vw;
+  }
+`;
+const ThokimanHandLeftContainerDropdownShow = css`
+  ${ThokimanSkeletonGrayStyles}
+
+  grid-area: middlegrid-lefthand;
+  top: -7vh;
+  left: 5vw;
+  transform: rotate(-90deg) scaleY(-1);
+  transition: all 0.5s ease-in-out;
+
+  @media only screen and (max-width: ${maxWidthTablet}px) {
+    top: -5vh;
+    left: 0vw;
+  }
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    transform: rotate(20deg) scaleX(-1);
+    top: 1.5vh;
+    left: 13vw;
+  }
+  @media only screen and (max-width: 770px) {
+    top: 1vh;
+    left: 21vw;
+  }
+
+  @media only screen and (max-width: 550px) {
+    left: 23vw;
+  }
+  @media only screen and (max-width: 450px) {
+    left: 11vw;
+  }
+
+  @media only screen and (max-width: 450px) and (max-height: 823px) {
+    top: 2vh;
+    left: 10vw;
+  }
+  @media only screen and (max-width: 450px) and (max-height: 736px) {
+    top: 1vh;
+  }
+  @media only screen and (max-width: 400px) {
+    left: 13vw;
+  }
+  @media only screen and (max-width: 375px) {
+    top: 3vh;
+    left: 10vw;
+  }
+  @media only screen and (max-width: 350px) {
+    top: 0.5vh;
+    left: 13vw;
+  }
+  @media only screen and (max-width: 300px) {
+    top: -0.5vh;
+    left: 9vw;
   }
 `;
 
-const getThokimanLegRightContainer = ({ $isdropdownhidden }) => {
+const getThokimanHandLeftContainer = ({ $isdropdownhidden }) => {
   if ($isdropdownhidden) {
-    return ThokimanLegRightContainerHide;
+    return ThokimanHandLeftContainerDropdownHide;
   }
-  return ThokimanLegRightContainerShow;
+  return ThokimanHandLeftContainerDropdownShow;
 };
 
-export const ThokimanLegRightContainer = styled.div`
-  ${getThokimanLegRightContainer}
+export const ThokimanHandLeftContainer = styled.div`
+  ${getThokimanHandLeftContainer}
 `;
-ThokimanLegRightContainer.displayName = 'ThokimanLegRightContainer';
+ThokimanHandLeftContainer.displayName = 'ThokimanHandLeftContainer';
+//-------------------------------------------------------------------------------------------------------------
+//left hand styles
+//-------------------------------------------------------------------------------------------------------------
+const getThokimanHandGrayLeftContent = ({ $isdropdownhidden }) => {
+  if ($isdropdownhidden) {
+    return ThokimanPartGrayDropdownHideStyles;
+  }
+  return ThokimanPartGrayDropdownShowStyles;
+};
 
-//left leg
+export const ThokimanHandGrayLeftContent = styled(ThokimanHandGray)`
+  ${getThokimanHandGrayLeftContent}
+`;
+ThokimanHandGrayLeftContent.displayName = 'ThokimanHandGrayLeftContent';
+//-------------------------------------------------------------------------------------------------------------
+// left leg animation
+//-------------------------------------------------------------------------------------------------------------
+const ThokimanLegLeftContainerDropdownHide = css`
+  ${ThokimanSkeletonGrayStyles}
 
+  grid-area: bottomgrid-leftleg;
+  top: 0vh;
+  left: 1.8vw;
+  transform: scaleX(-1);
+  transition: all 1s ease-in-out;
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    left: 9vw;
+  }
+`;
+
+const ThokimanLegLeftContainerDropdownShow = css`
+  ${ThokimanSkeletonGrayStyles}
+
+  grid-area: bottomgrid-leftleg;
+  top: -1vh;
+  left: 8.3vw;
+  transition: all 0.5s ease-in-out;
+  transform: rotate(-135deg) scaleY(-1);
+
+  @media only screen and (max-width: ${maxWidthTablet}px) {
+    left: 6vw;
+  }
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    transform: rotate(0deg) scaleX(-1);
+    left: 29vw;
+  }
+  @media only screen and (max-width: 770px) {
+    top: 2vh;
+    left: 33vw;
+  }
+  @media only screen and (max-width: 550px) {
+    top: 0vh;
+    left: 33vw;
+  }
+  @media only screen and (max-width: 450px) {
+    top: 1vh;
+    left: 25vw;
+  }
+  @media only screen and (max-width: 400px) {
+    left: 31vw;
+  }
+  @media only screen and (max-width: 375px) {
+    top: 1vh;
+    left: 26vw;
+  }
+  @media only screen and (max-width: 350px) {
+  }
+  @media only screen and (max-width: 300px) {
+    top: -4vh;
+    left: 27vw;
+  }
+`;
+
+const getThokimanLegLeftContainer = ({ $isdropdownhidden }) => {
+  if ($isdropdownhidden) {
+    return ThokimanLegLeftContainerDropdownHide;
+  }
+  return ThokimanLegLeftContainerDropdownShow;
+};
+
+export const ThokimanLegLeftContainer = styled.div`
+  ${getThokimanLegLeftContainer}
+`;
+ThokimanLegLeftContainer.displayName = 'ThokimanLegLeftContainer';
+//-------------------------------------------------------------------------------------------------------------
+// left leg styles
+//-------------------------------------------------------------------------------------------------------------
 const getThokimanLegGrayLeftContent = ({ $isdropdownhidden }) => {
   if ($isdropdownhidden) {
-    return ThokimanPartGrayHideStyles;
+    return ThokimanPartGrayDropdownHideStyles;
   }
-  return ThokimanPartGrayShowStyles;
+  return ThokimanPartGrayDropdownShowStyles;
 };
 
 export const ThokimanLegGrayLeftContent = styled(ThokimanLegGray)`
@@ -486,37 +833,4 @@ export const ThokimanLegGrayLeftContent = styled(ThokimanLegGray)`
 `;
 ThokimanLegGrayLeftContent.displayName = 'ThokimanLegGrayLeftContent';
 
-const ThokimanLegLeftContainerHide = css`
-  ${ThokimanSkeletonGrayStyles}
-
-  grid-area: bottomgrid-leftleg;
-  left: 35px;
-  transform: scaleX(-1);
-  transition: all 1s ease-in-out;
-`;
-
-const ThokimanLegLeftContainerShow = css`
-  ${ThokimanSkeletonGrayStyles}
-
-  grid-area: bottomgrid-leftleg;
-  left: 5px;
-  top: -30px;
-  transition: all 4s ease-in-out;
-  transform: rotate(-135deg) scaleY(-1);
-  animation: ${thokimanLegShow} 2s ease-in-out;
-  @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    left: 55px;
-  }
-`;
-
-const getThokimanLegLeftContainer = ({ $isdropdownhidden }) => {
-  if ($isdropdownhidden) {
-    return ThokimanLegLeftContainerHide;
-  }
-  return ThokimanLegLeftContainerShow;
-};
-
-export const ThokimanLegLeftContainer = styled.div`
-  ${getThokimanLegLeftContainer}
-`;
-ThokimanLegLeftContainer.displayName = 'ThokimanLegLeftContainer';
+//-------------------------------------------------------------------------------------------------------------

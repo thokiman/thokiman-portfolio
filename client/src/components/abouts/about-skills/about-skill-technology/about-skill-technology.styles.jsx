@@ -9,6 +9,7 @@ export const AboutTechnologySkillContainer = styled.div`
   margin: 0 auto;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 100%;
+    overflow-y: hidden;
   }
 `;
 export const AboutTechnologyContentContainer = styled.div`

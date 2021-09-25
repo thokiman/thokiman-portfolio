@@ -24,10 +24,32 @@ const AboutDropdownStyles = css`
   margin-left: 2vw;
   transition: height 0.5s ease-in-out, top 0.2s ease;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    width: 100%;
-    height: 50vh;
-    margin-left: 0;
+    width: 80%;
+    height: 52vh;
+
+    margin-left: 0px;
     margin-top: 20px;
+    ${getSideBarActive}
+  }
+  @media only screen and (max-width: 550px) {
+    height: 49vh;
+    ${getSideBarActive}
+  }
+  @media only screen and (max-width: 400px) {
+    height: 42vh;
+    ${getSideBarActive}
+  }
+
+  @media only screen and (max-width: 375px) {
+    height: 49vh;
+    ${getSideBarActive}
+  }
+  @media only screen and (max-width: 375px) and (max-height: 667px) {
+    height: 42vh;
+    ${getSideBarActive}
+  }
+  @media only screen and (max-width: 300px) {
+    height: 49vh;
     ${getSideBarActive}
   }
 `;

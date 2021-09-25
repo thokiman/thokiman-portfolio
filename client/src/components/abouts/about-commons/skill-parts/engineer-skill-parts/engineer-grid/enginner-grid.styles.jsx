@@ -10,7 +10,7 @@ export const EngineerContentContainer = styled.div`
   position: relative;
   top: 10px;
   width: 100%;
-  height: 50%;
+
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: repeat (auto, 1fr);
@@ -34,7 +34,7 @@ export const NameEngineerSkill = styled.div`
   font-size: 3vw;
   letter-spacing: 0.04em;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    font-size: 20px;
+    font-size: 5vw;
   }
 `;
 

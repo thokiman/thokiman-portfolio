@@ -18,7 +18,12 @@ export const SkillContainer = styled.div`
   height: 98%;
   font-family: baskerville-old-face;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    width: 100%;
+    position: absolute;
+    top: 44vh;
+    width: 100vw;
+
+    overflow-y: hidden;
+
     margin: 0;
     ${getSideBarActive}
   }

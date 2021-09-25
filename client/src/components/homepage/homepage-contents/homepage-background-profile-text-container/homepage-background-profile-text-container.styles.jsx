@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 const backgroundProfileText = '#000000';
 const lightGrayColor = '#9096ae';
-const maxWidthDesktop = 1675;
+const maxWidthDesktop = 1366;
 
 const HomepageIsNotActived = css`
   display: none;

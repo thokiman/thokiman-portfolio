@@ -6,10 +6,11 @@ import {
 } from './portfolio-website-item.styles';
 
 export const PortfolioWebsiteItem = ({
+  isSideBarActive,
   items: { title, linkUrl, webItems },
 }) => {
   return (
-    <PortfolioWebsiteItemContainer>
+    <PortfolioWebsiteItemContainer $issidebaractive={isSideBarActive}>
       <PortfolioWebsiteItemLink to={{ pathname: `${linkUrl}` }} target='_blank'>
         {title} Demo
       </PortfolioWebsiteItemLink>

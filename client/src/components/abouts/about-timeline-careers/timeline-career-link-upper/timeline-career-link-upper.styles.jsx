@@ -79,8 +79,35 @@ const TimelineYearBoxUpperActive = css`
   transition: color, border, background-color 0.5s linear;
   animation: ${rotate90BlCcw} 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    font-size: 120%;
+    font-size: 5vw;
+    top: 7vh;
+    right: 1vw;
   }
+  @media only screen and (max-width: 550px) {
+    font-size: 4vw;
+    top: 6vh;
+  }
+
+  @media only screen and (max-width: 470px) and (max-height: 823px) {
+    font-size: 6vw;
+    right: 1.1vw;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 736px) {
+    top: 7vh;
+    right: 0.5vw;
+  }
+  @media only screen and (max-width: 400px) and (max-height: 812px) {
+    top: 5vh;
+    right: 1vw;
+  }
+  @media only screen and (max-width: 375px) and (max-height: 667px) {
+    top: 8vh;
+  }
+  @media only screen and (max-width: 300px) {
+    top: 5vh;
+    right: 1.1vw;
+  }
+
   &:hover {
     color: ${whiteSmokeColor};
   }
@@ -118,9 +145,30 @@ const TimelinePointerUpperActive = css`
     width 0.5s ease-in-out;
   cursor: default;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    height: 70px;
-    width: 70px;
-    top: -25px;
+    height: 11vh;
+    width: 15vw;
+    top: -4vh;
+  }
+  @media only screen and (max-width: 550px) {
+    height: 10vh;
+    width: 13vw;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 823px) {
+    width: 20vw;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 736px) {
+    height: 11vh;
+    width: 17vw;
+  }
+  @media only screen and (max-width: 400px) and (max-height: 812px) {
+    height: 9vh;
+    width: 19vw;
+  }
+  @media only screen and (max-width: 400px) and (max-height: 667px) {
+    height: 12vh;
+  }
+  @media only screen and (max-width: 300px) {
+    height: 9vh;
   }
 `;
 

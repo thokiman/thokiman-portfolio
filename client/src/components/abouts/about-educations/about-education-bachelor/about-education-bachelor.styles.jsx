@@ -14,6 +14,9 @@ export const AboutEducationBachelorContent = styled.div`
   margin: 0 25px;
   position: relative;
   top: 10px;
+  @media only screen and (max-width: 500px) {
+    margin: 0 auto;
+  }
 `;
 
 export const AboutEducationBachelorTitle = styled.div`

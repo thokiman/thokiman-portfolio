@@ -25,6 +25,12 @@ export const VisualArtTitle = styled.div`
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 400%;
   }
+  @media only screen and (max-width: 400px) {
+    font-size: 300%;
+  }
+  @media only screen and (max-width: 300px) {
+    font-size: 200%;
+  }
 `;
 
 export const VisualArtGridContent = styled.div`

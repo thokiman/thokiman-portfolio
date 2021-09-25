@@ -9,6 +9,7 @@ import ServiceUrlIconContent from '../../service-commons/service-url-icon-conten
 import {
   RightServiceContainerPg,
   RightServiceContentPg,
+  ServiceStockPhotos,
 } from './service-photography.styles';
 
 export const ServicePhotography = ({
@@ -20,6 +21,7 @@ export const ServicePhotography = ({
       <RightServiceContentPg>
         <ServiceUrlGeneralContent title={title} description={description} />
         <ServiceIconContent items={photographyIconItems} />
+        <ServiceStockPhotos>Stock Photos</ServiceStockPhotos>
         <ServiceUrlIconContent items={photoStockItems} />
       </RightServiceContentPg>
     </RightServiceContainerPg>

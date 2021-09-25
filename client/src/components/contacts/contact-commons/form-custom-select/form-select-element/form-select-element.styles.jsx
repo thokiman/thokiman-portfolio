@@ -62,10 +62,21 @@ export const FormSelectTitle = styled.div`
   ${FormSelectValue}:hover & {
     ${FormSelectValueHoverStyles}
   }
+  @media only screen and (max-width: 1024px) {
+    font-size: 3vw;
+  }
+
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    font-size: 6vw;
+    font-size: 5vw;
     top: 0vh;
     left: 3.5vw;
+  }
+  @media only screen and (max-width: 550px) {
+    font-size: 6vw;
+  }
+  @media only screen and (max-width: 550px) {
+  }
+  @media only screen and (max-width: 300px) {
   }
 `;
 
@@ -112,15 +123,36 @@ export const FormSelectArrowButton = styled.span`
   }
 `;
 
+// **
 export const FormInputCheckerContainer = styled.span`
   position: absolute;
   left: -1vw;
   color: ${greenBlueColor};
-  @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    left: -3vw;
+  @media only screen and (max-width: 1024px) {
+    left: -1vw;
     top: 1vh;
   }
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    left: -3vw;
+    top: 2vh;
+  }
+  @media only screen and (max-width: 550px) {
+    top: 1vh;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 823px) {
+    top: 0vh;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 812px) {
+    top: 0vh;
+  }
+  @media only screen and (max-width: 320px) and (max-height: 568px) {
+    top: -1vh;
+  }
+  @media only screen and (max-width: 300px) {
+    left: -2.5vw;
+  }
 `;
+
 const FormInputTelCheckerIconStyles = css`
   width: 2vw;
   height: 2vh;

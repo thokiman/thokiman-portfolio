@@ -40,23 +40,20 @@ export const PrevArrow = styled(BiChevronsLeft)`
     left: 4vw;
   }
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    left: 17vw;
+    top: 14vh;
+    left: 10vw;
   }
 
-  @media only screen and (max-width: 620px) {
-  }
-  @media only screen and (max-width: 570px) {
+  @media only screen and (max-width: 550px) {
     top: 10vh;
   }
   @media only screen and (max-width: 470px) {
-    top: 8vh;
   }
-  @media only screen and (max-width: 370px) {
+  @media only screen and (max-width: 400px) {
     top: 5vh;
   }
 
-  @media only screen and (max-width: 270px) {
-    top: 2vh;
+  @media only screen and (max-width: 300px) {
   }
 `;
 
@@ -87,21 +84,20 @@ export const NextArrow = styled(BiChevronsRight)`
     left: 84vw;
   }
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    left: 86vw;
+    top: 14vh;
+    left: 78vw;
   }
 
-  @media only screen and (max-width: 570px) {
+  @media only screen and (max-width: 550px) {
     top: 10vh;
   }
   @media only screen and (max-width: 470px) {
-    top: 8vh;
   }
-  @media only screen and (max-width: 370px) {
+  @media only screen and (max-width: 400px) {
     top: 5vh;
   }
 
-  @media only screen and (max-width: 270px) {
-    top: 2vh;
+  @media only screen and (max-width: 300px) {
   }
 `;
 
@@ -111,6 +107,7 @@ export const PortfolioItemsSliderImage = styled.img`
   left: 10vw;
   width: 80vw;
   height: 90vh;
+
   @media only screen and (max-width: ${maxWidthDesktop}px) {
     left: 15vw;
     width: 50vw;
@@ -130,34 +127,30 @@ export const PortfolioItemsSliderImage = styled.img`
     width: 67vw;
     height: 40vh;
   }
-  @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    width: 100vw;
-    height: 40vh;
-  }
-  @media only screen and (max-width: 770px) {
-    width: 100vw;
-    height: 40vh;
-  }
-  @media only screen and (max-width: 620px) {
-    width: 100vw;
-    height: 38vh;
-  }
-  @media only screen and (max-width: 570px) {
-    width: 100vw;
+  @media only screen and (max-width: 1024px) {
+    width: 67vw;
     height: 35vh;
   }
-  @media only screen and (max-width: 470px) {
-    width: 100vw;
-    height: 30vh;
-  }
-  @media only screen and (max-width: 370px) {
-    width: 100vw;
-    height: 25vh;
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    width: 83vw;
+    height: 40vh;
+    left: 8vw;
   }
 
-  @media only screen and (max-width: 270px) {
-    width: 100vw;
-    height: 20vh;
+  @media only screen and (max-width: 550px) {
+    height: 38vh;
+  }
+  @media only screen and (max-width: 470px) {
+    height: 30vh;
+  }
+  @media only screen and (max-width: 400px) {
+    width: 80vw;
+    height: 26vh;
+    left: 9vw;
+  }
+
+  @media only screen and (max-width: 300px) {
+    width: 80vw;
   }
 `;
 
@@ -169,20 +162,29 @@ export const WrapperDots = styled.div`
 
 export const DotsContainer = styled.ul`
   margin-top: 4vh;
-  margin-bottom: 4vh;
+
   display: flex;
   justify-content: space-evenly;
   position: relative;
+
   left: -7.5vw;
   width: 100vw;
-  @media only screen and (max-width: 770px) {
-    left: -10vw;
+
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    left: -8.5vw;
   }
-  @media only screen and (max-width: 570px) {
-    left: -12vw;
+
+  @media only screen and (max-width: 550px) {
+    left: -9vw;
+  }
+  @media only screen and (max-width: 470px) {
+    left: -9.5vw;
   }
   @media only screen and (max-width: 400px) {
-    left: -14vw;
+    left: -10.5vw;
+  }
+  @media only screen and (max-width: 300px) {
+    left: -11vw;
   }
 `;
 
@@ -194,49 +196,39 @@ export const WrapperSingleDot = styled.a`
 export const SingleDotImage = styled.img`
   width: 14vw;
   height: 14vh;
+  margin-bottom: 4vh;
+
   @media only screen and (max-width: ${maxWidthDesktop}px) {
     width: 10vw;
     height: 10vh;
   }
 
   @media only screen and (max-width: 1200px) {
-    width: 10vw;
     height: 8vh;
   }
 
   @media only screen and (max-width: 1100px) {
-    width: 10vw;
     height: 7vh;
   }
+  @media only screen and (max-width: 1024px) {
+    height: 5vh;
+  }
+
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    width: 12vw;
-    height: 7vh;
-  }
-  @media only screen and (max-width: 770px) {
     width: 14vw;
     height: 6vh;
   }
 
-  @media only screen and (max-width: 570px) {
-    width: 17vw;
-    height: 6vh;
-  }
-  @media only screen and (max-width: 470px) {
-    width: 21vw;
-    height: 6vh;
-  }
-  @media only screen and (max-width: 400px) {
-    width: 23vw;
-    height: 6vh;
-  }
-
-  @media only screen and (max-width: 320px) {
-    width: 23vw;
+  @media only screen and (max-width: 550px) {
+    width: 13vw;
     height: 5vh;
   }
-
-  @media only screen and (max-width: 270px) {
-    width: 23vw;
+  @media only screen and (max-width: 470px) {
     height: 4vh;
+  }
+  @media only screen and (max-width: 400px) {
+  }
+
+  @media only screen and (max-width: 300px) {
   }
 `;

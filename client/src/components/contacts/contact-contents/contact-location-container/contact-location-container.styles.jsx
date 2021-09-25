@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-
+const maxWidthSmartphone = 800;
 const backgroundColorContactLocationContainer = 'rgba(18, 129, 148, 0.5)';
 const backgroundColorContactLocationInfo = 'rgba(116, 198, 212, 0.45)';
 const grayBlueColor = '#128194';
@@ -21,12 +21,15 @@ export const ContactLocationContainer = styled.div`
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  @media only screen and (max-width: 800px) {
-    width: 85vw;
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    width: 100vw;
+    align-items: flex-start;
     height: 100vh;
+
     ${getSideBarActive}
   }
 `;
+// **
 export const ContactLocationInfo = styled.div`
   display: flex;
   flex-direction: column;
@@ -36,8 +39,11 @@ export const ContactLocationInfo = styled.div`
   width: 98%;
   background-color: ${backgroundColorContactLocationInfo};
   margin: 5px 0;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    width: 100vw;
     height: 50vh;
+  }
+  @media only screen and (max-width: 300px) {
   }
 `;
 
@@ -47,6 +53,9 @@ export const ContactLocationTitle = styled.div`
   color: ${grayBlueColor};
   margin: 0 5px;
   letter-spacing: 0.02em;
+  @media only screen and (max-width: 1024px) {
+    font-size: 4vw;
+  }
   @media only screen and (max-width: 800px) {
     font-size: 10vw;
   }
@@ -59,6 +68,9 @@ export const ContactLocationItem = styled.div`
   font-size: 1.5vw;
   margin: 0 5px;
   letter-spacing: 0.1em;
+  @media only screen and (max-width: 1024px) {
+    font-size: 1.8vw;
+  }
   @media only screen and (max-width: 800px) {
     font-size: 5vw;
   }

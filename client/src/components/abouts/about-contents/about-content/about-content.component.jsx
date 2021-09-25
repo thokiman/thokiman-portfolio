@@ -41,19 +41,19 @@ export const AboutHomeContent = ({ isDropdownHidden, isSideBarActive }) => {
           />
         </ThokimanSkeletonGrayRight>
         <ThokimanHandRightContainer $isdropdownhidden={isDropdownHidden}>
-          <ThokimanHandGrayRightContent />
+          <ThokimanHandGrayRightContent $isdropdownhidden={isDropdownHidden} />
         </ThokimanHandRightContainer>
         <ThokimanBodyContainer $isdropdownhidden={isDropdownHidden}>
-          <ThokimanBodyGrayContent />
+          <ThokimanBodyGrayContent $isdropdownhidden={isDropdownHidden} />
         </ThokimanBodyContainer>
         <ThokimanHandLeftContainer $isdropdownhidden={isDropdownHidden}>
-          <ThokimanHandGrayLeftContent />
+          <ThokimanHandGrayLeftContent $isdropdownhidden={isDropdownHidden} />
         </ThokimanHandLeftContainer>
         <ThokimanLegRightContainer $isdropdownhidden={isDropdownHidden}>
-          <ThokimanLegGrayRightContent />
+          <ThokimanLegGrayRightContent $isdropdownhidden={isDropdownHidden} />
         </ThokimanLegRightContainer>
         <ThokimanLegLeftContainer $isdropdownhidden={isDropdownHidden}>
-          <ThokimanLegGrayLeftContent />
+          <ThokimanLegGrayLeftContent $isdropdownhidden={isDropdownHidden} />
         </ThokimanLegLeftContainer>
       </RightPageContent>
     </RightPageContainer>

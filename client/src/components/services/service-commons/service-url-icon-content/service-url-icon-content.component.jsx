@@ -1,10 +1,9 @@
-import React from "react";
+import React from 'react';
 import {
   ServiceUrlIcon,
   ServiceUrlIconContainer,
-  ServiceUrlIconItem
-} from "./service-url-icon-content.styles";
-
+  ServiceUrlIconItem,
+} from './service-url-icon-content.styles';
 
 export const ServiceUrlIconContent = ({ items }) => {
   return (
@@ -13,8 +12,8 @@ export const ServiceUrlIconContent = ({ items }) => {
         return (
           <ServiceUrlIconContainer
             key={id}
-            to={{ pathname: `${ linkUrl }` }}
-            target="_blank"
+            to={{ pathname: `${linkUrl}` }}
+            target='_blank'
           >
             <ServiceUrlIconItem src={iconPath} alt={field} />
           </ServiceUrlIconContainer>

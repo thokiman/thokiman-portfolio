@@ -20,6 +20,7 @@ export const ProjectContainer = styled.div`
   font-family: baskerville-old-face;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 100%;
+    overflow-y: hidden;
     margin: 0;
     ${getSideBarActive}
   }

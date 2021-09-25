@@ -10,6 +10,8 @@ export const AboutEngineerSkillContainer = styled.div`
   margin: 0 auto;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 98%;
+
+    overflow-y: hidden;
   }
 `;
 AboutEngineerSkillContainer.displayName = 'AboutEngineerSkillContainer';

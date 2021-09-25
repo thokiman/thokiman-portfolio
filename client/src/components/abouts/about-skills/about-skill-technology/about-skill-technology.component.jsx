@@ -6,7 +6,6 @@ import {
 } from './about-skill-technology.styles';
 
 export const TechnologySkill = ({ skill }) => {
-  console.log(skill);
   const {
     itemsPoint: {
       architecture,

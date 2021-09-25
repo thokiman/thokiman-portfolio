@@ -20,11 +20,34 @@ export const FormSelectTitleActive = styled.div`
   color: ${heavyLighBlueColor};
   margin-bottom: 5px;
   animation: ${formSelectActive} 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  @media only screen and (max-width: 1024px) {
+    font-size: 3vw;
+  }
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    font-size: 5vw;
     position: relative;
-    top: -1.5vw;
+    font-size: 4vw;
+    top: -1vh;
     left: 2vw;
+  }
+  @media only screen and (max-width: 550px) {
+    font-size: 5.5vw;
+    top: -0.5vh;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 823px) {
+    font-size: 5.5vw;
+    top: 0.5vh;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 812px) {
+    font-size: 5.5vw;
+    top: 1vh;
+  }
+  @media only screen and (max-width: 320px) and (max-height: 568px) {
+    font-size: 5.5vw;
+    top: 2vh;
+  }
+  @media only screen and (max-width: 300px) {
+    font-size: 5.5vw;
+    top: 2.5vh;
   }
 `;
 
@@ -39,6 +62,7 @@ export const FormSelectTitleContainer = styled.div`
   display: block;
   height: 0px;
   transition: height 0.5s ease-in-out;
+
   ${getFormSelectTitleContainerActive}
 `;
 FormSelectTitleActive.displayName = 'FormSelectTitleActive';

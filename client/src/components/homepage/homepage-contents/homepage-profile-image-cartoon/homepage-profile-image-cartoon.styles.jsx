@@ -48,7 +48,7 @@ const lightBlueColor = '#7ED6E0';
 const greenBlueColor = '#18D3AF';
 const yellowColor = '#ffee58';
 const whiteSmokeColor = '#E3E1E4';
-const maxWidthDesktop = 1675;
+const maxWidthDesktop = 1366;
 const maxWidthSmartphone = 800;
 const transformStrokeSvg = keyframes`
                              to {
@@ -111,7 +111,7 @@ export const HomepageComputer = styled(Computer)`
   width: 13vw;
   height: 18vh;
   top: 44vh;
-  left: -440px;
+  left: -24vw;
   grid-area: computer;
   @media only screen and (max-width: ${maxWidthDesktop}px) {
     top: -3vh;
@@ -129,8 +129,8 @@ export const HomepageCloudComputingOne = styled(CloudComputingOne)`
 
   width: 7vw;
   height: 10vh;
-  top: 345px;
-  left: -435px;
+  top: 35.5vh;
+  left: -23vw;
   grid-area: cloud-computing-one;
   @media only screen and (max-width: ${maxWidthDesktop}px) {
     top: -2vh;
@@ -147,8 +147,8 @@ export const HomepageCloudComputingTwo = styled(CloudComputingTwo)`
 
   width: 7vw;
   height: 10vh;
-  top: 335px;
-  left: -320px;
+  top: 34.5vh;
+  left: -17.5vw;
   grid-area: cloud-computing-two;
   @media only screen and (max-width: ${maxWidthDesktop}px) {
     top: -2vh;
@@ -164,10 +164,11 @@ export const HomepageCloudComputingTwo = styled(CloudComputingTwo)`
 export const HomepageEnergyOne = styled(EnergyOne)`
   ${HomepageIconStyles}
 
-  top: 425px;
-  left: -245px;
   width: 7vw;
   height: 9vh;
+  top: 47vh;
+  left: -14vw;
+
   transform: rotate(-85deg);
   grid-area: energy-one;
   @media only screen and (max-width: ${maxWidthDesktop}px) {
@@ -183,11 +184,39 @@ export const HomepageEnergyOne = styled(EnergyOne)`
   }
 `;
 
+export const HomepageMusicSingleSoundWaveLineOne = styled(
+  MusicSingleSoundWaveLineOne
+)`
+  ${HomepageIconStyles}
+
+  top: 53vh;
+  left: -13vw;
+  width: 4vw;
+  height: 5vw;
+  transform: rotate(-40deg);
+  grid-area: music-single-soundwave-line-one;
+  @media only screen and (max-width: ${maxWidthDesktop}px) {
+    top: 49vh;
+    left: 43vw;
+    transform: rotate(90deg);
+  }
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    transform: rotate(90deg);
+    top: 30vh;
+    left: 43vw;
+  }
+  .music {
+    stroke: ${whiteSmokeColor};
+    ${HomepageIconSVG}
+    animation: ${transformStrokeSvg} 0.4s cubic-bezier(0.5, 1, 0.89, 1) alternate infinite both;
+  }
+`;
+
 export const HomepageEnergyTwo = styled(EnergyTwo)`
   ${HomepageIconStyles}
 
-  top: 340px;
-  left: -220px;
+  top: 38vh;
+  left: -12.5vw;
   width: 8vw;
   height: 11vh;
   transform: rotate(-65deg);
@@ -207,8 +236,8 @@ export const HomepageEnergyTwo = styled(EnergyTwo)`
 export const HomepageTools = styled(Tools)`
   ${HomepageIconStyles}
 
-  top: 240px;
-  left: -460px;
+  top: 24vh;
+  left: -24vw;
   width: 10vw;
   height: 10vh;
   grid-area: tools;
@@ -230,11 +259,11 @@ export const HomepageTools = styled(Tools)`
 export const HomepageSettingsOne = styled(SettingsOne)`
   ${HomepageIconStyles}
 
-  top: 210px;
-  left: -290px;
+  top: 22vh;
+  left: -15vw;
   width: 8vw;
   height: 11vh;
-  transform: scaleY(-1) rotate(-65deg);
+  transform: scaleY(-1) rotate(-60deg);
   grid-area: settings-one;
   @media only screen and (max-width: ${maxWidthDesktop}px) {
     transform: rotate(-30deg);
@@ -253,39 +282,37 @@ export const HomepageSettingsOne = styled(SettingsOne)`
   }
 `;
 
-export const HomepageMusicSingleSoundWaveLineOne = styled(
-  MusicSingleSoundWaveLineOne
-)`
+export const HomepageSettingsTwo = styled(SettingsTwo)`
   ${HomepageIconStyles}
 
-  top: 500px;
-  left: 100px;
-  width: 5vw;
-  height: 6vw;
-  transform: rotate(45deg);
-  grid-area: music-single-soundwave-line-two;
+  top: 24vh;
+  left: -18vw;
+  width: 7vw;
+  height: 8vh;
+  transform: rotate(-38deg);
+  grid-area: settings-two;
   @media only screen and (max-width: ${maxWidthDesktop}px) {
-    top: 26vh;
-    left: 43vw;
-    transform: rotate(90deg);
+    transform: rotate(-30deg);
+    top: 49vh;
+    left: 22vw;
   }
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    top: 14vh;
-    left: 43vw;
-    transform: rotate(90deg);
+    transform: rotate(-30deg);
+    top: 30vh;
+    left: 22vw;
   }
-  .music {
-    stroke: ${whiteSmokeColor};
+  .settings {
+    stroke: ${lightBlueColor};
     ${HomepageIconSVG}
-    animation: ${transformStrokeSvg} 0.4s cubic-bezier(0.5, 1, 0.89, 1) alternate-reverse infinite both;
+    animation: ${transformStrokeSvg} 0.4s ease-in-out alternate-reverse infinite both;
   }
 `;
 
 export const HomepageEnergyThree = styled(EnergyThree)`
   ${HomepageIconStyles}
 
-  top: 250px;
-  left: -190px;
+  top: 29vh;
+  left: -11vw;
   width: 8vw;
   height: 11vh;
   transform: rotate(-60deg);
@@ -309,8 +336,8 @@ export const HomepageEnergyThree = styled(EnergyThree)`
 export const HomepageEnergyFour = styled(EnergyFour)`
   ${HomepageIconStyles}
 
-  top: 300px;
-  left: 10px;
+  top: 33vh;
+  left: 0.5vw;
   width: 8vw;
   height: 11vh;
   transform: rotate(-150deg);
@@ -334,8 +361,8 @@ export const HomepageEnergyFour = styled(EnergyFour)`
 export const HomepageEnergyFive = styled(EnergyFive)`
   ${HomepageIconStyles}
 
-  top: 400px;
-  left: 40px;
+  top: 42vh;
+  left: 3vw;
   width: 8vw;
   height: 11vh;
   transform: rotate(-120deg);
@@ -361,8 +388,8 @@ export const HomepageEnergyFive = styled(EnergyFive)`
 export const HomepageLightBulb = styled(LightBulb)`
   ${HomepageIconStyles}
 
-  top: 210px;
-  left: -80px;
+  top: 21vh;
+  left: -4vw;
   width: 9vw;
   height: 12vh;
   transform: rotate(10deg);
@@ -382,63 +409,38 @@ export const HomepageLightBulb = styled(LightBulb)`
   }
 `;
 
-export const HomepageSettingsTwo = styled(SettingsTwo)`
-  ${HomepageIconStyles}
-
-  top: 245px;
-  left: -350px;
-  width: 7vw;
-  height: 8vh;
-  transform: rotate(-38deg);
-  grid-area: settings-two;
-  @media only screen and (max-width: ${maxWidthDesktop}px) {
-    transform: rotate(-30deg);
-    top: 49vh;
-    left: 22vw;
-  }
-  @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    transform: rotate(-30deg);
-    top: 30vh;
-    left: 22vw;
-  }
-  .settings {
-    stroke: ${lightBlueColor};
-    ${HomepageIconSVG}
-    animation: ${transformStrokeSvg} 0.4s ease-in-out alternate-reverse infinite both;
-  }
-`;
 export const HomepageMusicSingleSoundWaveLineTwo = styled(
   MusicSingleSoundWaveLineTwo
 )`
   ${HomepageIconStyles}
 
-  top: 500px;
-  left: -230px;
-  width: 4vw;
-  height: 5vw;
-  transform: rotate(-40deg);
-  grid-area: music-single-soundwave-line-one;
+  top: 51vh;
+  left: 6vw;
+  width: 5vw;
+  height: 6vw;
+  transform: rotate(20deg);
+  grid-area: music-single-soundwave-line-two;
   @media only screen and (max-width: ${maxWidthDesktop}px) {
-    top: 49vh;
+    top: 26vh;
     left: 43vw;
     transform: rotate(90deg);
   }
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    transform: rotate(90deg);
-    top: 30vh;
+    top: 14vh;
     left: 43vw;
+    transform: rotate(90deg);
   }
   .music {
     stroke: ${whiteSmokeColor};
     ${HomepageIconSVG}
-    animation: ${transformStrokeSvg} 0.4s cubic-bezier(0.5, 1, 0.89, 1) alternate infinite both;
+    animation: ${transformStrokeSvg} 0.4s cubic-bezier(0.5, 1, 0.89, 1) alternate-reverse infinite both;
   }
 `;
 export const HomepageDslrCamera = styled(DslrCamera)`
   ${HomepageIconStyles}
 
-  top: 500px;
-  left: 155px;
+  top: 51vh;
+  left: 9vw;
   width: 10vw;
   height: 11vh;
   grid-area: dslr-camera;
@@ -464,8 +466,8 @@ export const HomepageDslrCamera = styled(DslrCamera)`
 export const HomepagePenTablet = styled(PenTablet)`
   ${HomepageIconStyles}
 
-  top: 455px;
-  left: 260px;
+  top: 46vh;
+  left: 14.5vw;
   width: 13vw;
   height: 15vh;
   transform: rotate(90deg);
@@ -493,8 +495,8 @@ export const HomepagePenTablet = styled(PenTablet)`
 export const HomepagePaintPallete = styled(PaintPallete)`
   ${HomepageIconStyles}
 
-  top: 340px;
-  left: 125px;
+  top: 35vh;
+  left: 7vw;
   width: 14vw;
   height: 15vh;
   grid-area: paint-pallete;
@@ -520,8 +522,8 @@ export const HomepagePaintPallete = styled(PaintPallete)`
 export const HomepageShakespeare = styled(Shakespeare)`
   ${HomepageIconStyles}
 
-  top: 120px;
-  left: 125px;
+  top: 12vh;
+  left: 7vw;
   width: 12vw;
   height: 26vh;
   translate: rotate(45deg);
@@ -544,8 +546,8 @@ export const HomepageShakespeare = styled(Shakespeare)`
 export const HomepageSurf = styled(Surf)`
   ${HomepageIconStyles}
 
-  top: 210px;
-  left: 220px;
+  top: 21vh;
+  left: 12vw;
   width: 18vw;
   height: 20vh;
   transform: rotate(-44deg);
@@ -572,8 +574,8 @@ export const HomepageSurf = styled(Surf)`
 export const HomepageSkateboarding = styled(Skateboarding)`
   ${HomepageIconStyles}
 
-  top: 25px;
-  left: 275px;
+  top: 1.5vh;
+  left: 14vw;
   width: 11vw;
   height: 13vh;
   transform: rotate(0) scaleX(-1);
@@ -603,8 +605,9 @@ export const HomepageSkateboarding = styled(Skateboarding)`
 
 export const HomepageSkull = styled(Skull)`
   ${HomepageIconStyles}
-  top: 120px;
-  left: -165px;
+
+  top: 17vh;
+  left: -8.5vw;
   width: 6vw;
   height: 15vh;
   grid-area: skull;
@@ -629,8 +632,8 @@ export const HomepageSkull = styled(Skull)`
 export const HomepageSunset = styled(Sunset)`
   ${HomepageIconStyles}
 
-  top: 125px;
-  left: -430px;
+  top: 12vh;
+  left: -22.5vw;
   width: 8vw;
   height: 11vh;
   @media only screen and (max-width: ${maxWidthDesktop}px) {
@@ -654,8 +657,8 @@ export const HomepageSunset = styled(Sunset)`
 export const HomepageSurfing = styled(Surfing)`
   ${HomepageIconStyles}
 
-  top: 67px;
-  left: -325px;
+  top: 8vh;
+  left: -17vw;
   width: 10vw;
   height: 12vh;
   transform: scaleX(-1);
@@ -678,8 +681,8 @@ export const HomepageSurfing = styled(Surfing)`
 export const HomepageSeaWaves = styled(SeaWaves)`
   ${HomepageIconStyles}
 
-  top: -15px;
-  left: 120px;
+  top:-2vh;
+  left: 5.5vw;
   width: 11vw;
   height: 15vh;
   grid-area: sea-waves;
@@ -700,8 +703,8 @@ export const HomepageSeaWaves = styled(SeaWaves)`
 export const HomepageMusicSoundWaveLineOne = styled(MusicSoundWaveLineOne)`
   ${HomepageIconStyles}
 
-  top: 15px;
-  left: -140px;
+  top: 1vh;
+  left: -8.5vw;
   width: 20vw;
   height: 19vh;
   grid-area: music-soundwave-line-one;
@@ -722,8 +725,8 @@ export const HomepageMusicSoundWaveLineOne = styled(MusicSoundWaveLineOne)`
 export const HomepageMusicSoundWaveLineTwo = styled(MusicSoundWaveLineTwo)`
   ${HomepageIconStyles}
 
-  top: 200px;
-  left: 25px;
+  top: 15vh;
+  left: 1vw;
   width: 9vw;
   height: 9vh;
   grid-area: music-soundwave-line-two;
@@ -746,8 +749,8 @@ export const HomepageZigzagLinesInSideViewPosition = styled(
 )`
   ${HomepageIconStyles}
 
-  top: 15px;
-  left: -430px;
+  top: 1vh;
+  left: -22.5vw;
   width: 8vw;
   height: 10vh;
 
@@ -771,8 +774,8 @@ export const HomepageZigzagLinesInSideViewPosition = styled(
 export const HomepageZigzagMoustacheOne = styled(ZigzagMoustacheOne)`
   ${HomepageIconStyles}
 
-  top: 60px;
-  left: -150px;
+  top: 11vh;
+  left: -8.5vw;
   width: 6vw;
   height: 8vh;
 
@@ -795,8 +798,8 @@ export const HomepageZigzagMoustacheOne = styled(ZigzagMoustacheOne)`
 export const HomepageZigzagMoustacheTwo = styled(ZigzagMoustacheTwo)`
   ${HomepageIconStyles}
 
-  top: 30px;
-  left: -200px;
+  top: 7vh;
+  left: -9vw;
   width: 7vw;
   height: 5vh;
   grid-area: zigzag-moustache-two;
@@ -819,11 +822,10 @@ export const HomepageZigzagMoustacheTwo = styled(ZigzagMoustacheTwo)`
 export const HomepageZigzagMoustacheThree = styled(ZigzagMoustacheThree)`
   ${HomepageIconStyles}
 
-  top: 5px;
-  left: -285px;
-  width: 5vw;
+  top: 1vh;
+  left: -15vw;
+  width: 11vw;
   height: 6vh;
-  transform: scaleY(-1);
 
   grid-area: zigzag-moustache-three;
 
@@ -846,11 +848,11 @@ export const HomepageZigzagMoustacheThree = styled(ZigzagMoustacheThree)`
 export const HomepageZigzagMoustacheFour = styled(ZigzagMoustacheFour)`
   ${HomepageIconStyles}
 
-  top: 480px;
-  left: 135px;
+  top: 26vh;
+  left: 4vw;
   width: 4vw;
   height: 4vh;
-  transform: scaleY(-1);
+  transform: rotate(45deg);
   grid-area: zigzag-moustache-four;
   @media only screen and (max-width: ${maxWidthDesktop}px) {
     display: none;
@@ -864,11 +866,11 @@ export const HomepageZigzagMoustacheFour = styled(ZigzagMoustacheFour)`
 export const HomepageZigzagMoustacheFive = styled(ZigzagMoustacheFive)`
   ${HomepageIconStyles}
 
-  top: 165px;
-  left: 90px;
+  top: 49vh;
+  left: 9vw;
   width: 3vw;
   height: 3vh;
-  transform: scaleY(-1);
+  transform: rotate(20deg);
   grid-area: zigzag-moustache-five;
   @media only screen and (max-width: ${maxWidthDesktop}px) {
     display: none;

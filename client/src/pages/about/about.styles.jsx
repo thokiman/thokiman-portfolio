@@ -35,16 +35,22 @@ export const AboutIsNotActivated = styled.div`
   animation: ${aboutSideBarHide} 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 `;
 
+const aboutHeight = ({ $aboutheight }) => {
+  return $aboutheight;
+};
+
 const AboutIsActived = css`
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     position: relative;
-
     left: 0;
     width: 100vw;
     transition: left 0.5s ease;
     opacity: 1;
     flex-direction: column;
-    height: 140vh;
+    justify-content: flex-start;
+
+    height: ${aboutHeight}vh;
+    overflow-y: hidden;
   }
 `;
 const getAboutSideBarActive = ({ $issidebaractive }) => {
@@ -89,33 +95,20 @@ const AboutContainer = css`
 
   background-image: url(${getAboutImage});
 `;
-const TimelineCareerContainerMobile = css`
+
+const TimelineCareerContainer = css`
+  ${AboutStyles}
+  background-color: ${backgroundColorTimelineCareerContainer};
+  padding-top: 40px;
+  align-items: flex-start;
+
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     padding: 0;
     background-color: ${greenBlueColor};
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-  } ;
-`;
-const TimelineCareerContainer = css`
-  ${AboutStyles}
-  background-color: ${backgroundColorTimelineCareerContainer};
-  padding-top: 40px;
-  align-items: flex-start;
-  height: 545vh;
-  ${TimelineCareerContainerMobile}
-  @media only screen and (max-width: ${maxWidthSmartphone}px) and (min-width: 500px) {
-    height: 500vh;
-    overflow-y: hidden;
-  }
-  @media only screen and (max-width: 500px) and (min-width: 370px) {
-    height: 560vh;
-    overflow-y: hidden;
-  }
-  @media only screen and (max-width: 370px) {
-    height: 610vh;
-    overflow-y: hidden;
+    align-items: center;
   }
 `;
 

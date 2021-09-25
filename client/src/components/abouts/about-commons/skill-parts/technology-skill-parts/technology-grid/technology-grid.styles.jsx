@@ -49,6 +49,9 @@ export const TechnologyGridContainer = styled.div`
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     top: 0;
   }
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    margin: 0 auto;
+  }
 `;
 
 export const TechnologyTitle = styled.div`
@@ -64,6 +67,8 @@ export const TechnologyTitle = styled.div`
   grid-area: TechnologyTitle;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 25px;
+    width: min-content;
+    height: min-content;
   }
 `;
 
@@ -76,6 +81,10 @@ export const TechnologyGridContent = styled.div`
   grid-auto-rows: 1fr;
   gap: 50px 50px;
   justify-items: center;
+
+  @media only screen and (max-width: 300px) {
+    gap: 40px 40px;
+  }
 `;
 
 export const TechnologyImage = styled.img`
@@ -85,9 +94,17 @@ export const TechnologyImage = styled.img`
   justify-self: stretch;
   border-radius: 1vw 1vw 1vw 1vw;
   animation: ${neon} 3s ease-in-out infinite alternate both;
+  @media only screen and (max-width: 1024px) {
+    width: 7vh;
+    height: 4vh;
+  }
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    width: 100px;
-    height: 100px;
+    width: 14vw;
+    height: 8vh;
+  }
+  @media only screen and (max-width: 300px) {
+    width: 15vw;
+    height: 5vh;
   }
 `;
 TechnologyGridContainer.displayName = 'TechnologyGridContainer';

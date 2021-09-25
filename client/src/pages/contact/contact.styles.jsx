@@ -34,6 +34,11 @@ export const ContactIsNotActivated = styled.div`
   animation: ${contactSideBarHide} 2s cubic-bezier(0.175, 0.885, 0.32, 1.275)
     both;
 `;
+
+const contactHeight = ({ $contactheight }) => {
+  return $contactheight;
+};
+
 const ContactIsActivated = css`
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     position: relative;
@@ -41,8 +46,7 @@ const ContactIsActivated = css`
     transition: left 0.5s ease;
     opacity: 1;
     width: 100vw;
-    height: 350vh;
-
+    height: ${contactHeight}vh;
     flex-direction: column;
   }
 `;

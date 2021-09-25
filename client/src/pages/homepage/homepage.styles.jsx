@@ -1,7 +1,7 @@
 import styled, { css, keyframes } from 'styled-components';
 
 const whiteSmokeColor = '#e3e1e4';
-const maxWidthDesktop = 1675;
+const maxWidthDesktop = 1366;
 const maxWidthTabletPro = 1024;
 const maxWidthSmartphone = 800;
 

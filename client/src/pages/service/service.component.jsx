@@ -1,3 +1,4 @@
+import useWindowDimensions from 'components/commons/window-dimensions/window-dimensions.component';
 import React, { lazy, Suspense } from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
@@ -6,13 +7,18 @@ import SpinnerLoading from '../../components/commons/spinner-loading/spinner-loa
 import { selectIsSideBarActive } from '../../redux/header/header.selectors.js';
 import {
   selectArtService,
+  selectArtServiceRoute,
   selectBigWaveImage,
   selectDevService,
+  selectDevServiceRoute,
+  selectEngineerRoute,
   selectEngineerService,
   selectPhotoService,
+  selectPhotoServiceRoute,
   selectServiceRoute,
 } from '../../redux/service/service.selectors';
 import { ServiceContainer, ServiceIsNotActivated } from './service.styles';
+import { measureServiceHeight } from './service.utils';
 
 const ServiceHomeContent = lazy(() =>
   import(
@@ -45,16 +51,32 @@ const ServiceDev = lazy(() =>
 );
 
 export const Service = ({
+  location: { pathname },
   art,
   photo,
   engineer,
   dev,
   serviceRoute,
+  engineerRoute,
+  artRoute,
+  devRoute,
+  photoRoute,
   isSideBarActive,
   bigWaveImage,
 }) => {
+  const { viewWidth, viewHeight } = useWindowDimensions();
   return (
     <ServiceContainer
+      $serviceHeight={measureServiceHeight(
+        pathname,
+        viewWidth,
+        viewHeight,
+        serviceRoute,
+        engineerRoute,
+        artRoute,
+        devRoute,
+        photoRoute
+      )}
       $issidebaractive={isSideBarActive}
       $bigWaveImage={bigWaveImage}
     >
@@ -85,6 +107,10 @@ const mapStateToProps = createStructuredSelector({
   engineer: selectEngineerService,
   dev: selectDevService,
   serviceRoute: selectServiceRoute,
+  engineerRoute: selectEngineerRoute,
+  artRoute: selectArtServiceRoute,
+  devRoute: selectDevServiceRoute,
+  photoRoute: selectPhotoServiceRoute,
   isSideBarActive: selectIsSideBarActive,
   bigWaveImage: selectBigWaveImage,
 });

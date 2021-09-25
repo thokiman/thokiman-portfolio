@@ -31,6 +31,7 @@ export const SummaryContainer = styled.div`
     width: 100%;
     margin: 0;
     ${getSideBarActive}
+    overflow-y: hidden;
   }
 `;
 
@@ -182,9 +183,9 @@ export const AboutSummaryTitle = styled.div`
   margin: 0 auto;
   padding-left: 15px;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    font-size: 180%;
+    font-size: 6vw;
     line-height: 1.2em;
-  }
+
 `;
 
 AboutSummaryTitle.displayName = 'AboutSummaryTitle';
@@ -199,7 +200,7 @@ const AboutSummaryParagraphStyles = css`
   line-height: 1.3em;
   text-indent: 1em;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    font-size: 89%;
+    font-size: 3.5vw;
     letter-spacing: 0.06em;
     text-align: left;
   }

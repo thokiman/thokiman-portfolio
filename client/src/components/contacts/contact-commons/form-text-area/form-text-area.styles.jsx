@@ -9,12 +9,31 @@ const shrinkLabel = css`
   top: -35px;
   font-size: 30px;
   color: ${heavyLightBlueColor};
+  @media only screen and (max-width: 1024px) {
+    top: -1.5vh;
+  }
 `;
+// **
 const shrinkLabelMobile = css`
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     color: ${heavyLightBlueColor};
-    font-size: 7vw;
-    top: -4vh;
+    font-size: 4vw;
+    top: -1.5vh;
+  }
+  @media only screen and (max-width: 550px) {
+    font-size: 5.5vw;
+    top: -2.5vh;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 823px) {
+    top: -0.5vh;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 812px) {
+    top: 0vh;
+  }
+  @media only screen and (max-width: 320px) and (max-height: 568px) {
+    top: 1vh;
+  }
+  @media only screen and (max-width: 300px) {
   }
 `;
 export const FormTextAreaGroup = styled.div`
@@ -23,15 +42,69 @@ export const FormTextAreaGroup = styled.div`
   align-items: center;
   justify-content: center;
   transition: all 1s ease-in-out;
+  @media only screen and (max-width: 1024px) {
+    top: -2.3vh;
+  }
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    top: -5vh;
+  }
+  @media only screen and (max-width: 550px) {
+    top: -1vh;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 823px) {
+    top: -5.5vh;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 812px) {
+    top: -6.5vh;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 731px) {
+    top: -7.5vh;
+  }
+  @media only screen and (max-width: 320px) and (max-height: 568px) {
+    top: -11vh;
+  }
+  @media only screen and (max-width: 300px) {
+    top: -12vh;
+  }
 `;
+// **
 export const FormTextAreaCheckerContainer = styled.span`
   position: absolute;
-  top: 29vh;
+  top: 4.5vh;
   left: -0.97vw;
   color: ${greenBlueColor};
+
+  @media only screen and (max-width: 1024px) {
+    top: 3.7vh;
+  }
+
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     left: -2.5vw;
+    top: 5vh;
+  }
+
+  @media only screen and (max-width: 550px) {
+    top: 7vh;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 823px) {
     top: 6vh;
+  }
+
+  @media only screen and (max-width: 470px) and (max-height: 812px) {
+    top: 5vh;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 731px) {
+    top: 7vh;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 640px) {
+    top: 8vh;
+  }
+  @media only screen and (max-width: 350px) and (max-height: 568px) {
+    top: 10.5vh;
+  }
+  @media only screen and (max-width: 300px) {
+    left: -2vw;
+    top: 8vh;
   }
 `;
 const FormTextAreaCheckerIconStyles = css`
@@ -79,6 +152,9 @@ export const FormTextAreaElement = styled.textarea`
   &:focus ~ label {
     ${shrinkLabel}
   }
+  @media only screen and (max-width: 1024px) {
+    margin: 35px 0;
+  }
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     &:focus ~ label {
       ${shrinkLabelMobile}
@@ -93,6 +169,7 @@ const getFormLabelElementShrink = ({ $formvalue }) => {
 const getFormLabelElementShrinkMobile = ({ $formvalue }) => {
   if ($formvalue.length) return shrinkLabelMobile;
 };
+// **
 export const FormLabelElement = styled.label`
   color: ${greenBlueColor};
   font-size: 35px;
@@ -103,10 +180,33 @@ export const FormLabelElement = styled.label`
   top: 30px;
   transition: 300ms ease all;
   ${getFormLabelElementShrink}
+  @media only screen and (max-width: 1024px) {
+    font-size: 3vw;
+    top: 3vh;
+    ${getFormLabelElementShrink}
+  }
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    font-size: 6vw;
+    font-size: 5vw;
     top: 6vh;
     left: 5vw;
+    ${getFormLabelElementShrinkMobile}
+  }
+  @media only screen and (max-width: 550px) {
+    font-size: 6vw;
+
+    ${getFormLabelElementShrinkMobile}
+  }
+  @media only screen and (max-width: 470px) and (max-height: 812px) {
+    ${getFormLabelElementShrinkMobile}
+  }
+  @media only screen and (max-width: 320px) and (max-height: 568px) {
+    top: 8.5vh;
+
+    ${getFormLabelElementShrinkMobile}
+  }
+  @media only screen and (max-width: 300px) {
+    top: 8vh;
+
     ${getFormLabelElementShrinkMobile}
   }
 `;

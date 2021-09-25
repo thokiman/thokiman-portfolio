@@ -18,8 +18,11 @@ export const EducationContainer = styled.div`
   overflow-y: scroll;
   overflow-x: hidden;
   font-family: baskerville-old-face;
+
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    border: red solid 1px;
     width: 100%;
+    overflow-y: hidden;
     margin-right: 0;
     ${getSideBarActive}
   }

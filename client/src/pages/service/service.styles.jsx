@@ -33,6 +33,10 @@ export const ServiceIsNotActivated = styled.div`
   animation: ${serviceSideBarHide} 2s cubic-bezier(0.175, 0.885, 0.32, 1.275)
     both;
 `;
+const serviceHeight = ({ $serviceHeight }) => {
+  return $serviceHeight;
+};
+
 const ServiceIsActivated = css`
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     position: relative;
@@ -40,7 +44,7 @@ const ServiceIsActivated = css`
     transition: all 0.5s ease;
     opacity: 1;
     width: 100vw;
-    height: 100vh;
+    height: ${serviceHeight}vh;
     flex-direction: column;
   }
 `;

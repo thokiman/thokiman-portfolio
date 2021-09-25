@@ -65,6 +65,10 @@ const AboutDropdownLinkOptionStyles = css`
   text-decoration: none;
   font-size: 140%;
   cursor: pointer;
+
+  @media only screen and (max-width: 350px) {
+    font-size: 100%;
+  }
 `;
 const AboutDropdownLinkOptionHoverStyles = css`
   background-color: ${backgroundAboutDropdownLinkOptionHoverStylesColor};

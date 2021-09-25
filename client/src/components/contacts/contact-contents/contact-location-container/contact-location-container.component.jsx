@@ -1,3 +1,4 @@
+import useWindowDimensions from 'components/commons/window-dimensions/window-dimensions.component';
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -18,15 +19,31 @@ export const ContactLocation = ({
     phone,
   },
 }) => {
+  const { viewWidth } = useWindowDimensions();
+  const maxWidthSmartphone = 800;
   return (
     <ContactLocationContainer $issidebaractive={isSideBarActive}>
-      <MapContent zoom={zoom} address={address} />
-      <ContactLocationInfo>
-        <ContactLocationTitle>Current Location</ContactLocationTitle>
-        <ContactLocationItem>{address}</ContactLocationItem>
-        <ContactLocationItem>{email}</ContactLocationItem>
-        <ContactLocationItem>{phone}</ContactLocationItem>
-      </ContactLocationInfo>
+      {viewWidth <= maxWidthSmartphone ? (
+        <>
+          <ContactLocationInfo>
+            <ContactLocationTitle>Current Location</ContactLocationTitle>
+            <ContactLocationItem>{address}</ContactLocationItem>
+            <ContactLocationItem>{email}</ContactLocationItem>
+            <ContactLocationItem>{phone}</ContactLocationItem>
+          </ContactLocationInfo>
+          <MapContent zoom={zoom} address={address} />
+        </>
+      ) : (
+        <>
+          <MapContent zoom={zoom} address={address} />
+          <ContactLocationInfo>
+            <ContactLocationTitle>Current Location</ContactLocationTitle>
+            <ContactLocationItem>{address}</ContactLocationItem>
+            <ContactLocationItem>{email}</ContactLocationItem>
+            <ContactLocationItem>{phone}</ContactLocationItem>
+          </ContactLocationInfo>
+        </>
+      )}
     </ContactLocationContainer>
   );
 };

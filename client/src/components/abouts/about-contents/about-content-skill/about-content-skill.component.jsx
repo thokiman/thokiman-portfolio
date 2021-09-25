@@ -31,15 +31,15 @@ export const AboutSkill = ({
           render={() => <VisualArtSkill skill={visualDesignCommunication} />}
         />
         <Route
-          path={`${url}/visualart`}
+          path={visualDesignCommunication.routeName}
           render={() => <VisualArtSkill skill={visualDesignCommunication} />}
         />
         <Route
-          path={`${url}/engineer`}
+          path={engineer.routeName}
           render={() => <EngineerSkill skill={engineer} />}
         />
         <Route
-          path={`${url}/technology`}
+          path={technology.routeName}
           render={() => <TechnologySkill skill={technology} />}
         />
       </Switch>

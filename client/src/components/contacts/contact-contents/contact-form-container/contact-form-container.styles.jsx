@@ -13,16 +13,59 @@ const getSideBarActive = ({ $issidebaractive }) => {
   return null;
 };
 
+//**
 const ContactFormContainerHide = css`
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    height: 250vh;
+    height: 155vh;
     transition: all ease-in-out 1s;
+  }
+  @media only screen and (max-width: 550px) {
+    height: 310vh;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 823px) {
+    height: 180vh;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 812px) {
+    height: 155vh;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 736px) {
+    height: 185vh;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 667px) {
+    height: 190vh;
+  }
+  @media only screen and (max-width: 320px) and (max-height: 568px) {
+    height: 215vh;
+  }
+  @media only screen and (max-width: 300px) {
+    height: 200vh;
   }
 `;
 const ContactFormContainerActive = css`
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    height: 340vh;
+    height: 190vh;
     transition: all ease-in-out 1s;
+  }
+  @media only screen and (max-width: 550px) {
+    height: 410vh;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 823px) {
+    height: 220vh;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 812px) {
+    height: 180vh;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 736px) {
+    height: 240vh;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 667px) {
+    height: 220vh;
+  }
+  @media only screen and (max-width: 320px) and (max-height: 568px) {
+    height: 240vh;
+  }
+  @media only screen and (max-width: 300px) {
+    height: 240vh;
   }
 `;
 
@@ -41,12 +84,13 @@ export const ContactFormContainer = styled.div`
   justify-content: center;
   overflow-y: scroll;
   overflow-x: hidden;
+
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    overflow-y: hidden;
     margin: 10px 0;
     width: 100vw;
 
     ${getContactFormContainer}
-
     ${getSideBarActive}
   }
 `;
@@ -60,14 +104,14 @@ const ContactFormGroupHide = css`
   height: 1600px;
   padding-top: 15px;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    height: 180vh;
+    height: 100%;
   }
 `;
 const ContactFormGroupActive = css`
   ${ContactFormGroupStyles}
   height: 1650px;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    height: 210vh;
+    height: 100%;
   }
 `;
 const getContactFormGroup = ({ $istypeclick }) => {

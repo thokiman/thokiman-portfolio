@@ -19,13 +19,25 @@ const getSideBarActive = ({ $issidebaractive }) => {
   if ($issidebaractive) return ContactInfoIsNotActivated;
   return null;
 };
+//**
 export const ContactInformationContainer = styled.div`
   width: 35%;
   height: 72vh;
   background-color: ${backgroundColorContactInfomationContainer};
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    overflow-y: hidden;
     width: 100vw;
+    height: 105vh;
+    ${getSideBarActive}
+  }
+  @media only screen and (max-width: 550px) {
     height: 120vh;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 812px) {
+    height: 90vh;
+  }
+  @media only screen and (max-width: 300px) {
+    height: 85vh;
     ${getSideBarActive}
   }
 `;
@@ -40,10 +52,11 @@ export const ContactInformationTitle = styled.div`
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 8vw;
     padding-left: 10vw;
+
     ${getSideBarActive}
   }
 `;
-
+//**
 export const ContactInformationContent = styled.div`
   margin: 0 auto;
   padding: 0 3px;
@@ -68,9 +81,28 @@ export const ContactInformationContent = styled.div`
   height: 45vh;
   position: relative;
   top: 4vh;
+  @media only screen and (max-width: 1024px) {
+    height: 32vh;
+  }
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    width: 80vw;
-    height: 54.5vh;
+    width: 100vw;
+    height: 90vh;
+  }
+  @media only screen and (max-width: 550px) {
+    height: 50vh;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 823px) {
+    height: 60vh;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 812px) {
+    height: 59vh;
+  }
+  @media only screen and (max-width: 350px) and (max-height: 568px) {
+    height: 63vh;
+  }
+
+  @media only screen and (max-width: 300px) {
+    height: 52vh;
   }
 `;
 
@@ -113,6 +145,27 @@ const WhiteThokimanContactIconStyles = css`
     animation: ${contactThokiOutCreamDisplay} 5s ease-in-out infinite alternate;
 
     transition: all 1.4s linear;
+  }
+  @media only screen and (max-width: 1024px) {
+    height: 8vh;
+  }
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    height: 21vh;
+  }
+  @media only screen and (max-width: 550px) {
+    height: 10vh;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 823px) {
+    height: 15vh;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 812px) {
+    height: 14vh;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 667px) {
+    height: 16vh;
+  }
+  @media only screen and (max-width: 300px) {
+    height: 10vh;
   }
 `;
 
@@ -225,7 +278,7 @@ const contactIcon = keyframes`
          opacity: 1;
      }
  `;
-
+//**
 export const SocialContactIcon = styled.img`
   padding: 5px 0;
   display: flex;
@@ -234,11 +287,25 @@ export const SocialContactIcon = styled.img`
   width: 100%;
   height: 50px;
 
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    width: 10vw;
+    height: 13vh;
+    padding: 1vw;
+  }
+  @media only screen and (max-width: 550px) {
+    height: 7vh;
+  }
+  @media only screen and (max-width: 550px) {
+    width: 12vw;
+  }
+  @media only screen and (max-width: 300px) {
+    width: 15vw;
+  }
   &:hover {
     animation: ${contactIcon} 8s linear infinite alternate both;
   }
 `;
-
+//**
 export const PhotoContactIcon = styled.img`
   display: flex;
   align-items: center;
@@ -246,6 +313,21 @@ export const PhotoContactIcon = styled.img`
   width: 100%;
   height: 50px;
 
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    width: 30vw;
+    height: 10vh;
+    padding: 1vw;
+  }
+
+  @media only screen and (max-width: 550px) {
+    width: 20vw;
+    height: 7vh;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 812px) {
+    width: 30vw;
+  }
+  @media only screen and (max-width: 300px) {
+  }
   &:hover {
     animation: ${contactIcon} 8s linear infinite alternate both;
   }

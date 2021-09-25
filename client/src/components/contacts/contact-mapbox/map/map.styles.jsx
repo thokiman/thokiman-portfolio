@@ -18,6 +18,7 @@ const mapPopupContent = keyframes`
         }
 
 `;
+// **
 
 export const MapContainer = styled.div`
   width: 98%;
@@ -48,7 +49,7 @@ export const MapContainer = styled.div`
   }
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 100%;
-    height: 50vh;
+    height: 40vh;
   }
 `;
 MapContainer.displayName = 'MapContainer';
