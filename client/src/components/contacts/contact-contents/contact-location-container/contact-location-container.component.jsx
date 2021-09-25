@@ -1,7 +1,7 @@
-import useWindowDimensions from 'components/commons/window-dimensions/window-dimensions.component';
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
+import useWindowDimensions from '../../../../components/hooks/window-dimensions/useWindowDimensions.component';
 import { selectIsSideBarActive } from '../../../../redux/header/header.selectors';
 import MapContent from '../../contact-mapbox/map/map.component';
 import {

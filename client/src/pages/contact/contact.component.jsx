@@ -1,8 +1,8 @@
-import useWindowDimensions from 'components/commons/window-dimensions/window-dimensions.component';
 import React, { lazy, Suspense } from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import SpinnerLoading from '../../components/commons/spinner-loading/spinner-loading.component';
+import useWindowDimensions from '../../components/hooks/window-dimensions/useWindowDimensions.component';
 import {
   selectContactRoute,
   selectInfoContact,
