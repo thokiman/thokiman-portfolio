@@ -115,7 +115,26 @@ export const PortfolioImageItem = styled.img`
   height: 100%;
   width: 100%;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    object-position: 35% 50%;
+    object-position: 60% 50%;
+  }
+  @media only screen and (max-width: 550px) {
+    object-position: 50% 50%;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 823px) {
+    object-position: 65% 50%;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 812px) {
+    object-position: 50% 50%;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 731px) {
+    object-position: 65% 50%;
+  }
+  @media only screen and (max-width: 350px) and (max-height: 568px) {
+    object-position: 60% 50%;
+  }
+
+  @media only screen and (max-width: 300px) {
+    object-position: 60% 50%;
   }
 `;
 PortfolioImageCollectionsContainer.displayName =

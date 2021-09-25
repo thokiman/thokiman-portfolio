@@ -11,8 +11,25 @@ export const SpinnerContainer = styled.div`
   justify-content: center;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     position: absolute;
-    top: 25vh;
+    top: 0vh;
+    left: 7vw;
     padding: 0;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 823px) {
+    top: 0vh;
+    left: 0vw;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 812px) {
+    top: 0vh;
+    left: 3vw;
+  }
+  @media only screen and (max-width: 470px) and (max-height: 736px) {
+    top: -1vh;
+    left: 4vw;
+  }
+  @media only screen and (max-width: 300px) {
+    top: 0vh;
+    left: 7vw;
   }
 `;
 

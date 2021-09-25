@@ -20,14 +20,7 @@ export const measureServiceHeight = (
   photoRoute
 ) => {
   let height;
-  console.log('--', viewWidth);
-  console.log(viewHeight);
-  console.log('**', pathname);
-  console.log('##', serviceRoute);
-  console.log('##', engineerRoute);
-  console.log('##', artRoute);
-  console.log('##', devRoute);
-  console.log('##', photoRoute);
+
   switch (pathname) {
     case serviceRoute:
       if (hasScreenSize1(viewWidth)) {

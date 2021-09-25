@@ -26,9 +26,6 @@ export const measureAbouteHeight = (
   timelineCareerRoute
 ) => {
   let height;
-  console.log('--', viewWidth);
-  console.log(viewHeight);
-  console.log(pathname);
 
   switch (pathname) {
     case aboutRoute:
@@ -141,9 +138,9 @@ export const measureAbouteHeight = (
       if (hasScreenSize1(viewWidth)) {
         height = 1320;
       } else if (hasScreenSize2(viewWidth)) {
-        console.log('2');
+        height = 1380;
       } else if (hasScreenSize3_1(viewWidth, viewHeight)) {
-        console.log('3');
+        height = 970;
       } else if (hasScreenSize3_2(viewWidth, viewHeight)) {
         height = 920;
       } else if (hasScreenSize3_3(viewWidth, viewHeight)) {

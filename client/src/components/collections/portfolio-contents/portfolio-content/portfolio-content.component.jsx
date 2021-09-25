@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import { CSSTransitionGroup } from 'react-transition-group';
 import { bindActionCreators } from 'redux';
 import { createStructuredSelector } from 'reselect';
 import {
@@ -38,26 +37,9 @@ export const PortfolioContent = ({
     setCountPage(countPage + 1);
     loadCollectionListFinished();
   };
-  if (window.screen.width < 800)
-    return (
-      <CSSTransitionGroup
-        transitionAppear={true}
-        transitionAppearTimeout={960}
-        transitionEnterTimeout={800}
-        transitionLeaveTimeout={200}
-        transitionName={'slide-out'}
-      >
-        <PortfolioItem items={items} />
-      </CSSTransitionGroup>
-    );
+  if (window.screen.width < 800) return <PortfolioItem items={items} />;
   return (
-    <CSSTransitionGroup
-      transitionAppear={true}
-      transitionAppearTimeout={960}
-      transitionEnterTimeout={800}
-      transitionLeaveTimeout={200}
-      transitionName={'slide-out'}
-    >
+    <>
       {isLoading && collectionList.length === 0 ? (
         <PortfolioLoadingState
           type='Puff'
@@ -73,7 +55,7 @@ export const PortfolioContent = ({
           isLoading={isLoading}
         />
       )}
-    </CSSTransitionGroup>
+    </>
   );
 };
 
