@@ -22,7 +22,7 @@ const getSideBarActive = ({ $issidebaractive }) => {
 //**
 export const ContactInformationContainer = styled.div`
   width: 35%;
-  height: 72vh;
+  height: 70vh;
   background-color: ${backgroundColorContactInfomationContainer};
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     overflow-y: hidden;

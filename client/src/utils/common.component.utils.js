@@ -26,3 +26,9 @@ export const hasScreenSize4 = (viewWidth, viewHeight) =>
   viewWidth > 300 && viewWidth <= 320 && viewHeight <= 568;
 
 export const hasScreenSize5 = (viewWidth) => viewWidth <= 300;
+
+export const getPathDepth = (pathname) => {
+  let pathArr = pathname.split('/');
+  pathArr = pathArr.filter((n) => n !== '');
+  return pathArr.length;
+};

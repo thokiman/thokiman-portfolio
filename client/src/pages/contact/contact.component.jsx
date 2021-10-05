@@ -1,7 +1,11 @@
-import React, { lazy, Suspense } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 import { createStructuredSelector } from 'reselect';
-import SpinnerLoading from '../../components/commons/spinner-loading/spinner-loading.component';
+import ContactForm from '../../components/contacts/contact-contents/contact-form-container/contact-form-container.component';
+import ContactInfo from '../../components/contacts/contact-contents/contact-info-container/contact-info.component';
+import ContactLocation from '../../components/contacts/contact-contents/contact-location-container/contact-location-container.component';
+import Footer from '../../components/footers/footer/footer.component';
 import useWindowDimensions from '../../components/hooks/window-dimensions/useWindowDimensions.component';
 import {
   selectContactRoute,
@@ -11,27 +15,12 @@ import {
   selectTitleContact,
 } from '../../redux/contact/contact.selectors';
 import { selectIsSideBarActive } from '../../redux/header/header.selectors';
-import { ContactContainer, ContactIsNotActivated } from './contact.styles';
+import {
+  ContactContainer,
+  ContactElement,
+  ContactIsNotActivated,
+} from './contact.styles';
 import { measureContactHeight } from './contact.utils';
-
-const ContactForm = lazy(() =>
-  import(
-    '../../components/contacts/contact-contents/contact-form-container/contact-form-container.component'
-  )
-);
-
-const ContactInfo = lazy(() =>
-  import(
-    '../../components/contacts/contact-contents/contact-info-container/contact-info.component'
-  )
-);
-
-const ContactLocation = lazy(() =>
-  import(
-    '../../components/contacts/contact-contents/contact-location-container/contact-location-container.component'
-  )
-);
-
 export const Contact = ({
   location: { pathname },
   title,
@@ -42,30 +31,33 @@ export const Contact = ({
   contactRoute,
 }) => {
   const { viewWidth, viewHeight } = useWindowDimensions();
+
   return (
-    <ContactContainer
-      $contactheight={measureContactHeight(
-        pathname,
-        viewWidth,
-        viewHeight,
-        contactRoute
-      )}
-      $issidebaractive={isSideBarActive}
-      $lowWaveImage={lowWaveImage}
-    >
-      {isSideBarActive ? (
-        <ContactIsNotActivated>
-          Cont
-          <br />
-          act
-        </ContactIsNotActivated>
-      ) : null}
-      <Suspense fallback={<SpinnerLoading />}>
+    <ContactElement>
+      <ContactContainer
+        $contactheight={measureContactHeight(
+          pathname,
+          viewWidth,
+          viewHeight,
+          contactRoute
+        )}
+        $issidebaractive={isSideBarActive}
+        $lowWaveImage={lowWaveImage}
+      >
+        {isSideBarActive ? (
+          <ContactIsNotActivated>
+            Cont
+            <br />
+            act
+          </ContactIsNotActivated>
+        ) : null}
+
         <ContactInfo title={title} items={items} />
         <ContactForm />
         <ContactLocation info={info} />
-      </Suspense>
-    </ContactContainer>
+      </ContactContainer>
+      <Footer />
+    </ContactElement>
   );
 };
 
@@ -75,7 +67,8 @@ const mapStateToProps = createStructuredSelector({
   items: selectItemsContact,
   contactRoute: selectContactRoute,
   isSideBarActive: selectIsSideBarActive,
+
   lowWaveImage: selectLowWaveImage,
 });
 
-export default connect(mapStateToProps)(Contact);
+export default withRouter(connect(mapStateToProps)(Contact));

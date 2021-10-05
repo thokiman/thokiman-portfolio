@@ -1,4 +1,4 @@
-import ContactActionTypes from "./contact.types";
+import ContactActionTypes from './contact.types';
 
 export const postFormContactStart = (form) => ({
   type: ContactActionTypes.POST_FORM_CONTACT_START,

@@ -1,7 +1,6 @@
 import styled, { css, keyframes } from 'styled-components';
 import { ReactComponent as CreamPrickInklaim } from '../../../assets/collections-icon/prick-inklaim-icon/logo/prick_inklaim_logo_cream.svg';
 import { ReactComponent as WhiteOutlineThokiman } from '../../../assets/collections-icon/thokiman-icon/logo/outline/thokiman_head_logo_cream.svg';
-
 const blackColor = '#000000';
 const heavyLightBlueColor = '#bccfd5';
 const whiteSmokeColor = '#e3e1e4';

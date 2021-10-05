@@ -23,6 +23,7 @@ export const HomepageProfileImageContainer = styled.div`
   justify-content: center;
   position: relative;
   background-color: ${blackColor};
+
   @media only screen and (max-width: ${maxWidthDesktop}px) {
     ${getSideBarActive}
     width: 100%;
@@ -59,7 +60,7 @@ export const HomepageBackgroundProfileImage = styled.div`
 export const HomepageProfileImage = styled.div`
   width: 100%;
   height: 100%;
-  box-shadow: 0px 0px 20px 15px ${blackColor} inset;
+
   background-image: url(${HomepageProfile});
   background-repeat: no-repeat;
   background-size: cover;

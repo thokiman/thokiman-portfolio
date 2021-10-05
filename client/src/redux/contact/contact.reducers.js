@@ -1,6 +1,6 @@
-import { contact } from "../../data.object/contact.data";
-import { other } from "../../data.object/other.data";
-import ContactActionTypes from "./contact.types";
+import { contact } from '../../data.object/contact.data';
+import { other } from '../../data.object/other.data';
+import ContactActionTypes from './contact.types';
 
 const INITIAL_STATE = {
   contact,
@@ -10,6 +10,7 @@ const INITIAL_STATE = {
   isPosted: false,
   formData: null,
   error: null,
+  isMapBoxLoading: true,
 };
 
 const contactReducer = (state = INITIAL_STATE, action) => {
@@ -46,6 +47,7 @@ const contactReducer = (state = INITIAL_STATE, action) => {
         ...state,
         isTypeClick: false,
       };
+
     default:
       return state;
   }

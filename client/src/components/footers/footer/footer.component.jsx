@@ -18,8 +18,6 @@ export const Footer = ({
 }) => {
   if (pathname.match(`^${contactRoute}+`)) {
     return <FooterContact />;
-  } else if (pathname.match(`^${portfolioRoute}+`)) {
-    return null;
   } else {
     return <FooterGeneral />;
   }

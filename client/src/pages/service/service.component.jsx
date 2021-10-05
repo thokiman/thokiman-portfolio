@@ -1,9 +1,15 @@
-import React, { lazy, Suspense } from 'react';
+import useWindowDimensions from 'components/hooks/window-dimensions/useWindowDimensions.component';
+import React from 'react';
 import { connect } from 'react-redux';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
-import SpinnerLoading from '../../components/commons/spinner-loading/spinner-loading.component';
-import useWindowDimensions from '../../components/hooks/window-dimensions/useWindowDimensions.component';
+import Footer from '../../components/footers/footer/footer.component';
+import ServiceHomeContent from '../../components/services/service-contents/service-content/service-content.component';
+import ServiceDev from '../../components/services/service-contents/service-dev/service-dev.component';
+import ServiceEngineer from '../../components/services/service-contents/service-engineer/service-engineer.component';
+import ServiceGraphicDesign from '../../components/services/service-contents/service-graphic-design/service-graphic-design.component';
+import ServicePhotography from '../../components/services/service-contents/service-photography/service-photography.component';
+import ServiceHeader from '../../components/services/service-header/service-header.component';
 import { selectIsSideBarActive } from '../../redux/header/header.selectors.js';
 import {
   selectArtService,
@@ -17,38 +23,12 @@ import {
   selectPhotoServiceRoute,
   selectServiceRoute,
 } from '../../redux/service/service.selectors';
-import { ServiceContainer, ServiceIsNotActivated } from './service.styles';
+import {
+  ServiceContainer,
+  ServiceElement,
+  ServiceIsNotActivated,
+} from './service.styles';
 import { measureServiceHeight } from './service.utils';
-
-const ServiceHomeContent = lazy(() =>
-  import(
-    '../../components/services/service-contents/service-content/service-content.component'
-  )
-);
-
-const ServiceGraphicDesign = lazy(() =>
-  import(
-    '../../components/services/service-contents/service-graphic-design/service-graphic-design.component'
-  )
-);
-const ServiceHeader = lazy(() =>
-  import('../../components/services/service-header/service-header.component')
-);
-const ServiceEngineer = lazy(() =>
-  import(
-    '../../components/services/service-contents/service-engineer/service-engineer.component'
-  )
-);
-const ServicePhotography = lazy(() =>
-  import(
-    '../../components/services/service-contents/service-photography/service-photography.component'
-  )
-);
-const ServiceDev = lazy(() =>
-  import(
-    '../../components/services/service-contents/service-dev/service-dev.component'
-  )
-);
 
 export const Service = ({
   location: { pathname },
@@ -66,38 +46,39 @@ export const Service = ({
 }) => {
   const { viewWidth, viewHeight } = useWindowDimensions();
   return (
-    <ServiceContainer
-      $serviceHeight={measureServiceHeight(
-        pathname,
-        viewWidth,
-        viewHeight,
-        serviceRoute,
-        engineerRoute,
-        artRoute,
-        devRoute,
-        photoRoute
-      )}
-      $issidebaractive={isSideBarActive}
-      $bigWaveImage={bigWaveImage}
-    >
-      {isSideBarActive ? (
-        <ServiceIsNotActivated>
-          Serv
-          <br />
-          ice
-        </ServiceIsNotActivated>
-      ) : null}
-      <ServiceHeader />
-      <Switch>
-        <Suspense fallback={<SpinnerLoading />}>
+    <ServiceElement>
+      <ServiceContainer
+        $serviceHeight={measureServiceHeight(
+          pathname,
+          viewWidth,
+          viewHeight,
+          serviceRoute,
+          engineerRoute,
+          artRoute,
+          devRoute,
+          photoRoute
+        )}
+        $issidebaractive={isSideBarActive}
+        $bigWaveImage={bigWaveImage}
+      >
+        {isSideBarActive ? (
+          <ServiceIsNotActivated>
+            Serv
+            <br />
+            ice
+          </ServiceIsNotActivated>
+        ) : null}
+        <ServiceHeader />
+        <Switch>
           <Route exact path={serviceRoute} component={ServiceHomeContent} />
           <Route path={engineer.routeName} component={ServiceEngineer} />
           <Route path={dev.routeName} component={ServiceDev} />
           <Route path={art.routeName} component={ServiceGraphicDesign} />
           <Route path={photo.routeName} component={ServicePhotography} />
-        </Suspense>
-      </Switch>
-    </ServiceContainer>
+        </Switch>
+      </ServiceContainer>
+      <Footer />
+    </ServiceElement>
   );
 };
 
@@ -115,4 +96,4 @@ const mapStateToProps = createStructuredSelector({
   bigWaveImage: selectBigWaveImage,
 });
 
-export default connect(mapStateToProps)(Service);
+export default withRouter(connect(mapStateToProps)(Service));

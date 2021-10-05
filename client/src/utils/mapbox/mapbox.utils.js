@@ -1,18 +1,15 @@
-import * as mbxGeocoding from "@mapbox/mapbox-sdk/services/geocoding";
-import mapboxgl, { Marker, Popup } from "mapbox-gl/dist/mapbox-gl-csp";
-import React from "react";
-import ReactDOM from "react-dom";
+import * as mbxGeocoding from '@mapbox/mapbox-sdk/services/geocoding';
+import mapboxgl, { Marker, Popup } from 'mapbox-gl/dist/mapbox-gl-csp';
+import React from 'react';
+import ReactDOM from 'react-dom';
 // eslint-disable-next-line import/no-webpack-loader-syntax
-import MapboxWorker from "worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker";
+import MapboxWorker from 'worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker';
 
 mapboxgl.workerClass = MapboxWorker;
 
-
 export let mapBoxAccessToken;
-if (process.env.NODE_ENV === "development") {
-  mapBoxAccessToken =
-    process.env.REACT_APP_MAPBOX_PUBLIC_TOKEN;
-
+if (process.env.NODE_ENV === 'development') {
+  mapBoxAccessToken = process.env.REACT_APP_MAPBOX_PUBLIC_TOKEN;
 }
 
 mapboxgl.accessToken = mapBoxAccessToken;
@@ -28,31 +25,41 @@ export const geoCoder = async (address) => {
 };
 
 export const map = (container, mapBoxData, zoom) => {
+  if (container === null) {
+    // avoid nullable mapContainerRef, just return null;
+    return;
+  }
+
   return new mapboxgl.Map({
     container: container,
-    style: "mapbox://styles/mapbox/streets-v11",
+    style: 'mapbox://styles/mapbox/streets-v11',
     center: mapBoxData.geometry.coordinates,
     zoom: zoom,
   });
 };
 
 export const loadMap = (map, MarkerComponent, PopUpComponent, mapBoxData) => {
-  map.on("load", () => {
-    map.resize();
-    map.addControl(new mapboxgl.NavigationControl(), "bottom-right");
+  if (map === undefined) {
+    // avoid nullable mapContainerRef, just return null;
+    return;
+  }
 
-    const markerNode = document.createElement("div");
+  map.on('load', () => {
+    map.resize();
+    map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
+
+    const markerNode = document.createElement('div');
     ReactDOM.render(<MarkerComponent />, markerNode);
-    const marker = new Marker({ element: markerNode, anchor: "bottom" });
+    const marker = new Marker({ element: markerNode, anchor: 'bottom' });
     marker.setLngLat(mapBoxData.geometry.coordinates).addTo(map);
 
-    map.on("click", () => {
-      const popupNode = document.createElement("div");
+    map.on('click', () => {
+      const popupNode = document.createElement('div');
       ReactDOM.render(
         <PopUpComponent placeName={mapBoxData.place_name} />,
         popupNode
       );
-      const popup = new Popup({ anchor: "top" });
+      const popup = new Popup({ anchor: 'top' });
       popup
         .setLngLat(mapBoxData.geometry.coordinates)
         .setDOMContent(popupNode)

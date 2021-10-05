@@ -16,7 +16,10 @@ import {
 
 export const FooterGeneral = ({ socialIcon, isSideBarActive }) => {
   return (
-    <FooterContainer $issidebaractive={isSideBarActive}>
+    <FooterContainer
+      $issidebaractive={isSideBarActive}
+      className='footer-general'
+    >
       <ProfileFooterContainer>
         <ProfileFooterIcon>
           <FooterCreamPrickInklaim />

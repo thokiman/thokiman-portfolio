@@ -51,16 +51,6 @@ const collectionReducer = (state = INITIAL_STATE, action) => {
         currentWebsitePathname: action.payload,
       };
 
-    case CollectionActionTypes.FETCH_WEBSITE_ITEMS_SLIDER:
-      return {
-        ...state,
-        websiteItemsSlider: [...state.websiteItemsSlider, ...action.payload],
-      };
-    case CollectionActionTypes.FETCH_WEBSITE_ITEMS_SLIDER_FINISHED:
-      return {
-        ...state,
-        isLoadingWebsiteItemsSlider: false,
-      };
     default:
       return state;
   }

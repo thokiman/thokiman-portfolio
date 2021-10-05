@@ -19,7 +19,8 @@ export const RightPageContainer = styled.div`
   width: 64.5vw;
   margin-right: 2vw;
   padding: 40px 0;
-  height: 98%;
+  height: 90%;
+
   @media only screen and (max-width: ${maxWidthTablet}px) {
     width: 65%;
     height: 44vh;

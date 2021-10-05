@@ -2,6 +2,12 @@ import styled, { css, keyframes } from 'styled-components';
 const blackColor = '#000000';
 const whiteSmokeColor = '#e3e1e4';
 const maxWidthSmartphone = 800;
+
+export const PortfolioElement = styled.div`
+  &.portfolio-element {
+  }
+`;
+
 const portfolioSideBarHide = keyframes`
   0% {
     transform: rotateX(100deg);

@@ -1,21 +1,27 @@
-import React from "react";
-import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
-import { createStructuredSelector } from "reselect";
-import { toggleDropdownHidden } from "../../../../redux/about/about.actions";
+import React from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import { createStructuredSelector } from 'reselect';
+import { toggleDropdownHidden } from '../../../../redux/about/about.actions';
 import {
   selectAboutRoute,
   selectIsDropdownHidden,
-  selectTimelineCareerRoute
-} from "../../../../redux/about/about.selectors";
-import AboutDropdownOptions from "../about-dropdown-options/about-dropdown-options.component";
+  selectTimelineCareerRoute,
+} from '../../../../redux/about/about.selectors';
+import AboutDropdownOptions from '../about-dropdown-options/about-dropdown-options.component';
 import {
-  AboutBarOne, AboutBarThree, AboutBarTwo, AboutBreakLine, AboutDropdownContainer, AboutDropdownContent,
+  AboutBarOne,
+  AboutBarThree,
+  AboutBarTwo,
+  AboutBreakLine,
+  AboutDropdownContainer,
+  AboutDropdownContent,
   AboutDropdownLinkContainer,
-  AboutDropdownMenuIcon, AboutThokimanHeadColorContainer, AboutThokimanHeadColorHide, AboutThokimanHeadColorShow
-} from "./about-dropdown-bar.styles";
-
-
+  AboutDropdownMenuIcon,
+  AboutThokimanHeadColorContainer,
+  AboutThokimanHeadColorHide,
+  AboutThokimanHeadColorShow,
+} from './about-dropdown-bar.styles';
 
 export const AboutDropdownBar = ({
   isDropdownHidden,
@@ -35,7 +41,14 @@ export const AboutDropdownBar = ({
           $matchpath={
             !!pathname.match(
               RegExp(
-                `(${ aboutRoute }/(skill|education|project|summary))|${ aboutRoute }$`
+                `(${aboutRoute}/(skill|education|project|summary))|${aboutRoute}$`
+              )
+            )
+          }
+          disabled={
+            !!pathname.match(
+              RegExp(
+                `(${aboutRoute}/(skill|education|project|summary))|${aboutRoute}$`
               )
             )
           }
@@ -54,16 +67,16 @@ export const AboutDropdownBar = ({
       <AboutBreakLine />
       <AboutDropdownContent>
         <AboutDropdownLinkContainer
-          to={`${ aboutRoute }${ timelineCareerRoute }`}
+          to={`${aboutRoute}${timelineCareerRoute}`}
           $matchpath={
-            !!pathname.match(RegExp(`${ aboutRoute }${ timelineCareerRoute }$`))
+            !!pathname.match(RegExp(`${aboutRoute}${timelineCareerRoute}$`))
           }
         >
           Timeline Career
         </AboutDropdownLinkContainer>
       </AboutDropdownContent>
       <AboutThokimanHeadColorContainer>
-        {isDropdownHidden ? <AboutThokimanHeadColorHide /> : ""}
+        {isDropdownHidden ? <AboutThokimanHeadColorHide /> : ''}
       </AboutThokimanHeadColorContainer>
     </AboutDropdownContainer>
   );

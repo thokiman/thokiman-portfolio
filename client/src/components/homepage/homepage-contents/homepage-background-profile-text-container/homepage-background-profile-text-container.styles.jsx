@@ -17,6 +17,7 @@ export const HomepageProfileTextContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
   @media only screen and (max-width: ${maxWidthDesktop}px) {
     background-color: ${backgroundProfileText};
     ${getSideBarActive}

@@ -44,7 +44,7 @@ export const DirectoryService = styled.div`
     'directory-service-text-gd directory-service-text-gd directory-service-text-pg directory-service-text-pg';
   height: 76%;
   width: 95%;
-  cursor: pointer;
+  cursor: default;
   @media only screen and (max-width: ${maxWidthDesktop}px) {
     width: 98vw;
     height: 20vh;
@@ -130,7 +130,8 @@ const DirectoryServiceTextEngActive = css`
   color: ${grayColor};
   animation: ${directoryServiceActive} 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
     both;
-  cursor: default;
+
+  pointer-events: none;
 `;
 
 const getDirectoryServiceTextEng = (props) => {
@@ -172,7 +173,8 @@ const DirectoryServiceTextFsdActive = css`
   color: ${grayColor};
   animation: ${directoryServiceActive} 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
     both;
-  cursor: default;
+
+  pointer-events: none;
 `;
 const getDirectoryServiceTextFsd = (props) => {
   if (props.$matchpath) return DirectoryServiceTextFsdActive;
@@ -213,7 +215,8 @@ const DirectoryServiceTextGdActive = css`
   color: ${grayColor};
   animation: ${directoryServiceActive} 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
     both;
-  cursor: default;
+
+  pointer-events: none;
 `;
 const getDirectoryServiceTextGd = (props) => {
   if (props.$matchpath) return DirectoryServiceTextGdActive;
@@ -255,7 +258,8 @@ const DirectoryServiceTextPgActive = css`
   color: ${grayColor};
   animation: ${directoryServiceActive} 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
     both;
-  cursor: default;
+
+  pointer-events: none;
 `;
 const getDirectoryServiceTextPg = (props) => {
   if (props.$matchpath) return DirectoryServiceTextPgActive;

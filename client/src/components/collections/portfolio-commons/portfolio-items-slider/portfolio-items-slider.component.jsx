@@ -1,18 +1,8 @@
-import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
+import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
-import { createStructuredSelector } from 'reselect';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import SpinnerLoading from '../../../../components/commons/spinner-loading/spinner-loading.component.jsx';
-import {
-  loadWebsiteItemsSlider,
-  loadWebsiteItemsSliderFinished,
-} from '../../../../redux/collection/collection.actions';
-import {
-  selectIsLoadingWebsiteItemsSlider,
-  selectWebsiteItemsSlider,
-} from '../../../../redux/collection/collection.selectors';
 import {
   ArrowContainer,
   DotsContainer,
@@ -27,17 +17,16 @@ import {
 
 export const PortfolioItemsSlider = ({
   items,
-  itemsSlider,
+
   isLoading,
   loadItems,
   loadItemsFinished,
 }) => {
+  const [itemsSlider, setItemsSlider] = useState([]);
+
   useEffect(() => {
-    loadItems(items);
-    if (itemsSlider.length !== 0) {
-      loadItemsFinished();
-    }
-  }, [items]);
+    setItemsSlider([...items]);
+  }, []);
 
   const Arrow = ({ typeArrow, onClick }) => {
     return (
@@ -50,10 +39,6 @@ export const PortfolioItemsSlider = ({
     );
   };
 
-  if (isLoading && itemsSlider.length === 0) {
-    return <SpinnerLoading />;
-  } else {
-  }
   const customPaging = (indexAtSingleDot) => {
     return (
       <WrapperSingleDot>
@@ -85,30 +70,21 @@ export const PortfolioItemsSlider = ({
     slidesToScroll: 1,
     appendDots: appendDots,
   };
-  return (
-    <Slider {...settings}>
-      {items.map(({ id, field, iconPath }) => {
-        return (
-          <PortfolioItemsSliderImageContainer key={id}>
-            <PortfolioItemsSliderImage src={iconPath} alt={field} />
-          </PortfolioItemsSliderImageContainer>
-        );
-      })}
-    </Slider>
-  );
+  if (isLoading && itemsSlider.length === 0) {
+    return <SpinnerLoading />;
+  } else {
+    return (
+      <Slider {...settings}>
+        {itemsSlider.map(({ id, field, iconPath }) => {
+          return (
+            <PortfolioItemsSliderImageContainer key={id}>
+              <PortfolioItemsSliderImage src={iconPath} alt={field} />
+            </PortfolioItemsSliderImageContainer>
+          );
+        })}
+      </Slider>
+    );
+  }
 };
 
-const mapStateToProps = createStructuredSelector({
-  isLoading: selectIsLoadingWebsiteItemsSlider,
-  itemsSlider: selectWebsiteItemsSlider,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  loadItems: (items) => dispatch(loadWebsiteItemsSlider(items)),
-  loadItemsFinished: () => dispatch(loadWebsiteItemsSliderFinished()),
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(PortfolioItemsSlider);
+export default PortfolioItemsSlider;

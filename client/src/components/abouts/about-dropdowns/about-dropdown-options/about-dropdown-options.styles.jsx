@@ -86,6 +86,7 @@ const AboutDropdownLinkOptionHide = css`
 const AboutDropdownLinkOptionActive = css`
   ${AboutDropdownLinkOptionStyles}
   color: ${grayColor};
+  pointer-events: none;
   &:hover {
     ${AboutDropdownLinkOptionHoverStyles}
   }

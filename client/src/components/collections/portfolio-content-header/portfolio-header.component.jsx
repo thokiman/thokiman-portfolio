@@ -49,6 +49,7 @@ export const PortfolioHeader = ({
       $issidebaractive={isSideBarActive}
     >
       <PortfolioHeaderOption
+        $pathname={pathname}
         to={portfolioRoute}
         $matchpath={!!pathname.match(`${portfolioRoute}$`)}
         onClick={toggleWebsiteLinkDropdown}
@@ -56,6 +57,7 @@ export const PortfolioHeader = ({
         All
       </PortfolioHeaderOption>
       <PortfolioHeaderOption
+        $pathname={pathname}
         to={brandRoute}
         $matchpath={!!pathname.match(brandRoute)}
         onClick={toggleWebsiteLinkDropdown}
@@ -63,6 +65,7 @@ export const PortfolioHeader = ({
         {`${brandTitle}`}
       </PortfolioHeaderOption>
       <PortfolioHeaderOption
+        $pathname={pathname}
         to={digitalArtRoute}
         $matchpath={!!pathname.match(digitalArtRoute)}
         onClick={toggleWebsiteLinkDropdown}
@@ -70,6 +73,7 @@ export const PortfolioHeader = ({
         {`${digitalArtTitle}`}
       </PortfolioHeaderOption>
       <PortfolioHeaderOption
+        $pathname={pathname}
         to={photographyColorRoute}
         $matchpath={!!pathname.match(photographyColorRoute)}
         onClick={toggleWebsiteLinkDropdown}
@@ -77,6 +81,7 @@ export const PortfolioHeader = ({
         {`${photographyColorTitle}`}
       </PortfolioHeaderOption>
       <PortfolioHeaderOption
+        $pathname={pathname}
         to={photographyBwRoute}
         $matchpath={!!pathname.match(photographyBwRoute)}
         onClick={toggleWebsiteLinkDropdown}
@@ -85,6 +90,7 @@ export const PortfolioHeader = ({
       </PortfolioHeaderOption>
 
       <PortfolioHeaderOption
+        $pathname={pathname}
         to={currentWebsitePathname}
         $matchpath={!!pathname.match(currentWebsitePathname)}
         onClick={toggleWebsiteLinkDropdown}

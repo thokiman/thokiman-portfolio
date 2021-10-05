@@ -32,12 +32,3 @@ export const setCurrentWebsitePahtname = (currentPath) => ({
   type: CollectionActionTypes.SET_CURRENT_WEBSITE_PATHNAME,
   payload: currentPath,
 });
-
-export const loadWebsiteItemsSlider = (items) => ({
-  type: CollectionActionTypes.FETCH_WEBSITE_ITEMS_SLIDER,
-  payload: items,
-});
-
-export const loadWebsiteItemsSliderFinished = () => ({
-  type: CollectionActionTypes.FETCH_WEBSITE_ITEMS_SLIDER_FINISHED,
-});

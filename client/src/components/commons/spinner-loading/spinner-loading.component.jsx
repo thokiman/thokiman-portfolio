@@ -4,7 +4,7 @@ import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import useWindowDimensions from '../../hooks/window-dimensions/useWindowDimensions.component';
 import { SpinnerContainer } from './spinner-loading.styles';
 import { measureSizeSpinnerLoading } from './spinner-loading.utils';
-export const SpinnerLoading = ({}) => {
+export const SpinnerLoading = () => {
   const { viewWidth, viewHeight } = useWindowDimensions();
   const { widthSpinner, heightSpinner } = measureSizeSpinnerLoading(
     viewWidth,

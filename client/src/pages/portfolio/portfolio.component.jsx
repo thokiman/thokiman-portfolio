@@ -1,8 +1,10 @@
-import React, { lazy, Suspense } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { Route } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
-import SpinnerLoading from '../../components/commons/spinner-loading/spinner-loading.component';
+import PortfolioContentHeader from '../../components/collections/portfolio-content-header/portfolio-header.component';
+import PortfolioContentContainer from '../../components/collections/portfolio-contents/portfolio-content/portfolio-content-container.component';
+import PortfolioWebsite from '../../components/collections/portfolio-contents/portfolio-website/portfolio-website.component';
 import {
   selectAllItems,
   selectBrandItems,
@@ -20,24 +22,9 @@ import {
 import { selectIsSideBarActive } from '../../redux/header/header.selectors';
 import {
   PortfolioContainer,
+  PortfolioElement,
   PortfolioIsNotActivated,
 } from './portfolio.styles';
-
-const PortfolioWebsite = lazy(() =>
-  import(
-    '../../components/collections/portfolio-contents/portfolio-website/portfolio-website.component'
-  )
-);
-const PortfolioContentContainer = lazy(() =>
-  import(
-    '../../components/collections/portfolio-contents/portfolio-content/portfolio-content-container.component'
-  )
-);
-const PortfolioContentHeader = lazy(() =>
-  import(
-    '../../components/collections/portfolio-content-header/portfolio-header.component'
-  )
-);
 
 export const Portfolio = ({
   portfolioRoute,
@@ -55,8 +42,8 @@ export const Portfolio = ({
   isSideBarActive,
 }) => {
   return (
-    <PortfolioContainer $issidebaractive={isSideBarActive}>
-      <Suspense fallback={<SpinnerLoading />}>
+    <PortfolioElement>
+      <PortfolioContainer $issidebaractive={isSideBarActive}>
         {isSideBarActive ? (
           <PortfolioIsNotActivated>
             Port
@@ -64,6 +51,7 @@ export const Portfolio = ({
             folio
           </PortfolioIsNotActivated>
         ) : null}
+
         <PortfolioContentHeader />
 
         <Route
@@ -95,8 +83,8 @@ export const Portfolio = ({
           path={websiteRoute}
           render={() => <PortfolioWebsite websiteItems={websiteItems} />}
         />
-      </Suspense>
-    </PortfolioContainer>
+      </PortfolioContainer>
+    </PortfolioElement>
   );
 };
 const mapStateToProps = createStructuredSelector({

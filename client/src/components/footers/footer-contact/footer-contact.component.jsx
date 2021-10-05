@@ -13,7 +13,10 @@ import {
 
 export const FooterContact = ({ isSideBarActive }) => {
   return (
-    <FooterContainerContact $issidebaractive={isSideBarActive}>
+    <FooterContainerContact
+      $issidebaractive={isSideBarActive}
+      className='footer-contact'
+    >
       <ProfileFooterContainerContact>
         <ProfileFooterIconContact>
           <FooterCreamPrickInklaim />

@@ -16,10 +16,6 @@ export const measureContactHeight = (
   contactRoute
 ) => {
   let height;
-  console.log('--', viewWidth);
-  console.log(viewHeight);
-  console.log('**', pathname);
-  console.log('##', contactRoute);
 
   switch (pathname) {
     case contactRoute:

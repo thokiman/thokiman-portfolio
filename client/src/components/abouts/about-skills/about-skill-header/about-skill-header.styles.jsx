@@ -40,7 +40,7 @@ const AboutTextBoxStyles = css`
 `;
 const AboutTextBoxActive = css`
   ${AboutTextBoxStyles}
-  cursor: default;
+  pointer-events: none;
   transition: all 0.7s linear;
   box-shadow: ${lightBlueColor} 0px 20px 21px -9px;
 `;

@@ -217,7 +217,7 @@ const PortfolioHeaderOptionStyles = css`
   font-size: 120%;
   padding: 9px;
   color: ${greenBlueColor7};
-
+  z-index: 2;
   font-family: futura-medium;
   display: flex;
   align-items: center;
@@ -249,6 +249,17 @@ const PortfolioHeaderOptionStyles = css`
     }
   }
 `;
+
+const getPortfolioHeaderOptionActiveExceptWebsite = ({ $pathname }) => {
+  if (!!$pathname.match('/portfolio/websites')) {
+    return;
+  } else {
+    return css`
+      pointer-events: none;
+    `;
+  }
+};
+
 const PortfolioHeaderOptionActive = css`
   transition: box-shadow 0.5s ease-in-out;
   box-shadow: ${boxShadowPortfolioHeaderOptionActiveColor} 0px 4px 6px;
@@ -256,7 +267,8 @@ const PortfolioHeaderOptionActive = css`
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     animation: ${fadeActiveMobile} 1s ease-in-out infinite alternate both;
     box-shadow: none;
-  } ;
+  }
+  ${getPortfolioHeaderOptionActiveExceptWebsite}
 `;
 const getPortfolioHeaderOption = ({ $matchpath }) => {
   if ($matchpath) return PortfolioHeaderOptionActive;

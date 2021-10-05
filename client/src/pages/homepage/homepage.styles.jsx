@@ -1,9 +1,10 @@
 import styled, { css, keyframes } from 'styled-components';
-
 const whiteSmokeColor = '#e3e1e4';
 const maxWidthDesktop = 1366;
 const maxWidthTabletPro = 1024;
 const maxWidthSmartphone = 800;
+
+export const HomepageElement = styled.div``;
 
 const homepageSideBarHide = keyframes`
   0% {

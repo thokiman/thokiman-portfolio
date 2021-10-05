@@ -17,6 +17,7 @@ export const SkillContainer = styled.div`
   padding: 40px 0;
   height: 98%;
   font-family: baskerville-old-face;
+
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     position: absolute;
     top: 44vh;

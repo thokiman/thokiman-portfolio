@@ -1,16 +1,18 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
+
 const blackColor = '#000000';
 const grayColor = '#3f4249';
 const lightBlueColor = '#74c6d4';
 const heavyLightBlueColor = '#bccfd5';
+export const AppContainer = styled.div``;
+
 export const GlobalStyle = createGlobalStyle`
 body {
   background-color: ${blackColor};
   font-family: futura-book;
   overscroll-behavior: none;
+   overflow-x: hidden;
 }
-  
-
 
 * {
   box-sizing: border-box;
@@ -36,7 +38,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: ${heavyLightBlueColor};
 }
-
+ 
 
 
 `;

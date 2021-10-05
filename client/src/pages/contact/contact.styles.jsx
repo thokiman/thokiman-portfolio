@@ -2,6 +2,11 @@ import styled, { css, keyframes } from 'styled-components';
 const whiteSmokeColor = '#e3e1e4';
 const maxWidthSmartphone = 800;
 
+export const ContactElement = styled.div`
+  &.contact-element {
+  }
+`;
+
 const getContactImage = ({ $lowWaveImage }) => {
   return $lowWaveImage.item.iconPath;
 };
@@ -63,7 +68,7 @@ export const ContactContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 72vh;
+  height: 70vh;
   font-family: futura-medium;
   transition: background-image 0.7s ease-in-out, height 0.4s ease-in-out;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {

@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
 import styled, { css, keyframes } from 'styled-components';
+import { ReactComponent as WavyToBottom } from '../../../assets/collections-icon/background-icon/background-wavy-to-bottom.svg';
 import { ReactComponent as BluePrickInklaimIcon } from '../../../assets/collections-icon/prick-inklaim-icon/logo/prick_inklaim_logo_blue.svg';
 
 const maxWidthSmartphone = 800;
 const blackColor = '#000000';
 const greenBlueColor = '#128194';
-const greenBlueLowColor = 'rgba(18,129,148,0.1)';
+const greenBlueLowColor = '#02020219';
 const greenBlueMediumColor = 'rgba(18,129,148,0.3)';
 const greenBlueColor1 = '#3F96A8';
 const greenBlueLowColor1 = 'rgb(63, 150, 168,0.1)';
@@ -22,6 +23,54 @@ const greenBlueMediumColor4 = 'rgba(153,240,255,0.3)';
 const whiteSmokeColor = '#e3e1e4';
 const lightBlueColor = '#74c6d4';
 const heavyLightBlueColor = '#BBCED4';
+
+const getTopHeaderMorphing = ({ $headermorphingproperties }) => {
+  return $headermorphingproperties.top;
+};
+
+export const HeaderMorphing = styled.div`
+  position: absolute;
+
+  width: 100vw;
+  height: 257vh;
+  top: ${getTopHeaderMorphing}vh;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+`;
+
+const getBackgroundColorWavyIntro = ({ $wavyintroproperties }) => {
+  return $wavyintroproperties.backgroundColor;
+};
+
+export const HeaderIntro = styled.div`
+  width: 100vw;
+  height: 240%;
+  background-color: ${getBackgroundColorWavyIntro};
+  transition: all 0.5s ease-in-out;
+`;
+
+const getStrokeColorBottomWavyPosition = ({ $wavyproperties }) => {
+  return $wavyproperties.strokeColor;
+};
+const getFillColorBottomWavyPosition = ({ $wavyproperties }) => {
+  return $wavyproperties.fillColor;
+};
+
+export const WavyBottomSVG = styled(WavyToBottom)`
+  transform: scaleY(-1) scaleX(-1);
+  width: 100vw;
+  height: 28%;
+  transition: all 0.5s ease-in-out;
+  path.background-wavy-to-bottom {
+    fill: ${getFillColorBottomWavyPosition};
+    stroke: ${getStrokeColorBottomWavyPosition};
+    stroke-width: 1.5px;
+    stroke-linejoin: 'round';
+  }
+`;
 
 const HeaderIsActivated = css`
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
@@ -47,7 +96,6 @@ const getHeaderPortfolioColor = ({ $matchpath }) => {
 };
 
 export const HeaderContainer = styled.div`
-  background-color: ${blackColor};
   color: ${greenBlueColor};
   display: flex;
   flex-direction: row;
@@ -55,6 +103,7 @@ export const HeaderContainer = styled.div`
   align-items: center;
   height: 14vh;
   transition: background-color 0.5s ease;
+
   ${getHeaderPortfolioColor}
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     position: relative;
@@ -101,7 +150,17 @@ const getHeaderPILogoContainerActive = ({ $issidebaractive }) => {
   if ($issidebaractive) return null;
   return HeaderPILogoContainerActive;
 };
+
+const HeaderLinkPILogoContainerActive = css`
+  pointer-events: none;
+`;
+
+const getHeaderLinkPILogoContainerActive = ({ $matchpath }) => {
+  if ($matchpath) return HeaderLinkPILogoContainerActive;
+};
 export const HeaderPILogoContainer = styled(Link)`
+  background-color: ${blackColor};
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,7 +168,8 @@ export const HeaderPILogoContainer = styled(Link)`
   border: 1px solid ${greenBlueColor};
   padding: 4px;
   margin-left: 1.8vw;
-
+  z-index: 2;
+  ${getHeaderLinkPILogoContainerActive}
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 105px;
     position: absolute;
@@ -161,7 +221,7 @@ export const HeaderTextContainer = styled.div`
 `;
 
 const HeaderLinkStyles = css`
-  font-size: 150%;
+  font-size: 110%;
   padding: 10px 10px;
   text-decoration: none;
   cursor: pointer;
@@ -203,7 +263,7 @@ const HeaderLinkActive = css`
 
   animation: ${colorChange} 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite
     alternate both;
-  cursor: default;
+  pointer-events: none;
 `;
 
 const borderFlicker = keyframes`
@@ -268,6 +328,8 @@ const getHeaderLink = ({ $matchpath }) => {
 
 export const HeaderLink = styled(Link)`
   ${getHeaderLink}
+  z-index: 2;
+  border-radius: 15px 15px 15px 15px;
 `;
 HeaderContainer.displayName = 'HeaderContainer';
 HeaderPILogo.displayName = 'HeaderPILogo';

@@ -157,12 +157,12 @@ export const AboutDropdownContent = styled.div`
   height: 8%;
   display: flex;
   align-items: center;
-  @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    height: 50px;
-  }
   &:hover {
     background-color: rgba($color: ${greenBlueColor}, $alpha: 0.7);
     animation: ${aboutDropdownContent} 0.3s ease-in-out;
+  }
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    height: 50px;
   }
 `;
 AboutDropdownContent.displayName = 'AboutDropdownContent';
@@ -179,21 +179,27 @@ const AboutDropdownLinkContainerStyles = css`
   font-size: 145%;
   line-height: 1.6em;
   cursor: pointer;
-  ${AboutDropdownContent}:hover & {
+  ${
+    '' /* ${AboutDropdownContent}:hover & {
     color: ${whiteSmokeColor};
+  } */
   }
-
   @media only screen and (max-width: 350px) {
     font-size: 120%;
   }
 `;
 const AboutDropdownLinkContainerActive = css`
   ${AboutDropdownLinkContainerStyles}
+  pointer-events: none;
+
   color: ${grayColor};
 `;
 
 const AboutDropdownLinkContainerHide = css`
   ${AboutDropdownLinkContainerStyles}
+  &:hover {
+    color: ${whiteSmokeColor};
+  }
 
   color: #128194;
 `;

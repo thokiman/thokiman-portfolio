@@ -131,12 +131,3 @@ export const selectCurrentWebsitePathname = createSelector(
   [selectCollection],
   (collection) => collection.currentWebsitePathname
 );
-
-export const selectIsLoadingWebsiteItemsSlider = createSelector(
-  [selectCollection],
-  (collection) => collection.isLoadingWebsiteItemsSlider
-);
-export const selectWebsiteItemsSlider = createSelector(
-  [selectCollection],
-  (collection) => collection.websiteItemsSlider
-);

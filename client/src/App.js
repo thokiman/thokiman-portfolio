@@ -1,49 +1,89 @@
-import React, { lazy, Suspense } from 'react';
+import {
+  exit,
+  play,
+} from 'components/commons/page-transition/page-transition.component';
+import React from 'react';
 import { connect } from 'react-redux';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
+import { Transition, TransitionGroup } from 'react-transition-group';
+import { selectHomepageRoute } from 'redux/homepage/homepage.selectors';
 import { createStructuredSelector } from 'reselect';
-import SpinnerLoading from './components/commons/spinner-loading/spinner-loading.component';
-import ErrorBoundary from './components/error-boundary/error-boundary.component';
-import Footer from './components/footers/footer/footer.component';
+import { getPathDepth } from 'utils/common.component.utils';
 import Header from './components/headers/header/header.component';
 import SideBarHeader from './components/headers/sidebar-header/sidebar-header.component';
-import { GlobalStyle } from './global.styles';
+import { AppContainer, GlobalStyle } from './global.styles';
+import About from './pages/about/about.component';
+import Contact from './pages/contact/contact.component';
+import Homepage from './pages/homepage/homepage.component';
+import Portfolio from './pages/portfolio/portfolio.component';
+import Service from './pages/service/service.component';
 import { selectAboutRoute } from './redux/about/about.selectors';
 import { selectPortfolioRoute } from './redux/collection/collection.selectors';
 import { selectContactRoute } from './redux/contact/contact.selectors';
 import { selectServiceRoute } from './redux/service/service.selectors';
 
-const HomePage = lazy(() => import('./pages/homepage/homepage.component'));
-const About = lazy(() => import('./pages/about/about.component'));
-const Portfolio = lazy(() => import('./pages/portfolio/portfolio.component'));
-const Service = lazy(() => import('./pages/service/service.component'));
-const Contact = lazy(() => import('./pages/contact/contact.component'));
+const App = ({
+  aboutRoute,
+  serviceRoute,
+  portfolioRoute,
+  contactRoute,
+  homepageRoute,
+  location: { pathname },
+}) => {
+  return (
+    <Route
+      render={({ location }) => {
+        const pathStacker = {
+          aboutRoute,
+          serviceRoute,
+          portfolioRoute,
+          contactRoute,
+          homepageRoute,
+        };
+        const { key, pathname } = location;
 
-const App = ({ aboutRoute, serviceRoute, portfolioRoute, contactRoute }) => (
-  <div>
-    <GlobalStyle />
-    <SideBarHeader />
-    <Header />
-    <Switch>
-      <ErrorBoundary>
-        <Suspense fallback={<SpinnerLoading />}>
-          <Route exact path='/' component={HomePage} />
-          <Route path={aboutRoute} component={About} />
-          <Route path={serviceRoute} component={Service} />
-          <Route path={portfolioRoute} component={Portfolio} />
-          <Route path={contactRoute} component={Contact} />
-        </Suspense>
-      </ErrorBoundary>
-    </Switch>
-    <Footer />
-  </div>
-);
-
+        const timeout = { enter: 10000, exit: 10000 };
+        console.log(getPathDepth(pathname));
+        return (
+          <AppContainer>
+            <GlobalStyle />
+            <SideBarHeader />
+            <Header />
+            <TransitionGroup component={null}>
+              <Transition
+                key={key}
+                appear={true}
+                enter={true}
+                exit={true}
+                onEnter={(node, appears) =>
+                  play(pathname, node, appears, pathStacker)
+                }
+                onExit={(node, appears) =>
+                  exit(pathname, node, appears, pathStacker)
+                }
+                timeout={timeout}
+              >
+                <Switch location={location}>
+                  <Route exact path={homepageRoute} component={Homepage} />
+                  <Route path={aboutRoute} component={About} />
+                  <Route path={serviceRoute} component={Service} />
+                  <Route path={portfolioRoute} component={Portfolio} />
+                  <Route path={contactRoute} component={Contact} />
+                </Switch>
+              </Transition>
+            </TransitionGroup>
+          </AppContainer>
+        );
+      }}
+    />
+  );
+};
 const mapStateToProps = createStructuredSelector({
   aboutRoute: selectAboutRoute,
   serviceRoute: selectServiceRoute,
   portfolioRoute: selectPortfolioRoute,
   contactRoute: selectContactRoute,
+  homepageRoute: selectHomepageRoute,
 });
 
-export default connect(mapStateToProps)(App);
+export default withRouter(connect(mapStateToProps)(App));

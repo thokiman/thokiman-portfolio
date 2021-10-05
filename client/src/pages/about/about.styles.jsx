@@ -9,6 +9,8 @@ const getAboutImage = ({ $rockWaveImage }) => {
   return $rockWaveImage.item.iconPath;
 };
 
+export const AboutElement = styled.div``;
+
 const aboutSideBarHide = keyframes`
   0% {
     transform: rotateX(100deg);
@@ -92,7 +94,6 @@ const AboutStyles = css`
 const AboutContainer = css`
   ${AboutStyles}
   height: 72vh;
-
   background-image: url(${getAboutImage});
 `;
 

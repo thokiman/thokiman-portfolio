@@ -5,6 +5,7 @@ import { ReactComponent as WhiteOutlineThokimanSkeleton } from '../../../../asse
 const maxWidthSmartphone = 800;
 const backgroundColorHomepageThokimanContainer = 'rgba(116, 198, 212, 0.5)';
 const lightBlueColor = '#74c6d4';
+
 const getHomepageImage = ({ $rockWaveImage }) => {
   return $rockWaveImage.item.iconPath;
 };
@@ -24,6 +25,7 @@ export const HomepageThokimanContentContainer = styled.div`
   justify-content: center;
   height: 110vh;
   background-image: url(${getHomepageImage});
+  clip-path: circle(50vh at center);
   background-size: cover;
 `;
 

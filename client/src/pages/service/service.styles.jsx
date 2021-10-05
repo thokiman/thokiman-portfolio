@@ -2,6 +2,12 @@ import styled, { css, keyframes } from 'styled-components';
 
 const whiteSmokeColor = '#e3e1e4';
 const maxWidthSmartphone = 800;
+
+export const ServiceElement = styled.div`
+  &.service-element {
+  }
+`;
+
 const getServiceImage = ({ $bigWaveImage }) => {
   return $bigWaveImage.item.iconPath;
 };
