@@ -38,7 +38,7 @@ const getFontSizeContactIsNotActivatedProps = ({
 };
 
 export const ContactIsNotActivated = styled.div`
-  font-family: futura-demi;
+  font-family: spitfire;
   color: ${whiteSmokeColor};
   position: absolute;
   top: ${getTopContactIsNotActivatedProps}vh;

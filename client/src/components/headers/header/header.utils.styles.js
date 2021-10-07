@@ -13,6 +13,68 @@ import {
   hasScreenSizeWindow,
 } from '../../../utils/common.component.utils';
 
+export const selectTitleHeaderIntro = (
+  pathname,
+  viewWidth,
+  viewHeight,
+  aboutRoute,
+  portfolioRoute,
+  serviceRoute,
+  contactRoute
+) => {
+  let selectTitleHeaderIntro;
+  if (!!pathname.match(RegExp(/^\/$/))) {
+    selectTitleHeaderIntro = 'Home';
+  } else if (!!pathname.match(RegExp(`${aboutRoute}+`))) {
+    selectTitleHeaderIntro = 'About';
+  } else if (!!pathname.match(RegExp(`${portfolioRoute}+`))) {
+    selectTitleHeaderIntro = 'Portfolio';
+  } else if (!!pathname.match(RegExp(`${serviceRoute}+`))) {
+    selectTitleHeaderIntro = 'Service';
+  } else if (!!pathname.match(RegExp(`${contactRoute}+`))) {
+    selectTitleHeaderIntro = 'Contact';
+  }
+  return selectTitleHeaderIntro;
+};
+export const measureTitleHeaderIntro = (
+  pathname,
+  viewWidth,
+  viewHeight,
+  aboutRoute,
+  portfolioRoute,
+  serviceRoute,
+  contactRoute
+) => {
+  let titleHeaderIntroProps;
+  if (!!pathname.match(RegExp(/^\/$/))) {
+    titleHeaderIntroProps = {
+      top: 22,
+      left: 20.5,
+    };
+  } else if (!!pathname.match(RegExp(`${aboutRoute}+`))) {
+    titleHeaderIntroProps = {
+      top: 40,
+      left: 20.5,
+    };
+  } else if (!!pathname.match(RegExp(`${portfolioRoute}+`))) {
+    titleHeaderIntroProps = {
+      top: 47,
+      left: 13,
+    };
+  } else if (!!pathname.match(RegExp(`${serviceRoute}+`))) {
+    titleHeaderIntroProps = {
+      top: 46,
+      left: 16.2,
+    };
+  } else if (!!pathname.match(RegExp(`${contactRoute}+`))) {
+    titleHeaderIntroProps = {
+      top: 47,
+      left: 16,
+    };
+  }
+  return titleHeaderIntroProps;
+};
+
 export const measureHeaderMorphing = (
   pathname,
   viewWidth,

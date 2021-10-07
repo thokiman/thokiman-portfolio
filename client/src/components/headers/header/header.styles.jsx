@@ -24,6 +24,29 @@ const whiteSmokeColor = '#e3e1e4';
 const lightBlueColor = '#74c6d4';
 const heavyLightBlueColor = '#BBCED4';
 
+const colorChange = keyframes`
+  
+    0% {
+    color: ${heavyLightBlueColor};
+  
+    
+  }
+  33.3333% {
+    color: ${greenBlueColor4};
+  
+  }
+  66.666% {
+    color: ${lightBlueColor};
+  
+  }
+  100% {
+    color: ${heavyLightBlueColor};
+  
+  }
+
+
+`;
+
 const getTopHeaderMorphing = ({ $headermorphingproperties }) => {
   return $headermorphingproperties.top;
 };
@@ -54,6 +77,29 @@ export const HeaderIntro = styled.div`
   height: ${getHeightWavyIntro}%;
   background-color: ${getBackgroundColorWavyIntro};
   transition: all 0.5s ease-in-out;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+`;
+
+const getTopTitleHeaderIntro = ({ $measuretitleheaderintroprops }) => {
+  return $measuretitleheaderintroprops.top;
+};
+const getLeftTitleHeaderIntro = ({ $measuretitleheaderintroprops }) => {
+  return $measuretitleheaderintroprops.left;
+};
+
+export const TitleHeaderIntro = styled.div`
+  position: relative;
+  top: ${getTopTitleHeaderIntro}vh;
+  left: ${getLeftTitleHeaderIntro}vw;
+
+  letter-spacing: 0.1em;
+  animation: ${colorChange} 2.5s ease-in-out alternate infinite;
+  font-size: 6vw;
+  height: fit-content;
+  width: fit-content;
+  font-family: spitfire;
 `;
 
 const getStrokeColorBottomWavyPosition = ({ $wavyproperties }) => {
@@ -233,29 +279,6 @@ const HeaderLinkStyles = css`
   text-decoration: none;
   cursor: pointer;
   text-align: center;
-`;
-
-const colorChange = keyframes`
-  
-    0% {
-    color: ${heavyLightBlueColor};
-  
-    
-  }
-  33.3333% {
-    color: ${greenBlueColor4};
-  
-  }
-  66.666% {
-    color: ${lightBlueColor};
-  
-  }
-  100% {
-    color: ${heavyLightBlueColor};
-  
-  }
-
-
 `;
 
 const HeaderLinkActive = css`

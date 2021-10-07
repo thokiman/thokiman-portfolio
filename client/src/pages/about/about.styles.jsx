@@ -36,7 +36,7 @@ const getFontSizeAboutIsNotActivatedProps = ({ $aboutisnotactivatedprops }) => {
 };
 
 export const AboutIsNotActivated = styled.div`
-  font-family: futura-demi;
+  font-family: spitfire;
   color: ${whiteSmokeColor};
   position: absolute;
   top: ${getTopAboutIsNotActivatedProps}vh;

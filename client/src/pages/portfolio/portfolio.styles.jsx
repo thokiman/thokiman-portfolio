@@ -39,7 +39,7 @@ const getFontSizePortfolioIsNotActivatedProps = ({
 };
 
 export const PortfolioIsNotActivated = styled.div`
-  font-family: futura-demi;
+  font-family: spitfire;
   color: ${whiteSmokeColor};
   position: absolute;
   top: ${getTopPortfolioIsNotActivatedProps}vh;

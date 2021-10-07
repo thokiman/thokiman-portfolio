@@ -39,7 +39,7 @@ const getFontSizeServiceIsNotActivatedProps = ({
 };
 
 export const ServiceIsNotActivated = styled.div`
-  font-family: futura-demi;
+  font-family: spitfire;
   color: ${whiteSmokeColor};
   position: absolute;
   top: ${getTopServiceIsNotActivatedProps}vh;

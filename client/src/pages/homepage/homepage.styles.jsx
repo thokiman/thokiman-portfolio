@@ -36,7 +36,7 @@ const getFontSizeHomepageIsNotActivatedProps = ({
 };
 
 export const HomepageIsNotActivated = styled.div`
-  font-family: futura-demi;
+  font-family: spitfire;
 
   color: ${whiteSmokeColor};
   position: absolute;

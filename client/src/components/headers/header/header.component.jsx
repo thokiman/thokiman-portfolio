@@ -19,12 +19,15 @@ import {
   HeaderPILogo,
   HeaderPILogoContainer,
   HeaderTextContainer,
+  TitleHeaderIntro,
   WavyBottomSVG,
 } from './header.styles';
 import {
   measureBottomWavy,
   measureHeaderMorphing,
+  measureTitleHeaderIntro,
   measureWavyIntro,
+  selectTitleHeaderIntro,
 } from './header.utils.styles';
 export const Header = ({
   location: { pathname },
@@ -38,6 +41,7 @@ export const Header = ({
   const { viewWidth, viewHeight } = useWindowDimensions();
   const [hasTransitionMorphing, setTransitionMorphing] = useState(true);
   const headerMorphingRef = useRef();
+  const querySelector = gsap.utils.selector(headerMorphingRef);
   const timeline = useRef();
 
   useEffect(() => {
@@ -139,7 +143,35 @@ export const Header = ({
               serviceRoute,
               contactRoute
             )}
-          />
+          >
+            {(viewWidth < 1024 && viewHeight < 1366) ||
+            (viewWidth === 1280 && viewHeight === 800) ? (
+              ''
+            ) : (
+              <TitleHeaderIntro
+                className='title-header-intro'
+                $measuretitleheaderintroprops={measureTitleHeaderIntro(
+                  pathname,
+                  viewWidth,
+                  viewHeight,
+                  aboutRoute,
+                  portfolioRoute,
+                  serviceRoute,
+                  contactRoute
+                )}
+              >
+                {selectTitleHeaderIntro(
+                  pathname,
+                  viewWidth,
+                  viewHeight,
+                  aboutRoute,
+                  portfolioRoute,
+                  serviceRoute,
+                  contactRoute
+                )}
+              </TitleHeaderIntro>
+            )}
+          </HeaderIntro>
           <WavyBottomSVG
             $wavyproperties={measureBottomWavy(
               pathname,

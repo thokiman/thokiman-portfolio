@@ -190,7 +190,12 @@ code {
 @font-face{
   font-family: 'angilla';
   src: local('☺'),
-  url('./assets/fonts/angilla_tattoo/AngillaTattoo_PERSONAL_USE_ONLY.ttf') format('truetype');
+  url('./assets/fonts/angilla-tattoo/AngillaTattoo-PERSONAL-USE-ONLY.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'spitfire';
+  src: local('☺'),
+  url('./assets/fonts/h74-spitfire/H74-Spitfire.ttf') format('truetype');
 }
 
  
