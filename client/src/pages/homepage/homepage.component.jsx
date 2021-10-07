@@ -1,3 +1,4 @@
+import useWindowDimensions from 'components/hooks/window-dimensions/useWindowDimensions.component';
 import React, { useEffect, useRef } from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -16,8 +17,10 @@ import {
   HomepageElement,
   HomepageIsNotActivated,
 } from './homepage.styles';
+import { measureHomepageIsNotActivated } from './homepage.utils.styles';
 
 export const Homepage = (props) => {
+  const { viewWidth, viewHeight } = useWindowDimensions();
   const homepageElementRef = useRef(null);
 
   const { isSideBarActive } = props;
@@ -44,7 +47,12 @@ export const Homepage = (props) => {
     <HomepageElement>
       <HomepageContainer $issidebaractive={isSideBarActive}>
         {props.isSideBarActive ? (
-          <HomepageIsNotActivated>
+          <HomepageIsNotActivated
+            $homepageisnotactivatedprops={measureHomepageIsNotActivated(
+              viewWidth,
+              viewHeight
+            )}
+          >
             Ho
             <br />
             me

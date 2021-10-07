@@ -22,13 +22,29 @@ const portfolioSideBarHide = keyframes`
 
 `;
 
+const getTopPortfolioIsNotActivatedProps = ({
+  $portfolioisnotactivatedprops,
+}) => {
+  return $portfolioisnotactivatedprops.top;
+};
+const getLeftPortfolioIsNotActivatedProps = ({
+  $portfolioisnotactivatedprops,
+}) => {
+  return $portfolioisnotactivatedprops.left;
+};
+const getFontSizePortfolioIsNotActivatedProps = ({
+  $portfolioisnotactivatedprops,
+}) => {
+  return $portfolioisnotactivatedprops.fontSize;
+};
+
 export const PortfolioIsNotActivated = styled.div`
   font-family: futura-demi;
   color: ${whiteSmokeColor};
   position: absolute;
-  top: 27.5vh;
-  left: 6vw;
-  font-size: 10vw;
+  top: ${getTopPortfolioIsNotActivatedProps}vh;
+  left: ${getLeftPortfolioIsNotActivatedProps}vw;
+  font-size: ${getFontSizePortfolioIsNotActivatedProps}vw;
   letter-spacing: 0.17em;
   width: 50vw;
   line-height: 1.5em;

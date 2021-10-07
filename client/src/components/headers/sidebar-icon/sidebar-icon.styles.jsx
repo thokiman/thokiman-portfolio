@@ -18,7 +18,7 @@ export const SideBarHeaderIcon = styled.div`
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     display: block;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     top: 5vh;
     left: 10vw;
     cursor: pointer;

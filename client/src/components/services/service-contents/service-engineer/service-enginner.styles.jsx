@@ -6,8 +6,8 @@ const maxWidthSmartphone = 800;
 const ServiceEngineerIsNotActivated = css`
   display: none;
 `;
-const getSideBarActive = ({ $issidebarhidden }) => {
-  if ($issidebarhidden) return ServiceEngineerIsNotActivated;
+const getSideBarActive = ({ $issidebaractive }) => {
+  if ($issidebaractive) return ServiceEngineerIsNotActivated;
   return null;
 };
 

@@ -2,9 +2,7 @@ import gsap, { Power1 } from 'gsap';
 
 export const getInPortfolioTimeline = (node, delay) => {
   const timeline = gsap.timeline({ paused: true });
-  const portfolioElementRef = node.querySelector('.portfolio-element');
-  console.log('portfolio-enter called', node);
-  console.log('portfolio-element-enter', portfolioElementRef);
+
   timeline
     .from(node, {
       display: 'none', // must be applied
@@ -26,7 +24,6 @@ export const getInPortfolioTimeline = (node, delay) => {
   return timeline;
 };
 export const getOutPortfolioTimeline = (node, delay) => {
-  console.log('portfolio-exit called', node);
   const timeline = gsap.timeline({ paused: true });
   timeline.to(node, {
     display: 'none',

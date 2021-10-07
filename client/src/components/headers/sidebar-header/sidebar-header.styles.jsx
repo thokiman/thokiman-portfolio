@@ -8,6 +8,9 @@ const whiteSmokeColor = '#e3e1e4';
 const SideBarContainerIsActivated = css`
   left: 0;
   transition: all 0.5s ease;
+  z-index: 2;
+  opacity: 1;
+  transition: all 0.5s ease;
 `;
 
 const getSideBarContainer = ({ $issidebaractive }) => {
@@ -26,6 +29,7 @@ export const SideBarHeaderContainer = styled.div`
     display: flex;
     align-items: flex-start;
     overflow-y: hidden;
+    opacity: 0;
     ${getSideBarContainer}
   }
 `;

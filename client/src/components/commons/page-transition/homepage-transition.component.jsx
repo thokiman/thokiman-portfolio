@@ -2,14 +2,7 @@ import gsap, { Power1 } from 'gsap';
 
 export const getInHomepageTimeline = (node, delay) => {
   const timeline = gsap.timeline({ paused: true });
-  const homepageAboutContentContainerRef = node.querySelector(
-    '.homepage-about-content-container'
-  );
-  console.log('homepage-enter called', node);
-  console.log(
-    'homepage-about-content-container-enter',
-    homepageAboutContentContainerRef
-  );
+
   timeline
     .from(node, {
       display: 'none', // must be applied
@@ -33,7 +26,6 @@ export const getInHomepageTimeline = (node, delay) => {
 };
 
 export const getOutHomeTimeline = (node, delay) => {
-  console.log('homepage-exit called', node);
   const timeline = gsap.timeline({ paused: true });
 
   timeline.to(node, {

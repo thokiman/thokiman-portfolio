@@ -20,7 +20,10 @@ import {
   ContactElement,
   ContactIsNotActivated,
 } from './contact.styles';
-import { measureContactHeight } from './contact.utils';
+import {
+  measureContactHeight,
+  measureContactIsNotActivated,
+} from './contact.utils.styles';
 export const Contact = ({
   location: { pathname },
   title,
@@ -45,7 +48,12 @@ export const Contact = ({
         $lowWaveImage={lowWaveImage}
       >
         {isSideBarActive ? (
-          <ContactIsNotActivated>
+          <ContactIsNotActivated
+            $contactisnotactivatedprops={measureContactIsNotActivated(
+              viewWidth,
+              viewHeight
+            )}
+          >
             Cont
             <br />
             act

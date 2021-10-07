@@ -5,6 +5,7 @@ const grayColor = '#3f4249';
 const lightBlueColor = '#74c6d4';
 const heavyLightBlueColor = '#bccfd5';
 export const AppContainer = styled.div``;
+export const Ball = styled.div``;
 
 export const GlobalStyle = createGlobalStyle`
 body {

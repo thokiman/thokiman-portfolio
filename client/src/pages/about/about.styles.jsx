@@ -25,14 +25,23 @@ const aboutSideBarHide = keyframes`
 
 `;
 
+const getTopAboutIsNotActivatedProps = ({ $aboutisnotactivatedprops }) => {
+  return $aboutisnotactivatedprops.top;
+};
+const getLeftAboutIsNotActivatedProps = ({ $aboutisnotactivatedprops }) => {
+  return $aboutisnotactivatedprops.left;
+};
+const getFontSizeAboutIsNotActivatedProps = ({ $aboutisnotactivatedprops }) => {
+  return $aboutisnotactivatedprops.fontSize;
+};
+
 export const AboutIsNotActivated = styled.div`
   font-family: futura-demi;
   color: ${whiteSmokeColor};
   position: absolute;
-  top: 19.5vh;
-  left: 6vw;
-
-  font-size: 10vw;
+  top: ${getTopAboutIsNotActivatedProps}vh;
+  left: ${getLeftAboutIsNotActivatedProps}vw;
+  font-size: ${getFontSizeAboutIsNotActivatedProps}vw;
   letter-spacing: 0.17em;
   animation: ${aboutSideBarHide} 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 `;

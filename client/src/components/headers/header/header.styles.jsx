@@ -34,6 +34,7 @@ export const HeaderMorphing = styled.div`
   width: 100vw;
   height: 257vh;
   top: ${getTopHeaderMorphing}vh;
+
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -44,10 +45,13 @@ export const HeaderMorphing = styled.div`
 const getBackgroundColorWavyIntro = ({ $wavyintroproperties }) => {
   return $wavyintroproperties.backgroundColor;
 };
+const getHeightWavyIntro = ({ $wavyintroproperties }) => {
+  return $wavyintroproperties.height;
+};
 
 export const HeaderIntro = styled.div`
   width: 100vw;
-  height: 240%;
+  height: ${getHeightWavyIntro}%;
   background-color: ${getBackgroundColorWavyIntro};
   transition: all 0.5s ease-in-out;
 `;
@@ -58,11 +62,14 @@ const getStrokeColorBottomWavyPosition = ({ $wavyproperties }) => {
 const getFillColorBottomWavyPosition = ({ $wavyproperties }) => {
   return $wavyproperties.fillColor;
 };
+const getHeightBottomWavyPosition = ({ $wavyproperties }) => {
+  return $wavyproperties.height;
+};
 
 export const WavyBottomSVG = styled(WavyToBottom)`
   transform: scaleY(-1) scaleX(-1);
   width: 100vw;
-  height: 28%;
+  height: ${getHeightBottomWavyPosition}%;
   transition: all 0.5s ease-in-out;
   path.background-wavy-to-bottom {
     fill: ${getFillColorBottomWavyPosition};

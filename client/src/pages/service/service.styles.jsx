@@ -26,16 +26,29 @@ const serviceSideBarHide = keyframes`
 
 `;
 
+const getTopServiceIsNotActivatedProps = ({ $serviceisnotactivatedprops }) => {
+  return $serviceisnotactivatedprops.top;
+};
+const getLeftServiceIsNotActivatedProps = ({ $serviceisnotactivatedprops }) => {
+  return $serviceisnotactivatedprops.left;
+};
+const getFontSizeServiceIsNotActivatedProps = ({
+  $serviceisnotactivatedprops,
+}) => {
+  return $serviceisnotactivatedprops.fontSize;
+};
+
 export const ServiceIsNotActivated = styled.div`
   font-family: futura-demi;
   color: ${whiteSmokeColor};
   position: absolute;
-  top: 36vh;
-  left: 6vw;
-  font-size: 10vw;
+  top: ${getTopServiceIsNotActivatedProps}vh;
+  left: ${getLeftServiceIsNotActivatedProps}vw;
+  font-size: ${getFontSizeServiceIsNotActivatedProps}vw;
   letter-spacing: 0.17em;
   width: 50vw;
   line-height: 1.5em;
+
   animation: ${serviceSideBarHide} 2s cubic-bezier(0.175, 0.885, 0.32, 1.275)
     both;
 `;

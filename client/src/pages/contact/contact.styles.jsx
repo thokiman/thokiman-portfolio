@@ -25,19 +25,33 @@ const contactSideBarHide = keyframes`
 
 `;
 
+const getTopContactIsNotActivatedProps = ({ $contactisnotactivatedprops }) => {
+  return $contactisnotactivatedprops.top;
+};
+const getLeftContactIsNotActivatedProps = ({ $contactisnotactivatedprops }) => {
+  return $contactisnotactivatedprops.left;
+};
+const getFontSizeContactIsNotActivatedProps = ({
+  $contactisnotactivatedprops,
+}) => {
+  return $contactisnotactivatedprops.fontSize;
+};
+
 export const ContactIsNotActivated = styled.div`
   font-family: futura-demi;
   color: ${whiteSmokeColor};
   position: absolute;
-  top: 44.5vh;
-  left: 6vw;
-  font-size: 10vw;
+  top: ${getTopContactIsNotActivatedProps}vh;
+  left: ${getLeftContactIsNotActivatedProps}vw;
+  font-size: ${getFontSizeContactIsNotActivatedProps}vw;
   letter-spacing: 0.17em;
   width: 50vw;
   line-height: 1.5em;
-
   animation: ${contactSideBarHide} 2s cubic-bezier(0.175, 0.885, 0.32, 1.275)
     both;
+  @media only screen and (max-width: 300px) {
+    top: 55vh;
+  }
 `;
 
 const contactHeight = ({ $contactheight }) => {

@@ -8,10 +8,9 @@ import { Route, Switch, withRouter } from 'react-router-dom';
 import { Transition, TransitionGroup } from 'react-transition-group';
 import { selectHomepageRoute } from 'redux/homepage/homepage.selectors';
 import { createStructuredSelector } from 'reselect';
-import { getPathDepth } from 'utils/common.component.utils';
 import Header from './components/headers/header/header.component';
 import SideBarHeader from './components/headers/sidebar-header/sidebar-header.component';
-import { AppContainer, GlobalStyle } from './global.styles';
+import { AppContainer, Ball, GlobalStyle } from './global.styles';
 import About from './pages/about/about.component';
 import Contact from './pages/contact/contact.component';
 import Homepage from './pages/homepage/homepage.component';
@@ -43,9 +42,10 @@ const App = ({
         const { key, pathname } = location;
 
         const timeout = { enter: 10000, exit: 10000 };
-        console.log(getPathDepth(pathname));
+
         return (
           <AppContainer>
+            <Ball />
             <GlobalStyle />
             <SideBarHeader />
             <Header />

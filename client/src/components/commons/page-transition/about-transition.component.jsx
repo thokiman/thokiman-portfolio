@@ -3,8 +3,6 @@ import gsap, { Power1 } from 'gsap';
 export const getInAboutTimeline = (node, delay) => {
   const timeline = gsap.timeline({ paused: true });
   const footerGeneralRef = node.querySelector('.footer-general');
-  console.log('about-enter called', node);
-  console.log('about-element-enter called', footerGeneralRef);
 
   timeline
     .from(node, {
@@ -35,10 +33,9 @@ export const getInAboutTimeline = (node, delay) => {
   return timeline;
 };
 export const getOutAboutTimeline = (node, delay) => {
-  console.log('about-exit called', node);
   const timeline = gsap.timeline({ paused: true });
   const footerGeneralRef = node.querySelector('.footer-general');
-  console.log('footer-general-exit', footerGeneralRef);
+
   timeline
     .to(node, {
       display: 'none',

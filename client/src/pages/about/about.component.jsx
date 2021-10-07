@@ -25,7 +25,10 @@ import {
 } from '../../redux/about/about.selectors';
 import { selectIsSideBarActive } from '../../redux/header/header.selectors';
 import { AboutElement, AboutIsNotActivated, AboutPage } from './about.styles';
-import { measureAbouteHeight } from './about.utils';
+import {
+  measureAbouteHeight,
+  measureAboutIsNotActivated,
+} from './about.utils.styles';
 
 export const About = ({
   location: { pathname },
@@ -67,7 +70,12 @@ export const About = ({
           $rockWaveImage={rockWaveImage}
         >
           {isSideBarActive ? (
-            <AboutIsNotActivated>
+            <AboutIsNotActivated
+              $aboutisnotactivatedprops={measureAboutIsNotActivated(
+                viewWidth,
+                viewHeight
+              )}
+            >
               Abo
               <br />
               ut

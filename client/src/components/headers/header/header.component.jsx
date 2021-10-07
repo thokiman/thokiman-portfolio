@@ -5,11 +5,6 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { selectHomepageRoute } from 'redux/homepage/homepage.selectors';
 import { createStructuredSelector } from 'reselect';
-import {
-  measureBottomWavy,
-  measureHeaderMorphing,
-  measureWavyIntro,
-} from 'utils/header.component.utils';
 import { selectAboutRoute } from '../../../redux/about/about.selectors';
 import { selectPortfolioRoute } from '../../../redux/collection/collection.selectors';
 import { selectContactRoute } from '../../../redux/contact/contact.selectors';
@@ -26,6 +21,11 @@ import {
   HeaderTextContainer,
   WavyBottomSVG,
 } from './header.styles';
+import {
+  measureBottomWavy,
+  measureHeaderMorphing,
+  measureWavyIntro,
+} from './header.utils.styles';
 export const Header = ({
   location: { pathname },
   aboutRoute,
@@ -41,7 +41,6 @@ export const Header = ({
   const timeline = useRef();
 
   useEffect(() => {
-    console.log(hasTransitionMorphing);
     if (hasTransitionMorphing) {
       timeline.current = gsap.timeline().to(headerMorphingRef.current, {
         yPercent: 50,
@@ -76,6 +75,7 @@ export const Header = ({
         >
           <HeaderPILogo />
         </HeaderPILogoContainer>
+
         <HeaderTextContainer>
           <HeaderLink
             to={homepageRoute}
@@ -116,20 +116,42 @@ export const Header = ({
             Contact
           </HeaderLink>
         </HeaderTextContainer>
-        {(viewWidth <= 1024 && viewHeight <= 1366) ||
-        (viewWidth === 1280 && viewHeight === 800) ? (
-          ''
-        ) : (
-          <>
-            <HeaderMorphing
-              $headermorphingproperties={measureHeaderMorphing(pathname)}
-              ref={headerMorphingRef}
-            >
-              <HeaderIntro $wavyintroproperties={measureWavyIntro(pathname)} />
-              <WavyBottomSVG $wavyproperties={measureBottomWavy(pathname)} />
-            </HeaderMorphing>
-          </>
-        )}
+
+        <HeaderMorphing
+          $headermorphingproperties={measureHeaderMorphing(
+            pathname,
+            viewWidth,
+            viewHeight,
+            aboutRoute,
+            portfolioRoute,
+            serviceRoute,
+            contactRoute
+          )}
+          ref={headerMorphingRef}
+        >
+          <HeaderIntro
+            $wavyintroproperties={measureWavyIntro(
+              pathname,
+              viewWidth,
+              viewHeight,
+              aboutRoute,
+              portfolioRoute,
+              serviceRoute,
+              contactRoute
+            )}
+          />
+          <WavyBottomSVG
+            $wavyproperties={measureBottomWavy(
+              pathname,
+              viewWidth,
+              viewHeight,
+              aboutRoute,
+              portfolioRoute,
+              serviceRoute,
+              contactRoute
+            )}
+          />
+        </HeaderMorphing>
       </HeaderContainer>
     </>
   );

@@ -3,11 +3,7 @@ import gsap, { Power1 } from 'gsap';
 export const getInServiceTimeline = (node, delay) => {
   const timeline = gsap.timeline({ paused: true });
 
-  console.log('service-enter called', node);
-
   const footerGeneralRef = node.querySelector('.footer-general');
-  console.log('footer-enter called', node);
-  console.log('service-footer-general-enter called', footerGeneralRef);
 
   timeline
     .from(node, {
@@ -26,16 +22,21 @@ export const getInServiceTimeline = (node, delay) => {
       repeat: 1,
       repeatDelay: 0.5,
       duration: 3,
+    })
+    .from(footerGeneralRef, {
+      display: 'none',
+      autoAlpha: 0,
+      yPercent: 10,
+      ease: Power1.easeIn,
+      duration: 0.5,
     });
   return timeline;
 };
 export const getOutServiceTimeline = (node, delay) => {
-  console.log('service-exit called', node);
   const timeline = gsap.timeline({ paused: true });
 
   const footerGeneralRef = node.querySelector('.footer-general');
-  console.log('footer-enter called', node);
-  console.log('service-footer-general-enter called', footerGeneralRef);
+
   timeline
 
     .to(node, {

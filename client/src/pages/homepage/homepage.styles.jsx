@@ -19,14 +19,30 @@ const homepageSideBarHide = keyframes`
   }
 `;
 
+const getTopHomepageIsNotActivatedProps = ({
+  $homepageisnotactivatedprops,
+}) => {
+  return $homepageisnotactivatedprops.top;
+};
+const getLeftHomepageIsNotActivatedProps = ({
+  $homepageisnotactivatedprops,
+}) => {
+  return $homepageisnotactivatedprops.left;
+};
+const getFontSizeHomepageIsNotActivatedProps = ({
+  $homepageisnotactivatedprops,
+}) => {
+  return $homepageisnotactivatedprops.fontSize;
+};
+
 export const HomepageIsNotActivated = styled.div`
   font-family: futura-demi;
 
   color: ${whiteSmokeColor};
   position: absolute;
-  top: 10.5vh;
-  left: -10vw;
-  font-size: 10vw;
+  top: ${getTopHomepageIsNotActivatedProps}vh;
+  left: ${getLeftHomepageIsNotActivatedProps}vw;
+  font-size: ${getFontSizeHomepageIsNotActivatedProps}vw;
   letter-spacing: 0.17em;
   width: 50vw;
   line-height: 1.5em;

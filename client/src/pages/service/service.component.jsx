@@ -28,7 +28,10 @@ import {
   ServiceElement,
   ServiceIsNotActivated,
 } from './service.styles';
-import { measureServiceHeight } from './service.utils';
+import {
+  measureServiceHeight,
+  measureServiceIsNotActivated,
+} from './service.utils.styles';
 
 export const Service = ({
   location: { pathname },
@@ -62,7 +65,12 @@ export const Service = ({
         $bigWaveImage={bigWaveImage}
       >
         {isSideBarActive ? (
-          <ServiceIsNotActivated>
+          <ServiceIsNotActivated
+            $serviceisnotactivatedprops={measureServiceIsNotActivated(
+              viewWidth,
+              viewHeight
+            )}
+          >
             Serv
             <br />
             ice

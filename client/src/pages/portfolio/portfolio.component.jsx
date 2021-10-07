@@ -1,3 +1,4 @@
+import useWindowDimensions from 'components/hooks/window-dimensions/useWindowDimensions.component';
 import React from 'react';
 import { connect } from 'react-redux';
 import { Route } from 'react-router-dom';
@@ -25,6 +26,7 @@ import {
   PortfolioElement,
   PortfolioIsNotActivated,
 } from './portfolio.styles';
+import { measurePortfolioIsNotActivated } from './portfolio.utils.styles';
 
 export const Portfolio = ({
   portfolioRoute,
@@ -41,11 +43,17 @@ export const Portfolio = ({
   websiteRoute,
   isSideBarActive,
 }) => {
+  const { viewWidth, viewHeight } = useWindowDimensions();
   return (
     <PortfolioElement>
       <PortfolioContainer $issidebaractive={isSideBarActive}>
         {isSideBarActive ? (
-          <PortfolioIsNotActivated>
+          <PortfolioIsNotActivated
+            $portfolioisnotactivatedprops={measurePortfolioIsNotActivated(
+              viewWidth,
+              viewHeight
+            )}
+          >
             Port
             <br />
             folio
@@ -53,7 +61,6 @@ export const Portfolio = ({
         ) : null}
 
         <PortfolioContentHeader />
-
         <Route
           exact
           path={portfolioRoute}

@@ -25,7 +25,6 @@ import {
 } from './service-transition.component';
 gsap.config({ force3D: true });
 export const play = (pathname, node, appears, routes) => {
-  console.log('play called');
   const {
     aboutRoute,
     serviceRoute,
@@ -61,10 +60,10 @@ export const exit = (pathname, node, appears, routes) => {
     contactRoute,
     homepageRoute,
   } = routes;
-  console.log('exit called');
+
   const delay = appears ? 0 : 3;
   let timeline;
-  console.log(pathname);
+
   if (pathname.match(`^${homepageRoute}$`)) {
     timeline = getOutHomeTimeline(node, delay);
   } else if (pathname.match(`^${aboutRoute}$`)) {

@@ -1,9 +1,8 @@
 import gsap, { Power1 } from 'gsap';
 export const getInContactTimeline = (node, delay) => {
-  console.log('contact-enter called', node);
   const timeline = gsap.timeline({ paused: true });
   const footerContactRef = node.querySelector('.footer-contact');
-  console.log('contact-footer-enter', footerContactRef);
+
   timeline
     .from(node, {
       display: 'none', // must be applied
@@ -21,14 +20,19 @@ export const getInContactTimeline = (node, delay) => {
       repeat: 1,
       repeatDelay: 0.5,
       duration: 3,
+    })
+    .from(footerContactRef, {
+      display: 'none',
+      autoAlpha: 0,
+      yPercent: 10,
+      ease: Power1.easeIn,
+      duration: 0.5,
     });
   return timeline;
 };
 export const getOutContactTimeline = (node, delay) => {
-  console.log('contact-exit called', node);
   const timeline = gsap.timeline({ paused: true });
   const footerContactRef = node.querySelector('.footer-contact');
-  console.log('contact-footer-exit', footerContactRef);
 
   timeline
 
