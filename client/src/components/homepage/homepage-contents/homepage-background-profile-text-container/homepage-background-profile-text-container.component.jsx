@@ -13,14 +13,18 @@ import {
 export const HomePageProfileTextContainer = ({
   shortDescription,
   quote,
-  isSideBarHidden: isSideBarActive,
+  isSideBarActive,
 }) => {
   return (
     <HomepageProfileTextContainer $issidebaractive={isSideBarActive}>
       <HomepageBackgroundProfileText>
-        <HomepageNameText>Thomas Santosa</HomepageNameText>
-        <HomepageActivityText>{shortDescription}</HomepageActivityText>
-        <HomepageQuoteText>{quote}</HomepageQuoteText>
+        <HomepageNameText className='homepage-text'>
+          Thomas Santosa
+        </HomepageNameText>
+        <HomepageActivityText className='homepage-text'>
+          {shortDescription}
+        </HomepageActivityText>
+        <HomepageQuoteText className='homepage-text'>{quote}</HomepageQuoteText>
       </HomepageBackgroundProfileText>
     </HomepageProfileTextContainer>
   );

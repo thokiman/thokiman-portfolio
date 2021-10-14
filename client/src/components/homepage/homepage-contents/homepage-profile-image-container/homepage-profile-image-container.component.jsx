@@ -11,7 +11,10 @@ import {
 
 export const HomePageProfileImageContainer = ({ isSideBarActive }) => {
   return (
-    <HomepageProfileImageContainer $issidebaractive={isSideBarActive}>
+    <HomepageProfileImageContainer
+      className='homepage-profile-image-container'
+      $issidebaractive={isSideBarActive}
+    >
       <HomepageProfileImageCartoon />
       <HomepageBackgroundProfileImage>
         <HomepageProfileImage />

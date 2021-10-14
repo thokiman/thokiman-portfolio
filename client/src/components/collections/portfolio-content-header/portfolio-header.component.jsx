@@ -4,21 +4,26 @@ import { withRouter } from 'react-router-dom';
 import { toggleWebsiteLinkDropdown } from 'redux/collection/collection.actions';
 import { createStructuredSelector } from 'reselect';
 import {
+  selectAllPortfolioRoute,
+  selectAllTitle,
   selectBrandRoute,
   selectBrandTitle,
   selectCurrentWebsitePathname,
+  selectDefaultPortfolioRoute,
   selectDigitalArtRoute,
   selectDigitalArtTitle,
   selectPhotographyBwRoute,
   selectPhotographyBwTitle,
   selectPhotographyColorRoute,
   selectPhotographyColorTitle,
-  selectPortfolioRoute,
   selectWebsiteHeaderDropdown,
   selectWebsiteRoute,
   selectWebsiteTitle,
 } from '../../../redux/collection/collection.selectors';
-import { selectIsSideBarActive } from '../../../redux/header/header.selectors';
+import {
+  selectIsHeaderMorphingActive,
+  selectIsSideBarActive,
+} from '../../../redux/header/header.selectors';
 import {
   PortfolioHeaderOption,
   PortfolioHeaderOptions,
@@ -27,7 +32,9 @@ import {
 
 export const PortfolioHeader = ({
   location: { pathname },
-  portfolioRoute,
+  portfolioDefaultRoute,
+  portfolioAllRoute,
+  allTitle,
   brandRoute,
   brandTitle,
   digitalArtRoute,
@@ -42,25 +49,33 @@ export const PortfolioHeader = ({
   isWebsiteLinkDropdownActive,
   toggleWebsiteLinkDropdown,
   currentWebsitePathname,
+  isHeaderMorphingActive,
 }) => {
+  const toggleHeader = () => {
+    toggleWebsiteLinkDropdown();
+  };
   return (
     <PortfolioHeaderOptions
-      className='options'
+      $isheadermorphingactive={isHeaderMorphingActive}
       $issidebaractive={isSideBarActive}
     >
       <PortfolioHeaderOption
         $pathname={pathname}
-        to={portfolioRoute}
-        $matchpath={!!pathname.match(`${portfolioRoute}$`)}
-        onClick={toggleWebsiteLinkDropdown}
+        to={portfolioAllRoute}
+        $matchpath={
+          !!pathname.match(`${portfolioAllRoute}$`) ||
+          !!pathname.match(`${portfolioAllRoute}[/]$`) ||
+          !!pathname.match(`${portfolioDefaultRoute}$`)
+        }
+        onClick={toggleHeader}
       >
-        All
+        {`${allTitle}`}
       </PortfolioHeaderOption>
       <PortfolioHeaderOption
         $pathname={pathname}
         to={brandRoute}
         $matchpath={!!pathname.match(brandRoute)}
-        onClick={toggleWebsiteLinkDropdown}
+        onClick={toggleHeader}
       >
         {`${brandTitle}`}
       </PortfolioHeaderOption>
@@ -68,7 +83,7 @@ export const PortfolioHeader = ({
         $pathname={pathname}
         to={digitalArtRoute}
         $matchpath={!!pathname.match(digitalArtRoute)}
-        onClick={toggleWebsiteLinkDropdown}
+        onClick={toggleHeader}
       >
         {`${digitalArtTitle}`}
       </PortfolioHeaderOption>
@@ -76,7 +91,7 @@ export const PortfolioHeader = ({
         $pathname={pathname}
         to={photographyColorRoute}
         $matchpath={!!pathname.match(photographyColorRoute)}
-        onClick={toggleWebsiteLinkDropdown}
+        onClick={toggleHeader}
       >
         {`${photographyColorTitle}`}
       </PortfolioHeaderOption>
@@ -84,7 +99,7 @@ export const PortfolioHeader = ({
         $pathname={pathname}
         to={photographyBwRoute}
         $matchpath={!!pathname.match(photographyBwRoute)}
-        onClick={toggleWebsiteLinkDropdown}
+        onClick={toggleHeader}
       >
         {photographyBwTitle}
       </PortfolioHeaderOption>
@@ -93,7 +108,7 @@ export const PortfolioHeader = ({
         $pathname={pathname}
         to={currentWebsitePathname}
         $matchpath={!!pathname.match(currentWebsitePathname)}
-        onClick={toggleWebsiteLinkDropdown}
+        onClick={toggleHeader}
       >
         {websiteTitle}
         <WebsiteLeftButton
@@ -106,7 +121,9 @@ export const PortfolioHeader = ({
 };
 
 const mapStateToProps = createStructuredSelector({
-  portfolioRoute: selectPortfolioRoute,
+  portfolioDefaultRoute: selectDefaultPortfolioRoute,
+  portfolioAllRoute: selectAllPortfolioRoute,
+  allTitle: selectAllTitle,
   brandRoute: selectBrandRoute,
   brandTitle: selectBrandTitle,
   digitalArtRoute: selectDigitalArtRoute,
@@ -120,6 +137,7 @@ const mapStateToProps = createStructuredSelector({
   isSideBarActive: selectIsSideBarActive,
   isWebsiteLinkDropdownActive: selectWebsiteHeaderDropdown,
   currentWebsitePathname: selectCurrentWebsitePathname,
+  isHeaderMorphingActive: selectIsHeaderMorphingActive,
 });
 
 const mapDispatchToProps = (dispatch) => ({

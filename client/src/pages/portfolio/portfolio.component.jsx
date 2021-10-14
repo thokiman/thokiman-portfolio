@@ -8,15 +8,16 @@ import PortfolioContentContainer from '../../components/collections/portfolio-co
 import PortfolioWebsite from '../../components/collections/portfolio-contents/portfolio-website/portfolio-website.component';
 import {
   selectAllItems,
+  selectAllPortfolioRoute,
   selectBrandItems,
   selectBrandRoute,
+  selectDefaultPortfolioRoute,
   selectDigitalArtItems,
   selectDigitalArtRoute,
   selectPhotographyBwItems,
   selectPhotographyBwRoute,
   selectPhotographyColorItems,
   selectPhotographyColorRoute,
-  selectPortfolioRoute,
   selectWebsiteItems,
   selectWebsiteRoute,
 } from '../../redux/collection/collection.selectors';
@@ -29,7 +30,8 @@ import {
 import { measurePortfolioIsNotActivated } from './portfolio.utils.styles';
 
 export const Portfolio = ({
-  portfolioRoute,
+  portfolioDefaultRoute,
+  portfolioAllRoute,
   allItems,
   brandItems,
   brandRoute,
@@ -63,7 +65,11 @@ export const Portfolio = ({
         <PortfolioContentHeader />
         <Route
           exact
-          path={portfolioRoute}
+          path={portfolioDefaultRoute}
+          render={() => <PortfolioContentContainer items={allItems} />}
+        />
+        <Route
+          path={portfolioAllRoute}
           render={() => <PortfolioContentContainer items={allItems} />}
         />
         <Route
@@ -95,7 +101,8 @@ export const Portfolio = ({
   );
 };
 const mapStateToProps = createStructuredSelector({
-  portfolioRoute: selectPortfolioRoute,
+  portfolioDefaultRoute: selectDefaultPortfolioRoute,
+  portfolioAllRoute: selectAllPortfolioRoute,
   allItems: selectAllItems,
   brandItems: selectBrandItems,
   brandRoute: selectBrandRoute,

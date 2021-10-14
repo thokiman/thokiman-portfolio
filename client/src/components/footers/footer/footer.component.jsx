@@ -6,7 +6,7 @@ import {
   selectAboutRoute,
   selectTimelineCareerRoute,
 } from '../../../redux/about/about.selectors';
-import { selectPortfolioRoute } from '../../../redux/collection/collection.selectors';
+import { selectDefaultPortfolioRoute } from '../../../redux/collection/collection.selectors';
 import { selectContactRoute } from '../../../redux/contact/contact.selectors';
 import FooterContact from '../footer-contact/footer-contact.component';
 import FooterGeneral from '../footer-general/footer-general.component';
@@ -14,7 +14,7 @@ import FooterGeneral from '../footer-general/footer-general.component';
 export const Footer = ({
   location: { pathname },
   contactRoute,
-  portfolioRoute,
+  portfolioDefaultRoute,
 }) => {
   if (pathname.match(`^${contactRoute}+`)) {
     return <FooterContact />;
@@ -25,7 +25,7 @@ export const Footer = ({
 
 const mapStateToProps = createStructuredSelector({
   contactRoute: selectContactRoute,
-  portfolioRoute: selectPortfolioRoute,
+  portfolioDefaultRoute: selectDefaultPortfolioRoute,
   aboutRoute: selectAboutRoute,
   timelineRoute: selectTimelineCareerRoute,
 });

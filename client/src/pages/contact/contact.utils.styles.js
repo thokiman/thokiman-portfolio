@@ -58,7 +58,7 @@ export const measureContactIsNotActivated = (viewWidth, viewHeight) => {
   } else if (hasScreenSize2(viewWidth)) {
     console.log(2);
     contactIsNotActivatedProps = {
-      top: 51,
+      top: 49,
       left: 6,
       fontSize: 5,
     };

@@ -1,5 +1,5 @@
 import useWindowDimensions from 'components/hooks/window-dimensions/useWindowDimensions.component';
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import Footer from '../../components/footers/footer/footer.component';
@@ -21,27 +21,7 @@ import { measureHomepageIsNotActivated } from './homepage.utils.styles';
 
 export const Homepage = (props) => {
   const { viewWidth, viewHeight } = useWindowDimensions();
-  const homepageElementRef = useRef(null);
-
   const { isSideBarActive } = props;
-  // gsap.registerPlugin(ScrollTrigger);
-
-  useEffect(() => {
-    // console.log('1called');
-
-    // gsap.from(homepageElementRef.current, {
-    //   opacity: 0,
-    //   duration: 10,
-    // });
-    // gsap.to(homepageElementRef.current, {
-    //   opacity: 1,
-    //   duration: 10,
-    // });
-    return () => {
-      // homepageElementAnimation.kill();
-      // console.log('2called');
-    };
-  }, []);
 
   return (
     <HomepageElement>
@@ -58,8 +38,8 @@ export const Homepage = (props) => {
             me
           </HomepageIsNotActivated>
         ) : null}
-
         <HomepageThokimanContentContainer />
+
         <HomepageAboutContentContainer className='homepage-about-content-container'>
           <HomepageProfileImageContainer />
           <HomepageProfileTextContainer {...props} />

@@ -181,11 +181,25 @@ const getSideBarActive = ({ $issidebaractive }) => {
   return null;
 };
 
+const isHeaderMorphingActive = ({ $isheadermorphingactive }) => {
+  if ($isheadermorphingactive) {
+    return css`
+      opacity: 0;
+    `;
+  } else {
+    return css`
+      opacity: 1;
+    `;
+  }
+};
+
 export const PortfolioHeaderOptions = styled.div`
   background-color: ${backgroundColorPortfolioHeaderOptionsColor};
   width: 100vw;
   height: 8vh;
+  ${isHeaderMorphingActive}
   display: flex;
+  transition: all 0.5s ease-in-out;
   justify-content: space-evenly;
   align-items: center;
 

@@ -17,16 +17,30 @@ import Homepage from './pages/homepage/homepage.component';
 import Portfolio from './pages/portfolio/portfolio.component';
 import Service from './pages/service/service.component';
 import { selectAboutRoute } from './redux/about/about.selectors';
-import { selectPortfolioRoute } from './redux/collection/collection.selectors';
+import {
+  selectAllPortfolioRoute,
+  selectBrandRoute,
+  selectDefaultPortfolioRoute,
+  selectDigitalArtRoute,
+  selectPhotographyBwRoute,
+  selectPhotographyColorRoute,
+  selectWebsiteRoute,
+} from './redux/collection/collection.selectors';
 import { selectContactRoute } from './redux/contact/contact.selectors';
 import { selectServiceRoute } from './redux/service/service.selectors';
 
 const App = ({
   aboutRoute,
   serviceRoute,
-  portfolioRoute,
+  portfolioDefaultRoute,
   contactRoute,
   homepageRoute,
+  portfolioAllRoute,
+  brandRoute,
+  digitalArtRoute,
+  photographyColorRoute,
+  photographyBwRoute,
+  websiteRoute,
   location: { pathname },
 }) => {
   return (
@@ -35,9 +49,15 @@ const App = ({
         const pathStacker = {
           aboutRoute,
           serviceRoute,
-          portfolioRoute,
+          portfolioDefaultRoute,
           contactRoute,
           homepageRoute,
+          portfolioAllRoute,
+          brandRoute,
+          digitalArtRoute,
+          photographyColorRoute,
+          photographyBwRoute,
+          websiteRoute,
         };
         const { key, pathname } = location;
 
@@ -67,7 +87,7 @@ const App = ({
                   <Route exact path={homepageRoute} component={Homepage} />
                   <Route path={aboutRoute} component={About} />
                   <Route path={serviceRoute} component={Service} />
-                  <Route path={portfolioRoute} component={Portfolio} />
+                  <Route path={portfolioDefaultRoute} component={Portfolio} />
                   <Route path={contactRoute} component={Contact} />
                 </Switch>
               </Transition>
@@ -81,9 +101,15 @@ const App = ({
 const mapStateToProps = createStructuredSelector({
   aboutRoute: selectAboutRoute,
   serviceRoute: selectServiceRoute,
-  portfolioRoute: selectPortfolioRoute,
+  portfolioDefaultRoute: selectDefaultPortfolioRoute,
   contactRoute: selectContactRoute,
   homepageRoute: selectHomepageRoute,
+  portfolioAllRoute: selectAllPortfolioRoute,
+  brandRoute: selectBrandRoute,
+  digitalArtRoute: selectDigitalArtRoute,
+  photographyColorRoute: selectPhotographyColorRoute,
+  photographyBwRoute: selectPhotographyBwRoute,
+  websiteRoute: selectWebsiteRoute,
 });
 
 export default withRouter(connect(mapStateToProps)(App));

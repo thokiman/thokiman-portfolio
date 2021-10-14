@@ -95,8 +95,9 @@ export const TitleHeaderIntro = styled.div`
   left: ${getLeftTitleHeaderIntro}vw;
 
   letter-spacing: 0.1em;
+
   animation: ${colorChange} 2.5s ease-in-out alternate infinite;
-  font-size: 6vw;
+  font-size: 10vw;
   height: fit-content;
   width: fit-content;
   font-family: spitfire;
@@ -273,12 +274,17 @@ export const HeaderTextContainer = styled.div`
   }
 `;
 
+const getFontSizeHeaderLink = ({ $measureheaderlinkprops }) => {
+  return $measureheaderlinkprops.fontSize;
+};
+
 const HeaderLinkStyles = css`
-  font-size: 110%;
+  font-size: ${getFontSizeHeaderLink};
   padding: 10px 10px;
   text-decoration: none;
   cursor: pointer;
   text-align: center;
+  transition: font-size 0.5s ease-in;
 `;
 
 const HeaderLinkActive = css`

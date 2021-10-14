@@ -60,7 +60,19 @@ export const PortfolioWebsiteHeaderOptions = styled.div`
   z-index:1;
 `;
 
+const linkIsActivatedStyles = css`
+  pointer-events: none;
+`;
+const getLinkIsActivated = ({ $matchpath }) => {
+  if ($matchpath) {
+    return linkIsActivatedStyles;
+  } else {
+    return null;
+  }
+};
+
 export const PortfolioWebsiteHeaderOption = styled(Link)`
+  ${getLinkIsActivated}
   text-shadow: 0 0 10px ${greenBlueColor8}, 0 0 20px ${greenBlueColor7},
     0 0 40px ${greenBlueColor6}, 0 0 80px ${greenBlueColor5};
 
@@ -116,10 +128,7 @@ const PortfolioWebsiteHeaderTextHide = css`
   color: ${greenBlueColor8};
 `;
 
-const PorfolioWebsiteHeaderTextActive = css`
-  animation: ${fadeHeaderText} 1s cubic-bezier(0.19, 1, 0.22, 1) 0.5s infinite
-    alternate both;
-`;
+const PorfolioWebsiteHeaderTextActive = css``;
 
 const getPorfolioWebsiteHeaderTextStyles = ({ $matchpath }) => {
   if ($matchpath) {
@@ -131,10 +140,10 @@ const getPorfolioWebsiteHeaderTextStyles = ({ $matchpath }) => {
 
 export const PortfolioWebsiteHeaderText = styled.span`
   color: ${greenBlueColor9};
-
+  transition: all 0.5s ease-in-out;
   ${getPorfolioWebsiteHeaderTextStyles}
   &:hover {
-    animation: ${fadeHeaderText} 1s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    animation: ${fadeHeaderText} 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
       infinite alternate both;
   }
 `;

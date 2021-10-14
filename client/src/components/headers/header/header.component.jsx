@@ -1,14 +1,18 @@
 import useWindowDimensions from 'components/hooks/window-dimensions/useWindowDimensions.component';
 import gsap from 'gsap';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import { toggleHeaderMorphingActive } from 'redux/header/header.actions';
 import { selectHomepageRoute } from 'redux/homepage/homepage.selectors';
 import { createStructuredSelector } from 'reselect';
 import { selectAboutRoute } from '../../../redux/about/about.selectors';
-import { selectPortfolioRoute } from '../../../redux/collection/collection.selectors';
+import { selectDefaultPortfolioRoute } from '../../../redux/collection/collection.selectors';
 import { selectContactRoute } from '../../../redux/contact/contact.selectors';
-import { selectIsSideBarActive } from '../../../redux/header/header.selectors';
+import {
+  selectIsHeaderMorphingActive,
+  selectIsSideBarActive,
+} from '../../../redux/header/header.selectors';
 import { selectServiceRoute } from '../../../redux/service/service.selectors';
 import SideBarIcon from '../sidebar-icon/sidebar-icon.component';
 import {
@@ -24,6 +28,7 @@ import {
 } from './header.styles';
 import {
   measureBottomWavy,
+  measureHeaderLink,
   measureHeaderMorphing,
   measureTitleHeaderIntro,
   measureWavyIntro,
@@ -32,37 +37,70 @@ import {
 export const Header = ({
   location: { pathname },
   aboutRoute,
-  portfolioRoute,
+  portfolioDefaultRoute,
   serviceRoute,
   contactRoute,
   homepageRoute,
   isSideBarActive,
+  isHeaderMorphingActive,
+  toggleHeaderMorphingActive,
 }) => {
   const { viewWidth, viewHeight } = useWindowDimensions();
-  const [hasTransitionMorphing, setTransitionMorphing] = useState(true);
+
   const headerMorphingRef = useRef();
   const querySelector = gsap.utils.selector(headerMorphingRef);
-  const timeline = useRef();
+  const headerMorphingTl = useRef();
 
   useEffect(() => {
-    if (hasTransitionMorphing) {
-      timeline.current = gsap.timeline().to(headerMorphingRef.current, {
+    if (isHeaderMorphingActive) {
+      headerMorphingTl.current = gsap.timeline().to(headerMorphingRef.current, {
         yPercent: 50,
         repeat: 1,
         repeatDelay: 1,
         yoyo: true,
         yoyoEase: true,
         duration: 5,
+        onStart: () => {
+          toggleHeaderMorphingActive(headerMorphingTl.current.isActive());
+          gsap
+            .timeline()
+            .from(querySelector('.title-header-intro'), {
+              autoAlpha: 0,
+              delay: 2,
+              scaleY: 2,
+              skewY: '-25%',
+              skewX: '-1%',
+              yPercent: 10,
+              repeat: 1,
+              repeatDelay: 1,
+              yoyo: true,
+              yoyoEase: true,
+              duration: 2,
+            })
+
+            .to(
+              querySelector('.title-header-intro'),
+              {
+                delay: 2,
+                skewY: '0%',
+                scaleY: 1,
+                autoAlpha: 1,
+                duration: 0.25,
+              },
+              '>'
+            );
+        },
+        onComplete: () => {
+          toggleHeaderMorphingActive(headerMorphingTl.current.isActive());
+        },
       });
 
-      timeline.current.play();
-
-      setTransitionMorphing(false);
+      headerMorphingTl.current.play();
     }
   }, [pathname]);
 
   const onMorphingTransition = () => {
-    setTransitionMorphing(true);
+    toggleHeaderMorphingActive(true);
   };
   return (
     <>
@@ -82,6 +120,15 @@ export const Header = ({
 
         <HeaderTextContainer>
           <HeaderLink
+            $measureheaderlinkprops={measureHeaderLink(
+              pathname,
+              viewWidth,
+              viewHeight,
+              aboutRoute,
+              portfolioDefaultRoute,
+              serviceRoute,
+              contactRoute
+            )}
             to={homepageRoute}
             $matchpath={!!pathname.match(RegExp(/^\/$/))}
             onClick={onMorphingTransition}
@@ -89,6 +136,15 @@ export const Header = ({
             Home
           </HeaderLink>
           <HeaderLink
+            $measureheaderlinkprops={measureHeaderLink(
+              pathname,
+              viewWidth,
+              viewHeight,
+              aboutRoute,
+              portfolioDefaultRoute,
+              serviceRoute,
+              contactRoute
+            )}
             to={aboutRoute}
             $matchpath={!!pathname.match(RegExp(`${aboutRoute}+`))}
             onClick={onMorphingTransition}
@@ -97,14 +153,32 @@ export const Header = ({
           </HeaderLink>
 
           <HeaderLink
-            to={portfolioRoute}
-            $matchpath={!!pathname.match(RegExp(`${portfolioRoute}+`))}
+            $measureheaderlinkprops={measureHeaderLink(
+              pathname,
+              viewWidth,
+              viewHeight,
+              aboutRoute,
+              portfolioDefaultRoute,
+              serviceRoute,
+              contactRoute
+            )}
+            to={portfolioDefaultRoute}
+            $matchpath={!!pathname.match(RegExp(`${portfolioDefaultRoute}+`))}
             onClick={onMorphingTransition}
           >
             Portfolio
           </HeaderLink>
 
           <HeaderLink
+            $measureheaderlinkprops={measureHeaderLink(
+              pathname,
+              viewWidth,
+              viewHeight,
+              aboutRoute,
+              portfolioDefaultRoute,
+              serviceRoute,
+              contactRoute
+            )}
             to={serviceRoute}
             $matchpath={!!pathname.match(RegExp(`${serviceRoute}+`))}
             onClick={onMorphingTransition}
@@ -113,6 +187,15 @@ export const Header = ({
           </HeaderLink>
 
           <HeaderLink
+            $measureheaderlinkprops={measureHeaderLink(
+              pathname,
+              viewWidth,
+              viewHeight,
+              aboutRoute,
+              portfolioDefaultRoute,
+              serviceRoute,
+              contactRoute
+            )}
             to={contactRoute}
             $matchpath={!!pathname.match(RegExp(`${contactRoute}+`))}
             onClick={onMorphingTransition}
@@ -127,7 +210,7 @@ export const Header = ({
             viewWidth,
             viewHeight,
             aboutRoute,
-            portfolioRoute,
+            portfolioDefaultRoute,
             serviceRoute,
             contactRoute
           )}
@@ -139,7 +222,7 @@ export const Header = ({
               viewWidth,
               viewHeight,
               aboutRoute,
-              portfolioRoute,
+              portfolioDefaultRoute,
               serviceRoute,
               contactRoute
             )}
@@ -155,7 +238,7 @@ export const Header = ({
                   viewWidth,
                   viewHeight,
                   aboutRoute,
-                  portfolioRoute,
+                  portfolioDefaultRoute,
                   serviceRoute,
                   contactRoute
                 )}
@@ -165,7 +248,7 @@ export const Header = ({
                   viewWidth,
                   viewHeight,
                   aboutRoute,
-                  portfolioRoute,
+                  portfolioDefaultRoute,
                   serviceRoute,
                   contactRoute
                 )}
@@ -178,7 +261,7 @@ export const Header = ({
               viewWidth,
               viewHeight,
               aboutRoute,
-              portfolioRoute,
+              portfolioDefaultRoute,
               serviceRoute,
               contactRoute
             )}
@@ -191,11 +274,17 @@ export const Header = ({
 
 const mapStateToProps = createStructuredSelector({
   aboutRoute: selectAboutRoute,
-  portfolioRoute: selectPortfolioRoute,
+  portfolioDefaultRoute: selectDefaultPortfolioRoute,
   serviceRoute: selectServiceRoute,
   contactRoute: selectContactRoute,
   homepageRoute: selectHomepageRoute,
   isSideBarActive: selectIsSideBarActive,
+  isHeaderMorphingActive: selectIsHeaderMorphingActive,
 });
 
-export default withRouter(connect(mapStateToProps)(Header));
+const mapDispatchToProps = (dispatch) => ({
+  toggleHeaderMorphingActive: (isActivated) =>
+    dispatch(toggleHeaderMorphingActive(isActivated)),
+});
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header));

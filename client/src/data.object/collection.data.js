@@ -1,8 +1,9 @@
 module.exports.collection = {
+  routeName: '/portfolio',
   all: {
     id: '37b8eb56-9501-4d0b-adf1-5b5093ef4398',
-    title: 'all',
-    routeName: '/portfolio',
+    title: 'All',
+    routeName: '/portfolio/all',
     items: [
       {
         id: '8f29bb37-f88c-4504-87e9-f7adceffb40b',

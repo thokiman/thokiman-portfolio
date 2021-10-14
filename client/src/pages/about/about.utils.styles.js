@@ -214,7 +214,7 @@ export const measureAboutIsNotActivated = (viewWidth, viewHeight) => {
   } else if (hasScreenSize2(viewWidth)) {
     console.log(2);
     aboutIsNotActivatedProps = {
-      top: 23,
+      top: 22,
       left: 6,
       fontSize: 5,
     };

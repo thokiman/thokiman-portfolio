@@ -98,6 +98,8 @@ export const HomepageContainer = styled.div`
 export const HomepageAboutContentContainer = styled.div`
   color: ${whiteSmokeColor};
   height: 120vh;
+  transition: all 0.5s ease-in-out;
+
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -44,9 +44,9 @@ export const ContactIsNotActivated = styled.div`
   top: ${getTopContactIsNotActivatedProps}vh;
   left: ${getLeftContactIsNotActivatedProps}vw;
   font-size: ${getFontSizeContactIsNotActivatedProps}vw;
-  letter-spacing: 0.17em;
-  width: 50vw;
   line-height: 1.5em;
+  letter-spacing: 0.5em;
+  width: 50vw;
   animation: ${contactSideBarHide} 2s cubic-bezier(0.175, 0.885, 0.32, 1.275)
     both;
   @media only screen and (max-width: 300px) {

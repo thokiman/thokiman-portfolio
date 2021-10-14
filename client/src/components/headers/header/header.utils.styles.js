@@ -10,7 +10,7 @@ import {
   hasScreenSize3_4,
   hasScreenSize4,
   hasScreenSize5,
-  hasScreenSizeWindow,
+  hasScreenSizeWindow
 } from '../../../utils/common.component.utils';
 
 export const selectTitleHeaderIntro = (
@@ -18,7 +18,7 @@ export const selectTitleHeaderIntro = (
   viewWidth,
   viewHeight,
   aboutRoute,
-  portfolioRoute,
+  portfolioDefaultRoute,
   serviceRoute,
   contactRoute
 ) => {
@@ -27,7 +27,7 @@ export const selectTitleHeaderIntro = (
     selectTitleHeaderIntro = 'Home';
   } else if (!!pathname.match(RegExp(`${aboutRoute}+`))) {
     selectTitleHeaderIntro = 'About';
-  } else if (!!pathname.match(RegExp(`${portfolioRoute}+`))) {
+  } else if (!!pathname.match(RegExp(`${portfolioDefaultRoute}+`))) {
     selectTitleHeaderIntro = 'Portfolio';
   } else if (!!pathname.match(RegExp(`${serviceRoute}+`))) {
     selectTitleHeaderIntro = 'Service';
@@ -41,7 +41,7 @@ export const measureTitleHeaderIntro = (
   viewWidth,
   viewHeight,
   aboutRoute,
-  portfolioRoute,
+  portfolioDefaultRoute,
   serviceRoute,
   contactRoute
 ) => {
@@ -49,14 +49,14 @@ export const measureTitleHeaderIntro = (
   if (!!pathname.match(RegExp(/^\/$/))) {
     titleHeaderIntroProps = {
       top: 22,
-      left: 20.5,
+      left: 16,
     };
   } else if (!!pathname.match(RegExp(`${aboutRoute}+`))) {
     titleHeaderIntroProps = {
       top: 40,
-      left: 20.5,
+      left: 13,
     };
-  } else if (!!pathname.match(RegExp(`${portfolioRoute}+`))) {
+  } else if (!!pathname.match(RegExp(`${portfolioDefaultRoute}+`))) {
     titleHeaderIntroProps = {
       top: 47,
       left: 13,
@@ -64,7 +64,7 @@ export const measureTitleHeaderIntro = (
   } else if (!!pathname.match(RegExp(`${serviceRoute}+`))) {
     titleHeaderIntroProps = {
       top: 46,
-      left: 16.2,
+      left: 13,
     };
   } else if (!!pathname.match(RegExp(`${contactRoute}+`))) {
     titleHeaderIntroProps = {
@@ -75,22 +75,58 @@ export const measureTitleHeaderIntro = (
   return titleHeaderIntroProps;
 };
 
+export const measureHeaderLink = (
+  pathname,
+  viewWidth,
+  viewHeight,
+  aboutRoute,
+  portfolioDefaultRoute,
+  serviceRoute,
+  contactRoute
+) => {
+  let headerLinkProps;
+  if (!!pathname.match(RegExp(/^\/$/))) {
+    headerLinkProps = {
+      fontSize: '150%',
+    };
+  } else if (!!pathname.match(RegExp(`${aboutRoute}+`))) {
+    headerLinkProps = {
+      fontSize: '110%',
+    };
+  } else if (!!pathname.match(RegExp(`${portfolioDefaultRoute}+`))) {
+    headerLinkProps = {
+      fontSize: '110%',
+    };
+  } else if (!!pathname.match(RegExp(`${serviceRoute}+`))) {
+    headerLinkProps = {
+      fontSize: '110%',
+    };
+  } else if (!!pathname.match(RegExp(`${contactRoute}+`))) {
+    headerLinkProps = {
+      fontSize: '110%',
+    };
+  }
+  return headerLinkProps;
+};
+
 export const measureHeaderMorphing = (
   pathname,
   viewWidth,
   viewHeight,
   aboutRoute,
-  portfolioRoute,
+  portfolioDefaultRoute,
   serviceRoute,
   contactRoute
 ) => {
   let headerMorphingProps;
   if (!!pathname.match(RegExp(/^\/$/))) {
     if (hasScreenSizeWindow(viewWidth, viewHeight)) {
+      
       headerMorphingProps = {
         top: -220,
       };
     } else if (hasScreenSize1_1(viewWidth, viewHeight)) {
+      
       headerMorphingProps = {
         top: -225,
       };
@@ -193,7 +229,7 @@ export const measureHeaderMorphing = (
         top: -237,
       };
     }
-  } else if (!!pathname.match(RegExp(`${portfolioRoute}+`))) {
+  } else if (!!pathname.match(RegExp(`${portfolioDefaultRoute}+`))) {
     if (hasScreenSizeWindow(viewWidth, viewHeight)) {
       headerMorphingProps = {
         top: -245,
@@ -364,7 +400,7 @@ export const measureWavyIntro = (
   viewWidth,
   viewHeight,
   aboutRoute,
-  portfolioRoute,
+  portfolioDefaultRoute,
   serviceRoute,
   contactRoute
 ) => {
@@ -503,7 +539,7 @@ export const measureWavyIntro = (
         backgroundColor: '#000000',
       };
     }
-  } else if (!!pathname.match(RegExp(`${portfolioRoute}+`))) {
+  } else if (!!pathname.match(RegExp(`${portfolioDefaultRoute}+`))) {
     if (hasScreenSizeWindow(viewWidth, viewHeight)) {
       wavyIntroProps = {
         height: 240,
@@ -714,7 +750,7 @@ export const measureBottomWavy = (
   viewWidth,
   viewHeight,
   aboutRoute,
-  portfolioRoute,
+  portfolioDefaultRoute,
   serviceRoute,
   contactRoute
 ) => {
@@ -879,7 +915,7 @@ export const measureBottomWavy = (
         fillColor: '#000000',
       };
     }
-  } else if (!!pathname.match(RegExp(`${portfolioRoute}+`))) {
+  } else if (!!pathname.match(RegExp(`${portfolioDefaultRoute}+`))) {
     if (hasScreenSizeWindow(viewWidth)) {
       bottomWavy = {
         height: 28,

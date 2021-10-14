@@ -18,11 +18,20 @@ export const selectWebsiteHeaderDropdown = createSelector(
   (collection) => collection.isWebsiteLinkDropdownActive
 );
 
+export const selectDefaultPortfolioRoute = createSelector(
+  [selectAllCollection],
+  (collection) => collection.routeName
+);
+
+export const selectAllTitle = createSelector(
+  [selectAllCollection],
+  (collection) => collection.all.title
+);
 export const selectAllItems = createSelector(
   [selectAllCollection],
   (collection) => collection.all.items
 );
-export const selectPortfolioRoute = createSelector(
+export const selectAllPortfolioRoute = createSelector(
   [selectAllCollection],
   (collection) => collection.all.routeName
 );

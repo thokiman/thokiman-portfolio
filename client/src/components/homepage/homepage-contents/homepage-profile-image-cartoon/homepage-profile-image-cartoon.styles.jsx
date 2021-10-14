@@ -72,7 +72,7 @@ export const HomepageCartoonContainer = styled.div`
     height: 100vh;
     margin-top: 40px;
   }
-
+  z-index: 1;
   position: absolute;
   top: 0px;
   width: max-content;
@@ -164,10 +164,10 @@ export const HomepageCloudComputingTwo = styled(CloudComputingTwo)`
 export const HomepageEnergyOne = styled(EnergyOne)`
   ${HomepageIconStyles}
 
-  width: 7vw;
-  height: 9vh;
+  width: 5vw;
+  height: 7vh;
   top: 47vh;
-  left: -14vw;
+  left: -13vw;
 
   transform: rotate(-85deg);
   grid-area: energy-one;

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 import { bindActionCreators } from 'redux';
+import { selectIsHeaderMorphingActive } from 'redux/header/header.selectors';
 import { createStructuredSelector } from 'reselect';
 import {
   loadCollectionList,
@@ -16,18 +18,21 @@ import PortfolioContentItem from '../portfolio-content-item/portfolio-content-it
 import { PortfolioLoadingState } from './portfolio-content.styles';
 
 export const PortfolioContent = ({
+  location: { pathname },
   items,
   collectionList,
   isLoading,
   fetchCollectionList,
   loadMoreCollectionList,
   loadCollectionListFinished,
+  isHeaderMorphingActive,
 }) => {
   const initialPageNumber = 1;
   const nextPageNumber = 2;
   const pageSize = 10;
 
   const [countPage, setCountPage] = useState(nextPageNumber);
+
   useEffect(() => {
     fetchCollectionList(items, initialPageNumber, pageSize);
   }, []);
@@ -40,7 +45,7 @@ export const PortfolioContent = ({
   if (window.screen.width < 800) return <PortfolioItem items={items} />;
   return (
     <>
-      {isLoading && collectionList.length === 0 ? (
+      {isLoading || collectionList.length === 0 ? (
         <PortfolioLoadingState
           type='Puff'
           color='#e3e1e4'
@@ -62,6 +67,7 @@ export const PortfolioContent = ({
 const mapStateToProps = createStructuredSelector({
   isLoading: selectIsLoadingCollectionList,
   collectionList: selectCollectionList,
+  isHeaderMorphingActive: selectIsHeaderMorphingActive,
 });
 
 const mapDispatchToProps = (dispatch) =>
@@ -74,4 +80,6 @@ const mapDispatchToProps = (dispatch) =>
     dispatch
   );
 
-export default connect(mapStateToProps, mapDispatchToProps)(PortfolioContent);
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(PortfolioContent)
+);

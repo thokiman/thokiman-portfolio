@@ -33,6 +33,7 @@ export const HomepageProfileImageContainer = styled.div`
 `;
 
 export const HomepageBackgroundProfileImage = styled.div`
+  z-index: 0;
   width: 50vw;
   height: 100%;
   padding: 10px;

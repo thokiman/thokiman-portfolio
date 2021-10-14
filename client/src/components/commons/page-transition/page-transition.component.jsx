@@ -28,7 +28,7 @@ export const play = (pathname, node, appears, routes) => {
   const {
     aboutRoute,
     serviceRoute,
-    portfolioRoute,
+    portfolioDefaultRoute,
     contactRoute,
     homepageRoute,
   } = routes;
@@ -39,14 +39,14 @@ export const play = (pathname, node, appears, routes) => {
     timeline = getInHomepageTimeline(node, delay);
   } else if (pathname.match(`^${aboutRoute}$`)) {
     timeline = getInAboutTimeline(node, delay);
-  } else if (pathname.match(`^${portfolioRoute}$`)) {
+  } else if (pathname.match(`^${portfolioDefaultRoute}$`)) {
     timeline = getInPortfolioTimeline(node, delay);
   } else if (pathname.match(`^${serviceRoute}$`)) {
     timeline = getInServiceTimeline(node, delay);
   } else if (pathname.match(`^${contactRoute}$`)) {
     timeline = getInContactTimeline(node, delay);
   } else {
-    timeline = getInDefaultTimeline(node, delay);
+    timeline = getInDefaultTimeline(node, delay, pathname, routes);
   }
 
   window.loadPromise.then(() => requestAnimationFrame(() => timeline.play()));
@@ -56,7 +56,7 @@ export const exit = (pathname, node, appears, routes) => {
   const {
     aboutRoute,
     serviceRoute,
-    portfolioRoute,
+    portfolioDefaultRoute,
     contactRoute,
     homepageRoute,
   } = routes;
@@ -68,14 +68,14 @@ export const exit = (pathname, node, appears, routes) => {
     timeline = getOutHomeTimeline(node, delay);
   } else if (pathname.match(`^${aboutRoute}$`)) {
     timeline = getOutAboutTimeline(node, delay);
-  } else if (pathname.match(`^${portfolioRoute}$`)) {
+  } else if (pathname.match(`^${portfolioDefaultRoute}$`)) {
     timeline = getOutPortfolioTimeline(node, delay);
   } else if (pathname.match(`^${serviceRoute}$`)) {
     timeline = getOutServiceTimeline(node, delay);
   } else if (pathname.match(`^${contactRoute}$`)) {
     timeline = getOutContactTimeline(node, delay);
   } else {
-    timeline = getOutDefaultTimeline(node, delay);
+    timeline = getOutDefaultTimeline(node, delay, pathname, routes);
   }
 
   timeline.play();

@@ -42,7 +42,8 @@ export const AboutIsNotActivated = styled.div`
   top: ${getTopAboutIsNotActivatedProps}vh;
   left: ${getLeftAboutIsNotActivatedProps}vw;
   font-size: ${getFontSizeAboutIsNotActivatedProps}vw;
-  letter-spacing: 0.17em;
+  line-height: 1.5em;
+  letter-spacing: 0.5em;
   animation: ${aboutSideBarHide} 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 `;
 

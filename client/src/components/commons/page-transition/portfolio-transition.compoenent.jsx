@@ -21,6 +21,7 @@ export const getInPortfolioTimeline = (node, delay) => {
       repeatDelay: 0.5,
       duration: 3,
     });
+
   return timeline;
 };
 export const getOutPortfolioTimeline = (node, delay) => {

@@ -25,6 +25,7 @@ export const HomepageThokimanContentContainer = styled.div`
   justify-content: center;
   height: 110vh;
   background-image: url(${getHomepageImage});
+
   @media only screen and (min-width: 1024px) and (min-width: 1366px) {
     clip-path: circle(50vh at center);
   }

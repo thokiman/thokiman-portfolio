@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
 import { selectAboutRoute } from '../../../redux/about/about.selectors';
-import { selectPortfolioRoute } from '../../../redux/collection/collection.selectors';
+import { selectDefaultPortfolioRoute } from '../../../redux/collection/collection.selectors';
 import { selectContactRoute } from '../../../redux/contact/contact.selectors';
 import { selectIsSideBarActive } from '../../../redux/header/header.selectors';
 import { selectServiceRoute } from '../../../redux/service/service.selectors';
@@ -17,7 +17,7 @@ export const SideBarHeader = ({
   isSideBarActive,
   location: { pathname },
   aboutRoute,
-  portfolioRoute,
+  portfolioDefaultRoute,
   serviceRoute,
   contactRoute,
 }) => {
@@ -40,8 +40,8 @@ export const SideBarHeader = ({
         </SideBarHeaderLink>
 
         <SideBarHeaderLink
-          to={portfolioRoute}
-          $matchpath={!!pathname.match(RegExp(`${portfolioRoute}+`))}
+          to={portfolioDefaultRoute}
+          $matchpath={!!pathname.match(RegExp(`${portfolioDefaultRoute}+`))}
         >
           {portfolioText}
         </SideBarHeaderLink>
@@ -65,7 +65,7 @@ export const SideBarHeader = ({
 const mapStateToProps = createStructuredSelector({
   isSideBarActive: selectIsSideBarActive,
   aboutRoute: selectAboutRoute,
-  portfolioRoute: selectPortfolioRoute,
+  portfolioDefaultRoute: selectDefaultPortfolioRoute,
   serviceRoute: selectServiceRoute,
   contactRoute: selectContactRoute,
 });
