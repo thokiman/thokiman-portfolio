@@ -1,9 +1,8 @@
-import React from "react";
-import FormInputSelectElement from "../form-select-element/form-select-element.component";
-import FormInputSelectLabel from "../form-select-label/form-select-label.component";
-import FormInputSelectOptions from "../form-select-options-element/form-select-options-element.component";
-
-import { FormGroupSelectContainer } from "./form-select.styles";
+import React from 'react';
+import FormInputSelectElement from '../form-select-element/form-select-element.component';
+import FormInputSelectLabel from '../form-select-label/form-select-label.component';
+import FormInputSelectOptions from '../form-select-options-element/form-select-options-element.component';
+import { FormGroupSelectContainer } from './form-select.styles';
 
 export const FormInputSelect = ({
   handleType,
@@ -12,14 +11,14 @@ export const FormInputSelect = ({
   value,
 }) => {
   return (
-    <FormGroupSelectContainer>
+    <FormGroupSelectContainer className='contact-form-element'>
       <FormInputSelectLabel value={value} />
       <FormInputSelectElement
         handleType={handleType}
         isTypeClick={isTypeClick}
         value={value}
       />
-      {isTypeClick ? <FormInputSelectOptions handleClick={handleClick} /> : ""}
+      {isTypeClick ? <FormInputSelectOptions handleClick={handleClick} /> : ''}
     </FormGroupSelectContainer>
   );
 };

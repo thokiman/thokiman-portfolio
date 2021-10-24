@@ -1,5 +1,4 @@
-import React from "react";
-
+import React from 'react';
 import {
   ServiceDescription,
   ServiceDescriptionContainer,
@@ -7,18 +6,24 @@ import {
   ServiceDescriptionTitle,
   ServiceGeneralContentContainer,
   ServiceTitle,
-} from "./service-general-content.styles";
+} from './service-general-content.styles';
 
 export const ServiceGeneralContent = ({ title, description }) => {
   return (
     <ServiceGeneralContentContainer>
-      <ServiceTitle>{title}</ServiceTitle>
+      <ServiceTitle className='service-general-content-title'>
+        {title}
+      </ServiceTitle>
       <ServiceDescription>
         {description.map(({ id, title, description }) => {
           return (
             <ServiceDescriptionContainer key={id}>
-              <ServiceDescriptionTitle>{title}</ServiceDescriptionTitle>
-              <ServiceDescriptionItem>{description}</ServiceDescriptionItem>
+              <ServiceDescriptionTitle className='service-general-content-description'>
+                {title}
+              </ServiceDescriptionTitle>
+              <ServiceDescriptionItem className='service-general-content-description'>
+                {description}
+              </ServiceDescriptionItem>
             </ServiceDescriptionContainer>
           );
         })}

@@ -11,6 +11,7 @@ export const ServiceUrlIconContent = ({ items }) => {
       {items.map(({ id, linkUrl, iconPath: { field, iconPath } }) => {
         return (
           <ServiceUrlIconContainer
+            className='service-url-icon'
             key={id}
             to={{ pathname: `${linkUrl}` }}
             target='_blank'

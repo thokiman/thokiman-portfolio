@@ -10,7 +10,7 @@ import {
 
 export const FormInput = ({ handleChange, label, ...props }) => {
   return (
-    <FormInputGroup>
+    <FormInputGroup className='contact-form-element'>
       {
         <FormInputCheckerContainer>
           {props.value.length ? (

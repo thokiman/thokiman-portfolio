@@ -49,63 +49,54 @@ export const measureContactIsNotActivated = (viewWidth, viewHeight) => {
   let contactIsNotActivatedProps;
 
   if (hasScreenSize1(viewWidth)) {
-    console.log(1);
     contactIsNotActivatedProps = {
       top: 37,
       left: 6,
       fontSize: 7,
     };
   } else if (hasScreenSize2(viewWidth)) {
-    console.log(2);
     contactIsNotActivatedProps = {
       top: 49,
       left: 6,
       fontSize: 5,
     };
   } else if (hasScreenSize3_1(viewWidth, viewHeight)) {
-    console.log(3);
     contactIsNotActivatedProps = {
       top: 45,
       left: 6,
       fontSize: 8,
     };
   } else if (hasScreenSize3_2(viewWidth, viewHeight)) {
-    console.log(4);
     contactIsNotActivatedProps = {
       top: 45,
       left: 6,
       fontSize: 9,
     };
   } else if (hasScreenSize3_3(viewWidth, viewHeight)) {
-    console.log(5);
     contactIsNotActivatedProps = {
       top: 49,
       left: 6,
       fontSize: 7,
     };
   } else if (hasScreenSize3_4(viewWidth, viewHeight)) {
-    console.log(6);
     contactIsNotActivatedProps = {
       top: 52,
       left: 6,
       fontSize: 6,
     };
   } else if (hasScreenSize4(viewWidth, viewHeight)) {
-    console.log(7);
     contactIsNotActivatedProps = {
       top: 60,
       left: 6,
       fontSize: 5,
     };
   } else if (hasScreenSize5(viewWidth)) {
-    console.log(8);
     contactIsNotActivatedProps = {
       top: 38,
       left: 6,
       fontSize: 10,
     };
   } else {
-    console.log(9);
     contactIsNotActivatedProps = {
       top: 38,
       left: 6,

@@ -1,3 +1,4 @@
+import Footer from 'components/footers/footer/footer.component';
 import React from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch, withRouter } from 'react-router-dom';
@@ -9,7 +10,6 @@ import AboutSummary from '../../components/abouts/about-contents/about-content-s
 import AboutHomeContent from '../../components/abouts/about-contents/about-content/about-content.component';
 import AboutDropdown from '../../components/abouts/about-dropdowns/about-dropdown/about-dropdown.component';
 import AboutTimelineCareer from '../../components/abouts/about-timeline-careers/about-timeline-career/about-timeline-career.component';
-import Footer from '../../components/footers/footer/footer.component';
 import useWindowDimensions from '../../components/hooks/window-dimensions/useWindowDimensions.component';
 import {
   selectAboutRoute,
@@ -35,13 +35,13 @@ export const About = ({
   match,
   aboutRoute,
   skillRoute,
-  aboutVisualArtSkillRoute,
-  aboutEngineerSkillRoute,
-  aboutTechnologySkillRoute,
+  skillVisualArtRoute,
+  skillEngineerRoute,
+  skillTechnologyRoute,
   educationRoute,
   projectRoute,
   summaryRoute,
-  timelineCareerRoute,
+  careerTimelineRoute,
   isSideBarActive,
   rockWaveImage,
 }) => {
@@ -49,23 +49,24 @@ export const About = ({
 
   return (
     <>
-      <AboutElement>
+      <AboutElement className='about-element'>
         <AboutPage
+          className='about-page'
           $aboutheight={measureAbouteHeight(
             pathname,
             viewWidth,
             viewHeight,
             aboutRoute,
             skillRoute,
-            aboutVisualArtSkillRoute,
-            aboutEngineerSkillRoute,
-            aboutTechnologySkillRoute,
+            skillVisualArtRoute,
+            skillEngineerRoute,
+            skillTechnologyRoute,
             educationRoute,
             projectRoute,
             summaryRoute,
-            timelineCareerRoute
+            careerTimelineRoute
           )}
-          $matchpath={!!pathname.match(`${aboutRoute}${timelineCareerRoute}$`)}
+          $matchpath={!!pathname.match(`${aboutRoute}${careerTimelineRoute}$`)}
           $issidebaractive={isSideBarActive}
           $rockWaveImage={rockWaveImage}
         >
@@ -90,12 +91,11 @@ export const About = ({
             <Route path={projectRoute} component={AboutProject} />
             <Route path={summaryRoute} component={AboutSummary} />
             <Route
-              path={`${aboutRoute}${timelineCareerRoute}`}
+              path={`${aboutRoute}${careerTimelineRoute}`}
               component={AboutTimelineCareer}
             />
           </Switch>
         </AboutPage>
-
         <Footer />
       </AboutElement>
     </>
@@ -105,13 +105,13 @@ export const About = ({
 const mapStateToProps = createStructuredSelector({
   aboutRoute: selectAboutRoute,
   skillRoute: selectSkillRoute,
-  aboutVisualArtSkillRoute: selectSkillVisualArtRoute,
-  aboutEngineerSkillRoute: selectSkillEngineerRoute,
-  aboutTechnologySkillRoute: selectSkillTechnologyRoute,
+  skillVisualArtRoute: selectSkillVisualArtRoute,
+  skillEngineerRoute: selectSkillEngineerRoute,
+  skillTechnologyRoute: selectSkillTechnologyRoute,
   educationRoute: selectEducationRoute,
   projectRoute: selectProjectRoute,
   summaryRoute: selectSummaryRoute,
-  timelineCareerRoute: selectTimelineCareerRoute,
+  careerTimelineRoute: selectTimelineCareerRoute,
   isSideBarActive: selectIsSideBarActive,
   rockWaveImage: selectRockWaveImage,
 });

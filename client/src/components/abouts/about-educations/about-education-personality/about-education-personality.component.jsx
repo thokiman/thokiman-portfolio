@@ -1,46 +1,48 @@
-import React, { useEffect, useState } from "react";
-import { getRandomColor } from "../../../../utils/about.component.utils";
+import React, { useEffect, useState } from 'react';
+import { getRandomColor } from '../../../../utils/about.component.utils';
 import {
-  AboutPersonalityBox, AboutPersonalityContainer, AboutPersonalityTextBox, AboutPersonalityTitle
-} from "./about-education-personality.styles";
-
+  AboutPersonalityBox,
+  AboutPersonalityContainer,
+  AboutPersonalityTextBox,
+  AboutPersonalityTitle,
+} from './about-education-personality.styles';
 
 export const AboutEducationPersonality = ({ personality }) => {
   const [backgroundColor, setBackgroundColor] = useState({
-    1: "",
-    2: "",
-    3: "",
-    4: "",
-    5: "",
-    6: "",
-    7: "",
-    8: "",
-    9: "",
-    10: "",
-    11: "",
-    12: "",
-    13: "",
-    14: "",
-    15: "",
-    16: "",
+    1: '',
+    2: '',
+    3: '',
+    4: '',
+    5: '',
+    6: '',
+    7: '',
+    8: '',
+    9: '',
+    10: '',
+    11: '',
+    12: '',
+    13: '',
+    14: '',
+    15: '',
+    16: '',
   });
   const [color, setColor] = useState({
-    1: "",
-    2: "",
-    3: "",
-    4: "",
-    5: "",
-    6: "",
-    7: "",
-    8: "",
-    9: "",
-    10: "",
-    11: "",
-    12: "",
-    13: "",
-    14: "",
-    15: "",
-    16: "",
+    1: '',
+    2: '',
+    3: '',
+    4: '',
+    5: '',
+    6: '',
+    7: '',
+    8: '',
+    9: '',
+    10: '',
+    11: '',
+    12: '',
+    13: '',
+    14: '',
+    15: '',
+    16: '',
   });
 
   useEffect(() => {
@@ -70,162 +72,211 @@ export const AboutEducationPersonality = ({ personality }) => {
       a_range_background_color
     );
     setBackgroundColor({
-      1: `hsla(${ backgroundColor.h + Math.random() * backgroundColor.h }, ${ backgroundColor.s
-        }%, ${ backgroundColor.l + Math.random() * backgroundColor.l }%, ${ backgroundColor.a
-        })`,
+      1: `hsla(${backgroundColor.h + Math.random() * backgroundColor.h}, ${
+        backgroundColor.s
+      }%, ${backgroundColor.l + Math.random() * backgroundColor.l}%, ${
+        backgroundColor.a
+      })`,
     });
     setBackgroundColor({
-      2: `hsla(${ backgroundColor.h + Math.random() * backgroundColor.h }, ${ backgroundColor.s
-        }%, ${ backgroundColor.l + Math.random() * backgroundColor.l }%, ${ backgroundColor.a
-        })`,
+      2: `hsla(${backgroundColor.h + Math.random() * backgroundColor.h}, ${
+        backgroundColor.s
+      }%, ${backgroundColor.l + Math.random() * backgroundColor.l}%, ${
+        backgroundColor.a
+      })`,
     });
     setBackgroundColor({
-      3: `hsla(${ backgroundColor.h + Math.random() * backgroundColor.h }, ${ backgroundColor.s
-        }%, ${ backgroundColor.l + Math.random() * backgroundColor.l }%, ${ backgroundColor.a
-        })`,
+      3: `hsla(${backgroundColor.h + Math.random() * backgroundColor.h}, ${
+        backgroundColor.s
+      }%, ${backgroundColor.l + Math.random() * backgroundColor.l}%, ${
+        backgroundColor.a
+      })`,
     });
     setBackgroundColor({
-      4: `hsla(${ backgroundColor.h + Math.random() * backgroundColor.h }, ${ backgroundColor.s
-        }%, ${ backgroundColor.l + Math.random() * backgroundColor.l }%, ${ backgroundColor.a
-        })`,
+      4: `hsla(${backgroundColor.h + Math.random() * backgroundColor.h}, ${
+        backgroundColor.s
+      }%, ${backgroundColor.l + Math.random() * backgroundColor.l}%, ${
+        backgroundColor.a
+      })`,
     });
     setBackgroundColor({
-      5: `hsla(${ backgroundColor.h + Math.random() * backgroundColor.h }, ${ backgroundColor.s
-        }%, ${ backgroundColor.l + Math.random() * backgroundColor.l }%, ${ backgroundColor.a
-        })`,
+      5: `hsla(${backgroundColor.h + Math.random() * backgroundColor.h}, ${
+        backgroundColor.s
+      }%, ${backgroundColor.l + Math.random() * backgroundColor.l}%, ${
+        backgroundColor.a
+      })`,
     });
     setBackgroundColor({
-      6: `hsla(${ backgroundColor.h + Math.random() * backgroundColor.h }, ${ backgroundColor.s
-        }%, ${ backgroundColor.l + Math.random() * backgroundColor.l }%, ${ backgroundColor.a
-        })`,
+      6: `hsla(${backgroundColor.h + Math.random() * backgroundColor.h}, ${
+        backgroundColor.s
+      }%, ${backgroundColor.l + Math.random() * backgroundColor.l}%, ${
+        backgroundColor.a
+      })`,
     });
     setBackgroundColor({
-      7: `hsla(${ backgroundColor.h + Math.random() * backgroundColor.h }, ${ backgroundColor.s
-        }%, ${ backgroundColor.l + Math.random() * backgroundColor.l }%, ${ backgroundColor.a
-        })`,
+      7: `hsla(${backgroundColor.h + Math.random() * backgroundColor.h}, ${
+        backgroundColor.s
+      }%, ${backgroundColor.l + Math.random() * backgroundColor.l}%, ${
+        backgroundColor.a
+      })`,
     });
     setBackgroundColor({
-      8: `hsla(${ backgroundColor.h + Math.random() * backgroundColor.h }, ${ backgroundColor.s
-        }%, ${ backgroundColor.l + Math.random() * backgroundColor.l }%, ${ backgroundColor.a
-        })`,
+      8: `hsla(${backgroundColor.h + Math.random() * backgroundColor.h}, ${
+        backgroundColor.s
+      }%, ${backgroundColor.l + Math.random() * backgroundColor.l}%, ${
+        backgroundColor.a
+      })`,
     });
     setBackgroundColor({
-      9: `hsla(${ backgroundColor.h + Math.random() * backgroundColor.h }, ${ backgroundColor.s
-        }%, ${ backgroundColor.l + Math.random() * backgroundColor.l }%, ${ backgroundColor.a
-        })`,
+      9: `hsla(${backgroundColor.h + Math.random() * backgroundColor.h}, ${
+        backgroundColor.s
+      }%, ${backgroundColor.l + Math.random() * backgroundColor.l}%, ${
+        backgroundColor.a
+      })`,
     });
     setBackgroundColor({
-      10: `hsla(${ backgroundColor.h + Math.random() * backgroundColor.h }, ${ backgroundColor.s
-        }%, ${ backgroundColor.l + Math.random() * backgroundColor.l }%, ${ backgroundColor.a
-        })`,
+      10: `hsla(${backgroundColor.h + Math.random() * backgroundColor.h}, ${
+        backgroundColor.s
+      }%, ${backgroundColor.l + Math.random() * backgroundColor.l}%, ${
+        backgroundColor.a
+      })`,
     });
     setBackgroundColor({
-      11: `hsla(${ backgroundColor.h + Math.random() * backgroundColor.h }, ${ backgroundColor.s
-        }%, ${ backgroundColor.l + Math.random() * backgroundColor.l }%, ${ backgroundColor.a
-        })`,
+      11: `hsla(${backgroundColor.h + Math.random() * backgroundColor.h}, ${
+        backgroundColor.s
+      }%, ${backgroundColor.l + Math.random() * backgroundColor.l}%, ${
+        backgroundColor.a
+      })`,
     });
     setBackgroundColor({
-      12: `hsla(${ backgroundColor.h + Math.random() * backgroundColor.h }, ${ backgroundColor.s
-        }%, ${ backgroundColor.l + Math.random() * backgroundColor.l }%, ${ backgroundColor.a
-        })`,
+      12: `hsla(${backgroundColor.h + Math.random() * backgroundColor.h}, ${
+        backgroundColor.s
+      }%, ${backgroundColor.l + Math.random() * backgroundColor.l}%, ${
+        backgroundColor.a
+      })`,
     });
     setBackgroundColor({
-      13: `hsla(${ backgroundColor.h + Math.random() * backgroundColor.h }, ${ backgroundColor.s
-        }%, ${ backgroundColor.l + Math.random() * backgroundColor.l }%, ${ backgroundColor.a
-        })`,
+      13: `hsla(${backgroundColor.h + Math.random() * backgroundColor.h}, ${
+        backgroundColor.s
+      }%, ${backgroundColor.l + Math.random() * backgroundColor.l}%, ${
+        backgroundColor.a
+      })`,
     });
     setBackgroundColor({
-      14: `hsla(${ backgroundColor.h + Math.random() * backgroundColor.h }, ${ backgroundColor.s
-        }%, ${ backgroundColor.l + Math.random() * backgroundColor.l }%, ${ backgroundColor.a
-        })`,
+      14: `hsla(${backgroundColor.h + Math.random() * backgroundColor.h}, ${
+        backgroundColor.s
+      }%, ${backgroundColor.l + Math.random() * backgroundColor.l}%, ${
+        backgroundColor.a
+      })`,
     });
     setBackgroundColor({
-      15: `hsla(${ backgroundColor.h + Math.random() * backgroundColor.h }, ${ backgroundColor.s
-        }%, ${ backgroundColor.l + Math.random() * backgroundColor.l }%, ${ backgroundColor.a
-        })`,
+      15: `hsla(${backgroundColor.h + Math.random() * backgroundColor.h}, ${
+        backgroundColor.s
+      }%, ${backgroundColor.l + Math.random() * backgroundColor.l}%, ${
+        backgroundColor.a
+      })`,
     });
     setBackgroundColor({
-      16: `hsla(${ backgroundColor.h + Math.random() * backgroundColor.h }, ${ backgroundColor.s
-        }%, ${ backgroundColor.l + Math.random() * backgroundColor.l }%, ${ backgroundColor.a
-        })`,
+      16: `hsla(${backgroundColor.h + Math.random() * backgroundColor.h}, ${
+        backgroundColor.s
+      }%, ${backgroundColor.l + Math.random() * backgroundColor.l}%, ${
+        backgroundColor.a
+      })`,
     });
 
     setColor({
-      1: `hsla(${ color.h + Math.random() * color.h }, ${ color.s }%, ${ color.l + Math.random() * color.l
-        }%, ${ color.a })`,
+      1: `hsla(${color.h + Math.random() * color.h}, ${color.s}%, ${
+        color.l + Math.random() * color.l
+      }%, ${color.a})`,
     });
     setColor({
-      2: `hsla(${ color.h + Math.random() * color.h }, ${ color.s }%, ${ color.l + Math.random() * color.l
-        }%, ${ color.a })`,
+      2: `hsla(${color.h + Math.random() * color.h}, ${color.s}%, ${
+        color.l + Math.random() * color.l
+      }%, ${color.a})`,
     });
     setColor({
-      3: `hsla(${ color.h + Math.random() * color.h }, ${ color.s }%, ${ color.l + Math.random() * color.l
-        }%, ${ color.a })`,
+      3: `hsla(${color.h + Math.random() * color.h}, ${color.s}%, ${
+        color.l + Math.random() * color.l
+      }%, ${color.a})`,
     });
     setColor({
-      4: `hsla(${ color.h + Math.random() * color.h }, ${ color.s }%, ${ color.l + Math.random() * color.l
-        }%, ${ color.a })`,
+      4: `hsla(${color.h + Math.random() * color.h}, ${color.s}%, ${
+        color.l + Math.random() * color.l
+      }%, ${color.a})`,
     });
     setColor({
-      5: `hsla(${ color.h + Math.random() * color.h }, ${ color.s }%, ${ color.l + Math.random() * color.l
-        }%, ${ color.a })`,
+      5: `hsla(${color.h + Math.random() * color.h}, ${color.s}%, ${
+        color.l + Math.random() * color.l
+      }%, ${color.a})`,
     });
     setColor({
-      6: `hsla(${ color.h + Math.random() * color.h }, ${ color.s }%, ${ color.l + Math.random() * color.l
-        }%, ${ color.a })`,
+      6: `hsla(${color.h + Math.random() * color.h}, ${color.s}%, ${
+        color.l + Math.random() * color.l
+      }%, ${color.a})`,
     });
     setColor({
-      7: `hsla(${ color.h + Math.random() * color.h }, ${ color.s }%, ${ color.l + Math.random() * color.l
-        }%, ${ color.a })`,
+      7: `hsla(${color.h + Math.random() * color.h}, ${color.s}%, ${
+        color.l + Math.random() * color.l
+      }%, ${color.a})`,
     });
     setColor({
-      8: `hsla(${ color.h + Math.random() * color.h }, ${ color.s }%, ${ color.l + Math.random() * color.l
-        }%, ${ color.a })`,
+      8: `hsla(${color.h + Math.random() * color.h}, ${color.s}%, ${
+        color.l + Math.random() * color.l
+      }%, ${color.a})`,
     });
     setColor({
-      9: `hsla(${ color.h + Math.random() * color.h }, ${ color.s }%, ${ color.l + Math.random() * color.l
-        }%, ${ color.a })`,
+      9: `hsla(${color.h + Math.random() * color.h}, ${color.s}%, ${
+        color.l + Math.random() * color.l
+      }%, ${color.a})`,
     });
     setColor({
-      10: `hsla(${ color.h + Math.random() * color.h }, ${ color.s }%, ${ color.l + Math.random() * color.l
-        }%, ${ color.a })`,
+      10: `hsla(${color.h + Math.random() * color.h}, ${color.s}%, ${
+        color.l + Math.random() * color.l
+      }%, ${color.a})`,
     });
     setColor({
-      11: `hsla(${ color.h + Math.random() * color.h }, ${ color.s }%, ${ color.l + Math.random() * color.l
-        }%, ${ color.a })`,
+      11: `hsla(${color.h + Math.random() * color.h}, ${color.s}%, ${
+        color.l + Math.random() * color.l
+      }%, ${color.a})`,
     });
     setColor({
-      12: `hsla(${ color.h + Math.random() * color.h }, ${ color.s }%, ${ color.l + Math.random() * color.l
-        }%, ${ color.a })`,
+      12: `hsla(${color.h + Math.random() * color.h}, ${color.s}%, ${
+        color.l + Math.random() * color.l
+      }%, ${color.a})`,
     });
     setColor({
-      13: `hsla(${ color.h + Math.random() * color.h }, ${ color.s }%, ${ color.l + Math.random() * color.l
-        }%, ${ color.a })`,
+      13: `hsla(${color.h + Math.random() * color.h}, ${color.s}%, ${
+        color.l + Math.random() * color.l
+      }%, ${color.a})`,
     });
     setColor({
-      14: `hsla(${ color.h + Math.random() * color.h }, ${ color.s }%, ${ color.l + Math.random() * color.l
-        }%, ${ color.a })`,
+      14: `hsla(${color.h + Math.random() * color.h}, ${color.s}%, ${
+        color.l + Math.random() * color.l
+      }%, ${color.a})`,
     });
     setColor({
-      15: `hsla(${ color.h + Math.random() * color.h }, ${ color.s }%, ${ color.l + Math.random() * color.l
-        }%, ${ color.a })`,
+      15: `hsla(${color.h + Math.random() * color.h}, ${color.s}%, ${
+        color.l + Math.random() * color.l
+      }%, ${color.a})`,
     });
     setColor({
-      16: `hsla(${ color.h + Math.random() * color.h }, ${ color.s }%, ${ color.l + Math.random() * color.l
-        }%, ${ color.a })`,
+      16: `hsla(${color.h + Math.random() * color.h}, ${color.s}%, ${
+        color.l + Math.random() * color.l
+      }%, ${color.a})`,
     });
   };
 
   return (
-    <AboutPersonalityContainer>
+    <AboutPersonalityContainer className='about-personality-content'>
       <AboutPersonalityTitle>Personality</AboutPersonalityTitle>
       {personality.map(({ id }, i) => {
         return (
           <AboutPersonalityBox
+            className='about-personality-box'
             key={id}
             style={{
-              color: `${ color[i + 1] }`,
-              backgroundColor: `${ backgroundColor[i + 1] }`,
+              color: `${color[i + 1]}`,
+              backgroundColor: `${backgroundColor[i + 1]}`,
             }}
           >
             <AboutPersonalityTextBox>

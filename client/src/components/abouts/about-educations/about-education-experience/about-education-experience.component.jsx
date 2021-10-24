@@ -1,5 +1,5 @@
-import React from "react";
-import EducationGrid from "../../about-commons/education-parts/education-grid/education-grid.component";
+import React from 'react';
+import EducationGrid from '../../about-commons/education-parts/education-grid/education-grid.component';
 import {
   AboutEducationExperienceAttributes,
   AboutEducationExperienceCompany,
@@ -8,13 +8,12 @@ import {
   AboutEducationExperienceField,
   AboutEducationExperienceGrade,
   AboutEducationExperienceStartEndDate,
-  AboutEducationExperienceTitle
-} from "./about-education-experience.styles";
-
+  AboutEducationExperienceTitle,
+} from './about-education-experience.styles';
 
 export const AboutEducationExperience = ({ lastExperience }) => {
   return (
-    <AboutEducationExperienceContent>
+    <AboutEducationExperienceContent className='about-education-experience-content'>
       <AboutEducationExperienceTitle>Experience</AboutEducationExperienceTitle>
       {lastExperience.map(
         ({

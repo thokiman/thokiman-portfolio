@@ -10,9 +10,16 @@ import {
 
 export const ServiceHomeContent = ({ isSideBarActive }) => {
   return (
-    <RightServiceContainer $issidebaractive={isSideBarActive}>
-      <ThokimanHeadColor />
-      <ThokimanHeadOutlineCream />
+    <RightServiceContainer
+      className='right-service-container'
+      $issidebaractive={isSideBarActive}
+    >
+      <div className='thokiman-head-service'>
+        <ThokimanHeadColor />
+      </div>
+      <div className='thokiman-head-service'>
+        <ThokimanHeadOutlineCream />
+      </div>
     </RightServiceContainer>
   );
 };

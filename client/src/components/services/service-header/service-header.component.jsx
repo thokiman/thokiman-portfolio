@@ -27,9 +27,13 @@ export const ServiceHeader = ({
   isSideBarActive,
 }) => {
   return (
-    <LeftServiceContainer $issidebaractive={isSideBarActive}>
+    <LeftServiceContainer
+      className='left-service-container'
+      $issidebaractive={isSideBarActive}
+    >
       <DirectoryService>
         <DirectoryServiceTextEng
+          className='directory-service-header'
           to={engineer.routeName}
           $matchpath={!!pathname.match(RegExp(`${engineer.routeName}$`))}
         >
@@ -38,6 +42,7 @@ export const ServiceHeader = ({
           engineer
         </DirectoryServiceTextEng>
         <DirectoryServiceTextFsd
+          className='directory-service-header'
           to={dev.routeName}
           $matchpath={!!pathname.match(RegExp(`${dev.routeName}$`))}
         >
@@ -48,6 +53,7 @@ export const ServiceHeader = ({
           developer
         </DirectoryServiceTextFsd>
         <DirectoryServiceTextGd
+          className='directory-service-header'
           to={art.routeName}
           $matchpath={!!pathname.match(RegExp(`${art.routeName}$`))}
         >
@@ -56,6 +62,7 @@ export const ServiceHeader = ({
           designer
         </DirectoryServiceTextGd>
         <DirectoryServiceTextPg
+          className='directory-service-header'
           to={photo.routeName}
           $matchpath={!!pathname.match(RegExp(`${photo.routeName}$`))}
         >

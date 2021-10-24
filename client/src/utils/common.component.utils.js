@@ -1,5 +1,5 @@
 export const hasScreenSizeWindow = (viewWidth, viewHeight) =>
-  viewWidth > 1280 && viewHeight >= 979;
+  viewWidth >= 1280 && viewHeight >= 979;
 
 export const hasScreenSize1_1 = (viewWidth, viewHeight) =>
   viewWidth === 1024 && viewHeight === 1366;

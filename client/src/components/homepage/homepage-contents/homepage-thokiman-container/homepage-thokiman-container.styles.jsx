@@ -12,6 +12,8 @@ const getHomepageImage = ({ $rockWaveImage }) => {
 
 const HomepageThokimanContainerIsNotActivated = css`
   display: none;
+  width: 100vw;
+  height: 10vh;
 `;
 
 const getSideBarActive = ({ $issidebaractive }) => {
@@ -27,7 +29,7 @@ export const HomepageThokimanContentContainer = styled.div`
   background-image: url(${getHomepageImage});
 
   @media only screen and (min-width: 1024px) and (min-width: 1366px) {
-    clip-path: circle(50vh at center);
+    clip-path: inset(0vh 15vw 7vh 13vw);
   }
   background-size: cover;
 `;

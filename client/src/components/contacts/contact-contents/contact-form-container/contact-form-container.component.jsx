@@ -90,10 +90,13 @@ export const ContactForm = ({
     <ContactFormContainer
       $istypeclick={isTypeClick}
       $issidebaractive={isSideBarActive}
+      className='contact-form-container'
     >
       <ContactFormGroup $istypeclick={isTypeClick}>
-        <ContactFormHead>General Inquiries</ContactFormHead>
-        <ContactFormSubhead>
+        <ContactFormHead className='contact-form-group'>
+          General Inquiries
+        </ContactFormHead>
+        <ContactFormSubhead className='contact-form-group'>
           Interested in working together ? Tell me about your company... Happy
           to help <FaPeace /> <FaRegHandPeace />
         </ContactFormSubhead>

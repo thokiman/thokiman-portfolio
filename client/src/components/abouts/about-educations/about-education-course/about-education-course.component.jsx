@@ -1,5 +1,5 @@
-import React from "react";
-import EducationGrid from "../../about-commons/education-parts/education-grid/education-grid.component";
+import React from 'react';
+import EducationGrid from '../../about-commons/education-parts/education-grid/education-grid.component';
 import {
   AboutCourseLink,
   AboutEducationCourseAttributes,
@@ -8,13 +8,12 @@ import {
   AboutEducationCourseLink,
   AboutEducationCourseName,
   AboutEducationCourseOrganization,
-  AboutEducationCourseTitle
-} from "./about-education-course.styles";
-
+  AboutEducationCourseTitle,
+} from './about-education-course.styles';
 
 export const AboutEducationCourse = ({ lastCourse }) => {
   return (
-    <AboutEducationCourseContent>
+    <AboutEducationCourseContent className='about-education-course-content'>
       <AboutEducationCourseTitle>Course</AboutEducationCourseTitle>
       {lastCourse.map(
         ({ id, name, organization, field, date, credentialUrl, imagePath }) => {
@@ -28,7 +27,7 @@ export const AboutEducationCourse = ({ lastCourse }) => {
                 <AboutEducationCourseDate>{date}</AboutEducationCourseDate>
                 <AboutEducationCourseLink>
                   <AboutCourseLink
-                    target="_blank"
+                    target='_blank'
                     to={{ pathname: credentialUrl }}
                   >
                     Professional Certificate - {field.charAt(0).toUpperCase()}

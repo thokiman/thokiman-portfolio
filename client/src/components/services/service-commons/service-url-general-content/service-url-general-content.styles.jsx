@@ -7,7 +7,7 @@ const textColorerviceDescriptionTitle = 'rgba(188, 207, 213, 0.9)';
 const serviceTitleAnimationColor0 = 'rgba(116, 198, 212, 0.8)';
 const lightBlueColor = '#74c6d4';
 
-export const ServiceGeneralContent = styled.div`
+export const ServiceUrlGeneralContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,7 +94,7 @@ export const ServiceDescriptionIconItem = styled.img`
   height: 27%;
 `;
 
-ServiceGeneralContent.displayName = 'ServiceGeneralContent';
+ServiceUrlGeneralContainer.displayName = 'ServiceGeneralContent';
 ServiceTitle.displayName = 'ServiceTitle';
 ServiceDescription.displayName = 'ServiceDescription';
 ServiceDescriptionContainer.displayName = 'ServiceDescriptionContainer';

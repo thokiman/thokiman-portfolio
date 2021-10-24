@@ -1,16 +1,15 @@
-import React from "react";
-
+import React from 'react';
 import {
   AboutDescriptionExperienceProject,
   AboutExperienceProjectAtttributes,
   AboutExperienceProjectContainer,
   AboutExperienceProjectTitle,
   AboutNameExperienceProject,
-} from "./about-project-experience.styles";
+} from './about-project-experience.styles';
 
 export const AboutExperienceProject = ({ experience }) => {
   return (
-    <AboutExperienceProjectContainer>
+    <AboutExperienceProjectContainer className='about-experience-project-content'>
       <AboutExperienceProjectTitle>
         Experience Project
       </AboutExperienceProjectTitle>

@@ -22,25 +22,44 @@ export const ContactLocation = ({
   const { viewWidth } = useWindowDimensions();
   const maxWidthSmartphone = 800;
   return (
-    <ContactLocationContainer $issidebaractive={isSideBarActive}>
+    <ContactLocationContainer
+      className='contact-location-container'
+      $issidebaractive={isSideBarActive}
+    >
       {viewWidth <= maxWidthSmartphone ? (
         <>
-          <ContactLocationInfo>
-            <ContactLocationTitle>Current Location</ContactLocationTitle>
-            <ContactLocationItem>{address}</ContactLocationItem>
-            <ContactLocationItem>{email}</ContactLocationItem>
-            <ContactLocationItem>{phone}</ContactLocationItem>
+          <ContactLocationInfo className='contact-location-info'>
+            <ContactLocationTitle className='contact-location-info-element'>
+              Current Location
+            </ContactLocationTitle>
+            <ContactLocationItem className='contact-location-info-element'>
+              {address}
+            </ContactLocationItem>
+            <ContactLocationItem className='contact-location-info-element'>
+              {email}
+            </ContactLocationItem>
+            <ContactLocationItem className='contact-location-info-element'>
+              {phone}
+            </ContactLocationItem>
           </ContactLocationInfo>
           <MapContent zoom={zoom} address={address} />
         </>
       ) : (
         <>
           <MapContent zoom={zoom} address={address} />
-          <ContactLocationInfo>
-            <ContactLocationTitle>Current Location</ContactLocationTitle>
-            <ContactLocationItem>{address}</ContactLocationItem>
-            <ContactLocationItem>{email}</ContactLocationItem>
-            <ContactLocationItem>{phone}</ContactLocationItem>
+          <ContactLocationInfo className='contact-location-info'>
+            <ContactLocationTitle className='contact-location-info-element'>
+              Current Location
+            </ContactLocationTitle>
+            <ContactLocationItem className='contact-location-info-element'>
+              {address}
+            </ContactLocationItem>
+            <ContactLocationItem className='contact-location-info-element'>
+              {email}
+            </ContactLocationItem>
+            <ContactLocationItem className='contact-location-info-element'>
+              {phone}
+            </ContactLocationItem>
           </ContactLocationInfo>
         </>
       )}

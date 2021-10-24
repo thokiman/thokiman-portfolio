@@ -8,8 +8,10 @@ import {
 export const EngineerGrid = ({ engineerSkill }) => {
   return engineerSkill.map(({ id, name, itemsPoint }) => {
     return (
-      <EngineerContentContainer key={id}>
-        <NameEngineerSkill>{name}</NameEngineerSkill>
+      <EngineerContentContainer className='engineer-content-container' key={id}>
+        <NameEngineerSkill className='name-engineer-skill'>
+          {name}
+        </NameEngineerSkill>
         <EngineerGridItem itemsPoint={itemsPoint} />
       </EngineerContentContainer>
     );

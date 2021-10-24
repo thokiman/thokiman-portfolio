@@ -33,9 +33,14 @@ export const AboutTimelineCareer = ({
       $lowWaveImage={lowWaveImage}
     >
       <TimelineCareerHeader />
-      <AboutTimelineCareerTitle>{title}</AboutTimelineCareerTitle>
+      <AboutTimelineCareerTitle className='about-timeline-career-title'>
+        {title}
+      </AboutTimelineCareerTitle>
       <TimelineCareerItem beforeWorking={beforeWorking} />
-      <AboutScrollToTheTop onClick={scrollToTop} />
+      <AboutScrollToTheTop
+        className='about-timeline-career-title'
+        onClick={scrollToTop}
+      />
     </AboutTimelineContainer>
   );
 };

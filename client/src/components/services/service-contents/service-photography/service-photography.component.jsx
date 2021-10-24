@@ -17,11 +17,16 @@ export const ServicePhotography = ({
   isSideBarActive,
 }) => {
   return (
-    <RightServiceContainerPg $issidebaractive={isSideBarActive}>
+    <RightServiceContainerPg
+      className='right-service-container'
+      $issidebaractive={isSideBarActive}
+    >
       <RightServiceContentPg>
         <ServiceUrlGeneralContent title={title} description={description} />
         <ServiceIconContent items={photographyIconItems} />
-        <ServiceStockPhotos>Stock Photos</ServiceStockPhotos>
+        <ServiceStockPhotos className='service-stock-photos-title'>
+          Stock Photos
+        </ServiceStockPhotos>
         <ServiceUrlIconContent items={photoStockItems} />
       </RightServiceContentPg>
     </RightServiceContainerPg>

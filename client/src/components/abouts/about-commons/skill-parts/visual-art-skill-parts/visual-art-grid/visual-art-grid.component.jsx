@@ -1,4 +1,11 @@
-import React, { memo, useEffect, useState } from 'react';
+import gsap from 'gsap';
+import React, {
+  memo,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
 import SpinnerLoading from '../../../../../commons/spinner-loading/spinner-loading.component';
 import {
   VisualArtGridContainer,
@@ -9,6 +16,8 @@ import {
 } from './visual-art-grid.styles';
 
 export const VisualArtGrid = ({ visualSkill: { name, itemsPoint } }) => {
+  const timeline = gsap.timeline();
+  const visualArtGridContainerRef = useRef();
   // 6 items
   const numDisplayItems = 5;
   const millisecondInterval = 10000;
@@ -28,6 +37,32 @@ export const VisualArtGrid = ({ visualSkill: { name, itemsPoint } }) => {
 
     return () => {
       clearInterval(timeId);
+    };
+  });
+  useLayoutEffect(() => {
+    let image = visualArtGridContainerRef.current.querySelectorAll('img');
+    let visualArtGridContentRef =
+      visualArtGridContainerRef.current.querySelector(
+        '.visual-art-grid-content'
+      );
+    timeline.from(image, {
+      autoAlpha: 0,
+      y: -20,
+      duration: 0.75,
+      stagger: {
+        grid: 'auto',
+        from: 'random',
+        ease: 'power2.in',
+        amount: 0.2,
+      },
+    });
+    timeline.play();
+    return () => {
+      timeline.from(visualArtGridContentRef, {
+        autoAlpha: 1,
+
+        duration: 0.5,
+      });
     };
   });
 
@@ -52,9 +87,12 @@ export const VisualArtGrid = ({ visualSkill: { name, itemsPoint } }) => {
     return <SpinnerLoading />;
   } else {
     return (
-      <VisualArtGridContainer>
-        <VisualArtTitle>{name}</VisualArtTitle>
-        <VisualArtGridContent>
+      <VisualArtGridContainer ref={visualArtGridContainerRef}>
+        <VisualArtTitle className='visual-art-grid-title'>
+          {name}
+        </VisualArtTitle>
+
+        <VisualArtGridContent className='visual-art-grid-content'>
           {selectedImages.map(({ id, field, iconPath }) => {
             return (
               <VisualArtGridItem key={id}>

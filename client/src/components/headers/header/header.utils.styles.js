@@ -10,7 +10,7 @@ import {
   hasScreenSize3_4,
   hasScreenSize4,
   hasScreenSize5,
-  hasScreenSizeWindow
+  hasScreenSizeWindow,
 } from '../../../utils/common.component.utils';
 
 export const selectTitleHeaderIntro = (
@@ -121,12 +121,10 @@ export const measureHeaderMorphing = (
   let headerMorphingProps;
   if (!!pathname.match(RegExp(/^\/$/))) {
     if (hasScreenSizeWindow(viewWidth, viewHeight)) {
-      
       headerMorphingProps = {
         top: -220,
       };
     } else if (hasScreenSize1_1(viewWidth, viewHeight)) {
-      
       headerMorphingProps = {
         top: -225,
       };
@@ -836,7 +834,7 @@ export const measureBottomWavy = (
       };
     }
   } else if (!!pathname.match(RegExp(`${aboutRoute}+`))) {
-    if (hasScreenSizeWindow(viewWidth)) {
+    if (hasScreenSizeWindow(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 28,
         strokeColor: '#128194',
@@ -855,12 +853,14 @@ export const measureBottomWavy = (
         fillColor: '#000000',
       };
     } else if (hasScreenSize1_3(viewWidth, viewHeight)) {
+      console.log(4);
       bottomWavy = {
         height: 45,
         strokeColor: '#128194',
         fillColor: '#000000',
       };
     } else if (hasScreenSize1(viewWidth)) {
+      console.log(5);
       bottomWavy = {
         height: 28,
         strokeColor: '#128194',

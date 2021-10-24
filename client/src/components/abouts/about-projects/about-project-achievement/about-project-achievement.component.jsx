@@ -7,31 +7,19 @@ import {
   DescriptionAchievementProject,
   ImageAchievement,
   ImageAchievementContainer,
-  NameAchievementProject
+  NameAchievementProject,
 } from './about-project-achievement.styles';
 
 export const AboutAchievementProject = ({ lastExperience }) => (
-  <AchievementProjectContainer>
-    <AchievementProjectTitle>
-      Experience of Achievement
-    </AchievementProjectTitle>
-    {lastExperience.map(({
-      id, name, description, date, imagePath,
-    }) => (
+  <AchievementProjectContainer className='about-project-achievement-content'>
+    <AchievementProjectTitle>Experience of Achievement</AchievementProjectTitle>
+    {lastExperience.map(({ id, name, description, date, imagePath }) => (
       <AchievementProject key={id}>
-        <NameAchievementProject>
-          {name}
-        </NameAchievementProject>
-        <DateAchievementProject>
-          {date}
-        </DateAchievementProject>
+        <NameAchievementProject>{name}</NameAchievementProject>
+        <DateAchievementProject>{date}</DateAchievementProject>
         <ImageAchievementContainer key={id}>
           {imagePath.map(({ id, field, iconPath }) => (
-            <ImageAchievement
-              key={id}
-              src={iconPath}
-              alt={field}
-            />
+            <ImageAchievement key={id} src={iconPath} alt={field} />
           ))}
         </ImageAchievementContainer>
         <DescriptionAchievementProject>

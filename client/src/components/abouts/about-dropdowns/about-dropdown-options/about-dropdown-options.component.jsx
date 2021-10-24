@@ -6,12 +6,12 @@ import {
   selectEducationRoute,
   selectProjectRoute,
   selectSkillRoute,
-  selectSummaryRoute
+  selectSummaryRoute,
 } from '../../../../redux/about/about.selectors';
 import {
   AboutDropdownLinkOption,
   AboutDropdownOption,
-  AboutDropdownOptionsContainer
+  AboutDropdownOptionsContainer,
 } from './about-dropdown-options.styles';
 
 export const AboutDropdownOptions = ({
@@ -22,35 +22,35 @@ export const AboutDropdownOptions = ({
   projectRoute,
 }) => {
   return (
-    <AboutDropdownOptionsContainer>
-      <AboutDropdownOption>
+    <AboutDropdownOptionsContainer className='about-dropdown-option-container'>
+      <AboutDropdownOption className='about-dropdown-option'>
         <AboutDropdownLinkOption
           to={skillRoute}
-          $matchpath={!!pathname.match(RegExp(`${ skillRoute }$`))}
+          $matchpath={!!pathname.match(RegExp(`${skillRoute}$`))}
         >
           Skill
         </AboutDropdownLinkOption>
       </AboutDropdownOption>
-      <AboutDropdownOption>
+      <AboutDropdownOption className='about-dropdown-option'>
         <AboutDropdownLinkOption
           to={educationRoute}
-          $matchpath={!!pathname.match(RegExp(`${ educationRoute }$`))}
+          $matchpath={!!pathname.match(RegExp(`${educationRoute}$`))}
         >
           Education
         </AboutDropdownLinkOption>
       </AboutDropdownOption>
-      <AboutDropdownOption>
+      <AboutDropdownOption className='about-dropdown-option'>
         <AboutDropdownLinkOption
           to={projectRoute}
-          $matchpath={!!pathname.match(RegExp(`${ projectRoute }$`))}
+          $matchpath={!!pathname.match(RegExp(`${projectRoute}$`))}
         >
           Project
         </AboutDropdownLinkOption>
       </AboutDropdownOption>
-      <AboutDropdownOption>
+      <AboutDropdownOption className='about-dropdown-option'>
         <AboutDropdownLinkOption
           to={summaryRoute}
-          $matchpath={!!pathname.match(RegExp(`${ summaryRoute }$`))}
+          $matchpath={!!pathname.match(RegExp(`${summaryRoute}$`))}
         >
           Summary
         </AboutDropdownLinkOption>

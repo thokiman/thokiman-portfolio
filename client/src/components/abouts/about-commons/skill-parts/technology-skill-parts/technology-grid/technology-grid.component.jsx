@@ -9,10 +9,17 @@ import {
 export const TechnologyGrid = ({ technologySkill: { name, itemsPoint } }) => {
   return (
     <TechnologyGridContainer>
-      <TechnologyTitle>{name}</TechnologyTitle>
+      <TechnologyTitle className='technology-title'>{name}</TechnologyTitle>
       <TechnologyGridContent>
         {itemsPoint.map(({ id, field, iconPath }) => {
-          return <TechnologyImage key={id} src={iconPath} alt={field} />;
+          return (
+            <TechnologyImage
+              className='technology-image'
+              key={id}
+              src={iconPath}
+              alt={field}
+            />
+          );
         })}
       </TechnologyGridContent>
     </TechnologyGridContainer>

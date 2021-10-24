@@ -9,6 +9,7 @@ export const VisualArtSkill = ({ skill }) => {
   const {
     itemsPoint: { digitalArt, photography },
   } = skill;
+
   return (
     <AboutVisualArtSkillContainer>
       <AboutVisualArtContentContainer>

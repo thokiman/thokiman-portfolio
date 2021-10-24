@@ -66,6 +66,7 @@ const AboutDropdownLeftPageContainerTimeline = css`
   width: 320px;
   background: url(${getTimelineImage});
   background-size: cover;
+
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     background-image: none;
   }
@@ -79,6 +80,7 @@ const getAboutDropdownContainer = ({ $matchpath }) => {
 };
 
 export const AboutDropdownContainer = styled.div`
+  z-index: 1;
   ${getAboutDropdownContainer}
 `;
 AboutDropdownContainer.displayName = 'AboutDropdownContainer';

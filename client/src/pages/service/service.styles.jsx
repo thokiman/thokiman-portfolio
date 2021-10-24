@@ -1,5 +1,4 @@
 import styled, { css, keyframes } from 'styled-components';
-
 const whiteSmokeColor = '#e3e1e4';
 const maxWidthSmartphone = 800;
 
@@ -83,6 +82,7 @@ export const ServiceContainer = styled.div`
   transition: background-image 0.7s ease-in-out, height 0.4s ease-in-out;
   font-family: futura-book;
   opacity: 0.9;
+
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 64vw;
     position: relative;
@@ -92,7 +92,7 @@ export const ServiceContainer = styled.div`
     bottom: 0;
     transition: all 0.5s ease;
     height: 115vh;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
     opacity: 0.5;
     height: 70.8vh;

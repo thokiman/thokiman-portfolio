@@ -4,8 +4,9 @@ import {
 } from 'components/commons/page-transition/page-transition.component';
 import React from 'react';
 import { connect } from 'react-redux';
-import { Route, Switch, withRouter } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { Transition, TransitionGroup } from 'react-transition-group';
+import { selectIsHeaderMorphingActive } from 'redux/header/header.selectors';
 import { selectHomepageRoute } from 'redux/homepage/homepage.selectors';
 import { createStructuredSelector } from 'reselect';
 import Header from './components/headers/header/header.component';
@@ -16,7 +17,17 @@ import Contact from './pages/contact/contact.component';
 import Homepage from './pages/homepage/homepage.component';
 import Portfolio from './pages/portfolio/portfolio.component';
 import Service from './pages/service/service.component';
-import { selectAboutRoute } from './redux/about/about.selectors';
+import {
+  selectAboutRoute,
+  selectEducationRoute,
+  selectProjectRoute,
+  selectSkillEngineerRoute,
+  selectSkillRoute,
+  selectSkillTechnologyRoute,
+  selectSkillVisualArtRoute,
+  selectSummaryRoute,
+  selectTimelineCareerRoute,
+} from './redux/about/about.selectors';
 import {
   selectAllPortfolioRoute,
   selectBrandRoute,
@@ -27,7 +38,13 @@ import {
   selectWebsiteRoute,
 } from './redux/collection/collection.selectors';
 import { selectContactRoute } from './redux/contact/contact.selectors';
-import { selectServiceRoute } from './redux/service/service.selectors';
+import {
+  selectArtServiceRoute,
+  selectDevServiceRoute,
+  selectEngineerServiceRoute,
+  selectPhotoServiceRoute,
+  selectServiceRoute,
+} from './redux/service/service.selectors';
 
 const App = ({
   aboutRoute,
@@ -41,7 +58,19 @@ const App = ({
   photographyColorRoute,
   photographyBwRoute,
   websiteRoute,
-  location: { pathname },
+  skillRoute,
+  skillEngineerRoute,
+  skillVisualArtRoute,
+  skillTechnologyRoute,
+  educationRoute,
+  projectRoute,
+  summaryRoute,
+  careerTimelineRoute,
+  artServiceRoute,
+  engineerServiceRoute,
+  devServiceRoute,
+  photoServiceRoute,
+  isHeaderMorphingActive,
 }) => {
   return (
     <Route
@@ -58,6 +87,18 @@ const App = ({
           photographyColorRoute,
           photographyBwRoute,
           websiteRoute,
+          skillRoute,
+          skillEngineerRoute,
+          skillVisualArtRoute,
+          skillTechnologyRoute,
+          educationRoute,
+          projectRoute,
+          summaryRoute,
+          careerTimelineRoute,
+          artServiceRoute,
+          engineerServiceRoute,
+          devServiceRoute,
+          photoServiceRoute,
         };
         const { key, pathname } = location;
 
@@ -78,8 +119,8 @@ const App = ({
                 onEnter={(node, appears) =>
                   play(pathname, node, appears, pathStacker)
                 }
-                onExit={(node, appears) =>
-                  exit(pathname, node, appears, pathStacker)
+                onExit={(node) =>
+                  exit(pathname, node, pathStacker, isHeaderMorphingActive)
                 }
                 timeout={timeout}
               >
@@ -110,6 +151,19 @@ const mapStateToProps = createStructuredSelector({
   photographyColorRoute: selectPhotographyColorRoute,
   photographyBwRoute: selectPhotographyBwRoute,
   websiteRoute: selectWebsiteRoute,
+  skillRoute: selectSkillRoute,
+  skillEngineerRoute: selectSkillEngineerRoute,
+  skillVisualArtRoute: selectSkillVisualArtRoute,
+  skillTechnologyRoute: selectSkillTechnologyRoute,
+  educationRoute: selectEducationRoute,
+  projectRoute: selectProjectRoute,
+  summaryRoute: selectSummaryRoute,
+  careerTimelineRoute: selectTimelineCareerRoute,
+  artServiceRoute: selectArtServiceRoute,
+  engineerServiceRoute: selectEngineerServiceRoute,
+  devServiceRoute: selectDevServiceRoute,
+  photoServiceRoute: selectPhotoServiceRoute,
+  isHeaderMorphingActive: selectIsHeaderMorphingActive,
 });
 
-export default withRouter(connect(mapStateToProps)(App));
+export default connect(mapStateToProps)(App);

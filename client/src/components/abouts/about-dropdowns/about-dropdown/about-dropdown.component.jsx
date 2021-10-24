@@ -20,6 +20,7 @@ export const AboutDropdown = ({
 }) => {
   return (
     <AboutDropdownContainer
+      className='about-dropdown-container'
       $matchpath={!!pathname.match(`${aboutRoute}${timelineCareerRoute}`)}
       $issidebaractive={isSideBarActive}
       $lowWaveImage={lowWaveImage}

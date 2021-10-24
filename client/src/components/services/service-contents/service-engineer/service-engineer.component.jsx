@@ -15,7 +15,10 @@ export const ServiceEngineer = ({
   engineer: { title, description, items },
 }) => {
   return (
-    <RightServiceContainerEng $issidebaractive={isSideBarActive}>
+    <RightServiceContainerEng
+      className='right-service-container'
+      $issidebaractive={isSideBarActive}
+    >
       <RightServiceContentEng>
         <ServiceGeneralContent title={title} description={description} />
         <ServiceIconContent items={items} />

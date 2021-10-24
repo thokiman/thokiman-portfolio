@@ -13,63 +13,54 @@ export const measureServiceIsNotActivated = (viewWidth, viewHeight) => {
   let serviceIsNotActivatedProps;
 
   if (hasScreenSize1(viewWidth)) {
-    console.log(1);
     serviceIsNotActivatedProps = {
       top: 30,
       left: 6,
       fontSize: 7,
     };
   } else if (hasScreenSize2(viewWidth)) {
-    console.log(2);
     serviceIsNotActivatedProps = {
       top: 41,
       left: 6,
       fontSize: 5,
     };
   } else if (hasScreenSize3_1(viewWidth, viewHeight)) {
-    console.log(3);
     serviceIsNotActivatedProps = {
       top: 36.5,
       left: 6,
       fontSize: 8,
     };
   } else if (hasScreenSize3_2(viewWidth, viewHeight)) {
-    console.log(4);
     serviceIsNotActivatedProps = {
       top: 37,
       left: 6,
       fontSize: 9,
     };
   } else if (hasScreenSize3_3(viewWidth, viewHeight)) {
-    console.log(5);
     serviceIsNotActivatedProps = {
       top: 40,
       left: 6,
       fontSize: 7,
     };
   } else if (hasScreenSize3_4(viewWidth, viewHeight)) {
-    console.log(6);
     serviceIsNotActivatedProps = {
       top: 44,
       left: 6,
       fontSize: 6,
     };
   } else if (hasScreenSize4(viewWidth, viewHeight)) {
-    console.log(7);
     serviceIsNotActivatedProps = {
       top: 50,
       left: 6,
       fontSize: 5,
     };
   } else if (hasScreenSize5(viewWidth)) {
-    console.log(8);
     serviceIsNotActivatedProps = {
       top: 43.5,
       left: 6,
       fontSize: 12,
     };
   } else {
-    console.log(9);
     serviceIsNotActivatedProps = {
       top: 36,
       left: 6,

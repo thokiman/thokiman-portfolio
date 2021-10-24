@@ -10,7 +10,7 @@ import {
 
 export const FormInputTel = ({ handleChange, label, ...props }) => {
   return (
-    <FormInputTelGroup>
+    <FormInputTelGroup className='contact-form-element'>
       {
         <FormInputTelCheckerContainer>
           {props.value.length && props.value.match(RegExp(props.pattern)) ? (

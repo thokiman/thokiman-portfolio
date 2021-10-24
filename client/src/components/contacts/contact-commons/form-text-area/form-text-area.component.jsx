@@ -10,7 +10,7 @@ import {
 
 export const FormTextArea = ({ handleChange, label, ...props }) => {
   return (
-    <FormTextAreaGroup>
+    <FormTextAreaGroup className='contact-form-element'>
       {
         <FormTextAreaCheckerContainer>
           {props.value.length ? (

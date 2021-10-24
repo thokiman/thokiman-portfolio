@@ -14,6 +14,7 @@ export const AboutEducationBachelorContent = styled.div`
   margin: 0 25px;
   position: relative;
   top: 10px;
+
   @media only screen and (max-width: 500px) {
     margin: 0 auto;
   }
@@ -29,13 +30,14 @@ export const AboutEducationBachelorTitle = styled.div`
   font-kerning: auto;
   padding: 0 2px;
   color: ${whiteSmokeColor};
+
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     font-size: 18vw;
   }
 `;
 
 export const AboutEducationBachelorAttributes = styled.div`
-  border-top: solid 2px;
+  border-top: ${lightBlueColor} solid 2px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: repeat(3, 1fr);
@@ -65,6 +67,7 @@ export const AboutEducationBachelorSchool = styled.div`
   grid-area: education-bachelor-bachelor;
   padding: 10px 0;
   font-size: 250%;
+
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     padding: 4px;
     font-size: 7vw;

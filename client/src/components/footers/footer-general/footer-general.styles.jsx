@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import styled, { css, keyframes } from 'styled-components';
 import { ReactComponent as CreamPrickInklaim } from '../../../assets/collections-icon/prick-inklaim-icon/logo/prick_inklaim_logo_cream.svg';
 import { ReactComponent as WhiteOutlineThokiman } from '../../../assets/collections-icon/thokiman-icon/logo/outline/thokiman_head_logo_cream.svg';
+
 const maxWidthTablet = 1024;
 const maxWidthSmartphone = 800;
 const blackColor = '#000000';
@@ -34,6 +35,7 @@ const getFooterSideBarActive = ({ $issidebaractive }) => {
 export const FooterContainer = styled.div`
   background-color: ${blackColor};
 
+  width: 103vw;
   height: 14vh;
   display: flex;
   align-items: center;
@@ -74,6 +76,7 @@ export const ProfileFooterContainer = styled.div`
   align-items: flex-end;
   justify-content: center;
   width: 60vw;
+
   @media only screen and (max-width: 340px) {
     display: none;
   }
@@ -97,6 +100,7 @@ export const ProfileFooterIcon = styled.div`
   height: 8vh;
   display: flex;
   justify-content: center;
+
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 35vw;
   }

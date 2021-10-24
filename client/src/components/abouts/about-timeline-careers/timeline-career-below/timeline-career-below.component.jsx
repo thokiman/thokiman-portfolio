@@ -1,18 +1,17 @@
-import React from "react";
-import { GiMechaMask, GiTribalMask } from "react-icons/gi";
-import { connect } from "react-redux";
-import { createStructuredSelector } from "reselect";
+import React from 'react';
+import { GiMechaMask, GiTribalMask } from 'react-icons/gi';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 import {
   toggleYear2017Click,
-  toggleYear2019Click
-} from "../../../../redux/about/about.actions";
+  toggleYear2019Click,
+} from '../../../../redux/about/about.actions';
 import {
   selectIsYear2017Click,
-  selectIsYear2019Click
-} from "../../../../redux/about/about.selectors";
-import TimelineCareerLink from "../timeline-career-link/timeline-career-link.component";
-import { BelowTimelineHeaderContainer } from "./timeline-career-below.styles";
-
+  selectIsYear2019Click,
+} from '../../../../redux/about/about.selectors';
+import TimelineCareerLink from '../timeline-career-link/timeline-career-link.component';
+import { BelowTimelineHeaderContainer } from './timeline-career-below.styles';
 
 export const TimelineCareerBelow = ({
   isYear2017Click,
@@ -21,20 +20,20 @@ export const TimelineCareerBelow = ({
   toggleYear2019Click,
 }) => {
   return (
-    <BelowTimelineHeaderContainer>
+    <BelowTimelineHeaderContainer className='timeline-header-below'>
       <TimelineCareerLink
         isClick={isYear2017Click}
         yearClick={toggleYear2017Click}
         TimelineIcon={GiTribalMask}
-        placement="below"
-        year="2017"
+        placement='below'
+        year='2017'
       />
       <TimelineCareerLink
         isClick={isYear2019Click}
         yearClick={toggleYear2019Click}
         TimelineIcon={GiMechaMask}
-        placement="below"
-        year="2019"
+        placement='below'
+        year='2019'
       />
     </BelowTimelineHeaderContainer>
   );

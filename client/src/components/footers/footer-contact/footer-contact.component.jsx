@@ -19,10 +19,14 @@ export const FooterContact = ({ isSideBarActive }) => {
     >
       <ProfileFooterContainerContact>
         <ProfileFooterIconContact>
-          <FooterCreamPrickInklaim />
-          <FooterWhiteOutlineThokiman />
+          <div className='footer-general-icon'>
+            <FooterCreamPrickInklaim />
+          </div>
+          <div className='footer-general-icon'>
+            <FooterWhiteOutlineThokiman />
+          </div>
         </ProfileFooterIconContact>
-        <ProfileFooterTextContact>
+        <ProfileFooterTextContact className='footer-text'>
           Copyright<sup>&#9400;</sup>2021.
           <em>Allright reserved </em>
           {window.innerWidth <= 800 ? null : '|'}

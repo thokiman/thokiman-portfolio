@@ -22,7 +22,10 @@ export const AboutEducation = ({
   isSideBarActive,
 }) => {
   return (
-    <EducationContainer $issidebaractive={isSideBarActive}>
+    <EducationContainer
+      className='education-container'
+      $issidebaractive={isSideBarActive}
+    >
       <AboutEducationBachelor lastBachelor={lastBachelor} />
       <AboutEducationExperience lastExperience={lastExperiences} />
       <AboutEducationCourse lastCourse={lastCourses} />

@@ -22,7 +22,10 @@ export const AboutProject = ({
   isSideBarActive,
 }) => {
   return (
-    <ProjectContainer $issidebaractive={isSideBarActive}>
+    <ProjectContainer
+      className='project-container'
+      $issidebaractive={isSideBarActive}
+    >
       <AboutThesisProject thesis={thesis} />
       <AboutCourseProject course={courses} />
       <AboutExperienceProject experience={experiences} />

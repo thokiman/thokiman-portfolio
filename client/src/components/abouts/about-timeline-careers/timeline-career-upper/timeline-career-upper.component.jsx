@@ -1,20 +1,19 @@
-import React from "react";
-import { GiCeremonialMask, GiGasMask, GiTotemMask } from "react-icons/gi";
-import { connect } from "react-redux";
-import { createStructuredSelector } from "reselect";
+import React from 'react';
+import { GiCeremonialMask, GiGasMask, GiTotemMask } from 'react-icons/gi';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 import {
   toggleYear2016Click,
   toggleYear2018Click,
-  toggleYearCurrentClick
-} from "../../../../redux/about/about.actions";
+  toggleYearCurrentClick,
+} from '../../../../redux/about/about.actions';
 import {
   selectIsYear2016Click,
   selectIsYear2018Click,
-  selectIsYearCurrentClick
-} from "../../../../redux/about/about.selectors";
-import TimelineCareerLink from "../timeline-career-link/timeline-career-link.component";
-import { UpperTimelineHeaderContainer } from "./timeline-career-upper.styles";
-
+  selectIsYearCurrentClick,
+} from '../../../../redux/about/about.selectors';
+import TimelineCareerLink from '../timeline-career-link/timeline-career-link.component';
+import { UpperTimelineHeaderContainer } from './timeline-career-upper.styles';
 
 export const TimelineCareerUpper = ({
   isYear2016Click,
@@ -25,27 +24,27 @@ export const TimelineCareerUpper = ({
   toggleYearCurrentClick,
 }) => {
   return (
-    <UpperTimelineHeaderContainer>
+    <UpperTimelineHeaderContainer className='timeline-header-upper'>
       <TimelineCareerLink
         isClick={isYear2016Click}
         yearClick={toggleYear2016Click}
         TimelineIcon={GiCeremonialMask}
-        placement="upper"
-        year="2016"
+        placement='upper'
+        year='2016'
       />
       <TimelineCareerLink
         isClick={isYear2018Click}
         yearClick={toggleYear2018Click}
         TimelineIcon={GiTotemMask}
-        placement="upper"
-        year="2018"
+        placement='upper'
+        year='2018'
       />
       <TimelineCareerLink
         isClick={isYearCurrentClick}
         yearClick={toggleYearCurrentClick}
-        placement="upper"
+        placement='upper'
         TimelineIcon={GiGasMask}
-        year="Today"
+        year='Today'
       />
     </UpperTimelineHeaderContainer>
   );

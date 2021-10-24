@@ -17,6 +17,7 @@ const headerReducer = (state = INITIAL_STATE, action) => {
         ...state,
         isHeaderMorphingActive: action.payload,
       };
+
     default:
       return state;
   }

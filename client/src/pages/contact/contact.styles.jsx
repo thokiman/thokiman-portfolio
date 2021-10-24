@@ -94,7 +94,7 @@ export const ContactContainer = styled.div`
     bottom: 0;
     transition: left 0.5s ease;
     height: 62vh;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
     opacity: 0.5;
   }

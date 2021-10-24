@@ -21,7 +21,8 @@ export const getInHomepageTimeline = (node, delay) => {
     })
     .to(node, {
       yPercent: 30,
-      autoAlpha: 1,
+      autoAlpha: 0,
+
       yoyo: true,
       yoyoEase: true,
       repeat: 1,
@@ -66,6 +67,7 @@ export const getOutHomeTimeline = (node, delay) => {
     display: 'none',
     autoAlpha: 0,
     yPercent: 10,
+    scaleY: 1.5,
     ease: Power1.easeOut,
     duration: 3,
   });

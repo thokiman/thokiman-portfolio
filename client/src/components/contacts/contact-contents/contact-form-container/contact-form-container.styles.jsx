@@ -77,6 +77,7 @@ const getContactFormContainer = ({ $istypeclick }) => {
 };
 
 export const ContactFormContainer = styled.div`
+  z-index: 1;
   width: 35vw;
   height: 70vh;
   background-color: ${backgroundColorContactFormContainer};

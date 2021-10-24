@@ -1,10 +1,13 @@
-import React from "react";
-
-import { FormButtonContainer } from "./form-button.styles";
+import React from 'react';
+import { FormButtonContainer } from './form-button.styles';
 
 export const FormButton = ({ children, ...props }) => {
   return (
-    <FormButtonContainer type="button" {...props}>
+    <FormButtonContainer
+      className='contact-form-element'
+      type='button'
+      {...props}
+    >
       {children}
     </FormButtonContainer>
   );

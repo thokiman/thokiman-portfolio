@@ -21,6 +21,7 @@ const getSideBarActive = ({ $issidebaractive }) => {
 };
 //**
 export const ContactInformationContainer = styled.div`
+  z-index: 1;
   width: 35%;
   height: 70vh;
   background-color: ${backgroundColorContactInfomationContainer};

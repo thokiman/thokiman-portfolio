@@ -1,17 +1,16 @@
-import React from "react";
-
+import React from 'react';
 import {
   EducationImage,
   EducationImageContainer,
   EducationImageItems,
-} from "./education-grid.styles";
+} from './education-grid.styles';
 
 export const EducationGrid = ({ imagePath }) => {
   return (
     <EducationImageContainer>
       {imagePath.map(({ id, field, iconPath }) => {
         return (
-          <EducationImageItems key={id}>
+          <EducationImageItems className='education-image-items' key={id}>
             <EducationImage src={`${iconPath}`} alt={`${field}`} />
           </EducationImageItems>
         );

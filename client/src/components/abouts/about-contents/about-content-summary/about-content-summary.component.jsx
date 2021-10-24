@@ -39,17 +39,33 @@ export const AboutSummary = ({
   isSideBarActive,
 }) => {
   return (
-    <SummaryContainer $issidebaractive={isSideBarActive}>
+    <SummaryContainer
+      className='summary-container'
+      $issidebaractive={isSideBarActive}
+    >
       <AboutSummaryContainer>
-        <ThokimanNormalFaceIcon />
-        <AboutSummaryTitle>
+        <ThokimanNormalFaceIcon className='about-summary-title' />
+        <AboutSummaryTitle className='about-summary-title'>
           Summary of Thomas Santosa A.K.A Thokiman
         </AboutSummaryTitle>
-        <AboutSummaryTextOne>{p1}</AboutSummaryTextOne>
-        <AboutSummaryTextTwo>{p2}</AboutSummaryTextTwo>
-        <AboutSummaryTextThree>{p3}</AboutSummaryTextThree>
-        <AboutSummaryTextFour>{p4}</AboutSummaryTextFour>
-        <AboutDownloadLink to={`${iconPath}`} download target='_blank'>
+        <AboutSummaryTextOne className='about-summary'>
+          {p1}
+        </AboutSummaryTextOne>
+        <AboutSummaryTextTwo className='about-summary'>
+          {p2}
+        </AboutSummaryTextTwo>
+        <AboutSummaryTextThree className='about-summary'>
+          {p3}
+        </AboutSummaryTextThree>
+        <AboutSummaryTextFour className='about-summary'>
+          {p4}
+        </AboutSummaryTextFour>
+        <AboutDownloadLink
+          className='about-summary'
+          to={`${iconPath}`}
+          download
+          target='_blank'
+        >
           <AboutDownloadText
             onMouseEnter={() => toggleVibrate()}
             onMouseLeave={() => toggleVibrate()}
@@ -64,7 +80,10 @@ export const AboutSummary = ({
           ) : (
             ''
           )}
-          <ThokimanExcitedFaceIcon $isvibrate={isVibrate} />
+          <ThokimanExcitedFaceIcon
+            className='about-summary'
+            $isvibrate={isVibrate}
+          />
         </AboutDownloadLink>
       </AboutSummaryContainer>
     </SummaryContainer>

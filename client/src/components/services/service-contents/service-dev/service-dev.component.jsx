@@ -19,7 +19,10 @@ export const ServiceDev = ({
   },
 }) => {
   return (
-    <RightServiceContainerFS $issidebaractive={isSideBarActive}>
+    <RightServiceContainerFS
+      className='right-service-container'
+      $issidebaractive={isSideBarActive}
+    >
       <RightServiceContentFS>
         <ServiceGeneralContent title={title} description={description} />
         <ServiceIconContent jobDetail='Front End Developer' items={frontend} />

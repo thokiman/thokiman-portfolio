@@ -35,7 +35,7 @@ import {
   HomepageZigzagMoustacheThree,
   HomepageZigzagMoustacheTwo,
 } from './homepage-profile-image-cartoon.styles';
-import CartoonGsap from './homepage-profile-image-cartoon.utils';
+import CartoonGsap from './homepage-profile-image-cartoon.utils.transition';
 
 export const HompageProfileImageCartoon = () => {
   const [timeline, setTimeline] = useState(() => gsap.timeline());

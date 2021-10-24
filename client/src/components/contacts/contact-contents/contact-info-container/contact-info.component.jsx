@@ -33,18 +33,24 @@ export const ContactInfo = ({
   items: { socialIcon, photoIcon },
 }) => {
   return (
-    <ContactInformationContainer $issidebaractive={isSideBarActive}>
-      <ContactInformationTitle>{title}</ContactInformationTitle>
-      <ContactInformationContent>
-        <WhiteThokimanContactIcon0 />
-        <WhiteThokimanContactIcon1 />
-        <WhiteThokimanContactIcon2 />
-        <WhiteThokimanContactIcon3 />
-        <WhiteThokimanContactIcon4 />
-        <WhiteThokimanContactIcon5 />
-        <WhiteThokimanContactIcon6 />
-        <WhiteThokimanContactIcon7 />
+    <ContactInformationContainer
+      className='contact-information-container'
+      $issidebaractive={isSideBarActive}
+    >
+      <ContactInformationTitle className='contact-information-title'>
+        {title}
+      </ContactInformationTitle>
+      <ContactInformationContent className='contact-information-content'>
+        <WhiteThokimanContactIcon0 className='white-thokiman-contact-icon' />
+        <WhiteThokimanContactIcon1 className='white-thokiman-contact-icon' />
+        <WhiteThokimanContactIcon2 className='white-thokiman-contact-icon' />
+        <WhiteThokimanContactIcon3 className='white-thokiman-contact-icon' />
+        <WhiteThokimanContactIcon4 className='white-thokiman-contact-icon' />
+        <WhiteThokimanContactIcon5 className='white-thokiman-contact-icon' />
+        <WhiteThokimanContactIcon6 className='white-thokiman-contact-icon' />
+        <WhiteThokimanContactIcon7 className='white-thokiman-contact-icon' />
         <SocialContactLinkIconFacebook
+          className='social-contact-link-icon'
           to={{ pathname: socialIcon[0].linkUrl }}
           target='_blank'
         >
@@ -54,6 +60,7 @@ export const ContactInfo = ({
           />
         </SocialContactLinkIconFacebook>
         <SocialContactLinkIconGithub
+          className='social-contact-link-icon'
           to={{ pathname: socialIcon[1].linkUrl }}
           target='_blank'
         >
@@ -63,6 +70,7 @@ export const ContactInfo = ({
           />
         </SocialContactLinkIconGithub>
         <SocialContactLinkIconInstagram
+          className='social-contact-link-icon'
           to={{ pathname: socialIcon[2].linkUrl }}
           target='_blank'
         >
@@ -72,6 +80,7 @@ export const ContactInfo = ({
           />
         </SocialContactLinkIconInstagram>
         <SocialContactLinkIconLinkedin
+          className='social-contact-link-icon'
           to={{ pathname: socialIcon[3].linkUrl }}
           target='_blank'
         >
@@ -81,6 +90,7 @@ export const ContactInfo = ({
           />
         </SocialContactLinkIconLinkedin>
         <SocialContactLinkIconTwitter
+          className='social-contact-link-icon'
           to={{ pathname: socialIcon[4].linkUrl }}
           target='_blank'
         >
@@ -90,6 +100,7 @@ export const ContactInfo = ({
           />
         </SocialContactLinkIconTwitter>
         <SocialContactLinkIconWhatsapp
+          className='social-contact-link-icon'
           to={{ pathname: socialIcon[5].linkUrl }}
           target='_blank'
         >
@@ -98,7 +109,9 @@ export const ContactInfo = ({
             alt={socialIcon[5].iconPath.field}
           />
         </SocialContactLinkIconWhatsapp>
+
         <PhotoContactLinkIconAdobeStock
+          className='social-contact-link-icon'
           to={{ pathname: photoIcon[0].linkUrl }}
           target='_blank'
         >
@@ -108,6 +121,7 @@ export const ContactInfo = ({
           />
         </PhotoContactLinkIconAdobeStock>
         <PhotoContactLinkIconEyeEm
+          className='social-contact-link-icon'
           to={{ pathname: photoIcon[1].linkUrl }}
           target='_blank'
         >
@@ -117,6 +131,7 @@ export const ContactInfo = ({
           />
         </PhotoContactLinkIconEyeEm>
         <PhotoContactLinkIconShutterStock
+          className='social-contact-link-icon'
           to={{ pathname: photoIcon[2].linkUrl }}
           target='_blank'
         >

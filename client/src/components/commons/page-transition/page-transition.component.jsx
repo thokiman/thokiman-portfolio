@@ -32,6 +32,7 @@ export const play = (pathname, node, appears, routes) => {
     contactRoute,
     homepageRoute,
   } = routes;
+
   const delay = appears ? 0 : 2;
   let timeline;
 
@@ -52,7 +53,7 @@ export const play = (pathname, node, appears, routes) => {
   window.loadPromise.then(() => requestAnimationFrame(() => timeline.play()));
 };
 
-export const exit = (pathname, node, appears, routes) => {
+export const exit = (pathname, node, routes, isHeaderMorphingActive) => {
   const {
     aboutRoute,
     serviceRoute,
@@ -61,21 +62,27 @@ export const exit = (pathname, node, appears, routes) => {
     homepageRoute,
   } = routes;
 
-  const delay = appears ? 0 : 3;
+  const delay = 3;
   let timeline;
 
   if (pathname.match(`^${homepageRoute}$`)) {
     timeline = getOutHomeTimeline(node, delay);
   } else if (pathname.match(`^${aboutRoute}$`)) {
-    timeline = getOutAboutTimeline(node, delay);
+    timeline = getOutAboutTimeline(node, delay, pathname, routes);
   } else if (pathname.match(`^${portfolioDefaultRoute}$`)) {
     timeline = getOutPortfolioTimeline(node, delay);
   } else if (pathname.match(`^${serviceRoute}$`)) {
-    timeline = getOutServiceTimeline(node, delay);
+    timeline = getOutServiceTimeline(node, delay, pathname, routes);
   } else if (pathname.match(`^${contactRoute}$`)) {
     timeline = getOutContactTimeline(node, delay);
   } else {
-    timeline = getOutDefaultTimeline(node, delay, pathname, routes);
+    timeline = getOutDefaultTimeline(
+      node,
+      delay,
+      pathname,
+      routes,
+      isHeaderMorphingActive
+    );
   }
 
   timeline.play();

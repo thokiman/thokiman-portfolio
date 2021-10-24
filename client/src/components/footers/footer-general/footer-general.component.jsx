@@ -22,10 +22,17 @@ export const FooterGeneral = ({ socialIcon, isSideBarActive }) => {
     >
       <ProfileFooterContainer>
         <ProfileFooterIcon>
-          <FooterCreamPrickInklaim />
-          <FooterWhiteOutlineThokiman />
+          <div className='footer-general-icon'>
+            <FooterCreamPrickInklaim />
+          </div>
+          <div className='footer-general-icon'>
+            <FooterWhiteOutlineThokiman />
+          </div>
         </ProfileFooterIcon>
-        <ProfileFooterText $issidebaractive={isSideBarActive}>
+        <ProfileFooterText
+          className='footer-text'
+          $issidebaractive={isSideBarActive}
+        >
           Copyright<sup>&#9400;</sup>2021.
           <em>Allright reserved </em>
           {window.innerWidth <= 800 ? (
@@ -38,10 +45,11 @@ export const FooterGeneral = ({ socialIcon, isSideBarActive }) => {
         </ProfileFooterText>
       </ProfileFooterContainer>
       <br />
-      <SocialFooterContainer>
+      <SocialFooterContainer className='social-footer-container'>
         {socialIcon.map(({ iconPath, linkUrl }) => {
           return (
             <SocialItem
+              className='footer-social-icon'
               key={iconPath.id}
               to={{ pathname: linkUrl }}
               target='_blank'

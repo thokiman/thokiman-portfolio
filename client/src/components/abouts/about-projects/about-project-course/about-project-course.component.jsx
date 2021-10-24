@@ -12,7 +12,7 @@ import {
 
 export const AboutCourseProject = ({ course }) => {
   return (
-    <AboutCourseProjectContainer>
+    <AboutCourseProjectContainer className='about-course-project-content'>
       <AboutCourseProjectTitle>Course Project</AboutCourseProjectTitle>
       {course.map(({ id, name, description, related, url, github }) => {
         return (

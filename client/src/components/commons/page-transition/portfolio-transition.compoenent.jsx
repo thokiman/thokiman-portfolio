@@ -14,12 +14,13 @@ export const getInPortfolioTimeline = (node, delay) => {
     })
     .to(node, {
       yPercent: 30,
-      autoAlpha: 1,
+      scaleY: 7,
+      autoAlpha: 0,
       yoyo: true,
       yoyoEase: true,
       repeat: 1,
       repeatDelay: 0.5,
-      duration: 3,
+      duration: 4,
     });
 
   return timeline;
@@ -30,6 +31,7 @@ export const getOutPortfolioTimeline = (node, delay) => {
     display: 'none',
     autoAlpha: 0,
     yPercent: 25,
+    scaleY: 1.5,
     ease: Power1.easeOut,
     duration: 1,
   });

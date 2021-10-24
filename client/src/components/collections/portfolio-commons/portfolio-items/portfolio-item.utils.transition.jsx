@@ -28,6 +28,7 @@ export const ImageGsap = ({
       animation = gsap.from(el.current, {
         display: 'none',
         autoAlpha: 0,
+
         y: -100,
         duration: 4,
         delay: 8,

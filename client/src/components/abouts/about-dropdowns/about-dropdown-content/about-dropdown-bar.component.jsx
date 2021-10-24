@@ -27,15 +27,15 @@ export const AboutDropdownBar = ({
   isDropdownHidden,
   toggleDropdownHidden,
   aboutRoute,
-  timelineCareerRoute,
+  careerTimelineRoute,
   location: { pathname },
 }) => {
   return (
     <AboutDropdownContainer>
-      <AboutThokimanHeadColorContainer>
+      <AboutThokimanHeadColorContainer className='about-thokiman-head-color-container-upper'>
         {isDropdownHidden ? null : <AboutThokimanHeadColorShow />}
       </AboutThokimanHeadColorContainer>
-      <AboutDropdownContent>
+      <AboutDropdownContent className='about-dropdown-content'>
         <AboutDropdownLinkContainer
           to={aboutRoute}
           $matchpath={
@@ -65,17 +65,17 @@ export const AboutDropdownBar = ({
 
       {isDropdownHidden ? null : <AboutDropdownOptions />}
       <AboutBreakLine />
-      <AboutDropdownContent>
+      <AboutDropdownContent className='about-dropdown-content'>
         <AboutDropdownLinkContainer
-          to={`${aboutRoute}${timelineCareerRoute}`}
+          to={`${aboutRoute}${careerTimelineRoute}`}
           $matchpath={
-            !!pathname.match(RegExp(`${aboutRoute}${timelineCareerRoute}$`))
+            !!pathname.match(RegExp(`${aboutRoute}${careerTimelineRoute}$`))
           }
         >
-          Timeline Career
+          Career Timeline
         </AboutDropdownLinkContainer>
       </AboutDropdownContent>
-      <AboutThokimanHeadColorContainer>
+      <AboutThokimanHeadColorContainer className='about-thokiman-head-color-container-below'>
         {isDropdownHidden ? <AboutThokimanHeadColorHide /> : ''}
       </AboutThokimanHeadColorContainer>
     </AboutDropdownContainer>
@@ -85,7 +85,7 @@ export const AboutDropdownBar = ({
 const mapStateToProps = createStructuredSelector({
   isDropdownHidden: selectIsDropdownHidden,
   aboutRoute: selectAboutRoute,
-  timelineCareerRoute: selectTimelineCareerRoute,
+  careerTimelineRoute: selectTimelineCareerRoute,
 });
 const mapDispatchToProps = (dispatch) => ({
   toggleDropdownHidden: () => dispatch(toggleDropdownHidden()),

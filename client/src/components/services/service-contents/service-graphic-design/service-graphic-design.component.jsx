@@ -15,7 +15,10 @@ export const ServiceGraphicDesign = ({
   art: { title, description, items },
 }) => {
   return (
-    <RightServiceContainerGd $issidebaractive={isSideBarActive}>
+    <RightServiceContainerGd
+      className='right-service-container'
+      $issidebaractive={isSideBarActive}
+    >
       <RightServiceContentGd>
         <ServiceGeneralContent title={title} description={description} />
         <ServiceIconContent items={items} />

@@ -2,9 +2,9 @@ import styled, { css, keyframes } from 'styled-components';
 
 const whiteSmokeColor = '#e3e1e4';
 const greenBlueColor = '#128194';
-
 const backgroundColorTimelineCareerContainer = 'rgba(18, 129, 148, 0.8)';
 const maxWidthSmartphone = 800;
+
 const getAboutImage = ({ $rockWaveImage }) => {
   return $rockWaveImage.item.iconPath;
 };
@@ -79,6 +79,7 @@ const AboutStyles = css`
   align-items: center;
   font-family: futura-medium;
   transition: background-image 0.7s ease-in-out, height 0.4s ease-in-out;
+
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     position: relative;
     top: 0;
@@ -88,7 +89,7 @@ const AboutStyles = css`
     bottom: 0;
     transition: left 0.5s ease;
     height: 115vh;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
     opacity: 0.5;
     height: 70.8vh;

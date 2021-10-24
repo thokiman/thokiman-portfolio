@@ -1,18 +1,17 @@
-import React from "react";
-import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
-import { createStructuredSelector } from "reselect";
+import React from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import { createStructuredSelector } from 'reselect';
 import {
   selectSkillEngineerRoute,
   selectSkillRoute,
   selectSkillTechnologyRoute,
-  selectSkillVisualArtRoute
-} from "../../../../redux/about/about.selectors";
+  selectSkillVisualArtRoute,
+} from '../../../../redux/about/about.selectors';
 import {
   AboutHeaderSkillContainer,
-  AboutTextBox
-} from "./about-skill-header.styles";
-
+  AboutTextBox,
+} from './about-skill-header.styles';
 
 export const SkillHeader = ({
   location: { pathname },
@@ -24,20 +23,23 @@ export const SkillHeader = ({
   return (
     <AboutHeaderSkillContainer>
       <AboutTextBox
-        to={`${ visualArtRoute }`}
-        $matchpath={!!pathname.match(`(${ skillRoute }$|${ visualArtRoute }$)`)}
+        className='about-text-box'
+        to={`${visualArtRoute}`}
+        $matchpath={!!pathname.match(`(${skillRoute}$|${visualArtRoute}$)`)}
       >
         Visual Art
       </AboutTextBox>
       <AboutTextBox
-        to={`${ engineerRoute }`}
-        $matchpath={!!pathname.match(`${ engineerRoute }$`)}
+        className='about-text-box'
+        to={`${engineerRoute}`}
+        $matchpath={!!pathname.match(`${engineerRoute}$`)}
       >
         Engineer
       </AboutTextBox>
       <AboutTextBox
-        to={`${ technologyRoute }`}
-        $matchpath={pathname.match(`${ technologyRoute }`)}
+        className='about-text-box'
+        to={`${technologyRoute}`}
+        $matchpath={pathname.match(`${technologyRoute}`)}
       >
         Technology
       </AboutTextBox>

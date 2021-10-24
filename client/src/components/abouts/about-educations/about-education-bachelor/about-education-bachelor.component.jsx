@@ -1,16 +1,22 @@
-import React from "react";
-import EducationGrid from "../../about-commons/education-parts/education-grid/education-grid.component";
+import React from 'react';
+import EducationGrid from '../../about-commons/education-parts/education-grid/education-grid.component';
 import {
-  AboutEducationBachelorAttributes, AboutEducationBachelorContent, AboutEducationBachelorDegree,
+  AboutEducationBachelorAttributes,
+  AboutEducationBachelorContent,
+  AboutEducationBachelorDegree,
   AboutEducationBachelorGrade,
-  AboutEducationBachelorLength, AboutEducationBachelorSchool, AboutEducationBachelorStartEndDate, AboutEducationBachelorTitle
-} from "./about-education-bachelor.styles";
-
+  AboutEducationBachelorLength,
+  AboutEducationBachelorSchool,
+  AboutEducationBachelorStartEndDate,
+  AboutEducationBachelorTitle,
+} from './about-education-bachelor.styles';
 
 export const AboutEducationBachelor = ({ lastBachelor }) => {
   return (
-    <AboutEducationBachelorContent>
-      <AboutEducationBachelorTitle>Bachelor</AboutEducationBachelorTitle>
+    <AboutEducationBachelorContent className='about-education-bachelor-content'>
+      <AboutEducationBachelorTitle className='about-education-bachelor-title'>
+        Bachelor
+      </AboutEducationBachelorTitle>
       {lastBachelor.map(
         ({
           id,
@@ -24,20 +30,20 @@ export const AboutEducationBachelor = ({ lastBachelor }) => {
         }) => {
           return (
             <div key={id}>
-              <AboutEducationBachelorAttributes>
-                <AboutEducationBachelorSchool>
+              <AboutEducationBachelorAttributes className='about-education-bachelor-attributes'>
+                <AboutEducationBachelorSchool className='about-education-bachelor'>
                   {school}
                 </AboutEducationBachelorSchool>
-                <AboutEducationBachelorDegree>
+                <AboutEducationBachelorDegree className='about-education-bachelor'>
                   {degree}
                 </AboutEducationBachelorDegree>
-                <AboutEducationBachelorStartEndDate>
+                <AboutEducationBachelorStartEndDate className='about-education-bachelor'>
                   {startDate} - {endDate}
                 </AboutEducationBachelorStartEndDate>
-                <AboutEducationBachelorLength>
+                <AboutEducationBachelorLength className='about-education-bachelor'>
                   {length}
                 </AboutEducationBachelorLength>
-                <AboutEducationBachelorGrade>
+                <AboutEducationBachelorGrade className='about-education-bachelor'>
                   {grade}
                 </AboutEducationBachelorGrade>
               </AboutEducationBachelorAttributes>

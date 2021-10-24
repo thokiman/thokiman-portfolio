@@ -99,9 +99,10 @@ export const Header = ({
     }
   }, [pathname]);
 
-  const onMorphingTransition = () => {
+  const toggleHeader = () => {
     toggleHeaderMorphingActive(true);
   };
+
   return (
     <>
       <SideBarIcon />
@@ -113,7 +114,7 @@ export const Header = ({
           to={homepageRoute}
           $matchpath={!!pathname.match(RegExp(/^\/$/))}
           $issidebaractive={isSideBarActive}
-          onClick={onMorphingTransition}
+          onClick={toggleHeader}
         >
           <HeaderPILogo />
         </HeaderPILogoContainer>
@@ -131,7 +132,7 @@ export const Header = ({
             )}
             to={homepageRoute}
             $matchpath={!!pathname.match(RegExp(/^\/$/))}
-            onClick={onMorphingTransition}
+            onClick={toggleHeader}
           >
             Home
           </HeaderLink>
@@ -147,7 +148,7 @@ export const Header = ({
             )}
             to={aboutRoute}
             $matchpath={!!pathname.match(RegExp(`${aboutRoute}+`))}
-            onClick={onMorphingTransition}
+            onClick={() => toggleHeader(aboutRoute)}
           >
             About
           </HeaderLink>
@@ -164,7 +165,7 @@ export const Header = ({
             )}
             to={portfolioDefaultRoute}
             $matchpath={!!pathname.match(RegExp(`${portfolioDefaultRoute}+`))}
-            onClick={onMorphingTransition}
+            onClick={toggleHeader}
           >
             Portfolio
           </HeaderLink>
@@ -181,7 +182,7 @@ export const Header = ({
             )}
             to={serviceRoute}
             $matchpath={!!pathname.match(RegExp(`${serviceRoute}+`))}
-            onClick={onMorphingTransition}
+            onClick={toggleHeader}
           >
             Service
           </HeaderLink>
@@ -198,7 +199,7 @@ export const Header = ({
             )}
             to={contactRoute}
             $matchpath={!!pathname.match(RegExp(`${contactRoute}+`))}
-            onClick={onMorphingTransition}
+            onClick={toggleHeader}
           >
             Contact
           </HeaderLink>

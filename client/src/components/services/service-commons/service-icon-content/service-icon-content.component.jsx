@@ -1,18 +1,25 @@
-import React from "react";
+import React from 'react';
 import {
   ServiceIcon,
-  ServiceIconContainer, ServiceIconItem, ServiceJobTitle
-} from "./service-icon.styles";
-
+  ServiceIconContainer,
+  ServiceIconItem,
+  ServiceJobTitle,
+} from './service-icon.styles';
 
 export const ServiceIconContent = ({ items, jobDetail }) => {
   return (
     <>
-      {jobDetail ? <ServiceJobTitle>{jobDetail}</ServiceJobTitle> : ""}
+      {jobDetail ? (
+        <ServiceJobTitle className='service-icon-job-detail'>
+          {jobDetail}
+        </ServiceJobTitle>
+      ) : (
+        ''
+      )}
       <ServiceIcon>
         {items.map(({ id, field, iconPath }) => {
           return (
-            <ServiceIconContainer key={id}>
+            <ServiceIconContainer className='service-icon' key={id}>
               <ServiceIconItem src={iconPath} alt={field} />
             </ServiceIconContainer>
           );

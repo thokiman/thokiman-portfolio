@@ -22,7 +22,10 @@ export const AboutSkill = ({
   isSideBarActive,
 }) => {
   return (
-    <SkillContainer $issidebaractive={isSideBarActive}>
+    <SkillContainer
+      className='skill-container'
+      $issidebaractive={isSideBarActive}
+    >
       <SkillHeader />
       <Switch>
         <Route

@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 const whiteSmokeColor = '#e3e1e4';
 const maxWidthSmartphone = 800;
@@ -78,28 +78,40 @@ export const VisualArtGridItem = styled.div`
     grid-column: 3 / 4;
     grid-row: 3 / 4;
   }
+  @media only screen and (max-width: 800px) {
+    &:nth-child(1) {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+    }
+    &:nth-child(2) {
+      grid-column: 3 / 4;
+      grid-row: 1 / 3;
+    }
+    &:nth-child(3) {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+    &:nth-child(4) {
+      grid-column: 1/2;
+      grid-row: 3/4;
+    }
+    &:nth-child(5) {
+      grid-column: 2 / 3;
+      grid-row: 2 / 4;
+    }
+    &:nth-child(6) {
+      grid-column: 3 / 4;
+      grid-row: 3 / 4;
+    }
+  }
 `;
-const swingInBottomFwdImage = keyframes`
-  
- 0% {
-    transform: rotateX(100deg);
-    transform-origin: bottom;
-    opacity: 0;
-  }
-  100% {
-    transform: rotateX(0);
-    transform-origin: bottom;
-    opacity: 1;
-  }
 
-`;
 export const VisualArtImage = styled.img`
-  animation: ${swingInBottomFwdImage} 5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
-    both;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: 30% 50%;
+
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     object-position: center 30%;
   }

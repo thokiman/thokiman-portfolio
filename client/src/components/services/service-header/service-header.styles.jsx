@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import styled, { css, keyframes } from 'styled-components';
 const maxWidthTablet = 1024;
 const maxWidthDesktop = 1366;
-const backgroundColorLeftServiceContainer = 'rgba(18, 129, 148, 0.5)';
-const borderColorDirectoryService = 'rgba(18, 129, 148, 0.5)';
+const backgroundColorLeftServiceContainer = 'rgba(18, 129, 148, 0.35)';
+const borderColorDirectoryService = 'rgba(63,66,73,0.4)';
 const grayColor = '#3f4249';
 const whiteSmokeColor = '#e3e1e4';
 const lightBlueColor = '#74c6d4';
@@ -42,8 +42,8 @@ export const DirectoryService = styled.div`
     'directory-service-text-eng directory-service-text-eng directory-service-text-fsd directory-service-text-fsd'
     'directory-service-text-gd directory-service-text-gd directory-service-text-fsd directory-service-text-fsd'
     'directory-service-text-gd directory-service-text-gd directory-service-text-pg directory-service-text-pg';
-  height: 76%;
-  width: 95%;
+  height: fit-content;
+  width: fit-content;
   cursor: default;
   @media only screen and (max-width: ${maxWidthDesktop}px) {
     width: 98vw;
@@ -91,7 +91,7 @@ const DirectoryServiceTextStyles = css`
   display: flex;
   align-items: center;
   letter-spacing: 0.02em;
-  padding: 0 10px;
+  padding: 25px;
   color: ${whiteSmokeColor};
   transition: color 1s linear;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
@@ -103,18 +103,7 @@ const DirectoryServiceTextStyles = css`
 const DirectoryServiceTextEngStyles = css`
   ${DirectoryServiceTextStyles}
   grid-area: directory-service-text-eng;
-  text-align: justify;
-  justify-content: flex-end;
-  ${
-    '' /* @media only screen and (max-width: ${maxWidthDesktop}px) {
-    border: red solid 1px;
-    height: 10vh;
-  }
-  @media only screen and (max-width: ${maxWidthTablet}px) {
-    border: red solid 1px;
-    height: 9vh;
-  } */
-  }
+  justify-content: center;
 `;
 const DirectoryServiceTextEngHide = css`
   ${DirectoryServiceTextEngStyles}
@@ -146,18 +135,7 @@ const DirectoryServiceTextFsdStyles = css`
   ${DirectoryServiceTextStyles}
   grid-area: directory-service-text-fsd;
   line-height: 1.1em;
-  text-align: left;
-  justify-content: flex-start;
-  ${
-    '' /* @media only screen and (max-width: ${maxWidthDesktop}px) {
-    border: red solid 1px;
-    height: 10vh;
-  }
-  @media only screen and (max-width: ${maxWidthTablet}px) {
-    border: red solid 1px;
-    height: 9vh;
-  } */
-  }
+  justify-content: center;
 `;
 const DirectoryServiceTextFsdHide = css`
   ${DirectoryServiceTextFsdStyles}
@@ -188,18 +166,8 @@ const DirectoryServiceTextGdStyles = css`
   ${DirectoryServiceTextStyles}
   grid-area: directory-service-text-gd;
   line-height: 1.45em;
-  text-align: end;
-  justify-content: flex-end;
-  ${
-    '' /* @media only screen and (max-width: ${maxWidthDesktop}px) {
-    border: red solid 1px;
-    height: 10vh;
-  }
-  @media only screen and (max-width: ${maxWidthTablet}px) {
-    border: red solid 1px;
-    height: 9vh;
-  } */
-  }
+
+  justify-content: center;
 `;
 const DirectoryServiceTextGdHide = css`
   ${DirectoryServiceTextGdStyles}
@@ -230,18 +198,8 @@ const DirectoryServiceTextPgStyles = css`
   ${DirectoryServiceTextStyles}
   grid-area: directory-service-text-pg;
   line-height: 1.1em;
-  text-align: left;
-  justify-content: flex-start;
-  ${
-    '' /* @media only screen and (max-width: ${maxWidthDesktop}px) {
-    border: red solid 1px;
-    height: 10vh;
-  }
-  @media only screen and (max-width: ${maxWidthTablet}px) {
-    border: red solid 1px;
-    height: 9vh;
-  } */
-  }
+
+  justify-content: center;
 `;
 const DirectoryServiceTextPgHide = css`
   ${DirectoryServiceTextPgStyles}

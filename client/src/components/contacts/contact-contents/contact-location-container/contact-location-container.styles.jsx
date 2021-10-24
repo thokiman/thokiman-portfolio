@@ -13,6 +13,7 @@ const getSideBarActive = ({ $issidebaractive }) => {
   return null;
 };
 export const ContactLocationContainer = styled.div`
+  z-index: 1;
   width: 30%;
   height: 100%;
   background-color: ${backgroundColorContactLocationContainer};
