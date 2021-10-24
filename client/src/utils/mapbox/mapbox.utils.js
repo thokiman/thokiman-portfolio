@@ -7,10 +7,8 @@ import MapboxWorker from 'worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker';
 
 mapboxgl.workerClass = MapboxWorker;
 
-export let mapBoxAccessToken;
-if (process.env.NODE_ENV === 'development') {
-  mapBoxAccessToken = process.env.REACT_APP_MAPBOX_PUBLIC_TOKEN;
-}
+export const mapBoxAccessToken =
+  'pk.eyJ1IjoidGhvbWFzOTRtYXAiLCJhIjoiY2toOXBrZ2xyMG0wYzJ5azg5ZXNyOHllcSJ9.rpgW1UPijqpcrVFBNsQ93Q';
 
 mapboxgl.accessToken = mapBoxAccessToken;
 
