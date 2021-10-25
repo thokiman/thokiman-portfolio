@@ -1,3 +1,4 @@
+import useWindowDimensions from 'components/hooks/window-dimensions/useWindowDimensions.component.jsx';
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -6,6 +7,7 @@ import { selectIsSideBarActive } from '../../../redux/header/header.selectors';
 import {
   FooterContainer,
   FooterCreamPrickInklaim,
+  FooterGeneralIcon,
   FooterWhiteOutlineThokiman,
   ProfileFooterContainer,
   ProfileFooterIcon,
@@ -13,21 +15,43 @@ import {
   SocialFooterContainer,
   SocialItem,
 } from './footer-general.styles';
+import {
+  measureFooterGeneralIconStyles,
+  measureProfileFooterIconStyles,
+} from './footer-general.utils.style.js';
 
 export const FooterGeneral = ({ socialIcon, isSideBarActive }) => {
+  const { viewWidth, viewHeight } = useWindowDimensions();
   return (
     <FooterContainer
       $issidebaractive={isSideBarActive}
       className='footer-general'
     >
       <ProfileFooterContainer>
-        <ProfileFooterIcon>
-          <div className='footer-general-icon'>
+        <ProfileFooterIcon
+          $measureprofilefootericon={measureProfileFooterIconStyles(
+            viewWidth,
+            viewHeight
+          )}
+        >
+          <FooterGeneralIcon
+            $measurefootergeneralicon={measureFooterGeneralIconStyles(
+              viewWidth,
+              viewHeight
+            )}
+            className='footer-general-icon'
+          >
             <FooterCreamPrickInklaim />
-          </div>
-          <div className='footer-general-icon'>
+          </FooterGeneralIcon>
+          <FooterGeneralIcon
+            $measurefootergeneralicon={measureFooterGeneralIconStyles(
+              viewWidth,
+              viewHeight
+            )}
+            className='footer-general-icon'
+          >
             <FooterWhiteOutlineThokiman />
-          </div>
+          </FooterGeneralIcon>
         </ProfileFooterIcon>
         <ProfileFooterText
           className='footer-text'

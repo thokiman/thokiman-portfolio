@@ -95,6 +95,10 @@ const piCreamAnimate = keyframes`
 
 `;
 
+const getWidthProfileFooterIcon = ({ $measureprofilefootericon }) => {
+  return $measureprofilefootericon.width;
+};
+
 export const ProfileFooterIcon = styled.div`
   width: 200px;
   height: 8vh;
@@ -102,7 +106,8 @@ export const ProfileFooterIcon = styled.div`
   justify-content: center;
 
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    width: 35vw;
+    width: ${getWidthProfileFooterIcon}vw;
+    justify-content: flex-end;
   }
 
   .thoki-out-cream {
@@ -118,10 +123,20 @@ export const ProfileFooterIcon = styled.div`
   }
 `;
 
+const getWidthFooterGeneralIcon = ({ $measurefootergeneralicon }) => {
+  return $measurefootergeneralicon.width;
+};
+const getHeightFooterGeneralIcon = ({ $measurefootergeneralicon }) => {
+  return $measurefootergeneralicon.height;
+};
+
+export const FooterGeneralIcon = styled.div`
+  width: ${getWidthFooterGeneralIcon}vw;
+  height: ${getHeightFooterGeneralIcon}vh;
+`;
 const FooterIcon = css`
   width: 100%;
   height: 100%;
-  margin: 2px;
 `;
 
 export const FooterCreamPrickInklaim = styled(CreamPrickInklaim)`

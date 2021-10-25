@@ -93,24 +93,23 @@ const SideBarChangeStyles = css`
   border-radius: 20px 20px 20px 20px;
 `;
 
+const getTopSideBarOne = ({ $measuresidebarone }) => {
+  return $measuresidebarone.top;
+};
+const getLeftSideBarOne = ({ $measuresidebarone }) => {
+  return $measuresidebarone.left;
+};
+
 const SideBarOneChange = css`
   ${SideBarChangeStyles}
+
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     position: relative;
 
-    top: 2.1vh;
-    left: -2.5vw;
+    top: ${getTopSideBarOne}vh;
+    left: ${getLeftSideBarOne}vw;
     transform: rotate(-45deg);
     animation: ${sideBarOneChange} 0.4s ease-in-out;
-  }
-  @media only screen and (max-width: 550px) {
-    top: 0.1vh;
-    left: -1.4vw;
-  }
-
-  @media only screen and (max-width: 300px) {
-    top: 1vh;
-    left: 1vw;
   }
 `;
 
@@ -118,26 +117,23 @@ const SideBarTwoChange = css`
   opacity: 0;
 `;
 
+const getTopSideBarThree = ({ $measuresidebarthree }) => {
+  return $measuresidebarthree.top;
+};
+const getLeftSideBarThree = ({ $measuresidebarthree }) => {
+  return $measuresidebarthree.left;
+};
+
 const SideBarThreeChange = css`
   ${SideBarChangeStyles}
+
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     position: relative;
 
-    top: 2vh;
-    left: -1.9vw;
+    top: ${getTopSideBarThree}vh;
+    left: ${getLeftSideBarThree}vw;
     transform: rotate(45deg);
     animation: ${sideBarThreeChange} 0.4s ease-in-out;
-  }
-  @media only screen and (max-width: 550px) {
-    top: -0.2vh;
-    left: -0.5vw;
-  }
-  @media only screen and (max-width: 350px) {
-    top: -1px;
-  }
-  @media only screen and (max-width: 300px) {
-    top: 0.8vh;
-    left: 2vw;
   }
 `;
 
