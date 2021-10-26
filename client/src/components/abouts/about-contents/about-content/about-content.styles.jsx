@@ -14,7 +14,13 @@ const getSideBarActive = ({ $issidebaractive }) => {
   if ($issidebaractive) return SideBarActive;
   return null;
 };
+
+const getTopRightPageContainer = ({ $measurerightpagecontainer }) => {
+  return $measurerightpagecontainer.top
+}
 export const RightPageContainer = styled.div`
+  position: relative;
+  top: ${getTopRightPageContainer}vh;
   background-color: ${backgroundRightPageContainerColor};
   width: 64.5vw;
   margin-right: 2vw;

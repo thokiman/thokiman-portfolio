@@ -1,3 +1,4 @@
+import useWindowDimensions from 'components/hooks/window-dimensions/useWindowDimensions.component';
 import React from 'react';
 import { GiSharpSmile } from 'react-icons/gi';
 import { ImGrin } from 'react-icons/im';
@@ -28,6 +29,7 @@ import {
   ThokimanExcitedFaceIcon,
   ThokimanNormalFaceIcon,
 } from './about-content-summary.styles';
+import { measureSummaryContainerProps } from './about-content-summary.utils.style';
 
 export const AboutSummary = ({
   longDescription: { p1, p2, p3, p4 },
@@ -38,8 +40,10 @@ export const AboutSummary = ({
   toggleVibrate,
   isSideBarActive,
 }) => {
+  const { viewWidth, viewHeight } = useWindowDimensions();
   return (
     <SummaryContainer
+      $summarycontainer={measureSummaryContainerProps(viewWidth, viewHeight)}
       className='summary-container'
       $issidebaractive={isSideBarActive}
     >

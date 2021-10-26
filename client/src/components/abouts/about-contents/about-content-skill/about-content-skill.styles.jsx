@@ -6,8 +6,15 @@ const AboutContentSkillIsNotActivated = css`
   display: none;
 `;
 const getSideBarActive = ({ $issidebaractive }) => {
-  if ($issidebaractive) return AboutContentSkillIsNotActivated;
-  return null;
+  if ($issidebaractive) {
+    return AboutContentSkillIsNotActivated;
+  } else {
+    return null;
+  }
+};
+
+const getTopSkillContainer = ({ $measureskillcontainer }) => {
+  return $measureskillcontainer.top;
 };
 
 export const SkillContainer = styled.div`
@@ -20,12 +27,11 @@ export const SkillContainer = styled.div`
 
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     position: absolute;
-    top: 44vh;
+    top: ${getTopSkillContainer}vh;
     width: 100vw;
-
     overflow-y: hidden;
-
     margin: 0;
+
     ${getSideBarActive}
   }
 `;

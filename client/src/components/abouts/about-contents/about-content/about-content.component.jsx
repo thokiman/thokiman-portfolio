@@ -1,3 +1,4 @@
+import useWindowDimensions from 'components/hooks/window-dimensions/useWindowDimensions.component';
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -22,10 +23,16 @@ import {
   ThokimanSkeletonLeftRightContent,
   ThokimanSkeletonMiddleContent,
 } from './about-content.styles';
+import { measureRightPageContainerProps } from './about-content.utils.style';
 
 export const AboutHomeContent = ({ isDropdownHidden, isSideBarActive }) => {
+  const { viewWidth, viewHeight } = useWindowDimensions();
   return (
     <RightPageContainer
+      $measurerightpagecontainer={measureRightPageContainerProps(
+        viewWidth,
+        viewHeight
+      )}
       $issidebaractive={isSideBarActive}
       className='right-page-container'
     >

@@ -1,5 +1,7 @@
 export const hasScreenSizeWindow = (viewWidth, viewHeight) =>
   viewWidth >= 1280 && viewHeight >= 979;
+export const hasScreenSizeWindow_1 = (viewWidth, viewHeight) =>
+  viewWidth > 1024 && viewWidth <= 1366 && viewHeight >= 979;
 
 export const hasScreenSize1_1 = (viewWidth, viewHeight) =>
   viewWidth === 1024 && viewHeight === 1366;
@@ -11,7 +13,7 @@ export const hasScreenSize1_3 = (viewWidth, viewHeight) =>
   viewWidth > 772 && viewWidth <= 1024 && viewHeight <= 600;
 
 export const hasScreenSize1 = (viewWidth) =>
-  viewWidth > 540 && viewWidth <= 772;
+  viewWidth > 540 && viewWidth <= 772; // iphone 6s
 
 export const hasScreenSize2 = (viewWidth) =>
   viewWidth > 470 && viewWidth <= 550;

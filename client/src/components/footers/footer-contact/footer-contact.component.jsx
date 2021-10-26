@@ -1,10 +1,16 @@
+import useWindowDimensions from 'components/hooks/window-dimensions/useWindowDimensions.component';
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { selectIsSideBarActive } from '../../../redux/header/header.selectors';
 import {
+  measureFooterGeneralIconStyles,
+  measureProfileFooterIconStyles,
+} from '../commons/footer.utils.style';
+import {
   FooterContainerContact,
   FooterCreamPrickInklaim,
+  FooterGeneralIcon,
   FooterWhiteOutlineThokiman,
   ProfileFooterContainerContact,
   ProfileFooterIconContact,
@@ -12,19 +18,37 @@ import {
 } from './footer-contact.styles';
 
 export const FooterContact = ({ isSideBarActive }) => {
+  const { viewWidth, viewHeight } = useWindowDimensions();
   return (
     <FooterContainerContact
       $issidebaractive={isSideBarActive}
       className='footer-contact'
     >
-      <ProfileFooterContainerContact>
+      <ProfileFooterContainerContact
+        $measureprofilefootericon={measureProfileFooterIconStyles(
+          viewWidth,
+          viewHeight
+        )}
+      >
         <ProfileFooterIconContact>
-          <div className='footer-general-icon'>
+          <FooterGeneralIcon
+            $measurefootergeneralicon={measureFooterGeneralIconStyles(
+              viewWidth,
+              viewHeight
+            )}
+            className='footer-general-icon'
+          >
             <FooterCreamPrickInklaim />
-          </div>
-          <div className='footer-general-icon'>
+          </FooterGeneralIcon>
+          <FooterGeneralIcon
+            $measurefootergeneralicon={measureFooterGeneralIconStyles(
+              viewWidth,
+              viewHeight
+            )}
+            className='footer-general-icon'
+          >
             <FooterWhiteOutlineThokiman />
-          </div>
+          </FooterGeneralIcon>
         </ProfileFooterIconContact>
         <ProfileFooterTextContact className='footer-text'>
           Copyright<sup>&#9400;</sup>2021.

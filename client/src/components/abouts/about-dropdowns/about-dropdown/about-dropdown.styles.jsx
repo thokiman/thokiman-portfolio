@@ -80,7 +80,6 @@ const getAboutDropdownContainer = ({ $matchpath }) => {
 };
 
 export const AboutDropdownContainer = styled.div`
-  z-index: 1;
   ${getAboutDropdownContainer}
 `;
 AboutDropdownContainer.displayName = 'AboutDropdownContainer';

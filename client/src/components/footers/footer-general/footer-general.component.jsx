@@ -5,6 +5,10 @@ import { createStructuredSelector } from 'reselect';
 import { selectSocialIconContact } from '../../../redux/contact/contact.selectors.js';
 import { selectIsSideBarActive } from '../../../redux/header/header.selectors';
 import {
+  measureFooterGeneralIconStyles,
+  measureProfileFooterIconStyles,
+} from '../commons/footer.utils.style.js';
+import {
   FooterContainer,
   FooterCreamPrickInklaim,
   FooterGeneralIcon,
@@ -15,10 +19,6 @@ import {
   SocialFooterContainer,
   SocialItem,
 } from './footer-general.styles';
-import {
-  measureFooterGeneralIconStyles,
-  measureProfileFooterIconStyles,
-} from './footer-general.utils.style.js';
 
 export const FooterGeneral = ({ socialIcon, isSideBarActive }) => {
   const { viewWidth, viewHeight } = useWindowDimensions();

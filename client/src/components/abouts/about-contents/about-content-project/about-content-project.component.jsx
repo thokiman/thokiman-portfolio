@@ -1,3 +1,4 @@
+import useWindowDimensions from 'components/hooks/window-dimensions/useWindowDimensions.component';
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -13,6 +14,7 @@ import AboutCourseProject from '../../about-projects/about-project-course/about-
 import AboutExperienceProject from '../../about-projects/about-project-experience/about-project-experience.component';
 import AboutThesisProject from '../../about-projects/about-project-thesis/about-project-thesis.component';
 import { ProjectContainer } from './about-content-project.styles';
+import { measureProjectContainerProps } from './about-content-project.utils.style';
 
 export const AboutProject = ({
   thesis,
@@ -21,8 +23,13 @@ export const AboutProject = ({
   lastExperiences,
   isSideBarActive,
 }) => {
+  const { viewWidth, viewHeight } = useWindowDimensions();
   return (
     <ProjectContainer
+      $measureprojectcontainer={measureProjectContainerProps(
+        viewWidth,
+        viewHeight
+      )}
       className='project-container'
       $issidebaractive={isSideBarActive}
     >

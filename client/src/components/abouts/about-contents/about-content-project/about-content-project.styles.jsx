@@ -9,6 +9,10 @@ const getSideBarActive = ({ $issidebaractive }) => {
   if ($issidebaractive) return AboutContentProjectIsNotActivated;
   return null;
 };
+
+const getTopProjectContainer = ({ $measureprojectcontainer }) => {
+  return $measureprojectcontainer.top;
+};
 export const ProjectContainer = styled.div`
   background-color: ${backgroundProjectContainerColor};
   width: 64.5vw;
@@ -18,6 +22,8 @@ export const ProjectContainer = styled.div`
   overflow-y: scroll;
   overflow-x: hidden;
   font-family: baskerville-old-face;
+  position: relative;
+  top: ${getTopProjectContainer}vh;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 100%;
     overflow-y: hidden;

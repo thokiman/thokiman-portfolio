@@ -51,6 +51,10 @@ export const HomepageIsNotActivated = styled.div`
     both;
 `;
 
+const getHeightHomepageContainer = ({ $measurehomepagecontainer }) => {
+  return $measurehomepagecontainer.height;
+};
+
 const HomepageIsActivated = css`
   @media only screen and (max-width: ${maxWidthDesktop}px) {
     position: relative;
@@ -58,13 +62,7 @@ const HomepageIsActivated = css`
     width: 100vw;
     transition: left 0.5s ease;
     opacity: 1;
-    height: 500vh;
-  }
-  @media only screen and (max-width: ${maxWidthTabletPro}px) {
-    height: 380vh;
-  }
-  @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    height: 360vh;
+    height: ${getHeightHomepageContainer}vh;
   }
 `;
 

@@ -97,10 +97,21 @@ export const ProfileFooterIconContact = styled.div`
   }
 `;
 
+const getWidthFooterGeneralIcon = ({ $measurefootergeneralicon }) => {
+  return $measurefootergeneralicon.width;
+};
+const getHeightFooterGeneralIcon = ({ $measurefootergeneralicon }) => {
+  return $measurefootergeneralicon.height;
+};
+
+export const FooterGeneralIcon = styled.div`
+  width: ${getWidthFooterGeneralIcon}vw;
+  height: ${getHeightFooterGeneralIcon}vh;
+`;
+
 const FooterIconContact = css`
   width: 100%;
   height: 100%;
-  margin: 2px;
 `;
 
 export const FooterCreamPrickInklaim = styled(CreamPrickInklaim)`

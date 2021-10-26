@@ -1,3 +1,4 @@
+import useWindowDimensions from 'components/hooks/window-dimensions/useWindowDimensions.component';
 import React from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch, withRouter } from 'react-router-dom';
@@ -13,6 +14,7 @@ import SkillHeader from '../../about-skills/about-skill-header/about-skill-heade
 import TechnologySkill from '../../about-skills/about-skill-technology/about-skill-technology.component';
 import VisualArtSkill from '../../about-skills/about-skill-visual-art/about-skill-visual-art.component';
 import { SkillContainer } from './about-content-skill.styles';
+import { measureSkillContainerProps } from './about-content-skill.utils.style';
 
 export const AboutSkill = ({
   match: { url },
@@ -21,9 +23,11 @@ export const AboutSkill = ({
   technology,
   isSideBarActive,
 }) => {
+  const { viewWidth, viewHeight } = useWindowDimensions();
   return (
     <SkillContainer
       className='skill-container'
+      $measureskillcontainer={measureSkillContainerProps(viewWidth, viewHeight)}
       $issidebaractive={isSideBarActive}
     >
       <SkillHeader />

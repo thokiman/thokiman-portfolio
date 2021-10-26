@@ -12,6 +12,7 @@ import {
 export const measureSideBarOneStyles = (viewWidth, viewHeight) => {
   let sideBarOneProps;
   //left
+
   if (hasScreenSize1(viewWidth)) {
     sideBarOneProps = {
       top: 2.1,
@@ -64,6 +65,7 @@ export const measureSideBarOneStyles = (viewWidth, viewHeight) => {
 export const measureSideBarThreeStyles = (viewWidth, viewHeight) => {
   // right
   let sideBarThreeProps;
+
   if (hasScreenSize1(viewWidth)) {
     sideBarThreeProps = {
       top: 1.75,
@@ -106,8 +108,8 @@ export const measureSideBarThreeStyles = (viewWidth, viewHeight) => {
     };
   } else {
     sideBarThreeProps = {
-      top: -1,
-      left: 0.5,
+      top: -0.2,
+      left: -0.4,
     };
   }
   return sideBarThreeProps;

@@ -1,3 +1,4 @@
+import useWindowDimensions from 'components/hooks/window-dimensions/useWindowDimensions.component';
 import React from 'react';
 import { connect } from 'react-redux';
 import { animateScroll as scroll } from 'react-scroll';
@@ -14,6 +15,7 @@ import {
   AboutTimelineCareerTitle,
   AboutTimelineContainer,
 } from './about-timeline-career.styles';
+import { measureTimelineContainerProps } from './about-timeline-career.utils.style';
 
 export const AboutTimelineCareer = ({
   careerPath: {
@@ -23,6 +25,7 @@ export const AboutTimelineCareer = ({
   isSideBarActive,
   lowWaveImage,
 }) => {
+  const { viewWidth, viewHeight } = useWindowDimensions();
   const scrollToTop = () => {
     scroll.scrollToTop();
   };
@@ -31,6 +34,10 @@ export const AboutTimelineCareer = ({
     <AboutTimelineContainer
       $issidebaractive={isSideBarActive}
       $lowWaveImage={lowWaveImage}
+      $measuretimelinecontainer={measureTimelineContainerProps(
+        viewWidth,
+        viewHeight
+      )}
     >
       <TimelineCareerHeader />
       <AboutTimelineCareerTitle className='about-timeline-career-title'>

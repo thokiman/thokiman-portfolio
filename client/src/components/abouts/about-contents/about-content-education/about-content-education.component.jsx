@@ -1,3 +1,4 @@
+import useWindowDimensions from 'components/hooks/window-dimensions/useWindowDimensions.component';
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -13,6 +14,7 @@ import AboutEducationCourse from '../../about-educations/about-education-course/
 import AboutEducationExperience from '../../about-educations/about-education-experience/about-education-experience.component';
 import AboutEducationPersonality from '../../about-educations/about-education-personality/about-education-personality.component';
 import { EducationContainer } from './about-content-education.styles';
+import { measureEducationContainerProps } from './about-content-education.utils.style';
 
 export const AboutEducation = ({
   lastBachelor,
@@ -21,9 +23,14 @@ export const AboutEducation = ({
   personality,
   isSideBarActive,
 }) => {
+  const { viewWidth, viewHeight } = useWindowDimensions();
   return (
     <EducationContainer
       className='education-container'
+      $measureeducationcontainer={measureEducationContainerProps(
+        viewWidth,
+        viewHeight
+      )}
       $issidebaractive={isSideBarActive}
     >
       <AboutEducationBachelor lastBachelor={lastBachelor} />

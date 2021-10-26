@@ -18,6 +18,9 @@ const getSideBarActive = ({ $issidebaractive }) => {
   return null;
 };
 
+const getTopSummaryContainer = ({ $summarycontainer }) => {
+  return $summarycontainer.top;
+};
 export const SummaryContainer = styled.div`
   background-color: ${backgroundSummaryContainerColor};
   width: 64.5vw;
@@ -27,6 +30,8 @@ export const SummaryContainer = styled.div`
   overflow-x: hidden;
   font-family: baskerville-old-face;
   padding: 40px 0;
+  position: relative;
+  top: ${getTopSummaryContainer}vh;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 100%;
     margin: 0;

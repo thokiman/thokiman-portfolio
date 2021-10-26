@@ -17,7 +17,10 @@ import {
   HomepageElement,
   HomepageIsNotActivated,
 } from './homepage.styles';
-import { measureHomepageIsNotActivated } from './homepage.utils.styles';
+import {
+  measureHomepageContainerProps,
+  measureHomepageIsNotActivated,
+} from './homepage.utils.styles';
 
 export const Homepage = (props) => {
   const { viewWidth, viewHeight } = useWindowDimensions();
@@ -25,7 +28,13 @@ export const Homepage = (props) => {
 
   return (
     <HomepageElement>
-      <HomepageContainer $issidebaractive={isSideBarActive}>
+      <HomepageContainer
+        $measurehomepagecontainer={measureHomepageContainerProps(
+          viewWidth,
+          viewHeight
+        )}
+        $issidebaractive={isSideBarActive}
+      >
         {props.isSideBarActive ? (
           <HomepageIsNotActivated
             $homepageisnotactivatedprops={measureHomepageIsNotActivated(

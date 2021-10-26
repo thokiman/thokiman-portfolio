@@ -9,6 +9,10 @@ const getSideBarActive = ({ $issidebaractive }) => {
   if ($issidebaractive) return AboutContentEducationIsNotActivated;
   return null;
 };
+
+const getTopEducationContainer = ({ $measureeducationcontainer }) => {
+  return $measureeducationcontainer.top;
+};
 export const EducationContainer = styled.div`
   background-color: ${backgroundEducationContainerColor};
   width: 64.5vw;
@@ -18,7 +22,8 @@ export const EducationContainer = styled.div`
   overflow-y: scroll;
   overflow-x: hidden;
   font-family: baskerville-old-face;
-
+  position: relative;
+  top: ${getTopEducationContainer}vh;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 100%;
     overflow-y: hidden;

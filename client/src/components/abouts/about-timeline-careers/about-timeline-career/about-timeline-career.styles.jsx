@@ -20,11 +20,17 @@ const getSideBarActive = ({ $issidebaractive }) => {
   return null;
 };
 
+const getTopTimelineContainer = ({ $measuretimelinecontainer }) => {
+  return $measuretimelinecontainer.top;
+};
+
 export const AboutTimelineContainer = styled.div`
   width: 80%;
   font-family: futura-demi;
 
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    position: relative;
+    top: ${getTopTimelineContainer}vh;
     width: 100%;
     background-image: url(${getTimelineImage});
     background-color: ${lightBlueColor};
