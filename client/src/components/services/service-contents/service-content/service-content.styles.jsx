@@ -21,6 +21,13 @@ const getSideBarActive = ({ $issidebaractive }) => {
   return null;
 };
 
+const getTopRightServiceContainer = ({ $measurerightpagecontainer }) => {
+  return $measurerightpagecontainer.top;
+};
+const getHeightRightServiceContainer = ({ $measurerightpagecontainer }) => {
+  return $measurerightpagecontainer.height;
+};
+
 export const RightServiceContainer = styled.div`
   background-color: ${backgroundColorRightServiceContainer};
   width: 66.3vw;
@@ -31,9 +38,11 @@ export const RightServiceContainer = styled.div`
   display: flex;
   justify-content: center;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    position: relative;
+    top: ${getTopRightServiceContainer}vh;
     width: 100%;
     right: 0;
-    height: 50vh;
+    height: ${getHeightRightServiceContainer}vh;
     ${getSideBarActive}
   }
 `;

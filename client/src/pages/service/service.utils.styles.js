@@ -87,10 +87,10 @@ export const measureServiceHeight = (
 ) => {
   let height;
   const serviceOffset = 100;
-  const engineerOffset = 100;
-  const artOffset = 100;
-  const devOffset = 100;
-  const photoOffset = 100;
+  const engineerOffset = 50;
+  const artOffset = 50;
+  const devOffset = 50;
+  const photoOffset = 50;
 
   switch (pathname) {
     case serviceRoute:
@@ -117,10 +117,10 @@ export const measureServiceHeight = (
         height = 140 + serviceOffset;
       } else if (hasScreenSize3_2(viewWidth, viewHeight)) {
         console.log('service route', 8);
-        height = 150 + serviceOffset;
+        height = 100 + serviceOffset;
       } else if (hasScreenSize3_3(viewWidth, viewHeight)) {
         console.log('service route', 9);
-        height = 140 + serviceOffset;
+        height = 120 + serviceOffset;
       } else if (hasScreenSize3_4(viewWidth, viewHeight)) {
         console.log('service route', 10);
         height = 140 + serviceOffset;
@@ -129,13 +129,13 @@ export const measureServiceHeight = (
         height = 140 + serviceOffset;
       } else if (hasScreenSize4(viewWidth, viewHeight)) {
         console.log('service route', 12);
-        height = 140 + serviceOffset;
+        height = 160 + serviceOffset;
       } else if (hasScreenSize5(viewWidth)) {
         console.log('service route', 13);
-        height = 140 + serviceOffset;
+        height = 80 + serviceOffset;
       } else {
         console.log('service route', 14);
-        height = 140; // need adjust
+        height = 300;
       }
       return height;
 

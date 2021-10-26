@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled, { css, keyframes } from 'styled-components';
-const maxWidthTablet = 1024;
 const maxWidthDesktop = 1366;
+const maxWidthTablet = 1024;
 const backgroundColorLeftServiceContainer = 'rgba(18, 129, 148, 0.35)';
 const borderColorDirectoryService = 'rgba(63,66,73,0.4)';
 const grayColor = '#3f4249';
@@ -17,9 +17,16 @@ const getSideBarActive = ({ $issidebaractive }) => {
   return null;
 };
 
+const getWidthLeftServiceContainer = ({ $measureleftservicecontainer }) => {
+  return $measureleftservicecontainer.width;
+};
+const getHeightLeftServiceContainer = ({ $measureleftservicecontainer }) => {
+  return $measureleftservicecontainer.height;
+};
+
 export const LeftServiceContainer = styled.div`
-  width: 25vw;
-  height: 68vh;
+  width: ${getWidthLeftServiceContainer}vw;
+  height: ${getHeightLeftServiceContainer}vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,12 +34,20 @@ export const LeftServiceContainer = styled.div`
   position: relative;
   left: 4vw;
   transition: height 0.5s ease-in-out, top 0.2s ease;
+
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    width: 100vw;
     left: 0;
     ${getSideBarActive}
   }
 `;
+
+const getWidthDirectoryService = ({ $measuredirectoryservice }) => {
+  return $measuredirectoryservice.width;
+};
+const getHeightDirectoryService = ({ $measuredirectoryservice }) => {
+  return $measuredirectoryservice.height;
+};
+
 export const DirectoryService = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -42,21 +57,22 @@ export const DirectoryService = styled.div`
     'directory-service-text-eng directory-service-text-eng directory-service-text-fsd directory-service-text-fsd'
     'directory-service-text-gd directory-service-text-gd directory-service-text-fsd directory-service-text-fsd'
     'directory-service-text-gd directory-service-text-gd directory-service-text-pg directory-service-text-pg';
-  height: fit-content;
-  width: fit-content;
+  height: ${getWidthDirectoryService};
+  width: ${getHeightDirectoryService};
   cursor: default;
-  @media only screen and (max-width: ${maxWidthDesktop}px) {
+
+  /* @media only screen and (max-width: ${maxWidthDesktop}px) {
     width: 98vw;
     height: 20vh;
   }
   @media only screen and (max-width: ${maxWidthTablet}px) {
     width: 98vw;
-    height: 15vh;
+    height: 40vh;
   }
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 98vw;
     height: 50vh;
-  }
+  } */
 `;
 const directoryServiceHover = keyframes`
     0% {

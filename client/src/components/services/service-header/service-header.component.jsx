@@ -9,6 +9,7 @@ import {
   selectEngineerService,
   selectPhotoService,
 } from '../../../redux/service/service.selectors';
+import useWindowDimensions from '../../hooks//window-dimensions/useWindowDimensions.component.jsx';
 import {
   DirectoryService,
   DirectoryServiceTextEng,
@@ -17,7 +18,10 @@ import {
   DirectoryServiceTextPg,
   LeftServiceContainer,
 } from './service-header.styles';
-
+import {
+  measureDirectoryServiceProps,
+  measureLeftServiceContainerProps,
+} from './service-header.utils.style.js';
 export const ServiceHeader = ({
   location: { pathname },
   art,
@@ -26,12 +30,22 @@ export const ServiceHeader = ({
   dev,
   isSideBarActive,
 }) => {
+  const { viewWidth, viewHeight } = useWindowDimensions();
   return (
     <LeftServiceContainer
       className='left-service-container'
       $issidebaractive={isSideBarActive}
+      $measureleftservicecontainer={measureLeftServiceContainerProps(
+        viewWidth,
+        viewHeight
+      )}
     >
-      <DirectoryService>
+      <DirectoryService
+        $measuredirectoryservice={measureDirectoryServiceProps(
+          viewWidth,
+          viewHeight
+        )}
+      >
         <DirectoryServiceTextEng
           className='directory-service-header'
           to={engineer.routeName}
