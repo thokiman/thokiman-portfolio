@@ -10,9 +10,8 @@ export const AboutVisualArtSkillContainer = styled.div`
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height: fit-content;
     overflow-y: hidden;
+    height: 100%;
   }
 `;
 export const AboutVisualArtContentContainer = styled.div`

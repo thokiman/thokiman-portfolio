@@ -100,34 +100,34 @@ export const measureAbouteHeight = (
         height = 300 + aboutVisualArtSkillOffset;
       } else if (hasScreenSize1(viewWidth)) {
         console.log('skill-route, visual-art-skill-route', 5);
-        height = 300 + aboutVisualArtSkillOffset;
+        height = 1000 + aboutVisualArtSkillOffset;
       } else if (hasScreenSize2(viewWidth)) {
         console.log('skill-route, visual-art-skill-route', 6);
-        height = 330 + aboutVisualArtSkillOffset;
+        height = 1000 + aboutVisualArtSkillOffset;
       } else if (hasScreenSize3_1(viewWidth, viewHeight)) {
         console.log('skill-route, visual-art-skill-route', 7);
-        height = 300 + aboutVisualArtSkillOffset;
+        height = 650 + aboutVisualArtSkillOffset;
       } else if (hasScreenSize3_2(viewWidth, viewHeight)) {
         console.log('skill-route, visual-art-skill-route', 8);
-        height = 270 + aboutVisualArtSkillOffset;
+        height = 600 + aboutVisualArtSkillOffset;
       } else if (hasScreenSize3_3(viewWidth, viewHeight)) {
         console.log('skill-route, visual-art-skill-route', 9);
-        height = 320 + aboutVisualArtSkillOffset;
+        height = 750 + aboutVisualArtSkillOffset;
       } else if (hasScreenSize3_4(viewWidth, viewHeight)) {
         console.log('skill-route, visual-art-skill-route', 10);
-        height = 350 + aboutVisualArtSkillOffset;
+        height = 750 + aboutVisualArtSkillOffset;
       } else if (hasScreenSize3_5(viewWidth, viewHeight)) {
         console.log('skill-route, visual-art-skill-route', 11);
         height = 320 + aboutVisualArtSkillOffset;
       } else if (hasScreenSize4(viewWidth, viewHeight)) {
         console.log('skill-route, visual-art-skill-route', 12);
-        height = 350 + aboutVisualArtSkillOffset;
+        height = 720 + aboutVisualArtSkillOffset;
       } else if (hasScreenSize5(viewWidth)) {
         console.log('skill-route, visual-art-skill-route', 13);
-        height = 350 + aboutVisualArtSkillOffset;
+        height = 550 + aboutVisualArtSkillOffset;
       } else {
         console.log('skill-route, visual-art-skill-route', 14);
-        height = 450;
+        height = 1400;
       }
       return height;
     case aboutEngineerSkillRoute:

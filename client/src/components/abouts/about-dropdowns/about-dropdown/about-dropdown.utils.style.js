@@ -36,7 +36,7 @@ export const measureAboutDropdownContainerProps = (viewWidth, viewHeight) => {
   } else if (hasScreenSize3_2(viewWidth, viewHeight)) {
     console.log('about-dropdown', 4);
     abouDropdownContainerProps = {
-      height: 42 + aboutDropdownContainerHeightOffset,
+      height: 52 + aboutDropdownContainerHeightOffset,
       top: 0 + aboutDropdownContainerTopOffset,
     };
   } else if (hasScreenSize3_3(viewWidth, viewHeight)) {
