@@ -34,7 +34,6 @@ export const VisualArtTitle = styled.div`
 `;
 
 export const VisualArtGridContent = styled.div`
-  border: red solid 1px;
   padding: 7px;
   display: grid;
   grid-gap: 3px;

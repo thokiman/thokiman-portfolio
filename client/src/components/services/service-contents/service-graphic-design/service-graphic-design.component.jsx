@@ -1,3 +1,4 @@
+import useWindowDimensions from 'components/hooks/window-dimensions/useWindowDimensions.component';
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -9,13 +10,19 @@ import {
   RightServiceContainerGd,
   RightServiceContentGd,
 } from './service-graphic-design.styles';
+import { measureRightPageContainerGdProps } from './service-graphic-design.utils.style';
 
 export const ServiceGraphicDesign = ({
   isSideBarActive,
   art: { title, description, items },
 }) => {
+  const { viewWidth, viewHeight } = useWindowDimensions();
   return (
     <RightServiceContainerGd
+      $measurerightpagecontainergd={measureRightPageContainerGdProps(
+        viewWidth,
+        viewHeight
+      )}
       className='right-service-container'
       $issidebaractive={isSideBarActive}
     >

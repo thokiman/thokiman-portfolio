@@ -127,7 +127,7 @@ export const measureAbouteHeight = (
         height = 550 + aboutVisualArtSkillOffset;
       } else {
         console.log('skill-route, visual-art-skill-route', 14);
-        height = 1400;
+        height = 1150;
       }
       return height;
     case aboutEngineerSkillRoute:

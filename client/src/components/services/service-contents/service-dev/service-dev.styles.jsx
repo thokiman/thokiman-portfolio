@@ -9,6 +9,13 @@ const getSideBarActive = ({ $issidebaractive }) => {
   return null;
 };
 
+const getHeightRightServiceContainerFS = ({ $measurerightpagecontainerfs }) => {
+  return $measurerightpagecontainerfs.height;
+};
+const getTopRightServiceContainerFS = ({ $measurerightpagecontainerfs }) => {
+  return $measurerightpagecontainerfs.top;
+};
+
 export const RightServiceContainerFS = styled.div`
   background-color: ${backgroundColorRightServiceContainerFS};
   width: 66.3vw;
@@ -19,32 +26,11 @@ export const RightServiceContainerFS = styled.div`
   overflow-y: scroll;
   overflow-x: hidden;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    top: ${getTopRightServiceContainerFS}vh;
+    height: ${getHeightRightServiceContainerFS}vh;
     overflow-y: hidden;
     width: 100%;
-    right: 0;
-    height: 309vh;
-    ${getSideBarActive}
-  }
-  @media only screen and (max-width: 550px) {
-    height: 285vh;
-    ${getSideBarActive}
-  }
-  @media only screen and (max-width: 470px) and (max-height: 823px) {
-    height: 180vh;
-    ${getSideBarActive}
-  }
-  @media only screen and (max-width: 470px) and (max-height: 812px) {
-    height: 175vh;
-    ${getSideBarActive}
-  }
-  @media only screen and (max-width: 470px) and (max-height: 736px) {
-    height: 230vh;
-    ${getSideBarActive}
-  }
-  @media only screen and (max-width: 470px) and (max-height: 667px) {
-  }
-  @media only screen and (max-width: 300px) {
-    height: 268vh;
+    right: 0vw;
     ${getSideBarActive}
   }
 `;

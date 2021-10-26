@@ -1,3 +1,4 @@
+import useWindowDimensions from 'components/hooks/window-dimensions/useWindowDimensions.component';
 import React from 'react';
 import { connect } from 'react-redux';
 import { selectIsSideBarActive } from 'redux/header/header.selectors';
@@ -6,6 +7,7 @@ import { selectPhotoService } from '../../../../redux/service/service.selectors'
 import ServiceIconContent from '../../service-commons/service-icon-content/service-icon-content.component';
 import ServiceUrlGeneralContent from '../../service-commons/service-url-general-content/service-url-general-content.component';
 import ServiceUrlIconContent from '../../service-commons/service-url-icon-content/service-url-icon-content.component';
+import { measureRightPageContainerPgProps } from './service-graphic-design.utils.style';
 import {
   RightServiceContainerPg,
   RightServiceContentPg,
@@ -16,8 +18,13 @@ export const ServicePhotography = ({
   photo: { title, description, photoStockItems, photographyIconItems },
   isSideBarActive,
 }) => {
+  const { viewWidth, viewHeight } = useWindowDimensions();
   return (
     <RightServiceContainerPg
+      $measureRightPageContainerPg={measureRightPageContainerPgProps(
+        viewWidth,
+        viewHeight
+      )}
       className='right-service-container'
       $issidebaractive={isSideBarActive}
     >

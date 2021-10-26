@@ -1,3 +1,4 @@
+import useWindowDimensions from 'components/hooks/window-dimensions/useWindowDimensions.component';
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -9,6 +10,7 @@ import {
   RightServiceContainerFS,
   RightServiceContentFS,
 } from './service-dev.styles';
+import { measureRightPageContainerFSProps } from './service-dev.utils.style';
 
 export const ServiceDev = ({
   isSideBarActive,
@@ -18,10 +20,15 @@ export const ServiceDev = ({
     items: { backend, dataengineer, frontend },
   },
 }) => {
+  const { viewWidth, viewHeight } = useWindowDimensions();
   return (
     <RightServiceContainerFS
       className='right-service-container'
       $issidebaractive={isSideBarActive}
+      $measurerightpagecontainerfs={measureRightPageContainerFSProps(
+        viewWidth,
+        viewHeight
+      )}
     >
       <RightServiceContentFS>
         <ServiceGeneralContent title={title} description={description} />

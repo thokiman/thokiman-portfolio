@@ -85,7 +85,7 @@ export const measureHomepageContainerProps = (viewWidth, viewHeight) => {
   } else {
     console.log('homepage', 14);
     homepageContainerProps = {
-      height: 520 + homepageOffset,
+      height: 440,
     };
   }
   return homepageContainerProps;
