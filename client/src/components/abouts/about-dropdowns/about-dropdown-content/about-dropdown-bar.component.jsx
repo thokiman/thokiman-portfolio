@@ -1,3 +1,4 @@
+import useWindowDimensions from 'components/hooks/window-dimensions/useWindowDimensions.component';
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
@@ -22,6 +23,10 @@ import {
   AboutThokimanHeadColorHide,
   AboutThokimanHeadColorShow,
 } from './about-dropdown-bar.styles';
+import {
+  measureAboutThokimanHeadColorShowProps,
+  measureAboutThokimanHeadHideProps,
+} from './about-dropdown-bar.utils.style';
 
 export const AboutDropdownBar = ({
   isDropdownHidden,
@@ -30,10 +35,18 @@ export const AboutDropdownBar = ({
   careerTimelineRoute,
   location: { pathname },
 }) => {
+  const { viewWidth, viewHeight } = useWindowDimensions();
   return (
     <AboutDropdownContainer>
       <AboutThokimanHeadColorContainer className='about-thokiman-head-color-container-upper'>
-        {isDropdownHidden ? null : <AboutThokimanHeadColorShow />}
+        {isDropdownHidden ? null : (
+          <AboutThokimanHeadColorShow
+            $measureaboutthokimanheadcolorshow={measureAboutThokimanHeadColorShowProps(
+              viewWidth,
+              viewHeight
+            )}
+          />
+        )}
       </AboutThokimanHeadColorContainer>
       <AboutDropdownContent className='about-dropdown-content'>
         <AboutDropdownLinkContainer
@@ -76,7 +89,16 @@ export const AboutDropdownBar = ({
         </AboutDropdownLinkContainer>
       </AboutDropdownContent>
       <AboutThokimanHeadColorContainer className='about-thokiman-head-color-container-below'>
-        {isDropdownHidden ? <AboutThokimanHeadColorHide /> : ''}
+        {isDropdownHidden ? (
+          <AboutThokimanHeadColorHide
+            $measureaboutthokimanheadcolorhide={measureAboutThokimanHeadHideProps(
+              viewWidth,
+              viewHeight
+            )}
+          />
+        ) : (
+          ''
+        )}
       </AboutThokimanHeadColorContainer>
     </AboutDropdownContainer>
   );

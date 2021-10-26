@@ -9,7 +9,6 @@ import {
   hasScreenSize3_3,
   hasScreenSize3_4,
   hasScreenSize3_5,
-  hasScreenSize3_6,
   hasScreenSize4,
   hasScreenSize5,
   hasScreenSizeWindow,
@@ -17,6 +16,7 @@ import {
 } from '../../../../utils/common.component.utils';
 
 export const measureRightPageContainerProps = (viewWidth, viewHeight) => {
+  const topRightPageContainerOffset = 0;
   let rightPageContainerProps;
 
   if (hasScreenSizeWindow(viewWidth, viewHeight)) {
@@ -47,57 +47,52 @@ export const measureRightPageContainerProps = (viewWidth, viewHeight) => {
   } else if (hasScreenSize1(viewWidth)) {
     console.log('about-content', 6);
     rightPageContainerProps = {
-      top: 5,
+      top: 5 + topRightPageContainerOffset,
     };
   } else if (hasScreenSize2(viewWidth)) {
     console.log('about-content', 7);
     rightPageContainerProps = {
-      top: 5,
+      top: 5 + topRightPageContainerOffset,
     };
   } else if (hasScreenSize3_1(viewWidth, viewHeight)) {
     console.log('about-content', 8);
     rightPageContainerProps = {
-      top: 5,
+      top: 5 + topRightPageContainerOffset,
     };
   } else if (hasScreenSize3_2(viewWidth, viewHeight)) {
     console.log('about-content', 9);
     rightPageContainerProps = {
-      top: 5,
+      top: 5 + topRightPageContainerOffset,
     };
   } else if (hasScreenSize3_3(viewWidth, viewHeight)) {
     console.log('about-content', 10);
     rightPageContainerProps = {
-      top: 5,
+      top: 5 + topRightPageContainerOffset,
     };
   } else if (hasScreenSize3_4(viewWidth, viewHeight)) {
     console.log('about-content', 11);
     rightPageContainerProps = {
-      top: 5,
+      top: 5 + topRightPageContainerOffset,
     };
   } else if (hasScreenSize3_5(viewWidth, viewHeight)) {
     console.log('about-content', 12);
     rightPageContainerProps = {
-      top: 0,
-    };
-  } else if (hasScreenSize3_6(viewWidth, viewHeight)) {
-    console.log('about-content', 13);
-    rightPageContainerProps = {
-      top: 0,
+      top: 0 + topRightPageContainerOffset,
     };
   } else if (hasScreenSize4(viewWidth, viewHeight)) {
-    console.log('about-content', 14);
+    console.log('about-content', 13);
     rightPageContainerProps = {
-      top: 5,
+      top: 5 + topRightPageContainerOffset,
     };
   } else if (hasScreenSize5(viewWidth)) {
-    console.log('about-content', 15);
+    console.log('about-content', 14);
     rightPageContainerProps = {
-      top: 5,
+      top: 5 + topRightPageContainerOffset,
     };
   } else {
-    console.log('about-content', 16);
+    console.log('about-content', 15);
     rightPageContainerProps = {
-      top: 18,
+      top: 20,
     };
   }
 

@@ -43,6 +43,12 @@ export const AchievementProject = styled.div`
     'image-achievement-experience-container image-achievement-experience-container description-achievement-experience-project description-achievement-experience-project';
   margin-bottom: 50px;
   border-bottom: ${lightBlueColor} solid 1px;
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+  }
 `;
 
 AchievementProject.displayName = 'AchievementProject';

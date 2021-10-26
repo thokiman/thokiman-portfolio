@@ -9,7 +9,6 @@ import {
   hasScreenSize3_3,
   hasScreenSize3_4,
   hasScreenSize3_5,
-  hasScreenSize3_6,
   hasScreenSize4,
   hasScreenSize5,
   hasScreenSizeWindow_1,
@@ -74,18 +73,15 @@ export const measureAbouteHeight = (
       } else if (hasScreenSize3_5(viewWidth, viewHeight)) {
         console.log('about-route', 11);
         height = 140 + aboutOffset;
-      } else if (hasScreenSize3_6(viewWidth, viewHeight)) {
-        console.log('about-route', 12);
-        height = 140 + aboutOffset;
       } else if (hasScreenSize4(viewWidth, viewHeight)) {
-        console.log('about-route', 13);
+        console.log('about-route', 12);
         height = 160 + aboutOffset;
       } else if (hasScreenSize5(viewWidth)) {
-        console.log('about-route', 14);
+        console.log('about-route', 13);
         height = 160 + aboutOffset;
       } else {
-        console.log('about-route', 15);
-        height = 200;
+        console.log('about-route', 14);
+        height = 250;
       }
       return height;
     case skillRoute:
@@ -123,17 +119,14 @@ export const measureAbouteHeight = (
       } else if (hasScreenSize3_5(viewWidth, viewHeight)) {
         console.log('skill-route, visual-art-skill-route', 11);
         height = 320 + aboutVisualArtSkillOffset;
-      } else if (hasScreenSize3_6(viewWidth, viewHeight)) {
-        console.log('skill-route, visual-art-skill-route', 12);
-        height = 320 + aboutVisualArtSkillOffset;
       } else if (hasScreenSize4(viewWidth, viewHeight)) {
-        console.log('skill-route, visual-art-skill-route', 13);
+        console.log('skill-route, visual-art-skill-route', 12);
         height = 350 + aboutVisualArtSkillOffset;
       } else if (hasScreenSize5(viewWidth)) {
-        console.log('skill-route, visual-art-skill-route', 14);
+        console.log('skill-route, visual-art-skill-route', 13);
         height = 350 + aboutVisualArtSkillOffset;
       } else {
-        console.log('skill-route, visual-art-skill-route', 15);
+        console.log('skill-route, visual-art-skill-route', 14);
         height = 450;
       }
       return height;
@@ -171,17 +164,14 @@ export const measureAbouteHeight = (
       } else if (hasScreenSize3_5(viewWidth, viewHeight)) {
         console.log('engineer-skill-route', 11);
         height = 105 + aboutEngineerSkillOffset;
-      } else if (hasScreenSize3_6(viewWidth, viewHeight)) {
-        console.log('engineer-skill-route', 12);
-        height = 105 + aboutEngineerSkillOffset;
       } else if (hasScreenSize4(viewWidth, viewHeight)) {
-        console.log('engineer-skill-route', 13);
+        console.log('engineer-skill-route', 12);
         height = 110 + aboutEngineerSkillOffset;
       } else if (hasScreenSize5(viewWidth)) {
-        console.log('engineer-skill-route', 14);
+        console.log('engineer-skill-route', 13);
         height = 140 + aboutEngineerSkillOffset;
       } else {
-        console.log('engineer-skill-route', 15);
+        console.log('engineer-skill-route', 14);
         height = 240;
       }
       return height;
@@ -219,17 +209,14 @@ export const measureAbouteHeight = (
       } else if (hasScreenSize3_5(viewWidth, viewHeight)) {
         console.log('technology-route', 11);
         height = 750 + aboutTechnologySkillOffset;
-      } else if (hasScreenSize3_6(viewWidth, viewHeight)) {
-        console.log('technology-route', 12);
-        height = 750 + aboutTechnologySkillOffset;
       } else if (hasScreenSize4(viewWidth, viewHeight)) {
-        console.log('technology-route', 13);
+        console.log('technology-route', 12);
         height = 710 + aboutTechnologySkillOffset;
       } else if (hasScreenSize5(viewWidth)) {
-        console.log('technology-route', 14);
+        console.log('technology-route', 13);
         height = 665 + aboutTechnologySkillOffset;
       } else {
-        console.log('technology-route', 15);
+        console.log('technology-route', 14);
         height = 900;
       }
       return height;
@@ -267,17 +254,14 @@ export const measureAbouteHeight = (
       } else if (hasScreenSize3_5(viewWidth, viewHeight)) {
         console.log('education-route', 11);
         height = 1000 + aboutEducationOffset;
-      } else if (hasScreenSize3_6(viewWidth, viewHeight)) {
-        console.log('education-route', 12);
-        height = 1000 + aboutEducationOffset;
       } else if (hasScreenSize4(viewWidth, viewHeight)) {
-        console.log('education-route', 13);
+        console.log('education-route', 12);
         height = 1030 + aboutEducationOffset;
       } else if (hasScreenSize5(viewWidth)) {
-        console.log('education-route', 14);
+        console.log('education-route', 13);
         height = 810 + aboutEducationOffset;
       } else {
-        console.log('education-route', 15);
+        console.log('education-route', 14);
         height = 1650;
       }
       return height;
@@ -315,17 +299,14 @@ export const measureAbouteHeight = (
       } else if (hasScreenSize3_5(viewWidth, viewHeight)) {
         console.log('project-route', 11);
         height = 1110 + aboutProjectOffset;
-      } else if (hasScreenSize3_6(viewWidth, viewHeight)) {
-        console.log('project-route', 12);
-        height = 1110 + aboutProjectOffset;
       } else if (hasScreenSize4(viewWidth, viewHeight)) {
-        console.log('project-route', 13);
+        console.log('project-route', 12);
         height = 1140 + aboutProjectOffset;
       } else if (hasScreenSize5(viewWidth)) {
-        console.log('project-route', 14);
+        console.log('project-route', 13);
         height = 910 + aboutProjectOffset;
       } else {
-        console.log('project-route', 15);
+        console.log('project-route', 14);
         height = 1800;
       }
       return height;
@@ -363,17 +344,14 @@ export const measureAbouteHeight = (
       } else if (hasScreenSize3_5(viewWidth, viewHeight)) {
         console.log('sumarry-route', 11);
         height = 245 + aboutSummaryOffset;
-      } else if (hasScreenSize3_6(viewWidth, viewHeight)) {
+      } else if (hasScreenSize4(viewWidth, viewHeight)) {
         console.log('sumarry-route', 12);
         height = 245 + aboutSummaryOffset;
-      } else if (hasScreenSize4(viewWidth, viewHeight)) {
-        console.log('sumarry-route', 13);
-        height = 245 + aboutSummaryOffset;
       } else if (hasScreenSize5(viewWidth)) {
-        console.log('sumarry-route', 14);
+        console.log('sumarry-route', 13);
         height = 205 + aboutSummaryOffset;
       } else {
-        console.log('sumarry-route', 15);
+        console.log('sumarry-route', 14);
         height = 400;
       }
       return height;
@@ -411,23 +389,20 @@ export const measureAbouteHeight = (
       } else if (hasScreenSize3_5(viewWidth, viewHeight)) {
         console.log('timeline-route', 11);
         height = 430 + aboutCareerTimelineOffset;
-      } else if (hasScreenSize3_6(viewWidth, viewHeight)) {
-        console.log('timeline-route', 12);
-        height = 505 + aboutCareerTimelineOffset;
       } else if (hasScreenSize4(viewWidth, viewHeight)) {
-        console.log('timeline-route', 13);
+        console.log('timeline-route', 12);
         height = 600 + aboutCareerTimelineOffset;
       } else if (hasScreenSize5(viewWidth)) {
-        console.log('timeline-route', 14);
+        console.log('timeline-route', 13);
         height = 530 + aboutCareerTimelineOffset;
       } else {
-        console.log('timeline-route', 15);
-        height = 650; // need adjust
+        console.log('timeline-route', 14);
+        height = 650;
       }
 
       return height;
     default:
-      return 800;
+      return 1800;
   }
 };
 

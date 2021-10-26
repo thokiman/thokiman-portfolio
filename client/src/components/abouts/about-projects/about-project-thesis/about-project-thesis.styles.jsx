@@ -35,12 +35,18 @@ export const AboutThesisProjectAttributes = styled.div`
   grid-template-areas:
     'name-thesis-project name-thesis-project name-thesis-project name-thesis-project name-thesis-project'
     'type-thesis-project type-thesis-project start-end-date-thesis-project start-end-date-thesis-project start-end-date-thesis-project'
-    'type-thesis-project type-thesis-project length-thesis-project length-thesis-project length-thesis-project'
+    'type-thesis-project type-thesis-project len-thesis-project len-thesis-project len-thesis-project'
     'location-thesis-project location-thesis-project description-thesis-project description-thesis-project description-thesis-project'
     'location-thesis-project location-thesis-project description-thesis-project description-thesis-project description-thesis-project';
 
   border-bottom: ${lightBlueColor} solid 1px;
   margin: 10px auto;
+  @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+  }
 `;
 
 const AboutThesisProjectStyles = css`
@@ -97,7 +103,7 @@ export const AboutStartEndDateThesisProject = styled.div`
 `;
 export const AboutLengthThesisProject = styled.div`
   ${AboutThesisProjectStyles}
-  grid-area: length-thesis-project;
+  grid-area: len-thesis-project;
   font-size: 130%;
   line-height: 1.1em;
   letter-spacing: 0.05em;

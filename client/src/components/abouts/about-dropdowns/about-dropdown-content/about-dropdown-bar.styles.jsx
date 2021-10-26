@@ -82,61 +82,61 @@ export const AboutThokimanHeadColorContainer = styled.div`
   justify-content: center;
 `;
 AboutThokimanHeadColorContainer.displayName = 'AboutThokimanHeadColorContainer';
+
+const getTopThokimanHeadColorShow = ({
+  $measureaboutthokimanheadcolorshow,
+}) => {
+  return $measureaboutthokimanheadcolorshow.top;
+};
+const getHeightThokimanHeadColorShow = ({
+  $measureaboutthokimanheadcolorshow,
+}) => {
+  return $measureaboutthokimanheadcolorshow.height;
+};
+const getWidthThokimanHeadColorShow = ({
+  $measureaboutthokimanheadcolorshow,
+}) => {
+  return $measureaboutthokimanheadcolorshow.width;
+};
+
 export const AboutThokimanHeadColorShow = styled(ThokimanHeadColor)`
-  width: 40%;
-  height: 95%;
+  width: ${getWidthThokimanHeadColorShow}%;
+  height: ${getHeightThokimanHeadColorShow}%;
   position: relative;
-  top: -10px;
+  top: ${getTopThokimanHeadColorShow}vh;
   animation: ${thokimanHeadColorShow} 0.6s ease-out both;
+
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     animation: ${thokimanHeadColorShowMobile} 0.6s ease-out both;
   }
-  @media only screen and (max-width: 550px) {
-    width: 40%;
-    height: 80%;
-  }
-  @media only screen and (max-width: 375px) and (max-height: 667px) {
-    top: 0.5vh;
-    width: 30%;
-    height: 70%;
-  }
-  @media only screen and (max-width: 300px) {
-    top: -0.5vh;
-    width: 30%;
-    height: 80%;
-  }
 `;
 AboutThokimanHeadColorShow.displayName = 'AboutThokimanHeadColorShow';
+
+const getTopThokimanHeadColorHide = ({
+  $measureaboutthokimanheadcolorhide,
+}) => {
+  return $measureaboutthokimanheadcolorhide.top;
+};
+const getHeightThokimanHeadColorHide = ({
+  $measureaboutthokimanheadcolorhide,
+}) => {
+  return $measureaboutthokimanheadcolorhide.height;
+};
+const getWidthThokimanHeadColorHide = ({
+  $measureaboutthokimanheadcolorhide,
+}) => {
+  return $measureaboutthokimanheadcolorhide.width;
+};
+
 export const AboutThokimanHeadColorHide = styled(ThokimanHeadColor)`
-  width: 40%;
-  height: 95%;
+  width: ${getWidthThokimanHeadColorHide}%;
+  height: ${getHeightThokimanHeadColorHide}%;
   position: relative;
-  top: 20px;
+  top: ${getTopThokimanHeadColorHide}vh;
   animation: ${thokimanHeadColorHide} 0.6s ease-out both;
+
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     animation: ${thokimanHeadColorHideMobile} 0.6s ease-out both;
-  }
-  @media only screen and (max-width: 550px) {
-    width: 40%;
-    height: 80%;
-  }
-  @media only screen and (max-width: 414px) and (max-height: 736px) {
-    top: 1.2vh;
-  }
-  @media only screen and (max-width: 375px) and (max-height: 667px) {
-    top: 1.5vh;
-    width: 30%;
-    height: 70%;
-  }
-  @media only screen and (max-width: 350px) {
-    top: 1.5vh;
-    width: 40%;
-    height: 80%;
-  }
-  @media only screen and (max-width: 300px) {
-    top: 2vh;
-    width: 30%;
-    height: 80%;
   }
 `;
 AboutThokimanHeadColorHide.displayName = 'AboutThokimanHeadColorHide';

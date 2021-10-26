@@ -9,7 +9,6 @@ import {
   hasScreenSize3_3,
   hasScreenSize3_4,
   hasScreenSize3_5,
-  hasScreenSize3_6,
   hasScreenSize4,
   hasScreenSize5,
   hasScreenSizeWindow_1,
@@ -58,17 +57,14 @@ export const measureContactHeight = (
       } else if (hasScreenSize3_5(viewWidth, viewHeight)) {
         console.log('contact', 11);
         height = 400 + contactOffset;
-      } else if (hasScreenSize3_6(viewWidth, viewHeight)) {
-        console.log('contact', 12);
-        height = 400 + contactOffset;
       } else if (hasScreenSize4(viewWidth, viewHeight)) {
-        console.log('contact', 13);
+        console.log('contact', 12);
         height = 420 + contactOffset;
       } else if (hasScreenSize5(viewWidth)) {
-        console.log('contact', 14);
+        console.log('contact', 13);
         height = 350 + contactOffset;
       } else {
-        console.log('contact', 15);
+        console.log('contact', 14);
         height = 350; // need adjust
       }
       return height;

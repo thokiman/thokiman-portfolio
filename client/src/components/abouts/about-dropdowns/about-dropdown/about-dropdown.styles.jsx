@@ -15,6 +15,15 @@ const getSideBarActive = ({ $issidebaractive }) => {
   return null;
 };
 
+const getTopAboutDropdownContainer = ({ $measureaboutdropdowncontainer }) => {
+  return $measureaboutdropdowncontainer.top;
+};
+const getHeightAboutDropdownContainer = ({
+  $measureaboutdropdowncontainer,
+}) => {
+  return $measureaboutdropdowncontainer.height;
+};
+
 const AboutDropdownStyles = css`
   width: 30vw;
   display: flex;
@@ -23,33 +32,15 @@ const AboutDropdownStyles = css`
   text-align: center;
   margin-left: 2vw;
   transition: height 0.5s ease-in-out, top 0.2s ease;
+
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 80%;
-    height: 52vh;
-
+    height: ${getHeightAboutDropdownContainer}vh;
+    position: relative;
+    top: ${getTopAboutDropdownContainer}vh;
     margin-left: 0px;
     margin-top: 20px;
-    ${getSideBarActive}
-  }
-  @media only screen and (max-width: 550px) {
-    height: 49vh;
-    ${getSideBarActive}
-  }
-  @media only screen and (max-width: 400px) {
-    height: 42vh;
-    ${getSideBarActive}
-  }
 
-  @media only screen and (max-width: 375px) {
-    height: 49vh;
-    ${getSideBarActive}
-  }
-  @media only screen and (max-width: 375px) and (max-height: 667px) {
-    height: 42vh;
-    ${getSideBarActive}
-  }
-  @media only screen and (max-width: 300px) {
-    height: 49vh;
     ${getSideBarActive}
   }
 `;

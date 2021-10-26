@@ -9,7 +9,6 @@ import {
   hasScreenSize3_3,
   hasScreenSize3_4,
   hasScreenSize3_5,
-  hasScreenSize3_6,
   hasScreenSize4,
   hasScreenSize5,
   hasScreenSizeWindow,
@@ -80,23 +79,18 @@ export const measureEducationContainerProps = (viewWidth, viewHeight) => {
     educationContainerProps = {
       top: 0 + educationContainerOffset,
     };
-  } else if (hasScreenSize3_6(viewWidth, viewHeight)) {
+  } else if (hasScreenSize4(viewWidth, viewHeight)) {
     console.log('about-education', 13);
     educationContainerProps = {
       top: 0 + educationContainerOffset,
     };
-  } else if (hasScreenSize4(viewWidth, viewHeight)) {
+  } else if (hasScreenSize5(viewWidth)) {
     console.log('about-education', 14);
     educationContainerProps = {
       top: 0 + educationContainerOffset,
     };
-  } else if (hasScreenSize5(viewWidth)) {
-    console.log('about-education', 15);
-    educationContainerProps = {
-      top: 0 + educationContainerOffset,
-    };
   } else {
-    console.log('about-education', 16);
+    console.log('about-education', 15);
     educationContainerProps = {
       top: 20,
     };

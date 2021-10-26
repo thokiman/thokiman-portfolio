@@ -39,6 +39,8 @@ export const AboutExperienceProjectAtttributes = styled.div`
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    height: fit-content;
   }
 `;
 const AboutExperienceProjectStyles = css`

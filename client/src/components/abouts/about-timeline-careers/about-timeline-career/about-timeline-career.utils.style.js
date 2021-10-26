@@ -9,7 +9,6 @@ import {
   hasScreenSize3_3,
   hasScreenSize3_4,
   hasScreenSize3_5,
-  hasScreenSize3_6,
   hasScreenSize4,
   hasScreenSize5,
   hasScreenSizeWindow,
@@ -77,11 +76,6 @@ export const measureTimelineContainerProps = (viewWidth, viewHeight) => {
     };
   } else if (hasScreenSize3_5(viewWidth, viewHeight)) {
     console.log('about-timeline', 12);
-    timelineContainerProps = {
-      top: 0 + timelineContainerOffset,
-    };
-  } else if (hasScreenSize3_6(viewWidth, viewHeight)) {
-    console.log('about-timeline', 13);
     timelineContainerProps = {
       top: 0 + timelineContainerOffset,
     };

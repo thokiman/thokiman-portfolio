@@ -9,7 +9,6 @@ import {
   hasScreenSize3_3,
   hasScreenSize3_4,
   hasScreenSize3_5,
-  hasScreenSize3_6,
   hasScreenSize4,
   hasScreenSize5,
   hasScreenSizeWindow_1,
@@ -128,17 +127,14 @@ export const measureServiceHeight = (
       } else if (hasScreenSize3_5(viewWidth, viewHeight)) {
         console.log('service route', 11);
         height = 140 + serviceOffset;
-      } else if (hasScreenSize3_6(viewWidth, viewHeight)) {
+      } else if (hasScreenSize4(viewWidth, viewHeight)) {
         console.log('service route', 12);
         height = 140 + serviceOffset;
-      } else if (hasScreenSize4(viewWidth, viewHeight)) {
+      } else if (hasScreenSize5(viewWidth)) {
         console.log('service route', 13);
         height = 140 + serviceOffset;
-      } else if (hasScreenSize5(viewWidth)) {
-        console.log('service route', 14);
-        height = 140 + serviceOffset;
       } else {
-        console.log('service route', 15);
+        console.log('service route', 14);
         height = 140; // need adjust
       }
       return height;
@@ -177,17 +173,14 @@ export const measureServiceHeight = (
       } else if (hasScreenSize3_5(viewWidth, viewHeight)) {
         console.log('engineer route', 11);
         height = 255 + engineerOffset;
-      } else if (hasScreenSize3_6(viewWidth, viewHeight)) {
-        console.log('engineer route', 12);
-        height = 255 + engineerOffset;
       } else if (hasScreenSize4(viewWidth, viewHeight)) {
-        console.log('engineer route', 13);
+        console.log('engineer route', 12);
         height = 269 + engineerOffset;
       } else if (hasScreenSize5(viewWidth)) {
-        console.log('engineer route', 14);
+        console.log('engineer route', 13);
         height = 253 + engineerOffset;
       } else {
-        console.log('engineer route', 15);
+        console.log('engineer route', 14);
         height = 255; // need adjust
       }
 
@@ -226,17 +219,14 @@ export const measureServiceHeight = (
       } else if (hasScreenSize3_5(viewWidth, viewHeight)) {
         console.log('art route', 11);
         height = 220 + artOffset;
-      } else if (hasScreenSize3_6(viewWidth, viewHeight)) {
-        console.log('art route', 12);
-        height = 220 + artOffset;
       } else if (hasScreenSize4(viewWidth, viewHeight)) {
-        console.log('art route', 13);
+        console.log('art route', 12);
         height = 230 + artOffset;
       } else if (hasScreenSize5(viewWidth)) {
-        console.log('art route', 14);
+        console.log('art route', 13);
         height = 215 + artOffset;
       } else {
-        console.log('art route', 15);
+        console.log('art route', 14);
         height = 222.5; // need adjust
       }
       return height;
@@ -274,17 +264,14 @@ export const measureServiceHeight = (
       } else if (hasScreenSize3_5(viewWidth, viewHeight)) {
         console.log('dev route', 11);
         height = 318 + devOffset;
-      } else if (hasScreenSize3_6(viewWidth, viewHeight)) {
+      } else if (hasScreenSize4(viewWidth, viewHeight)) {
         console.log('dev route', 12);
         height = 318 + devOffset;
-      } else if (hasScreenSize4(viewWidth, viewHeight)) {
-        console.log('dev route', 13);
-        height = 318 + devOffset;
       } else if (hasScreenSize5(viewWidth)) {
-        console.log('dev route', 14);
+        console.log('dev route', 13);
         height = 353 + devOffset;
       } else {
-        console.log('dev route', 15);
+        console.log('dev route', 14);
         height = 309.4; // need adjust
       }
       return height;
@@ -322,17 +309,14 @@ export const measureServiceHeight = (
       } else if (hasScreenSize3_5(viewWidth, viewHeight)) {
         console.log(' photoroute', 11);
         height = 305 + photoOffset;
-      } else if (hasScreenSize3_6(viewWidth, viewHeight)) {
-        console.log(' photoroute', 12);
-        height = 305 + photoOffset;
       } else if (hasScreenSize4(viewWidth, viewHeight)) {
-        console.log(' photoroute', 13);
+        console.log(' photoroute', 12);
         height = 320 + photoOffset;
       } else if (hasScreenSize5(viewWidth)) {
-        console.log(' photoroute', 14);
+        console.log(' photoroute', 13);
         height = 310 + photoOffset;
       } else {
-        console.log(' photo route', 15);
+        console.log(' photo route', 14);
         height = 311.9; // need adjust
       }
       return height;

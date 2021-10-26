@@ -9,7 +9,6 @@ import {
   hasScreenSize3_3,
   hasScreenSize3_4,
   hasScreenSize3_5,
-  hasScreenSize3_6,
   hasScreenSize4,
   hasScreenSize5,
   hasScreenSizeWindow,
@@ -80,23 +79,18 @@ export const measureSkillContainerProps = (viewWidth, viewHeight) => {
     skillContainerProps = {
       top: 44 + skillContainerOffset,
     };
-  } else if (hasScreenSize3_6(viewWidth, viewHeight)) {
+  } else if (hasScreenSize4(viewWidth, viewHeight)) {
     console.log('about-content-skill', 13);
     skillContainerProps = {
       top: 44 + skillContainerOffset,
     };
-  } else if (hasScreenSize4(viewWidth, viewHeight)) {
+  } else if (hasScreenSize5(viewWidth)) {
     console.log('about-content-skill', 14);
     skillContainerProps = {
       top: 44 + skillContainerOffset,
     };
-  } else if (hasScreenSize5(viewWidth)) {
-    console.log('about-content-skill', 15);
-    skillContainerProps = {
-      top: 44 + skillContainerOffset,
-    };
   } else {
-    console.log('about-content-skill', 16);
+    console.log('about-content-skill', 15);
     skillContainerProps = {
       top: 70,
     };

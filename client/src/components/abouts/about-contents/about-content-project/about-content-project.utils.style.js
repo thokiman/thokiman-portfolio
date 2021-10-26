@@ -9,7 +9,6 @@ import {
   hasScreenSize3_3,
   hasScreenSize3_4,
   hasScreenSize3_5,
-  hasScreenSize3_6,
   hasScreenSize4,
   hasScreenSize5,
   hasScreenSizeWindow,
@@ -80,23 +79,18 @@ export const measureProjectContainerProps = (viewWidth, viewHeight) => {
     projectContainerProps = {
       top: 0 + projectContainerOffset,
     };
-  } else if (hasScreenSize3_6(viewWidth, viewHeight)) {
+  } else if (hasScreenSize4(viewWidth, viewHeight)) {
     console.log('about-project', 13);
     projectContainerProps = {
       top: 0 + projectContainerOffset,
     };
-  } else if (hasScreenSize4(viewWidth, viewHeight)) {
+  } else if (hasScreenSize5(viewWidth)) {
     console.log('about-project', 14);
     projectContainerProps = {
       top: 0 + projectContainerOffset,
     };
-  } else if (hasScreenSize5(viewWidth)) {
-    console.log('about-project', 15);
-    projectContainerProps = {
-      top: 0 + projectContainerOffset,
-    };
   } else {
-    console.log('about-project', 16);
+    console.log('about-project', 15);
     projectContainerProps = {
       top: 25,
     };
