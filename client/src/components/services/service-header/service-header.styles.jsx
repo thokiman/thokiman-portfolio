@@ -60,22 +60,14 @@ export const DirectoryService = styled.div`
     'directory-service-text-eng directory-service-text-eng directory-service-text-fsd directory-service-text-fsd'
     'directory-service-text-gd directory-service-text-gd directory-service-text-fsd directory-service-text-fsd'
     'directory-service-text-gd directory-service-text-gd directory-service-text-pg directory-service-text-pg';
-  height: ${getWidthDirectoryService};
-  width: ${getHeightDirectoryService};
+  height: fit-content;
+  width: fit-content;
   cursor: default;
 
-  /* @media only screen and (max-width: ${maxWidthDesktop}px) {
-    width: 98vw;
-    height: 20vh;
+  @media only screen and (max-width: ${maxWidthDesktop}px) {
+    height: ${getHeightDirectoryService};
+    width: ${getWidthDirectoryService};
   }
-  @media only screen and (max-width: ${maxWidthTablet}px) {
-    width: 98vw;
-    height: 40vh;
-  }
-  @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    width: 98vw;
-    height: 50vh;
-  } */
 `;
 const directoryServiceHover = keyframes`
     0% {
