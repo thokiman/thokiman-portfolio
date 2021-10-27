@@ -20,37 +20,37 @@ export const measureRightPageContainerPgProps = (viewWidth, viewHeight) => {
     console.log('service-photography', 1);
     rightServiceContainerProps = {
       height: 280 + rightServiceContainerPgHeightOffset,
-      top: -60 + rightServiceContainerPgTopOffset,
+      top: -85 + rightServiceContainerPgTopOffset,
     };
   } else if (hasScreenSize2(viewWidth)) {
     console.log('service-photography', 2);
     rightServiceContainerProps = {
       height: 270 + rightServiceContainerPgHeightOffset,
-      top: -40 + rightServiceContainerPgTopOffset,
+      top: -78 + rightServiceContainerPgTopOffset,
     };
   } else if (hasScreenSize3_1(viewWidth, viewHeight)) {
     console.log('service-photography', 3);
     rightServiceContainerProps = {
       height: 180 + rightServiceContainerPgHeightOffset,
-      top: -50 + rightServiceContainerPgTopOffset,
+      top: -68 + rightServiceContainerPgTopOffset,
     };
   } else if (hasScreenSize3_2(viewWidth, viewHeight)) {
     console.log('service-photography', 4);
     rightServiceContainerProps = {
-      height: 175 + rightServiceContainerPgHeightOffset,
-      top: -50 + rightServiceContainerPgTopOffset,
+      height: 178 + rightServiceContainerPgHeightOffset,
+      top: -68 + rightServiceContainerPgTopOffset,
     };
   } else if (hasScreenSize3_3(viewWidth, viewHeight)) {
     console.log('service-photography', 5);
     rightServiceContainerProps = {
       height: 220 + rightServiceContainerPgHeightOffset,
-      top: -50 + rightServiceContainerPgTopOffset,
+      top: -75 + rightServiceContainerPgTopOffset,
     };
   } else if (hasScreenSize3_4(viewWidth, viewHeight)) {
     console.log('service-photography', 6);
     rightServiceContainerProps = {
       height: 225 + rightServiceContainerPgHeightOffset,
-      top: -50 + rightServiceContainerPgTopOffset,
+      top: -80 + rightServiceContainerPgTopOffset,
     };
   } else if (hasScreenSize3_5(viewWidth, viewHeight)) {
     console.log('service-photography', 7);
@@ -62,19 +62,19 @@ export const measureRightPageContainerPgProps = (viewWidth, viewHeight) => {
     console.log('service-photography', 8);
     rightServiceContainerProps = {
       height: 235 + rightServiceContainerPgHeightOffset,
-      top: -40 + rightServiceContainerPgTopOffset,
+      top: -65 + rightServiceContainerPgTopOffset,
     };
   } else if (hasScreenSize5(viewWidth)) {
     console.log('service-photography', 9);
     rightServiceContainerProps = {
       height: 225 + rightServiceContainerPgHeightOffset,
-      top: -50 + rightServiceContainerPgTopOffset,
+      top: -75 + rightServiceContainerPgTopOffset,
     };
   } else {
     console.log('service-photography', 10);
     rightServiceContainerProps = {
-      height: 300,
-      top: -50,
+      height: 290,
+      top: -120,
     };
   }
 

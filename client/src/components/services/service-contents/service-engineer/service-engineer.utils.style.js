@@ -20,37 +20,37 @@ export const measureRightPageContainerEngProps = (viewWidth, viewHeight) => {
     console.log('service-engineer', 1);
     rightServiceContainerProps = {
       height: 205 + rightServiceContainerEngHeightOffset,
-      top: -60 + rightServiceContainerEngTopOffset,
+      top: -90 + rightServiceContainerEngTopOffset,
     };
   } else if (hasScreenSize2(viewWidth)) {
     console.log('service-engineer', 2);
     rightServiceContainerProps = {
-      height: 205 + rightServiceContainerEngHeightOffset,
-      top: -40 + rightServiceContainerEngTopOffset,
+      height: 200 + rightServiceContainerEngHeightOffset,
+      top: -70 + rightServiceContainerEngTopOffset,
     };
   } else if (hasScreenSize3_1(viewWidth, viewHeight)) {
     console.log('service-engineer', 3);
     rightServiceContainerProps = {
-      height: 150 + rightServiceContainerEngHeightOffset,
-      top: -50 + rightServiceContainerEngTopOffset,
+      height: 140 + rightServiceContainerEngHeightOffset,
+      top: -85 + rightServiceContainerEngTopOffset,
     };
   } else if (hasScreenSize3_2(viewWidth, viewHeight)) {
     console.log('service-engineer', 4);
     rightServiceContainerProps = {
-      height: 140 + rightServiceContainerEngHeightOffset,
-      top: -50 + rightServiceContainerEngTopOffset,
+      height: 135 + rightServiceContainerEngHeightOffset,
+      top: -75 + rightServiceContainerEngTopOffset,
     };
   } else if (hasScreenSize3_3(viewWidth, viewHeight)) {
     console.log('service-engineer', 5);
     rightServiceContainerProps = {
-      height: 170 + rightServiceContainerEngHeightOffset,
-      top: -50 + rightServiceContainerEngTopOffset,
+      height: 165 + rightServiceContainerEngHeightOffset,
+      top: -80 + rightServiceContainerEngTopOffset,
     };
   } else if (hasScreenSize3_4(viewWidth, viewHeight)) {
     console.log('service-engineer', 6);
     rightServiceContainerProps = {
-      height: 180 + rightServiceContainerEngHeightOffset,
-      top: -50 + rightServiceContainerEngTopOffset,
+      height: 170 + rightServiceContainerEngHeightOffset,
+      top: -85 + rightServiceContainerEngTopOffset,
     };
   } else if (hasScreenSize3_5(viewWidth, viewHeight)) {
     console.log('service-engineer', 7);
@@ -61,20 +61,20 @@ export const measureRightPageContainerEngProps = (viewWidth, viewHeight) => {
   } else if (hasScreenSize4(viewWidth, viewHeight)) {
     console.log('service-engineer', 8);
     rightServiceContainerProps = {
-      height: 195 + rightServiceContainerEngHeightOffset,
-      top: -40 + rightServiceContainerEngTopOffset,
+      height: 180 + rightServiceContainerEngHeightOffset,
+      top: -70 + rightServiceContainerEngTopOffset,
     };
   } else if (hasScreenSize5(viewWidth)) {
     console.log('service-engineer', 9);
     rightServiceContainerProps = {
-      height: 200 + rightServiceContainerEngHeightOffset,
-      top: -50 + rightServiceContainerEngTopOffset,
+      height: 165 + rightServiceContainerEngHeightOffset,
+      top: -105 + rightServiceContainerEngTopOffset,
     };
   } else {
     console.log('service-engineer', 10);
     rightServiceContainerProps = {
-      height: 245,
-      top: -50,
+      height: 240,
+      top: -85,
     };
   }
 

@@ -20,37 +20,37 @@ export const measureRightPageContainerFSProps = (viewWidth, viewHeight) => {
     console.log('service-dev', 1);
     rightServiceContainerProps = {
       height: 309 + rightServiceContainerFSHeightOffset,
-      top: -60 + rightServiceContainerFSTopOffset,
+      top: -95 + rightServiceContainerFSTopOffset,
     };
   } else if (hasScreenSize2(viewWidth)) {
     console.log('service-dev', 2);
     rightServiceContainerProps = {
       height: 285 + rightServiceContainerFSHeightOffset,
-      top: -40 + rightServiceContainerFSTopOffset,
+      top: -65 + rightServiceContainerFSTopOffset,
     };
   } else if (hasScreenSize3_1(viewWidth, viewHeight)) {
     console.log('service-dev', 3);
     rightServiceContainerProps = {
       height: 180 + rightServiceContainerFSHeightOffset,
-      top: -50 + rightServiceContainerFSTopOffset,
+      top: -105 + rightServiceContainerFSTopOffset,
     };
   } else if (hasScreenSize3_2(viewWidth, viewHeight)) {
     console.log('service-dev', 4);
     rightServiceContainerProps = {
       height: 175 + rightServiceContainerFSHeightOffset,
-      top: -50 + rightServiceContainerFSTopOffset,
+      top: -60 + rightServiceContainerFSTopOffset,
     };
   } else if (hasScreenSize3_3(viewWidth, viewHeight)) {
     console.log('service-dev', 5);
     rightServiceContainerProps = {
       height: 230 + rightServiceContainerFSHeightOffset,
-      top: -50 + rightServiceContainerFSTopOffset,
+      top: -75 + rightServiceContainerFSTopOffset,
     };
   } else if (hasScreenSize3_4(viewWidth, viewHeight)) {
     console.log('service-dev', 6);
     rightServiceContainerProps = {
       height: 230 + rightServiceContainerFSHeightOffset,
-      top: -50 + rightServiceContainerFSTopOffset,
+      top: -75 + rightServiceContainerFSTopOffset,
     };
   } else if (hasScreenSize3_5(viewWidth, viewHeight)) {
     console.log('service-dev', 7);
@@ -62,19 +62,19 @@ export const measureRightPageContainerFSProps = (viewWidth, viewHeight) => {
     console.log('service-dev', 8);
     rightServiceContainerProps = {
       height: 230 + rightServiceContainerFSHeightOffset,
-      top: -40 + rightServiceContainerFSTopOffset,
+      top: -65 + rightServiceContainerFSTopOffset,
     };
   } else if (hasScreenSize5(viewWidth)) {
     console.log('service-dev', 9);
     rightServiceContainerProps = {
-      height: 268 + rightServiceContainerFSHeightOffset,
-      top: -50 + rightServiceContainerFSTopOffset,
+      height: 260 + rightServiceContainerFSHeightOffset,
+      top: -75 + rightServiceContainerFSTopOffset,
     };
   } else {
     console.log('service-dev', 10);
     rightServiceContainerProps = {
-      height: 268,
-      top: -70,
+      height: 260,
+      top: -115,
     };
   }
 

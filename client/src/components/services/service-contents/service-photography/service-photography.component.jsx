@@ -7,12 +7,12 @@ import { selectPhotoService } from '../../../../redux/service/service.selectors'
 import ServiceIconContent from '../../service-commons/service-icon-content/service-icon-content.component';
 import ServiceUrlGeneralContent from '../../service-commons/service-url-general-content/service-url-general-content.component';
 import ServiceUrlIconContent from '../../service-commons/service-url-icon-content/service-url-icon-content.component';
-import { measureRightPageContainerPgProps } from './service-graphic-design.utils.style';
 import {
   RightServiceContainerPg,
   RightServiceContentPg,
   ServiceStockPhotos,
 } from './service-photography.styles';
+import { measureRightPageContainerPgProps } from './service-photography.utils.style';
 
 export const ServicePhotography = ({
   photo: { title, description, photoStockItems, photographyIconItems },
