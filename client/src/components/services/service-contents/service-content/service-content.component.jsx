@@ -7,6 +7,7 @@ import {
   RightServiceContainer,
   ThokimanHeadColor,
   ThokimanHeadOutlineCream,
+  ThokimanHeadServiceSubContainer,
 } from './service-content.styles';
 import { measureRightPageContainerProps } from './service-content.utils.style';
 
@@ -21,12 +22,12 @@ export const ServiceHomeContent = ({ isSideBarActive }) => {
       className='right-service-container'
       $issidebaractive={isSideBarActive}
     >
-      <div className='thokiman-head-service'>
+      <ThokimanHeadServiceSubContainer className='thokiman-head-service'>
         <ThokimanHeadColor />
-      </div>
-      <div className='thokiman-head-service'>
+      </ThokimanHeadServiceSubContainer>
+      <ThokimanHeadServiceSubContainer className='thokiman-head-service'>
         <ThokimanHeadOutlineCream />
-      </div>
+      </ThokimanHeadServiceSubContainer>
     </RightServiceContainer>
   );
 };

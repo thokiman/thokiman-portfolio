@@ -16,11 +16,9 @@ const getSideBarActive = ({ $issidebaractive }) => {
 };
 
 const getTopRightPageContainer = ({ $measurerightpagecontainer }) => {
-  return $measurerightpagecontainer.top
-}
+  return $measurerightpagecontainer.top;
+};
 export const RightPageContainer = styled.div`
-  position: relative;
-  top: ${getTopRightPageContainer}vh;
   background-color: ${backgroundRightPageContainerColor};
   width: 64.5vw;
   margin-right: 2vw;
@@ -37,7 +35,8 @@ export const RightPageContainer = styled.div`
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     width: 100%;
     height: 80vh;
-
+    position: relative;
+    top: ${getTopRightPageContainer}vh;
     ${getSideBarActive}
   }
 `;

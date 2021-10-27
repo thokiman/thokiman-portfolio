@@ -13,6 +13,7 @@ const greenColor5 = '#00FF7F';
 const greenColor6 = '#8FBC8B';
 const greenColor7 = '#6B8E23';
 
+export const ThokimanHeadServiceSubContainer = styled.div``;
 const ServiceContentIsNotActivated = css`
   display: none;
 `;
@@ -38,6 +39,10 @@ export const RightServiceContainer = styled.div`
   display: flex;
   justify-content: center;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     position: relative;
     top: ${getTopRightServiceContainer}vh;
     width: 100%;

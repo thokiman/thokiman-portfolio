@@ -30,13 +30,14 @@ export const SummaryContainer = styled.div`
   overflow-x: hidden;
   font-family: baskerville-old-face;
   padding: 40px 0;
-  position: relative;
-  top: ${getTopSummaryContainer}vh;
+
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    position: relative;
+    top: ${getTopSummaryContainer}vh;
     width: 100%;
     margin: 0;
-    ${getSideBarActive}
     overflow-y: hidden;
+    ${getSideBarActive}
   }
 `;
 

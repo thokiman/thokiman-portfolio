@@ -10,6 +10,10 @@ export const VisualArtGridContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media only screen and (max-width: 1366px) {
+    width: fit-content;
+    height: fit-content;
+  }
 `;
 
 export const VisualArtTitle = styled.div`
@@ -43,6 +47,7 @@ export const VisualArtGridContent = styled.div`
     );
   grid-auto-rows: minmax(150px, auto) minmax(150px, auto) minmax(150px, auto);
   grid-auto-flow: row dense;
+
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     display: flex;
     flex-direction: column;
@@ -92,6 +97,9 @@ export const VisualArtImage = styled.img`
   object-fit: cover;
   object-position: 30% 50%;
 
+  @media only screen and (max-width: 1024px) and (max-height: 1366px) {
+    object-position: center 25%;
+  }
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     object-position: center 30%;
   }

@@ -23,32 +23,32 @@ export const measureDirectoryServiceProps = (viewWidth, viewHeight) => {
   if (hasScreenSizeWindow(viewWidth, viewHeight)) {
     console.log('directory-container-service', 1);
     directoryServiceProps = {
-      width: 'max-content',
-      height: 'max-content',
+      width: 25,
+      height: 68,
     };
   } else if (hasScreenSizeWindow_1(viewWidth, viewHeight)) {
     console.log('directory-container-service', 2);
     directoryServiceProps = {
-      width: 98 + directoryServiceWidthOffset,
-      height: 20 + directoryServiceHeightOffset,
+      width: 25 + directoryServiceWidthOffset,
+      height: 68 + directoryServiceHeightOffset,
     };
   } else if (hasScreenSize1_1(viewWidth, viewHeight)) {
     console.log('directory-container-service', 3);
     directoryServiceProps = {
-      width: 98 + directoryServiceWidthOffset,
-      height: 20 + directoryServiceHeightOffset,
+      width: 25 + directoryServiceWidthOffset,
+      height: 68 + directoryServiceHeightOffset,
     };
   } else if (hasScreenSize1_2(viewWidth, viewHeight)) {
     console.log('directory-container-service', 4);
     directoryServiceProps = {
-      width: 98 + directoryServiceWidthOffset,
-      height: 20 + directoryServiceHeightOffset,
+      width: 25 + directoryServiceWidthOffset,
+      height: 68 + directoryServiceHeightOffset,
     };
   } else if (hasScreenSize1_3(viewWidth, viewHeight)) {
     console.log('directory-container-service', 5);
     directoryServiceProps = {
-      width: 98 + directoryServiceWidthOffset,
-      height: 40 + directoryServiceHeightOffset,
+      width: 25 + directoryServiceWidthOffset,
+      height: 68 + directoryServiceHeightOffset,
     };
   } else if (hasScreenSize1(viewWidth)) {
     console.log('directory-container-service', 6);
