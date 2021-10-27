@@ -19,6 +19,14 @@ const getSideBarActive = ({ $issidebaractive }) => {
   if ($issidebaractive) return ContactInfoIsNotActivated;
   return null;
 };
+
+const getHeightInformationContainer = ({ $measurecontactinformation }) => {
+  return $measurecontactinformation.height;
+};
+const getWidthInformationContainer = ({ $measurecontactinformation }) => {
+  return $measurecontactinformation.width;
+};
+
 //**
 export const ContactInformationContainer = styled.div`
   z-index: 1;
@@ -27,18 +35,8 @@ export const ContactInformationContainer = styled.div`
   background-color: ${backgroundColorContactInfomationContainer};
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
     overflow-y: hidden;
-    width: 100vw;
-    height: 105vh;
-    ${getSideBarActive}
-  }
-  @media only screen and (max-width: 550px) {
-    height: 120vh;
-  }
-  @media only screen and (max-width: 470px) and (max-height: 812px) {
-    height: 90vh;
-  }
-  @media only screen and (max-width: 300px) {
-    height: 85vh;
+    width: ${getWidthInformationContainer}vw;
+    height: ${getHeightInformationContainer}vh;
     ${getSideBarActive}
   }
 `;

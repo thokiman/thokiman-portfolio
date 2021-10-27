@@ -1,7 +1,9 @@
+import useWindowDimensions from 'components/hooks/window-dimensions/useWindowDimensions.component';
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { selectIsSideBarActive } from '../../../../redux/header/header.selectors';
+import { measureContactInformationProps } from './contact-info-container.utils.style';
 import {
   ContactInformationContainer,
   ContactInformationContent,
@@ -32,8 +34,13 @@ export const ContactInfo = ({
   title,
   items: { socialIcon, photoIcon },
 }) => {
+  const { viewWidth, viewHeight } = useWindowDimensions();
   return (
     <ContactInformationContainer
+      $measurecontactinformation={measureContactInformationProps(
+        viewWidth,
+        viewHeight
+      )}
       className='contact-information-container'
       $issidebaractive={isSideBarActive}
     >

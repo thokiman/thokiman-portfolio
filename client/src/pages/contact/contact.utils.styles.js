@@ -25,47 +25,47 @@ export const measureContactHeight = (
   switch (pathname) {
     case contactRoute:
       if (hasScreenSizeWindow_1(viewWidth, viewHeight)) {
-        console.log('contact', 1);
+        console.log('contact route', 1);
         height = 360 + contactOffset;
       } else if (hasScreenSize1_1(viewWidth, viewHeight)) {
-        console.log('contact', 2);
+        console.log('contact route', 2);
         height = 360 + contactOffset;
       } else if (hasScreenSize1_2(viewWidth, viewHeight)) {
-        console.log('contact', 3);
+        console.log('contact route', 3);
         height = 360 + contactOffset;
       } else if (hasScreenSize1_3(viewWidth, viewHeight)) {
-        console.log('contact', 4);
+        console.log('contact route', 4);
         height = 360 + contactOffset;
       } else if (hasScreenSize1(viewWidth)) {
-        console.log('contact', 5);
-        height = 360 + contactOffset;
+        console.log('contact route', 5);
+        height = 300 + contactOffset;
       } else if (hasScreenSize2(viewWidth)) {
-        console.log('contact', 6);
-        height = 350 + contactOffset;
+        console.log('contact route', 6);
+        height = 295 + contactOffset;
       } else if (hasScreenSize3_1(viewWidth, viewHeight)) {
-        console.log('contact', 7);
-        height = 340 + contactOffset;
+        console.log('contact route', 7);
+        height = 260 + contactOffset;
       } else if (hasScreenSize3_2(viewWidth, viewHeight)) {
-        console.log('contact', 8);
-        height = 350 + contactOffset;
+        console.log('contact route', 8);
+        height = 260 + contactOffset;
       } else if (hasScreenSize3_3(viewWidth, viewHeight)) {
-        console.log('contact', 9);
-        height = 36 + contactOffset;
+        console.log('contact route', 9);
+        height = 280 + contactOffset;
       } else if (hasScreenSize3_4(viewWidth, viewHeight)) {
-        console.log('contact', 10);
-        height = 400 + contactOffset;
+        console.log('contact route', 10);
+        height = 300 + contactOffset;
       } else if (hasScreenSize3_5(viewWidth, viewHeight)) {
-        console.log('contact', 11);
+        console.log('contact route', 11);
         height = 400 + contactOffset;
       } else if (hasScreenSize4(viewWidth, viewHeight)) {
-        console.log('contact', 12);
-        height = 420 + contactOffset;
+        console.log('contact route', 12);
+        height = 330 + contactOffset;
       } else if (hasScreenSize5(viewWidth)) {
-        console.log('contact', 13);
-        height = 350 + contactOffset;
+        console.log('contact route', 13);
+        height = 265 + contactOffset;
       } else {
-        console.log('contact', 14);
-        height = 350; // need adjust
+        console.log('contact route', 14);
+        height = 500; // need adjust
       }
       return height;
 

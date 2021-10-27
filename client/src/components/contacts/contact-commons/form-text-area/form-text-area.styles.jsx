@@ -91,13 +91,13 @@ export const FormTextAreaCheckerContainer = styled.span`
   }
 
   @media only screen and (max-width: 470px) and (max-height: 812px) {
-    top: 5vh;
+    top: 7vh;
   }
-  @media only screen and (max-width: 470px) and (max-height: 731px) {
+  @media only screen and (max-width: 470px) and (max-height: 736px) {
     top: 7vh;
   }
   @media only screen and (max-width: 470px) and (max-height: 640px) {
-    top: 8vh;
+    top: 14vh;
   }
   @media only screen and (max-width: 350px) and (max-height: 568px) {
     top: 10.5vh;
@@ -197,10 +197,15 @@ export const FormLabelElement = styled.label`
     ${getFormLabelElementShrinkMobile}
   }
   @media only screen and (max-width: 470px) and (max-height: 812px) {
+    top: 9vh;
+    ${getFormLabelElementShrinkMobile}
+  }
+  @media only screen and (max-width: 470px) and (max-height: 640px) {
+    top: 10vh;
     ${getFormLabelElementShrinkMobile}
   }
   @media only screen and (max-width: 320px) and (max-height: 568px) {
-    top: 8.5vh;
+    top: 10vh;
 
     ${getFormLabelElementShrinkMobile}
   }

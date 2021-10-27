@@ -1,3 +1,4 @@
+import useWindowDimensions from 'components/hooks/window-dimensions/useWindowDimensions.component';
 import React, { useState } from 'react';
 import { FaPeace, FaRegHandPeace } from 'react-icons/fa';
 import { GiDiamondsSmile } from 'react-icons/gi';
@@ -29,6 +30,10 @@ import {
   ContactFormHead,
   ContactFormSubhead,
 } from './contact-form-container.styles';
+import {
+  measureContactFormActiveProps,
+  measureContactFormHideProps,
+} from './contact-form-container.utils.style';
 
 export const ContactForm = ({
   isSideBarActive,
@@ -85,9 +90,17 @@ export const ContactForm = ({
     toggleTypeSubmitFormClick();
     toggleSubmitButtonClick();
   };
-
+  const { viewWidth, viewHeight } = useWindowDimensions();
   return (
     <ContactFormContainer
+      $measurecontainerformhide={measureContactFormHideProps(
+        viewWidth,
+        viewHeight
+      )}
+      $measurecontainerformactive={measureContactFormActiveProps(
+        viewWidth,
+        viewHeight
+      )}
       $istypeclick={isTypeClick}
       $issidebaractive={isSideBarActive}
       className='contact-form-container'

@@ -14,66 +14,35 @@ const getSideBarActive = ({ $issidebaractive }) => {
 };
 
 //**
+
+const getHeightContactFormHide = ({ $measurecontainerformhide }) => {
+  return $measurecontainerformhide.height;
+};
+
 const ContactFormContainerHide = css`
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    height: 155vh;
+    height: ${getHeightContactFormHide}vh;
     transition: all ease-in-out 1s;
-  }
-  @media only screen and (max-width: 550px) {
-    height: 310vh;
-  }
-  @media only screen and (max-width: 470px) and (max-height: 823px) {
-    height: 180vh;
-  }
-  @media only screen and (max-width: 470px) and (max-height: 812px) {
-    height: 155vh;
-  }
-  @media only screen and (max-width: 470px) and (max-height: 736px) {
-    height: 185vh;
-  }
-  @media only screen and (max-width: 470px) and (max-height: 667px) {
-    height: 190vh;
-  }
-  @media only screen and (max-width: 320px) and (max-height: 568px) {
-    height: 215vh;
-  }
-  @media only screen and (max-width: 300px) {
-    height: 200vh;
   }
 `;
+
+const getHeightContactFormActive = ({ $measurecontainerformactive }) => {
+  return $measurecontainerformactive.height;
+};
+
 const ContactFormContainerActive = css`
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
-    height: 190vh;
+    height: ${getHeightContactFormActive}vh;
     transition: all ease-in-out 1s;
-  }
-  @media only screen and (max-width: 550px) {
-    height: 410vh;
-  }
-  @media only screen and (max-width: 470px) and (max-height: 823px) {
-    height: 220vh;
-  }
-  @media only screen and (max-width: 470px) and (max-height: 812px) {
-    height: 180vh;
-  }
-  @media only screen and (max-width: 470px) and (max-height: 736px) {
-    height: 240vh;
-  }
-  @media only screen and (max-width: 470px) and (max-height: 667px) {
-    height: 220vh;
-  }
-  @media only screen and (max-width: 320px) and (max-height: 568px) {
-    height: 240vh;
-  }
-  @media only screen and (max-width: 300px) {
-    height: 240vh;
   }
 `;
 
 const getContactFormContainer = ({ $istypeclick }) => {
   if ($istypeclick) {
     return ContactFormContainerActive;
+  } else {
+    return ContactFormContainerHide;
   }
-  return ContactFormContainerHide;
 };
 
 export const ContactFormContainer = styled.div`
