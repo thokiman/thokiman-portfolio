@@ -25,8 +25,6 @@ const getHeightLeftServiceContainer = ({ $measureleftservicecontainer }) => {
 };
 
 export const LeftServiceContainer = styled.div`
-  width: ${getWidthLeftServiceContainer}vw;
-  height: ${getHeightLeftServiceContainer}vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,8 +32,13 @@ export const LeftServiceContainer = styled.div`
   position: relative;
   left: 4vw;
   transition: height 0.5s ease-in-out, top 0.2s ease;
+  width: 25vw;
+  height: 68vh;
 
+  transition: height 0.5s ease-in-out, top 0.2s ease;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
+    width: ${getWidthLeftServiceContainer}vw;
+    height: ${getHeightLeftServiceContainer}vh;
     left: 0;
     ${getSideBarActive}
   }
