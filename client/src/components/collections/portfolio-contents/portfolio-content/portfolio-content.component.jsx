@@ -13,7 +13,6 @@ import {
   selectCollectionList,
   selectIsLoadingCollectionList,
 } from '../../../../redux/collection/collection.selectors';
-import PortfolioItem from '../../portfolio-commons/portfolio-items/portfolio-items.component';
 import PortfolioContentItem from '../portfolio-content-item/portfolio-content-item.component';
 import { PortfolioLoadingState } from './portfolio-content.styles';
 
@@ -42,7 +41,7 @@ export const PortfolioContent = ({
     setCountPage(countPage + 1);
     loadCollectionListFinished();
   };
-  if (window.screen.width < 800) return <PortfolioItem items={items} />;
+
   return (
     <>
       {isLoading || collectionList.length === 0 ? (
