@@ -37,6 +37,7 @@ export const RightServiceContainer = styled.div`
   position: relative;
   right: 4vw;
   display: flex;
+
   justify-content: center;
   align-items: center;
   @media only screen and (max-width: ${maxWidthSmartphone}px) {
@@ -45,6 +46,7 @@ export const RightServiceContainer = styled.div`
     align-items: center;
     justify-content: center;
     position: relative;
+
     top: ${getTopRightServiceContainer}vh;
     width: 100%;
     right: 0;

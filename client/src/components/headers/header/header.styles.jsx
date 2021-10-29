@@ -88,6 +88,9 @@ const getTopTitleHeaderIntro = ({ $measuretitleheaderintroprops }) => {
 const getLeftTitleHeaderIntro = ({ $measuretitleheaderintroprops }) => {
   return $measuretitleheaderintroprops.left;
 };
+const getFontSizeTitleHeaderIntro = ({ $measuretitleheaderintroprops }) => {
+  return $measuretitleheaderintroprops.fontSize;
+};
 
 export const TitleHeaderIntro = styled.div`
   position: relative;
@@ -97,7 +100,7 @@ export const TitleHeaderIntro = styled.div`
   letter-spacing: 0.1em;
 
   animation: ${colorChange} 2.5s ease-in-out alternate infinite;
-  font-size: 10vw;
+  font-size: ${getFontSizeTitleHeaderIntro}vw;
   height: fit-content;
   width: fit-content;
   font-family: spitfire;

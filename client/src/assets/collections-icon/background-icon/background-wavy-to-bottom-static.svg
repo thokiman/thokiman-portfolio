@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="wave"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1440 490" style="enable-background:new 0 0 1440 490;" xmlSpace="preserve">
+	<defs>
+		<linearGradient id="background-wavy-to-bottom-static-gradient" x1="0" x2="0" y1="1" y2="0">
+			<stop stop-color="rgba(0, 217.812, 255, 1)" offset="0%" data-darkreader-inline-stopcolor=""></stop>
+			<stop stop-color="rgba(18, 129, 148, 0.84)" offset="100%" data-darkreader-inline-stopcolor=""></stop>
+		</linearGradient>
+	</defs>
+	<path class="background-wavy-to-bottom-static" stroke-linejoin="round" stroke-width="5" stroke= "#128194" fill="url(#background-wavy-to-bottom-gradient)" d="M0,140l15,18.7c15,18.3,45,56.3,75,70c30,14.3,60,4.3,90-18.7s60-61,90-60.7c30-0.3,60,37.7,90,32.7
+	s60-51,90-65.3c30-13.7,60,4.3,90,0c30-4.7,60-32.7,90-56C660,37,690,19,720,37.3c30,18.7,60,74.7,90,79.4c30,4.3,60-41.7,90-70
+	C930,19,960,9,990,14s60,23,90,32.7c30,9.3,60,9.3,90,28c30,18.3,60,56.3,90,79.3s60,33,90,18.7c30-13.7,60-51.7,90-70
+	c30-18.7,60-18.7,90,9.3s60,84,90,102.7c30,18.3,60,0.3,90-9.4c30-9.3,60-9.3,90-18.6c30-9.7,60-27.7,90-51.4c30-23.3,60-51.3,90-70
+	c30-18.3,60-28.3,90-28c30-0.3,60,9.7,75,14l15,4.7v224h-15c-15,0-45,0-75,0s-60,0-90,0s-60,0-90,0s-60,0-90,0s-60,0-90,0
+	s-60,0-90,0s-60,0-90,0s-60,0-90,0s-60,0-90,0s-60,0-90,0s-60,0-90,0s-60,0-90,0s-60,0-90,0s-60,0-90,0s-60,0-90,0s-60,0-90,0
+	s-60,0-90,0s-60,0-90,0s-60,0-90,0s-60,0-90,0s-60,0-90,0s-60,0-90,0s-60,0-90,0s-60,0-75,0H0V140z"/>
+</svg>
