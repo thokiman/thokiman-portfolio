@@ -1580,79 +1580,79 @@ export const measureBottomWavy = (
     if (hasScreenSizeWindow(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 28,
-        strokeColor: '#74c6d4',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize1_1(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 19,
-        strokeColor: '#74c6d4',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize1_2(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 35,
-        strokeColor: '#74c6d4',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize1_3(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 45,
-        strokeColor: '#74c6d4',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize1(viewWidth)) {
       bottomWavy = {
         height: 28,
-        strokeColor: '#74c6d4',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize2(viewWidth)) {
       bottomWavy = {
         height: 40,
-        strokeColor: '#74c6d4',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize3_1(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 35,
-        strokeColor: '#74c6d4',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize3_2(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 35,
-        strokeColor: '#74c6d4',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize3_3(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 38,
-        strokeColor: '#74c6d4',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize3_4(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 42,
-        strokeColor: '#74c6d4',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize4(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 50,
-        strokeColor: '#74c6d4',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize5(viewWidth)) {
       bottomWavy = {
         height: 42,
-        strokeColor: '#74c6d4',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else {
       bottomWavy = {
         height: 28,
-        strokeColor: '#74c6d4',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     }
@@ -1660,81 +1660,81 @@ export const measureBottomWavy = (
     if (hasScreenSizeWindow(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 28,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize1_1(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 19,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize1_2(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 35,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize1_3(viewWidth, viewHeight)) {
       console.log(4);
       bottomWavy = {
         height: 45,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize1(viewWidth)) {
       console.log(5);
       bottomWavy = {
         height: 28,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize2(viewWidth)) {
       bottomWavy = {
         height: 40,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize3_1(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 35,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize3_2(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 35,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize3_3(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 38,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize3_4(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 42,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize4(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 50,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize5(viewWidth)) {
       bottomWavy = {
         height: 42,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else {
       bottomWavy = {
         height: 28,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     }
@@ -1742,79 +1742,79 @@ export const measureBottomWavy = (
     if (hasScreenSizeWindow(viewWidth)) {
       bottomWavy = {
         height: 28,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize1_1(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 19,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize1_2(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 35,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize1_3(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 45,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize1(viewWidth)) {
       bottomWavy = {
         height: 28,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize2(viewWidth)) {
       bottomWavy = {
         height: 40,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize3_1(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 35,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize3_2(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 35,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize3_3(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 38,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize3_4(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 42,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize4(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 50,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize5(viewWidth)) {
       bottomWavy = {
         height: 42,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else {
       bottomWavy = {
         height: 28,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     }
@@ -1822,79 +1822,79 @@ export const measureBottomWavy = (
     if (hasScreenSizeWindow(viewWidth)) {
       bottomWavy = {
         height: 28,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize1_1(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 19,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize1_2(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 35,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize1_3(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 45,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize1(viewWidth)) {
       bottomWavy = {
         height: 28,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize2(viewWidth)) {
       bottomWavy = {
         height: 40,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize3_1(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 35,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize3_2(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 35,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize3_3(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 38,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize3_4(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 42,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize4(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 50,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize5(viewWidth)) {
       bottomWavy = {
         height: 42,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else {
       bottomWavy = {
         height: 28,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     }
@@ -1902,79 +1902,79 @@ export const measureBottomWavy = (
     if (hasScreenSizeWindow(viewWidth)) {
       bottomWavy = {
         height: 28,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize1_1(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 19,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize1_2(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 35,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize1_3(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 45,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize1(viewWidth)) {
       bottomWavy = {
         height: 28,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize2(viewWidth)) {
       bottomWavy = {
         height: 40,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize3_1(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 35,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize3_2(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 35,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize3_3(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 38,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize3_4(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 42,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize4(viewWidth, viewHeight)) {
       bottomWavy = {
         height: 50,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else if (hasScreenSize5(viewWidth)) {
       bottomWavy = {
         height: 42,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     } else {
       bottomWavy = {
         height: 28,
-        strokeColor: '#128194',
+        strokeColor: '#000000',
         fillColor: '#000000',
       };
     }

@@ -41,6 +41,7 @@ export const AboutSummary = ({
   isSideBarActive,
 }) => {
   const { viewWidth, viewHeight } = useWindowDimensions();
+  console.log(iconPath);
   return (
     <SummaryContainer
       $summarycontainer={measureSummaryContainerProps(viewWidth, viewHeight)}
@@ -66,7 +67,7 @@ export const AboutSummary = ({
         </AboutSummaryTextFour>
         <AboutDownloadLink
           className='about-summary'
-          to={`${iconPath}`}
+          to={{ pathname: iconPath }}
           download
           target='_blank'
         >

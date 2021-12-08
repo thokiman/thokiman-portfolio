@@ -4243,18 +4243,17 @@ module.exports.about = {
           quote:
             'Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world. – Albert Einstein',
           cv: {
-            id: 'fdc836cb-6c02-410d-a1ef-6d80d73076e2',
-            field:
-              'thomas-santosa-curriculum-vitae-english_b77dd59e-bc9a-4855-9ab6-2b4920b7a845',
+            id: '38abe8f7-26c8-40a6-8b10-69fe72694def',
+            field: 'thomas-santosa-curriculum-vitae-en_5NfQ1wRJADo.pdf',
             tags: null,
             customCoordinates: null,
             iconPath:
-              'https://ik.imagekit.io/thokiman/thokiman-portfolio/about/summary/thomas-santosa-curriculum-vitae-english_b77dd59e-bc9a-4855-9ab6-2b4920b7a845',
+              'https://ik.imagekit.io/thokiman/thokiman-portfolio/about/summary/thomas-santosa-curriculum-vitae-en_5NfQ1wRJADo.pdf',
             filePath:
-              '/thokiman-portfolio/about/summary/thomas-santosa-curriculum-vitae-english_b77dd59e-bc9a-4855-9ab6-2b4920b7a845',
+              '/thokiman-portfolio/about/summary/thomas-santosa-curriculum-vitae-en_5NfQ1wRJADo.pdf',
             height: 842,
             width: 595,
-            size: 4296286,
+            size: 4304037,
           },
         },
       },

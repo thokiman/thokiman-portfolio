@@ -1,8 +1,73 @@
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 const boxShadowPortfolioImageCollectionColorOne = 'rgba(18, 129, 148, 0.2)';
 const boxShadowPortfolioImageCollectionColorTwo = 'rgba(18, 129, 148, 0.1)';
 const maxWidthSmartphone = 800;
+
+const zoomModal = keyframes`
+  from {
+    transform : scale(0);
+  }
+
+  to {
+    transform : scale (1);
+  }
+`;
+
+// export const PortfolioItemModal = styled.div`
+// display: none;
+// position: fixed;
+// left: 0;
+// top: 0;
+// z-index: 1;
+// padding-top: 1vh;
+// width: 100vw;
+// height: 100vh;
+// overflow: auto;
+// background-color: rgba(0,0,0)
+// background-color: rgba(0,0,0,0.8)
+
+
+// `;
+
+// export const CloseModal = styled.span`
+//   position: absolute;
+//   top: 1vh;
+//   right: 2vw;
+//   color: white;
+//   font-size: 4vw;
+//   font-weight: bold;
+//   transition: 0.3s;
+//   &:hover,
+//   &:focus {
+//     color: red;
+//     text-decoration: none;
+//     cursor: pointer;
+//   }
+// `;
+
+// export const ContentModal = styled.img`
+//   margin: auto;
+//   display: block;
+//   width: 70vw;
+//   max-width: 80vw;
+//   animation: ${zoomModal} 0.6s ease-in-out;
+
+//   @media only screen and (max-width: ${maxWidthSmartphone}) {
+//     width: 100%;
+//   }
+// `;
+
+// export const CaptionModal = styled.div`
+//   margin: auto;
+//   display: block;
+//   width: 70vw;
+//   max-width: 80vw;
+//   text-align: center;
+//   color: white;
+//   padding: 1vw 0;
+//   height: 4vh;
+// `;
 
 const PortfolioItemIsNotActivated = css`
   display: none;
@@ -357,6 +422,15 @@ export const PortfolioImageItem = styled.img`
   @media only screen and (max-width: 300px) {
     object-position: 60% 50%;
   }
+
+  /* modal trial */
+
+  /* border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.7;
+  } */
 `;
 PortfolioImageCollectionsContainer.displayName =
   'PortfolioImageCollectionsContainer';

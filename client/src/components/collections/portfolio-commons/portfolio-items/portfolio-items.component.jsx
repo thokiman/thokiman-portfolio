@@ -39,6 +39,16 @@ export const PortfolioItem = ({
     [timeline]
   );
 
+  // const captionImage = (item) => {
+  //   const modifiedTextField = item.field.replace(/_[\w|-]+/, '');
+  //   const fixedCaption = modifiedTextField.replace(/-/, ' ');
+  //   const capitalCaption =
+  //     fixedCaption.charAt(0).toUppercase() + fixedCaption.slice(1);
+  //   console.log('modifiedTextField', modifiedTextField);
+  //   console.log('fixedCaption', fixedCaption);
+  //   console.log('capitalCaption', capitalCaption);
+  // };
+
   return (
     <PortfolioImageCollectionsContainer
       $issidebaractive={isSideBarActive}
@@ -53,6 +63,7 @@ export const PortfolioItem = ({
       )}
     >
       {items.map((item, index) => {
+        
         return (
           <PortfolioImageCollection
             key={item.id}
